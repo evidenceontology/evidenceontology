@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: 2.00
-date: 25:03:2012 23:17
+data-version: 2.01
+date: 16:05:2012 13:09
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.1.1-beta7
+auto-generated-by: OBO-Edit 2.2-rc1
 default-namespace: evidence_code2.obo
 ontology: eco
 
@@ -522,7 +522,8 @@ is_a: ECO:0000026 ! nucleic acid hybridization evidence
 [Term]
 id: ECO:0000079
 name: affinity chromatography evidence
-def: "Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent." [TAIR:TED]
+def: "A type of ligand binding evidence resulting from separation of biochemical mixtures by selective binding of a compound to an immobilized compound on a polymeric matrix, subsequent removal of unattached components, and then displacement of the bond compound." [ECO:MCC, TAIR:TED]
+comment: "Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent" (from original definition by TAIR:TED). Types of highly specific interaction might include those of antigen and antibody, enzyme and substrate, or receptor and ligand.
 synonym: "IDA: affinity chromatography" RELATED []
 is_a: ECO:0000023 ! ligand binding evidence
 
@@ -802,8 +803,10 @@ is_a: ECO:0000136 ! nucleic acid binding evidence
 [Term]
 id: ECO:0000140
 name: thin layer chromatography evidence
+def: "A type of chromatography evidence that uses a thin layer of adsorbent (such as silica gel, alumina, or cellulose) on a flat, inert substrate." [ECO:MCC]
 synonym: "IDA: thin layer chromatography" RELATED []
-is_a: ECO:0000002 ! direct assay evidence
+synonym: "TLC evidence" EXACT []
+is_a: ECO:0000325 ! chromatography evidence
 
 [Term]
 id: ECO:0000142
@@ -2257,6 +2260,15 @@ def: "Direct assay evidence derived from analysis of an image." [ECO:MCC]
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2012-02-23T12:01:43Z
+
+[Term]
+id: ECO:0000325
+name: chromatography evidence
+def: "A type of experimental evidence that is based on separation of constituent parts of a mixture (the mobile phase) as they pass differentially through a stationary phase due to differences in partition coefficient and retention on the stationary phase." [ECO:MCC]
+synonym: "chromatographic evidence" EXACT []
+is_a: ECO:0000006 ! experimental evidence
+created_by: mchibucos
+creation_date: 2012-05-16T11:46:27Z
 
 [Typedef]
 id: used_in
