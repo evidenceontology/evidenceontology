@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: 2.00
-date: 25:03:2012 23:17
+data-version: 2.01
+date: 18:06:2012 18:53
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.1.1-beta7
+auto-generated-by: OBO-Edit 2.2-rc1
 default-namespace: evidence_code2.obo
 ontology: eco
 
@@ -44,6 +44,7 @@ id: ECO:0000005
 name: enzyme assay evidence
 def: "Used when an annotation is made based on assays that determine the catalytic activity of enzymes." [TAIR:TED]
 synonym: "IDA: enzyme assays" RELATED []
+xref: PSI-MI:MI\:0415 "enzymatic study"
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
@@ -57,9 +58,9 @@ is_a: ECO:0000000 ! evidence
 [Term]
 id: ECO:0000007
 name: immunofluorescence evidence
-def: "Used when an annotation is made based on methods that detect the presence of macromolecules, proteins, and compounds by the use of a fluorescent-labeled antibody." [TAIR:TED]
+def: "A type of protein assay evidence where a fluorescently labeled antibody is used to detect the presence or localization of a biomolecule within a cell." [ECO:MCC, TAIR:TED]
 synonym: "IDA: immunofluorescence" RELATED []
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000008
@@ -144,30 +145,38 @@ comment: Molecules interacted with might include protein, nucleic acid, ion, or 
 synonym: "inferred from physical interaction" RELATED [GOECO:IPI]
 synonym: "IPI" RELATED [GOECO:IPI]
 xref: GOECO:IPI "inferred from physical interaction"
+xref: PSI-MI:MI\:0045 "experimental interaction detection"
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
 id: ECO:0000022
 name: co-purification evidence
-def: "Used in component annotations when a subunit is isolated as part of purification of its larger complex." [TAIR:TED]
+def: "A type of physical interaction evidence where a cellular component subunit is isolated as part of purification of its larger complex." [TAIR:TED]
 synonym: "IPI: co-purification" RELATED []
+xref: PSI-MI:MI\:0025 "copurification"
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
 id: ECO:0000023
-name: ligand binding evidence
+name: affinity evidence
+def: "A type of physical interaction evidence that depends on the strength of the interaction between two entities." [ECO:MCC, PSI-MI:MI\:0400]
+synonym: "ligand binding evidence" NARROW []
+xref: PSI-MI:MI\:0400 "affinity technology"
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
 id: ECO:0000024
 name: protein binding evidence
-is_a: ECO:0000023 ! ligand binding evidence
+is_a: ECO:0000023 ! affinity evidence
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000025
 name: hybrid interaction evidence
-is_a: ECO:0000023 ! ligand binding evidence
+def: "A type of affinity evidence where proteins of interest (bait and prey) are covalently linked to incomplete fragments of a third protein (reporter) and expressed in vivo, at which time interaction between bait and prey proteins brings reporter fragments in close enough proximity to allow them to reform and become a functional reporter protein." [ECO:MCC, PSI-MI:MI\:0090]
+comment: Typically enzymes which confer resistance to antibiotics, such as Dihydrofolate reductase or Beta-lactamase, or proteins that give colorimetric or fluorescent signals are used. The Bait protein is generally the protein under study and the methods are readily adaptable to highthroughput mode.
+xref: PSI-MI:MI\:0090 "protein complementation assay"
+is_a: ECO:0000023 ! affinity evidence
 
 [Term]
 id: ECO:0000026
@@ -268,8 +277,7 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000040
 name: immunological assay evidence
-is_a: ECO:0000023 ! ligand binding evidence
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0000023 ! affinity evidence
 
 [Term]
 id: ECO:0000041
@@ -434,8 +442,10 @@ is_a: ECO:0000055 ! array experiment evidence
 [Term]
 id: ECO:0000066
 name: yeast one-hybrid evidence
-def: "Used when an annotation is based on the interaction of a protein with a DNA fragment in a yeast one-hybrid assay. The assay involves screening a library of candidate proteins for the ability bind to a target, cis-regulatory element or any other short, DNA binding sequence placed 5' to a yeast reporter gene." [TAIR:TED]
+def: "A type of hybrid interaction evidence that is based on a protein-DNA complementation assay where a single promoter acts as bait and is screened against a library of prey transcription factors." [ECO:MCC, PSI-MI:MI\:0432, TAIR:TED]
+comment: The assay involves screening a library of candidate proteins for the ability bind to a target, cis-regulatory element or any other short, DNA binding sequence placed 5' to a yeast reporter gene (TAIR:TED).
 synonym: "IPI: yeast one-hybrid assay" RELATED []
+xref: PSI-MI:MI\:0432 "one hybrid"
 is_a: ECO:0000025 ! hybrid interaction evidence
 
 [Term]
@@ -460,8 +470,10 @@ is_a: ECO:0000026 ! nucleic acid hybridization evidence
 [Term]
 id: ECO:0000070
 name: co-immunoprecipitation evidence
-def: "Used when an annotation is based on the interaction of one gene product with another in a co-immunoprecipitation assay (two or more proteins are precipitated when treated with an antibody specific to a single protein). The interacting protein is referenced in the evidence_with column." [TAIR:TED]
+def: "A type of immunoprecipitation evidence that involves precipitating two or more proteins via binding to an antibody specific to a single protein, followed by protein identification." [ECO:MCC]
+comment: If performing GO annotation, the interacting protein is referenced in the evidence_with column.
 synonym: "IPI: co-immunoprecipitation" RELATED []
+xref: PSI-MI:MI\:0019 "coimmunoprecipitation"
 is_a: ECO:0000085 ! immunoprecipitation evidence
 
 [Term]
@@ -474,9 +486,9 @@ is_a: ECO:0000057 ! phenotypic similarity evidence
 [Term]
 id: ECO:0000072
 name: Sos-recruitment assay evidence
-def: "Used when an annotation is based on the interaction of two proteins in a Sos-recruitment assay. The assay is a genetic screening system that detects protein-protein interactions and is not based on a transcriptional readout." [TAIR:TED]
+def: "A type of physical interaction evidence that is based on a genetic screening system that detects protein-protein interactions and is not based on a transcriptional readout." [TAIR:TED]
 synonym: "IPI: Sos-recruitment assay" RELATED []
-is_a: ECO:0000021 ! physical interaction evidence
+is_obsolete: true
 
 [Term]
 id: ECO:0000073
@@ -490,6 +502,7 @@ id: ECO:0000074
 name: split-ubiquitin assay evidence
 def: "Used when an annotation is based on the interaction of two proteins in a split-ubiquitin assay. The bait protein is fused to the C-terminal ubiquitin (Cub) domain followed by a reporter protein, and the prey protein is fused to a mutated N terminal ubiquiting (NubG) domain. If bait and prey interact, their interaction brings the NubG and Cub domains close enough together to reconstitute split-ubiquitin, resulting in the release of the reporter protein by the action of the UBPs." [TAIR:TED]
 synonym: "IPI: split-ubiquitin assay" RELATED []
+xref: PSI-MI:MI\:0112 "ubiquitin reconstruction"
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
@@ -501,9 +514,10 @@ is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
 id: ECO:0000076
-name: far-Western evidence
+name: far-Western blotting evidence
 def: "Used when an annotation is based on the interaction of protein with another in a far-Western assay. The assay involves separating target proteins on an SDS-PAGE gel, blotting to a membrane, hybridization with a protein probe and visualization using a probe-directed antibody. The interacting protein is referenced in the evidence_with column." [TAIR:TED]
 synonym: "IPI: far-Western analysis" RELATED []
+xref: PSI-MI:MI\:0047
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
@@ -522,9 +536,11 @@ is_a: ECO:0000026 ! nucleic acid hybridization evidence
 [Term]
 id: ECO:0000079
 name: affinity chromatography evidence
-def: "Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent." [TAIR:TED]
+def: "A type of affinity evidence that results from separation of biochemical mixtures by selective binding of a compound to an immobilized compound on a polymeric matrix, subsequent removal of unattached components, and then displacement of the bond compound." [ECO:MCC, TAIR:TED]
+comment: "Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent" (from original definition by TAIR:TED). Types of highly specific interaction might include those of antigen and antibody, enzyme and substrate, or receptor and ligand.
 synonym: "IDA: affinity chromatography" RELATED []
-is_a: ECO:0000023 ! ligand binding evidence
+xref: PSI-MI:MI\:0004 "affinity chromatography technology"
+is_a: ECO:0000023 ! affinity evidence
 
 [Term]
 id: ECO:0000080
@@ -568,9 +584,9 @@ creation_date: 2009-03-20T11:55:18Z
 [Term]
 id: ECO:0000085
 name: immunoprecipitation evidence
-def: "Used when an annotation is made based on a method that precipitates a multivalent antigen by a bivalent antibody." [TAIR:TED]
+def: "A type of protein assay evidence that involves precipitation of a multivalent antigen by a bivalent antibody." [ECO:MCC, TAIR:TED]
 synonym: "IDA: immunoprecipitation" RELATED []
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000086
@@ -580,9 +596,9 @@ is_a: ECO:0000073 ! experimental genomic evidence
 [Term]
 id: ECO:0000087
 name: immunolocalization evidence
-def: "Used when an annotation is made based on methods that detect the presence of macromolecules, proteins, and compounds by the use of antibodies." [TAIR:TED]
+def: "A type of protein assay evidence that involves the use of antibodies to detect biomolecules." [ECO:MCC]
 synonym: "IDA: immunolocalization" RELATED []
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0000039 ! protein assay evidence
 is_a: ECO:0000122 ! protein localization evidence
 
 [Term]
@@ -605,9 +621,9 @@ is_a: ECO:0000073 ! experimental genomic evidence
 [Term]
 id: ECO:0000090
 name: immunogold labelling evidence
-def: "Used when an annotation is made based on immunolocalization method that detects an antigen in cytological preparations by using a gold-labeled secondary antibody." [TAIR:TED]
+def: "A type of protein assay evidence that involves attaching colloidal gold particles to a secondary antibody, which is attached to a primary antibody that binds a specific protein or cell part, followed by visualization with electron microscopy." [ECO:MCC]
 synonym: "IDA: immunogold labelling" RELATED []
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000092
@@ -633,6 +649,7 @@ id: ECO:0000096
 name: electrophoretic mobility shift assay evidence
 def: "Used when an annotation is made based on electrophoretic mobility shift of macromolecules, compounds, and proteins. Most commonly used for detecting the binding of protein to DNA." [TAIR:TED]
 synonym: "IDA: electrophoretic mobility shift assay" RELATED []
+xref: PSI-MI:MI\:0413 "electrophoretic mobility shift assay"
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
@@ -716,10 +733,10 @@ is_a: ECO:0000046 ! protein expression level evidence
 [Term]
 id: ECO:0000114
 name: expression library screen evidence
-def: "Used when an annotation is made on the basis of a protein expression library screen where a protein of interest is isolated on the basis of its hybridization to an antibody raised to a homologous protein." [TAIR:TED]
+def: "A type of protein expression evidence where a protein of interest is isolated on the basis of its hybridization to an antibody raised to a homologous protein." [ECO:MCC, TAIR:TED]
 synonym: "IEP: expression library screening" RELATED []
 is_a: ECO:0000010 ! protein expression evidence
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000116
@@ -791,7 +808,7 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000136
 name: nucleic acid binding evidence
-is_a: ECO:0000023 ! ligand binding evidence
+is_a: ECO:0000023 ! affinity evidence
 
 [Term]
 id: ECO:0000138
@@ -802,8 +819,10 @@ is_a: ECO:0000136 ! nucleic acid binding evidence
 [Term]
 id: ECO:0000140
 name: thin layer chromatography evidence
+def: "A type of chromatography evidence that uses a thin layer of adsorbent (such as silica gel, alumina, or cellulose) on a flat, inert substrate." [ECO:MCC]
 synonym: "IDA: thin layer chromatography" RELATED []
-is_a: ECO:0000002 ! direct assay evidence
+synonym: "TLC evidence" EXACT []
+is_a: ECO:0000325 ! chromatography evidence
 
 [Term]
 id: ECO:0000142
@@ -828,7 +847,7 @@ is_a: ECO:0000136 ! nucleic acid binding evidence
 id: ECO:0000148
 name: in vitro binding evidence
 synonym: "IDA: in vitro binding assay" RELATED []
-is_a: ECO:0000021 ! physical interaction evidence
+is_obsolete: true
 
 [Term]
 id: ECO:0000150
@@ -1218,9 +1237,10 @@ creation_date: 2010-11-15T04:46:31Z
 [Term]
 id: ECO:0000226
 name: chromatin immunoprecipitation evidence
-def: "An immunoprecipitation experiment that is used to identify a protein binding site on a genomic DNA sequence." [ECO:MCC]
+def: "A type of immunoprecipitation evidence that is used to identify a protein binding site on a genomic DNA sequence." [ECO:MCC]
 comment: Chromatin immunoprecipitation (ChIP) is used to investigate protein-DNA interactions in vivo. DNA and proteins are chemically cross-linked in vivo to form chromatin complexes, followed by cell lysis and DNA shearing. Fragmented DNA-protein complexes are selectively enriched for a protein of interest using a specific antibody (immunoprecipitation). Protein digestion and DNA purification are performed prior to DNA detection via molecular cloning and sequencing, polymerase chain reaction (PCR), microarray analysis (ChIP-on-chip), or direct high-throughput sequencing (ChIP-seq).
 synonym: "ChIP evidence" EXACT []
+xref: PSI-MI:MI\:0402 "chromatin immunoprecipitation assay"
 is_a: ECO:0000085 ! immunoprecipitation evidence
 created_by: mchibucos
 creation_date: 2010-11-16T01:29:08Z
@@ -1228,7 +1248,7 @@ creation_date: 2010-11-16T01:29:08Z
 [Term]
 id: ECO:0000227
 name: chromatin immunoprecipitation-PCR evidence
-def: "A chromatin immunoprecipitation (ChIP) experiment that uses polymerase chain reaction (PCR) for DNA detection." [ECO:MCC]
+def: "A chromatin immunoprecipitation (ChIP) evidence that uses polymerase chain reaction (PCR) for DNA detection." [ECO:MCC]
 synonym: "ChIP-PCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
@@ -1237,7 +1257,7 @@ creation_date: 2010-11-16T05:02:00Z
 [Term]
 id: ECO:0000228
 name: chromatin immunoprecipitation-qPCR evidence
-def: "A chromatin immunoprecipitation (ChIP) experiment that uses quantitative polymerase chain reaction (qPCR) for DNA detection." [ECO:MCC]
+def: "A chromatin immunoprecipitation (ChIP) evidence that uses quantitative polymerase chain reaction (qPCR) for DNA detection." [ECO:MCC]
 synonym: "ChIP-qPCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
@@ -1246,7 +1266,7 @@ creation_date: 2010-11-16T05:26:47Z
 [Term]
 id: ECO:0000229
 name: chromatin immunoprecipitation-seq evidence
-def: "A chromatin immunoprecipitation (ChIP) experiment that uses high-throughput sequencing for DNA detection." [ECO:MCC, OBI:0000716]
+def: "A chromatin immunoprecipitation (ChIP) evidence that uses high-throughput sequencing for DNA detection." [ECO:MCC, OBI:0000716]
 synonym: "ChIP-seq evidence" EXACT []
 synonym: "ChIP-SEQ evidence" EXACT [OBI:0000716]
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
@@ -1256,9 +1276,10 @@ creation_date: 2010-11-16T05:30:41Z
 [Term]
 id: ECO:0000230
 name: chromatin immunoprecipitation-chip evidence
-def: "A chromatin immunoprecipitation (ChIP) experiment that uses a tiling microarray for DNA detection." [ECO:MCC]
+def: "A chromatin immunoprecipitation (ChIP) evidence that uses a tiling microarray for DNA detection." [ECO:MCC]
 synonym: "ChIP-chip evidence" EXACT []
 synonym: "ChIP-on-chip evidence" EXACT []
+xref: PSI-MI:MI\:0225 "chromatin immunoprecipitation array"
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
 creation_date: 2010-11-16T05:43:55Z
@@ -1653,10 +1674,11 @@ creation_date: 2010-12-10T03:39:41Z
 [Term]
 id: ECO:0000267
 name: enzyme-linked immunoabsorbent assay evidence
-def: "An immunological assay that binds an antigen to a substrate and utilizes an antibody directly or indirectly linked to an enzyme to determine the amount of bound antigen." [ECO:MCC]
-synonym: "ELISA" EXACT []
-synonym: "enzyme-linked immunosorbent assay" EXACT []
-is_a: ECO:0000040 ! immunological assay evidence
+def: "A type of protein assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen." [ECO:MCC]
+synonym: "ELISA evidence" EXACT []
+synonym: "enzyme-linked immunosorbent assay" NARROW []
+xref: PSI-MI:MI\:0411 "enzyme linked immunosorbent assay"
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2010-12-14T01:57:13Z
 
@@ -1794,7 +1816,7 @@ creation_date: 2010-12-20T06:21:54Z
 [Term]
 id: ECO:0000281
 name: expression library screen evidence used in manual assertion
-def: "A type of expression library screen data that is used in a manual assertion." [ECO:MCC]
+def: "A type of expression library screen evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000114 ! expression library screen evidence
 intersection_of: ECO:0000114 ! expression library screen evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -1919,6 +1941,7 @@ comment: SELEX begins with the synthesis of a large oligonucleotide library, eit
 synonym: "in vitro evolution evidence" RELATED []
 synonym: "in vitro selection evidence" EXACT []
 synonym: "SELEX evidence" EXACT []
+xref: PSI-MI:MI\:0657 "systematic evolution of ligands by exponential enrichment"
 is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2011-01-10T04:23:50Z
@@ -1926,7 +1949,7 @@ creation_date: 2011-01-10T04:23:50Z
 [Term]
 id: ECO:0000294
 name: bacterial one-hybrid evidence
-def: "A type of evidence arising from a hybrid interaction experiment that uses bacterial transformation with two plasmids to assess in vivo binding of a DNA-binding domain (bait) and DNA target site (prey)." [ECO:MCC]
+def: "A type of hybrid interaction evidence that uses bacterial transformation with two plasmids to assess in vivo binding of a DNA-binding domain (bait) and DNA target site (prey)." [ECO:MCC]
 comment: Bacterial one-hybrid assay is a method for screening a library of candidate proteins (prey plasmid) for the ability to bind to a target, cis-regulatory element or any other short, DNA binding sequence placed 5' to reporter genes (bait plasmid). Transformation of a bacterial host with two different plasmids is required: One is designed to express the "bait". The other plasmid contains a "prey" which, if bound to by the chimeric fusion product, drives expression of downstream reporter genes.
 synonym: "B1H evidence" EXACT []
 is_a: ECO:0000025 ! hybrid interaction evidence
@@ -1985,7 +2008,7 @@ creation_date: 2011-01-11T03:30:29Z
 [Term]
 id: ECO:0000300
 name: green fluorescent protein immunolocalization evidence
-def: "A type of immunolocalization experiment data that was generated using green fluorescent protein (GFP) as a marker." [ECO:MCC]
+def: "A type of immunolocalization evidence data that was generated using green fluorescent protein (GFP) as a marker." [ECO:MCC]
 comment: This term describes immunolocalization of the protein; to describe transcriptional activation, use the term "localization of green fluorescent protein transcript".
 synonym: "GFP immunolocalization evidence" EXACT []
 is_a: ECO:0000087 ! immunolocalization evidence
@@ -1995,7 +2018,7 @@ creation_date: 2011-01-11T03:48:50Z
 [Term]
 id: ECO:0000301
 name: beta-galactosidase protein immunolocalization evidence
-def: "A type of immunolocalization experiment data that was generated using LacZ protein as a marker." [ECO:MCC]
+def: "A type of immunolocalization evidence that was generated using LacZ protein as a marker." [ECO:MCC]
 comment: This term describes immunolocalization of the protein; to describe transcriptional activation, use the term "localization of LacZ transcript".
 synonym: "LacZ protein immunolocalization evidence" EXACT []
 is_a: ECO:0000087 ! immunolocalization evidence
@@ -2257,6 +2280,85 @@ def: "Direct assay evidence derived from analysis of an image." [ECO:MCC]
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2012-02-23T12:01:43Z
+
+[Term]
+id: ECO:0000325
+name: chromatography evidence
+def: "A type of experimental evidence that is based on separation of constituent parts of a mixture (the mobile phase) as they pass differentially through a stationary phase due to differences in partition coefficient and retention on the stationary phase." [ECO:MCC]
+synonym: "chromatographic evidence" EXACT []
+is_a: ECO:0000006 ! experimental evidence
+created_by: mchibucos
+creation_date: 2012-05-16T11:46:27Z
+
+[Term]
+id: ECO:0000326
+name: transcript splice pattern evidence
+def: "A type of sequence alignment evidence that is based on comparison of a nucleic acid sequence to a reference sequence with characterized exon boundaries." [ECO:MCC]
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: mchibucos
+creation_date: 2012-06-08T11:03:59Z
+
+[Term]
+id: ECO:0000327
+name: whole transcript splice pattern evidence
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent features." [ECO:MCC]
+comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that have the same splice pattern as a RefSeq transcript. If such full transcript information is not available, RefSeq reports sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, supported by the evidence term ECO:0000328 or a child.
+is_a: ECO:0000326 ! transcript splice pattern evidence
+created_by: mchibucos
+creation_date: 2012-06-08T11:11:24Z
+
+[Term]
+id: ECO:0000328
+name: coding sequence splice pattern evidence
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent components." [ECO:MCC]
+comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, but for which full transcript information is unavailable. For sequences that have the same splice pattern as a whole RefSeq transcript, use the evidence term ECO:0000327 or a child.
+is_a: ECO:0000326 ! transcript splice pattern evidence
+created_by: mchibucos
+creation_date: 2012-06-08T11:21:57Z
+
+[Term]
+id: ECO:0000329
+name: whole transcript splice pattern evidence used in manual assertion
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent features, and is used in manual assertion." [ECO:MCC]
+comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that have the same splice pattern as a RefSeq transcript. If such full transcript information is not available, RefSeq reports sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, supported by the evidence term ECO:0000328 or a child.
+is_a: ECO:0000327 ! whole transcript splice pattern evidence
+intersection_of: ECO:0000327 ! whole transcript splice pattern evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2012-06-08T11:40:03Z
+
+[Term]
+id: ECO:0000330
+name: coding sequence splice pattern evidence used in manual assertion
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent components, and is used in manual assertion." [ECO:MCC]
+comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, but for which full transcript information is unavailable. For sequences that have the same splice pattern as a whole RefSeq transcript, use the evidence term ECO:0000327 or a child.
+is_a: ECO:0000328 ! coding sequence splice pattern evidence
+intersection_of: ECO:0000328 ! coding sequence splice pattern evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2012-06-08T11:43:47Z
+
+[Term]
+id: ECO:0000331
+name: coding sequence splice pattern evidence used in automatic assertion
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent components, and is used in automatic assertion." [ECO:MCC]
+comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, but for which full transcript information is unavailable. For sequences that have the same splice pattern as a whole RefSeq transcript, use the evidence term ECO:0000327 or a child.
+is_a: ECO:0000328 ! coding sequence splice pattern evidence
+intersection_of: ECO:0000328 ! coding sequence splice pattern evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: mchibucos
+creation_date: 2012-06-08T11:48:09Z
+
+[Term]
+id: ECO:0000332
+name: whole transcript splice pattern evidence used in automatic assertion
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent features, and is used in automatic assertion." [ECO:MCC]
+comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that have the same splice pattern as a RefSeq transcript. If such full transcript information is not available, RefSeq reports sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, supported by the evidence term ECO:0000328 or a child.
+is_a: ECO:0000327 ! whole transcript splice pattern evidence
+intersection_of: ECO:0000327 ! whole transcript splice pattern evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: mchibucos
+creation_date: 2012-06-08T11:49:17Z
 
 [Typedef]
 id: used_in
