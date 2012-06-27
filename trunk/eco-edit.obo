@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 2.01
-date: 18:06:2012 18:53
+date: 27:06:2012 18:18
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.2-rc1
 default-namespace: evidence_code2.obo
@@ -2293,7 +2293,7 @@ creation_date: 2012-05-16T11:46:27Z
 [Term]
 id: ECO:0000326
 name: transcript splice pattern evidence
-def: "A type of sequence alignment evidence that is based on comparison of a nucleic acid sequence to a reference sequence with characterized exon boundaries." [ECO:MCC]
+def: "A type of sequence alignment evidence that is based on comparing the position of exon junctions, relative to a reference genome, for a transcript annotation and a supporting transcript." [ECO:MCC]
 is_a: ECO:0000200 ! sequence alignment evidence
 created_by: mchibucos
 creation_date: 2012-06-08T11:03:59Z
@@ -2310,7 +2310,7 @@ creation_date: 2012-06-08T11:11:24Z
 [Term]
 id: ECO:0000328
 name: coding sequence splice pattern evidence
-def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent components." [ECO:MCC]
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a coding sequence (CDS), a sub-feature of a whole transcript." [ECO:MCC]
 comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, but for which full transcript information is unavailable. For sequences that have the same splice pattern as a whole RefSeq transcript, use the evidence term ECO:0000327 or a child.
 is_a: ECO:0000326 ! transcript splice pattern evidence
 created_by: mchibucos
@@ -2330,7 +2330,7 @@ creation_date: 2012-06-08T11:40:03Z
 [Term]
 id: ECO:0000330
 name: coding sequence splice pattern evidence used in manual assertion
-def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent components, and is used in manual assertion." [ECO:MCC]
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a coding sequence (CDS), a sub-feature of a whole transcript, and is used in manual assertion." [ECO:MCC]
 comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, but for which full transcript information is unavailable. For sequences that have the same splice pattern as a whole RefSeq transcript, use the evidence term ECO:0000327 or a child.
 is_a: ECO:0000328 ! coding sequence splice pattern evidence
 intersection_of: ECO:0000328 ! coding sequence splice pattern evidence
@@ -2341,7 +2341,7 @@ creation_date: 2012-06-08T11:43:47Z
 [Term]
 id: ECO:0000331
 name: coding sequence splice pattern evidence used in automatic assertion
-def: "A type of transcript splice pattern evidence that is based on the exon combination of a whole transcript, rather than its constituent components, and is used in automatic assertion." [ECO:MCC]
+def: "A type of transcript splice pattern evidence that is based on the exon combination of a coding sequence (CDS), a sub-feature of a whole transcript, and is used in automatic assertion." [ECO:MCC]
 comment: This term is used by the NCBI Reference Sequences (RefSeq) in support of sequences that match the splice pattern of a coding sequence (CDS) annotated on a RefSeq, but for which full transcript information is unavailable. For sequences that have the same splice pattern as a whole RefSeq transcript, use the evidence term ECO:0000327 or a child.
 is_a: ECO:0000328 ! coding sequence splice pattern evidence
 intersection_of: ECO:0000328 ! coding sequence splice pattern evidence
