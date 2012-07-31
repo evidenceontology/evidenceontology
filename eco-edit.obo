@@ -1,8 +1,8 @@
 format-version: 1.2
 data-version: 2.01
-date: 27:06:2012 18:18
+date: 31:07:2012 16:12
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.2-rc1
+auto-generated-by: OBO-Edit 2.3
 default-namespace: evidence_code2.obo
 ontology: eco
 
@@ -2359,6 +2359,34 @@ intersection_of: ECO:0000327 ! whole transcript splice pattern evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: mchibucos
 creation_date: 2012-06-08T11:49:17Z
+
+[Term]
+id: ECO:0000333
+name: sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
+def: "A type of protein assay evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258]
+comment: Electrophoretic mobility is a function of both the length and charge of a protein. The protein sample is linearized with sodium dodecyl sulfate (SDS), an anionic detergent. Typically, polypeptides bound with SDS possess an even distribution of charge per unit mass, and subsequent fractionation is by size.
+synonym: "SDS-PAGE evidence" EXACT []
+is_a: ECO:0000039 ! protein assay evidence
+created_by: mchibucos
+creation_date: 2012-07-31T14:56:43Z
+
+[Term]
+id: ECO:0000334
+name: particle size and count assay evidence
+def: "A type of direct assay evidence resulting from an assay where both the size of and number of particles in a sample are determined." [ECO:MCC]
+comment: An example of an instrument used to analyze particle sizes and counts is the Beckman Coulter® Z Series system.
+is_a: ECO:0000002 ! direct assay evidence
+created_by: mchibucos
+creation_date: 2012-07-31T15:19:32Z
+
+[Term]
+id: ECO:0000335
+name: substance quantification evidence
+def: "A type of direct assay evidence where the quantity of a substance used as part of an assay is measured." [ECO:MCC]
+comment: Two examples of substance quantification assay are (i) measuring how much of a radiolabelled compound is taken up by a cell and (ii) measuring how much of a substrate is turned over by a given enzyme.
+is_a: ECO:0000002 ! direct assay evidence
+created_by: mchibucos
+creation_date: 2012-07-31T15:52:46Z
 
 [Typedef]
 id: used_in
