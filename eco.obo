@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: 2.02
-date: 27:06:2012 18:18
+data-version: 2.03
+date: 24:08:2012 15:41
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.2-rc1
+auto-generated-by: OBO-Edit 2.3
 default-namespace: evidence_code2.obo
 ontology: eco
 
@@ -134,7 +134,8 @@ is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000020
-name: specific protein inhibition experiment evidence
+name: specific protein inhibition evidence
+def: "A type of protein assay evidence based on the inhibition of the molecular function of a protein." [ECO:MCC]
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
@@ -186,9 +187,8 @@ is_a: ECO:0000073 ! experimental genomic evidence
 [Term]
 id: ECO:0000027
 name: structural similarity evidence
-def: "Used when an annotation is made based on the structural similarity of the annotated gene or gene product to a single other gene or group of genes. In the case of a single gene, an accession for the related gene's sequence is entered in the evidence_with field." [TAIR:TED]
-synonym: "inferred from sequence or structural similarity" BROAD [GO:ISS]
-synonym: "ISS" BROAD [GO:ISS]
+def: "A type of similarity evidence based on structural similarity of an annotated gene or gene product to another gene or group of genes." [ECO:MCC, TAIR:TED]
+comment: For GO annotation, in the case of a single gene, an accession for the related gene's sequence is entered in the evidence_with field.
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
@@ -978,9 +978,10 @@ is_a: ECO:0000181 ! in vitro assay evidence
 
 [Term]
 id: ECO:0000184
-name: enzyme inhibition experiment evidence
+name: enzyme inhibition evidence
+def: "A type of specific protein inhibition evidence where the protein under study is an enzyme." [ECO:MCC]
 is_a: ECO:0000005 ! enzyme assay evidence
-is_a: ECO:0000020 ! specific protein inhibition experiment evidence
+is_a: ECO:0000020 ! specific protein inhibition evidence
 
 [Term]
 id: ECO:0000200
@@ -2360,8 +2361,91 @@ intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: mchibucos
 creation_date: 2012-06-08T11:49:17Z
 
+[Term]
+id: ECO:0000333
+name: sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
+def: "A type of protein assay evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258]
+comment: Electrophoretic mobility is a function of both the length and charge of a protein. The protein sample is linearized with sodium dodecyl sulfate (SDS), an anionic detergent. Typically, polypeptides bound with SDS possess an even distribution of charge per unit mass, and subsequent fractionation is by size.
+synonym: "SDS-PAGE evidence" EXACT []
+is_a: ECO:0000039 ! protein assay evidence
+created_by: mchibucos
+creation_date: 2012-07-31T14:56:43Z
+
+[Term]
+id: ECO:0000334
+name: particle size and count assay evidence
+def: "A type of direct assay evidence resulting from an assay where both the size of and number of particles in a sample are determined." [ECO:MCC]
+comment: An example of an instrument used to analyze particle sizes and counts is the Beckman Coulter® Z Series system.
+is_a: ECO:0000002 ! direct assay evidence
+created_by: mchibucos
+creation_date: 2012-07-31T15:19:32Z
+
+[Term]
+id: ECO:0000335
+name: substance quantification evidence
+def: "A type of direct assay evidence where the quantity of a substance used as part of an assay is measured." [ECO:MCC]
+comment: Two examples of substance quantification assay are (i) measuring how much of a radiolabelled compound is taken up by a cell and (ii) measuring how much of a substrate is turned over by a given enzyme.
+is_a: ECO:0000002 ! direct assay evidence
+created_by: mchibucos
+creation_date: 2012-07-31T15:52:46Z
+
+[Term]
+id: ECO:0000336
+name: competitive growth assay evidence
+def: "A type of biological assay evidence in which a mutated strain of a microorganism, such as a yeast or bacterium, is grown competitively with wild-type cells and the relative fitness of the strains is assessed." [GOC:MAH, PMID:14718172, PMID:20537132]
+synonym: "fitness profiling" EXACT [GOC:MAH, PMID:20537132]
+is_a: ECO:0000094 ! biological assay evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:03:58Z
+
+[Term]
+id: ECO:0000337
+name: gel electrophoresis evidence
+def: "A type of direct assay evidence  where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
+comment: Molecules typically separated include DNA, RNA, or protein. The gel is typically made of agarose, polyacrylamide, or starch.
+is_a: ECO:0000002 ! direct assay evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:11:51Z
+
+[Term]
+id: ECO:0000338
+name: pulsed-field gel electrophoresis evidence
+def: "Gel electrophoresis evidence that employs alternately pulsed, perpendicularly oriented electrical fields, at least one of which is inhomogeneous, to separate large DNA molecules on an agarose gel." [PMID:6373014]
+synonym: "PFGE" EXACT []
+is_a: ECO:0000337 ! gel electrophoresis evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:34:01Z
+
+[Term]
+id: ECO:0000339
+name: two-dimensional agarose gel electrophoresis evidence
+def: "Gel electrophoresis evidence where DNA molecules are electrophoresed on a low percentage agarose gel followed by high voltage electrophoresis on a higher percentage agarose gel in the presence of ethidium bromide." [PMID:8594382]
+comment: The first dimension gel is intentionally run at low voltage in low percentage agarose to separate DNA molecules in proportion to their mass. The second dimension is run at high voltage in a gel of higher agarose concentration in the presence of ethidium bromide so that the mobility of a non-linear molecule is drastically influenced by its shape.
+synonym: "2-D agarose gel electrophoresis" EXACT []
+is_a: ECO:0000337 ! gel electrophoresis evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:42:37Z
+
+[Term]
+id: ECO:0000340
+name: plasmid maintenance assay evidence
+def: "Experimental evidence from an assay in which a mitotically stable plasmid (or minichromosome) is introduced into cells, cells are grown without selection for several generations, the proportion of cells that retain the plasmid is then determined (by comparing colony numbers on selective versus non-selective media), and the loss per generation calculated." [ECO:MCC, PMID:6323245]
+synonym: "minichromosome maintenance assay evidence" EXACT [PMID:6323245]
+is_a: ECO:0000006 ! experimental evidence
+created_by: mchibucos
+creation_date: 2012-08-24T13:27:58Z
+
+[Term]
+id: ECO:0000341
+name: specific protein inhibition by antibody evidence
+def: "A type of specific protein inhibition evidence where the molecular function of a protein is inhibited by an antibody." [ECO:MCC]
+is_a: ECO:0000020 ! specific protein inhibition evidence
+created_by: mchibucos
+creation_date: 2012-08-24T13:48:24Z
+
 [Typedef]
 id: used_in
 name: used_in
 created_by: mchibucos
 creation_date: 2010-12-09T05:00:20Z
+
