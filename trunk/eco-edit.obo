@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 2.01
-date: 24:08:2012 13:37
+date: 24:08:2012 14:02
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3
 default-namespace: evidence_code2.obo
@@ -134,7 +134,8 @@ is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000020
-name: specific protein inhibition experiment evidence
+name: specific protein inhibition evidence
+def: "A type of protein assay evidence based on the inhibition of the molecular function of a protein." [ECO:MCC]
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
@@ -978,9 +979,10 @@ is_a: ECO:0000181 ! in vitro assay evidence
 
 [Term]
 id: ECO:0000184
-name: enzyme inhibition experiment evidence
+name: enzyme inhibition evidence
+def: "A type of specific protein inhibition evidence where the protein under study is an enzyme." [ECO:MCC]
 is_a: ECO:0000005 ! enzyme assay evidence
-is_a: ECO:0000020 ! specific protein inhibition experiment evidence
+is_a: ECO:0000020 ! specific protein inhibition evidence
 
 [Term]
 id: ECO:0000200
@@ -2433,6 +2435,14 @@ synonym: "minichromosome maintenance assay evidence" EXACT [PMID:6323245]
 is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
 creation_date: 2012-08-24T13:27:58Z
+
+[Term]
+id: ECO:0000341
+name: specific protein inhibition by antibody evidence
+def: "A type of specific protein inhibition evidence where the molecular function of a protein is inhibited by an antibody." [ECO:MCC]
+is_a: ECO:0000020 ! specific protein inhibition evidence
+created_by: mchibucos
+creation_date: 2012-08-24T13:48:24Z
 
 [Typedef]
 id: used_in
