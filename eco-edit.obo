@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 2.01
-date: 31:07:2012 16:12
+date: 24:08:2012 13:37
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3
 default-namespace: evidence_code2.obo
@@ -2387,6 +2387,52 @@ comment: Two examples of substance quantification assay are (i) measuring how mu
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2012-07-31T15:52:46Z
+
+[Term]
+id: ECO:0000336
+name: competitive growth assay evidence
+def: "A type of biological assay evidence in which a mutated strain of a microorganism, such as a yeast or bacterium, is grown competitively with wild-type cells and the relative fitness of the strains is assessed." [GOC:MAH, PMID:14718172, PMID:20537132]
+synonym: "fitness profiling" EXACT [GOC:MAH, PMID:20537132]
+is_a: ECO:0000094 ! biological assay evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:03:58Z
+
+[Term]
+id: ECO:0000337
+name: gel electrophoresis evidence
+def: "A type of direct assay evidence  where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
+comment: Molecules typically separated include DNA, RNA, or protein. The gel is typically made of agarose, polyacrylamide, or starch.
+is_a: ECO:0000002 ! direct assay evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:11:51Z
+
+[Term]
+id: ECO:0000338
+name: pulsed-field gel electrophoresis evidence
+def: "Gel electrophoresis evidence that employs alternately pulsed, perpendicularly oriented electrical fields, at least one of which is inhomogeneous, to separate large DNA molecules on an agarose gel." [PMID:6373014]
+synonym: "PFGE" EXACT []
+is_a: ECO:0000337 ! gel electrophoresis evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:34:01Z
+
+[Term]
+id: ECO:0000339
+name: two-dimensional agarose gel electrophoresis evidence
+def: "Gel electrophoresis evidence where DNA molecules are electrophoresed on a low percentage agarose gel followed by high voltage electrophoresis on a higher percentage agarose gel in the presence of ethidium bromide." [PMID:8594382]
+comment: The first dimension gel is intentionally run at low voltage in low percentage agarose to separate DNA molecules in proportion to their mass. The second dimension is run at high voltage in a gel of higher agarose concentration in the presence of ethidium bromide so that the mobility of a non-linear molecule is drastically influenced by its shape.
+synonym: "2-D agarose gel electrophoresis" EXACT []
+is_a: ECO:0000337 ! gel electrophoresis evidence
+created_by: mchibucos
+creation_date: 2012-08-24T12:42:37Z
+
+[Term]
+id: ECO:0000340
+name: plasmid maintenance assay evidence
+def: "Experimental evidence from an assay in which a mitotically stable plasmid (or minichromosome) is introduced into cells, cells are grown without selection for several generations, the proportion of cells that retain the plasmid is then determined (by comparing colony numbers on selective versus non-selective media), and the loss per generation calculated." [ECO:MCC, PMID:6323245]
+synonym: "minichromosome maintenance assay evidence" EXACT [PMID:6323245]
+is_a: ECO:0000006 ! experimental evidence
+created_by: mchibucos
+creation_date: 2012-08-24T13:27:58Z
 
 [Typedef]
 id: used_in
