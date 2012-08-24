@@ -1,6 +1,6 @@
 format-version: 1.2
 data-version: 2.01
-date: 24:08:2012 14:02
+date: 24:08:2012 15:41
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3
 default-namespace: evidence_code2.obo
@@ -187,9 +187,8 @@ is_a: ECO:0000073 ! experimental genomic evidence
 [Term]
 id: ECO:0000027
 name: structural similarity evidence
-def: "Used when an annotation is made based on the structural similarity of the annotated gene or gene product to a single other gene or group of genes. In the case of a single gene, an accession for the related gene's sequence is entered in the evidence_with field." [TAIR:TED]
-synonym: "inferred from sequence or structural similarity" BROAD [GO:ISS]
-synonym: "ISS" BROAD [GO:ISS]
+def: "A type of similarity evidence based on structural similarity of an annotated gene or gene product to another gene or group of genes." [ECO:MCC, TAIR:TED]
+comment: For GO annotation, in the case of a single gene, an accession for the related gene's sequence is entered in the evidence_with field.
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
