@@ -4,4 +4,4 @@ TGT = eco.owl
 release: $(TGT)
 
 $(TGT): $(SRC)
-	ontology-release-runner --reasoner elk $< --outdir main
+	ontology-release-runner --allow-overwrite --reasoner elk $< --outdir main
