@@ -1,3 +1,23 @@
+# Permanent URL of this document:
+#  http://purl.obolibrary.org/obo/eco/gaf-eco-mapping.txt
+#
+# Always use this URL
+#
+# About:
+# This mapping translates evidence codes used in a GAF to a specific evidence type in ECO
+#
+# Each mapping is from a pair:
+#  1. GAF evidence code (e.g. IEA)
+#  2. A GO_REF (found in the GAF With column)
+# to a class identifier in ECO (http://purl.obolibrary.org/obo/eco.owl)
+#  3. ECO ID
+#
+# This document consists of these comments (after #s) followed by
+# a set of mappings, each represented as the above 3 columns separated by tabs
+#
+# To request changes in the mappings, submit an item to
+#  https://code.google.com/p/evidenceontology/issues/list
+#
 EXP	Default	ECO:0000269
 IBA	Default	ECO:0000318
 IBD	Default	ECO:0000319
