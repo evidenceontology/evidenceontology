@@ -1024,11 +1024,6 @@ name: automatic assertion
 alt_id: ECO:00000067
 def: "An assertion method that does not involve human review." [ECO:MCC]
 comment: An automatic assertion is based on computationally generated information that is not reviewed by a person prior to making the assertion. For example, one common type of automatic assertion involves creating an association of evidence with an entity based on commonness of attributes of that entity and another entity for which an assertion already exists. The commonness is determined algorithmically.
-synonym: "IEA" EXACT [GOECO:IEA]
-synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
-xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
-xref: GO_REF:0000023 "Gene Ontology annotation based on Swiss-Prot Subcellular Location vocabulary mapping."
-xref: GOECO:IEA "inferred from electronic annotation"
 is_a: ECO:0000217 ! assertion method
 created_by: mchibucos
 creation_date: 2010-03-18T12:36:04Z
@@ -2443,6 +2438,19 @@ def: "A type of specific protein inhibition evidence where the molecular functio
 is_a: ECO:0000020 ! specific protein inhibition evidence
 created_by: mchibucos
 creation_date: 2012-08-24T13:48:24Z
+
+[Term]
+id: ECO:0000501
+name: inferred from electronic annotation
+def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
+synonym: "IEA" EXACT [GOECO:IEA]
+synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
+xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
+xref: GO_REF:0000023 "Gene Ontology annotation based on Swiss-Prot Subcellular Location vocabulary mapping."
+xref: GOECO:IEA "inferred from electronic annotation"
+intersection_of: ECO:0000000 ! evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: cjm
 
 [Typedef]
 id: used_in
