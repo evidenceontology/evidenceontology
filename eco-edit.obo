@@ -1,8 +1,8 @@
 format-version: 1.2
 data-version: 2.04
-date: 24:08:2012 15:41
+date: 03:04:2013 17:34
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.3
+auto-generated-by: OBO-Edit 2.3-beta5
 default-namespace: eco
 ontology: eco
 
@@ -1152,9 +1152,9 @@ creation_date: 2010-10-05T03:43:17Z
 id: ECO:0000217
 name: assertion method
 def: "A means by which a statement is made about an entity." [ECO:MCC]
+disjoint_from: ECO:0000000 ! evidence
 created_by: mchibucos
 creation_date: 2010-11-12T04:17:37Z
-disjoint_from: ECO:0000000 ! evidence
 
 [Term]
 id: ECO:0000218
@@ -2440,8 +2440,42 @@ created_by: mchibucos
 creation_date: 2012-08-24T13:48:24Z
 
 [Term]
+id: ECO:0000342
+name: Support of intron position by RNA-seq alignment evidence
+def: "A type of transcript splice pattern evidence where intron locations in predicted transcripts are compared to intron locations supported by RNA-seq evidence." [ECO:MCC]
+comment: RNA-seq alignment intron location evidence is used by NCBI RefSeq (http://www.ncbi.nlm.nih.gov/refseq). Exon-exon boundaries (or intron locations) of a RefSeq transcript, as determined by aligning the transcript to a reference chromosome, are compared to intron locations supported by RNAseq data.
+is_a: ECO:0000295 ! RNA-seq evidence
+created_by: mchibucos
+creation_date: 2013-04-03T16:22:05Z
+
+[Term]
+id: ECO:0000343
+name: Full support of intron position by RNA-seq alignment evidence
+def: "A type of support of intron position by RNA-seq alignment evidence where RNA-seq alignment from a single sample supports all of the intron positions (exon pairs) predicted for a transcript." [ECO:MCC]
+comment: Full support entails that all exon pairs represented in the transcript are supported. For example, for a transcript containing five exons, if liver RNA-seq reads support all four introns but brain RNA-seq supports only three introns, then the liver data fully support the transcript exons whereas the brain data do not.
+is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+created_by: mchibucos
+creation_date: 2013-04-03T16:41:48Z
+
+[Term]
+id: ECO:0000344
+name: Partial support of intron position by RNA-seq alignment evidence
+def: "A type of support of intron position by RNA-seq alignment evidence where RNA-seq alignment to a genome supports only some of the intron positions (exon pairs) predicted for a transcript." [ECO:MCC]
+comment: Partial support can occur in two ways. First, one or more exon-exon pair (intron) is not supported by any RNA-seq sample included in the analysis. Second, no single RNA-seq sample provides support for all exon-exon pairs (introns) represented in a transcript, but all represented exons are supported by at least one sample.
+is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+created_by: mchibucos
+creation_date: 2013-04-03T16:50:46Z
+
+[Term]
+id: ECO:0000345
+name: single exon transcript confirmation via alignment evidence 
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: mchibucos
+creation_date: 2013-04-03T17:10:34Z
+
+[Term]
 id: ECO:0000501
-name: inferred from electronic annotation
+name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]

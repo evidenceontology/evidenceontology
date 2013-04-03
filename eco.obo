@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: 2.04
-date: 24:08:2012 15:41
+data-version: 2.05
+date: 03:04:2013 17:34
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.3
+auto-generated-by: OBO-Edit 2.3-beta5
 default-namespace: eco
 ontology: eco
 
@@ -1127,7 +1127,7 @@ name: combinatorial evidence used in automatic assertion
 def: "A type of combinatorial analysis that is used in an automatic assertion." [ECO:MCC]
 comment: Combinatorial analyses could include experimental or computational results. Examples include: (i) large-scale experiment such as a genome-wide two-hybrid or genome-wide synthetic interactions; (ii) integration of large-scale data sets of various types; and (iii) text-based-computation, e.g. text-mining. For simple sequence comparisons, one should use the sequence similarity analysis evidence type. For microarray results alone, expression pattern analysis is appropriate; whereas, large-scale computational analysis should be used when microarray results are combined with the results of other types of large-scale experiments.
 is_a: ECO:0000212 ! combinatorial evidence
-is_a: ECO:0000501 ! inferred from electronic annotation
+is_a: ECO:0000501 ! evidence used in automatic assertion
 intersection_of: ECO:0000212 ! combinatorial evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 ! automatic assertion
@@ -1528,7 +1528,7 @@ id: ECO:0000251
 name: similarity evidence used in automatic assertion
 def: "Similarity evidence that is used in an automatic assertion." [ECO:MCC]
 is_a: ECO:0000041 ! similarity evidence
-is_a: ECO:0000501 ! inferred from electronic annotation
+is_a: ECO:0000501 ! evidence used in automatic assertion
 intersection_of: ECO:0000041 ! similarity evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 ! automatic assertion
@@ -2256,7 +2256,7 @@ id: ECO:0000313
 name: imported information used in automatic assertion
 def: "A type of imported information that is used in an automatic assertion." [ECO:MCC]
 is_a: ECO:0000311 ! imported information
-is_a: ECO:0000501 ! inferred from electronic annotation
+is_a: ECO:0000501 ! evidence used in automatic assertion
 intersection_of: ECO:0000311 ! imported information
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 ! automatic assertion
@@ -2579,8 +2579,35 @@ created_by: mchibucos
 creation_date: 2012-08-24T13:48:24Z
 
 [Term]
+id: ECO:0000342
+name: Support of intron position by RNA-seq alignment evidence
+def: "A type of transcript splice pattern evidence where intron locations in predicted transcripts are compared to intron locations supported by RNA-seq evidence." [ECO:MCC]
+comment: RNA-seq alignment intron location evidence is used by NCBI RefSeq (http://www.ncbi.nlm.nih.gov/refseq). Exon-exon boundaries (or intron locations) of a RefSeq transcript, as determined by aligning the transcript to a reference chromosome, are compared to intron locations supported by RNAseq data.
+is_a: ECO:0000295 ! RNA-seq evidence
+created_by: mchibucos
+creation_date: 2013-04-03T16:22:05Z
+
+[Term]
+id: ECO:0000343
+name: Full support of intron position by RNA-seq alignment evidence
+def: "A type of support of intron position by RNA-seq alignment evidence where RNA-seq alignment from a single sample supports all of the intron positions (exon pairs) predicted for a transcript." [ECO:MCC]
+comment: Full support entails that all exon pairs represented in the transcript are supported. For example, for a transcript containing five exons, if liver RNA-seq reads support all four introns but brain RNA-seq supports only three introns, then the liver data fully support the transcript exons whereas the brain data do not.
+is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+created_by: mchibucos
+creation_date: 2013-04-03T16:41:48Z
+
+[Term]
+id: ECO:0000344
+name: Partial support of intron position by RNA-seq alignment evidence
+def: "A type of support of intron position by RNA-seq alignment evidence where RNA-seq alignment to a genome supports only some of the intron positions (exon pairs) predicted for a transcript." [ECO:MCC]
+comment: Partial support can occur in two ways. First, one or more exon-exon pair (intron) is not supported by any RNA-seq sample included in the analysis. Second, no single RNA-seq sample provides support for all exon-exon pairs (introns) represented in a transcript, but all represented exons are supported by at least one sample.
+is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+created_by: mchibucos
+creation_date: 2013-04-03T16:50:46Z
+
+[Term]
 id: ECO:0000501
-name: inferred from electronic annotation
+name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
@@ -2598,4 +2625,3 @@ id: used_in
 name: used_in
 created_by: mchibucos
 creation_date: 2010-12-09T05:00:20Z
-
