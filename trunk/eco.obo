@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2.05
-date: 03:04:2013 17:34
+data-version: releases/2013-04-04
+date: 04:04:2013 16:48
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3-beta5
 default-namespace: eco
@@ -2606,6 +2606,85 @@ created_by: mchibucos
 creation_date: 2013-04-03T16:50:46Z
 
 [Term]
+id: ECO:0000345
+name: single exon transcript confirmation via alignment evidence
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: mchibucos
+creation_date: 2013-04-03T17:10:34Z
+
+[Term]
+id: ECO:0000346
+name: Support of intron position by RNA-seq alignment evidence used in manual assertion
+def: "A type of support of intron position by RNA-seq alignment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000291 ! transcript expression evidence used in manual assertion
+is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+intersection_of: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2013-04-04T16:37:35Z
+
+[Term]
+id: ECO:0000347
+name: Support of intron position by RNA-seq alignment evidence used in automatic assertion
+def: "A type of support of intron position by RNA-seq alignment evidence that is used in an automatic assertion." [ECO:MCC]
+is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+is_a: ECO:0000501 ! evidence used in automatic assertion
+intersection_of: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: mchibucos
+creation_date: 2013-04-04T16:38:45Z
+
+[Term]
+id: ECO:0000348
+name: Full support of intron position by RNA-seq alignment evidence used in automatic assertion
+def: "A type of full support of intron position by RNA-seq alignment evidence that is used in an automatic assertion." [ECO:MCC]
+is_a: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
+is_a: ECO:0000347 ! Support of intron position by RNA-seq alignment evidence used in automatic assertion
+intersection_of: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: mchibucos
+creation_date: 2013-04-04T16:40:19Z
+
+[Term]
+id: ECO:0000349
+name: Full support of intron position by RNA-seq alignment evidence used in manual assertion
+def: "A type of full support of intron position by RNA-seq alignment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
+is_a: ECO:0000346 ! Support of intron position by RNA-seq alignment evidence used in manual assertion
+intersection_of: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2013-04-04T16:41:34Z
+
+[Term]
+id: ECO:0000350
+name: Partial support of intron position by RNA-seq alignment evidence used in automatic assertion
+def: "A type of partial support of intron position by RNA-seq alignment evidence that is used in an automatic assertion." [ECO:MCC]
+is_a: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
+is_a: ECO:0000347 ! Support of intron position by RNA-seq alignment evidence used in automatic assertion
+intersection_of: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: mchibucos
+creation_date: 2013-04-04T16:42:53Z
+
+[Term]
+id: ECO:0000351
+name: Partial support of intron position by RNA-seq alignment evidence used in manual assertion
+def: "A type of partial support of intron position by RNA-seq alignment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
+is_a: ECO:0000346 ! Support of intron position by RNA-seq alignment evidence used in manual assertion
+intersection_of: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2013-04-04T16:43:56Z
+
+[Term]
 id: ECO:0000501
 name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
@@ -2625,3 +2704,4 @@ id: used_in
 name: used_in
 created_by: mchibucos
 creation_date: 2010-12-09T05:00:20Z
+
