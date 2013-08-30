@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2013-04-04
+data-version: releases/2013-08-30
 date: 04:04:2013 16:48
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3-beta5
@@ -2702,6 +2702,17 @@ created_by: cjm
 [Typedef]
 id: used_in
 name: used_in
+def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
+comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO or RO
+xref: ECO:9000000
+domain: ECO:0000000 ! evidence
+range: ECO:0000217 ! assertion method
 created_by: mchibucos
 creation_date: 2010-12-09T05:00:20Z
+
+[Typedef]
+id: uses
+name: uses
+xref: ECO:9000001
+inverse_of: used_in ! used_in
 
