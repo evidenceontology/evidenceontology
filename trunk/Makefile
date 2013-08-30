@@ -12,4 +12,4 @@ $(TGT): main/$(TGT)
 	cp -pr main/* .
 
 release-diffs:
-        cd diffs && make
+	cd diffs && make
