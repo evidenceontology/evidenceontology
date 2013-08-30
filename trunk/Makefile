@@ -5,7 +5,7 @@ all: main/$(TGT)
 release: all release-diffs
 
 main/$(TGT): $(SRC)
-	ontology-release-runner --allow-overwrite --reasoner elk $< --outdir .
+	ontology-release-runner --allow-overwrite --reasoner hermit --useIsInferred $< --outdir .
 
 deploy: $(TGT)
 $(TGT): main/$(TGT)
