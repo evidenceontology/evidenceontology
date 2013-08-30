@@ -1,7 +1,6 @@
 format-version: 1.2
-date: 04:04:2013 16:48
-saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.3-beta5
+date: 30:08:2013 12:49
+auto-generated-by: OBO-Edit 2.1-beta7
 default-namespace: eco
 ontology: eco
 
@@ -245,6 +244,7 @@ name: non-traceable author statement
 def: "An author statement that is not associated with results presented or a cited reference." [ECO:MCC]
 comment: The non-traceable author statement evidence code should be used in all cases where the author makes a statement that a curator wants to capture but for which there are neither results presented nor a specific reference cited in the source used to make the annotation. The source of the information may be peer reviewed papers, textbooks, database records or vouchered specimens.
 is_a: ECO:0000204 ! author statement
+disjoint_from: ECO:0000033 ! traceable author statement
 
 [Term]
 id: ECO:0000035
@@ -1024,6 +1024,7 @@ alt_id: ECO:00000067
 def: "An assertion method that does not involve human review." [ECO:MCC]
 comment: An automatic assertion is based on computationally generated information that is not reviewed by a person prior to making the assertion. For example, one common type of automatic assertion involves creating an association of evidence with an entity based on commonness of attributes of that entity and another entity for which an assertion already exists. The commonness is determined algorithmically.
 is_a: ECO:0000217 ! assertion method
+disjoint_from: ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2010-03-18T12:36:04Z
 
@@ -1032,6 +1033,8 @@ id: ECO:0000204
 name: author statement
 def: "An evidence type that is based on an assertion by the author of a paper, which is read by a curator." [ECO:MCC]
 is_a: ECO:0000000 ! evidence
+union_of: ECO:0000033 ! traceable author statement
+union_of: ECO:0000034 ! non-traceable author statement
 created_by: mchibucos
 creation_date: 2010-06-21T11:17:21Z
 
@@ -1151,6 +1154,8 @@ creation_date: 2010-10-05T03:43:17Z
 id: ECO:0000217
 name: assertion method
 def: "A means by which a statement is made about an entity." [ECO:MCC]
+union_of: ECO:0000203 ! automatic assertion
+union_of: ECO:0000218 ! manual assertion
 disjoint_from: ECO:0000000 ! evidence
 created_by: mchibucos
 creation_date: 2010-11-12T04:17:37Z
@@ -2364,7 +2369,7 @@ comment: Electrophoretic mobility is a function of both the length and charge of
 synonym: "SDS-PAGE evidence" EXACT []
 is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
-creation_date: 2012-07-31T14:56:43Z
+creation_date: 2012-07-31T02:56:43Z
 
 [Term]
 id: ECO:0000334
@@ -2373,7 +2378,7 @@ def: "A type of direct assay evidence resulting from an assay where both the siz
 comment: An example of an instrument used to analyze particle sizes and counts is the Beckman Coulter® Z Series system.
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
-creation_date: 2012-07-31T15:19:32Z
+creation_date: 2012-07-31T03:19:32Z
 
 [Term]
 id: ECO:0000335
@@ -2382,7 +2387,7 @@ def: "A type of direct assay evidence where the quantity of a substance used as 
 comment: Two examples of substance quantification assay are (i) measuring how much of a radiolabelled compound is taken up by a cell and (ii) measuring how much of a substrate is turned over by a given enzyme.
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
-creation_date: 2012-07-31T15:52:46Z
+creation_date: 2012-07-31T03:52:46Z
 
 [Term]
 id: ECO:0000336
@@ -2428,7 +2433,7 @@ def: "Experimental evidence from an assay in which a mitotically stable plasmid 
 synonym: "minichromosome maintenance assay evidence" EXACT [PMID:6323245]
 is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
-creation_date: 2012-08-24T13:27:58Z
+creation_date: 2012-08-24T01:27:58Z
 
 [Term]
 id: ECO:0000341
@@ -2436,7 +2441,7 @@ name: specific protein inhibition by antibody evidence
 def: "A type of specific protein inhibition evidence where the molecular function of a protein is inhibited by an antibody." [ECO:MCC]
 is_a: ECO:0000020 ! specific protein inhibition evidence
 created_by: mchibucos
-creation_date: 2012-08-24T13:48:24Z
+creation_date: 2012-08-24T01:48:24Z
 
 [Term]
 id: ECO:0000342
@@ -2445,7 +2450,7 @@ def: "A type of transcript splice pattern evidence where intron locations in pre
 comment: RNA-seq alignment intron location evidence is used by NCBI RefSeq (http://www.ncbi.nlm.nih.gov/refseq). Exon-exon boundaries (or intron locations) of a RefSeq transcript, as determined by aligning the transcript to a reference chromosome, are compared to intron locations supported by RNAseq data.
 is_a: ECO:0000295 ! RNA-seq evidence
 created_by: mchibucos
-creation_date: 2013-04-03T16:22:05Z
+creation_date: 2013-04-03T04:22:05Z
 
 [Term]
 id: ECO:0000343
@@ -2454,7 +2459,7 @@ def: "A type of support of intron position by RNA-seq alignment evidence where R
 comment: Full support entails that all exon pairs represented in the transcript are supported. For example, for a transcript containing five exons, if liver RNA-seq reads support all four introns but brain RNA-seq supports only three introns, then the liver data fully support the transcript exons whereas the brain data do not.
 is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
 created_by: mchibucos
-creation_date: 2013-04-03T16:41:48Z
+creation_date: 2013-04-03T04:41:48Z
 
 [Term]
 id: ECO:0000344
@@ -2463,14 +2468,14 @@ def: "A type of support of intron position by RNA-seq alignment evidence where R
 comment: Partial support can occur in two ways. First, one or more exon-exon pair (intron) is not supported by any RNA-seq sample included in the analysis. Second, no single RNA-seq sample provides support for all exon-exon pairs (introns) represented in a transcript, but all represented exons are supported by at least one sample.
 is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
 created_by: mchibucos
-creation_date: 2013-04-03T16:50:46Z
+creation_date: 2013-04-03T04:50:46Z
 
 [Term]
 id: ECO:0000345
 name: single exon transcript confirmation via alignment evidence
 is_a: ECO:0000200 ! sequence alignment evidence
 created_by: mchibucos
-creation_date: 2013-04-03T17:10:34Z
+creation_date: 2013-04-03T05:10:34Z
 
 [Term]
 id: ECO:0000346
@@ -2480,7 +2485,7 @@ is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
 intersection_of: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
-creation_date: 2013-04-04T16:37:35Z
+creation_date: 2013-04-04T04:37:35Z
 
 [Term]
 id: ECO:0000347
@@ -2490,7 +2495,7 @@ is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
 intersection_of: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: mchibucos
-creation_date: 2013-04-04T16:38:45Z
+creation_date: 2013-04-04T04:38:45Z
 
 [Term]
 id: ECO:0000348
@@ -2500,7 +2505,7 @@ is_a: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidenc
 intersection_of: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: mchibucos
-creation_date: 2013-04-04T16:40:19Z
+creation_date: 2013-04-04T04:40:19Z
 
 [Term]
 id: ECO:0000349
@@ -2510,7 +2515,7 @@ is_a: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidenc
 intersection_of: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
-creation_date: 2013-04-04T16:41:34Z
+creation_date: 2013-04-04T04:41:34Z
 
 [Term]
 id: ECO:0000350
@@ -2520,7 +2525,7 @@ is_a: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evid
 intersection_of: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: mchibucos
-creation_date: 2013-04-04T16:42:53Z
+creation_date: 2013-04-04T04:42:53Z
 
 [Term]
 id: ECO:0000351
@@ -2530,7 +2535,7 @@ is_a: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evid
 intersection_of: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
-creation_date: 2013-04-04T16:43:56Z
+creation_date: 2013-04-04T04:43:56Z
 
 [Term]
 id: ECO:0000501
@@ -2550,14 +2555,15 @@ id: used_in
 name: used_in
 def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
 comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO or RO
-created_by: mchibucos
-creation_date: 2010-12-09T05:00:20Z
+xref: ECO:9000000
 domain: ECO:0000000 ! evidence
 range: ECO:0000217 ! assertion method
-xref: ECO:9000000
+created_by: mchibucos
+creation_date: 2010-12-09T05:00:20Z
 
 [Typedef]
 id: uses
 name: uses
-inverse_of: used_in
 xref: ECO:9000001
+inverse_of: used_in ! used_in
+
