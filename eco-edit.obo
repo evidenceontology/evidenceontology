@@ -2538,6 +2538,14 @@ created_by: mchibucos
 creation_date: 2013-04-04T04:43:56Z
 
 [Term]
+id: ECO:0000352
+name: evidence used in manual assertion
+def: "A type of evidence that is used in an manual assertion." [ECO:MCC]
+intersection_of: ECO:0000000 ! evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+
+[Term]
 id: ECO:0000501
 name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
