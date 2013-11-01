@@ -1,7 +1,7 @@
 SRC = eco-edit.obo
 TGT = eco.owl
 
-all: main/$(TGT)
+all: $(TGT)
 release: all release-diffs
 
 $(TGT): $(SRC)
