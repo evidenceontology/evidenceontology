@@ -1,6 +1,7 @@
 format-version: 1.2
-date: 30:08:2013 12:49
-auto-generated-by: OBO-Edit 2.1-beta7
+date: 31:10:2013 21:10
+saved-by: mchibucos
+auto-generated-by: OBO-Edit 2.3-beta6
 default-namespace: eco
 ontology: eco
 
@@ -141,9 +142,6 @@ id: ECO:0000021
 name: physical interaction evidence
 def: "Experimental evidence that is based on characterization of an interaction between a gene product and another molecule." [ECO:MCC]
 comment: Molecules interacted with might include protein, nucleic acid, ion, or complex.
-synonym: "inferred from physical interaction" RELATED [GOECO:IPI]
-synonym: "IPI" RELATED [GOECO:IPI]
-xref: GOECO:IPI "inferred from physical interaction"
 xref: PSI-MI:MI\:0045 "experimental interaction detection"
 is_a: ECO:0000006 ! experimental evidence
 
@@ -216,7 +214,6 @@ name: protein BLAST evidence used in manual assertion
 def: "Protein BLAST evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "curated protein BLAST analysis" RELATED []
 xref: GO_REF:0000012 "Pairwise alignment (TIGR)"
-xref: GO_REF:0000018 "dictyBase 'Inferred from Electronic Annotation (BLAST method)'"
 xref: GO_REF:0000027 "BLAST search criteria for ISS assignment in PAMGO_GAT"
 is_a: ECO:0000208 ! protein BLAST evidence
 intersection_of: ECO:0000208 ! protein BLAST evidence
@@ -2262,6 +2259,7 @@ creation_date: 2011-10-28T05:26:42Z
 id: ECO:0000322
 name: imported manually asserted information used in automatic assertion
 def: "Evidence that was initially used in manual assertion by one person or group, which is imported by a second person or group and used in automatic assertion." [ECO:MCC]
+xref: GO_REF:0000041 "IEA (UniProt UniPathway)"
 is_a: ECO:0000313 ! imported information used in automatic assertion
 created_by: mchibucos
 creation_date: 2011-12-13T12:04:48Z
@@ -2544,6 +2542,19 @@ def: "A type of evidence that is used in an manual assertion." [ECO:MCC]
 intersection_of: ECO:0000000 ! evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
+
+[Term]
+id: ECO:0000353
+name: physical interaction evidence used in manual assertion
+def: "A type of physical interaction evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
+synonym: "IPI" EXACT [GOECO:IPI]
+xref: GOECO:IPI "inferred from physical interaction"
+is_a: ECO:0000021 ! physical interaction evidence
+intersection_of: ECO:0000021 ! physical interaction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2013-10-31T21:01:27Z
 
 [Term]
 id: ECO:0000501
