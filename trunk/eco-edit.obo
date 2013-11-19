@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 31:10:2013 21:10
-saved-by: mchibucos
+date: 19:11:2013 14:12
+saved-by: Marcus
 auto-generated-by: OBO-Edit 2.3-beta6
 default-namespace: eco
 ontology: eco
@@ -2569,11 +2569,23 @@ intersection_of: ECO:0000000 ! evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: cjm
 
+[Term]
+id: ID:0000354
+name: gene neighbors evidence used in manual assertion
+def: "A type of gene neighbors evidence that is used in a manual assertion." [ECO:MCC]
+xref: GO_REF:0000025 "operon structure as IGC evidence"
+is_a: ECO:0000084 ! gene neighbors evidence
+is_a: ECO:0000317 ! genomic context evidence used in manual assertion
+intersection_of: ECO:0000084 ! gene neighbors evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: Marcus
+creation_date: 2013-11-19T13:37:24Z
+
 [Typedef]
 id: used_in
 name: used_in
 def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
-comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO or RO
+comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO or RO.
 xref: ECO:9000000
 domain: ECO:0000000 ! evidence
 range: ECO:0000217 ! assertion method
