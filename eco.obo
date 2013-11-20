@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2013-11-19
+data-version: releases/2013-11-20
 date: 19:11:2013 14:12
 saved-by: Marcus
 auto-generated-by: OBO-Edit 2.3-beta6
@@ -2720,6 +2720,19 @@ created_by: mchibucos
 creation_date: 2013-10-31T21:01:27Z
 
 [Term]
+id: ECO:0000354
+name: gene neighbors evidence used in manual assertion
+def: "A type of gene neighbors evidence that is used in a manual assertion." [ECO:MCC]
+xref: GO_REF:0000025 "operon structure as IGC evidence"
+is_a: ECO:0000084 ! gene neighbors evidence
+is_a: ECO:0000317 ! genomic context evidence used in manual assertion
+intersection_of: ECO:0000084 ! gene neighbors evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: Marcus
+creation_date: 2013-11-19T13:37:24Z
+
+[Term]
 id: ECO:0000501
 name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
@@ -2733,19 +2746,6 @@ intersection_of: ECO:0000000 ! evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
 created_by: cjm
-
-[Term]
-id: ID:0000354
-name: gene neighbors evidence used in manual assertion
-def: "A type of gene neighbors evidence that is used in a manual assertion." [ECO:MCC]
-xref: GO_REF:0000025 "operon structure as IGC evidence"
-is_a: ECO:0000084 ! gene neighbors evidence
-is_a: ECO:0000317 ! genomic context evidence used in manual assertion
-intersection_of: ECO:0000084 ! gene neighbors evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
-created_by: Marcus
-creation_date: 2013-11-19T13:37:24Z
 
 [Typedef]
 id: used_in
