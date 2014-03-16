@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:03:2014 11:21
+date: 16:03:2014 12:46
 saved-by: Marcus
 auto-generated-by: OBO-Edit 2.3.1-beta1
 subsetdef: valid_with_chemical "Use of this evidence code is valid with protein IDs in the with field"
@@ -623,6 +623,13 @@ name: immunogold labelling evidence
 def: "A type of protein assay evidence that involves attaching colloidal gold particles to a secondary antibody, which is attached to a primary antibody that binds a specific protein or cell part, followed by visualization with electron microscopy." [ECO:MCC]
 synonym: "IDA: immunogold labelling" RELATED []
 is_a: ECO:0000039 ! protein assay evidence
+
+[Term]
+id: ECO:0000091
+name: isb-sib evidence
+is_a: ECO:0000000 ! evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:25:24Z
 
 [Term]
 id: ECO:0000092
@@ -2571,7 +2578,7 @@ is_a: ECO:0000084 ! gene neighbors evidence
 is_a: ECO:0000317 ! genomic context evidence used in manual assertion
 intersection_of: ECO:0000084 ! gene neighbors evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: Marcus
+created_by: mchibucos
 creation_date: 2013-11-19T13:37:24Z
 
 [Term]
@@ -2586,6 +2593,966 @@ xref: GOECO:IEA "inferred from electronic annotation"
 intersection_of: ECO:0000000 ! evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: cjm
+
+[Term]
+id: ECO:0001001
+name: 3D cellculture evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001002
+name: [3H]arachidonic acid release assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001003
+name: [3H]-thymidine incorporation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001004
+name: 51Cr release assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001005
+name: 7-AAD staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001006
+name: adhesion assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001007
+name: adoptive cell transfer evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001008
+name: Alamar blue assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001009
+name: allograft transplantation experiment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001010
+name: anion-exchange chromatography evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001011
+name: annexin-V staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001012
+name: behavioral assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001013
+name: blocking monoclonal antibody evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001014
+name: blocking peptide evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001015
+name: blocking polyclonal antibody evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001016
+name: blood test evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001017
+name: Boyden chamber assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001018
+name: BrdU incorporation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001019
+name: caspase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001020
+name: cell counting evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001021
+name: cell permeability assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001022
+name: CFSE-staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001023
+name: chemiluminescence-linked immunoassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001024
+name: chimeric protein evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001025
+name: co-electrophoresis evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001026
+name: co-localization evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001027
+name: colony counting evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001028
+name: co-sedimentation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001029
+name: comet assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001030
+name: conditional knockout evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001031
+name: conditional knockin evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001032
+name: constitutively active mutant evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001033
+name: cross-linking evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001034
+name: crystallography evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001035
+name: cytochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001036
+name: cytochrome C release assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001037
+name: DAPI staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001038
+name: deletion evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001039
+name: DNA laddering assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001040
+name: DNA/RNA dot blot assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001041
+name: DNA/RNA microarray evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001042
+name: dominant-negative mutant evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001043
+name: ectopic expression analysis evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001044
+name: Edman degradation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001045
+name: eTag assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001046
+name: filter binding assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001047
+name: fluorescence in situ hybridization evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001048
+name: fluorescence resonance energy transfer evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001049
+name: gel-filtration evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001050
+name: histochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001051
+name: histology evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001052
+name: high-performance liquid chromatography evidence
+synonym: "HPLC evidence" EXACT []
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001053
+name: immunocytochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001054
+name: immunodepletion evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001055
+name: immunohistochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001056
+name: induced mutation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001057
+name: in vitro acetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001058
+name: in vitro cleavage assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001059
+name: in vitro deubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001060
+name: in vitro deacetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001061
+name: in vitro defarnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001062
+name: in vitro demethylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001063
+name: in vitro desumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001064
+name: in vitro farnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001065
+name: in vitro methylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001066
+name: in vitro palmitoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001067
+name: in vitro phosphatase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001068
+name: in vitro protein kinase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001069
+name: in vitro polyADP-ribosylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001070
+name: in vitro sumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001071
+name: in vitro transcription assay
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001072
+name: in vitro translation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001073
+name: in vitro ubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001074
+name: in vivo acetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001075
+name: in vivo cleavage assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001076
+name: in vivo deacetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001077
+name: in vivo defarnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001078
+name: in vivo demethylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001079
+name: in vivo deubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001080
+name: in vivo desumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001081
+name: in vivo farnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001082
+name: in vivo methylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001083
+name: in vivo palmitoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001084
+name: in vivo phosphatase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001085
+name: in vivo protein kinase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001086
+name: in vivo sumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001087
+name: in vivo transcription assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001088
+name: in vivo translation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001089
+name: in vivo ubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001090
+name: knockin evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001091
+name: knockout evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001092
+name: lipid binding assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001093
+name: LUMIER assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001094
+name: macroscopy evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001095
+name: mammalian 2-hybrid assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001096
+name: mass spectrometry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001097
+name: medical imaging evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001098
+name: microscopy evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001099
+name: motility wound healing assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001100
+name: MTS assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001101
+name: MTT assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001102
+name: multiplex bead-based immunoassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001103
+name: natural variation mutant evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001104
+name: nuclear fragmentation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001105
+name: NMR spectroscopy evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001106
+name: nuclease protection assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001107
+name: nucleotide analog incorporation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001108
+name: phage display evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001109
+name: phosphoamino acid analysis evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001110
+name: phosphopeptide affinity enrichment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001111
+name: physical examination evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001112
+name: phosphopeptide array evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001113
+name: point mutation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001114
+name: propidium iodide staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001115
+name: protein detection by fluorescence evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001116
+name: protein dot blot assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001117
+name: protein microarray evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001118
+name: protein sequencing assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001119
+name: quantitative mass spectrometry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001120
+name: radioassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001121
+name: radioimmunoassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001122
+name: radiologic test evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001123
+name: resonant mirror biosensor evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001124
+name: restriction fragment detection evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001125
+name: restriction landmark genome scanning evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001126
+name: spectrophotometry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001127
+name: surface plasmon resonance evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001128
+name: syngeneic transplantation experiment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001129
+name: TACE activity assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001130
+name: tissue microarray evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001131
+name: transgenic organism evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001132
+name: tryptic phosphopeptide mapping assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001133
+name: TUNEL assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001134
+name: urine test evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001135
+name: wound healing assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001136
+name: WST-1 assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001137
+name: xenotransplantation experiment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
 
 [Typedef]
 id: used_in
