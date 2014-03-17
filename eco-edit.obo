@@ -2,9 +2,9 @@ format-version: 1.2
 date: 16:03:2014 12:46
 saved-by: Marcus
 auto-generated-by: OBO-Edit 2.3.1-beta1
-subsetdef: valid_with_chemical "Use of this evidence code is valid with protein IDs in the with field"
-subsetdef: valid_with_gene "Use of this evidence code is valid with protein IDs in the with field"
-subsetdef: valid_with_protein "Use of this evidence code is valid with protein IDs in the with field"
+subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
+subsetdef: valid_with_gene "Gene IDs should be used in the GO with/from field"
+subsetdef: valid_with_protein "Protein IDs should be used in the GO with/from field"
 default-namespace: eco
 ontology: eco
 
@@ -2557,7 +2557,7 @@ created_by: mchibucos
 id: ECO:0000353
 name: physical interaction evidence used in manual assertion
 def: "A type of physical interaction evidence that is used in a manual assertion." [ECO:MCC]
-subset: valid_with_chemical
+subset: valid_with_chemical_entity
 subset: valid_with_gene
 subset: valid_with_protein
 synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
