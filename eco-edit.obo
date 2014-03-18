@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 17:03:2014 20:59
+date: 17:03:2014 22:37
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3.1-beta1
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
@@ -3631,7 +3631,7 @@ creation_date: 2014-03-17T15:36:19Z
 
 [Term]
 id: ECO:0001145
-name: Alamar blue assay evidence used in manual assertion	
+name: Alamar blue assay evidence used in manual assertion
 def: "A type of Alamar blue assay evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0001008 ! Alamar blue assay evidence
 intersection_of: ECO:0001008 ! Alamar blue assay evidence
@@ -4909,6 +4909,15 @@ intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-16T20:49:54Z
 
+[Term]
+id: ECO:0001273
+name: ectopic expression evidence used in manual assertion
+def: "A type of ectopic expression evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000091 ! isb-sib evidence
+intersection_of: ECO:0000017 ! ectopic expression evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T22:34:56Z
 
 [Typedef]
 id: used_in
