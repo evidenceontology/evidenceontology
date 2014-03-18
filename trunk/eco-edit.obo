@@ -652,16 +652,6 @@ synonym: "IDA: bioassay" RELATED []
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
-id: ECO:0000095
-name: high-performance liquid chromatography evidence used in manual assertion
-def: "A type of high-performance liquid chromatography evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001052 ! high-performance liquid chromatography evidence
-intersection_of: ECO:0001052 ! high-performance liquid chromatography evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: mchibucos
-creation_date: 2014-03-16T20:49:54Z
-
-[Term]
 id: ECO:0000096
 name: electrophoretic mobility shift assay evidence
 def: "Used when an annotation is made based on electrophoretic mobility shift of macromolecules, compounds, and proteins. Most commonly used for detecting the binding of protein to DNA." [TAIR:TED]
@@ -4908,6 +4898,17 @@ intersection_of: ECO:0001123 ! resonant mirror biosensor evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:30:02Z
+
+[Term]
+id: ECO:0001272
+name: high-performance liquid chromatography evidence used in manual assertion
+def: "A type of high-performance liquid chromatography evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001052 ! high-performance liquid chromatography evidence
+intersection_of: ECO:0001052 ! high-performance liquid chromatography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-16T20:49:54Z
+
 
 [Typedef]
 id: used_in
