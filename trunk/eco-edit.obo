@@ -1,10 +1,14 @@
 format-version: 1.2
-date: 17:03:2014 22:37
-saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.3.1-beta1
+date: 01:05:2014 10:33
+saved-by: huntley
+auto-generated-by: OBO-Edit 2.3.1
+subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
+subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
 subsetdef: valid_with_gene "Gene IDs should be used in the GO with/from field"
+subsetdef: valid_with_molecular_function "GO molecular function terms should be used in the GO with/from field"
 subsetdef: valid_with_protein "Protein IDs should be used in the GO with/from field"
+subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"
 subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
 ontology: eco
@@ -1447,6 +1451,9 @@ creation_date: 2010-12-09T02:02:12Z
 id: ECO:0000245
 name: computational combinatorial evidence used in manual assertion
 def: "A type of computational combinatorial analysis that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from reviewed computational analysis" EXACT [GOECO:RCA]
 synonym: "RCA" EXACT [GOECO:RCA]
 xref: GOECO:RCA "inferred from reviewed computational analysis"
@@ -1470,6 +1477,8 @@ creation_date: 2010-12-09T02:37:54Z
 id: ECO:0000247
 name: sequence alignment evidence used in manual assertion
 def: "Sequence alignment evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "inferred from sequence alignment" EXACT [GOECO:ISA]
 synonym: "ISA" EXACT [GOECO:ISA]
 xref: GOECO:ISA "inferred from sequence alignment"
@@ -1503,6 +1512,9 @@ creation_date: 2010-12-09T05:22:30Z
 id: ECO:0000250
 name: sequence similarity evidence used in manual assertion
 def: "Sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 xref: GOECO:ISS "inferred from sequence or structural similarity"
 is_a: ECO:0000044 ! sequence similarity evidence
 intersection_of: ECO:0000044 ! sequence similarity evidence
@@ -1672,6 +1684,9 @@ creation_date: 2010-12-10T03:39:41Z
 id: ECO:0000266
 name: sequence orthology evidence used in manual assertion
 def: "Sequence orthology evidence that is employed in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "Ortholog evidence" RELATED []
 xref: GOECO:ISO "inferred from sequence orthology"
 is_a: ECO:0000201 ! sequence orthology evidence
@@ -2074,6 +2089,9 @@ creation_date: 2011-01-20T02:31:03Z
 id: ECO:0000305
 name: curator inference used in manual assertion
 def: "A type of curator inference that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_biological_process
+subset: valid_with_cellular_component
+subset: valid_with_molecular_function
 xref: GOECO:IC "inferred by curator"
 is_a: ECO:0000205 ! curator inference
 intersection_of: ECO:0000205 ! curator inference
@@ -2177,6 +2195,10 @@ creation_date: 2011-10-28T04:59:31Z
 id: ECO:0000315
 name: mutant phenotype evidence used in manual assertion
 def: "A type of mutant phenotype evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_chemical_entity
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IMP" RELATED [GOECO:IMP]
 synonym: "inferred from mutant phenotype" RELATED [GOECO:IMP]
 xref: GOECO:IMP "inferred from mutant phenotype"
@@ -2190,6 +2212,9 @@ creation_date: 2011-10-28T05:12:49Z
 id: ECO:0000316
 name: genetic interaction evidence used in manual assertion
 def: "A type of genetic interaction experiment evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IGI" EXACT [GOECO:IGI]
 synonym: "inferred from genetic interaction" EXACT [GOECO:IGI]
 xref: GOECO:IGI "inferred from genetic interaction"
@@ -2203,6 +2228,8 @@ creation_date: 2011-10-28T05:14:42Z
 id: ECO:0000317
 name: genomic context evidence used in manual assertion
 def: "A type of genomic context evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IGC" RELATED [GOECO:IGC]
 synonym: "inferred from genomic context" EXACT [GOECO:IGC]
 xref: GOECO:IGC "inferred from genomic context"
@@ -2216,6 +2243,8 @@ creation_date: 2011-10-28T05:22:53Z
 id: ECO:0000318
 name: biological aspect of ancestor evidence used in manual assertion
 def: "A type of biological aspect of ancestor evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IBA" EXACT [GOECO:IBA]
 synonym: "inferred from biological aspect of ancestor" EXACT [GOECO:IBA]
 xref: GOECO:IBA "inferred from biological aspect of ancestor"
@@ -2229,6 +2258,8 @@ creation_date: 2011-10-28T05:23:51Z
 id: ECO:0000319
 name: biological aspect of descendant evidence used in manual assertion
 def: "A type of biological aspect of descendant evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IBD" EXACT [GOECO:IBD]
 synonym: "inferred from biological aspect of descendant" EXACT [GOECO:IBD]
 xref: GOECO:IBD "inferred from biological aspect of descendant"
@@ -2258,6 +2289,8 @@ creation_date: 2011-10-28T05:25:48Z
 id: ECO:0000321
 name: rapid divergence from ancestral sequence evidence used in manual assertion
 def: "A type of rapid divergence from ancestral sequence evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "inferred from rapid divergence" EXACT [GOECO:IRD]
 synonym: "IRD" EXACT [GOECO:IRD]
 xref: GOECO:IRD "inferred from rapid divergence"
@@ -2562,6 +2595,7 @@ def: "A type of physical interaction evidence that is used in a manual assertion
 subset: valid_with_chemical_entity
 subset: valid_with_gene
 subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
 synonym: "IPI" EXACT [GOECO:IPI]
 xref: GOECO:IPI "inferred from physical interaction"
@@ -2586,7 +2620,7 @@ creation_date: 2013-11-19T13:37:24Z
 [Term]
 id: ECO:0000355
 name: phylogenetic distribution evidence
-def: "A type of phylogenetic evidence characterized by the mapping of the character states of living organisms onto phylogenies using the method of maximum parsimony." [PMID:21238344, ECO:MCC]
+def: "A type of phylogenetic evidence characterized by the mapping of the character states of living organisms onto phylogenies using the method of maximum parsimony." [ECO:MCC, PMID:21238344]
 comment: Example of use: "The presence of paired evaginated hemispheres and olfactory bulbs in both agnathan and gnathostome radiations suggests that such hemispheres were also present in the common ancestor." PMID: 7013637. Northcutt RG. (1981) Evolution of the telencephalon in nonmammals. Ann. Rev. Neurosci.
 is_a: ECO:0000080 ! phylogenetic evidence
 created_by: mchibucos
@@ -2596,6 +2630,9 @@ creation_date: 2014-04-22T17:02:31Z
 id: ECO:0000501
 name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
 xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
