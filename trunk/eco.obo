@@ -1,8 +1,16 @@
 format-version: 1.2
-data-version: releases/2013-11-20
-date: 19:11:2013 14:12
-saved-by: Marcus
-auto-generated-by: OBO-Edit 2.3-beta6
+data-version: releases/2014-06-26
+date: 01:05:2014 10:33
+saved-by: huntley
+auto-generated-by: OBO-Edit 2.3.1
+subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
+subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
+subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
+subsetdef: valid_with_gene "Gene IDs should be used in the GO with/from field"
+subsetdef: valid_with_molecular_function "GO molecular function terms should be used in the GO with/from field"
+subsetdef: valid_with_protein "Protein IDs should be used in the GO with/from field"
+subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"
+subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
 ontology: eco
 
@@ -627,6 +635,13 @@ name: immunogold labelling evidence
 def: "A type of protein assay evidence that involves attaching colloidal gold particles to a secondary antibody, which is attached to a primary antibody that binds a specific protein or cell part, followed by visualization with electron microscopy." [ECO:MCC]
 synonym: "IDA: immunogold labelling" RELATED []
 is_a: ECO:0000039 ! protein assay evidence
+
+[Term]
+id: ECO:0000091
+name: isb-sib evidence
+is_a: ECO:0000000 ! evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:25:24Z
 
 [Term]
 id: ECO:0000092
@@ -1451,6 +1466,9 @@ creation_date: 2010-12-09T02:02:12Z
 id: ECO:0000245
 name: computational combinatorial evidence used in manual assertion
 def: "A type of computational combinatorial analysis that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from reviewed computational analysis" EXACT [GOECO:RCA]
 synonym: "RCA" EXACT [GOECO:RCA]
 xref: GOECO:RCA "inferred from reviewed computational analysis"
@@ -1478,6 +1496,8 @@ creation_date: 2010-12-09T02:37:54Z
 id: ECO:0000247
 name: sequence alignment evidence used in manual assertion
 def: "Sequence alignment evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "inferred from sequence alignment" EXACT [GOECO:ISA]
 synonym: "ISA" EXACT [GOECO:ISA]
 xref: GOECO:ISA "inferred from sequence alignment"
@@ -1517,6 +1537,9 @@ creation_date: 2010-12-09T05:22:30Z
 id: ECO:0000250
 name: sequence similarity evidence used in manual assertion
 def: "Sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 xref: GOECO:ISS "inferred from sequence or structural similarity"
 is_a: ECO:0000044 ! sequence similarity evidence
 is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual assertion
@@ -1718,6 +1741,9 @@ creation_date: 2010-12-10T03:39:41Z
 id: ECO:0000266
 name: sequence orthology evidence used in manual assertion
 def: "Sequence orthology evidence that is employed in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "Ortholog evidence" RELATED []
 xref: GOECO:ISO "inferred from sequence orthology"
 is_a: ECO:0000201 ! sequence orthology evidence
@@ -2176,6 +2202,9 @@ creation_date: 2011-01-20T02:31:03Z
 id: ECO:0000305
 name: curator inference used in manual assertion
 def: "A type of curator inference that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_biological_process
+subset: valid_with_cellular_component
+subset: valid_with_molecular_function
 xref: GOECO:IC "inferred by curator"
 is_a: ECO:0000205 ! curator inference
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
@@ -2223,7 +2252,7 @@ creation_date: 2011-02-04T05:41:26Z
 id: ECO:0000309
 name: cap analysis of gene expression evidence
 def: "A type of transcript expression evidence based on high-throughput (HT) sequencing of the 5' ends of cDNA molecules that are selected by a cap-trapper system." [ECO:MCC]
-comment: cDNA is synthesized from microgram quantities of mRNA using first-strand cDNA primer (oligo dT12-18) and reverse transcriptase in the presence of trehalose and sorbitol, followed by selection of full-length cDNA with biotinylated cap-trapper. Linkers are attached to the 5' ends of full-length enriched cDNAs to introduce a recognition site for the restriction endonuclease MmeI, which creates a two base overhang. After amplification, sequencing tags are concatenated for high-throughput sequencing. Resulting sort reads are aligned against a reference genome, and downstream analysis is performed.
+comment: Complementary DNA (cDNA) is synthesized from microgram quantities of mRNA using first-strand cDNA primer (oligo dT12-18) and reverse transcriptase in the presence of trehalose and sorbitol, followed by selection of full-length cDNA with biotinylated cap-trapper. Linkers are attached to the 5' ends of full-length enriched cDNAs to introduce a recognition site for the restriction endonuclease MmeI, which creates a two base overhang. After amplification, sequencing tags are concatenated for high-throughput sequencing. Resulting sort reads are aligned against a reference genome, and downstream analysis is performed.
 synonym: "CAGE" EXACT [PMID:16489339]
 is_a: ECO:0000009 ! transcript expression evidence
 created_by: mchibucos
@@ -2275,6 +2304,7 @@ creation_date: 2011-03-02T05:33:43Z
 id: ECO:0000314
 name: direct assay evidence used in manual assertion
 def: "A type of direct assay evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_chemical_entity
 synonym: "IDA" RELATED [GOECO:IDA]
 synonym: "inferred from direct assay" EXACT [GOECO:IDA]
 xref: GOECO:IDA "inferred from direct assay"
@@ -2290,6 +2320,10 @@ creation_date: 2011-10-28T04:59:31Z
 id: ECO:0000315
 name: mutant phenotype evidence used in manual assertion
 def: "A type of mutant phenotype evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_chemical_entity
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IMP" RELATED [GOECO:IMP]
 synonym: "inferred from mutant phenotype" RELATED [GOECO:IMP]
 xref: GOECO:IMP "inferred from mutant phenotype"
@@ -2305,6 +2339,9 @@ creation_date: 2011-10-28T05:12:49Z
 id: ECO:0000316
 name: genetic interaction evidence used in manual assertion
 def: "A type of genetic interaction experiment evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IGI" EXACT [GOECO:IGI]
 synonym: "inferred from genetic interaction" EXACT [GOECO:IGI]
 xref: GOECO:IGI "inferred from genetic interaction"
@@ -2320,6 +2357,8 @@ creation_date: 2011-10-28T05:14:42Z
 id: ECO:0000317
 name: genomic context evidence used in manual assertion
 def: "A type of genomic context evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IGC" RELATED [GOECO:IGC]
 synonym: "inferred from genomic context" EXACT [GOECO:IGC]
 xref: GOECO:IGC "inferred from genomic context"
@@ -2335,6 +2374,8 @@ creation_date: 2011-10-28T05:22:53Z
 id: ECO:0000318
 name: biological aspect of ancestor evidence used in manual assertion
 def: "A type of biological aspect of ancestor evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IBA" EXACT [GOECO:IBA]
 synonym: "inferred from biological aspect of ancestor" EXACT [GOECO:IBA]
 xref: GOECO:IBA "inferred from biological aspect of ancestor"
@@ -2350,6 +2391,8 @@ creation_date: 2011-10-28T05:23:51Z
 id: ECO:0000319
 name: biological aspect of descendant evidence used in manual assertion
 def: "A type of biological aspect of descendant evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IBD" EXACT [GOECO:IBD]
 synonym: "inferred from biological aspect of descendant" EXACT [GOECO:IBD]
 xref: GOECO:IBD "inferred from biological aspect of descendant"
@@ -2383,6 +2426,8 @@ creation_date: 2011-10-28T05:25:48Z
 id: ECO:0000321
 name: rapid divergence from ancestral sequence evidence used in manual assertion
 def: "A type of rapid divergence from ancestral sequence evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "inferred from rapid divergence" EXACT [GOECO:IRD]
 synonym: "IRD" EXACT [GOECO:IRD]
 xref: GOECO:IRD "inferred from rapid divergence"
@@ -2708,6 +2753,10 @@ created_by: mchibucos
 id: ECO:0000353
 name: physical interaction evidence used in manual assertion
 def: "A type of physical interaction evidence that is used in a manual assertion." [ECO:MCC]
+subset: valid_with_chemical_entity
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
 synonym: "IPI" EXACT [GOECO:IPI]
 xref: GOECO:IPI "inferred from physical interaction"
@@ -2729,13 +2778,25 @@ is_a: ECO:0000317 ! genomic context evidence used in manual assertion
 intersection_of: ECO:0000084 ! gene neighbors evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
-created_by: Marcus
+created_by: mchibucos
 creation_date: 2013-11-19T13:37:24Z
+
+[Term]
+id: ECO:0000355
+name: phylogenetic distribution evidence
+def: "A type of phylogenetic evidence characterized by the mapping of the character states of living organisms onto phylogenies using the method of maximum parsimony." [ECO:MCC, PMID:21238344]
+comment: Example of use: "The presence of paired evaginated hemispheres and olfactory bulbs in both agnathan and gnathostome radiations suggests that such hemispheres were also present in the common ancestor." PMID: 7013637. Northcutt RG. (1981) Evolution of the telencephalon in nonmammals. Ann. Rev. Neurosci.
+is_a: ECO:0000080 ! phylogenetic evidence
+created_by: mchibucos
+creation_date: 2014-04-22T17:02:31Z
 
 [Term]
 id: ECO:0000501
 name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
 xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
@@ -2747,11 +2808,2609 @@ intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
 created_by: cjm
 
+[Term]
+id: ECO:0001001
+name: 3D cell culture evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001002
+name: [3H]arachidonic acid release assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001003
+name: [3H]-thymidine incorporation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001004
+name: 51Cr release assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001005
+name: 7-AAD staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001006
+name: adhesion assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001007
+name: adoptive cell transfer evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001008
+name: Alamar blue assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001009
+name: allograft transplantation experiment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001010
+name: anion-exchange chromatography evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001011
+name: annexin-V staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001012
+name: behavioral assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001013
+name: blocking monoclonal antibody evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001014
+name: blocking peptide evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001015
+name: blocking polyclonal antibody evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001016
+name: blood test evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001017
+name: Boyden chamber assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001018
+name: BrdU incorporation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001019
+name: caspase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001020
+name: cell counting evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001021
+name: cell permeability assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001022
+name: CFSE-staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001023
+name: chemiluminescence-linked immunoassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001024
+name: chimeric protein evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001025
+name: co-electrophoresis evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001026
+name: co-localization evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001027
+name: colony counting evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001028
+name: co-sedimentation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001029
+name: comet assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001030
+name: conditional knockout evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001031
+name: conditional knockin evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001032
+name: constitutively active mutant evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001033
+name: cross-linking evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001034
+name: crystallography evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001035
+name: cytochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001036
+name: cytochrome C release assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001037
+name: DAPI staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001038
+name: deletion evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001039
+name: DNA laddering assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001040
+name: DNA/RNA dot blot assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001041
+name: DNA/RNA microarray evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001042
+name: dominant-negative mutant evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001043
+name: Edman degradation evidence used in manual assertion
+def: "A type of Edman degradation evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001044 ! Edman degradation evidence
+intersection_of: ECO:0001044 ! Edman degradation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:59:00Z
+
+[Term]
+id: ECO:0001044
+name: Edman degradation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001045
+name: eTag assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001046
+name: filter binding assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001047
+name: fluorescence in situ hybridization evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001048
+name: fluorescence resonance energy transfer evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001049
+name: gel-filtration evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001050
+name: histochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001051
+name: histology evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001052
+name: high-performance liquid chromatography evidence
+synonym: "HPLC evidence" EXACT []
+is_a: ECO:0000325 ! chromatography evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001053
+name: immunocytochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001054
+name: immunodepletion evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001055
+name: immunohistochemistry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001056
+name: induced mutation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001057
+name: in vitro acetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001058
+name: in vitro cleavage assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001059
+name: in vitro deubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001060
+name: in vitro deacetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001061
+name: in vitro defarnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001062
+name: in vitro demethylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001063
+name: in vitro desumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001064
+name: in vitro farnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001065
+name: in vitro methylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001066
+name: in vitro palmitoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001067
+name: in vitro phosphatase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001068
+name: in vitro protein kinase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001069
+name: in vitro polyADP-ribosylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001070
+name: in vitro sumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001071
+name: in vitro transcription assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001072
+name: in vitro translation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001073
+name: in vitro ubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001074
+name: in vivo acetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001075
+name: in vivo cleavage assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001076
+name: in vivo deacetylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001077
+name: in vivo defarnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001078
+name: in vivo demethylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001079
+name: in vivo deubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001080
+name: in vivo desumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001081
+name: in vivo farnesylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001082
+name: in vivo methylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001083
+name: in vivo palmitoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001084
+name: in vivo phosphatase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001085
+name: in vivo protein kinase assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001086
+name: in vivo sumoylation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001087
+name: in vivo transcription assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001088
+name: in vivo translation assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001089
+name: in vivo ubiquitination assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001090
+name: knockin evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001091
+name: knockout evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001092
+name: lipid binding assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001093
+name: LUMIER assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001094
+name: macroscopy evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001095
+name: mammalian 2-hybrid assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001096
+name: mass spectrometry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001097
+name: medical imaging evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001098
+name: microscopy evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001099
+name: motility wound healing assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001100
+name: MTS assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001101
+name: MTT assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001102
+name: multiplex bead-based immunoassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001103
+name: natural variation mutant evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001104
+name: nuclear fragmentation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001105
+name: NMR spectroscopy evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001106
+name: nuclease protection assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001107
+name: nucleotide analog incorporation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001108
+name: phage display evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001109
+name: phosphoamino acid analysis evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001110
+name: phosphopeptide affinity enrichment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001111
+name: physical examination evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001112
+name: phosphopeptide array evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001113
+name: point mutation evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001114
+name: propidium iodide staining evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001115
+name: protein detection by fluorescence evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001116
+name: protein dot blot assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001117
+name: protein microarray evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001118
+name: protein sequencing assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001119
+name: quantitative mass spectrometry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001120
+name: radioassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001121
+name: radioimmunoassay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001122
+name: radiologic test evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001123
+name: resonant mirror biosensor evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001124
+name: restriction fragment detection evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001125
+name: restriction landmark genome scanning evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001126
+name: spectrophotometry evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001127
+name: surface plasmon resonance evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001128
+name: syngeneic transplantation experiment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001129
+name: TACE activity assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001130
+name: tissue microarray evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001131
+name: transgenic organism evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001132
+name: tryptic phosphopeptide mapping assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001133
+name: TUNEL assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001134
+name: urine test evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001135
+name: wound healing assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001136
+name: WST-1 assay evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001137
+name: xenotransplantation experiment evidence
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
+id: ECO:0001138
+name: 3D cell culture evidence used in manual assertion
+def: "A type of 3D cell culture evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001001 ! 3D cell culture evidence
+intersection_of: ECO:0001001 ! 3D cell culture evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:18:35Z
+
+[Term]
+id: ECO:0001139
+name: 51Cr release assay evidence used in manual assertion
+def: "A type of 51Cr release assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001004 ! 51Cr release assay evidence
+intersection_of: ECO:0001004 ! 51Cr release assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:20:55Z
+
+[Term]
+id: ECO:0001140
+name: 7-AAD staining evidence used in manual assertion
+def: "A type of 7-AAD staining evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001005 ! 7-AAD staining evidence
+intersection_of: ECO:0001005 ! 7-AAD staining evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:22:01Z
+
+[Term]
+id: ECO:0001141
+name: [3H]-thymidine incorporation assay evidence used in manual assertion
+def: "A type of [3H]-thymidine incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001003 ! [3H]-thymidine incorporation assay evidence
+intersection_of: ECO:0001003 ! [3H]-thymidine incorporation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:31:52Z
+
+[Term]
+id: ECO:0001142
+name: [3H]arachidonic acid release assay evidence used in manual assertion
+def: "A type of [3H]arachidonic acid release assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001002 ! [3H]arachidonic acid release assay evidence
+intersection_of: ECO:0001002 ! [3H]arachidonic acid release assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:32:44Z
+
+[Term]
+id: ECO:0001143
+name: adhesion assay evidence used in manual assertion
+def: "A type of adhesion assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001006 ! adhesion assay evidence
+intersection_of: ECO:0001006 ! adhesion assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:33:38Z
+
+[Term]
+id: ECO:0001144
+name: adoptive cell transfer evidence used in manual assertion
+def: "A type of adoptive cell transfer evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001007 ! adoptive cell transfer evidence
+intersection_of: ECO:0001007 ! adoptive cell transfer evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:36:19Z
+
+[Term]
+id: ECO:0001145
+name: Alamar blue assay evidence used in manual assertion
+def: "A type of Alamar blue assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001008 ! Alamar blue assay evidence
+intersection_of: ECO:0001008 ! Alamar blue assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:37:21Z
+
+[Term]
+id: ECO:0001146
+name: allograft transplantation experiment evidence used in manual assertion
+def: "A type of allograft transplantation experiment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001009 ! allograft transplantation experiment evidence
+intersection_of: ECO:0001009 ! allograft transplantation experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:38:22Z
+
+[Term]
+id: ECO:0001147
+name: anion-exchange chromatography evidence used in manual assertion
+def: "A type of anion-exchange chromatography evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001010 ! anion-exchange chromatography evidence
+intersection_of: ECO:0001010 ! anion-exchange chromatography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:44:30Z
+
+[Term]
+id: ECO:0001148
+name: annexin-V staining evidence used in manual assertion
+def: "A type of annexin-V staining evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001011 ! annexin-V staining evidence
+intersection_of: ECO:0001011 ! annexin-V staining evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:52:01Z
+
+[Term]
+id: ECO:0001149
+name: behavioral assay evidence used in manual assertion
+def: "A type of behavioral assay evidence used that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001012 ! behavioral assay evidence
+intersection_of: ECO:0001012 ! behavioral assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:53:38Z
+
+[Term]
+id: ECO:0001150
+name: blocking monoclonal antibody evidence used in manual assertion
+def: "A type of blocking monoclonal antibody evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001013 ! blocking monoclonal antibody evidence
+intersection_of: ECO:0001013 ! blocking monoclonal antibody evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:54:44Z
+
+[Term]
+id: ECO:0001151
+name: blocking peptide evidence used in manual assertion
+def: "A type of blocking peptide evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001014 ! blocking peptide evidence
+intersection_of: ECO:0001014 ! blocking peptide evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T15:55:33Z
+
+[Term]
+id: ECO:0001152
+name: blocking polyclonal antibody evidence used in manual assertion
+def: "A type of blocking polyclonal antibody evidence tthat is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001015 ! blocking polyclonal antibody evidence
+intersection_of: ECO:0001015 ! blocking polyclonal antibody evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:01:39Z
+
+[Term]
+id: ECO:0001153
+name: blood test evidence used in manual assertion
+def: "A type of blood test evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001016 ! blood test evidence
+intersection_of: ECO:0001016 ! blood test evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:02:47Z
+
+[Term]
+id: ECO:0001154
+name: Boyden chamber assay evidence used in manual assertion
+def: "A type of Boyden chamber assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001017 ! Boyden chamber assay evidence
+intersection_of: ECO:0001017 ! Boyden chamber assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:03:53Z
+
+[Term]
+id: ECO:0001155
+name: BrdU incorporation assay evidence used in manual assertion
+def: "A type of BrdU incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001018 ! BrdU incorporation assay evidence
+intersection_of: ECO:0001018 ! BrdU incorporation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:04:49Z
+
+[Term]
+id: ECO:0001156
+name: caspase assay evidence used in manual assertion
+def: "A type of caspase assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001019 ! caspase assay evidence
+intersection_of: ECO:0001019 ! caspase assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:06:06Z
+
+[Term]
+id: ECO:0001157
+name: cell counting evidence used in manual assertion
+def: "A type of cell counting evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001020 ! cell counting evidence
+intersection_of: ECO:0001020 ! cell counting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:07:13Z
+
+[Term]
+id: ECO:0001158
+name: cell permeability assay evidence used in manual assertion
+def: "A type of cell permeability assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001021 ! cell permeability assay evidence
+intersection_of: ECO:0001021 ! cell permeability assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:07:58Z
+
+[Term]
+id: ECO:0001159
+name: CFSE-staining evidence used in manual assertion
+def: "A type of CFSE-staining evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001022 ! CFSE-staining evidence
+intersection_of: ECO:0001022 ! CFSE-staining evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:08:54Z
+
+[Term]
+id: ECO:0001160
+name: chemiluminescence-linked immunoassay evidence used in manual assertion
+def: "A type of chemiluminescence-linked immunoassay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001023 ! chemiluminescence-linked immunoassay evidence
+intersection_of: ECO:0001023 ! chemiluminescence-linked immunoassay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:09:55Z
+
+[Term]
+id: ECO:0001161
+name: chimeric protein evidence used in manual assertion
+def: "A type of chimeric protein evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001024 ! chimeric protein evidence
+intersection_of: ECO:0001024 ! chimeric protein evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:10:40Z
+
+[Term]
+id: ECO:0001162
+name: co-electrophoresis evidence used in manual assertion
+def: "A type of co-electrophoresis evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001025 ! co-electrophoresis evidence
+intersection_of: ECO:0001025 ! co-electrophoresis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:11:22Z
+
+[Term]
+id: ECO:0001163
+name: co-localization evidence used in manual assertion
+def: "A type of co-localization evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001026 ! co-localization evidence
+intersection_of: ECO:0001026 ! co-localization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:12:04Z
+
+[Term]
+id: ECO:0001164
+name: co-sedimentation assay evidence used in manual assertion
+def: "A type of co-sedimentation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001028 ! co-sedimentation assay evidence
+intersection_of: ECO:0001028 ! co-sedimentation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:12:55Z
+
+[Term]
+id: ECO:0001165
+name: colony counting evidence used in manual assertion
+def: "A type of colony counting evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001027 ! colony counting evidence
+intersection_of: ECO:0001027 ! colony counting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:14:57Z
+
+[Term]
+id: ECO:0001166
+name: comet assay evidence used in manual assertion
+def: "A type of comet assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001029 ! comet assay evidence
+intersection_of: ECO:0001029 ! comet assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:16:01Z
+
+[Term]
+id: ECO:0001167
+name: conditional knockin evidence used in manual assertion
+def: "A type of conditional knockin evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001031 ! conditional knockin evidence
+intersection_of: ECO:0001031 ! conditional knockin evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:17:22Z
+
+[Term]
+id: ECO:0001168
+name: conditional knockout evidence used in manual assertion
+def: "A type of conditional knockout evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001030 ! conditional knockout evidence
+intersection_of: ECO:0001030 ! conditional knockout evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:17:58Z
+
+[Term]
+id: ECO:0001169
+name: constitutively active mutant evidence used in manual assertion
+def: "A type of constitutively active mutant evidence that is used a in manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001032 ! constitutively active mutant evidence
+intersection_of: ECO:0001032 ! constitutively active mutant evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:20:23Z
+
+[Term]
+id: ECO:0001170
+name: cross-linking evidence used in manual assertion
+def: "A type of cross-linking evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001033 ! cross-linking evidence
+intersection_of: ECO:0001033 ! cross-linking evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:21:29Z
+
+[Term]
+id: ECO:0001171
+name: crystallography evidence used in manual assertion
+def: "A type of crystallography evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001034 ! crystallography evidence
+intersection_of: ECO:0001034 ! crystallography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:22:20Z
+
+[Term]
+id: ECO:0001172
+name: cytochemistry evidence used in manual assertion
+def: "A type of cytochemistry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001035 ! cytochemistry evidence
+intersection_of: ECO:0001035 ! cytochemistry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:23:10Z
+
+[Term]
+id: ECO:0001173
+name: cytochrome C release assay evidence used in manual assertion
+def: "A type of cytochrome C release assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001036 ! cytochrome C release assay evidence
+intersection_of: ECO:0001036 ! cytochrome C release assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:23:53Z
+
+[Term]
+id: ECO:0001174
+name: DAPI staining evidence used in manual assertion
+def: "A type of DAPI staining evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001037 ! DAPI staining evidence
+intersection_of: ECO:0001037 ! DAPI staining evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:25:03Z
+
+[Term]
+id: ECO:0001175
+name: deletion evidence used in manual assertion
+def: "A type of deletion evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001038 ! deletion evidence
+intersection_of: ECO:0001038 ! deletion evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:25:54Z
+
+[Term]
+id: ECO:0001176
+name: DNA laddering assay evidence used in manual assertion
+def: "A type of DNA laddering assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001039 ! DNA laddering assay evidence
+intersection_of: ECO:0001039 ! DNA laddering assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:26:46Z
+
+[Term]
+id: ECO:0001177
+name: DNA/RNA dot blot assay evidence used in manual assertion
+def: "A type of DNA/RNA dot blot assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001040 ! DNA/RNA dot blot assay evidence
+intersection_of: ECO:0001040 ! DNA/RNA dot blot assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:45:52Z
+
+[Term]
+id: ECO:0001178
+name: DNA/RNA microarray evidence used in manual assertion
+def: "A type of DNA/RNA microarray evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001041 ! DNA/RNA microarray evidence
+intersection_of: ECO:0001041 ! DNA/RNA microarray evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:46:50Z
+
+[Term]
+id: ECO:0001179
+name: dominant-negative mutant evidence used in manual assertion
+def: "A type of dominant-negative mutant evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001042 ! dominant-negative mutant evidence
+intersection_of: ECO:0001042 ! dominant-negative mutant evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:47:44Z
+
+[Term]
+id: ECO:0001180
+name: eTag assay evidence used in manual assertion
+def: "A type of eTag assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001045 ! eTag assay evidence
+intersection_of: ECO:0001045 ! eTag assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T16:59:39Z
+
+[Term]
+id: ECO:0001181
+name: filter binding assay evidence used in manual assertion
+def: "A type of filter binding assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001046 ! filter binding assay evidence
+intersection_of: ECO:0001046 ! filter binding assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:03:28Z
+
+[Term]
+id: ECO:0001182
+name: fluorescence in situ hybridization evidence used in manual assertion
+def: "A type of fluorescence in situ hybridization evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001047 ! fluorescence in situ hybridization evidence
+intersection_of: ECO:0001047 ! fluorescence in situ hybridization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:04:20Z
+
+[Term]
+id: ECO:0001183
+name: fluorescence resonance energy transfer evidence used in manual assertion
+def: "A type of fluorescence resonance energy transfer evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001048 ! fluorescence resonance energy transfer evidence
+intersection_of: ECO:0001048 ! fluorescence resonance energy transfer evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:05:22Z
+
+[Term]
+id: ECO:0001184
+name: gel-filtration evidence used in manual assertion
+def: "A type of gel-filtration evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001049 ! gel-filtration evidence
+intersection_of: ECO:0001049 ! gel-filtration evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:06:14Z
+
+[Term]
+id: ECO:0001185
+name: histochemistry evidence used in manual assertion
+def: "A type of histochemistry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001050 ! histochemistry evidence
+intersection_of: ECO:0001050 ! histochemistry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:07:19Z
+
+[Term]
+id: ECO:0001186
+name: immunocytochemistry evidence used in manual assertion
+def: "A type of immunocytochemistry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001053 ! immunocytochemistry evidence
+intersection_of: ECO:0001053 ! immunocytochemistry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:12:39Z
+
+[Term]
+id: ECO:0001187
+name: histology evidence used in manual assertion
+def: "A type of histology evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001051 ! histology evidence
+intersection_of: ECO:0001051 ! histology evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:09:50Z
+
+[Term]
+id: ECO:0001188
+name: immunodepletion evidence used in manual assertion
+def: "A type of immunodepletion evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001054 ! immunodepletion evidence
+intersection_of: ECO:0001054 ! immunodepletion evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:16:19Z
+
+[Term]
+id: ECO:0001189
+name: immunohistochemistry evidence used in manual assertion
+def: "A type of immunohistochemistry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001055 ! immunohistochemistry evidence
+intersection_of: ECO:0001055 ! immunohistochemistry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:17:22Z
+
+[Term]
+id: ECO:0001190
+name: in vitro acetylation assay evidence used in manual assertion
+def: "A type of in vitro acetylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001057 ! in vitro acetylation assay evidence
+intersection_of: ECO:0001057 ! in vitro acetylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:19:24Z
+
+[Term]
+id: ECO:0001191
+name: in vitro cleavage assay evidence used in manual assertion
+def: "A type of in vitro cleavage assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001058 ! in vitro cleavage assay evidence
+intersection_of: ECO:0001058 ! in vitro cleavage assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:21:22Z
+
+[Term]
+id: ECO:0001192
+name: in vitro deacetylation assay evidence used in manual assertion
+def: "A type of in vitro deacetylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001060 ! in vitro deacetylation assay evidence
+intersection_of: ECO:0001060 ! in vitro deacetylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:23:42Z
+
+[Term]
+id: ECO:0001193
+name: in vitro defarnesylation assay evidence used in manual assertion
+def: "A type of in vitro defarnesylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001061 ! in vitro defarnesylation assay evidence
+intersection_of: ECO:0001061 ! in vitro defarnesylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:25:45Z
+
+[Term]
+id: ECO:0001194
+name: in vitro demethylation assay evidence used in manual assertion
+def: "A type of in vitro demethylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001062 ! in vitro demethylation assay evidence
+intersection_of: ECO:0001062 ! in vitro demethylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:27:00Z
+
+[Term]
+id: ECO:0001195
+name: in vitro desumoylation assay evidence used in manual assertion
+def: "A type of in vitro desumoylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001063 ! in vitro desumoylation assay evidence
+intersection_of: ECO:0001063 ! in vitro desumoylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:29:01Z
+
+[Term]
+id: ECO:0001196
+name: in vitro deubiquitination assay evidence used in manual assertion
+def: "A type of in vitro deubiquitination assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001059 ! in vitro deubiquitination assay evidence
+intersection_of: ECO:0001059 ! in vitro deubiquitination assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:29:48Z
+
+[Term]
+id: ECO:0001197
+name: in vitro farnesylation assay evidence used in manual assertion
+def: "A type of in vitro farnesylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001064 ! in vitro farnesylation assay evidence
+intersection_of: ECO:0001064 ! in vitro farnesylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:30:50Z
+
+[Term]
+id: ECO:0001198
+name: in vitro methylation assay evidence used in manual assertion
+def: "A type of in vitro methylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001065 ! in vitro methylation assay evidence
+intersection_of: ECO:0001065 ! in vitro methylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:31:54Z
+
+[Term]
+id: ECO:0001199
+name: in vitro palmitoylation assay evidence used in manual assertion
+def: "A type of in vitro palmitoylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001066 ! in vitro palmitoylation assay evidence
+intersection_of: ECO:0001066 ! in vitro palmitoylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:32:57Z
+
+[Term]
+id: ECO:0001200
+name: in vitro phosphatase assay evidence used in manual assertion
+def: "A type of in vitro phosphatase assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001067 ! in vitro phosphatase assay evidence
+intersection_of: ECO:0001067 ! in vitro phosphatase assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:34:16Z
+
+[Term]
+id: ECO:0001201
+name: in vitro polyADP-ribosylation assay evidence used in manual assertion
+def: "A type of in vitro polyADP-ribosylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001069 ! in vitro polyADP-ribosylation assay evidence
+intersection_of: ECO:0001069 ! in vitro polyADP-ribosylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:34:57Z
+
+[Term]
+id: ECO:0001202
+name: in vitro protein kinase assay evidence used in manual assertion
+def: "A type of in vitro protein kinase assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001068 ! in vitro protein kinase assay evidence
+intersection_of: ECO:0001068 ! in vitro protein kinase assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:39:57Z
+
+[Term]
+id: ECO:0001203
+name: in vitro sumoylation assay evidence used in manual assertion
+def: "A type of in vitro sumoylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001070 ! in vitro sumoylation assay evidence
+intersection_of: ECO:0001070 ! in vitro sumoylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:41:25Z
+
+[Term]
+id: ECO:0001204
+name: in vitro transcription assay used in manual assertion
+def: "A type of in vitro transcription assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001071 ! in vitro transcription assay evidence
+intersection_of: ECO:0001071 ! in vitro transcription assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:44:40Z
+
+[Term]
+id: ECO:0001205
+name: in vitro translation assay evidence used in manual assertion
+def: "A type of in vitro translation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001072 ! in vitro translation assay evidence
+intersection_of: ECO:0001072 ! in vitro translation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:46:30Z
+
+[Term]
+id: ECO:0001206
+name: in vitro ubiquitination assay evidence used in manual assertion
+def: "A type of in vitro ubiquitination assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001073 ! in vitro ubiquitination assay evidence
+intersection_of: ECO:0001073 ! in vitro ubiquitination assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:47:18Z
+
+[Term]
+id: ECO:0001207
+name: in vivo acetylation assay evidence used in manual assertion
+def: "A type of in vivo acetylation assay evidence that is used in manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001074 ! in vivo acetylation assay evidence
+intersection_of: ECO:0001074 ! in vivo acetylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:48:56Z
+
+[Term]
+id: ECO:0001208
+name: in vivo cleavage assay evidence used in manual assertion
+def: "A type of in vivo cleavage assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001075 ! in vivo cleavage assay evidence
+intersection_of: ECO:0001075 ! in vivo cleavage assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:49:43Z
+
+[Term]
+id: ECO:0001209
+name: in vivo deacetylation assay evidence used in manual assertion
+def: "A type of in vivo deacetylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001076 ! in vivo deacetylation assay evidence
+intersection_of: ECO:0001076 ! in vivo deacetylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:50:47Z
+
+[Term]
+id: ECO:0001210
+name: in vivo defarnesylation assay evidence used in manual assertion
+def: "A type of in vivo defarnesylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001077 ! in vivo defarnesylation assay evidence
+intersection_of: ECO:0001077 ! in vivo defarnesylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:52:41Z
+
+[Term]
+id: ECO:0001211
+name: in vivo demethylation assay evidence used in manual assertion
+def: "A type of in vivo demethylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001078 ! in vivo demethylation assay evidence
+intersection_of: ECO:0001078 ! in vivo demethylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:53:40Z
+
+[Term]
+id: ECO:0001212
+name: in vivo desumoylation assay evidence used in manual assertion
+def: "A type of in vivo desumoylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001080 ! in vivo desumoylation assay evidence
+intersection_of: ECO:0001080 ! in vivo desumoylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:54:36Z
+
+[Term]
+id: ECO:0001213
+name: in vivo deubiquitination assay evidence used in manual assertion
+def: "A type of in vivo deubiquitination assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001079 ! in vivo deubiquitination assay evidence
+intersection_of: ECO:0001079 ! in vivo deubiquitination assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:56:28Z
+
+[Term]
+id: ECO:0001214
+name: in vivo farnesylation assay evidence used in manual assertion
+def: "A type of in vivo farnesylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001081 ! in vivo farnesylation assay evidence
+intersection_of: ECO:0001081 ! in vivo farnesylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T17:57:18Z
+
+[Term]
+id: ECO:0001215
+name: in vivo methylation assay evidence used in manual assertion
+def: "A type of in vivo methylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001082 ! in vivo methylation assay evidence
+intersection_of: ECO:0001082 ! in vivo methylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:03:16Z
+
+[Term]
+id: ECO:0001216
+name: in vivo palmitoylation assay evidence used in manual assertion
+def: "A type of in vivo palmitoylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001083 ! in vivo palmitoylation assay evidence
+intersection_of: ECO:0001083 ! in vivo palmitoylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:04:07Z
+
+[Term]
+id: ECO:0001217
+name: in vivo phosphatase assay evidence used in manual assertion
+def: "A type of in vivo phosphatase assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001084 ! in vivo phosphatase assay evidence
+intersection_of: ECO:0001084 ! in vivo phosphatase assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:06:08Z
+
+[Term]
+id: ECO:0001218
+name: in vivo protein kinase assay evidence used in manual assertion
+def: "A type of in vivo protein kinase assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001085 ! in vivo protein kinase assay evidence
+intersection_of: ECO:0001085 ! in vivo protein kinase assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:07:58Z
+
+[Term]
+id: ECO:0001219
+name: in vivo sumoylation assay evidence used in manual assertion
+def: "A type of in vivo sumoylation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001086 ! in vivo sumoylation assay evidence
+intersection_of: ECO:0001086 ! in vivo sumoylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:09:49Z
+
+[Term]
+id: ECO:0001220
+name: in vivo transcription assay evidence used in manual assertion
+def: "A type of in vivo transcription assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001087 ! in vivo transcription assay evidence
+intersection_of: ECO:0001087 ! in vivo transcription assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:11:20Z
+
+[Term]
+id: ECO:0001221
+name: in vivo translation assay evidence used in manual assertion
+def: "A type of in vivo translation assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001088 ! in vivo translation assay evidence
+intersection_of: ECO:0001088 ! in vivo translation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:42:50Z
+
+[Term]
+id: ECO:0001222
+name: in vivo ubiquitination assay evidence used in manual assertion
+def: "A type of in vivo ubiquitination assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001089 ! in vivo ubiquitination assay evidence
+intersection_of: ECO:0001089 ! in vivo ubiquitination assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:44:11Z
+
+[Term]
+id: ECO:0001223
+name: induced mutation evidence used in manual assertion
+def: "A type of induced mutation evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001056 ! induced mutation evidence
+intersection_of: ECO:0001056 ! induced mutation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:45:56Z
+
+[Term]
+id: ECO:0001224
+name: knockin evidence used in manual assertion
+def: "A type of knockin evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001090 ! knockin evidence
+intersection_of: ECO:0001090 ! knockin evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:49:35Z
+
+[Term]
+id: ECO:0001225
+name: knockout evidence used in manual assertion
+def: "A type of knockout evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001091 ! knockout evidence
+intersection_of: ECO:0001091 ! knockout evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:51:31Z
+
+[Term]
+id: ECO:0001226
+name: lipid binding assay evidence used in manual assertion
+def: "A type of lipid binding assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001092 ! lipid binding assay evidence
+intersection_of: ECO:0001092 ! lipid binding assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:52:19Z
+
+[Term]
+id: ECO:0001227
+name: LUMIER assay evidence used in manual assertion
+def: "A type of LUMIER assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001093 ! LUMIER assay evidence
+intersection_of: ECO:0001093 ! LUMIER assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:55:16Z
+
+[Term]
+id: ECO:0001228
+name: macroscopy evidence used in manual assertion
+def: "A type of macroscopy evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001094 ! macroscopy evidence
+intersection_of: ECO:0001094 ! macroscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:56:21Z
+
+[Term]
+id: ECO:0001229
+name: mammalian 2-hybrid assay evidence used in manual assertion
+def: "A type of mammalian 2-hybrid assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001095 ! mammalian 2-hybrid assay evidence
+intersection_of: ECO:0001095 ! mammalian 2-hybrid assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:57:25Z
+
+[Term]
+id: ECO:0001230
+name: mass spectrometry evidence used in manual assertion
+def: "A type of mass spectrometry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001096 ! mass spectrometry evidence
+intersection_of: ECO:0001096 ! mass spectrometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T18:59:50Z
+
+[Term]
+id: ECO:0001231
+name: medical imaging evidence used in manual assertion
+def: "A type of medical imaging evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001097 ! medical imaging evidence
+intersection_of: ECO:0001097 ! medical imaging evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:04:43Z
+
+[Term]
+id: ECO:0001232
+name: microscopy evidence used in manual assertion
+def: "A type of microscopy evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001098 ! microscopy evidence
+intersection_of: ECO:0001098 ! microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:05:37Z
+
+[Term]
+id: ECO:0001233
+name: motility wound healing assay evidence used in manual assertion
+def: "A type of motility wound healing assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001099 ! motility wound healing assay evidence
+intersection_of: ECO:0001099 ! motility wound healing assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:08:13Z
+
+[Term]
+id: ECO:0001234
+name: MTS assay evidence used in manual assertion
+def: "A type of MTS assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001100 ! MTS assay evidence
+intersection_of: ECO:0001100 ! MTS assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:08:51Z
+
+[Term]
+id: ECO:0001235
+name: MTT assay evidence used in manual assertion
+def: "A type of MTT assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001101 ! MTT assay evidence
+intersection_of: ECO:0001101 ! MTT assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:13:17Z
+
+[Term]
+id: ECO:0001236
+name: multiplex bead-based immunoassay evidence used in manual assertion
+def: "A type of multiplex bead-based immunoassay evidence that is  used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001102 ! multiplex bead-based immunoassay evidence
+intersection_of: ECO:0001102 ! multiplex bead-based immunoassay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:14:03Z
+
+[Term]
+id: ECO:0001237
+name: natural variation mutant evidence used in manual assertion
+def: "A type of natural variation mutant evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001103 ! natural variation mutant evidence
+intersection_of: ECO:0001103 ! natural variation mutant evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:15:48Z
+
+[Term]
+id: ECO:0001238
+name: NMR spectroscopy evidence used in manual assertion
+def: "A type of NMR spectroscopy evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001105 ! NMR spectroscopy evidence
+intersection_of: ECO:0001105 ! NMR spectroscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:18:50Z
+
+[Term]
+id: ECO:0001239
+name: nuclear fragmentation evidence used in manual assertion
+def: "A type of nuclear fragmentation evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001104 ! nuclear fragmentation evidence
+intersection_of: ECO:0001104 ! nuclear fragmentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:19:55Z
+
+[Term]
+id: ECO:0001240
+name: nuclease protection assay evidence used in manual assertion
+def: "A type of nuclease protection assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001106 ! nuclease protection assay evidence
+intersection_of: ECO:0001106 ! nuclease protection assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:23:41Z
+
+[Term]
+id: ECO:0001241
+name: nucleotide analog incorporation evidence used in manual assertion
+def: "A type of nucleotide analog incorporation evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001107 ! nucleotide analog incorporation evidence
+intersection_of: ECO:0001107 ! nucleotide analog incorporation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:25:17Z
+
+[Term]
+id: ECO:0001242
+name: phage display evidence used in manual assertion
+def: "A type of phage display evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001108 ! phage display evidence
+intersection_of: ECO:0001108 ! phage display evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:27:17Z
+
+[Term]
+id: ECO:0001243
+name: phosphoamino acid analysis evidence used in manual assertion
+def: "A type of phosphoamino acid analysis evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001109 ! phosphoamino acid analysis evidence
+intersection_of: ECO:0001109 ! phosphoamino acid analysis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:28:59Z
+
+[Term]
+id: ECO:0001244
+name: phosphopeptide affinity enrichment evidence used in manual assertion
+def: "A type of phosphopeptide affinity enrichment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001110 ! phosphopeptide affinity enrichment evidence
+intersection_of: ECO:0001110 ! phosphopeptide affinity enrichment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T19:30:13Z
+
+[Term]
+id: ECO:0001245
+name: phosphopeptide array evidence used in manual assertion
+def: "A type of phosphopeptide array evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001112 ! phosphopeptide array evidence
+intersection_of: ECO:0001112 ! phosphopeptide array evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:16:45Z
+
+[Term]
+id: ECO:0001246
+name: physical examination evidence used in manual assertion
+def: "A type of physical examination evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001111 ! physical examination evidence
+intersection_of: ECO:0001111 ! physical examination evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:17:27Z
+
+[Term]
+id: ECO:0001247
+name: point mutation evidence used in manual assertion
+def: "A type of point mutation evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001113 ! point mutation evidence
+intersection_of: ECO:0001113 ! point mutation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:18:10Z
+
+[Term]
+id: ECO:0001248
+name: propidium iodide staining evidence used in manual assertion
+def: "A type of propidium iodide staining evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001114 ! propidium iodide staining evidence
+intersection_of: ECO:0001114 ! propidium iodide staining evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:18:58Z
+
+[Term]
+id: ECO:0001249
+name: protein detection by fluorescence evidence used in manual assertion
+def: "A type of protein detection by fluorescence evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001115 ! protein detection by fluorescence evidence
+intersection_of: ECO:0001115 ! protein detection by fluorescence evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:19:35Z
+
+[Term]
+id: ECO:0001250
+name: protein dot blot assay evidence used in manual assertion
+def: "A type of protein dot blot assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001116 ! protein dot blot assay evidence
+intersection_of: ECO:0001116 ! protein dot blot assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:20:30Z
+
+[Term]
+id: ECO:0001251
+name: protein microarray evidence used in manual assertion
+def: "A type of protein microarray evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001117 ! protein microarray evidence
+intersection_of: ECO:0001117 ! protein microarray evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:21:11Z
+
+[Term]
+id: ECO:0001252
+name: protein sequencing assay evidence used in manual assertion
+def: "A type of protein sequencing assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001118 ! protein sequencing assay evidence
+intersection_of: ECO:0001118 ! protein sequencing assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:22:08Z
+
+[Term]
+id: ECO:0001253
+name: quantitative mass spectrometry evidence used in manual assertion
+def: "A type of quantitative mass spectrometry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001119 ! quantitative mass spectrometry evidence
+intersection_of: ECO:0001119 ! quantitative mass spectrometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:23:15Z
+
+[Term]
+id: ECO:0001254
+name: radioassay evidence used in manual assertion
+def: "A type of radioassay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001120 ! radioassay evidence
+intersection_of: ECO:0001120 ! radioassay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:27:05Z
+
+[Term]
+id: ECO:0001255
+name: radioimmunoassay evidence used in manual assertion
+def: "A type of radioimmunoassay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001121 ! radioimmunoassay evidence
+intersection_of: ECO:0001121 ! radioimmunoassay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:28:04Z
+
+[Term]
+id: ECO:0001256
+name: radiologic test evidence used in manual assertion
+def: "A type of radiologic test evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001122 ! radiologic test evidence
+intersection_of: ECO:0001122 ! radiologic test evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:00Z
+
+[Term]
+id: ECO:0001257
+name: restriction fragment detection evidence used in manual assertion
+def: "A type of restriction fragment detection evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001124 ! restriction fragment detection evidence
+intersection_of: ECO:0001124 ! restriction fragment detection evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:05Z
+
+[Term]
+id: ECO:0001258
+name: spectrophotometry evidence used in manual assertion
+def: "A type of spectrophotometry evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001126 ! spectrophotometry evidence
+intersection_of: ECO:0001126 ! spectrophotometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:09Z
+
+[Term]
+id: ECO:0001259
+name: syngeneic transplantation experiment evidence used in manual assertion
+def: "A type of syngeneic transplantation experiment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001128 ! syngeneic transplantation experiment evidence
+intersection_of: ECO:0001128 ! syngeneic transplantation experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:13Z
+
+[Term]
+id: ECO:0001260
+name: xenotransplantation experiment evidence used in manual assertion
+def: "A type of xenotransplantation experiment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001137 ! xenotransplantation experiment evidence
+intersection_of: ECO:0001137 ! xenotransplantation experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:18Z
+
+[Term]
+id: ECO:0001261
+name: WST-1 assay evidence used in manual assertion
+def: "A type of WST-1 assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001136 ! WST-1 assay evidence
+intersection_of: ECO:0001136 ! WST-1 assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:22Z
+
+[Term]
+id: ECO:0001262
+name: wound healing assay evidence used in manual assertion
+def: "A type of wound healing assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001135 ! wound healing assay evidence
+intersection_of: ECO:0001135 ! wound healing assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:26Z
+
+[Term]
+id: ECO:0001263
+name: urine test evidence used in manual assertion
+def: "A type of urine test evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001134 ! urine test evidence
+intersection_of: ECO:0001134 ! urine test evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:30Z
+
+[Term]
+id: ECO:0001264
+name: TUNEL assay evidence used in manual assertion
+def: "A type of TUNEL assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001133 ! TUNEL assay evidence
+intersection_of: ECO:0001133 ! TUNEL assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:34Z
+
+[Term]
+id: ECO:0001265
+name: tryptic phosphopeptide mapping assay evidence used in manual assertion
+def: "A type of tryptic phosphopeptide mapping assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001132 ! tryptic phosphopeptide mapping assay evidence
+intersection_of: ECO:0001132 ! tryptic phosphopeptide mapping assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:38Z
+
+[Term]
+id: ECO:0001266
+name: transgenic organism evidence used in manual assertion
+def: "A type of transgenic organism evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001131 ! transgenic organism evidence
+intersection_of: ECO:0001131 ! transgenic organism evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:41Z
+
+[Term]
+id: ECO:0001267
+name: tissue microarray evidence used in manual assertion
+def: "A type of tissue microarray evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001130 ! tissue microarray evidence
+intersection_of: ECO:0001130 ! tissue microarray evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:45Z
+
+[Term]
+id: ECO:0001268
+name: TACE activity assay evidence used in manual assertion
+def: "A type of TACE activity assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001129 ! TACE activity assay evidence
+intersection_of: ECO:0001129 ! TACE activity assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:49Z
+
+[Term]
+id: ECO:0001269
+name: surface plasmon resonance evidence used in manual assertion
+def: "A type of surface plasmon resonance evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001127 ! surface plasmon resonance evidence
+intersection_of: ECO:0001127 ! surface plasmon resonance evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:54Z
+
+[Term]
+id: ECO:0001270
+name: restriction landmark genome scanning evidence used in manual assertion
+def: "A type of restriction landmark genome scanning evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001125 ! restriction landmark genome scanning evidence
+intersection_of: ECO:0001125 ! restriction landmark genome scanning evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:29:58Z
+
+[Term]
+id: ECO:0001271
+name: resonant mirror biosensor evidence used in manual assertion
+def: "A type of resonant mirror biosensor evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0001123 ! resonant mirror biosensor evidence
+intersection_of: ECO:0001123 ! resonant mirror biosensor evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T20:30:02Z
+
+[Term]
+id: ECO:0001272
+name: high-performance liquid chromatography evidence used in manual assertion
+def: "A type of high-performance liquid chromatography evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0001052 ! high-performance liquid chromatography evidence
+intersection_of: ECO:0001052 ! high-performance liquid chromatography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-16T20:49:54Z
+
+[Term]
+id: ECO:0001273
+name: ectopic expression evidence used in manual assertion
+def: "A type of ectopic expression evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000017 {is_inferred="true"} ! ectopic expression evidence
+is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+intersection_of: ECO:0000017 ! ectopic expression evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: mchibucos
+creation_date: 2014-03-17T22:34:56Z
+
 [Typedef]
 id: used_in
 name: used_in
 def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
-comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO or RO.
+comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO, RO or OBI.
 xref: ECO:9000000
 domain: ECO:0000000 ! evidence
 range: ECO:0000217 ! assertion method
