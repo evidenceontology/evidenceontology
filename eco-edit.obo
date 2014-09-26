@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 01:05:2014 10:33
-saved-by: huntley
+date: 26:09:2014 16:46
+saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -2625,6 +2625,41 @@ comment: Example of use: "The presence of paired evaginated hemispheres and olfa
 is_a: ECO:0000080 ! phylogenetic evidence
 created_by: mchibucos
 creation_date: 2014-04-22T17:02:31Z
+
+[Term]
+id: ECO:0000356
+name: differential gene expression evidence from microarray experiment
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:21:45Z
+
+[Term]
+id: ECO:0000357
+name: differential gene expression evidence from RNA-seq experiment
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:22:57Z
+
+[Term]
+id: ECO:0000358
+name: differential geneset expression evidence from microarray experiment (GSEA, Fisher-exact)
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:25:47Z
+
+[Term]
+id: ECO:0000359
+name: differential geneset expression evidence from RNA-seq experiment (GSEA, Fisher-exact)
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:26:48Z
+
+[Term]
+id: ECO:0000360
+name: biological target-disease association via drug
+is_a: ECO:0000006 ! experimental evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:39:11Z
 
 [Term]
 id: ECO:0000501
