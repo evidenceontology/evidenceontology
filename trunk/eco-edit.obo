@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 15:10:2014 01:32
+date: 15:10:2014 01:48
 saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3.1-beta1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2415,10 +2415,10 @@ creation_date: 2012-06-08T11:49:17Z
 [Term]
 id: ECO:0000333
 name: sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
-def: "A type of protein assay evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258]
+def: "A type of gel electrophoresis evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258]
 comment: Electrophoretic mobility is a function of both the length and charge of a protein. The protein sample is linearized with sodium dodecyl sulfate (SDS), an anionic detergent. Typically, polypeptides bound with SDS possess an even distribution of charge per unit mass, and subsequent fractionation is by size.
 synonym: "SDS-PAGE evidence" EXACT []
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: mchibucos
 creation_date: 2012-07-31T02:56:43Z
 
