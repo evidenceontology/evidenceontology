@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 26:09:2014 16:46
+date: 15:10:2014 01:05
 saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.3.1
+auto-generated-by: OBO-Edit 2.3.1-beta1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
@@ -654,6 +654,14 @@ name: biological assay evidence
 def: "Direct assay evidence that is derived by using a living organism to measure the effect of a substance, factor, or condition." [ECO:MCC, TAIR:TED]
 synonym: "IDA: bioassay" RELATED []
 is_a: ECO:0000002 ! direct assay evidence
+
+[Term]
+id: ECO:0000095
+name: cell growth assay evidence
+def: "Evidence from an assay that measures one or more aspects of cell growth, such as growth rate or extent of growth, over a specified time period." [PomBase:MAH]
+is_a: ECO:0000178 ! in vivo assay evidence
+created_by: mchibucos
+creation_date: 2014-10-15T00:58:50Z
 
 [Term]
 id: ECO:0000096
