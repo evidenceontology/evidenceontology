@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: releases/2014-06-26
-date: 01:05:2014 10:33
-saved-by: huntley
-auto-generated-by: OBO-Edit 2.3.1
+data-version: releases/2015-01-12
+date: 15:10:2014 01:48
+saved-by: mchibucos
+auto-generated-by: OBO-Edit 2.3.1-beta1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
@@ -661,6 +661,14 @@ name: biological assay evidence
 def: "Direct assay evidence that is derived by using a living organism to measure the effect of a substance, factor, or condition." [ECO:MCC, TAIR:TED]
 synonym: "IDA: bioassay" RELATED []
 is_a: ECO:0000002 ! direct assay evidence
+
+[Term]
+id: ECO:0000095
+name: cell growth assay evidence
+def: "Evidence from an assay that measures one or more aspects of cell growth, such as growth rate or extent of growth, over a specified time period." [PomBase:MAH]
+is_a: ECO:0000178 ! in vivo assay evidence
+created_by: mchibucos
+creation_date: 2014-10-15T00:58:50Z
 
 [Term]
 id: ECO:0000096
@@ -2554,10 +2562,10 @@ creation_date: 2012-06-08T11:49:17Z
 [Term]
 id: ECO:0000333
 name: sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
-def: "A type of protein assay evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258]
+def: "A type of gel electrophoresis evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258]
 comment: Electrophoretic mobility is a function of both the length and charge of a protein. The protein sample is linearized with sodium dodecyl sulfate (SDS), an anionic detergent. Typically, polypeptides bound with SDS possess an even distribution of charge per unit mass, and subsequent fractionation is by size.
 synonym: "SDS-PAGE evidence" EXACT []
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: mchibucos
 creation_date: 2012-07-31T02:56:43Z
 
@@ -2789,6 +2797,41 @@ comment: Example of use: "The presence of paired evaginated hemispheres and olfa
 is_a: ECO:0000080 ! phylogenetic evidence
 created_by: mchibucos
 creation_date: 2014-04-22T17:02:31Z
+
+[Term]
+id: ECO:0000356
+name: differential gene expression evidence from microarray experiment
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:21:45Z
+
+[Term]
+id: ECO:0000357
+name: differential gene expression evidence from RNA-seq experiment
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:22:57Z
+
+[Term]
+id: ECO:0000358
+name: differential geneset expression evidence from microarray experiment (GSEA, Fisher-exact)
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:25:47Z
+
+[Term]
+id: ECO:0000359
+name: differential geneset expression evidence from RNA-seq experiment (GSEA, Fisher-exact)
+is_a: ECO:0000009 ! transcript expression evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:26:48Z
+
+[Term]
+id: ECO:0000360
+name: biological target-disease association via drug
+is_a: ECO:0000006 ! experimental evidence
+created_by: mchibucos
+creation_date: 2014-09-26T16:39:11Z
 
 [Term]
 id: ECO:0000501
@@ -3496,6 +3539,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001098
 name: microscopy evidence
+def: "A type of direct assay evidence where a microscope was used to view a sample." [ECO:MCC]
 is_a: ECO:0000091 ! isb-sib evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
