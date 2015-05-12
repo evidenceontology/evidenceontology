@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 15:10:2014 01:48
-saved-by: mchibucos
-auto-generated-by: OBO-Edit 2.3.1-beta1
+date: 08:04:2015 17:44
+saved-by: snadendla
+auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
@@ -12,6 +12,13 @@ subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the
 subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
 ontology: eco
+
+[Term]
+id: 
+name: transcription assay evidence(ECO:0000168)
+is_obsolete: true
+created_by: snadendla
+creation_date: 2015-02-11T12:06:54Z
 
 [Term]
 id: ECO:0000000
@@ -2688,217 +2695,226 @@ created_by: cjm
 [Term]
 id: ECO:0001001
 name: 3D cell culture evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001002
 name: [3H]arachidonic acid release assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001003
 name: [3H]-thymidine incorporation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence(new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001004
 name: 51Cr release assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005012 ! cytotoxicity assay evidence(new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001005
-name: 7-AAD staining evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: 7-aminoactinomycin staining evidence
+synonym: "7-AAD staining evidence" EXACT []
+synonym: "7-amino-actinomycin D staining evidence" EXACT []
+is_a: ECO:0005019 ! staining evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001006
 name: adhesion assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001007
 name: adoptive cell transfer evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005015 ! biological assay evidence (ECO:0000094)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001008
 name: Alamar blue assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005004 ! cell viability assay evidence(new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001009
 name: allograft transplantation experiment evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005016 ! anatomical perturbation evidence (ECO:0000240)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001010
 name: anion-exchange chromatography evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005005 ! chromatography evidence (ECO:0000325)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001011
 name: annexin-V staining evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001012
 name: behavioral assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005017 ! experimental phenotypic evidence(ECO:0000014)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001013
 name: blocking monoclonal antibody evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001014
 name: blocking peptide evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001015
 name: blocking polyclonal antibody evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001016
 name: blood test evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001017
 name: Boyden chamber assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005021 ! chemotaxis assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001018
-name: BrdU incorporation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: bromodeoxyuridine incorporation assay evidence
+synonym: "5-bromo-2'-deoxyuridine incorporation assay evidence" EXACT []
+synonym: "BrdU incorporation assay evidence" EXACT []
+synonym: "BrdUrd incorporation assay evidence" EXACT []
+synonym: "BUdR incorporation assay evidence" EXACT []
+is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence(new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001019
 name: caspase assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005034 ! apoptosis assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001020
 name: cell counting evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001021
 name: cell permeability assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001022
-name: CFSE-staining evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: carboxyfluorescein diacetate succinimidyl ester staining evidence
+synonym: "CFDA-SE staining evidence" EXACT []
+synonym: "CFSE-staining evidence" EXACT []
+is_a: ECO:0005019 ! staining evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001023
 name: chemiluminescence-linked immunoassay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+synonym: "CLIA evidence" EXACT []
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001024
 name: chimeric protein evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005022 ! protein assay evidence (ECO:0000039)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001025
 name: co-electrophoresis evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005026 ! gel electrophoresis evidence (ECO:0000337)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001026
 name: co-localization evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005024 ! imaging assay evidence(ECO:0000324)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001027
 name: colony counting evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001028
 name: co-sedimentation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005025 ! physical interaction evidence(ECO:0000021)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001029
 name: comet assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005026 ! gel electrophoresis evidence (ECO:0000337)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001030
 name: conditional knockout evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0001091 ! knockout evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001031
 name: conditional knockin evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0001090 ! knockin evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2912,14 +2928,14 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001033
 name: cross-linking evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005030 ! protein binding evidence (ECO:0000024)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001034
 name: crystallography evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005031 ! structure determination evidence (New)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2933,14 +2949,15 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001036
 name: cytochrome C release assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005034 ! apoptosis assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001037
-name: DAPI staining evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: 4',6-diamidino-2-phenylindole staining evidence
+synonym: "DAPI staining evidence" EXACT []
+is_a: ECO:0005019 ! staining evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2954,7 +2971,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001039
 name: DNA laddering assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005034 ! apoptosis assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3056,273 +3073,273 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001053
 name: immunocytochemistry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001054
 name: immunodepletion evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001055
 name: immunohistochemistry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001056
 name: induced mutation evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005027 ! genetic transformation evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001057
 name: in vitro acetylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001058
 name: in vitro cleavage assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001059
 name: in vitro deubiquitination assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001060
 name: in vitro deacetylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001061
 name: in vitro defarnesylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001062
 name: in vitro demethylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001063
 name: in vitro desumoylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001064
 name: in vitro farnesylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001065
 name: in vitro methylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001066
 name: in vitro palmitoylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001067
 name: in vitro phosphatase assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001068
 name: in vitro protein kinase assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001069
 name: in vitro polyADP-ribosylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001070
 name: in vitro sumoylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001071
 name: in vitro transcription assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005002 ! transcription assay evidence(ECO:0000168)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001072
 name: in vitro translation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005003 ! translation assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001073
 name: in vitro ubiquitination assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001074
 name: in vivo acetylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001075
 name: in vivo cleavage assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001076
 name: in vivo deacetylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001077
 name: in vivo defarnesylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001078
 name: in vivo demethylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001079
 name: in vivo deubiquitination assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001080
 name: in vivo desumoylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001081
 name: in vivo farnesylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001082
 name: in vivo methylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001083
 name: in vivo palmitoylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001084
 name: in vivo phosphatase assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001085
 name: in vivo protein kinase assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001086
 name: in vivo sumoylation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001087
 name: in vivo transcription assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005002 ! transcription assay evidence(ECO:0000168)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001088
 name: in vivo translation assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005003 ! translation assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001089
 name: in vivo ubiquitination assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001090
 name: knockin evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005027 ! genetic transformation evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001091
 name: knockout evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005027 ! genetic transformation evidence (new)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3491,14 +3508,14 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001115
 name: protein detection by fluorescence evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005022 ! protein assay evidence (ECO:0000039)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001116
 name: protein dot blot assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005022 ! protein assay evidence (ECO:0000039)
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3673,8 +3690,8 @@ creation_date: 2014-03-17T15:20:55Z
 id: ECO:0001140
 name: 7-AAD staining evidence used in manual assertion
 def: "A type of 7-AAD staining evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001005 ! 7-AAD staining evidence
-intersection_of: ECO:0001005 ! 7-AAD staining evidence
+is_a: ECO:0001005 ! 7-aminoactinomycin staining evidence
+intersection_of: ECO:0001005 ! 7-aminoactinomycin staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T15:22:01Z
@@ -3823,8 +3840,8 @@ creation_date: 2014-03-17T16:03:53Z
 id: ECO:0001155
 name: BrdU incorporation assay evidence used in manual assertion
 def: "A type of BrdU incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001018 ! BrdU incorporation assay evidence
-intersection_of: ECO:0001018 ! BrdU incorporation assay evidence
+is_a: ECO:0001018 ! bromodeoxyuridine incorporation assay evidence
+intersection_of: ECO:0001018 ! bromodeoxyuridine incorporation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T16:04:49Z
@@ -3863,8 +3880,8 @@ creation_date: 2014-03-17T16:07:58Z
 id: ECO:0001159
 name: CFSE-staining evidence used in manual assertion
 def: "A type of CFSE-staining evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001022 ! CFSE-staining evidence
-intersection_of: ECO:0001022 ! CFSE-staining evidence
+is_a: ECO:0001022 ! carboxyfluorescein diacetate succinimidyl ester staining evidence
+intersection_of: ECO:0001022 ! carboxyfluorescein diacetate succinimidyl ester staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T16:08:54Z
@@ -4013,8 +4030,8 @@ creation_date: 2014-03-17T16:23:53Z
 id: ECO:0001174
 name: DAPI staining evidence used in manual assertion
 def: "A type of DAPI staining evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001037 ! DAPI staining evidence
-intersection_of: ECO:0001037 ! DAPI staining evidence
+is_a: ECO:0001037 ! 4',6-diamidino-2-phenylindole staining evidence
+intersection_of: ECO:0001037 ! 4',6-diamidino-2-phenylindole staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T16:25:03Z
@@ -5003,11 +5020,257 @@ creation_date: 2014-03-16T20:49:54Z
 id: ECO:0001273
 name: ectopic expression evidence used in manual assertion
 def: "A type of ectopic expression evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000017 ! ectopic expression evidence
 intersection_of: ECO:0000017 ! ectopic expression evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T22:34:56Z
+
+[Term]
+id: ECO:0005000
+name: posttranslational modification assay evidence (new)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-11T11:18:43Z
+
+[Term]
+id: ECO:0005001
+name: enzyme assay evidence(ECO:0000005)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-11T11:28:18Z
+
+[Term]
+id: ECO:0005002
+name: transcription assay evidence(ECO:0000168)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-11T12:12:30Z
+
+[Term]
+id: ECO:0005003
+name: translation assay evidence (new)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-11T12:15:37Z
+
+[Term]
+id: ECO:0005004
+name: cell viability assay evidence(new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-13T12:08:01Z
+
+[Term]
+id: ECO:0005005
+name: chromatography evidence (ECO:0000325)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-13T13:38:21Z
+
+[Term]
+id: ECO:0005006
+name: direct assay evidence(ECO:0000002)
+is_obsolete: true
+created_by: snadendla
+creation_date: 2015-02-11T16:26:08Z
+
+[Term]
+id: ECO:0005007
+name: cell proliferation assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-11T16:27:13Z
+
+[Term]
+id: ECO:0005008
+name: DNA synthesis cell proliferation assay evidence(new)
+is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-11T16:30:10Z
+
+[Term]
+id: ECO:0005009
+name: metabolic cell proliferation assay evidence(new)
+is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-11T16:36:33Z
+
+[Term]
+id: ECO:0005010
+name: cell proliferation marker detection assay evidence (new)
+is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-11T16:37:23Z
+
+[Term]
+id: ECO:0005011
+name: ATP bioluminescence assay evidence (new)
+is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-11T16:47:30Z
+
+[Term]
+id: ECO:0005012
+name: cytotoxicity assay evidence(new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-12T11:39:35Z
+
+[Term]
+id: ECO:0005013
+name: in vitro assay evidence (ECO:0000181)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-12T13:21:01Z
+
+[Term]
+id: ECO:0005014
+name: in vitro cell based assay evidence (new)
+is_a: ECO:0005013 ! in vitro assay evidence (ECO:0000181)
+created_by: snadendla
+creation_date: 2015-02-12T13:26:55Z
+
+[Term]
+id: ECO:0005015
+name: biological assay evidence (ECO:0000094)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-12T16:21:28Z
+
+[Term]
+id: ECO:0005016
+name: anatomical perturbation evidence (ECO:0000240)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-13T15:07:39Z
+
+[Term]
+id: ECO:0005017
+name: experimental phenotypic evidence(ECO:0000014)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-13T15:49:16Z
+
+[Term]
+id: ECO:0005018
+name: immunological assay evidence(ECO:0000040)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-18T12:49:06Z
+
+[Term]
+id: ECO:0005019
+name: staining evidence (new)
+is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
+created_by: snadendla
+creation_date: 2015-02-19T11:48:57Z
+
+[Term]
+id: ECO:0005020
+name: direct assay evidence(ECO:0000002)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-02-19T12:10:41Z
+
+[Term]
+id: ECO:0005021
+name: chemotaxis assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+created_by: snadendla
+creation_date: 2015-02-19T13:10:20Z
+
+[Term]
+id: ECO:0005022
+name: protein assay evidence (ECO:0000039)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-03-10T17:11:26Z
+
+[Term]
+id: ECO:0005023
+name: experimental evidence (ECO:0000006)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-03-16T15:33:08Z
+
+[Term]
+id: ECO:0005024
+name: imaging assay evidence(ECO:0000324)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-03-11T11:47:31Z
+
+[Term]
+id: ECO:0005025
+name: physical interaction evidence(ECO:0000021)
+is_a: ECO:0000091 ! isb-sib evidence
+created_by: snadendla
+creation_date: 2015-03-11T12:22:33Z
+
+[Term]
+id: ECO:0005026
+name: gel electrophoresis evidence (ECO:0000337)
+is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
+created_by: snadendla
+creation_date: 2015-03-11T15:56:13Z
+
+[Term]
+id: ECO:0005027
+name: genetic transformation evidence (new)
+is_a: ECO:0005023 ! experimental evidence (ECO:0000006)
+created_by: snadendla
+creation_date: 2015-03-16T15:33:50Z
+
+[Term]
+id: ECO:0005028
+name: physical interaction evidence (ECO:0000021)
+is_a: ECO:0005023 ! experimental evidence (ECO:0000006)
+created_by: snadendla
+creation_date: 2015-03-19T17:19:33Z
+
+[Term]
+id: ECO:0005029
+name: affinity evidence (ECO:0000023)
+is_a: ECO:0005028 ! physical interaction evidence (ECO:0000021)
+created_by: snadendla
+creation_date: 2015-03-19T17:21:44Z
+
+[Term]
+id: ECO:0005030
+name: protein binding evidence (ECO:0000024)
+is_a: ECO:0005029 ! affinity evidence (ECO:0000023)
+created_by: snadendla
+creation_date: 2015-03-19T17:23:04Z
+
+[Term]
+id: ECO:0005031
+name: structure determination evidence (New)
+is_a: ECO:0005023 ! experimental evidence (ECO:0000006)
+created_by: snadendla
+creation_date: 2015-03-20T12:16:17Z
+
+[Term]
+id: ECO:0005032
+name: nuclear magnetic resonance spectroscopy evidence(New)
+synonym: "NMR evidence" EXACT []
+is_a: ECO:0005031 ! structure determination evidence (New)
+created_by: snadendla
+creation_date: 2015-03-20T12:19:16Z
+
+[Term]
+id: ECO:0005033
+name: electron microscopy evidence (New)
+is_a: ECO:0005031 ! structure determination evidence (New)
+created_by: snadendla
+creation_date: 2015-03-20T12:21:48Z
+
+[Term]
+id: ECO:0005034
+name: apoptosis assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+created_by: snadendla
+creation_date: 2015-04-07T21:58:24Z
 
 [Typedef]
 id: used_in
