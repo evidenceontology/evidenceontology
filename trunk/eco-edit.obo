@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 08:06:2015 12:26
-saved-by: swolfish
+date: 08:06:2015 15:00
+saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -42,7 +42,8 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000004
 name: cell fractionation evidence
-def: "Used when an annotation is made based on separation of subcellular components based on their physical properties, such as density in sucrose density gradients. This evidence is used mostly for annotations to the cellular component ontology." [TAIR:TED]
+def: "A type of fractionation evidence where sub-cellular components are separated based on their physical properties such as density in a sucrose density gradient." [ECO:KIM, TAIR:TED]
+comment: If using this term for Gene Ontology annotation, it would be used most typically for annotations to the cellular component ontology.
 synonym: "IDA: cell fractionation" RELATED []
 is_a: ECO:0000100 ! fractionation evidence
 
