@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 05:06:2015 16:03
-saved-by: mchibucos
+date: 08:06:2015 12:26
+saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -5271,6 +5271,25 @@ name: apoptosis assay evidence (new)
 is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: snadendla
 creation_date: 2015-04-07T21:58:24Z
+
+[Term]
+id: ID:0001601
+name: protein-binding microarray evidence
+def: "A type of oligonucleotide microarray evidence that detects binding of a tagged protein to an array of oligonucleotide probes representing potential binding sites." [PMID:22146299]
+synonym: "PBM evidence" EXACT []
+is_a: ECO:0000093 ! oligonucleotide microarray evidence
+is_a: ECO:0000136 ! nucleic acid binding evidence
+created_by: swolfish
+creation_date: 2015-06-05T14:36:00Z
+
+[Term]
+id: ID:0001603
+name: in vivo cell staining evidence
+def: "A type of in vivo assay evidence in which living cells are stained with a vital stain, i.e. dye that can be used on living cells without causing cell death." [GOC:MAH]
+synonym: "vital staining evidence" RELATED [GOC:MAH]
+is_a: ECO:0000178 ! in vivo assay evidence
+created_by: swolfish
+creation_date: 2015-06-08T11:51:37Z
 
 [Typedef]
 id: used_in
