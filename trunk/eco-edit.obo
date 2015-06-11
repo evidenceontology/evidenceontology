@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:06:2015 15:00
+date: 11:06:2015 13:35
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -667,7 +667,8 @@ creation_date: 2014-10-15T00:58:50Z
 [Term]
 id: ECO:0000096
 name: electrophoretic mobility shift assay evidence
-def: "Used when an annotation is made based on electrophoretic mobility shift of macromolecules, compounds, and proteins. Most commonly used for detecting the binding of protein to DNA." [TAIR:TED]
+def: "Used when an annotation is made based on electrophoretic mobility shift of macromolecules, compounds, and proteins. Most commonly used for detecting the binding of protein to DNA." [ECO:KIM, TAIR:TED]
+synonym: "EMSA: electrophoretic mobility shift assay" EXACT []
 synonym: "IDA: electrophoretic mobility shift assay" RELATED []
 xref: PSI-MI:MI\:0413 "electrophoretic mobility shift assay"
 is_a: ECO:0000002 ! direct assay evidence
@@ -5284,6 +5285,14 @@ synonym: "vital staining evidence" RELATED [GOC:MAH]
 is_a: ECO:0000178 ! in vivo assay evidence
 created_by: swolfish
 creation_date: 2015-06-08T11:51:37Z
+
+[Term]
+id: ID:0001706
+name: computational image-based phenotypic evidence
+def: "A type of phenotypic evidence based on unsupervised computational examination of a visual mutant phenotype such as abnormalities in organism morphology." [ECO:KIM, PMID:25373780]
+is_obsolete: true
+created_by: kvillanova
+creation_date: 2015-06-09T16:13:20Z
 
 [Typedef]
 id: used_in
