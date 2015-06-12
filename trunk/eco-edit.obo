@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 11:06:2015 13:35
-saved-by: kvillanova
+date: 12:06:2015 17:20
+saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -3096,7 +3096,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001057
 name: in vitro acetylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where acetylated residues are detected in a compound (such as a protein or a nucleic acid) in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://www.perkinelmer.com/resources/technicalresources/applicationsupportknowledgebase/radiometric/acetylation.xhtml]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3110,49 +3111,56 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001059
 name: in vitro deubiquitination assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where the removal of ubiquitin groups on a protein is detected in vitro." [ECO:SN, PMID:19692941, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001060
 name: in vitro deacetylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where the removal of acetyl groups from a compound is detected in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://www.perkinelmer.com/resources/technicalresources/applicationsupportknowledgebase/radiometric/acetylation.xhtml]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001061
 name: in vitro defarnesylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where the removal of farnesyl groups from a protein is detected in an in vitro experiment." [ECO:SN, SIB:PG, url:https\://www.progeriaresearch.org/assets/files/pdf/GlynnGlover.pdf]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001062
 name: in vitro demethylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where the removal of methyl groups from a compound is detected in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Demethylation]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001063
 name: in vitro desumoylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where the removal of sumo groups is detected on a protein in vitro." [ECO:SN, SIB:PG, url:http\://www.enzolifesciences.com/BML-UW8955/sumoylation-kit/]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001064
 name: in vitro farnesylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where farnesylated residues in proteins are detected in an in vitro  experiment." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Farnesyltransferase]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001065
 name: in vitro methylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where methylated residues are detected in a compound (such as a protein or a nucleic acid) in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Methylation]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3166,14 +3174,16 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001067
 name: in vitro phosphatase assay evidence
-is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
+def: "A type of in vitro assay evidence where the removal of phosphatase groups on a protein is detected in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Phosphatase]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001068
 name: in vitro protein kinase assay evidence
-is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
+def: "A type of in vitro assay evidence where phosphorylated residues in a protein are detected in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Protein_kinase, url:http\://en.wikipedia.org/wiki/Protein_phosphorylation]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3187,7 +3197,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001070
 name: in vitro sumoylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where sumoylated residues are detected on a protein in an in vitro experiment." [ECO:SN, SIB:PG, url:http\://www.enzolifesciences.com/BML-UW8955/sumoylation-kit/]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3208,14 +3219,16 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001073
 name: in vitro ubiquitination assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where ubiquitinated residues are detected on a protein in an in vitro experiment." [ECO:SN, PMID:19692941, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001074
 name: in vivo acetylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where acetylated residues are detected in a compound (such as a protein or a nucleic acid) in cells in vivo." [ECO:SN, SIB:PG, url:http\://www.perkinelmer.com/resources/technicalresources/applicationsupportknowledgebase/radiometric/acetylation.xhtml]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3229,35 +3242,40 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001076
 name: in vivo deacetylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where the removal of acetyl groups from a compound is detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://www.perkinelmer.com/resources/technicalresources/applicationsupportknowledgebase/radiometric/acetylation.xhtml]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001077
 name: in vivo defarnesylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where farnesylated residues in proteins are detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Farnesyltransferase]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001078
 name: in vivo demethylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where the removal of methyl groups from a compound is detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Demethylation]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001079
 name: in vivo deubiquitination assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where the removal of ubiquitin groups on a protein is detected in cells in vivo." [ECO:SN, PMID:19692941, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001080
 name: in vivo desumoylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where the removal of sumo groups on a protein is detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://www.enzolifesciences.com/BML-UW8955/sumoylation-kit/]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3271,7 +3289,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001082
 name: in vivo methylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where methylated residues are detected in a compound (such as a protein or a nucleic acid) in vivo." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Methylation]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3285,21 +3304,24 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001084
 name: in vivo phosphatase assay evidence
-is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
+def: "A type of in vivo assay evidence where the removal of phosphate groups on a protein is detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Phosphatase]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001085
 name: in vivo protein kinase assay evidence
-is_a: ECO:0005001 ! enzyme assay evidence(ECO:0000005)
+def: "A type of in vivo assay evidence where phosphorylated residues in a protein are detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Protein_kinase, url:http\://en.wikipedia.org/wiki/Protein_phosphorylation]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001086
 name: in vivo sumoylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where sumoylated residues are detected on a protein in cells in vivo." [ECO:SN, SIB:PG, url:http\://www.enzolifesciences.com/BML-UW8955/sumoylation-kit/]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3320,7 +3342,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001089
 name: in vivo ubiquitination assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where ubiquitinated residues on a protein are detected in cells in vivo." [ECO:SN, PMID:19692941, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
