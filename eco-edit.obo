@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 15:06:2015 17:28
+date: 16:06:2015 14:24
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -3220,7 +3220,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001072
 name: in vitro translation assay evidence
-is_a: ECO:0005003 ! translation assay evidence (new)
+def: "A type of in vitro assay evidence where de novo protein synthesis is detected in an in vitro experiment." [ECO:SN, PMID:18230759, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3339,14 +3340,16 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001087
 name: in vivo transcription assay evidence
-is_a: ECO:0005002 ! transcription assay evidence(ECO:0000168)
+def: "A type of in vivo assay evidence where transcription is detected in cells in vivo." [ECO:SN, PMID:12181418, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001088
 name: in vivo translation assay evidence
-is_a: ECO:0005003 ! translation assay evidence (new)
+def: "A type of in vivo assay evidence where de novo protein synthesis is detected in cells in vivo." [ECO:SN, PMID:24901308, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5070,20 +5073,6 @@ created_by: snadendla
 creation_date: 2015-02-11T11:28:18Z
 
 [Term]
-id: ECO:0005002
-name: transcription assay evidence(ECO:0000168)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-11T12:12:30Z
-
-[Term]
-id: ECO:0005003
-name: translation assay evidence (new)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-11T12:15:37Z
-
-[Term]
 id: ECO:0005004
 name: cell viability assay evidence(new)
 is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
@@ -5312,6 +5301,7 @@ creation_date: 2015-06-15T15:35:05Z
 [Term]
 id: ECO:0005501
 name: in vivo polyADP-ribosylation assay evidence used in manual assertion
+def: "A type of in vivo polyADP-ribosylation assay evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0005500 ! in vivo polyADP-ribosylation assay evidence
 intersection_of: ECO:0005500 ! in vivo polyADP-ribosylation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
