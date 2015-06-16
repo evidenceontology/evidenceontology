@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 15:06:2015 16:59
-saved-by: kvillanova
+date: 15:06:2015 17:28
+saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -3108,7 +3108,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001058
 name: in vitro cleavage assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where the cleavage of a protein by a protease is detected in an in vitro experiment. The cleavage gives rise to protein fragments." [ECO:SN, PMID:21121091, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3131,7 +3132,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001061
 name: in vitro defarnesylation assay evidence
-def: "A type of in vitro assay evidence where the removal of farnesyl groups from a protein is detected in an in vitro experiment." [ECO:SN, SIB:PG, url:https\://www.progeriaresearch.org/assets/files/pdf/GlynnGlover.pdf]
+def: "A type of in vitro assay evidence where the removal of farnesyl groups from a protein is detected in an in vitro experiment." [ECO:SN, PMID:16126733, SIB:PG]
 is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3171,7 +3172,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001066
 name: in vitro palmitoylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where palmitoylated residues in proteins are detected in an in vitro experiment." [ECO:SN, PMID:17077383, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3194,7 +3196,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001069
 name: in vitro polyADP-ribosylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vitro assay evidence where ADP-ribosylated residues in proteins are detected in an in vitro experiment." [ECO:SN, PMID:21870253, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3209,7 +3212,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001071
 name: in vitro transcription assay evidence
-is_a: ECO:0005002 ! transcription assay evidence(ECO:0000168)
+def: "A type of in vitro assay evidence where transcription is detected in vitro." [ECO:SN, PMID:21125481, SIB:PG]
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3239,7 +3243,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001075
 name: in vivo cleavage assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where the cleavage of a protein by a protease is detected in cells in vivo. The cleavage gives rise to protein fragments." [ECO:SN, PMID:22154596, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3254,7 +3259,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001077
 name: in vivo defarnesylation assay evidence
-def: "A type of in vivo assay evidence where farnesylated residues in proteins are detected in cells in vivo." [ECO:SN, SIB:PG, url:http\://en.wikipedia.org/wiki/Farnesyltransferase]
+def: "A type of in vivo assay evidence where removal of farnesyl groups from a protein is detected in cells in vivo." [ECO:SN, PMID:15556768, PMID:16507103, SIB:PG]
 is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3286,7 +3291,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001081
 name: in vivo farnesylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where farnesylated residues in proteins are detected in cells in vivo." [ECO:SN, PMID:9030603, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3301,7 +3307,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001083
 name: in vivo palmitoylation assay evidence
-is_a: ECO:0005000 ! posttranslational modification assay evidence (new)
+def: "A type of in vivo assay evidence where palmitoylated residues in proteins are detected in cells in vivo." [ECO:SN, PMID:10329400, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5293,6 +5300,23 @@ name: apoptosis assay evidence (new)
 is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
 created_by: snadendla
 creation_date: 2015-04-07T21:58:24Z
+
+[Term]
+id: ECO:0005500
+name: in vivo polyADP-ribosylation assay evidence
+def: "A type of in vivo assay evidence where ADP-ribosylated residues in proteins are detected in cells in vivo." [ECO:SN, PMID:2820766, SIB:PG]
+is_a: ECO:0000178 ! in vivo assay evidence
+created_by: snadendla
+creation_date: 2015-06-15T15:35:05Z
+
+[Term]
+id: ECO:0005501
+name: in vivo polyADP-ribosylation assay evidence used in manual assertion
+is_a: ECO:0005500 ! in vivo polyADP-ribosylation assay evidence
+intersection_of: ECO:0005500 ! in vivo polyADP-ribosylation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-06-15T15:37:23Z
 
 [Term]
 id: ID:0001601
