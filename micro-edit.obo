@@ -1,19 +1,157 @@
 format-version: 1.2
-date: 19:06:2015 13:32
-saved-by: mchibucos
+date: 19:06:2015 17:03
+saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
 
 [Term]
 id: ECO:0001501
-name: microbiological assay
+name: microbiological assay evidence
 creation_date: 2015-06-19T13:28:13Z
 
 [Term]
 id: ECO:0001502
-name: differential medium
+name: differential medium evidence
 synonym: "differential media" EXACT []
-is_a: ECO:0001501 ! microbiological assay
+is_a: ID:0001514 ! microbiological medium evidence
 created_by: mchibucos
 creation_date: 2015-06-19T13:28:45Z
+
+[Term]
+id: ID:0001501
+name: selective medium evidence
+synonym: "selective media" EXACT []
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:42:01Z
+
+[Term]
+id: ID:0001502
+name: acid-fast stain evidence
+is_a: ID:0001505 ! differential stain evidence
+created_by: kvillanova
+creation_date: 2015-06-19T15:29:56Z
+
+[Term]
+id: ID:0001503
+name: microbiological stain evidence
+synonym: "microbiological staining evidence" EXACT []
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:43:08Z
+
+[Term]
+id: ID:0001504
+name: simple stain evidence
+is_a: ID:0001503 ! microbiological stain evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:45:17Z
+
+[Term]
+id: ID:0001505
+name: differential stain evidence
+is_a: ID:0001503 ! microbiological stain evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:45:51Z
+
+[Term]
+id: ID:0001506
+name: microbiological culture assay evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:48:31Z
+
+[Term]
+id: ID:0001507
+name: camp test evidence
+is_a: ID:0001506 ! microbiological culture assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:48:54Z
+
+[Term]
+id: ID:0001508
+name: microbiological microscopy evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:08:45Z
+
+[Term]
+id: ID:0001509
+name: microbiological biochemical assay evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:50:10Z
+
+[Term]
+id: ID:0001510
+name: microbiological smear evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:22:32Z
+
+[Term]
+id: ID:0001511
+name: blood culture evidence
+is_a: ID:0001506 ! microbiological culture assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:53:19Z
+
+[Term]
+id: ID:0001512
+name: microbiological metabolic evidence
+is_a: ID:0001509 ! microbiological biochemical assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:24:18Z
+
+[Term]
+id: ID:0001513
+name: gram stain evidence
+is_a: ID:0001505 ! differential stain evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:54:03Z
+
+[Term]
+id: ID:0001514
+name: microbiological medium evidence
+synonym: "microbiological media" EXACT []
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T14:58:07Z
+
+[Term]
+id: ID:0001515
+name: complex medium evidence
+synonym: "complex media" EXACT []
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:40:24Z
+
+[Term]
+id: ID:0001516
+name: microbiological plate evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:43:03Z
+
+[Term]
+id: ID:0001517
+name: microbiological streak plate evidence
+is_a: ID:0001516 ! microbiological plate evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:44:43Z
+
+[Term]
+id: ID:0001518
+name: microbiological pour plate evidence
+is_a: ID:0001516 ! microbiological plate evidence
+created_by: kvillanova
+creation_date: 2015-06-19T16:48:53Z
+
+[Term]
+id: ID:0001519
+name: microbiological sequencing evidence 
+is_a: ECO:0001501 ! microbiological assay evidence
+is_a: ID:0001519 ! microbiological sequencing evidence 
+created_by: kvillanova
+creation_date: 2015-06-19T16:49:42Z
 
