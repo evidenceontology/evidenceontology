@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 19:06:2015 17:03
+date: 22:06:2015 15:39
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -7,6 +7,7 @@ default-namespace: eco
 [Term]
 id: ECO:0001501
 name: microbiological assay evidence
+def: "A type of evidence based on microbial assays." []
 creation_date: 2015-06-19T13:28:13Z
 
 [Term]
@@ -28,6 +29,7 @@ creation_date: 2015-06-19T14:42:01Z
 [Term]
 id: ID:0001502
 name: acid-fast stain evidence
+synonym: "Ziehl-Neelsen stain" RELATED []
 is_a: ID:0001505 ! differential stain evidence
 created_by: kvillanova
 creation_date: 2015-06-19T15:29:56Z
@@ -35,6 +37,7 @@ creation_date: 2015-06-19T15:29:56Z
 [Term]
 id: ID:0001503
 name: microbiological stain evidence
+def: "A type of microbiological assay evidence where dyes are applied and become fixed through chemical reactions to microbial specimens." []
 synonym: "microbiological staining evidence" EXACT []
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
@@ -50,13 +53,14 @@ creation_date: 2015-06-19T14:45:17Z
 [Term]
 id: ID:0001505
 name: differential stain evidence
+def: "A type of microbiological assay evidence where a primary dye and a counter-stain are used to differentiate between microbial cell types or cell features." []
 is_a: ID:0001503 ! microbiological stain evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:45:51Z
 
 [Term]
 id: ID:0001506
-name: microbiological culture assay evidence
+name: microbiological culture evidence
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:48:31Z
@@ -64,20 +68,21 @@ creation_date: 2015-06-19T14:48:31Z
 [Term]
 id: ID:0001507
 name: camp test evidence
-is_a: ID:0001506 ! microbiological culture assay evidence
+is_a: ID:0001506 ! microbiological culture evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:48:54Z
 
 [Term]
 id: ID:0001508
 name: microbiological microscopy evidence
+def: "A type of microbiological assay evidence based on use of a microscope." []
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
 creation_date: 2015-06-19T16:08:45Z
 
 [Term]
 id: ID:0001509
-name: microbiological biochemical assay evidence
+name: microbiological biochemical evidence
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:50:10Z
@@ -92,14 +97,14 @@ creation_date: 2015-06-19T16:22:32Z
 [Term]
 id: ID:0001511
 name: blood culture evidence
-is_a: ID:0001506 ! microbiological culture assay evidence
+is_a: ID:0001506 ! microbiological culture evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:53:19Z
 
 [Term]
 id: ID:0001512
 name: microbiological metabolic evidence
-is_a: ID:0001509 ! microbiological biochemical assay evidence
+is_a: ID:0001509 ! microbiological biochemical evidence
 created_by: kvillanova
 creation_date: 2015-06-19T16:24:18Z
 
@@ -113,6 +118,8 @@ creation_date: 2015-06-19T14:54:03Z
 [Term]
 id: ID:0001514
 name: microbiological medium evidence
+def: "A type of microbiological assay evidence where a medium is used to culture and observe microorganisms." []
+comment: Lab based mediums can come in various states such as solid, semisolid, or liquid.
 synonym: "microbiological media" EXACT []
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
@@ -122,36 +129,120 @@ creation_date: 2015-06-19T14:58:07Z
 id: ID:0001515
 name: complex medium evidence
 synonym: "complex media" EXACT []
+synonym: "Enriched media" EXACT []
+synonym: "Rich media" EXACT []
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
 creation_date: 2015-06-19T16:40:24Z
 
 [Term]
 id: ID:0001516
-name: microbiological plate evidence
-is_a: ECO:0001501 ! microbiological assay evidence
+name: middlebrook 7h9 medium evidence
+def: "A type of selective medium evidence used in the growth and study of mycobacterium." []
+is_a: ID:0001501 ! selective medium evidence
 created_by: kvillanova
-creation_date: 2015-06-19T16:43:03Z
+creation_date: 2015-06-22T11:54:48Z
 
 [Term]
 id: ID:0001517
-name: microbiological streak plate evidence
-is_a: ID:0001516 ! microbiological plate evidence
+name: semi-solid agar motility assay
+def: "A type of motility assay where cells are inoculated at the center of a semi-solid nutrient agar plate. After incubation in a appropriate temperature cells grow outward from the point of inoculation." [PMID:2674941, PMID:4957395]
+is_a: ID:0001519 ! motility assay evidence
 created_by: kvillanova
-creation_date: 2015-06-19T16:44:43Z
+creation_date: 2015-06-22T12:46:04Z
 
 [Term]
 id: ID:0001518
-name: microbiological pour plate evidence
-is_a: ID:0001516 ! microbiological plate evidence
+name: brain-heart infusion blood agar evidence
+is_a: ID:0001520 ! blood agar evidence
 created_by: kvillanova
-creation_date: 2015-06-19T16:48:53Z
+creation_date: 2015-06-22T15:02:51Z
 
 [Term]
 id: ID:0001519
-name: microbiological sequencing evidence 
-is_a: ECO:0001501 ! microbiological assay evidence
-is_a: ID:0001519 ! microbiological sequencing evidence 
+name: motility assay evidence
+is_a: ID:0001506 ! microbiological culture evidence
 created_by: kvillanova
-creation_date: 2015-06-19T16:49:42Z
+creation_date: 2015-06-22T11:08:14Z
+
+[Term]
+id: ID:0001520
+name: blood agar evidence
+def: "A type of microbiological medium evidence that uses a enriched differential medium to test for fastidious microbiological organisms. Mammalian blood cells are used in various different concentration amounts." []
+is_a: ID:0001515 ! complex medium evidence
+created_by: kvillanova
+creation_date: 2015-06-22T07:51:17Z
+
+[Term]
+id: ID:0001521
+name: special staining evidence
+is_a: ID:0001503 ! microbiological stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T08:45:39Z
+
+[Term]
+id: ID:0001522
+name: methylene blue stain evidence
+is_a: ID:0001504 ! simple stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T08:46:19Z
+
+[Term]
+id: ID:0001523
+name: endospore stain evidence
+is_a: ID:0001505 ! differential stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T08:53:27Z
+
+[Term]
+id: ID:0001524
+name: capsule stain evidence
+is_a: ID:0001521 ! special staining evidence
+is_a: ID:0001524 ! capsule stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T09:03:58Z
+
+[Term]
+id: ID:0001525
+name: flagellar stain evidence
+is_a: ID:0001521 ! special staining evidence
+created_by: kvillanova
+creation_date: 2015-06-22T09:03:00Z
+
+[Term]
+id: ID:0001526
+name: fluorescent microscopy evidence
+is_a: ID:0001508 ! microbiological microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-22T15:04:16Z
+
+[Term]
+id: ID:0001527
+name: ziehl-neelson acid fast evidence
+def: "A type of differential stain evidence where carbol fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol fuchsin exposure then it is decolorized before the methylene blue counterstain." []
+comment: In this Dye acid fast positive organisms stain pink or red while negative organisms stain blue.
+is_a: ID:0001502 ! acid-fast stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T15:04:24Z
+
+[Term]
+id: ID:0001528
+name: schaeffer-fulton staining evidence
+is_a: ID:0001523 ! endospore stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T15:04:28Z
+
+[Term]
+id: ID:0001529
+name: microbiological spectroscopy evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-22T15:08:17Z
+
+[Term]
+id: ID:0001530
+name: kinyoun acid fast evidence
+is_a: ID:0001502 ! acid-fast stain evidence
+created_by: kvillanova
+creation_date: 2015-06-22T15:29:35Z
 
