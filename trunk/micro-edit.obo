@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 22:06:2015 15:39
+date: 24:06:2015 15:50
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -118,9 +118,10 @@ creation_date: 2015-06-19T14:54:03Z
 [Term]
 id: ID:0001514
 name: microbiological medium evidence
-def: "A type of microbiological assay evidence where a medium is used to culture and observe microorganisms." []
-comment: Lab based mediums can come in various states such as solid, semisolid, or liquid.
-synonym: "microbiological media" EXACT []
+def: "A type of microbiological assay evidence where a medium is used to culture and observe microorganisms." [ECO:KAV]
+comment: Lab based media can come in various states such as solid, semisolid, or liquid.
+synonym: "microbiological media" RELATED []
+synonym: "microbiological media evidence" EXACT []
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:58:07Z
@@ -128,9 +129,9 @@ creation_date: 2015-06-19T14:58:07Z
 [Term]
 id: ID:0001515
 name: complex medium evidence
-synonym: "complex media" EXACT []
-synonym: "Enriched media" EXACT []
-synonym: "Rich media" EXACT []
+synonym: "complex media evidence" EXACT []
+synonym: "Enriched media evidence " EXACT []
+synonym: "Rich media evidence" EXACT []
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
 creation_date: 2015-06-19T16:40:24Z
@@ -138,15 +139,15 @@ creation_date: 2015-06-19T16:40:24Z
 [Term]
 id: ID:0001516
 name: middlebrook 7h9 medium evidence
-def: "A type of selective medium evidence used in the growth and study of mycobacterium." []
-is_a: ID:0001501 ! selective medium evidence
+def: "A type of selective medium evidence used in the growth and study of mycobacterium. The medium contains various growth factors including bovine albumin,dextrose,biotin,glycerol,sodium citrate,pyridoxine as well as many others." [ECO:KAV]
+is_a: ID:0001539 ! selective liquid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-22T11:54:48Z
 
 [Term]
 id: ID:0001517
 name: semi-solid agar motility assay
-def: "A type of motility assay where cells are inoculated at the center of a semi-solid nutrient agar plate. After incubation in a appropriate temperature cells grow outward from the point of inoculation." [PMID:2674941, PMID:4957395]
+def: "A type of motility assay evidence where cells are inoculated at the center of a semi-solid nutrient agar plate. After incubation in a appropriate temperature cells grow outward from the point of inoculation." [PMID:2674941, PMID:4957395]
 is_a: ID:0001519 ! motility assay evidence
 created_by: kvillanova
 creation_date: 2015-06-22T12:46:04Z
@@ -154,6 +155,7 @@ creation_date: 2015-06-22T12:46:04Z
 [Term]
 id: ID:0001518
 name: brain-heart infusion blood agar evidence
+def: "A type of blood agar evidence where extracts form the brain, heat and yeasts are combined with peptones to. Create a nonselective and enriched general purpose medium that can be used to grow a wide variety of organisms including many pathogens and fungi." [ECO:KAV, PMCID:PMC476308]
 is_a: ID:0001520 ! blood agar evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:02:51Z
@@ -161,21 +163,22 @@ creation_date: 2015-06-22T15:02:51Z
 [Term]
 id: ID:0001519
 name: motility assay evidence
-is_a: ID:0001506 ! microbiological culture evidence
+is_a: ID:0001548 ! microbiological motility assay evidence
 created_by: kvillanova
 creation_date: 2015-06-22T11:08:14Z
 
 [Term]
 id: ID:0001520
 name: blood agar evidence
-def: "A type of microbiological medium evidence that uses a enriched differential medium to test for fastidious microbiological organisms. Mammalian blood cells are used in various different concentration amounts." []
-is_a: ID:0001515 ! complex medium evidence
+def: "A type of microbiological medium evidence that uses a enriched medium to test for a wide range of microbiological organisms. Mammalian blood cells constitute the majority make up of the media at varying concentrations." [ECO:KAV, PMCID:PMC1594681]
+comment: A wide range of mammalian blood is used for blood agar. Examples include sheep,horse,pig,goat and human blood.
+is_a: ID:0001544 ! differential solid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-22T07:51:17Z
 
 [Term]
 id: ID:0001521
-name: special staining evidence
+name: special stain evidence
 is_a: ID:0001503 ! microbiological stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T08:45:39Z
@@ -190,6 +193,8 @@ creation_date: 2015-06-22T08:46:19Z
 [Term]
 id: ID:0001523
 name: endospore stain evidence
+def: "A type of differential stain evidence based on any type of stain used to view bacterial endospores." [ECO:KAV]
+synonym: "spore stain evidence" EXACT []
 is_a: ID:0001505 ! differential stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T08:53:27Z
@@ -197,7 +202,7 @@ creation_date: 2015-06-22T08:53:27Z
 [Term]
 id: ID:0001524
 name: capsule stain evidence
-is_a: ID:0001521 ! special staining evidence
+is_a: ID:0001521 ! special stain evidence
 is_a: ID:0001524 ! capsule stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T09:03:58Z
@@ -205,7 +210,7 @@ creation_date: 2015-06-22T09:03:58Z
 [Term]
 id: ID:0001525
 name: flagellar stain evidence
-is_a: ID:0001521 ! special staining evidence
+is_a: ID:0001521 ! special stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T09:03:00Z
 
@@ -218,16 +223,20 @@ creation_date: 2015-06-22T15:04:16Z
 
 [Term]
 id: ID:0001527
-name: ziehl-neelson acid fast evidence
-def: "A type of differential stain evidence where carbol fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol fuchsin exposure then it is decolorized before the methylene blue counterstain." []
-comment: In this Dye acid fast positive organisms stain pink or red while negative organisms stain blue.
+name: ziehl-neelson acid fast stain evidence
+def: "A type of differential stain evidence where carbol- fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol fuchsin exposure then it is decolorized before the methylene blue counterstain." []
+comment: With this stain type acid fast positive organisms stain pink or red while acid fast negative organisms stain blue.
+synonym: "ziehl-neelson acid fast staining evidence" EXACT []
 is_a: ID:0001502 ! acid-fast stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:04:24Z
 
 [Term]
 id: ID:0001528
-name: schaeffer-fulton staining evidence
+name: schaeffer-fulton stain evidence
+def: "A type of endospore stain evidence where a primary dye of Malachite green and a counterstain of safranin are used. The Malachite green dye is forced into the endospore by exposure to heat and steam. The specimen is decolorized and then counterstained." [ECO:KAV, PMCID:PMC241728]
+comment: With this staining technique bacterial endospores stain green and all other bacteria stain red/pink.
+synonym: "schaeffer-fulton staining evidence" EXACT []
 is_a: ID:0001523 ! endospore stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:04:28Z
@@ -241,8 +250,144 @@ creation_date: 2015-06-22T15:08:17Z
 
 [Term]
 id: ID:0001530
-name: kinyoun acid fast evidence
+name: kinyoun acid fast stain evidence
 is_a: ID:0001502 ! acid-fast stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:29:35Z
+
+[Term]
+id: ID:0001531
+name: rifampin blood agar evidence
+is_a: ID:0001501 ! selective medium evidence
+is_a: ID:0001520 ! blood agar evidence
+created_by: kvillanova
+creation_date: 2015-06-23T09:49:22Z
+
+[Term]
+id: ID:0001532
+name: moeller stain evidence
+def: "A type of endospore stain evidence where. Carbol-fuchsin is used as a primary dye and methylene blue is used as a counterstain. Carbol-fuchsin is forced into the endospore by heating and exposure to steam. The specimen is then decolorized with sulfuric acid and counterstained with methylene blue." [ECO:KAV, PMID:17933713]
+comment: With this staining technique endospores are stained red/pink while all other bacteria are stained blue.
+synonym: "moeller staining evidence" EXACT []
+is_a: ID:0001523 ! endospore stain evidence
+created_by: kvillanova
+creation_date: 2015-06-23T11:34:44Z
+
+[Term]
+id: ID:0001533
+name: abbott stain evidence
+def: "A type of endospore stain evidence where. Methylene blue is the primary stain and anilin- fuchsin is the counterstain. Methylene blue is forced into the endospore with heat and steam exposure. The specimen is washed in water decolorized with 95% alcohol that contains .2 to .3 % HCL. Counterstained with anilin-fuchsin, and washed with water." [ECO:KAV, PMCID:PMC1516947]
+comment: With this staining technique the endospores stain blue all other bacteria stain red.
+synonym: "abbott staining evidence" NARROW []
+is_a: ID:0001523 ! endospore stain evidence
+created_by: kvillanova
+creation_date: 2015-06-23T13:05:48Z
+
+[Term]
+id: ID:0001534
+name: tergitol 7 modified moeller stain evidence
+def: "A type of moeller stain evidence where. Alliquots of Tergitol 7 are used in replacement of heating and steaming the specimen." [ECO:KAV, PMID:17933713]
+comment: With this staining technique endospores are stained red/pink while all other bacteria are stained blue.
+synonym: "tergitol 7 modified moeller staining evidence" EXACT []
+is_a: ID:0001532 ! moeller stain evidence
+created_by: kvillanova
+creation_date: 2015-06-23T13:09:55Z
+
+[Term]
+id: ID:0001535
+name: light microscopy evidence
+is_a: ID:0001508 ! microbiological microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-24T09:46:13Z
+
+[Term]
+id: ID:0001536
+name: bright-field microscopy evidence
+is_a: ID:0001508 ! microbiological microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-24T09:47:56Z
+
+[Term]
+id: ID:0001537
+name: dark-field microscopy evidence
+is_a: ID:0001508 ! microbiological microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-24T09:48:16Z
+
+[Term]
+id: ID:0001538
+name: electron microscopy evidence
+is_a: ID:0001508 ! microbiological microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-24T09:48:41Z
+
+[Term]
+id: ID:0001539
+name: selective liquid medium evidence
+is_a: ID:0001501 ! selective medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:34:51Z
+
+[Term]
+id: ID:0001540
+name: selective solid medium evidence
+is_a: ID:0001501 ! selective medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:35:01Z
+
+[Term]
+id: ID:0001541
+name: selective semi-solid medium evidence
+is_a: ID:0001501 ! selective medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:35:29Z
+
+[Term]
+id: ID:0001542
+name: differential semi-solid medium evidence
+is_a: ECO:0001502 ! differential medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:37:45Z
+
+[Term]
+id: ID:0001543
+name: differential liquid medium evidence
+is_a: ECO:0001502 ! differential medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:37:50Z
+
+[Term]
+id: ID:0001544
+name: differential solid medium evidence
+is_a: ECO:0001502 ! differential medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:37:54Z
+
+[Term]
+id: ID:0001545
+name: complex solid medium evidence
+is_a: ID:0001515 ! complex medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:42:27Z
+
+[Term]
+id: ID:0001546
+name: complex liquid medium evidence
+is_a: ID:0001515 ! complex medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:43:11Z
+
+[Term]
+id: ID:0001547
+name: complex semi-solid medium evidence
+is_a: ID:0001515 ! complex medium evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:43:30Z
+
+[Term]
+id: ID:0001548
+name: microbiological motility assay evidence
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-24T15:44:37Z
 
