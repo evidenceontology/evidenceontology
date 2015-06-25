@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:06:2015 14:24
+date: 25:06:2015 14:34
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2752,14 +2752,19 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001009
 name: allograft transplantation experiment evidence
-is_a: ECO:0005016 ! anatomical perturbation evidence (ECO:0000240)
+def: "A type of anatomical perturbation evidence where an organ or tissue is transplanted from one individual to another of the same species with a different genotype." [ECO:SN, url:http\://www.nature.com/subjects/allograft, url:http\://www.organdonor.gov/about/terms_and_topics/]
+synonym: "allografting" EXACT []
+synonym: "Allotransplantation" EXACT []
+synonym: "tissue grafting" NARROW []
+is_a: ECO:0000240 ! anatomical perturbation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001010
 name: anion-exchange chromatography evidence
-is_a: ECO:0005005 ! chromatography evidence (ECO:0000325)
+def: "A type of chromatography evidence where a positively charged ion exchange resin with an affinity for molecules having net negative surface charges is used to separate the molecules." [ECO:SN, PMID:20978968, url:http\://www.bio-rad.com/en-us/applications-technologies/anion-exchange-chromatography, url:http\://www.uta.edu/faculty/sawasthi/Enzymology-4351-5324/Class%20Syllabus%20Enzymology/Ion%20Exchange%20Chromatography-1.pdf]
+is_a: ECO:0000325 ! chromatography evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5080,13 +5085,6 @@ created_by: snadendla
 creation_date: 2015-02-13T12:08:01Z
 
 [Term]
-id: ECO:0005005
-name: chromatography evidence (ECO:0000325)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-13T13:38:21Z
-
-[Term]
 id: ECO:0005006
 name: direct assay evidence(ECO:0000002)
 is_obsolete: true
@@ -5309,6 +5307,26 @@ created_by: snadendla
 creation_date: 2015-06-15T15:37:23Z
 
 [Term]
+id: ECO:0005502
+name: xenograft transplantation experiment evidence
+def: "A type of anatomical perturbation evidence where live cells, tissues, or organs from a non-human animal source are transplanted, implanted or infused into a human recipient." [ECO:SN, url:http\://ilarjournal.oxfordjournals.org/content/37/1/16.full.pdf+html, url:http\://www.fda.gov/BiologicsBloodVaccines/Xenotransplantation/]
+synonym: "Xenografting" EXACT []
+synonym: "Xenotransplantation " EXACT []
+is_a: ECO:0000240 ! anatomical perturbation evidence
+created_by: snadendla
+creation_date: 2015-06-25T13:59:12Z
+
+[Term]
+id: ECO:0005503
+name: xenograft transplantation experiment evidence used in manual assertion
+def: "A type of xenograft transplantation experiment evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005502 ! xenograft transplantation experiment evidence
+intersection_of: ECO:0005502 ! xenograft transplantation experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-06-25T14:30:45Z
+
+[Term]
 id: ID:0001601
 name: protein-binding microarray evidence
 def: "A type of oligonucleotide microarray evidence that detects binding of a tagged protein to an array of oligonucleotide probes representing potential binding sites." [PMID:22146299]
@@ -5351,3 +5369,4 @@ id: uses
 name: uses
 xref: ECO:9000001
 inverse_of: used_in ! used_in
+
