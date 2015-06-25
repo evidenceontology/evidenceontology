@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 24:06:2015 15:50
+date: 25:06:2015 15:28
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -13,7 +13,8 @@ creation_date: 2015-06-19T13:28:13Z
 [Term]
 id: ECO:0001502
 name: differential medium evidence
-synonym: "differential media" EXACT []
+def: "A type of microbiological medium evidence where a medium has agents that allow for the growth of a wide range of microbial organisms, but also expresses the visual differences of the organisms." []
+synonym: "differential media evidence" EXACT []
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: mchibucos
 creation_date: 2015-06-19T13:28:45Z
@@ -21,7 +22,9 @@ creation_date: 2015-06-19T13:28:45Z
 [Term]
 id: ID:0001501
 name: selective medium evidence
-synonym: "selective media" EXACT []
+def: "A type of microbiological medium evidence where a medium is selective. The medium has one more agents that selectively inhibits the growth of certain microbial organisms thereby allowing for the growth of other types of organisms." [ECO:KAV, PMCID:PMC202152, PMCID:PMC272154]
+comment: A common inhibitory agent for selective media are antibiotics. Examples include ampicillins, tetracyclines, vancomycin etc.
+synonym: "selective media evidence " EXACT []
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:42:01Z
@@ -68,7 +71,7 @@ creation_date: 2015-06-19T14:48:31Z
 [Term]
 id: ID:0001507
 name: camp test evidence
-is_a: ID:0001506 ! microbiological culture evidence
+is_a: ID:0001562 ! microbiological interaction evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:48:54Z
 
@@ -128,10 +131,7 @@ creation_date: 2015-06-19T14:58:07Z
 
 [Term]
 id: ID:0001515
-name: complex medium evidence
-synonym: "complex media evidence" EXACT []
-synonym: "Enriched media evidence " EXACT []
-synonym: "Rich media evidence" EXACT []
+name: undefined medium evidence
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
 creation_date: 2015-06-19T16:40:24Z
@@ -139,7 +139,9 @@ creation_date: 2015-06-19T16:40:24Z
 [Term]
 id: ID:0001516
 name: middlebrook 7h9 medium evidence
-def: "A type of selective medium evidence used in the growth and study of mycobacterium. The medium contains various growth factors including bovine albumin,dextrose,biotin,glycerol,sodium citrate,pyridoxine as well as many others." [ECO:KAV]
+def: "A type of selective liquid medium evidence used in the growth and study of mycobacterium. The medium contains various growth factors including bovine albumin,dextrose,biotin,glycerol,sodium citrate,pyridoxine as well as many others." [ECO:KAV]
+synonym: "middlebrook 7h9 broth evidence" RELATED []
+synonym: "middlebrook 7h9 media evidence" EXACT []
 is_a: ID:0001539 ! selective liquid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-22T11:54:48Z
@@ -170,9 +172,11 @@ creation_date: 2015-06-22T11:08:14Z
 [Term]
 id: ID:0001520
 name: blood agar evidence
-def: "A type of microbiological medium evidence that uses a enriched medium to test for a wide range of microbiological organisms. Mammalian blood cells constitute the majority make up of the media at varying concentrations." [ECO:KAV, PMCID:PMC1594681]
+def: "A type of microbiological medium evidence that uses a enriched and differential media to test for a wide range of microbiological organisms. The medium includes human blood cells as its main growth factor. This allows the media to be used to differentiate between alpha, gamma, and beta hemolysis causing bacteria" [ECO:KAV, PMCID:PMC1594681]
 comment: A wide range of mammalian blood is used for blood agar. Examples include sheep,horse,pig,goat and human blood.
+is_a: ECO:0001502 ! differential medium evidence
 is_a: ID:0001544 ! differential solid medium evidence
+is_a: ID:0001549 ! enriched medium evidence
 created_by: kvillanova
 creation_date: 2015-06-22T07:51:17Z
 
@@ -324,6 +328,9 @@ creation_date: 2015-06-24T09:48:41Z
 [Term]
 id: ID:0001539
 name: selective liquid medium evidence
+def: "A type of selective medium evidence based on any type of media in a liquid state." [ECO:KAV]
+synonym: "broth media evidence " EXACT []
+synonym: "liquid media evidence" EXACT []
 is_a: ID:0001501 ! selective medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:34:51Z
@@ -331,6 +338,8 @@ creation_date: 2015-06-24T15:34:51Z
 [Term]
 id: ID:0001540
 name: selective solid medium evidence
+def: "A type of selective medium evidence based on any type of media in a solid state." []
+synonym: "solid media evidence " RELATED []
 is_a: ID:0001501 ! selective medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:35:01Z
@@ -338,6 +347,8 @@ creation_date: 2015-06-24T15:35:01Z
 [Term]
 id: ID:0001541
 name: selective semi-solid medium evidence
+def: "A type of selective medium evidence based on any type of media in a semi-solid state." []
+synonym: "semi-solid selective media" EXACT []
 is_a: ID:0001501 ! selective medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:35:29Z
@@ -345,6 +356,8 @@ creation_date: 2015-06-24T15:35:29Z
 [Term]
 id: ID:0001542
 name: differential semi-solid medium evidence
+def: "A type of differential medium evidence based on any type of media in a semi-solid state." []
+synonym: "differential semi-solid media evidence" EXACT []
 is_a: ECO:0001502 ! differential medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:37:45Z
@@ -352,6 +365,8 @@ creation_date: 2015-06-24T15:37:45Z
 [Term]
 id: ID:0001543
 name: differential liquid medium evidence
+def: "A type of differential liquid medium evidence based on any type of media in a liquid state." []
+synonym: "differential broth media evidence" EXACT []
 is_a: ECO:0001502 ! differential medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:37:50Z
@@ -359,28 +374,30 @@ creation_date: 2015-06-24T15:37:50Z
 [Term]
 id: ID:0001544
 name: differential solid medium evidence
+def: "A type of differential medium evidence based on any type of media in a solid state." []
+synonym: "differential solid state media evidence" EXACT []
 is_a: ECO:0001502 ! differential medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:37:54Z
 
 [Term]
 id: ID:0001545
-name: complex solid medium evidence
-is_a: ID:0001515 ! complex medium evidence
+name: undefined solid medium evidence
+is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:42:27Z
 
 [Term]
 id: ID:0001546
-name: complex liquid medium evidence
-is_a: ID:0001515 ! complex medium evidence
+name: undefined liquid medium evidence
+is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:11Z
 
 [Term]
 id: ID:0001547
-name: complex semi-solid medium evidence
-is_a: ID:0001515 ! complex medium evidence
+name: undefined semi-solid medium evidence
+is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:30Z
 
@@ -390,4 +407,124 @@ name: microbiological motility assay evidence
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:44:37Z
+
+[Term]
+id: ID:0001549
+name: enriched medium evidence
+def: "A type of microbiological medium evidence where a medium contains complex growth and nutrient factors that support a wide range of microbial organisms but is specifically used to culture fastidious organisms." [ECO:KAV, PMCID:PMC265853]
+synonym: "enriched media evidence" EXACT []
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T11:17:31Z
+
+[Term]
+id: ID:0001550
+name: nutrient medium evidence
+synonym: "nutrient media evidence" EXACT []
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T11:19:28Z
+
+[Term]
+id: ID:0001551
+name: transport medium evidence
+synonym: "transport media evidence" EXACT []
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T11:21:33Z
+
+[Term]
+id: ID:0001552
+name: pure culture evidence
+is_a: ID:0001506 ! microbiological culture evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:44:17Z
+
+[Term]
+id: ID:0001553
+name: defined medium evidence
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T11:25:26Z
+
+[Term]
+id: ID:0001554
+name: minimal medium evidence
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:39:18Z
+
+[Term]
+id: ID:0001555
+name: supplementary minimal media
+is_a: ID:0001554 ! minimal medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:39:45Z
+
+[Term]
+id: ID:0001556
+name: mixed culture evidence
+is_a: ID:0001506 ! microbiological culture evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:44:39Z
+
+[Term]
+id: ID:0001557
+name: wound culture
+is_a: ID:0001506 ! microbiological culture evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:50:48Z
+
+[Term]
+id: ID:0001558
+name: aerobic wound culture evidence
+is_a: ID:0001557 ! wound culture
+created_by: kvillanova
+creation_date: 2015-06-25T13:51:52Z
+
+[Term]
+id: ID:0001559
+name: anaerobic wound culture evidence
+is_a: ID:0001557 ! wound culture
+created_by: kvillanova
+creation_date: 2015-06-25T13:52:24Z
+
+[Term]
+id: ID:0001560
+name: aerobic culture evidence
+is_a: ID:0001506 ! microbiological culture evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:53:05Z
+
+[Term]
+id: ID:0001561
+name: anaerobic wound culture evidence
+is_a: ID:0001506 ! microbiological culture evidence
+created_by: kvillanova
+creation_date: 2015-06-25T13:53:21Z
+
+[Term]
+id: ID:0001562
+name: microbiological interaction evidence
+def: "A type of microbiological assay evidence based on interaction from multiple types of microbial organisms." []
+is_a: ECO:0001501 ! microbiological assay evidence
+created_by: kvillanova
+creation_date: 2015-06-25T14:01:42Z
+
+[Term]
+id: ID:0001563
+name: reducing medium evidence
+is_a: ID:0001514 ! microbiological medium evidence
+created_by: kvillanova
+creation_date: 2015-06-25T14:32:07Z
+
+[Term]
+id: ID:0001564
+name: skirrow blood agar evidence
+def: "A type of blood agar evidence used to select for the growth of Campylobacter. Common selective agents in the media are Vancomycin, Amphotercin, Polymoxin, and Amphotericin." [ECO:KAV, PMID:9432320]
+comment: Different versions of this agar use either lysed Horse blood or non lysed sheeps blood as a substitute for horse blood.
+is_a: ID:0001501 ! selective medium evidence
+is_a: ID:0001520 ! blood agar evidence
+created_by: kvillanova
+creation_date: 2015-06-25T14:38:28Z
 
