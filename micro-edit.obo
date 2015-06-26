@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:06:2015 15:28
+date: 26:06:2015 15:53
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -32,7 +32,10 @@ creation_date: 2015-06-19T14:42:01Z
 [Term]
 id: ID:0001502
 name: acid-fast stain evidence
-synonym: "Ziehl-Neelsen stain" RELATED []
+def: "A type of differential stain evidence based on any type of stain used to view  acid fast microorganisms." [PMID:19885935, PMID:24619760]
+comment: The acid fast stain is particulary known for its ability to stain Mycobacterium and some strains of the Nocardia species.
+synonym: "acid-fast staining evidence" EXACT []
+synonym: "AFS evidence" EXACT []
 is_a: ID:0001505 ! differential stain evidence
 created_by: kvillanova
 creation_date: 2015-06-19T15:29:56Z
@@ -139,7 +142,7 @@ creation_date: 2015-06-19T16:40:24Z
 [Term]
 id: ID:0001516
 name: middlebrook 7h9 medium evidence
-def: "A type of selective liquid medium evidence used in the growth and study of mycobacterium. The medium contains various growth factors including bovine albumin,dextrose,biotin,glycerol,sodium citrate,pyridoxine as well as many others." [ECO:KAV]
+def: "A type of selective liquid medium evidence used in the growth and study of mycobacterium. The medium contains various growth factors including bovine albumin,dextrose,biotin,glycerol,sodium citrate,pyridoxine as well as other growth factors." [ECO:KAV]
 synonym: "middlebrook 7h9 broth evidence" RELATED []
 synonym: "middlebrook 7h9 media evidence" EXACT []
 is_a: ID:0001539 ! selective liquid medium evidence
@@ -158,6 +161,8 @@ creation_date: 2015-06-22T12:46:04Z
 id: ID:0001518
 name: brain-heart infusion blood agar evidence
 def: "A type of blood agar evidence where extracts form the brain, heat and yeasts are combined with peptones to. Create a nonselective and enriched general purpose medium that can be used to grow a wide variety of organisms including many pathogens and fungi." [ECO:KAV, PMCID:PMC476308]
+synonym: "brain-heart infusion agar evidence" EXACT []
+synonym: "brain-heart infusion media evidence" EXACT []
 is_a: ID:0001520 ! blood agar evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:02:51Z
@@ -172,11 +177,10 @@ creation_date: 2015-06-22T11:08:14Z
 [Term]
 id: ID:0001520
 name: blood agar evidence
-def: "A type of microbiological medium evidence that uses a enriched and differential media to test for a wide range of microbiological organisms. The medium includes human blood cells as its main growth factor. This allows the media to be used to differentiate between alpha, gamma, and beta hemolysis causing bacteria" [ECO:KAV, PMCID:PMC1594681]
+def: "A type of differential solid medium evidence that uses a enriched and differential media to test for a wide range of microbiological organisms. The medium includes human blood cells as its main growth factor. This allows the media to be used to differentiate between alpha, gamma, and beta hemolysis causing bacteria." [ECO:KAV, PMCID:PMC1594681]
 comment: A wide range of mammalian blood is used for blood agar. Examples include sheep,horse,pig,goat and human blood.
-is_a: ECO:0001502 ! differential medium evidence
 is_a: ID:0001544 ! differential solid medium evidence
-is_a: ID:0001549 ! enriched medium evidence
+is_a: ID:0001568 ! enriched solid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-22T07:51:17Z
 
@@ -206,6 +210,7 @@ creation_date: 2015-06-22T08:53:27Z
 [Term]
 id: ID:0001524
 name: capsule stain evidence
+def: "A type of special stain evidence based on any staining technique that is used to view  bacterial capsules." []
 is_a: ID:0001521 ! special stain evidence
 is_a: ID:0001524 ! capsule stain evidence
 created_by: kvillanova
@@ -214,6 +219,7 @@ creation_date: 2015-06-22T09:03:58Z
 [Term]
 id: ID:0001525
 name: flagellar stain evidence
+def: "A type of special stain evidence based on any type of stain used to view flagella." []
 is_a: ID:0001521 ! special stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T09:03:00Z
@@ -227,9 +233,9 @@ creation_date: 2015-06-22T15:04:16Z
 
 [Term]
 id: ID:0001527
-name: ziehl-neelson acid fast stain evidence
-def: "A type of differential stain evidence where carbol- fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol fuchsin exposure then it is decolorized before the methylene blue counterstain." []
-comment: With this stain type acid fast positive organisms stain pink or red while acid fast negative organisms stain blue.
+name: ziehl-neelson acid-fast stain evidence
+def: "A type of differential stain evidence where carbol- fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol fuchsin exposure then it is decolorized before the methylene blue counterstain." [PMCID:PMC518143]
+comment: With this stain type acid fast positive organisms stain pink/red while acid fast negative organisms stain blue.
 synonym: "ziehl-neelson acid fast staining evidence" EXACT []
 is_a: ID:0001502 ! acid-fast stain evidence
 created_by: kvillanova
@@ -254,7 +260,10 @@ creation_date: 2015-06-22T15:08:17Z
 
 [Term]
 id: ID:0001530
-name: kinyoun acid fast stain evidence
+name: kinyoun acid-fast stain evidence
+def: "A type of acid-fast stain evidence where kinyoun carbol-fuchsin phenol is used as a primary dye, methylene blue is used as a counterstain, and acid alcohol is used as a decolorizer." []
+comment: With this staining technique the acid fast bacteria is stained red/pink and acid-fast negative  bacteria is stained blue.
+synonym: "kinyoun staining evidence" EXACT []
 is_a: ID:0001502 ! acid-fast stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:29:35Z
@@ -262,8 +271,11 @@ creation_date: 2015-06-22T15:29:35Z
 [Term]
 id: ID:0001531
 name: rifampin blood agar evidence
-is_a: ID:0001501 ! selective medium evidence
+def: "A type of blood agar evidence where rifampin is used as a selective agent." [ECO:KAV, PMCID:PMC376417]
+synonym: "rifampin agar evidence" EXACT []
+synonym: "rifampin media evidence" RELATED []
 is_a: ID:0001520 ! blood agar evidence
+is_a: ID:0001540 ! selective solid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-23T09:49:22Z
 
@@ -383,6 +395,7 @@ creation_date: 2015-06-24T15:37:54Z
 [Term]
 id: ID:0001545
 name: undefined solid medium evidence
+def: "A type of undefined solid medium evidence based on any type of media in a solid state." []
 is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:42:27Z
@@ -390,6 +403,7 @@ creation_date: 2015-06-24T15:42:27Z
 [Term]
 id: ID:0001546
 name: undefined liquid medium evidence
+def: "A type of defined medium evidence based on any type of media in a liquid state." []
 is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:11Z
@@ -397,6 +411,7 @@ creation_date: 2015-06-24T15:43:11Z
 [Term]
 id: ID:0001547
 name: undefined semi-solid medium evidence
+def: "A type of undefined medium evidence based on any type of media in a semi-solid state." []
 is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:30Z
@@ -411,7 +426,7 @@ creation_date: 2015-06-24T15:44:37Z
 [Term]
 id: ID:0001549
 name: enriched medium evidence
-def: "A type of microbiological medium evidence where a medium contains complex growth and nutrient factors that support a wide range of microbial organisms but is specifically used to culture fastidious organisms." [ECO:KAV, PMCID:PMC265853]
+def: "A type of microbiological medium evidence where a medium contains complex growth and nutrient factors. That support a wide range of microbial organisms but is specifically used to culture fastidious organisms." [ECO:KAV, PMCID:PMC265853]
 synonym: "enriched media evidence" EXACT []
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
@@ -456,10 +471,11 @@ creation_date: 2015-06-25T13:39:18Z
 
 [Term]
 id: ID:0001555
-name: supplementary minimal media
+name: minimal liquid medium evidence
+def: "A type of minimal liquid medium evidence based on any type of media in a liquid state." []
 is_a: ID:0001554 ! minimal medium evidence
 created_by: kvillanova
-creation_date: 2015-06-25T13:39:45Z
+creation_date: 2015-06-26T10:42:46Z
 
 [Term]
 id: ID:0001556
@@ -523,8 +539,186 @@ id: ID:0001564
 name: skirrow blood agar evidence
 def: "A type of blood agar evidence used to select for the growth of Campylobacter. Common selective agents in the media are Vancomycin, Amphotercin, Polymoxin, and Amphotericin." [ECO:KAV, PMID:9432320]
 comment: Different versions of this agar use either lysed Horse blood or non lysed sheeps blood as a substitute for horse blood.
-is_a: ID:0001501 ! selective medium evidence
+synonym: "skirrow agar evidence" EXACT []
+synonym: "skirrow media evidence" RELATED []
 is_a: ID:0001520 ! blood agar evidence
+is_a: ID:0001540 ! selective solid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-25T14:38:28Z
+
+[Term]
+id: ID:0001565
+name: columbia blood agar evidence
+def: "A type of blood agar evidence based on formula design from Ellen et al of Columbia University. The media contains various growth factors including. Sheep, rabbit, or horse blood. A pancreatic digest of casein, a meat peptic digest, yeast extract, maize starch and sodium chloride." [ECO:KAV, PMID:9810657]
+synonym: "columbia blood media evidence" EXACT []
+is_a: ID:0001520 ! blood agar evidence
+created_by: kvillanova
+creation_date: 2015-06-26T08:46:20Z
+
+[Term]
+id: ID:0001566
+name: columbia agar evidence
+def: "A type of enriched solid medium evidence based on  formula design from Ellen et al of Columbia University. The media is used for general purpose cultivation of microorganisms and contains various growth factors including. Pancreatic casein digest,a meat peptic digest, heart pancreatic digest, yeast extract, maize starch, and sodium chloride." []
+synonym: "CA media evidence" EXACT []
+synonym: "columbia agar media evidence" EXACT []
+is_a: ID:0001568 ! enriched solid medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:04:30Z
+
+[Term]
+id: ID:0001567
+name: enriched liquid medium evidence
+is_a: ID:0001549 ! enriched medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:16:09Z
+
+[Term]
+id: ID:0001568
+name: enriched solid medium evidence
+is_a: ID:0001549 ! enriched medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:16:32Z
+
+[Term]
+id: ID:0001569
+name: enriched semi-solid medium evidence
+is_a: ID:0001549 ! enriched medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:17:02Z
+
+[Term]
+id: ID:0001570
+name: defined liquid medium evidence
+def: "A type of defined liquid medium based on any type of media in a liquid state." []
+is_a: ID:0001553 ! defined medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:17:25Z
+
+[Term]
+id: ID:0001571
+name: defined solid medium evidence
+def: "A type of defined medium evidence based on any type of media in a solid state." []
+is_a: ID:0001553 ! defined medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:17:47Z
+
+[Term]
+id: ID:0001572
+name: defined semi-solid medium evidence
+def: "A type of defined medium evidence based on any media in a semi-solid state." []
+is_a: ID:0001553 ! defined medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:18:05Z
+
+[Term]
+id: ID:0001573
+name: semi-solid transport medium evidence
+def: "A type of transport medium evidence based on any type of media in a semi-solid state." []
+is_a: ID:0001551 ! transport medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:48:34Z
+
+[Term]
+id: ID:0001574
+name: solid transport medium evidence
+def: "A type of transport medium evidence based on any type of media in a solid state." []
+is_a: ID:0001551 ! transport medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:48:54Z
+
+[Term]
+id: ID:0001575
+name: maneval's capsule stain evidence
+is_a: ID:0001524 ! capsule stain evidence
+created_by: kvillanova
+creation_date: 2015-06-26T14:40:26Z
+
+[Term]
+id: ID:0001576
+name: anthony's capsue stain evidence
+is_a: ID:0001524 ! capsule stain evidence
+created_by: kvillanova
+creation_date: 2015-06-26T14:42:03Z
+
+[Term]
+id: ID:0001577
+name: liquid nutrient medium evidence
+def: "A type of liquid nutrient medium evidence based on any type media in a liquid state." []
+is_a: ID:0001550 ! nutrient medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:38:17Z
+
+[Term]
+id: ID:0001578
+name: solid nutrient medium evidence
+def: "A type of nutrient medium evidence based on any type of media in a solid state." []
+is_a: ID:0001550 ! nutrient medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:39:30Z
+
+[Term]
+id: ID:0001579
+name: semi-solid nutrient medium evidence
+def: "A type of nutrient medium evidence based on any type of media in a semi-solid state." []
+is_a: ID:0001550 ! nutrient medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:40:02Z
+
+[Term]
+id: ID:0001580
+name: solid reducing medium evidence
+def: "A type of reducing medium evidence based on any type of media in a solid state." []
+is_a: ID:0001563 ! reducing medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:40:46Z
+
+[Term]
+id: ID:0001581
+name: liquid reducing medium evidence
+def: "A type of liquid medium based on any type of media in a liquid state." []
+is_a: ID:0001563 ! reducing medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:41:19Z
+
+[Term]
+id: ID:0001582
+name: semi-solid reducing medium evidence
+def: "A type of reducing medium evidence based on any type of media in a semi-solid state." []
+is_a: ID:0001563 ! reducing medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:41:37Z
+
+[Term]
+id: ID:0001583
+name: minimal solid medium evidence
+def: "A type of minimal solid medium evidence based on any type of media in a solid state." []
+is_a: ID:0001554 ! minimal medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:43:28Z
+
+[Term]
+id: ID:0001584
+name: minimal semi-solid medium evidence
+def: "A type of minimal medium evidence based on any type of media in a semi-solid state." []
+is_a: ID:0001554 ! minimal medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:43:52Z
+
+[Term]
+id: ID:0001585
+name: liquid transport medium evidence
+def: "A type of transport medium evidence based on any type of media in a liquid state." []
+is_a: ID:0001551 ! transport medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T10:46:52Z
+
+[Term]
+id: ID:0001586
+name: china blue lactose medium evidence
+def: "A type of differential solid medium evidence used to differentiate between lactose fermenters and non lactose fermenting microorganisms. The media serves as a ph indicator and can be incubated with milk .It has various growth factors including a casein peptone, lactose, meat extract, and sodium chloride." []
+synonym: "china blue evidence" EXACT []
+synonym: "china blue media evidence" EXACT []
+is_a: ID:0001544 ! differential solid medium evidence
+created_by: kvillanova
+creation_date: 2015-06-26T15:05:23Z
 
