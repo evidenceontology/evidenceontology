@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:06:2015 14:34
+date: 26:06:2015 17:31
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -992,7 +992,6 @@ is_a: ECO:0000094 ! biological assay evidence
 [Term]
 id: ECO:0000182
 name: in vitro culture assay evidence
-synonym: "ex vivo assay" RELATED []
 is_a: ECO:0000094 ! biological assay evidence
 
 [Term]
@@ -2738,7 +2737,10 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001007
 name: adoptive cell transfer evidence
-is_a: ECO:0005015 ! biological assay evidence (ECO:0000094)
+def: "A type of ex vivo assay evidence derived by ex vivo selection of tumor-reactive lymphocytes, and their activation and numerical expansion before re-infusion to the autologous tumor-bearing host." [ECO:SN, url:http\://jco.ascopubs.org/content/23/10/2346.full.pdf+html, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2305722/pdf/nihms42807.pdf]
+synonym: "Adoptive immunotherapy" EXACT []
+synonym: "passive immunization" EXACT []
+is_a: ECO:0005502 ! ex vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2806,7 +2808,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001016
 name: blood test evidence
-is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
+def: "A type of direct assay evidence where blood sample is extracted from an organism to analyze different blood components." [ECO:SN, url:https\://www.nhlbi.nih.gov/health/health-topics/topics/bdt]
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3699,7 +3702,12 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001137
 name: xenotransplantation experiment evidence
-is_a: ECO:0000091 ! isb-sib evidence
+def: "A type of anatomical perturbation evidence where live cells, tissues, or organs from a non-human animal source are transplanted, implanted or infused into a human recipient." [ECO:SN, url:http\://ilarjournal.oxfordjournals.org/content/37/1/16.full.pdf+html, url:http\://www.fda.gov/BiologicsBloodVaccines/Xenotransplantation/]
+synonym: "tissue grafting" NARROW []
+synonym: "Xenograft transplantation" EXACT []
+synonym: "Xenografting" EXACT []
+synonym: "Xenotransplantation" EXACT []
+is_a: ECO:0000240 ! anatomical perturbation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5148,20 +5156,6 @@ created_by: snadendla
 creation_date: 2015-02-12T13:26:55Z
 
 [Term]
-id: ECO:0005015
-name: biological assay evidence (ECO:0000094)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-12T16:21:28Z
-
-[Term]
-id: ECO:0005016
-name: anatomical perturbation evidence (ECO:0000240)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-13T15:07:39Z
-
-[Term]
 id: ECO:0005017
 name: experimental phenotypic evidence(ECO:0000014)
 is_a: ECO:0000091 ! isb-sib evidence
@@ -5308,23 +5302,11 @@ creation_date: 2015-06-15T15:37:23Z
 
 [Term]
 id: ECO:0005502
-name: xenograft transplantation experiment evidence
-def: "A type of anatomical perturbation evidence where live cells, tissues, or organs from a non-human animal source are transplanted, implanted or infused into a human recipient." [ECO:SN, url:http\://ilarjournal.oxfordjournals.org/content/37/1/16.full.pdf+html, url:http\://www.fda.gov/BiologicsBloodVaccines/Xenotransplantation/]
-synonym: "Xenografting" EXACT []
-synonym: "Xenotransplantation " EXACT []
-is_a: ECO:0000240 ! anatomical perturbation evidence
+name: ex vivo assay evidence
+def: "A type of biological assay evidence derived by studying an organ, tissues, or cells taken from an organism in an external environment with the minimum alteration of natural conditions." [ECO:SN, PMID:16305312, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2305722/pdf/nihms42807.pdf]
+is_a: ECO:0000094 ! biological assay evidence
 created_by: snadendla
-creation_date: 2015-06-25T13:59:12Z
-
-[Term]
-id: ECO:0005503
-name: xenograft transplantation experiment evidence used in manual assertion
-def: "A type of xenograft transplantation experiment evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0005502 ! xenograft transplantation experiment evidence
-intersection_of: ECO:0005502 ! xenograft transplantation experiment evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: snadendla
-creation_date: 2015-06-25T14:30:45Z
+creation_date: 2015-06-26T11:46:15Z
 
 [Term]
 id: ID:0001601
