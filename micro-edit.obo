@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:06:2015 15:53
+date: 29:06:2015 15:49
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -24,6 +24,7 @@ id: ID:0001501
 name: selective medium evidence
 def: "A type of microbiological medium evidence where a medium is selective. The medium has one more agents that selectively inhibits the growth of certain microbial organisms thereby allowing for the growth of other types of organisms." [ECO:KAV, PMCID:PMC202152, PMCID:PMC272154]
 comment: A common inhibitory agent for selective media are antibiotics. Examples include ampicillins, tetracyclines, vancomycin etc.
+synonym: "<new synonym>" RELATED []
 synonym: "selective media evidence " EXACT []
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
@@ -32,7 +33,7 @@ creation_date: 2015-06-19T14:42:01Z
 [Term]
 id: ID:0001502
 name: acid-fast stain evidence
-def: "A type of differential stain evidence based on any type of stain used to view  acid fast microorganisms." [PMID:19885935, PMID:24619760]
+def: "A type of differential stain evidence based on any type of stain used to view acid fast microorganisms." [ECO:KAV, PMID:19885935, PMID:24619760]
 comment: The acid fast stain is particulary known for its ability to stain Mycobacterium and some strains of the Nocardia species.
 synonym: "acid-fast staining evidence" EXACT []
 synonym: "AFS evidence" EXACT []
@@ -43,7 +44,7 @@ creation_date: 2015-06-19T15:29:56Z
 [Term]
 id: ID:0001503
 name: microbiological stain evidence
-def: "A type of microbiological assay evidence where dyes are applied and become fixed through chemical reactions to microbial specimens." []
+def: "A type of microbiological assay evidence where dyes are applied and become fixed through chemical reactions to microbial specimens." [ECO:KAV]
 synonym: "microbiological staining evidence" EXACT []
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
@@ -52,6 +53,8 @@ creation_date: 2015-06-19T14:43:08Z
 [Term]
 id: ID:0001504
 name: simple stain evidence
+def: "A type of microbiological stain evidence where one dye is used to stain a bacterial specimen to verify presence and display morphology." [ECP:KAV, PMCID:PMC1053889]
+synonym: "simple staining evidence" EXACT []
 is_a: ID:0001503 ! microbiological stain evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:45:17Z
@@ -59,7 +62,7 @@ creation_date: 2015-06-19T14:45:17Z
 [Term]
 id: ID:0001505
 name: differential stain evidence
-def: "A type of microbiological assay evidence where a primary dye and a counter-stain are used to differentiate between microbial cell types or cell features." []
+def: "A type of microbiological assay evidence where a primary dye and a counter-stain are used to differentiate between microbial types or  morphologies." [ECO:KAV]
 is_a: ID:0001503 ! microbiological stain evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:45:51Z
@@ -74,7 +77,7 @@ creation_date: 2015-06-19T14:48:31Z
 [Term]
 id: ID:0001507
 name: camp test evidence
-is_a: ID:0001562 ! microbiological interaction evidence
+is_a: ID:0001509 ! microbiological biochemical evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:48:54Z
 
@@ -160,7 +163,7 @@ creation_date: 2015-06-22T12:46:04Z
 [Term]
 id: ID:0001518
 name: brain-heart infusion blood agar evidence
-def: "A type of blood agar evidence where extracts form the brain, heat and yeasts are combined with peptones to. Create a nonselective and enriched general purpose medium that can be used to grow a wide variety of organisms including many pathogens and fungi." [ECO:KAV, PMCID:PMC476308]
+def: "A type of blood agar evidence where extracts form the brain, heat, and yeasts are combined with peptones to. Create a nonselective and enriched general purpose medium that can be used to grow a wide variety of organisms including many bacterial pathogens and fungi." [ECO:KAV, PMCID:PMC476308]
 synonym: "brain-heart infusion agar evidence" EXACT []
 synonym: "brain-heart infusion media evidence" EXACT []
 is_a: ID:0001520 ! blood agar evidence
@@ -194,6 +197,8 @@ creation_date: 2015-06-22T08:45:39Z
 [Term]
 id: ID:0001522
 name: methylene blue stain evidence
+def: "A type of simple stain evidence where methylene blue is used." [ECO:KAV]
+synonym: "methylene blue staining evidence" EXACT []
 is_a: ID:0001504 ! simple stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T08:46:19Z
@@ -210,7 +215,7 @@ creation_date: 2015-06-22T08:53:27Z
 [Term]
 id: ID:0001524
 name: capsule stain evidence
-def: "A type of special stain evidence based on any staining technique that is used to view  bacterial capsules." []
+def: "A type of special stain evidence based on any staining technique that is used to view bacterial capsules." [ECO:KAV]
 is_a: ID:0001521 ! special stain evidence
 is_a: ID:0001524 ! capsule stain evidence
 created_by: kvillanova
@@ -219,7 +224,7 @@ creation_date: 2015-06-22T09:03:58Z
 [Term]
 id: ID:0001525
 name: flagellar stain evidence
-def: "A type of special stain evidence based on any type of stain used to view flagella." []
+def: "A type of special stain evidence based on any type of stain used to view flagella." [ECO:KAV]
 is_a: ID:0001521 ! special stain evidence
 created_by: kvillanova
 creation_date: 2015-06-22T09:03:00Z
@@ -261,7 +266,7 @@ creation_date: 2015-06-22T15:08:17Z
 [Term]
 id: ID:0001530
 name: kinyoun acid-fast stain evidence
-def: "A type of acid-fast stain evidence where kinyoun carbol-fuchsin phenol is used as a primary dye, methylene blue is used as a counterstain, and acid alcohol is used as a decolorizer." []
+def: "A type of acid-fast stain evidence where kinyoun carbol-fuchsin phenol is used as a primary dye, methylene blue is used as a counterstain, and acid alcohol is used as a decolorizer." [ECO:KAV]
 comment: With this staining technique the acid fast bacteria is stained red/pink and acid-fast negative  bacteria is stained blue.
 synonym: "kinyoun staining evidence" EXACT []
 is_a: ID:0001502 ! acid-fast stain evidence
@@ -521,11 +526,14 @@ creation_date: 2015-06-25T13:53:21Z
 
 [Term]
 id: ID:0001562
-name: microbiological interaction evidence
-def: "A type of microbiological assay evidence based on interaction from multiple types of microbial organisms." []
-is_a: ECO:0001501 ! microbiological assay evidence
+name: macconkey medium evidence 
+def: "A type of differential and selective solid medium used for the differentiation and isolation of non fastidious gram negative organisms. The agar was created by Alfred Theodore MacConkey M.D when he worked at The Royal Commission On Sewage Disposal in Liverpool England 1905. The media contains peptones, lactose, bile salts, sodium chloride, neutral red, crystal violet, and water." []
+comment: The media can be used to culture gram negative lactose and non lactose fermenting organisms enteric organisms and coliforms. The Bile salt and crystal violet dye inhibit gram positive organisms from growing. The neutral red dye turns pink if microorganisms are lactose fermenting.
+synonym: "macconkey media evidence" EXACT []
+is_a: ID:0001540 ! selective solid medium evidence
+is_a: ID:0001544 ! differential solid medium evidence
 created_by: kvillanova
-creation_date: 2015-06-25T14:01:42Z
+creation_date: 2015-06-29T13:58:15Z
 
 [Term]
 id: ID:0001563
@@ -537,7 +545,7 @@ creation_date: 2015-06-25T14:32:07Z
 [Term]
 id: ID:0001564
 name: skirrow blood agar evidence
-def: "A type of blood agar evidence used to select for the growth of Campylobacter. Common selective agents in the media are Vancomycin, Amphotercin, Polymoxin, and Amphotericin." [ECO:KAV, PMID:9432320]
+def: "A type of blood agar evidence used to select for the growth of Campylobacter. Common selective agents used in the media are Vancomycin, Amphotercin, Polymoxin, and Amphotericin." [ECO:KAV, PMID:9432320]
 comment: Different versions of this agar use either lysed Horse blood or non lysed sheeps blood as a substitute for horse blood.
 synonym: "skirrow agar evidence" EXACT []
 synonym: "skirrow media evidence" RELATED []
@@ -715,10 +723,86 @@ creation_date: 2015-06-26T10:46:52Z
 [Term]
 id: ID:0001586
 name: china blue lactose medium evidence
-def: "A type of differential solid medium evidence used to differentiate between lactose fermenters and non lactose fermenting microorganisms. The media serves as a ph indicator and can be incubated with milk .It has various growth factors including a casein peptone, lactose, meat extract, and sodium chloride." []
+def: "A type of differential solid medium evidence used to differentiate between lactose fermenting and non lactose fermenting microorganisms. The media serves as a ph indicator and can be incubated with milk .It has various growth factors including a casein peptone, lactose, meat extract, and sodium chloride." []
 synonym: "china blue evidence" EXACT []
 synonym: "china blue media evidence" EXACT []
 is_a: ID:0001544 ! differential solid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T15:05:23Z
+
+[Term]
+id: ID:0001587
+name: catalase assay evidence
+def: "A type of microbiological biochemical evidence based on any assay that is used to determine if an  organism produces the enzyme catalase. The test works by adding a small amount of hydrogen peroxide to a bacterial sample. If the enzyme catalase is present it breaks down the hydrogen peroxide forming water and oxygen gas the reaction is observed as a formation of bubbles." [ECO:KAV, PMCID:PMC379865]
+is_a: ID:0001509 ! microbiological biochemical evidence
+created_by: kvillanova
+creation_date: 2015-06-29T07:47:08Z
+
+[Term]
+id: ID:0001588
+name: coagulase assay evidence
+def: "A type of microbiological biochemical evidence based on any assay  that determines if a bacterium can coagulate EDTA treated mammalian plasma. The coagulase test is usually used to differentiate Staphylococcus aureus from coagulase-negative staphylococci however it has been shown that other microorganisms can coagulate mammalian plasma as well. The test works due bacterial protein production of coagulase which allows fibrinogen to be converted to fibrin." [ECO:KAV, PMCID:PMC2089429, PMCID:PMC272200, PMCID:PMC315554, PMCID:PMC502340]
+comment: There are two subtypes of coagulase test one is done on a slide the other is done in a tube. The slide can give fast results but often gives false results. The tube can take up to 24 hours for results but is generally more accurate.
+is_a: ID:0001509 ! microbiological biochemical evidence
+created_by: kvillanova
+creation_date: 2015-06-29T07:48:33Z
+
+[Term]
+id: ID:0001589
+name: spirit blue medium evidence
+def: "A type of differential solid medium evidence used to differentiate organisms that produce lipase. The media was created by Starr in 1941, other media of the time did not allow for the growth of certain organisms because the types of dyes used was to toxic. Starr solved this by using spirit blue as the base dye. The media also contain a lipase reagent a mixture of tributyrin and polysorbate 80 as well as yeast extract, B-complex vitamins, and peptone as a source of carbon , nitrogen, and other vitamin's." [ECO:KAV, PMCID:PMC1057705, PMID:17748334, PMID:24274015]
+comment: The original media formula consisted of 30gm Agar, 10gm Tryptone, 5gm Yeast extract, 250 ml of 20 % cotton seed oil emulsion, 50 ml of .3 % alcholic solution of Spirit Blue, and 1000 ml of distilled water to make. Other lipodial emulsions can be created by using meal, cream , vegetable oil, or olive oil.
+synonym: "spirit blue evidence " EXACT []
+synonym: "spirit blue media evidence " EXACT []
+is_a: ID:0001544 ! differential solid medium evidence
+created_by: kvillanova
+creation_date: 2015-06-29T08:09:46Z
+
+[Term]
+id: ID:0001590
+name: fermentation assay evidence
+def: "A type of microbiological biochemical evidence based on any assay used to detect fermentation." [ECO:KAV]
+is_a: ID:0001509 ! microbiological biochemical evidence
+created_by: kvillanova
+creation_date: 2015-06-29T08:13:26Z
+
+[Term]
+id: ID:0001591
+name: transmission electron microscopy evidence
+is_a: ID:0001538 ! electron microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-29T09:12:24Z
+
+[Term]
+id: ID:0001592
+name: cryo-electron microscopy evidence
+synonym: "cryo_EM evidence " EXACT []
+is_a: ID:0001538 ! electron microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-29T09:14:03Z
+
+[Term]
+id: ID:0001593
+name: fluroscent acid-fast microscopy evidence
+def: "A type of fluroscent microscopy where a acid-fast stain is used." [PMCID:PMC93186]
+is_a: ID:0001526 ! fluorescent microscopy evidence
+created_by: kvillanova
+creation_date: 2015-06-29T10:59:12Z
+
+[Term]
+id: ID:0001594
+name: oxidase assay evidence
+def: "A type of microbiological biochemical assay evidence based on any assay used to determine if a type of  microbe produces cytochrome oxidase. The test works by oxidizing a reagent called tetramethyl-p-phenylenediamine turning it purple. If oxidase is not present in the bacterium the reagent stays colorless." [ECO:KAV, PMCID:PMC291174]
+is_a: ID:0001509 ! microbiological biochemical evidence
+created_by: kvillanova
+creation_date: 2015-06-29T11:12:21Z
+
+[Term]
+id: ID:0001595
+name: buffered charcoal yeast extract medium evidence
+def: "A type of selective solid medium evidence originally used for the cultivation of the Legionella species. The media contains Yeast extracts, charcoal activated, ACES buffer, l-cysteine hcl, and a-ketogultarate monopotassium salt. In recent studies the media has been shown with the ability to culture other species of microorganisms including Brucellae, nocardia and ancanthamoeba keratitis." [PMCID:PMC268015, PMID:PMC265402]
+comment: The media has been modified many times over the years. Legionella pneumophila was first discovered in 1977 by MacDade et al. in 1979  Feeley et al. developed a medium  that provided consistent isolation of Legionella. He later modified that media by replacing.
+is_a: ID:0001540 ! selective solid medium evidence
+created_by: kvillanova
+creation_date: 2015-06-29T15:16:21Z
 
