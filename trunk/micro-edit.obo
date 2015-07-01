@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:06:2015 15:33
+date: 01:07:2015 15:43
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -13,7 +13,7 @@ creation_date: 2015-06-19T13:28:13Z
 [Term]
 id: ECO:0001502
 name: differential agar medium evidence
-def: "A type of microbiological agar medium evidence where an agar medium has agents that allow for the growth of a wide range of microbial organisms, but also expresses the visual differences of the organisms." []
+def: "A type of microbiological agar medium evidence where an agar medium has agents that allow for the growth of a wide range of microbial organisms, but also expresses the visual differences of  organisms." []
 synonym: "differential agar media evidence" EXACT []
 is_a: ID:0001514 ! microbiological agar medium evidence
 created_by: mchibucos
@@ -22,7 +22,7 @@ creation_date: 2015-06-19T13:28:45Z
 [Term]
 id: ID:0001501
 name: selective agar medium evidence
-def: "A type of microbiological agar medium evidence where an agar medium is selective. The agar medium has one or more agents that selectively inhibits the growth of certain microbial organisms thereby allowing for the growth of other types of organisms." [ECO:KAV, PMCID:8434926, PMID:7068837 ]
+def: "A type of microbiological agar medium evidence where an agar medium is selective. The agar medium has one or more agents that selectively inhibits the growth of certain microbial organisms thereby allowing for the growth of other types of organisms." [ECO:KAV, PMID:7068837, PMID:8434926]
 comment: A common inhibitory agent for selective media are antibiotics. Examples include ampicillins, tetracyclines, vancomycin etc.
 synonym: "<new synonym>" RELATED []
 synonym: "selective agar media evidence " EXACT []
@@ -33,7 +33,7 @@ creation_date: 2015-06-19T14:42:01Z
 [Term]
 id: ID:0001502
 name: acid-fast stain evidence
-def: "A type of differential stain evidence based on any type of stain used to view acid fast microorganisms." [ECO:KAV, PMID:19885935, PMID:24619760]
+def: "A type of differential stain evidence based on any type of stain used to view acid fast microorganisms." [ECO:KAV, PMID:24619760, PMID:9885935]
 comment: The acid fast stain is particulary known for its ability to stain Mycobacterium and some strains of the Nocardia species.
 synonym: "acid-fast staining evidence" EXACT []
 synonym: "AFS evidence" EXACT []
@@ -53,7 +53,7 @@ creation_date: 2015-06-19T14:43:08Z
 [Term]
 id: ID:0001504
 name: simple stain evidence
-def: "A type of microbiological stain evidence where one dye is used to stain a bacterial specimen to verify presence and display morphology." [ECP:KAV, PMCID:PMC1053889]
+def: "A type of microbiological stain evidence where one dye is used to stain a bacterial specimen to verify presence and display morphology." [ECP:KAV, PMID:13094012]
 synonym: "simple staining evidence" EXACT []
 is_a: ID:0001503 ! microbiological stain evidence
 created_by: kvillanova
@@ -120,6 +120,9 @@ creation_date: 2015-06-19T16:24:18Z
 [Term]
 id: ID:0001513
 name: gram stain evidence
+def: "A type of differential stain evidence where crystal violet is used as the primary dye and safranin is used as the counterstain. The stain is named after\nHans Christain Gram who developed it in 1894 while working with Carl Friedländer in the Berlin city morge. The gram stain is used to separate bacteria into two major categories gram positive and gram negative, gram positive having thick peptidoglycan and the gram negative having thin peptidoglycan. The protocol for the stain is a application of the crystal violet followed by Gram's iodine as the mordant, ethyl alcohol as a decolorizer, and safranin as the counterstain." [ECO:KAV, PMCID:PMC180726]
+comment: The original formula for the gram stain consisted of aniline-gentian violet, iodine-potassium iodide, absolute alcohol, and sometimes bismark brown.
+synonym: "gram staining evidence" EXACT []
 is_a: ID:0001505 ! differential stain evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:54:03Z
@@ -162,8 +165,8 @@ creation_date: 2015-06-22T12:46:04Z
 
 [Term]
 id: ID:0001518
-name: brain-heart infusion blood agar evidence
-def: "A type of blood agar medium evidence where extracts form the brain, heat, and yeasts are combined with peptones to. Create a nonselective and enriched general purpose agar medium that can be used to grow a wide variety of organisms including many bacterial pathogens and fungi." [ECO:KAV, PMID:827553 ]
+name: brain-heart infusion blood agar medium evidence
+def: "A type of blood agar medium evidence where extracts form the brain, heat, and yeasts are combined with peptones to. Create a nonselective and enriched general purpose agar medium that can be used to grow a wide variety of organisms including many bacterial pathogens and fungi." [ECO:KAV, PMID:827553]
 synonym: "brain-heart infusion agar evidence" EXACT []
 synonym: "brain-heart infusion agar media evidence" EXACT []
 is_a: ID:0001520 ! blood agar medium evidence
@@ -239,7 +242,7 @@ creation_date: 2015-06-22T15:04:16Z
 [Term]
 id: ID:0001527
 name: ziehl-neelson acid-fast stain evidence
-def: "A type of differential stain evidence where carbol- fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol fuchsin exposure then it is decolorized before the methylene blue counterstain." [PMCID:PMC518143]
+def: "A type of differential stain evidence where carbol fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol- fuchsin exposure then the specimen is decolorized before the methylene blue counterstain." [ECO:KAV, PMCID:PMC518143]
 comment: With this stain type acid fast positive organisms stain pink/red while acid fast negative organisms stain blue.
 synonym: "ziehl-neelson acid fast staining evidence" EXACT []
 is_a: ID:0001502 ! acid-fast stain evidence
@@ -266,7 +269,7 @@ creation_date: 2015-06-22T15:08:17Z
 [Term]
 id: ID:0001530
 name: kinyoun acid-fast stain evidence
-def: "A type of acid-fast stain evidence where kinyoun carbol-fuchsin phenol is used as a primary dye, methylene blue is used as a counterstain, and acid alcohol is used as a decolorizer." [ECO:KAV]
+def: "A type of acid-fast stain evidence where kinyoun carbol- fuchsin phenol is used as the primary stain, methylene blue is used as the counterstain, and acid alcohol is used as a decolorizer." [ECO:KAV]
 comment: With this staining technique the acid fast bacteria is stained red/pink and acid-fast negative  bacteria is stained blue.
 synonym: "kinyoun staining evidence" EXACT []
 is_a: ID:0001502 ! acid-fast stain evidence
@@ -287,7 +290,7 @@ creation_date: 2015-06-23T09:49:22Z
 [Term]
 id: ID:0001532
 name: moeller stain evidence
-def: "A type of endospore stain evidence where. Carbol-fuchsin is used as a primary dye and methylene blue is used as a counterstain. Carbol-fuchsin is forced into the endospore by heating and exposure to steam. The specimen is then decolorized with sulfuric acid and counterstained with methylene blue." [ECO:KAV, PMID:17933713]
+def: "A type of endospore stain evidence where. Carbol fuchsin is used as a primary dye and methylene blue is used as a counterstain. Carbol-fuchsin is forced into the endospore by heating and exposure to steam. The specimen is then decolorized with sulfuric acid and counterstained with methylene blue." [ECO:KAV, PMID:17933713]
 comment: With this staining technique endospores are stained red/pink while all other bacteria are stained blue.
 synonym: "moeller staining evidence" EXACT []
 is_a: ID:0001523 ! endospore stain evidence
@@ -307,7 +310,7 @@ creation_date: 2015-06-23T13:05:48Z
 [Term]
 id: ID:0001534
 name: tergitol 7 modified moeller stain evidence
-def: "A type of moeller stain evidence where. Alliquots of Tergitol 7 are used in replacement of heating and steaming the specimen." [ECO:KAV, PMID:17933713]
+def: "A type of moeller stain evidence where. Alliquots of tergitol 7 are used in replacement of heating and steaming the specimen." [ECO:KAV, PMID:17933713]
 comment: With this staining technique endospores are stained red/pink while all other bacteria are stained blue.
 synonym: "tergitol 7 modified moeller staining evidence" EXACT []
 is_a: ID:0001532 ! moeller stain evidence
@@ -333,7 +336,7 @@ creation_date: 2015-06-24T09:47:56Z
 
 [Term]
 id: ID:0001537
-name: dark-field microscopy evidence
+name: dark field microscopy evidence
 is_a: ID:0001508 ! microbiological microscopy evidence
 created_by: kvillanova
 creation_date: 2015-06-24T09:48:16Z
@@ -341,7 +344,7 @@ creation_date: 2015-06-24T09:48:16Z
 [Term]
 id: ID:0001538
 name: electron microscopy evidence
-def: "A type of microbiological microscopy evidence based on a beam of accelerated electrons being fired at a sample to obtain higher then light resolution images of specimens." [PMID:NBK26880]
+def: "A type of microbiological microscopy evidence where a beam of accelerated electrons are fired at a sample to obtain higher then light resolution images of specimens." [PMID:NBK26880]
 is_a: ID:0001508 ! microbiological microscopy evidence
 created_by: kvillanova
 creation_date: 2015-06-24T09:48:41Z
@@ -369,6 +372,7 @@ creation_date: 2015-06-24T15:35:01Z
 id: ID:0001541
 name: selective semi-solid agar medium evidence
 def: "A type of selective agar medium evidence based on any type of agar media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 synonym: "semi-solid selective media" EXACT []
 is_a: ID:0001501 ! selective agar medium evidence
 created_by: kvillanova
@@ -378,6 +382,7 @@ creation_date: 2015-06-24T15:35:29Z
 id: ID:0001542
 name: differential semi-solid agar medium evidence
 def: "A type of differential agar medium evidence based on any type of agar media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 synonym: "differential semi-solid agar media evidence" EXACT []
 is_a: ECO:0001502 ! differential agar medium evidence
 created_by: kvillanova
@@ -412,7 +417,7 @@ creation_date: 2015-06-24T15:42:27Z
 [Term]
 id: ID:0001546
 name: undefined liquid agar medium evidence
-def: "A type of defined agar medium evidence based on any type of agar media in a liquid state." []
+def: "A type of undefined agar medium evidence based on any type of agar media in a liquid state." []
 is_a: ID:0001515 ! undefined agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:11Z
@@ -474,6 +479,7 @@ creation_date: 2015-06-25T11:25:26Z
 [Term]
 id: ID:0001554
 name: minimal agar medium evidence
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001514 ! microbiological agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-25T13:39:18Z
@@ -560,7 +566,7 @@ creation_date: 2015-06-25T14:38:28Z
 
 [Term]
 id: ID:0001565
-name: columbia blood agar evidence
+name: columbia blood agar medium evidence
 def: "A type of blood agar medium evidence based on formula design from Ellen et al of Columbia University. The agar media contains various growth factors including. Sheep, rabbit, or horse blood. A pancreatic digest of casein, a meat peptic digest, yeast extract, maize starch and sodium chloride." [ECO:KAV, PMID:9810657]
 synonym: "columbia blood media evidence" EXACT []
 is_a: ID:0001520 ! blood agar medium evidence
@@ -597,6 +603,7 @@ creation_date: 2015-06-26T10:16:32Z
 id: ID:0001569
 name: enriched semi-solid agar medium evidence
 def: "A type of enriched agar medium evidence based on any type of agar media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001549 ! enriched agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T10:17:02Z
@@ -621,6 +628,7 @@ creation_date: 2015-06-26T10:17:47Z
 id: ID:0001572
 name: defined semi-solid agar medium evidence
 def: "A type of defined agar medium evidence based on any agar media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001553 ! defined agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T10:18:05Z
@@ -644,13 +652,22 @@ creation_date: 2015-06-26T10:48:54Z
 [Term]
 id: ID:0001575
 name: maneval's capsule stain evidence
+def: "A type of capsule stain evidence where. Congo red and a combination of acetic acid and acid fuchsin are used to view bacterial capsules. The staining procedure is to put droplets of congo red on a slide and mix with a sample from culture. The slide must air dry and not be heat fixed. The congo red is a PH indicator and it dries on the slide leaving a red background then manval's solution a mixture of acetic acid and acid fuchsin is added to the slide. The acid fuchsin stains the bacteria bright red and the acetic acid acts as a mordant." [ECO:KAV, PMID:19239855, PMID:23825728]
+comment: Congo red is a pH indicator and changes color when exposed to different pH. It is blue below 3.0 pH and will turn red if exposed to a pH above 5.2. Due to this when a maneval's stain is done the slide shows red white and blue red and blue for the background while the bacteria is stained red by the acid fuchsin the capsule remains white. The slide must be rinsed at the end and not blot dried because of the same reason it cannot be heat fixed because those actions would destroy or damage the destroy the capsule.
+synonym: "maneval's capsule staining evidence" EXACT []
+synonym: "maneval's staining evidence" RELATED []
 is_a: ID:0001524 ! capsule stain evidence
 created_by: kvillanova
 creation_date: 2015-06-26T14:40:26Z
 
 [Term]
 id: ID:0001576
-name: anthony's capsue stain evidence
+name: anthony's capsule stain evidence
+def: "A type of capsule stain evidence that uses crystal violet to view bacterial capsules. No counterstain is necessary for this type of stain. Only a 20% solution of copper sulfate is used as a mordant after the crystal violet is applied." [ECO:KAV]
+comment: The slide cannot be heat fixed or blot dried because that action would destroy or damage the bacterial capsule. The background of the slide is stained purple while the capsules show up white.
+synonym: "anthony's capsule staining evidence" NARROW []
+synonym: "anthony's stain evidence" RELATED []
+synonym: "anthony's staining evidence" EXACT []
 is_a: ID:0001524 ! capsule stain evidence
 created_by: kvillanova
 creation_date: 2015-06-26T14:42:03Z
@@ -675,6 +692,7 @@ creation_date: 2015-06-26T10:39:30Z
 id: ID:0001579
 name: semi-solid nutrient agar medium evidence
 def: "A type of nutrient agar medium evidence based on any type of agar media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001550 ! nutrient agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T10:40:02Z
@@ -699,6 +717,7 @@ creation_date: 2015-06-26T10:41:19Z
 id: ID:0001582
 name: semi-solid reducing agar medium evidence
 def: "A type of reducing agar medium evidence based on any type of agar media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001563 ! reducing agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T10:41:37Z
@@ -730,7 +749,7 @@ creation_date: 2015-06-26T10:46:52Z
 [Term]
 id: ID:0001586
 name: china blue lactose agar medium evidence
-def: "A type of differential solid agar medium evidence used to differentiate between lactose fermenting and non lactose fermenting microorganisms. The media serves as a ph indicator and can be incubated with milk .It has various growth factors including a casein peptone, lactose, meat extract, and sodium chloride." []
+def: "A type of differential solid agar medium evidence used to differentiate between lactose fermenting and non lactose fermenting microorganisms. The media serves as a PH indicator and can be incubated with milk .It has various growth factors including a casein peptone, lactose, meat extract, and sodium chloride." []
 synonym: "china blue agar media evidence" EXACT []
 synonym: "china blue evidence" EXACT []
 is_a: ID:0001544 ! differential solid agar medium evidence
@@ -740,7 +759,7 @@ creation_date: 2015-06-26T15:05:23Z
 [Term]
 id: ID:0001587
 name: catalase assay evidence
-def: "A type of microbiological biochemical evidence based on any assay that is used to determine if an  organism produces the enzyme catalase. The test works by adding a small amount of hydrogen peroxide to a bacterial sample. If the enzyme catalase is present it breaks down the hydrogen peroxide forming water and oxygen gas the reaction is observed as a formation of bubbles." [ECO:KAV, PMCID:PMC379865]
+def: "A type of microbiological biochemical evidence based on any assay that is used to determine if an  organism produces the enzyme catalase. The test works by adding a small amount of hydrogen peroxide to a bacterial sample. If the enzyme catalase is present it breaks down the hydrogen peroxide forming water and oxygen gas. The reaction is observed as a formation of bubbles." [ECO:KAV, PMCID:PMC379865]
 is_a: ID:0001509 ! microbiological biochemical evidence
 created_by: kvillanova
 creation_date: 2015-06-29T07:47:08Z
@@ -748,8 +767,8 @@ creation_date: 2015-06-29T07:47:08Z
 [Term]
 id: ID:0001588
 name: coagulase assay evidence
-def: "A type of microbiological biochemical evidence based on any assay  that determines if a bacterium can coagulate EDTA treated mammalian plasma. The coagulase test is usually used to differentiate Staphylococcus aureus from coagulase-negative staphylococci however it has been shown that other microorganisms can coagulate mammalian plasma as well. The test works due bacterial protein production of coagulase which allows fibrinogen to be converted to fibrin." [ECO:KAV, PMCID:PMC2089429, PMCID:PMC272200, PMCID:PMC315554, PMCID:PMC502340]
-comment: There are two subtypes of coagulase test one is done on a slide the other is done in a tube. The slide can give fast results but often gives false results. The tube can take up to 24 hours for results but is generally more accurate.
+def: "A type of microbiological biochemical evidence based on any assay  that determines if a bacterium can coagulate EDTA treated mammalian plasma. The coagulase test is usually used to differentiate Staphylococcus aureus from coagulase-negative staphylococci. However it has been shown that other microorganisms can coagulate mammalian plasma as well. The test works due bacterial protein production of coagulase which allows fibrinogen to be converted to fibrin." [ECO:KAV, PMID:14255647, PMID:18905247, PMID:2185284, PMID:6808014]
+comment: There are two subtypes of coagulase test one is done on a slide the other is done in a tube. The slide can give fast results, but often false positives. The tube can take up to 24 hours for results but is generally more accurate.
 is_a: ID:0001509 ! microbiological biochemical evidence
 created_by: kvillanova
 creation_date: 2015-06-29T07:48:33Z
@@ -807,8 +826,8 @@ creation_date: 2015-06-29T11:12:21Z
 [Term]
 id: ID:0001595
 name: buffered charcoal yeast extract agar medium evidence
-def: "A type of selective solid agar medium evidence originally used for the cultivation of the Legionella species. The agar media contains yeast extracts, charcoal activated, ACES buffer, l-cysteine hcl, and a-ketogultarate monopotassium salt. In recent studies the agar media has been shown the ability to culture other species of microorganisms including Brucellae, nocardia and ancanthamoeba keratitis." [ECO:KAV, PMID:2116452, PMID:393713, PMID:7009642, PMID:9780107, PMID:PMC265402]
-comment: The media has been modified many times over the years. Legionella pneumophila was first discovered in 1977 by MacDade et al. In 1979 Feeley et al developed a medium that provided consistent isolation of Legionella. He later modified that media by replacing casein hydrolase with yeast and beef extract. In 1980 Pasculle et al added the ACES buffer giving the media the designation BCYE ( buffered charcoal yeast extract). During 1981 Edelstien et al. increased the sensitivity of the media by adding alpha-ketoglutaric potsasium salt. During that same year the media was made even more selective for Legionella by Wadowsky and Yee by adding the antibiotics glycine, vancomycin, and polymyxin. The latest modification was made in 1984 by Dennis et al. By adding cycloheximide creating GVPC medium.
+def: "A type of selective solid agar medium evidence originally used for the cultivation of the Legionella species. The agar media contains yeast extracts, charcoal activated, ACES buffer, l-cysteine hcl, and a-ketogultarate monopotassium salt. In recent studies the agar media has been shown the ability to culture other species of microorganisms including Brucellae, Nocardia and Ancanthamoeba keratitis." [ECO:KAV, PMID:2116452, PMID:393713, PMID:7009642, PMID:9780107, PMID:PMC265402]
+comment: The media has been modified many times over the years. Legionella pneumophila was first discovered in 1977 by MacDade et al. In 1979 Feeley et al developed a medium that provided consistent isolation of Legionella. He later modified that media by replacing casein hydrolase with yeast and beef extract. In 1980 Pasculle et al added the ACES buffer giving the media the designation BCYE ( buffered charcoal yeast extract). During 1981 Edelstien et al. Increased the sensitivity of the media by adding alpha-ketoglutaric potsasium salt. During that same year the media was made even more selective for Legionella by Wadowsky and Yee by adding the antibiotics glycine, vancomycin, and polymyxin. The latest modification was made in 1984 by Dennis et al. By adding cycloheximide creating GVPC medium.
 synonym: "buffered charcoal yeast extract agar medium evidence" EXACT []
 synonym: "BYCE agar media evidence" EXACT []
 is_a: ID:0001540 ! selective solid agar medium evidence
@@ -826,6 +845,7 @@ creation_date: 2015-06-30T08:24:49Z
 [Term]
 id: ID:0001597
 name: complex microbiological terms
+def: "Just a place holder." []
 created_by: kvillanova
 creation_date: 2015-06-30T12:51:58Z
 
@@ -849,4 +869,115 @@ name: immunoelectron microscopy evidence
 is_a: ID:0001538 ! electron microscopy evidence
 created_by: kvillanova
 creation_date: 2015-06-30T10:31:19Z
+
+[Term]
+id: ID:0001601
+name: india ink capsule stain evidence
+def: "A type of capsule stain evidence that uses india ink to view bacterial capsules." []
+comment: The india ink stains the background black causing the bacterial capsules to appear white.
+synonym: "india ink capsule staining evidence" EXACT []
+synonym: "india ink staining evidence" EXACT []
+is_a: ID:0001524 ! capsule stain evidence
+created_by: kvillanova
+creation_date: 2015-07-01T10:51:51Z
+
+[Term]
+id: ID:0001602
+name: grocott's methenamine silver stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T11:31:38Z
+
+[Term]
+id: ID:0001603
+name: silver stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T11:33:05Z
+
+[Term]
+id: ID:0001604
+name: warthin-starry stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T11:33:59Z
+
+[Term]
+id: ID:0001605
+name: leishman stain evidence
+is_a: ID:0001596 ! romanowsky stain evidence
+created_by: kvillanova
+creation_date: 2015-07-01T12:40:24Z
+
+[Term]
+id: ID:0001606
+name: wright's stain evidence
+is_a: ID:0001596 ! romanowsky stain evidence
+created_by: kvillanova
+creation_date: 2015-07-01T12:40:54Z
+
+[Term]
+id: ID:0001607
+name: field stain evidence
+is_a: ID:0001596 ! romanowsky stain evidence
+created_by: kvillanova
+creation_date: 2015-07-01T12:41:10Z
+
+[Term]
+id: ID:0001608
+name: jenner's stain evidence
+is_a: ID:0001596 ! romanowsky stain evidence
+created_by: kvillanova
+creation_date: 2015-07-01T12:42:02Z
+
+[Term]
+id: ID:0001609
+name: gimsa stain evidence
+is_a: ID:0001596 ! romanowsky stain evidence
+created_by: kvillanova
+creation_date: 2015-07-01T12:42:36Z
+
+[Term]
+id: ID:0001610
+name: periodic acid-schiff stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T12:42:56Z
+
+[Term]
+id: ID:0001611
+name: hematoxylin eosin stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T12:45:03Z
+
+[Term]
+id: ID:0001612
+name: cresyl violet acetate stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T12:47:35Z
+
+[Term]
+id: ID:0001613
+name: macchiavello stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T12:49:36Z
+
+[Term]
+id: ID:0001614
+name: lendrums phloxine-tartazine stain evidence
+is_a: ID:0001597 ! complex microbiological terms
+created_by: kvillanova
+creation_date: 2015-07-01T12:49:58Z
+
+[Term]
+id: ID:0001615
+name: new york city agar medium evidence
+def: "A type of blood agar medium evidence designed for the cultivation of pathogenic species of Neisseria. The agar media was created by Fauer, Weisburd, and Wilson while working at the New York city department of health. It contains proteose peptone, corns starch, glucose, sodium chloride, diopatassium hydrogen phosphate, potsassium hydrogen phosphate, hourse plasma , hemoglobin, dextrose, and agar. The media is capable of supporting other microorganisms including mycoplasmas and T-mycoplasmas." [ECO:KAV, PMID:4208637, PMID:6439732, PMID:6796599]
+comment: The selective supplements commonly used to select for the growth of Neisseria added to the media are vancomycin, colistin, nystatin, and trimethoprim.
+is_a: ID:0001520 ! blood agar medium evidence
+created_by: kvillanova
+creation_date: 2015-07-01T13:05:03Z
 
