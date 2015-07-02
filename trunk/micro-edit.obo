@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:07:2015 15:43
+date: 02:07:2015 13:31
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -83,9 +83,8 @@ creation_date: 2015-06-19T14:48:54Z
 
 [Term]
 id: ID:0001508
-name: microbiological microscopy evidence
-def: "A type of microbiological assay evidence based on use of a microscope to display samples and sample areas that cannot be seen with the naked eye." []
-is_a: ECO:0001501 ! microbiological assay evidence
+name: microscopy evidence (place holder)
+is_a: ID:0001597 ! placeholder
 created_by: kvillanova
 creation_date: 2015-06-19T16:08:45Z
 
@@ -176,7 +175,7 @@ creation_date: 2015-06-22T15:02:51Z
 [Term]
 id: ID:0001519
 name: motility assay evidence
-is_a: ID:0001548 ! microbiological motility assay evidence
+is_a: ID:0001597 ! placeholder
 created_by: kvillanova
 creation_date: 2015-06-22T11:08:14Z
 
@@ -235,7 +234,7 @@ creation_date: 2015-06-22T09:03:00Z
 [Term]
 id: ID:0001526
 name: fluorescent microscopy evidence
-is_a: ID:0001508 ! microbiological microscopy evidence
+is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-22T15:04:16Z
 
@@ -322,7 +321,7 @@ id: ID:0001535
 name: light microscopy evidence
 def: "A type of microscopy evidence based on any technique that uses visible light to display the morphology of a specimen." [ECO:KAV, PMID:NBK9839]
 synonym: "optical microscopy evidence " EXACT []
-is_a: ID:0001508 ! microbiological microscopy evidence
+is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-24T09:46:13Z
 
@@ -337,15 +336,15 @@ creation_date: 2015-06-24T09:47:56Z
 [Term]
 id: ID:0001537
 name: dark field microscopy evidence
-is_a: ID:0001508 ! microbiological microscopy evidence
+is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-24T09:48:16Z
 
 [Term]
 id: ID:0001538
 name: electron microscopy evidence
-def: "A type of microbiological microscopy evidence where a beam of accelerated electrons are fired at a sample to obtain higher then light resolution images of specimens." [PMID:NBK26880]
-is_a: ID:0001508 ! microbiological microscopy evidence
+def: "A type of microbiological microscopy evidence where a high voltage beam of accelerated electrons are fired at a sample to obtain higher then light resolution images of the sample." [ECO:KAV, PMID:NBK26880]
+is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-24T09:48:41Z
 
@@ -429,13 +428,6 @@ def: "A type of undefined agar medium evidence based on any type of agar media i
 is_a: ID:0001515 ! undefined agar medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:30Z
-
-[Term]
-id: ID:0001548
-name: microbiological motility assay evidence
-is_a: ECO:0001501 ! microbiological assay evidence
-created_by: kvillanova
-creation_date: 2015-06-24T15:44:37Z
 
 [Term]
 id: ID:0001549
@@ -795,6 +787,7 @@ creation_date: 2015-06-29T08:13:26Z
 [Term]
 id: ID:0001591
 name: transmission electron microscopy evidence
+def: "A type of electron microscopy evidence based on a focused electron wavelength that is transmitted through a thin specimen. The electrons transmitted through the specimen hold information about the structure of the specimen which is magnified through a series of lenses and is recorded on a fluorescent plate or a sensor. The resulting image is able to show details in high resolution at the picometer size level." [ECO:KAV, PMID:24482357]
 is_a: ID:0001538 ! electron microscopy evidence
 created_by: kvillanova
 creation_date: 2015-06-29T09:12:24Z
@@ -802,8 +795,9 @@ creation_date: 2015-06-29T09:12:24Z
 [Term]
 id: ID:0001592
 name: cryo-electron microscopy evidence
+def: "A type of transmission electron microscopy evidence where" []
 synonym: "cryo-EM evidence " EXACT []
-is_a: ID:0001538 ! electron microscopy evidence
+is_a: ID:0001591 ! transmission electron microscopy evidence
 created_by: kvillanova
 creation_date: 2015-06-29T09:14:03Z
 
@@ -838,28 +832,28 @@ creation_date: 2015-06-29T15:16:21Z
 id: ID:0001596
 name: romanowsky stain evidence
 synonym: "romanowsky staining evidence" EXACT []
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-06-30T08:24:49Z
 
 [Term]
 id: ID:0001597
-name: complex microbiological terms
-def: "Just a place holder." []
+name: placeholder
+def: "Just a lonely place holder." []
 created_by: kvillanova
 creation_date: 2015-06-30T12:51:58Z
 
 [Term]
 id: ID:0001598
 name: phase-contrast microscopy evidence
-is_a: ID:0001508 ! microbiological microscopy evidence
+is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-30T10:10:41Z
 
 [Term]
 id: ID:0001599
 name: differential interference-contrast microscopy evidence
-is_a: ID:0001508 ! microbiological microscopy evidence
+is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-30T10:10:58Z
 
@@ -884,21 +878,21 @@ creation_date: 2015-07-01T10:51:51Z
 [Term]
 id: ID:0001602
 name: grocott's methenamine silver stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:31:38Z
 
 [Term]
 id: ID:0001603
 name: silver stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:33:05Z
 
 [Term]
 id: ID:0001604
 name: warthin-starry stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:33:59Z
 
@@ -940,35 +934,35 @@ creation_date: 2015-07-01T12:42:36Z
 [Term]
 id: ID:0001610
 name: periodic acid-schiff stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:56Z
 
 [Term]
 id: ID:0001611
 name: hematoxylin eosin stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:45:03Z
 
 [Term]
 id: ID:0001612
 name: cresyl violet acetate stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:47:35Z
 
 [Term]
 id: ID:0001613
 name: macchiavello stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:49:36Z
 
 [Term]
 id: ID:0001614
 name: lendrums phloxine-tartazine stain evidence
-is_a: ID:0001597 ! complex microbiological terms
+is_a: ID:0001617 ! histology stain evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:49:58Z
 
@@ -980,4 +974,23 @@ comment: The selective supplements commonly used to select for the growth of Nei
 is_a: ID:0001520 ! blood agar medium evidence
 created_by: kvillanova
 creation_date: 2015-07-01T13:05:03Z
+
+[Term]
+id: ID:0001616
+name: chocolate blood agar medium evidence
+def: "A type of blood agar medium evidence used for the isolation of pathogenic bacteria. The agar medium contains specific enzyme growth factors including NAD, hemin, l-cysteine hcl, l-gultamine, and adenine. The general make up of the media usually includes preteose peptone, sodium chloride, diopatassium phosphate, monopotassium phosphate, corn starch, horse blood, and agar. The agar media is most recognized for its ability to sustain Hemaophilus and Nisseria bacterial strains." [ECO:KAV, PMID:16561550, PMID:6490866]
+comment: This agar does not contain any chocolate it is only named so because of its color.
+synonym: "CBA agar media evidence" EXACT []
+synonym: "CBA agar medium evidence" EXACT []
+synonym: "chocolate blood agar media evidence" EXACT []
+is_a: ID:0001520 ! blood agar medium evidence
+created_by: kvillanova
+creation_date: 2015-07-02T07:56:39Z
+
+[Term]
+id: ID:0001617
+name: histology stain evidence
+is_a: ID:0001597 ! placeholder
+created_by: kvillanova
+creation_date: 2015-07-02T08:53:54Z
 
