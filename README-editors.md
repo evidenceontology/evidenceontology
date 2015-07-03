@@ -1,40 +1,41 @@
-Fetching the latest version:
+## Syncing with repo
 
 Always do this before commencing editing:
 
----
+```
 cd evidenceontology
-svn update
----
+git pull
+```
 
-Editing:
+## Editing
 
-Open eco-edit.obo in OBO-Edit, make changes as necessary.
+Open `eco-edit.obo` in OBO-Edit, make changes as necessary.
 Save your work, then commit
 
 Committing:
 
 (you should still be in the evidenceontology folder)
 
----
-svn commit -m "my fabulous edits" eco-edit.obo
----
+```
+git commit -m "my fabulous edits" eco-edit.obo
+git push origin master
+```
 
 (see TIPS below)
 
-Post-editing steps:
+## Post-editing steps
 
 * Check Jenkins
 
 http://build.berkeleybop.org/job/build-eco/
 
-TIPS:
+## TIPS
 
 You can automatically close a tracker item from a commit like this:
 
----
-svn commit -m "Fixes issue 20" eco-edit.obo
----
+```
+git commit -m "Added inferred-by-blog-article, Fixes #20" eco-edit.obo
+```
 
 (substitute "20" with your issue number here)
 
