@@ -1,0 +1,25 @@
+#Mapping Gene Association Format files to ECO
+
+# Introduction #
+
+  * Permanent URL for mapping: http://purl.obolibrary.org/obo/eco/gaf-eco-mapping.txt
+
+This mapping translates evidence codes used in a GAF to a specific evidence type in ECO
+
+Each mapping is from a pair:
+  1. GAF evidence code (e.g. IEA)
+  1. A GO\_REF (found in the GAF With column) to a class identifier in ECO (http://purl.obolibrary.org/obo/eco.owl)
+  1. ECO ID
+
+If the value 'Default' is in column 2 then this mapping is used if
+no more specific mapping can be found
+
+This document consists of these comments (after s) followed by
+a set of mappings, each represented as the above 3 columns separated by tabs
+
+For example an IEA supported by
+> http://www.geneontology.org/cgi-bin/references.cgi#GO_REF:0000002
+maps to ECO:0000256 'match to sequence model evidence used in automatic assertion'
+
+To request changes in the mappings, submit an item to
+> https://code.google.com/p/evidenceontology/issues/list
