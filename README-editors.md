@@ -70,23 +70,26 @@ The value of the "Tag version" field MUST be
 
     vYYYY-MM-DD
 
-The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
+The initial lowercase "v" is *REQUIRED*. The YYYY-MM-DD *MUST* match
 what is in the versionIRI of the derived eco.owl (data-version in
 eco.obo).
 
-Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
+Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release"). This is not as important as the "Tag version"
+
+CHECK YOU HAVE THE TAG VERSION CORRECT
 
 Then click "publish release"
 
 NO MORE THAN ONE RELEASE PER DAY.
 
-In addition, this will be picked up by the central obolibrary job
-within 24hrs, which will produce two files:
+An example:
 
- 1. http://purl.obolibrary.org/obo/eco.obo
- 2. http://purl.obolibrary.org/obo/eco.owl
+ * http://purl.obolibrary.org/obo/eco/releases/2015-07-03/eco.owl
 
-This is used by obolibrary users and OWL people
+This redirects to the version of eco from this github release:
+
+ * https://github.com/evidenceontology/evidenceontology/releases/tag/v2015-07-03
+
 
 For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
