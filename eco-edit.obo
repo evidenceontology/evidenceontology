@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 26:06:2015 17:31
-saved-by: snadendla
+date: 06:07:2015 10:57
+saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -887,7 +887,7 @@ is_a: ECO:0000150 ! in vitro transcription reconstitution assay evidence
 [Term]
 id: ECO:0000154
 name: heterologous protein expression evidence
-def: "A type of protein expression evidence where a gene from one cell is inserted into a cell that does not typically contain that gene, and heterologous protein expression is assessed." [ECO:KAV]
+def: "A type of protein expression evidence where a gene from one cell is inserted into a cell that does not typically contain that gene and heterologous protein expression is assessed." [ECO:KAV]
 synonym: "IDA: protein expression in heterologous system" RELATED []
 is_a: ECO:0000010 ! protein expression evidence
 
@@ -919,7 +919,7 @@ is_a: ECO:0000134 ! transport assay evidence
 id: ECO:0000164
 name: electrophysiology assay evidence
 def: "A type of direct assay evidence where electrical properties of cells or tissues are studied." [ECO:KAV]
-comment: Example: an electrophysiology assay can range from an assay done on a single ion channel to an assay done on an entire organ such as a heart.
+comment: The scale of electrophysiology assays can range from small, e.g. a single ion channel, to large, e.g. an entire organ such as a heart.
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
