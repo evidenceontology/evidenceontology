@@ -1,3 +1,9 @@
+
+## Cloning the EO repository
+```
+git clone https://github.com/evidenceontology/evidenceontology.git
+```
+
 ## Syncing with repo
 
 Always do this before commencing editing:
