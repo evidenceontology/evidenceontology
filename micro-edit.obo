@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:07:2015 15:18
+date: 07:07:2015 15:52
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -103,13 +103,6 @@ created_by: kvillanova
 creation_date: 2015-06-19T16:22:32Z
 
 [Term]
-id: ID:0001511
-name: blood culture evidence
-is_a: ID:0001506 ! microbiological culture evidence
-created_by: kvillanova
-creation_date: 2015-06-19T14:53:19Z
-
-[Term]
 id: ID:0001513
 name: gram stain evidence
 def: "A type of differential stain evidence where crystal violet is used as the primary dye and safranin is used as the counterstain. The stain is named after Hans Christain Gram who developed it in 1894 while working with Carl Friedländer in the Berlin city morge. The gram stain is used to separate bacteria into two major categories gram positive and gram negative, gram positive having thick peptidoglycan and the gram negative having thin peptidoglycan. The protocol for the stain is an application of the crystal violet followed by Gram's iodine as the mordant, ethyl alcohol as a decolorizer, and safranin as the counterstain." [ECO:KAV, PMCID:PMC180726]
@@ -159,8 +152,8 @@ creation_date: 2015-06-22T12:46:04Z
 id: ID:0001518
 name: brain-heart infusion blood medium evidence
 def: "A type of blood medium evidence where extracts taken form brains, heats, and yeasts are combined with peptones to. Create a nonselective and enriched general purpose medium that can be used to grow a wide variety of organisms including many bacterial pathogens and fungi." [ECO:KAV, PMID:827553]
-synonym: "brain-heart infusion agar evidence" EXACT []
-synonym: "brain-heart infusion agar media evidence" EXACT []
+synonym: "brain-heart infusion evidence" EXACT []
+synonym: "brain-heart infusion media evidence" EXACT []
 is_a: ID:0001520 ! blood medium evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:02:51Z
@@ -243,7 +236,7 @@ creation_date: 2015-06-22T15:04:24Z
 
 [Term]
 id: ID:0001528
-name: schaeffer-fulton stain evidence
+name: Schaeffer-Fulton stain evidence
 def: "A type of endospore stain evidence where a primary dye of malachite green and a counterstain of safranin are used. The malachite green dye is forced into the endospore by exposure to heat and steam. The specimen is decolorized and then counterstained." [ECO:KAV, PMCID:PMC241728]
 comment: With this staining technique bacterial endospores stain green and all other bacteria stain red/pink.
 synonym: "schaeffer-fulton staining evidence" EXACT []
@@ -263,7 +256,7 @@ creation_date: 2015-06-22T15:29:35Z
 
 [Term]
 id: ID:0001532
-name: moeller stain evidence
+name: Moeller stain evidence
 def: "A type of endospore stain evidence where. Carbol- fuchsin is used as a primary dye and methylene blue is used as a counterstain. Carbol-fuchsin is forced into the endospore with exposure to heat and steam. The specimen is then decolorized with sulfuric acid and counterstained with methylene blue." [ECO:KAV, PMID:17933713]
 comment: With this staining technique bacterial endospores are stained red/pink while all other bacteria are stained blue.
 synonym: "moeller staining evidence" EXACT []
@@ -273,7 +266,7 @@ creation_date: 2015-06-23T11:34:44Z
 
 [Term]
 id: ID:0001533
-name: abbott stain evidence
+name: Abbott stain evidence
 def: "A type of endospore stain evidence where. Methylene blue is the primary stain and anilin- fuchsin is the counterstain. Methylene blue is forced into the endospore with steam and heat exposure. The specimen is then washed in water, decolorized with 95% alcohol that contains .2 to .3 % HCL. Counterstained with anilin-fuchsin, and washed with water." [ECO:KAV, PMCID:PMC1516947]
 comment: With this staining technique bacterial endospores stain blue all other bacteria stain red.
 synonym: "abbott staining evidence" NARROW []
@@ -287,7 +280,7 @@ name: tergitol 7 modified moeller stain evidence
 def: "A type of moeller stain evidence where. Alliquots of tergitol 7 are used in replacement of heating and steaming the specimen." [ECO:KAV, PMID:17933713]
 comment: With this staining technique endospores are stained red/pink while all other bacteria are stained blue.
 synonym: "tergitol 7 modified moeller staining evidence" EXACT []
-is_a: ID:0001532 ! moeller stain evidence
+is_a: ID:0001532 ! Moeller stain evidence
 created_by: kvillanova
 creation_date: 2015-06-23T13:09:55Z
 
@@ -328,7 +321,7 @@ id: ID:0001539
 name: selective liquid medium evidence
 def: "A type of selective medium evidence based on any type of media in a liquid state." [ECO:KAV]
 synonym: "broth evidence " EXACT []
-synonym: "liquid agar media evidence" EXACT []
+synonym: "liquid media evidence" EXACT []
 is_a: ID:0001501 ! selective medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:34:51Z
@@ -336,7 +329,7 @@ creation_date: 2015-06-24T15:34:51Z
 [Term]
 id: ID:0001540
 name: selective solid medium evidence
-def: "A type of selective medium evidence based on any type of agar media in a solid state." []
+def: "A type of selective medium evidence based on any type of media in a solid state." []
 synonym: "solid agar media evidence " RELATED []
 is_a: ID:0001501 ! selective medium evidence
 created_by: kvillanova
@@ -364,7 +357,7 @@ creation_date: 2015-06-24T15:37:45Z
 
 [Term]
 id: ID:0001543
-name: differential liquid agar medium evidence
+name: differential liquid medium evidence
 def: "A type of differential liquid medium evidence based on any type of media in a liquid state." []
 synonym: "differential broth media evidence" EXACT []
 is_a: ECO:0001502 ! differential medium evidence
@@ -400,6 +393,7 @@ creation_date: 2015-06-24T15:43:11Z
 id: ID:0001547
 name: undefined semi-solid medium evidence
 def: "A type of undefined medium evidence based on any type of media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001515 ! undefined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-24T15:43:30Z
@@ -494,10 +488,10 @@ creation_date: 2015-06-25T13:53:21Z
 
 [Term]
 id: ID:0001562
-name: macconkey medium evidence
+name: Macconkey medium evidence
 def: "A type of differential and selective solid medium used for the differentiation and isolation of non fastidious gram negative organisms. The media was created by Alfred Theodore MacConkey M.D when he worked at The Royal Commission On Sewage Disposal in Liverpool England (1905). The media contains peptones, lactose, bile salts, sodium chloride, neutral red, crystal violet, and water." []
 comment: The media can be used to culture gram negative lactose and non lactose fermenting organisms, enteric organisms, and coliforms. The Bile salt agar and crystal violet dye inhibit gram positive organisms from growing. The neutral red dye turns pink if microorganisms are lactose fermenting.
-synonym: "macconkey media evidence" EXACT []
+synonym: "Macconkey media evidence" EXACT []
 is_a: ID:0001540 ! selective solid medium evidence
 is_a: ID:0001544 ! differential solid medium evidence
 created_by: kvillanova
@@ -565,7 +559,7 @@ creation_date: 2015-06-26T10:17:25Z
 [Term]
 id: ID:0001571
 name: defined solid medium evidence
-def: "A type of defined medium evidence based on any type of agar media in a solid state." []
+def: "A type of defined medium evidence based on any type of media in a solid state." []
 is_a: ID:0001553 ! defined medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T10:17:47Z
@@ -583,6 +577,7 @@ creation_date: 2015-06-26T10:18:05Z
 id: ID:0001573
 name: semi-solid transport medium evidence
 def: "A type of transport medium evidence based on any type of media in a semi-solid state." []
+comment: Semi-solid media is considered to be media that is less concentrated generally 0.5 % agar content or less.
 is_a: ID:0001551 ! transport medium evidence
 created_by: kvillanova
 creation_date: 2015-06-26T10:48:34Z
@@ -721,7 +716,7 @@ creation_date: 2015-06-29T07:48:33Z
 
 [Term]
 id: ID:0001589
-name: spirit blue medium evidence
+name: Spirit blue medium evidence
 def: "A type of differential solid medium evidence used to differentiate organisms that produce lipase. The media was created by Starr in 1941, other medias of the time did not allow for the growth of certain organisms because the types of dyes used was too toxic. Starr solved this by using spirit blue as the base dye. The agar media also contain a lipase reagent a mixture of tributyrin and polysorbate 80 as well as yeast extract, B-complex vitamins, and peptone as a source of carbon , nitrogen, and other vitamin's." [ECO:KAV, PMCID:PMC1057705, PMID:17748334, PMID:24274015]
 comment: The original media formula consisted of 30g agar, 10g  tryptone, 5m yeast extract, 250 ml of 20% cotton seed oil emulsion, 50 ml of 0.3 % alcholic solution of spirit blue, and 1000 ml of distilled water to make. Other lipodial emulsions can be created by using meal, cream , vegetable oil, or olive oil.
 synonym: "spirit blue evidence " EXACT []
@@ -773,11 +768,11 @@ creation_date: 2015-06-29T11:12:21Z
 
 [Term]
 id: ID:0001595
-name: buffered charcoal yeast extract agar medium evidence
+name: buffered charcoal yeast extract medium evidence
 def: "A type of selective solid agar medium evidence originally used for the cultivation of the Legionella species. The agar media contains yeast extracts, charcoal activated, ACES buffer, l-cysteine hcl, and a-ketoglutarate monopotassium salt. In recent studies the agar media has been shown the ability to culture other species of microorganisms including Brucellae, Nocardia and Acanthamoeba keratitis." [ECO:KAV, PMID:2116452, PMID:393713, PMID:7009642, PMID:9780107, PMID:PMC265402]
 comment: The media has been modified many times over the years. Legionella pneumophila was first discovered in 1977 by MacDade et al. In 1979 Feeley et al developed a medium that provided consistent isolation of Legionella. He later modified that media by replacing casein hydrolase with yeast and beef extract. In 1980 Pasculle et al added the ACES buffer giving the media the designation BCYE ( buffered charcoal yeast extract). During 1981 Edelstien et al. Increased the sensitivity of the media by adding alpha-ketoglutaric potsasium salt. During that same year the media was made even more selective for Legionella by Wadowsky and Yee by adding the antibiotics glycine, vancomycin, and polymyxin. The latest modification was made in 1984 by Dennis et al. By adding cycloheximide creating GVPC medium.
-synonym: "buffered charcoal yeast extract agar medium evidence" EXACT []
-synonym: "BYCE agar media evidence" EXACT []
+synonym: "buffered charcoal yeast extract medium evidence" EXACT []
+synonym: "BYCE  media evidence" EXACT []
 is_a: ID:0001540 ! selective solid medium evidence
 created_by: kvillanova
 creation_date: 2015-06-29T15:16:21Z
