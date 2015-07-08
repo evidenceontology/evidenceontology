@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:07:2015 15:42
+date: 08:07:2015 12:04
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2724,7 +2724,7 @@ id: ECO:0001005
 name: 7-aminoactinomycin staining evidence
 synonym: "7-AAD staining evidence" EXACT []
 synonym: "7-amino-actinomycin D staining evidence" EXACT []
-is_a: ECO:0005019 ! staining evidence (new)
+is_a: ECO:0005019 ! staining evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2858,7 +2858,7 @@ id: ECO:0001022
 name: carboxyfluorescein diacetate succinimidyl ester staining evidence
 synonym: "CFDA-SE staining evidence" EXACT []
 synonym: "CFSE-staining evidence" EXACT []
-is_a: ECO:0005019 ! staining evidence (new)
+is_a: ECO:0005019 ! staining evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2887,7 +2887,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001027
 name: colony counting evidence
-is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2901,7 +2901,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001029
 name: comet assay evidence
-is_a: ECO:0005026 ! gel electrophoresis evidence (ECO:0000337)
+is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2929,7 +2929,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001033
 name: cross-linking evidence
-is_a: ECO:0005030 ! protein binding evidence (ECO:0000024)
+is_a: ECO:0000024 ! protein binding evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2958,7 +2958,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001037
 name: 4',6-diamidino-2-phenylindole staining evidence
 synonym: "DAPI staining evidence" EXACT []
-is_a: ECO:0005019 ! staining evidence (new)
+is_a: ECO:0005019 ! staining evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3095,7 +3095,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001056
 name: induced mutation evidence
-is_a: ECO:0005027 ! genetic transformation evidence (new)
+is_a: ECO:0005027 ! genetic transformation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3366,14 +3366,14 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001090
 name: knockin evidence
-is_a: ECO:0005027 ! genetic transformation evidence (new)
+is_a: ECO:0005027 ! genetic transformation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001091
 name: knockout evidence
-is_a: ECO:0005027 ! genetic transformation evidence (new)
+is_a: ECO:0005027 ! genetic transformation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3535,7 +3535,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001114
 name: propidium iodide staining evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005019 ! staining evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3727,8 +3727,8 @@ creation_date: 2014-03-17T15:20:55Z
 
 [Term]
 id: ECO:0001140
-name: 7-AAD staining evidence used in manual assertion
-def: "A type of 7-AAD staining evidence that is used in a manual assertion." [ECO:MCC]
+name: 7-aminoactinomycin staining evidence used in manual assertion
+def: "A type of 7-aminoactinomycin staining evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0001005 ! 7-aminoactinomycin staining evidence
 intersection_of: ECO:0001005 ! 7-aminoactinomycin staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -3917,8 +3917,8 @@ creation_date: 2014-03-17T16:07:58Z
 
 [Term]
 id: ECO:0001159
-name: CFSE-staining evidence used in manual assertion
-def: "A type of CFSE-staining evidence that is used in a manual assertion." [ECO:MCC]
+name: carboxyfluorescein diacetate succinimidyl ester staining evidence used in manual assertion
+def: "A type of carboxyfluorescein diacetate succinimidyl ester staining evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0001022 ! carboxyfluorescein diacetate succinimidyl ester staining evidence
 intersection_of: ECO:0001022 ! carboxyfluorescein diacetate succinimidyl ester staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -4067,8 +4067,8 @@ creation_date: 2014-03-17T16:23:53Z
 
 [Term]
 id: ECO:0001174
-name: DAPI staining evidence used in manual assertion
-def: "A type of DAPI staining evidence that is used in a manual assertion." [ECO:MCC]
+name: 4',6-diamidino-2-phenylindole staining evidence used in manual assertion
+def: "A type of 4',6-diamidino-2-phenylindole staining evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0001037 ! 4',6-diamidino-2-phenylindole staining evidence
 intersection_of: ECO:0001037 ! 4',6-diamidino-2-phenylindole staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -5073,13 +5073,6 @@ created_by: snadendla
 creation_date: 2015-02-11T11:18:43Z
 
 [Term]
-id: ECO:0005001
-name: enzyme assay evidence(ECO:0000005)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-11T11:28:18Z
-
-[Term]
 id: ECO:0005004
 name: cell viability assay evidence(new)
 is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
@@ -5165,17 +5158,10 @@ creation_date: 2015-02-18T12:49:06Z
 
 [Term]
 id: ECO:0005019
-name: staining evidence (new)
-is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
+name: staining evidence
+is_a: ECO:0000002 ! direct assay evidence
 created_by: snadendla
 creation_date: 2015-02-19T11:48:57Z
-
-[Term]
-id: ECO:0005020
-name: direct assay evidence(ECO:0000002)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-19T12:10:41Z
 
 [Term]
 id: ECO:0005021
@@ -5213,39 +5199,11 @@ created_by: snadendla
 creation_date: 2015-03-11T12:22:33Z
 
 [Term]
-id: ECO:0005026
-name: gel electrophoresis evidence (ECO:0000337)
-is_a: ECO:0005020 ! direct assay evidence(ECO:0000002)
-created_by: snadendla
-creation_date: 2015-03-11T15:56:13Z
-
-[Term]
 id: ECO:0005027
-name: genetic transformation evidence (new)
-is_a: ECO:0005023 ! experimental evidence (ECO:0000006)
+name: genetic transformation evidence
+is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-03-16T15:33:50Z
-
-[Term]
-id: ECO:0005028
-name: physical interaction evidence (ECO:0000021)
-is_a: ECO:0005023 ! experimental evidence (ECO:0000006)
-created_by: snadendla
-creation_date: 2015-03-19T17:19:33Z
-
-[Term]
-id: ECO:0005029
-name: affinity evidence (ECO:0000023)
-is_a: ECO:0005028 ! physical interaction evidence (ECO:0000021)
-created_by: snadendla
-creation_date: 2015-03-19T17:21:44Z
-
-[Term]
-id: ECO:0005030
-name: protein binding evidence (ECO:0000024)
-is_a: ECO:0005029 ! affinity evidence (ECO:0000023)
-created_by: snadendla
-creation_date: 2015-03-19T17:23:04Z
 
 [Term]
 id: ECO:0005031
