@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:07:2015 15:52
+date: 08:07:2015 15:36
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -168,7 +168,7 @@ creation_date: 2015-06-22T11:08:14Z
 [Term]
 id: ID:0001520
 name: blood medium evidence
-def: "A type of differential solid medium evidence that uses a enriched and differential media to test for a wide range of microbiological organisms. The medium includes human blood cells as its main growth factor. This allows the media to be used to differentiate between alpha, gamma, and beta hemolysis causing bacteria." [ECO:KAV, PMID:16954271]
+def: "A type of differential solid medium evidence that uses a enriched and differential media to test for a wide range of microbiological organisms. The medium commonly includes human, horse, or sheep blood cells as its main growth factor. This allows the media to be used to differentiate between alpha, gamma, and beta hemolysis causing bacteria." [ECO:KAV, PMID:16954271]
 comment: A wide range of mammalian blood is used for blood agar. Examples include sheep,horse,pig,goat and human blood.
 is_a: ID:0001544 ! differential solid medium evidence
 is_a: ID:0001568 ! enriched solid medium evidence
@@ -489,7 +489,7 @@ creation_date: 2015-06-25T13:53:21Z
 [Term]
 id: ID:0001562
 name: Macconkey medium evidence
-def: "A type of differential and selective solid medium used for the differentiation and isolation of non fastidious gram negative organisms. The media was created by Alfred Theodore MacConkey M.D when he worked at The Royal Commission On Sewage Disposal in Liverpool England (1905). The media contains peptones, lactose, bile salts, sodium chloride, neutral red, crystal violet, and water." []
+def: "A type of differential and selective solid medium used for the differentiation and isolation of non fastidious gram negative organisms. The media was created by Alfred Theodore MacConkey M.D when he worked at The Royal Commission On Sewage Disposal in Liverpool England (1905). The modern version of the media contains peptones, lactose, bile salts, sodium chloride, neutral red, crystal violet, and water." []
 comment: The media can be used to culture gram negative lactose and non lactose fermenting organisms, enteric organisms, and coliforms. The Bile salt agar and crystal violet dye inhibit gram positive organisms from growing. The neutral red dye turns pink if microorganisms are lactose fermenting.
 synonym: "Macconkey media evidence" EXACT []
 is_a: ID:0001540 ! selective solid medium evidence
@@ -717,7 +717,7 @@ creation_date: 2015-06-29T07:48:33Z
 [Term]
 id: ID:0001589
 name: Spirit blue medium evidence
-def: "A type of differential solid medium evidence used to differentiate organisms that produce lipase. The media was created by Starr in 1941, other medias of the time did not allow for the growth of certain organisms because the types of dyes used was too toxic. Starr solved this by using spirit blue as the base dye. The agar media also contain a lipase reagent a mixture of tributyrin and polysorbate 80 as well as yeast extract, B-complex vitamins, and peptone as a source of carbon , nitrogen, and other vitamin's." [ECO:KAV, PMCID:PMC1057705, PMID:17748334, PMID:24274015]
+def: "A type of differential solid medium evidence used to differentiate organisms that produce lipase. The media was created by Starr in 1941, other medias of the time did not allow for the growth of certain organisms because the types of dyes used was too toxic. Starr solved this by using spirit blue as the base dye. The agar media also contain a lipase reagent a mixture of tributyrin and polysorbate 80 as well as yeast extract, B-complex vitamins, and peptone as a source of carbon , nitrogen, and other vitamin's." [ECO:KAV, PMID:17748334, PMID:24274015]
 comment: The original media formula consisted of 30g agar, 10g  tryptone, 5m yeast extract, 250 ml of 20% cotton seed oil emulsion, 50 ml of 0.3 % alcholic solution of spirit blue, and 1000 ml of distilled water to make. Other lipodial emulsions can be created by using meal, cream , vegetable oil, or olive oil.
 synonym: "spirit blue evidence " EXACT []
 synonym: "spirit blue media evidence " EXACT []
@@ -769,8 +769,8 @@ creation_date: 2015-06-29T11:12:21Z
 [Term]
 id: ID:0001595
 name: buffered charcoal yeast extract medium evidence
-def: "A type of selective solid agar medium evidence originally used for the cultivation of the Legionella species. The agar media contains yeast extracts, charcoal activated, ACES buffer, l-cysteine hcl, and a-ketoglutarate monopotassium salt. In recent studies the agar media has been shown the ability to culture other species of microorganisms including Brucellae, Nocardia and Acanthamoeba keratitis." [ECO:KAV, PMID:2116452, PMID:393713, PMID:7009642, PMID:9780107, PMID:PMC265402]
-comment: The media has been modified many times over the years. Legionella pneumophila was first discovered in 1977 by MacDade et al. In 1979 Feeley et al developed a medium that provided consistent isolation of Legionella. He later modified that media by replacing casein hydrolase with yeast and beef extract. In 1980 Pasculle et al added the ACES buffer giving the media the designation BCYE ( buffered charcoal yeast extract). During 1981 Edelstien et al. Increased the sensitivity of the media by adding alpha-ketoglutaric potsasium salt. During that same year the media was made even more selective for Legionella by Wadowsky and Yee by adding the antibiotics glycine, vancomycin, and polymyxin. The latest modification was made in 1984 by Dennis et al. By adding cycloheximide creating GVPC medium.
+def: "A type of selective solid agar medium evidence originally used for the cultivation of the Legionella species. The agar media contains yeast extracts, charcoal activated, ACES buffer, l-cysteine hcl, and a-ketoglutarate monopotassium salt." [ECO:KAV, PMID:2116452, PMID:393713, PMID:7009642, PMID:9780107, PMID:PMC265402]
+comment: The media has been modified many times over the years. Legionella pneumophila was first discovered in 1977 by MacDade et al. In 1979 Feeley et al developed a medium that provided consistent isolation of Legionella. He later modified that media by replacing casein hydrolase with yeast and beef extract. In 1980 Pasculle et al added the ACES buffer giving the media the designation BCYE ( buffered charcoal yeast extract). During 1981 Edelstien et al. Increased the sensitivity of the media by adding alpha-ketoglutaric potsasium salt. During that same year the media was made even more selective for Legionella by Wadowsky and Yee by adding the antibiotics glycine, vancomycin, and polymyxin. The latest modification was made in 1984 by Dennis et al. By adding cycloheximide creating GVPC medium.  \n\nIn recent studies the agar media has been shown the ability to culture other species of microorganisms including Brucellae, Nocardia and Acanthamoeba keratitis.
 synonym: "buffered charcoal yeast extract medium evidence" EXACT []
 synonym: "BYCE  media evidence" EXACT []
 is_a: ID:0001540 ! selective solid medium evidence
@@ -918,8 +918,8 @@ creation_date: 2015-07-01T12:49:58Z
 [Term]
 id: ID:0001615
 name: New York City medium evidence
-def: "A type of blood agar medium evidence designed for the cultivation of pathogenic species of Neisseria. The agar media was created by Fauer, Weisburd, and Wilson while working at the New York city department of health. It contains proteose peptone, corns starch, glucose, sodium chloride, diopatassium hydrogen phosphate, potsassium hydrogen phosphate, hourse plasma , hemoglobin, dextrose, and agar. The media is capable of supporting other microorganisms including mycoplasmas and T-mycoplasmas." [ECO:KAV, PMID:4208637, PMID:6439732, PMID:6796599]
-comment: The selective supplements commonly used to select for the growth of Neisseria added to the media are vancomycin, colistin, nystatin, and trimethoprim.
+def: "A type of blood agar medium evidence designed for the cultivation of pathogenic species of Neisseria. The agar media was created by Fauer, Weisburd, and Wilson while working at the New York city department of health. It contains proteose peptone, corns starch, glucose, sodium chloride, diopatassium hydrogen phosphate, potsassium hydrogen phosphate, hourse plasma , hemoglobin, dextrose, and agar." [ECO:KAV, PMID:4208637, PMID:6439732, PMID:6796599]
+comment: The selective supplements commonly used to select for the growth of Neisseria added to the media are vancomycin, colistin, nystatin, and trimethoprim. The media is capable of supporting other microorganisms including mycoplasmas and T-mycoplasmas.
 is_a: ID:0001520 ! blood medium evidence
 created_by: kvillanova
 creation_date: 2015-07-01T13:05:03Z
@@ -927,8 +927,8 @@ creation_date: 2015-07-01T13:05:03Z
 [Term]
 id: ID:0001616
 name: chocolate blood medium evidence
-def: "A type of blood medium evidence used for the isolation of pathogenic bacteria. The medium contains specific enzyme growth factors including NAD, hemin, l-cysteine hcl, l-gultamine, adenine and. The general make up of the media usually includes preteose peptone, sodium chloride, diopatassium phosphate, monopotassium phosphate, corn starch, horse blood, and agar. The media is most recognized for its ability to sustain Hemaophilus and Nisseria bacterial strains." [ECO:KAV, PMID:16561550, PMID:6490866]
-comment: This media does not contain any chocolate it is only named so because of its color.
+def: "A type of blood medium evidence used for the isolation of pathogenic bacteria. The medium contains specific enzyme growth factors including NAD, hemin, l-cysteine hcl, l-gultamine, adenine and. The general make up of the media usually includes preteose peptone, sodium chloride, diopatassium phosphate, monopotassium phosphate, corn starch, horse blood, and agar." [ECO:KAV, PMID:16561550, PMID:6490866]
+comment: This media does not contain any chocolate it is only named so because of its color. The media is most recognized for its ability to sustain Hemaophilus and Nisseria bacterial strains.
 synonym: "CBA media evidence" EXACT []
 synonym: "CBA medium evidence" EXACT []
 synonym: "chocolate blood media evidence" EXACT []
