@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:07:2015 12:04
+date: 08:07:2015 15:52
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2781,28 +2781,28 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001012
 name: behavioral assay evidence
-is_a: ECO:0005017 ! experimental phenotypic evidence(ECO:0000014)
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001013
 name: blocking monoclonal antibody evidence
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001014
 name: blocking peptide evidence
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001015
 name: blocking polyclonal antibody evidence
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2866,7 +2866,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001023
 name: chemiluminescence-linked immunoassay evidence
 synonym: "CLIA evidence" EXACT []
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2880,7 +2880,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001026
 name: co-localization evidence
-is_a: ECO:0005024 ! imaging assay evidence(ECO:0000324)
+is_a: ECO:0000324 ! imaging assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2936,7 +2936,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001034
 name: crystallography evidence
-is_a: ECO:0005031 ! structure determination evidence (New)
+is_a: ECO:0005031 ! structure determination evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3074,21 +3074,21 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001053
 name: immunocytochemistry evidence
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001054
 name: immunodepletion evidence
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001055
 name: immunohistochemistry evidence
-is_a: ECO:0005018 ! immunological assay evidence(ECO:0000040)
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5066,13 +5066,6 @@ created_by: mchibucos
 creation_date: 2014-03-17T22:34:56Z
 
 [Term]
-id: ECO:0005000
-name: posttranslational modification assay evidence (new)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-11T11:18:43Z
-
-[Term]
 id: ECO:0005004
 name: cell viability assay evidence(new)
 is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
@@ -5143,20 +5136,6 @@ created_by: snadendla
 creation_date: 2015-02-12T13:26:55Z
 
 [Term]
-id: ECO:0005017
-name: experimental phenotypic evidence(ECO:0000014)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-13T15:49:16Z
-
-[Term]
-id: ECO:0005018
-name: immunological assay evidence(ECO:0000040)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-18T12:49:06Z
-
-[Term]
 id: ECO:0005019
 name: staining evidence
 is_a: ECO:0000002 ! direct assay evidence
@@ -5178,20 +5157,6 @@ created_by: snadendla
 creation_date: 2015-03-10T17:11:26Z
 
 [Term]
-id: ECO:0005023
-name: experimental evidence (ECO:0000006)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-03-16T15:33:08Z
-
-[Term]
-id: ECO:0005024
-name: imaging assay evidence(ECO:0000324)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-03-11T11:47:31Z
-
-[Term]
 id: ECO:0005025
 name: physical interaction evidence(ECO:0000021)
 is_a: ECO:0000091 ! isb-sib evidence
@@ -5207,23 +5172,23 @@ creation_date: 2015-03-16T15:33:50Z
 
 [Term]
 id: ECO:0005031
-name: structure determination evidence (New)
-is_a: ECO:0005023 ! experimental evidence (ECO:0000006)
+name: structure determination evidence
+is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-03-20T12:16:17Z
 
 [Term]
 id: ECO:0005032
-name: nuclear magnetic resonance spectroscopy evidence(New)
+name: nuclear magnetic resonance spectroscopy evidence
 synonym: "NMR evidence" EXACT []
-is_a: ECO:0005031 ! structure determination evidence (New)
+is_a: ECO:0005031 ! structure determination evidence
 created_by: snadendla
 creation_date: 2015-03-20T12:19:16Z
 
 [Term]
 id: ECO:0005033
-name: electron microscopy evidence (New)
-is_a: ECO:0005031 ! structure determination evidence (New)
+name: electron microscopy evidence
+is_a: ECO:0005031 ! structure determination evidence
 created_by: snadendla
 creation_date: 2015-03-20T12:21:48Z
 
