@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:07:2015 15:36
+date: 09:07:2015 15:44
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -32,19 +32,19 @@ creation_date: 2015-06-19T14:42:01Z
 
 [Term]
 id: ID:0001502
-name: acid-fast stain evidence
-def: "A type of differential stain evidence based on any type of stain used to view acid fast microorganisms." [ECO:KAV, PMID:24619760, PMID:9885935]
+name: acid-fast staining evidence
+def: "A type of differential staining evidence based on any type of stain used to view acid fast microorganisms." [ECO:KAV, PMID:24619760, PMID:9885935]
 comment: The acid fast stain is particularly known for its ability to stain Mycobacterium and some strains of the Nocardia species.
-synonym: "acid-fast staining evidence" EXACT []
+synonym: "acid-fast stain evidence" EXACT []
 synonym: "AFS evidence" EXACT []
-is_a: ID:0001505 ! differential stain evidence
+is_a: ID:0001505 ! differential staining evidence
 created_by: kvillanova
 creation_date: 2015-06-19T15:29:56Z
 
 [Term]
 id: ID:0001503
-name: microbiological stain evidence
-def: "A type of microbiological assay evidence where dyes are used to stain slides with microbiological specimens." [ECO:KAV]
+name: Place holder ( merge thease terms with) ECO:0005019 Staining evidence
+def: "A type of microbiological assay evidence where dyes are used to stain slides with microbiological specimens.\n\nsuggested parent term ECO:0005019 staining evidence" [ECO:KAV]
 synonym: "microbiological staining evidence" EXACT []
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
@@ -52,18 +52,19 @@ creation_date: 2015-06-19T14:43:08Z
 
 [Term]
 id: ID:0001504
-name: simple stain evidence
-def: "A type of microbiological stain evidence where one dye is used to stain a microbiological specimen to verify presence and display morphology." [ECP:KAV, PMID:13094012]
-synonym: "simple staining evidence" EXACT []
-is_a: ID:0001503 ! microbiological stain evidence
+name: simple staining evidence
+def: "A type of staining evidence where one dye is used to stain a specimen to verify presence and display morphology." [ECP:KAV, PMID:13094012]
+synonym: "simple stain evidence" EXACT []
+is_a: ID:0001503 ! Place holder ( merge thease terms with) ECO:0005019 Staining evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:45:17Z
 
 [Term]
 id: ID:0001505
-name: differential stain evidence
-def: "A type of microbiological assay evidence where a primary dye and a counter-stain are. Used to differentiate between microbial types or  morphologies." [ECO:KAV]
-is_a: ID:0001503 ! microbiological stain evidence
+name: differential staining evidence
+def: "A type of staining evidence where a primary dye and a counter-stain are. Used to differentiate between specimen morphologies." [ECO:KAV]
+synonym: "differential stain evidence " EXACT []
+is_a: ID:0001503 ! Place holder ( merge thease terms with) ECO:0005019 Staining evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:45:51Z
 
@@ -84,6 +85,7 @@ creation_date: 2015-06-19T14:48:54Z
 [Term]
 id: ID:0001508
 name: microscopy evidence (place holder)
+def: "Correct parent when merged should be ECO:0001098" []
 is_a: ID:0001597 ! placeholder
 created_by: kvillanova
 creation_date: 2015-06-19T16:08:45Z
@@ -103,12 +105,27 @@ created_by: kvillanova
 creation_date: 2015-06-19T16:22:32Z
 
 [Term]
+id: ID:0001511
+name: differential histological staining evidence
+def: "A type of histological stain evidence based on any type of histological stain that uses a primary dye and a counterstain." []
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-09T09:32:58Z
+
+[Term]
+id: ID:0001512
+name: simple histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-09T10:32:04Z
+
+[Term]
 id: ID:0001513
-name: gram stain evidence
-def: "A type of differential stain evidence where crystal violet is used as the primary dye and safranin is used as the counterstain. The stain is named after Hans Christain Gram who developed it in 1894 while working with Carl Friedländer in the Berlin city morge. The gram stain is used to separate bacteria into two major categories gram positive and gram negative, gram positive having thick peptidoglycan and the gram negative having thin peptidoglycan. The protocol for the stain is an application of the crystal violet followed by Gram's iodine as the mordant, ethyl alcohol as a decolorizer, and safranin as the counterstain." [ECO:KAV, PMCID:PMC180726]
+name: gram staining evidence
+def: "A type of differential staining evidence where crystal violet is used as the primary dye and safranin is used as the counterstain. The stain is named after Hans Christain Gram who developed it in 1894 while working with Carl Friedländer in the Berlin city morge. The gram stain is used to separate bacteria into two major categories gram positive and gram negative, gram positive having thick peptidoglycan and the gram negative having thin peptidoglycan. The protocol for the stain is an application of the crystal violet followed by Gram's iodine as the mordant, ethyl alcohol as a decolorizer, and safranin as the counterstain." [ECO:KAV, PMCID:PMC180726]
 comment: The original formula for the gram stain consisted of aniline-gentian violet, iodine-potassium iodide, absolute alcohol, and sometimes bismark brown.
 synonym: "gram staining evidence" EXACT []
-is_a: ID:0001505 ! differential stain evidence
+is_a: ID:0001505 ! differential staining evidence
 created_by: kvillanova
 creation_date: 2015-06-19T14:54:03Z
 
@@ -177,43 +194,46 @@ creation_date: 2015-06-22T07:51:17Z
 
 [Term]
 id: ID:0001521
-name: special stain evidence
-is_a: ID:0001503 ! microbiological stain evidence
+name: special staining evidence
+synonym: "special stain evidence " RELATED []
+is_a: ID:0001503 ! Place holder ( merge thease terms with) ECO:0005019 Staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T08:45:39Z
 
 [Term]
 id: ID:0001522
-name: methylene blue stain evidence
+name: methylene blue staining evidence
 def: "A type of simple stain evidence where methylene blue is used." [ECO:KAV]
 synonym: "methylene blue staining evidence" EXACT []
-is_a: ID:0001504 ! simple stain evidence
+is_a: ID:0001504 ! simple staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T08:46:19Z
 
 [Term]
 id: ID:0001523
-name: endospore stain evidence
-def: "A type of differential stain evidence based on any type of stain used to view bacterial endospores." [ECO:KAV]
+name: endospore staining evidence
+def: "A type of differential staining evidence based on any type of stain used to view bacterial endospores." [ECO:KAV]
 synonym: "spore stain evidence" EXACT []
-is_a: ID:0001505 ! differential stain evidence
+is_a: ID:0001505 ! differential staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T08:53:27Z
 
 [Term]
 id: ID:0001524
-name: capsule stain evidence
-def: "A type of special stain evidence based on any staining technique that is used to view bacterial capsules." [ECO:KAV]
-is_a: ID:0001521 ! special stain evidence
-is_a: ID:0001524 ! capsule stain evidence
+name: capsule staining evidence
+def: "A type of special staining evidence based on any staining technique that is used to view bacterial capsules." [ECO:KAV]
+synonym: "capsule stain evidence " EXACT []
+is_a: ID:0001521 ! special staining evidence
+is_a: ID:0001524 ! capsule staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T09:03:58Z
 
 [Term]
 id: ID:0001525
-name: flagellar stain evidence
-def: "A type of special stain evidence based on any type of stain used to view flagella." [ECO:KAV]
-is_a: ID:0001521 ! special stain evidence
+name: flagellar staining evidence
+def: "A type of special staining evidence based on any type of stain used to view flagella." [ECO:KAV]
+synonym: "flagellar stain evidence" EXACT []
+is_a: ID:0001521 ! special staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T09:03:00Z
 
@@ -226,51 +246,72 @@ creation_date: 2015-06-22T15:04:16Z
 
 [Term]
 id: ID:0001527
-name: ziehl-neelson acid-fast stain evidence
-def: "A type of differential stain evidence where carbol- fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol- fuchsin exposure then the specimen is decolorized before the methylene blue counterstain." [ECO:KAV, PMCID:PMC518143]
+name: Ziehl-Neelson acid-fast staining evidence
+def: "A type of differential staining evidence where carbol- fuchsin is used as the primary stain and methylene blue is used as the counterstain. Heat is applied to the specimen after the carbol- fuchsin exposure then the specimen is decolorized before the methylene blue counterstain." [ECO:KAV, PMCID:PMC518143]
 comment: With this stain type acid fast positive organisms stain pink/red while acid fast negative organisms stain blue.
-synonym: "ziehl-neelson acid fast staining evidence" EXACT []
-is_a: ID:0001502 ! acid-fast stain evidence
+synonym: "Ziehl-Neelson acid fast stain evidence" EXACT []
+is_a: ID:0001502 ! acid-fast staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:04:24Z
 
 [Term]
 id: ID:0001528
-name: Schaeffer-Fulton stain evidence
-def: "A type of endospore stain evidence where a primary dye of malachite green and a counterstain of safranin are used. The malachite green dye is forced into the endospore by exposure to heat and steam. The specimen is decolorized and then counterstained." [ECO:KAV, PMCID:PMC241728]
+name: Schaeffer-Fulton staining evidence
+def: "A type of endospore staining evidence where a primary dye of malachite green and a counterstain of safranin are used. The malachite green dye is forced into the endospore by exposure to heat and steam. The specimen is decolorized and then counterstained." [ECO:KAV, PMCID:PMC241728]
 comment: With this staining technique bacterial endospores stain green and all other bacteria stain red/pink.
-synonym: "schaeffer-fulton staining evidence" EXACT []
-is_a: ID:0001523 ! endospore stain evidence
+synonym: "Schaeffer-Fulton stain evidence" EXACT []
+is_a: ID:0001523 ! endospore staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:04:28Z
 
 [Term]
+id: ID:0001529
+name: acridine orange staining evidence
+def: "A type of histological staining evidence based on any type of stain that uses acridine orange to stain a specimen." [ECO:KAV, PMID:6168652]
+comment: Flurochrome acridine orange is a cell permeable cationic dye that is inserts itself into nucleic acids (both DNA/RNA). Acridine orange fluoresces under specfic wavelength ultra violet light. The stain has been used to detect blood parasites in humans and mammals as well as trichomonas vaginalis.
+synonym: "AO evidence " EXACT []
+synonym: "AO stain evidence " EXACT []
+synonym: "AO staining evidence " EXACT []
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-09T11:26:56Z
+
+[Term]
 id: ID:0001530
-name: kinyoun acid-fast stain evidence
-def: "A type of acid-fast stain evidence where kinyoun based carbol-fuchsin phenol is used as the primary stain. Methylene blue is used as the counterstain, and acid alcohol is used as a decolorizer." [ECO:KAV]
+name: Kinyoun acid-fast staining evidence
+def: "A type of acid-fast staining evidence where kinyoun based carbol-fuchsin phenol is used as the primary stain. Methylene blue is used as the counterstain, and acid alcohol is used as a decolorizer." [ECO:KAV]
 comment: With this staining technique the acid fast bacteria is stained red/pink and acid fast negative  bacteria is stained blue.
-synonym: "kinyoun staining evidence" EXACT []
-is_a: ID:0001502 ! acid-fast stain evidence
+synonym: "Kinyoun stain evidence" EXACT []
+is_a: ID:0001502 ! acid-fast staining evidence
 created_by: kvillanova
 creation_date: 2015-06-22T15:29:35Z
 
 [Term]
+id: ID:0001531
+name: calcoflour-white staining evidence
+def: "A type of histological staining evidence based on any stain that uses calcoflour-white to stain a specimen." [ECO:KAV, PMID:19233954]
+comment: Calcflour-white  flurochrome ( C40 H44 N12 0 10 S2 ) is used as a whitening agent. It fluoresces under ultraviolet light. It is commonly used to identify infections of fungi, yeasts, amoebas, and other pathogenic organisms. Calcoflour- white stains espically well to structures containing cellulose and chitin.
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-09T11:27:02Z
+
+[Term]
 id: ID:0001532
-name: Moeller stain evidence
-def: "A type of endospore stain evidence where. Carbol- fuchsin is used as a primary dye and methylene blue is used as a counterstain. Carbol-fuchsin is forced into the endospore with exposure to heat and steam. The specimen is then decolorized with sulfuric acid and counterstained with methylene blue." [ECO:KAV, PMID:17933713]
+name: Moeller staining evidence
+def: "A type of endospore staining evidence where. Carbol- fuchsin is used as a primary dye and methylene blue is used as a counterstain. Carbol-fuchsin is forced into the endospore with exposure to heat and steam. The specimen is then decolorized with sulfuric acid and counterstained with methylene blue." [ECO:KAV, PMID:17933713]
 comment: With this staining technique bacterial endospores are stained red/pink while all other bacteria are stained blue.
-synonym: "moeller staining evidence" EXACT []
-is_a: ID:0001523 ! endospore stain evidence
+synonym: "Moeller stain evidence" EXACT []
+is_a: ID:0001523 ! endospore staining evidence
 created_by: kvillanova
 creation_date: 2015-06-23T11:34:44Z
 
 [Term]
 id: ID:0001533
-name: Abbott stain evidence
-def: "A type of endospore stain evidence where. Methylene blue is the primary stain and anilin- fuchsin is the counterstain. Methylene blue is forced into the endospore with steam and heat exposure. The specimen is then washed in water, decolorized with 95% alcohol that contains .2 to .3 % HCL. Counterstained with anilin-fuchsin, and washed with water." [ECO:KAV, PMCID:PMC1516947]
+name: Abbott staining evidence
+def: "A type of endospore staining evidence where. Methylene blue is the primary stain and anilin- fuchsin is the counterstain. Methylene blue is forced into the endospore with steam and heat exposure. The specimen is then washed in water, decolorized with 95% alcohol that contains .2 to .3 % HCL. Counterstained with anilin-fuchsin, and washed with water." [ECO:KAV, PMCID:PMC1516947]
 comment: With this staining technique bacterial endospores stain blue all other bacteria stain red.
 synonym: "abbott staining evidence" NARROW []
-is_a: ID:0001523 ! endospore stain evidence
+is_a: ID:0001523 ! endospore staining evidence
 created_by: kvillanova
 creation_date: 2015-06-23T13:05:48Z
 
@@ -280,7 +321,7 @@ name: tergitol 7 modified moeller stain evidence
 def: "A type of moeller stain evidence where. Alliquots of tergitol 7 are used in replacement of heating and steaming the specimen." [ECO:KAV, PMID:17933713]
 comment: With this staining technique endospores are stained red/pink while all other bacteria are stained blue.
 synonym: "tergitol 7 modified moeller staining evidence" EXACT []
-is_a: ID:0001532 ! Moeller stain evidence
+is_a: ID:0001532 ! Moeller staining evidence
 created_by: kvillanova
 creation_date: 2015-06-23T13:09:55Z
 
@@ -311,7 +352,7 @@ creation_date: 2015-06-24T09:48:16Z
 [Term]
 id: ID:0001538
 name: electron microscopy evidence
-def: "A type of microbiological microscopy evidence where a high voltage beam of accelerated electrons are fired at a sample to. Obtain higher then light resolution images of the sample." [ECO:KAV, PMID:NBK26880]
+def: "A type of microbiological microscopy evidence where a high voltage beam of accelerated electrons are fired at a sample to. Obtain higher then light resolution images of the sample.\n\n\nMerge with ECO:0005033 if theres no definition." [ECO:KAV, PMID:NBK26880]
 is_a: ID:0001508 ! microscopy evidence (place holder)
 created_by: kvillanova
 creation_date: 2015-06-24T09:48:41Z
@@ -399,6 +440,13 @@ created_by: kvillanova
 creation_date: 2015-06-24T15:43:30Z
 
 [Term]
+id: ID:0001548
+name: Beilschowsky silver staining evidence 
+is_a: ID:0001603 ! Silver staining evidence
+created_by: kvillanova
+creation_date: 2015-07-09T15:41:20Z
+
+[Term]
 id: ID:0001549
 name: enriched medium evidence
 def: "A type of microbiological medium evidence where a medium contains complex growth and nutrient factors. Those nutrient factors support a wide range of microbial organisms but is specifically used to culture fastidious organisms." [ECO:KAV, PMCID:3793873]
@@ -443,6 +491,13 @@ name: minimal medium evidence
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
 creation_date: 2015-06-25T13:39:18Z
+
+[Term]
+id: ID:0001555
+name: Methenamine silver staining evidence
+is_a: ID:0001603 ! Silver staining evidence
+created_by: kvillanova
+creation_date: 2015-07-09T15:41:47Z
 
 [Term]
 id: ID:0001556
@@ -592,24 +647,24 @@ creation_date: 2015-06-26T10:48:54Z
 
 [Term]
 id: ID:0001575
-name: Maneval's capsule stain evidence
-def: "A type of capsule stain evidence where. Congo red and a combination of acetic acid and acid-fuchsin are used to view bacterial capsules. The staining procedure is to put droplets of congo red on a slide and mix with a sample from culture. The slide must air dry and not be heat fixed. The congo red is a PH indicator and it dries on the slide leaving a red background then manval's solution a mixture of acetic acid and acid-fuchsin is added to the slide. The acid-fuchsin stains the bacteria bright red and the acetic acid acts as a mordant." [ECO:KAV, PMID:19239855, PMID:23825728]
+name: Maneval's capsule staining evidence
+def: "A type of capsule staining evidence where. Congo red and a combination of acetic acid and acid-fuchsin are used to view bacterial capsules. The staining procedure is to put droplets of congo red on a slide and mix with a sample from culture. The slide must air dry and not be heat fixed. The congo red is a PH indicator and it dries on the slide leaving a red background then manval's solution a mixture of acetic acid and acid-fuchsin is added to the slide. The acid-fuchsin stains the bacteria bright red and the acetic acid acts as a mordant." [ECO:KAV, PMID:19239855, PMID:23825728]
 comment: Congo red is a pH indicator and changes color when exposed to different pH. It is blue below 3.0 pH and will turn red if exposed to a pH above 5.2. Due to this when a maneval's stain is done the slide shows red white and blue red and blue for the background while the bacteria is stained red by the acid fuchsin the capsule remains white. The slide must be rinsed at the end and not blot dried because of the same reason it cannot be heat fixed because those actions would destroy or damage the destroy the capsule.
 synonym: "maneval's capsule staining evidence" EXACT []
 synonym: "maneval's staining evidence" RELATED []
-is_a: ID:0001524 ! capsule stain evidence
+is_a: ID:0001524 ! capsule staining evidence
 created_by: kvillanova
 creation_date: 2015-06-26T14:40:26Z
 
 [Term]
 id: ID:0001576
-name: Anthony's capsule stain evidence
+name: Anthony's capsule staining evidence
 def: "A type of capsule stain evidence that uses crystal violet to view bacterial capsules. No counterstain is necessary for this type of stain. Only a 20% solution of copper sulfate is used as a mordant after the crystal violet is applied." [ECO:KAV]
 comment: The slide cannot be heat fixed or blot dried because that action would destroy or damage the bacterial capsule. The background of the slide is stained purple while the capsules show up white.
 synonym: "anthony's capsule staining evidence" NARROW []
 synonym: "anthony's stain evidence" RELATED []
 synonym: "anthony's staining evidence" EXACT []
-is_a: ID:0001524 ! capsule stain evidence
+is_a: ID:0001524 ! capsule staining evidence
 created_by: kvillanova
 creation_date: 2015-06-26T14:42:03Z
 
@@ -779,9 +834,9 @@ creation_date: 2015-06-29T15:16:21Z
 
 [Term]
 id: ID:0001596
-name: romanowsky stain evidence
+name: Romanowsky staining evidence
 synonym: "romanowsky staining evidence" EXACT []
-is_a: ID:0001617 ! histology stain evidence
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-06-30T08:24:49Z
 
@@ -815,103 +870,113 @@ creation_date: 2015-06-30T10:31:19Z
 
 [Term]
 id: ID:0001601
-name: India ink capsule stain evidence
-def: "A type of capsule stain evidence that uses india ink to view bacterial capsules." []
+name: India ink capsule staining evidence
+def: "A type of capsule staining evidence that uses india ink to view bacterial capsules." []
 comment: The india ink stains the background black causing the bacterial capsules to appear white.
-synonym: "india ink capsule staining evidence" EXACT []
-synonym: "india ink staining evidence" EXACT []
-is_a: ID:0001524 ! capsule stain evidence
+synonym: "India ink staining evidence" EXACT []
+synonym: "India stain evidence " EXACT []
+is_a: ID:0001524 ! capsule staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T10:51:51Z
 
 [Term]
 id: ID:0001602
-name: grocott's methenamine silver stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: Grocott's methenamine silver staining evidence
+synonym: "GMS stain evidence" EXACT []
+is_a: ID:0001603 ! Silver staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:31:38Z
 
 [Term]
 id: ID:0001603
-name: silver stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: Silver staining evidence
+def: "A type of histological staining evidence based on any type of stain that uses silver to stain a specimen." []
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:33:05Z
 
 [Term]
 id: ID:0001604
-name: warthin-starry stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: Warthin-Starry staining evidence
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:33:59Z
 
 [Term]
 id: ID:0001605
-name: leishman stain evidence
-is_a: ID:0001596 ! romanowsky stain evidence
+name: Leishman staining evidence
+is_a: ID:0001596 ! Romanowsky staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:40:24Z
 
 [Term]
 id: ID:0001606
-name: wright's stain evidence
-is_a: ID:0001596 ! romanowsky stain evidence
+name: Wright's staining evidence
+is_a: ID:0001596 ! Romanowsky staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:40:54Z
 
 [Term]
 id: ID:0001607
-name: field stain evidence
-is_a: ID:0001596 ! romanowsky stain evidence
+name: field staining evidence
+is_a: ID:0001596 ! Romanowsky staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:41:10Z
 
 [Term]
 id: ID:0001608
-name: jenner's stain evidence
-is_a: ID:0001596 ! romanowsky stain evidence
+name: Jenner's staining evidence
+is_a: ID:0001596 ! Romanowsky staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:02Z
 
 [Term]
 id: ID:0001609
-name: gimsa stain evidence
-is_a: ID:0001596 ! romanowsky stain evidence
+name: gimsa staining evidence
+is_a: ID:0001596 ! Romanowsky staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:36Z
 
 [Term]
 id: ID:0001610
-name: periodic acid-schiff stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: periodic acid-schiff staining evidence
+synonym: "PAS staining evidence " EXACT []
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:56Z
 
 [Term]
 id: ID:0001611
-name: hematoxylin eosin stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: hematoxylin and eosin staining evidence
+def: "A type of histology staining evidence based on a type of stain that uses Hematoxylin as a primary stain and Eosin as a counterstain. The Hematoxylin stains the nucleic material while the Eosin stains the cytoplasmic material." [ECO:KAV, PMID:24406626]
+comment: With this staining technique nucleic materials are stained a dark purple/blue. Cytoplasmic materials are stained pink/red.
+synonym: "H&E stain evidence" EXACT []
+synonym: "H&E staining evidence" EXACT []
+synonym: "HE stain evidence" RELATED []
+is_a: ID:0001511 ! differential histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:45:03Z
 
 [Term]
 id: ID:0001612
-name: cresyl violet acetate stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: Nissl staining evidence
+def: "A type of histological staining evidence" []
+synonym: "cresyl violet acetate staining evidence" EXACT []
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:47:35Z
 
 [Term]
 id: ID:0001613
-name: macchiavello stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: Macchiavello staining evidence
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:49:36Z
 
 [Term]
 id: ID:0001614
-name: lendrums phloxine-tartazine stain evidence
-is_a: ID:0001617 ! histology stain evidence
+name: lendrums phloxine-tartazine staining evidence
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:49:58Z
 
@@ -938,7 +1003,11 @@ creation_date: 2015-07-02T07:56:39Z
 
 [Term]
 id: ID:0001617
-name: histology stain evidence
+name: histological staining evidence
+def: "A type of staining evidence based on any type of stain used to view and study anatomical structure of cells and tissue biopsies." [ECO:KAV, PMID:17066055]
+comment: Histology is commonly used for the detection and study of disease present in tissues and cells.
+synonym: "histological staining evidnece" EXACT []
+synonym: "histology stain evidence" EXACT []
 is_a: ID:0001597 ! placeholder
 created_by: kvillanova
 creation_date: 2015-07-02T08:53:54Z
