@@ -5,6 +5,7 @@ EO comprises two high-level classes, evidence and assertion method, where eviden
 EO was originally created around the year 2000 to support gene product annotation by the Gene Ontology, which now uses EO in AmiGO 2. Today EO is used by many groups concerned with provenance in scientific research.  
 
 ***
+For **advice on requesting new terms**, please see **[the Evidence Ontology wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-template)**.
 
 For **further information** visit the **[Evidence Ontology website](http://www.evidenceontology.org/)**.
 
