@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:07:2015 15:44
+date: 10:07:2015 15:41
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -266,9 +266,9 @@ creation_date: 2015-06-22T15:04:28Z
 
 [Term]
 id: ID:0001529
-name: acridine orange staining evidence
-def: "A type of histological staining evidence based on any type of stain that uses acridine orange to stain a specimen." [ECO:KAV, PMID:6168652]
-comment: Flurochrome acridine orange is a cell permeable cationic dye that is inserts itself into nucleic acids (both DNA/RNA). Acridine orange fluoresces under specfic wavelength ultra violet light. The stain has been used to detect blood parasites in humans and mammals as well as trichomonas vaginalis.
+name: acridine orange histological staining evidence
+def: "A type of histological staining evidence where cells are stained with acridine orange, a cell permeable, UV fluorescent dye that binds to nucleic acids." [PMID:6168652]
+comment: The Acridine orange stain is used to detect various parasites including Trichomonas vaginalis.
 synonym: "AO evidence " EXACT []
 synonym: "AO stain evidence " EXACT []
 synonym: "AO staining evidence " EXACT []
@@ -288,9 +288,9 @@ creation_date: 2015-06-22T15:29:35Z
 
 [Term]
 id: ID:0001531
-name: calcoflour-white staining evidence
-def: "A type of histological staining evidence based on any stain that uses calcoflour-white to stain a specimen." [ECO:KAV, PMID:19233954]
-comment: Calcflour-white  flurochrome ( C40 H44 N12 0 10 S2 ) is used as a whitening agent. It fluoresces under ultraviolet light. It is commonly used to identify infections of fungi, yeasts, amoebas, and other pathogenic organisms. Calcoflour- white stains espically well to structures containing cellulose and chitin.
+name: calcoflour-white histological staining evidence
+def: "A type of histological staining evidence where the fluorochrome calcoflour- white, a flourescent whitening agent, is used to stain cellulose or chitin." [ECO:KAV, PMID:19233954]
+comment: Calcoflour-white is commonly used to identify infections caused by yeasts and other fungi.
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-09T11:27:02Z
@@ -441,8 +441,8 @@ creation_date: 2015-06-24T15:43:30Z
 
 [Term]
 id: ID:0001548
-name: Beilschowsky silver staining evidence 
-is_a: ID:0001603 ! Silver staining evidence
+name: Beilschowsky histological silver staining evidence
+is_a: ID:0001603 ! Silver histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-09T15:41:20Z
 
@@ -494,10 +494,10 @@ creation_date: 2015-06-25T13:39:18Z
 
 [Term]
 id: ID:0001555
-name: Methenamine silver staining evidence
-is_a: ID:0001603 ! Silver staining evidence
+name: cajal histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
-creation_date: 2015-07-09T15:41:47Z
+creation_date: 2015-07-10T09:05:48Z
 
 [Term]
 id: ID:0001556
@@ -558,6 +558,13 @@ name: reducing medium evidence
 is_a: ID:0001514 ! microbiological medium evidence
 created_by: kvillanova
 creation_date: 2015-06-25T14:32:07Z
+
+[Term]
+id: ID:0001564
+name: alician blue histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T08:27:36Z
 
 [Term]
 id: ID:0001565
@@ -834,7 +841,7 @@ creation_date: 2015-06-29T15:16:21Z
 
 [Term]
 id: ID:0001596
-name: Romanowsky staining evidence
+name: Romanowsky histological staining evidence
 synonym: "romanowsky staining evidence" EXACT []
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
@@ -881,15 +888,15 @@ creation_date: 2015-07-01T10:51:51Z
 
 [Term]
 id: ID:0001602
-name: Grocott's methenamine silver staining evidence
+name: Grocott's methenamine histological silver staining evidence
 synonym: "GMS stain evidence" EXACT []
-is_a: ID:0001603 ! Silver staining evidence
+is_a: ID:0001603 ! Silver histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:31:38Z
 
 [Term]
 id: ID:0001603
-name: Silver staining evidence
+name: Silver histological staining evidence
 def: "A type of histological staining evidence based on any type of stain that uses silver to stain a specimen." []
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
@@ -897,57 +904,58 @@ creation_date: 2015-07-01T11:33:05Z
 
 [Term]
 id: ID:0001604
-name: Warthin-Starry staining evidence
+name: Warthin-Starry histological staining evidence
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T11:33:59Z
 
 [Term]
 id: ID:0001605
-name: Leishman staining evidence
-is_a: ID:0001596 ! Romanowsky staining evidence
+name: Leishman histological staining evidence
+is_a: ID:0001596 ! Romanowsky histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:40:24Z
 
 [Term]
 id: ID:0001606
-name: Wright's staining evidence
-is_a: ID:0001596 ! Romanowsky staining evidence
+name: Wright's histological staining evidence
+is_a: ID:0001596 ! Romanowsky histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:40:54Z
 
 [Term]
 id: ID:0001607
-name: field staining evidence
-is_a: ID:0001596 ! Romanowsky staining evidence
+name: field histological staining evidence
+is_a: ID:0001596 ! Romanowsky histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:41:10Z
 
 [Term]
 id: ID:0001608
-name: Jenner's staining evidence
-is_a: ID:0001596 ! Romanowsky staining evidence
+name: Jenner's histological staining evidence
+is_a: ID:0001596 ! Romanowsky histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:02Z
 
 [Term]
 id: ID:0001609
-name: gimsa staining evidence
-is_a: ID:0001596 ! Romanowsky staining evidence
+name: gimsa histological staining evidence
+is_a: ID:0001596 ! Romanowsky histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:36Z
 
 [Term]
 id: ID:0001610
-name: periodic acid-schiff staining evidence
-synonym: "PAS staining evidence " EXACT []
+name: periodic acid-schiff histological staining evidence
+def: "A type of histological staining evidence based on a reaction where, periodic acid oxidizes substances that contain hydroxl groups and the product of the reaction reats with Schiffs reagent forming a megenta color." []
+synonym: "PAS stain evidence " EXACT []
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:42:56Z
 
 [Term]
 id: ID:0001611
-name: hematoxylin and eosin staining evidence
+name: hematoxylin and eosin histological staining evidence
 def: "A type of histology staining evidence based on a type of stain that uses Hematoxylin as a primary stain and Eosin as a counterstain. The Hematoxylin stains the nucleic material while the Eosin stains the cytoplasmic material." [ECO:KAV, PMID:24406626]
 comment: With this staining technique nucleic materials are stained a dark purple/blue. Cytoplasmic materials are stained pink/red.
 synonym: "H&E stain evidence" EXACT []
@@ -959,23 +967,23 @@ creation_date: 2015-07-01T12:45:03Z
 
 [Term]
 id: ID:0001612
-name: Nissl staining evidence
+name: Nissl histological staining evidence
 def: "A type of histological staining evidence" []
-synonym: "cresyl violet acetate staining evidence" EXACT []
+synonym: "cresyl violet staining evidence" EXACT []
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:47:35Z
 
 [Term]
 id: ID:0001613
-name: Macchiavello staining evidence
+name: Macchiavello histological staining evidence
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:49:36Z
 
 [Term]
 id: ID:0001614
-name: lendrums phloxine-tartazine staining evidence
+name: lendrums phloxine-tartazine histological staining evidence
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-01T12:49:58Z
@@ -1011,4 +1019,212 @@ synonym: "histology stain evidence" EXACT []
 is_a: ID:0001597 ! placeholder
 created_by: kvillanova
 creation_date: 2015-07-02T08:53:54Z
+
+[Term]
+id: ID:0001618
+name: aldehyde fuchsin histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T08:30:48Z
+
+[Term]
+id: ID:0001619
+name: ailzarine blue histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T08:36:44Z
+
+[Term]
+id: ID:0001620
+name: alizarin red s histological staining evidence
+def: "A type of histological staining evidence where Ailzarin red s, an anthraquinone derivative, is used to identify calcium present in a tissue sample." [PMID:12742030]
+comment: Alizarin red s is also used to stain mammalian embryonic bones as well as skeletons from small invertebrate embryos.
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T08:36:55Z
+
+[Term]
+id: ID:0001621
+name: Fontana-Masson histological staining evidence
+is_a: ID:0001603 ! Silver histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:09:06Z
+
+[Term]
+id: ID:0001622
+name: Congo Red histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:10:14Z
+
+[Term]
+id: ID:0001623
+name: Giesma histological staining evidence
+is_a: ID:0001596 ! Romanowsky histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:14:03Z
+
+[Term]
+id: ID:0001624
+name: Golgi's histological silver staining evidence
+is_a: ID:0001603 ! Silver histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:21:18Z
+
+[Term]
+id: ID:0001625
+name: Gomori trichrome histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:29:52Z
+
+[Term]
+id: ID:0001626
+name: Iron hematoxylin histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:32:13Z
+
+[Term]
+id: ID:0001627
+name: Luna histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:36:04Z
+
+[Term]
+id: ID:0001628
+name: luxol fast blue histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:37:32Z
+
+[Term]
+id: ID:0001629
+name: Mallory trichome histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:40:42Z
+
+[Term]
+id: ID:0001630
+name: Masson's trichrome histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:43:51Z
+
+[Term]
+id: ID:0001631
+name: Movat's pentachrome histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:45:47Z
+
+[Term]
+id: ID:0001632
+name: Mucicarmine histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:49:31Z
+
+[Term]
+id: ID:0001633
+name: nuclear fast red histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:51:30Z
+
+[Term]
+id: ID:0001634
+name: oil red o histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:52:27Z
+
+[Term]
+id: ID:0001635
+name: Papanicolaou histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:59:58Z
+
+[Term]
+id: ID:0001636
+name: Orcien histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T09:56:40Z
+
+[Term]
+id: ID:0001637
+name: Von Kossa histological staining evidence
+is_a: ID:0001603 ! Silver histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:01:38Z
+
+[Term]
+id: ID:0001638
+name: Verhoeff's histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:05:18Z
+
+[Term]
+id: ID:0001639
+name: Toludine blue histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:08:22Z
+
+[Term]
+id: ID:0001640
+name: Tartazine histological staning evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:10:33Z
+
+[Term]
+id: ID:0001641
+name: sudan histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:11:42Z
+
+[Term]
+id: ID:0001642
+name: safranin o histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:13:11Z
+
+[Term]
+id: ID:0001643
+name: Reticular fiber silver staining evidence
+is_a: ID:0001603 ! Silver histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:14:31Z
+
+[Term]
+id: ID:0001644
+name: Perl's prussian blue histological staining evidence
+def: "A type of histological staining evidence based on a reaction where tissue is treated with hydrochloric acid to release ferric ions that react with potassium ferrocyanide forming a dark blue percipitate." [ECO:KAV, MeSH:Prussian Blue Reaction<n]
+comment: Prussian blue wasen't used in histological stains until 1867, when German pathologist Max perls formulated it for that usage hence. It is often refered to as Perls's prussian blue.
+synonym: " prussian blue staining evidence " EXACT []
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:16:10Z
+
+[Term]
+id: ID:0001645
+name: PicroSirius red histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:17:34Z
+
+[Term]
+id: ID:0001646
+name: phosphotungstic acid-haemotxylin histological staining evidence
+is_a: ID:0001617 ! histological staining evidence
+created_by: kvillanova
+creation_date: 2015-07-10T10:18:32Z
 
