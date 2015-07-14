@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 08:07:2015 15:52
-saved-by: snadendla
+date: 14:07:2015 18:07
+saved-by: mchibucos
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -257,7 +257,8 @@ disjoint_from: ECO:0000033 ! traceable author statement
 [Term]
 id: ECO:0000035
 name: no biological data found
-def: "A curator inference that states that a search found no information about a biological feature." [ECO:MCC, GO:ND]
+def: "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources." [ECO:MCC, GO:ND]
+comment: An assertion of "no biological data found" carries the assumption that a more-or-less exhaustive search has been conducted.
 synonym: "ND" EXACT [GO:ND]
 synonym: "no biological data available" EXACT [GO:ND]
 is_a: ECO:0000205 ! curator inference
@@ -1067,8 +1068,8 @@ creation_date: 2010-06-21T11:17:21Z
 [Term]
 id: ECO:0000205
 name: curator inference
-def: "An evidence type that is based on conclusions drawn by a curator." [ECO:MCC]
-is_a: ECO:0000000 ! evidence
+def: "A type of inferential evidence that is based on a conclusion drawn by a curator." [ECO:MCC]
+is_a: ECO:0000361 ! inferential evidence
 created_by: mchibucos
 creation_date: 2010-08-18T05:55:12Z
 
@@ -2674,6 +2675,49 @@ name: biological target-disease association via drug
 is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:39:11Z
+
+[Term]
+id: ECO:0000361
+name: inferential evidence
+def: "A type of evidence where an assertion is derived from another assertion via logical inference or some non-logical but rational means." [ECO:MCC]
+comment: Inference is the process of deriving logical conclusions from premises known or assumed to be true, or alternatively, arriving at conclusions via some non-logical means of observation of patterns of facts, which can result in identifying new meanings and contexts for understanding. Given the evidence provided by a set of premises, deductive reasoning involves drawing conclusions that necessarily follow, i.e. are certain, whereas inductive reasoning generates conclusions that are likely to be, but are not necessarily, true.
+is_a: ECO:0000000 ! evidence
+created_by: mchibucos
+creation_date: 2015-07-14T11:19:37Z
+
+[Term]
+id: ECO:0000362
+name: evidence based on computational logical inference
+def: "A type of inferential evidence based on a computationally derived unary inference or an inference chain in which at least one step is \ncomputationally derived." [ECO:MCC, GOC:MC]
+is_a: ECO:0000361 ! inferential evidence
+created_by: mchibucos
+creation_date: 2015-07-14T11:24:27Z
+
+[Term]
+id: ECO:0000363
+name: evidence based on computational logical inference used in automatic assertion
+def: "A type of evidence based on computational logical inference that is used in automatic assertion." [ECO:MCC]
+is_a: ECO:0000362 ! evidence based on computational logical inference
+intersection_of: ECO:0000362 ! evidence based on computational logical inference
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: mchibucos
+creation_date: 2015-07-14T11:35:08Z
+
+[Term]
+id: ECO:0000364
+name: evidence based on logical inference from manual annotation used in automatic assertion
+def: "A type of evidence based on logical inference from a manually curated annotation that is used in an automatic assertion." [ECO:MCC]
+is_a: ECO:0000363 ! evidence based on computational logical inference used in automatic assertion
+created_by: mchibucos
+creation_date: 2015-07-14T11:44:19Z
+
+[Term]
+id: ECO:0000366
+name: evidence based on logical inference from automatic annotation used in automatic assertion
+def: "A type of evidence based on logical inference from an automatically curated annotation that is used in an automatic assertion." [ECO:MCC]
+is_a: ECO:0000363 ! evidence based on computational logical inference used in automatic assertion
+created_by: mchibucos
+creation_date: 2015-07-14T11:45:25Z
 
 [Term]
 id: ECO:0000501
