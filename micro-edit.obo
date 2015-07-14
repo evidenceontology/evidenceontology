@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:07:2015 15:41
+date: 14:07:2015 14:01
 saved-by: kvillanova
 auto-generated-by: OBO-Edit 2.3.1
 default-namespace: eco
@@ -103,6 +103,14 @@ name: microbiological smear evidence
 is_a: ECO:0001501 ! microbiological assay evidence
 created_by: kvillanova
 creation_date: 2015-06-19T16:22:32Z
+
+[Term]
+id: ID:0001511
+name: polarized microscopy evidence
+def: "A type of light microscopy evidence based on any type of micrscope that uses polarized light." [ECO:KAV, PMCID:PMC1035042, PMID:11159464]
+is_a: ID:0001535 ! light microscopy evidence
+created_by: kvillanova
+creation_date: 2015-07-14T12:57:25Z
 
 [Term]
 id: ID:0001513
@@ -1145,6 +1153,8 @@ creation_date: 2015-07-10T09:56:40Z
 [Term]
 id: ID:0001637
 name: Von Kossa histological staining evidence
+def: "A type of silver histological staining evidence based on a, precipitation reaction used to stain calcium deposits in tissues, and to study mineralization in intact tissues and cells." [ECO:KAV, PMID:12724828]
+comment: The Von Kossa stain solution contains silver nitrate, sodium thiosulfate, and nuclear fast red dye. Large stained calcium deposits appear black while dispersed deposits appear grey. Cellular nuclei stain red and cellular cytoplasm stain light pink.
 is_a: ID:0001603 ! Silver histological staining evidence
 created_by: kvillanova
 creation_date: 2015-07-10T10:01:38Z
@@ -1182,7 +1192,7 @@ creation_date: 2015-07-10T10:11:42Z
 [Term]
 id: ID:0001642
 name: safranin o histological staining evidence
-def: "A type of histological staining evidence where safarnin o a cationic dye that can at times be metachromatic is used to stain proteoglycans as well as glycosaminoglycans." [ECO:KAV, PMID:20864017, PMID:3135283 ]
+def: "A type of histological staining evidence where safarnin o a cationic dye that can at times be metachromatic is used to stain proteoglycans as well as glycosaminoglycans." [ECO:KAV, PMID:20864017, PMID:3135283]
 comment: Mucin, cartilage and mast cells are commonly stained by mast cells.
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
@@ -1208,7 +1218,7 @@ creation_date: 2015-07-10T10:16:10Z
 [Term]
 id: ID:0001645
 name: PicroSirius red histological staining evidence
-def: "A type of histological staining evidence where picrosirus red a cationic dye is used to stain collagen fibers and other connective tissue." [ECO:KAV, PMID:24653600 , PMID:25023614 ]
+def: "A type of histological staining evidence where picrosirus red a cationic dye is used to stain collagen fibers and other connective tissue." [ECO:KAV, PMID:24653600, PMID:25023614]
 comment: Picosirus red must be viewed under polarized light. Under the light collagen appears green, red, or yellow. The stain works because collagen is rich in basic amino acids and will react to the dye.
 is_a: ID:0001617 ! histological staining evidence
 created_by: kvillanova
