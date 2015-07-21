@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 14:07:2015 18:07
-saved-by: mchibucos
+date: 21:07:2015 14:30
+saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -2738,28 +2738,28 @@ created_by: cjm
 [Term]
 id: ECO:0001001
 name: 3D cell culture evidence
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001002
 name: [3H]arachidonic acid release assay evidence
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001003
 name: [3H]-thymidine incorporation assay evidence
-is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence(new)
+is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001004
 name: 51Cr release assay evidence
-is_a: ECO:0005012 ! cytotoxicity assay evidence(new)
+is_a: ECO:0005012 ! cytotoxicity assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2775,7 +2775,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001006
 name: adhesion assay evidence
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2792,7 +2792,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001008
 name: Alamar blue assay evidence
-is_a: ECO:0005004 ! cell viability assay evidence(new)
+is_a: ECO:0005004 ! cell viability assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2818,7 +2818,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001011
 name: annexin-V staining evidence
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+is_a: ECO:0005034 ! apoptosis assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2861,7 +2861,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001017
 name: Boyden chamber assay evidence
-is_a: ECO:0005021 ! chemotaxis assay evidence (new)
+is_a: ECO:0005021 ! chemotaxis assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2872,28 +2872,28 @@ synonym: "5-bromo-2'-deoxyuridine incorporation assay evidence" EXACT []
 synonym: "BrdU incorporation assay evidence" EXACT []
 synonym: "BrdUrd incorporation assay evidence" EXACT []
 synonym: "BUdR incorporation assay evidence" EXACT []
-is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence(new)
+is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001019
 name: caspase assay evidence
-is_a: ECO:0005034 ! apoptosis assay evidence (new)
+is_a: ECO:0005034 ! apoptosis assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001020
 name: cell counting evidence
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001021
 name: cell permeability assay evidence
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2917,7 +2917,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001024
 name: chimeric protein evidence
-is_a: ECO:0005022 ! protein assay evidence (ECO:0000039)
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2938,7 +2938,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001028
 name: co-sedimentation assay evidence
-is_a: ECO:0005025 ! physical interaction evidence(ECO:0000021)
+is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2994,7 +2994,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001036
 name: cytochrome C release assay evidence
-is_a: ECO:0005034 ! apoptosis assay evidence (new)
+is_a: ECO:0005034 ! apoptosis assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3016,7 +3016,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001039
 name: DNA laddering assay evidence
-is_a: ECO:0005034 ! apoptosis assay evidence (new)
+is_a: ECO:0005034 ! apoptosis assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3586,14 +3586,14 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001115
 name: protein detection by fluorescence evidence
-is_a: ECO:0005022 ! protein assay evidence (ECO:0000039)
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001116
 name: protein dot blot assay evidence
-is_a: ECO:0005022 ! protein assay evidence (ECO:0000039)
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3921,7 +3921,7 @@ creation_date: 2014-03-17T16:03:53Z
 
 [Term]
 id: ECO:0001155
-name: BrdU incorporation assay evidence used in manual assertion
+name: bromodeoxyuridine incorporation assay evidence used in manual assertion
 def: "A type of BrdU incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0001018 ! bromodeoxyuridine incorporation assay evidence
 intersection_of: ECO:0001018 ! bromodeoxyuridine incorporation assay evidence
@@ -5111,8 +5111,8 @@ creation_date: 2014-03-17T22:34:56Z
 
 [Term]
 id: ECO:0005004
-name: cell viability assay evidence(new)
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+name: cell viability assay evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-13T12:08:01Z
 
@@ -5125,57 +5125,50 @@ creation_date: 2015-02-11T16:26:08Z
 
 [Term]
 id: ECO:0005007
-name: cell proliferation assay evidence (new)
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+name: cell proliferation assay evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:27:13Z
 
 [Term]
 id: ECO:0005008
-name: DNA synthesis cell proliferation assay evidence(new)
-is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+name: DNA synthesis cell proliferation assay evidence
+is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:30:10Z
 
 [Term]
 id: ECO:0005009
-name: metabolic cell proliferation assay evidence(new)
-is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+name: metabolic cell proliferation assay evidence
+is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:36:33Z
 
 [Term]
 id: ECO:0005010
-name: cell proliferation marker detection assay evidence (new)
-is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+name: cell proliferation marker detection assay evidence
+is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:37:23Z
 
 [Term]
 id: ECO:0005011
-name: ATP bioluminescence assay evidence (new)
-is_a: ECO:0005007 ! cell proliferation assay evidence (new)
+name: ATP bioluminescence assay evidence
+is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:47:30Z
 
 [Term]
 id: ECO:0005012
-name: cytotoxicity assay evidence(new)
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+name: cytotoxicity assay evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-12T11:39:35Z
 
 [Term]
-id: ECO:0005013
-name: in vitro assay evidence (ECO:0000181)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-02-12T13:21:01Z
-
-[Term]
 id: ECO:0005014
-name: in vitro cell based assay evidence (new)
-is_a: ECO:0005013 ! in vitro assay evidence (ECO:0000181)
+name: in vitro cell based assay evidence
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: snadendla
 creation_date: 2015-02-12T13:26:55Z
 
@@ -5188,24 +5181,10 @@ creation_date: 2015-02-19T11:48:57Z
 
 [Term]
 id: ECO:0005021
-name: chemotaxis assay evidence (new)
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+name: chemotaxis assay evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-19T13:10:20Z
-
-[Term]
-id: ECO:0005022
-name: protein assay evidence (ECO:0000039)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-03-10T17:11:26Z
-
-[Term]
-id: ECO:0005025
-name: physical interaction evidence(ECO:0000021)
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: snadendla
-creation_date: 2015-03-11T12:22:33Z
 
 [Term]
 id: ECO:0005027
@@ -5238,8 +5217,8 @@ creation_date: 2015-03-20T12:21:48Z
 
 [Term]
 id: ECO:0005034
-name: apoptosis assay evidence (new)
-is_a: ECO:0005014 ! in vitro cell based assay evidence (new)
+name: apoptosis assay evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-04-07T21:58:24Z
 
