@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:07:2015 14:30
+date: 21:07:2015 17:35
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -3705,35 +3705,38 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001132
 name: tryptic phosphopeptide mapping assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001133
-name: TUNEL assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
+synonym: "TdT-mediated dUTP-biotin nick end labeling assay" EXACT []
+synonym: "terminal deoxynucleotidyl transferase-dUTP nick end labeling assay evidence" EXACT []
+synonym: "TUNEL assay evidence" EXACT []
+is_a: ECO:0005034 ! apoptosis assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001134
 name: urine test evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001135
 name: wound healing assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001136
 name: WST-1 assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5011,10 +5014,10 @@ creation_date: 2014-03-17T20:29:30Z
 
 [Term]
 id: ECO:0001264
-name: TUNEL assay evidence used in manual assertion
+name: terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence used in manual assertion
 def: "A type of TUNEL assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001133 ! TUNEL assay evidence
-intersection_of: ECO:0001133 ! TUNEL assay evidence
+is_a: ECO:0001133 ! terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
+intersection_of: ECO:0001133 ! terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:29:34Z
