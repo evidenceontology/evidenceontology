@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:07:2015 17:35
+date: 14:08:2015 16:32
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -3452,7 +3452,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001096
 name: mass spectrometry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005504 ! spectrometry evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3600,7 +3600,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001117
 name: protein microarray evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3614,7 +3614,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001119
 name: quantitative mass spectrometry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0001096 ! mass spectrometry evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3663,42 +3663,43 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001126
 name: spectrophotometry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005504 ! spectrometry evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001127
 name: surface plasmon resonance evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001128
 name: syngeneic transplantation experiment evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000240 ! anatomical perturbation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001129
 name: TACE activity assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+synonym: "Tumor necrosis factor - alpha converting enzyme activity assay" EXACT []
+is_a: ECO:0000005 ! enzyme assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001130
 name: tissue microarray evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000055 ! array experiment evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001131
 name: transgenic organism evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005027 ! genetic transformation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5259,6 +5260,13 @@ synonym: "co-electrophoresis evidence" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: snadendla
 creation_date: 2015-07-07T15:02:26Z
+
+[Term]
+id: ECO:0005504
+name: spectrometry evidence
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2015-08-14T15:48:08Z
 
 [Term]
 id: ID:0001601
