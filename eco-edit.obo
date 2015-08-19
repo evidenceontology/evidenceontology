@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:08:2015 16:32
+date: 19:08:2015 16:40
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -623,6 +623,8 @@ creation_date: 2009-03-20T12:00:17Z
 [Term]
 id: ECO:0000089
 name: restriction landmark genomic scanning evidence
+alt_id: ECO:0001125
+synonym: "restriction landmark genome scanning evidence" EXACT []
 synonym: "RLGS evidence" EXACT []
 is_a: ECO:0000073 ! experimental genomic evidence
 
@@ -3551,28 +3553,28 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001110
 name: phosphopeptide affinity enrichment evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000023 ! affinity evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001111
 name: physical examination evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001112
 name: phosphopeptide array evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001113
 name: point mutation evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000200 ! sequence alignment evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3607,7 +3609,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001118
 name: protein sequencing assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000220 ! sequencing assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3628,7 +3630,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001121
 name: radioimmunoassay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3642,21 +3644,14 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001123
 name: resonant mirror biosensor evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001124
 name: restriction fragment detection evidence
-is_a: ECO:0000091 ! isb-sib evidence
-created_by: mchibucos
-creation_date: 2014-03-16T11:30:54Z
-
-[Term]
-id: ECO:0001125
-name: restriction landmark genome scanning evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000073 ! experimental genomic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5077,8 +5072,7 @@ creation_date: 2014-03-17T20:29:54Z
 id: ECO:0001270
 name: restriction landmark genome scanning evidence used in manual assertion
 def: "A type of restriction landmark genome scanning evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001125 ! restriction landmark genome scanning evidence
-intersection_of: ECO:0001125 ! restriction landmark genome scanning evidence
+is_a: ECO:0000089 ! restriction landmark genomic scanning evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:29:58Z
