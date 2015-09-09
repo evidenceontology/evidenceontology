@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:09:2015 12:33
+date: 09:09:2015 15:13
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2924,6 +2924,13 @@ created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
+id: ECO:0001025
+name: co-electrophoresis evidence
+is_a: ECO:0000337 ! gel electrophoresis evidence
+created_by: mchibucos
+creation_date: 2014-03-16T11:30:54Z
+
+[Term]
 id: ECO:0001026
 name: co-localization evidence
 is_a: ECO:0000324 ! imaging assay evidence
@@ -5250,8 +5257,6 @@ creation_date: 2015-06-26T11:46:15Z
 [Term]
 id: ECO:0005503
 name: two-dimensional gel electrophoresis evidence
-alt_id: ECO:0001025
-synonym: "co-electrophoresis evidence" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: snadendla
 creation_date: 2015-07-07T15:02:26Z
@@ -5262,6 +5267,15 @@ name: spectrometry evidence
 is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-08-14T15:48:08Z
+
+[Term]
+id: ECO:0005505
+name: co-electrophoresis evidence used in manual assertion
+is_a: ECO:0001025 ! co-electrophoresis evidence
+intersection_of: ECO:0001025 ! co-electrophoresis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-09T15:08:17Z
 
 [Term]
 id: ID:0001601
