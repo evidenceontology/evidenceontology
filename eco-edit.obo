@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:09:2015 15:13
+date: 09:09:2015 17:23
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2337,7 +2337,9 @@ creation_date: 2011-12-13T02:06:25Z
 [Term]
 id: ECO:0000324
 name: imaging assay evidence
+alt_id: ECO:0001122
 def: "Direct assay evidence derived from analysis of an image." [ECO:MCC]
+synonym: "radiologic test evidence" NARROW []
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2012-02-23T12:01:43Z
@@ -3594,8 +3596,8 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001115
-name: protein detection by fluorescence evidence
-is_a: ECO:0000039 ! protein assay evidence
+name: fluorescence evidence
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3638,13 +3640,6 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001121
 name: radioimmunoassay evidence
 is_a: ECO:0000040 ! immunological assay evidence
-created_by: mchibucos
-creation_date: 2014-03-16T11:30:54Z
-
-[Term]
-id: ECO:0001122
-name: radiologic test evidence
-is_a: ECO:0000091 ! isb-sib evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3708,7 +3703,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001132
 name: tryptic phosphopeptide mapping assay evidence
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0001096 ! mass spectrometry evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -4869,8 +4864,8 @@ creation_date: 2014-03-17T20:18:58Z
 id: ECO:0001249
 name: protein detection by fluorescence evidence used in manual assertion
 def: "A type of protein detection by fluorescence evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001115 ! protein detection by fluorescence evidence
-intersection_of: ECO:0001115 ! protein detection by fluorescence evidence
+is_a: ECO:0001115 ! fluorescence evidence
+intersection_of: ECO:0001115 ! fluorescence evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:19:35Z
@@ -4937,10 +4932,10 @@ creation_date: 2014-03-17T20:28:04Z
 
 [Term]
 id: ECO:0001256
-name: radiologic test evidence used in manual assertion
-def: "A type of radiologic test evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001122 ! radiologic test evidence
-intersection_of: ECO:0001122 ! radiologic test evidence
+name: imaging assay evidence used in manual assertion
+def: "A type of imaging assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0000324 ! imaging assay evidence
+intersection_of: ECO:0000324 ! imaging assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:29:00Z
@@ -5195,7 +5190,7 @@ creation_date: 2015-02-19T13:10:20Z
 [Term]
 id: ECO:0005027
 name: genetic transformation evidence
-is_a: ECO:0000006 ! experimental evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-03-16T15:33:50Z
 
