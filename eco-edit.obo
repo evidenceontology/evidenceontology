@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:09:2015 11:52
+date: 09:09:2015 12:33
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -5070,9 +5070,10 @@ creation_date: 2014-03-17T20:29:54Z
 
 [Term]
 id: ECO:0001270
-name: restriction landmark genome scanning evidence used in manual assertion
+name: restriction landmark genomic scanning evidence used in manual assertion
 def: "A type of restriction landmark genome scanning evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000089 ! restriction landmark genomic scanning evidence
+intersection_of: ECO:0000089 ! restriction landmark genomic scanning evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:29:58Z
