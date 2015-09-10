@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:09:2015 17:29
+date: 10:09:2015 17:03
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -3548,20 +3548,21 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001108
 name: phage display evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000024 ! protein binding evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001109
 name: phosphoamino acid analysis evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001110
-name: phosphopeptide affinity enrichment evidence
+name: peptide affinity enrichment evidence
+synonym: "phosphopeptide affinity enrichment evidence" NARROW []
 is_a: ECO:0000023 ! affinity evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3575,7 +3576,8 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001112
-name: phosphopeptide array evidence
+name: peptide array evidence
+synonym: "phosphopeptide array evidence" NARROW []
 is_a: ECO:0000039 ! protein assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3631,8 +3633,10 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001120
-name: radioassay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: radioisotope assay evidence
+synonym: "radioassay" EXACT []
+synonym: "radioisotopic assay" EXACT []
+is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -4812,20 +4816,20 @@ creation_date: 2014-03-17T19:28:59Z
 
 [Term]
 id: ECO:0001244
-name: phosphopeptide affinity enrichment evidence used in manual assertion
-def: "A type of phosphopeptide affinity enrichment evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001110 ! phosphopeptide affinity enrichment evidence
-intersection_of: ECO:0001110 ! phosphopeptide affinity enrichment evidence
+name: peptide affinity enrichment evidence used in manual assertion
+def: "A type of peptide affinity enrichment evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001110 ! peptide affinity enrichment evidence
+intersection_of: ECO:0001110 ! peptide affinity enrichment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T19:30:13Z
 
 [Term]
 id: ECO:0001245
-name: phosphopeptide array evidence used in manual assertion
-def: "A type of phosphopeptide array evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001112 ! phosphopeptide array evidence
-intersection_of: ECO:0001112 ! phosphopeptide array evidence
+name: peptide array evidence used in manual assertion
+def: "A type of peptide array evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001112 ! peptide array evidence
+intersection_of: ECO:0001112 ! peptide array evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:16:45Z
@@ -4912,10 +4916,10 @@ creation_date: 2014-03-17T20:23:15Z
 
 [Term]
 id: ECO:0001254
-name: radioassay evidence used in manual assertion
-def: "A type of radioassay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001120 ! radioassay evidence
-intersection_of: ECO:0001120 ! radioassay evidence
+name: radioisotope assay evidence used in manual assertion
+def: "A type of radioisotope assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001120 ! radioisotope assay evidence
+intersection_of: ECO:0001120 ! radioisotope assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T20:27:05Z
@@ -5116,13 +5120,6 @@ name: cell viability assay evidence
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-13T12:08:01Z
-
-[Term]
-id: ECO:0005006
-name: direct assay evidence(ECO:0000002)
-is_obsolete: true
-created_by: snadendla
-creation_date: 2015-02-11T16:26:08Z
 
 [Term]
 id: ECO:0005007
