@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 18:09:2015 15:00
+date: 18:09:2015 17:17
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -3588,7 +3588,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001113
 name: point mutation evidence
-is_a: ECO:0000200 ! sequence alignment evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3681,7 +3681,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001128
 name: syngeneic transplantation experiment evidence
-is_a: ECO:0000240 ! anatomical perturbation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5263,6 +5263,76 @@ intersection_of: ECO:0001025 ! co-electrophoresis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2015-09-09T15:08:17Z
+
+[Term]
+id: ECO:0005506
+name: missense mutation evidence
+is_a: ECO:0001113 ! point mutation evidence
+created_by: snadendla
+creation_date: 2015-09-18T16:52:34Z
+
+[Term]
+id: ECO:0005507
+name: nonsense mutation evidence
+is_a: ECO:0001113 ! point mutation evidence
+created_by: snadendla
+creation_date: 2015-09-18T16:55:32Z
+
+[Term]
+id: ECO:0005508
+name: silent mutation evidence
+is_a: ECO:0001113 ! point mutation evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:01:12Z
+
+[Term]
+id: ECO:0005509
+name: insertion mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:02:03Z
+
+[Term]
+id: ECO:0005510
+name: deletion mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:02:45Z
+
+[Term]
+id: ECO:0005511
+name: duplication mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:03:25Z
+
+[Term]
+id: ECO:0005512
+name: frameshift mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:05:49Z
+
+[Term]
+id: ECO:0005513
+name: repeat expansion mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:06:34Z
+
+[Term]
+id: ECO:0005514
+name: splice site mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:07:29Z
+
+[Term]
+id: ECO:0005515
+name: translocation mutation evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-18T17:08:01Z
 
 [Term]
 id: ID:0001601
