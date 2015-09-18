@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 10:09:2015 17:03
+date: 18:09:2015 15:00
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2822,7 +2822,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001011
 name: annexin-V staining evidence
-is_a: ECO:0005034 ! apoptosis assay evidence
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2883,7 +2883,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001019
 name: caspase assay evidence
-is_a: ECO:0005034 ! apoptosis assay evidence
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3005,7 +3005,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001036
 name: cytochrome C release assay evidence
-is_a: ECO:0005034 ! apoptosis assay evidence
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3027,7 +3027,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001039
 name: DNA laddering assay evidence
-is_a: ECO:0005034 ! apoptosis assay evidence
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3485,56 +3485,59 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001099
 name: motility wound healing assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001100
 name: MTS assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+synonym: "3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium" NARROW []
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001101
 name: MTT assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+synonym: "3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide" NARROW []
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001102
 name: multiplex bead-based immunoassay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000040 ! immunological assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001103
 name: natural variation mutant evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001104
 name: nuclear fragmentation evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001105
-name: NMR spectroscopy evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: nuclear magnetic resonance spectroscopy evidence
+synonym: "NMR spectroscopy" EXACT []
+is_a: ECO:0005031 ! structure determination evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001106
 name: nuclease protection assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000136 ! nucleic acid binding evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3717,7 +3720,7 @@ name: terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidenc
 synonym: "TdT-mediated dUTP-biotin nick end labeling assay" EXACT []
 synonym: "terminal deoxynucleotidyl transferase-dUTP nick end labeling assay evidence" EXACT []
 synonym: "TUNEL assay evidence" EXACT []
-is_a: ECO:0005034 ! apoptosis assay evidence
+is_a: ECO:0005034 ! apoptotic assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -4756,10 +4759,10 @@ creation_date: 2014-03-17T19:15:48Z
 
 [Term]
 id: ECO:0001238
-name: NMR spectroscopy evidence used in manual assertion
-def: "A type of NMR spectroscopy evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001105 ! NMR spectroscopy evidence
-intersection_of: ECO:0001105 ! NMR spectroscopy evidence
+name: nuclear magnetic resonance spectroscopy evidence used in manual assertion
+def: "A type of nuclear magnetic resonance spectroscopy evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
+intersection_of: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T19:18:50Z
@@ -5199,14 +5202,6 @@ created_by: snadendla
 creation_date: 2015-03-20T12:16:17Z
 
 [Term]
-id: ECO:0005032
-name: nuclear magnetic resonance spectroscopy evidence
-synonym: "NMR evidence" EXACT []
-is_a: ECO:0005031 ! structure determination evidence
-created_by: snadendla
-creation_date: 2015-03-20T12:19:16Z
-
-[Term]
 id: ECO:0005033
 name: electron microscopy evidence
 is_a: ECO:0005031 ! structure determination evidence
@@ -5215,7 +5210,7 @@ creation_date: 2015-03-20T12:21:48Z
 
 [Term]
 id: ECO:0005034
-name: apoptosis assay evidence
+name: apoptotic assay evidence
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-04-07T21:58:24Z
