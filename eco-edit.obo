@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 24:09:2015 15:55
+date: 25:09:2015 14:59
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2977,7 +2977,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001032
 name: constitutively active mutant evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -2998,7 +2998,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001035
 name: cytochemistry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000008 ! expression pattern evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3020,7 +3020,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001038
 name: deletion evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3034,21 +3034,21 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001040
 name: DNA/RNA dot blot assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005518 ! RNA detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001041
 name: DNA/RNA microarray evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005516 ! molecule detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001042
 name: dominant-negative mutant evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3065,56 +3065,57 @@ creation_date: 2014-03-17T16:59:00Z
 [Term]
 id: ECO:0001044
 name: Edman degradation evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001045
 name: eTag assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000023 ! affinity evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001046
 name: filter binding assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001047
 name: fluorescence in situ hybridization evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000008 ! expression pattern evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001048
 name: fluorescence resonance energy transfer evidence
-is_a: ECO:0000091 ! isb-sib evidence
+synonym: "FRET" EXACT []
+is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001049
 name: gel-filtration evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000325 ! chromatography evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001050
 name: histochemistry evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000008 ! expression pattern evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001051
 name: histology evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000324 ! imaging assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3435,28 +3436,29 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001092
 name: lipid binding assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001093
-name: LUMIER assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+name: luminescence-based mammalian interactome mapping assay evidence
+synonym: "LUMIER assay" EXACT []
+is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001094
 name: macroscopy evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001095
 name: mammalian 2-hybrid assay evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000025 ! hybrid interaction evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3470,7 +3472,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001097
 name: medical imaging evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000324 ! imaging assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3478,7 +3480,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001098
 name: microscopy evidence
 def: "A type of direct assay evidence where a microscope was used to view a sample." [ECO:MCC]
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0000324 ! imaging assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -4649,10 +4651,10 @@ creation_date: 2014-03-17T18:52:19Z
 
 [Term]
 id: ECO:0001227
-name: LUMIER assay evidence used in manual assertion
+name: luminescence-based mammalian interactome mapping assay evidence used in manual assertion
 def: "A type of LUMIER assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001093 ! LUMIER assay evidence
-intersection_of: ECO:0001093 ! LUMIER assay evidence
+is_a: ECO:0001093 ! luminescence-based mammalian interactome mapping assay evidence
+intersection_of: ECO:0001093 ! luminescence-based mammalian interactome mapping assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T18:55:16Z
@@ -5340,6 +5342,20 @@ name: molecule detection assay evidence
 is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-09-24T15:54:21Z
+
+[Term]
+id: ECO:0005517
+name: protein detection assay evidence
+is_a: ECO:0005516 ! molecule detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-25T14:27:40Z
+
+[Term]
+id: ECO:0005518
+name: RNA detection assay evidence
+is_a: ECO:0005516 ! molecule detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-25T14:43:53Z
 
 [Term]
 id: ID:0001601
