@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:09:2015 14:59
+date: 25:09:2015 20:23
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -68,9 +68,9 @@ is_a: ECO:0000000 ! evidence
 [Term]
 id: ECO:0000007
 name: immunofluorescence evidence
-def: "A type of protein assay evidence where a fluorescently labeled antibody is used to detect the presence or localization of a biomolecule within a cell." [ECO:MCC, TAIR:TED]
+def: "A type of protein detection assay evidence where a fluorescently labeled antibody is used to detect the presence or localization of a biomolecule within a cell." [ECO:MCC, TAIR:TED]
 synonym: "IDA: immunofluorescence" RELATED []
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 
 [Term]
 id: ECO:0000008
@@ -536,10 +536,11 @@ is_a: ECO:0000082 ! polymerase chain reaction evidence
 
 [Term]
 id: ECO:0000078
-name: Southern hybridization evidence
+name: southern hybridization evidence
 def: "Used when an annotation is based on the hybridization of a probe derived from the gene in question with a gene of known function/process/component. Can also be used when a probe derived from a gene of known function/process/component hybridizes with the gene in question." [TAIR:TED]
 synonym: "ISS: Southern blotting" RELATED []
-is_a: ECO:0000026 ! nucleic acid hybridization evidence
+synonym: "Southern blot" EXACT []
+is_a: ECO:0005519 ! DNA detection assay evidence
 
 [Term]
 id: ECO:0000079
@@ -626,7 +627,7 @@ name: restriction landmark genomic scanning evidence
 alt_id: ECO:0001125
 synonym: "restriction landmark genome scanning evidence" EXACT []
 synonym: "RLGS evidence" EXACT []
-is_a: ECO:0000073 ! experimental genomic evidence
+is_a: ECO:0005519 ! DNA detection assay evidence
 
 [Term]
 id: ECO:0000090
@@ -751,7 +752,7 @@ is_a: ECO:0000009 ! transcript expression evidence
 
 [Term]
 id: ECO:0000112
-name: Western blot evidence
+name: western blot evidence
 def: "Used when an annotation is made based on levels of protein expression determined by a Western blot assay." [TAIR:TED]
 synonym: "IEP: protein levels (e.g. Western blots)" RELATED []
 is_a: ECO:0000046 ! protein expression level evidence
@@ -1719,7 +1720,7 @@ def: "A type of protein assay evidence where an antigen is bound to a substrate,
 synonym: "ELISA evidence" EXACT []
 synonym: "enzyme-linked immunosorbent assay" NARROW []
 xref: PSI-MI:MI\:0411 "enzyme linked immunosorbent assay"
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2010-12-14T01:57:13Z
 
@@ -1836,10 +1837,10 @@ creation_date: 2010-12-20T06:09:45Z
 
 [Term]
 id: ECO:0000279
-name: Western blot evidence used in manual assertion
+name: western blot evidence used in manual assertion
 def: "A type of Western blot assay that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000112 ! Western blot evidence
-intersection_of: ECO:0000112 ! Western blot evidence
+is_a: ECO:0000112 ! western blot evidence
+intersection_of: ECO:0000112 ! western blot evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2010-12-20T06:20:01Z
@@ -2914,7 +2915,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001023
 name: chemiluminescence-linked immunoassay evidence
 synonym: "CLIA evidence" EXACT []
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3130,7 +3131,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001053
 name: immunocytochemistry evidence
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3144,7 +3145,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001055
 name: immunohistochemistry evidence
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3510,7 +3511,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001102
 name: multiplex bead-based immunoassay evidence
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3611,14 +3612,14 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001116
 name: protein dot blot assay evidence
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001117
 name: protein microarray evidence
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3648,7 +3649,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001121
 name: radioimmunoassay evidence
-is_a: ECO:0000040 ! immunological assay evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3662,7 +3663,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001124
 name: restriction fragment detection evidence
-is_a: ECO:0000073 ! experimental genomic evidence
+is_a: ECO:0005519 ! DNA detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5356,6 +5357,13 @@ name: RNA detection assay evidence
 is_a: ECO:0005516 ! molecule detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-25T14:43:53Z
+
+[Term]
+id: ECO:0005519
+name: DNA detection assay evidence
+is_a: ECO:0005516 ! molecule detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-25T19:33:25Z
 
 [Term]
 id: ID:0001601
