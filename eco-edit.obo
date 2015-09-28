@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:09:2015 20:23
+date: 28:09:2015 17:37
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -748,7 +748,9 @@ id: ECO:0000110
 name: RNA protection assay evidence
 def: "Used when an annotation is made based on levels of RNA expression determined by an RNA protection assay." [TAIR:TED]
 synonym: "IEP: RNA protection assay" RELATED []
-is_a: ECO:0000009 ! transcript expression evidence
+synonym: "ribonuclease protection assay" EXACT []
+synonym: "RPA" NARROW []
+is_a: ECO:0001106 ! nuclease protection assay evidence
 
 [Term]
 id: ECO:0000112
@@ -3540,7 +3542,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001106
 name: nuclease protection assay evidence
-is_a: ECO:0000136 ! nucleic acid binding evidence
+is_a: ECO:0005518 ! RNA detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -5364,6 +5366,23 @@ name: DNA detection assay evidence
 is_a: ECO:0005516 ! molecule detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-25T19:33:25Z
+
+[Term]
+id: ECO:0005520
+name: interferometric reflectance imaging sensor evidence
+synonym: "IRIS" EXACT []
+synonym: "Spectral Reflectance Imaging Biosensor" EXACT []
+synonym: "SRIB" EXACT []
+is_a: ECO:0005516 ! molecule detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-28T16:01:01Z
+
+[Term]
+id: ECO:0005521
+name: S1 nuclease protection assay evidence
+is_a: ECO:0001106 ! nuclease protection assay evidence
+created_by: snadendla
+creation_date: 2015-09-28T17:16:56Z
 
 [Term]
 id: ID:0001601
