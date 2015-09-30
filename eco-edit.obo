@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 28:09:2015 17:37
+date: 30:09:2015 12:01
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -3036,15 +3036,15 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001040
-name: DNA/RNA dot blot assay evidence
+name: RNA dot blot assay evidence
 is_a: ECO:0005518 ! RNA detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001041
-name: DNA/RNA microarray evidence
-is_a: ECO:0005516 ! molecule detection assay evidence
+name: RNA microarray evidence
+is_a: ECO:0005518 ! RNA detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -4154,20 +4154,20 @@ creation_date: 2014-03-17T16:26:46Z
 
 [Term]
 id: ECO:0001177
-name: DNA/RNA dot blot assay evidence used in manual assertion
-def: "A type of DNA/RNA dot blot assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001040 ! DNA/RNA dot blot assay evidence
-intersection_of: ECO:0001040 ! DNA/RNA dot blot assay evidence
+name: RNA dot blot assay evidence used in manual assertion
+def: "A type of RNA dot blot assay evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001040 ! RNA dot blot assay evidence
+intersection_of: ECO:0001040 ! RNA dot blot assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T16:45:52Z
 
 [Term]
 id: ECO:0001178
-name: DNA/RNA microarray evidence used in manual assertion
-def: "A type of DNA/RNA microarray evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001041 ! DNA/RNA microarray evidence
-intersection_of: ECO:0001041 ! DNA/RNA microarray evidence
+name: RNA microarray evidence used in manual assertion
+def: "A type of RNA microarray evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001041 ! RNA microarray evidence
+intersection_of: ECO:0001041 ! RNA microarray evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T16:46:50Z
@@ -5383,6 +5383,83 @@ name: S1 nuclease protection assay evidence
 is_a: ECO:0001106 ! nuclease protection assay evidence
 created_by: snadendla
 creation_date: 2015-09-28T17:16:56Z
+
+[Term]
+id: ECO:0005522
+name: DNA dot blot assay evidence
+is_a: ECO:0005519 ! DNA detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-30T10:03:03Z
+
+[Term]
+id: ECO:0005523
+name: DNA dot blot assay evidence used in manual assertion
+def: "A type of DNA dot blot assay evidence that is used in a manual assertion." [ECO:SN, ECO:SW]
+is_a: ECO:0005522 ! DNA dot blot assay evidence
+intersection_of: ECO:0005522 ! DNA dot blot assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-30T10:04:00Z
+
+[Term]
+id: ECO:0005524
+name: DNA microarray evidence
+is_a: ECO:0005519 ! DNA detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-30T10:12:48Z
+
+[Term]
+id: ECO:0005525
+name: DNA microarray evidence used in manual assertion
+def: "A type of DNA microarray evidence that is used in a manual assertion." [ECO:SN, ECO:SW]
+is_a: ECO:0005524 ! DNA microarray evidence
+intersection_of: ECO:0005524 ! DNA microarray evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-30T10:13:09Z
+
+[Term]
+id: ECO:0005526
+name: matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
+synonym: "MALDI-TOF-MS" EXACT []
+is_a: ECO:0005517 ! protein detection assay evidence
+created_by: snadendla
+creation_date: 2015-09-30T10:51:56Z
+
+[Term]
+id: ECO:0005527
+name: matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence used in manual assertion
+def: "A type of matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence that is  used in a manual assertion." [ECO:SN, ECO:SW]
+is_a: ECO:0005526 ! matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
+intersection_of: ECO:0005526 ! matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-30T10:58:51Z
+
+[Term]
+id: ECO:0005528
+name: site-directed mutagenesis evidence
+synonym: "site directed mutagenesis" EXACT []
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-30T11:34:41Z
+
+[Term]
+id: ECO:0005529
+name: random mutagenesis evidence
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2015-09-30T11:55:03Z
+
+[Term]
+id: ECO:0005530
+name: random mutagenesis evidence used in manual assertion
+def: "A type of random mutagenesis evidence that is used in a manual assertion." []
+is_a: ECO:0005529 ! random mutagenesis evidence
+intersection_of: ECO:0005529 ! random mutagenesis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-30T11:57:00Z
 
 [Term]
 id: ID:0001601
