@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:09:2015 12:01
+date: 30:09:2015 16:38
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -203,7 +203,7 @@ id: ECO:0000028
 name: motif similarity evidence
 def: "Used when an annotation is made based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence." [TAIR:TED]
 synonym: "ISS: recognized domains" RELATED []
-is_a: ECO:0000044 ! sequence similarity evidence
+is_a: ECO:0000202 ! match to sequence model evidence
 
 [Term]
 id: ECO:0000029
@@ -5460,6 +5460,40 @@ intersection_of: ECO:0005529 ! random mutagenesis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2015-09-30T11:57:00Z
+
+[Term]
+id: ECO:0005531
+name: motif discovery evidence
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: snadendla
+creation_date: 2015-09-30T15:04:45Z
+
+[Term]
+id: ECO:0005532
+name: motif discovery evidence used in manual assertion
+def: "A type of motif discovery evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005531 ! motif discovery evidence
+intersection_of: ECO:0005531 ! motif discovery evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-30T15:05:29Z
+
+[Term]
+id: ECO:0005533
+name: phylogenetic footprinting evidence
+is_a: ECO:0005531 ! motif discovery evidence
+created_by: snadendla
+creation_date: 2015-09-30T16:23:02Z
+
+[Term]
+id: ECO:0005534
+name: phylogenetic footprinting evidence used in manual assertion
+def: "A type of phylogenetic footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005533 ! phylogenetic footprinting evidence
+intersection_of: ECO:0005533 ! phylogenetic footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-09-30T16:24:07Z
 
 [Term]
 id: ID:0001601
