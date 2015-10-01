@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:09:2015 16:38
+date: 01:10:2015 16:35
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -726,6 +726,7 @@ id: ECO:0000106
 name: Northern assay evidence
 def: "Used when an annotation is made based on levels of RNA expression determined by a Northern blot experiment." [TAIR:TED]
 synonym: "IEP: transcript levels (e.g. Northerns)" RELATED []
+synonym: "Northern blot" EXACT []
 is_a: ECO:0000048 ! transcript expression level evidence
 
 [Term]
@@ -2432,7 +2433,7 @@ name: sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
 def: "A type of two-dimensional gel electrophoresis evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258, url:http\://www.nature.com/nmeth/journal/v2/n1/full/nmeth0105-83.html, url:http\://www.ncbi.nlm.nih.gov/Class/NAWBIS/Modules/Protein/protein18.html]
 comment: Electrophoretic mobility is a function of both the length and charge of a protein. The protein sample is linearized with sodium dodecyl sulfate (SDS), an anionic detergent. Typically, polypeptides bound with SDS possess an even distribution of charge per unit mass, and subsequent fractionation is by size.
 synonym: "SDS-PAGE evidence" EXACT []
-is_a: ECO:0005503 ! two-dimensional gel electrophoresis evidence
+is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: mchibucos
 creation_date: 2012-07-31T02:56:43Z
 
@@ -2487,7 +2488,7 @@ name: two-dimensional agarose gel electrophoresis evidence
 def: "A type of two-dimensional gel electrophoresis evidence where DNA molecules are electrophoresed on a low percentage agarose gel followed by high voltage electrophoresis on a higher percentage agarose gel in the presence of ethidium bromide." [PMID:16118435, PMID:8594382]
 comment: The first dimension gel is intentionally run at low voltage in low percentage agarose to separate DNA molecules in proportion to their mass. The second dimension is run at high voltage in a gel of higher agarose concentration in the presence of ethidium bromide so that the mobility of a non-linear molecule is drastically influenced by its shape.
 synonym: "2-D agarose gel electrophoresis" EXACT []
-is_a: ECO:0005503 ! two-dimensional gel electrophoresis evidence
+is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: mchibucos
 creation_date: 2012-08-24T12:42:37Z
 
@@ -4004,10 +4005,10 @@ creation_date: 2014-03-17T16:10:40Z
 
 [Term]
 id: ECO:0001162
-name: two-dimensional gel electrophoresis evidence used in manual assertion
-def: "A type of two-dimensional gel electrophoresis evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0005503 ! two-dimensional gel electrophoresis evidence
-intersection_of: ECO:0005503 ! two-dimensional gel electrophoresis evidence
+name: co-electrophoresis evidence used in manual assertion
+def: "A type of co-electrophoresis evidence that is used in a manual assertion." [ECO:MCC]
+is_a: ECO:0001025 ! co-electrophoresis evidence
+intersection_of: ECO:0001025 ! co-electrophoresis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T16:11:22Z
@@ -5248,10 +5249,11 @@ creation_date: 2015-06-26T11:46:15Z
 
 [Term]
 id: ECO:0005503
-name: two-dimensional gel electrophoresis evidence
+name: two-dimensional polyacrylamide gel electrophoresis evidence
+synonym: "2D-PAGE" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: snadendla
-creation_date: 2015-07-07T15:02:26Z
+creation_date: 2015-10-01T16:23:20Z
 
 [Term]
 id: ECO:0005504
@@ -5259,15 +5261,6 @@ name: spectrometry evidence
 is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-08-14T15:48:08Z
-
-[Term]
-id: ECO:0005505
-name: co-electrophoresis evidence used in manual assertion
-is_a: ECO:0001025 ! co-electrophoresis evidence
-intersection_of: ECO:0001025 ! co-electrophoresis evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: snadendla
-creation_date: 2015-09-09T15:08:17Z
 
 [Term]
 id: ECO:0005506
@@ -5469,16 +5462,6 @@ created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
 
 [Term]
-id: ECO:0005532
-name: motif discovery evidence used in manual assertion
-def: "A type of motif discovery evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0005531 ! motif discovery evidence
-intersection_of: ECO:0005531 ! motif discovery evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: snadendla
-creation_date: 2015-09-30T15:05:29Z
-
-[Term]
 id: ECO:0005533
 name: phylogenetic footprinting evidence
 is_a: ECO:0005531 ! motif discovery evidence
@@ -5486,14 +5469,11 @@ created_by: snadendla
 creation_date: 2015-09-30T16:23:02Z
 
 [Term]
-id: ECO:0005534
-name: phylogenetic footprinting evidence used in manual assertion
-def: "A type of phylogenetic footprinting evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0005533 ! phylogenetic footprinting evidence
-intersection_of: ECO:0005533 ! phylogenetic footprinting evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
+id: ECO:0005535
+name: machine learning prediction of motif instance evidence
+is_a: ECO:0000202 ! match to sequence model evidence
 created_by: snadendla
-creation_date: 2015-09-30T16:24:07Z
+creation_date: 2015-10-01T11:58:36Z
 
 [Term]
 id: ID:0001601
