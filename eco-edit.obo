@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:10:2015 16:35
+date: 01:10:2015 16:40
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2430,7 +2430,7 @@ creation_date: 2012-06-08T11:49:17Z
 [Term]
 id: ECO:0000333
 name: sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
-def: "A type of two-dimensional gel electrophoresis evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258, url:http\://www.nature.com/nmeth/journal/v2/n1/full/nmeth0105-83.html, url:http\://www.ncbi.nlm.nih.gov/Class/NAWBIS/Modules/Protein/protein18.html]
+def: "A type of gel electrophoresis evidence where proteins are separated according to their electrophoretic mobility." [ECO:MCC, PubMed:4861258, url:http\://www.nature.com/nmeth/journal/v2/n1/full/nmeth0105-83.html, url:http\://www.ncbi.nlm.nih.gov/Class/NAWBIS/Modules/Protein/protein18.html]
 comment: Electrophoretic mobility is a function of both the length and charge of a protein. The protein sample is linearized with sodium dodecyl sulfate (SDS), an anionic detergent. Typically, polypeptides bound with SDS possess an even distribution of charge per unit mass, and subsequent fractionation is by size.
 synonym: "SDS-PAGE evidence" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
@@ -2485,7 +2485,7 @@ creation_date: 2012-08-24T12:34:01Z
 [Term]
 id: ECO:0000339
 name: two-dimensional agarose gel electrophoresis evidence
-def: "A type of two-dimensional gel electrophoresis evidence where DNA molecules are electrophoresed on a low percentage agarose gel followed by high voltage electrophoresis on a higher percentage agarose gel in the presence of ethidium bromide." [PMID:16118435, PMID:8594382]
+def: "A type of gel electrophoresis evidence where DNA molecules are electrophoresed on a low percentage agarose gel followed by high voltage electrophoresis on a higher percentage agarose gel in the presence of ethidium bromide." [PMID:16118435, PMID:8594382]
 comment: The first dimension gel is intentionally run at low voltage in low percentage agarose to separate DNA molecules in proportion to their mass. The second dimension is run at high voltage in a gel of higher agarose concentration in the presence of ethidium bromide so that the mobility of a non-linear molecule is drastically influenced by its shape.
 synonym: "2-D agarose gel electrophoresis" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
