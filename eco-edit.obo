@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:10:2015 16:40
+date: 09:10:2015 16:29
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -5263,6 +5263,13 @@ created_by: snadendla
 creation_date: 2015-08-14T15:48:08Z
 
 [Term]
+id: ECO:0005505
+name: regular expression motif search evidence
+is_a: ECO:0000028 ! motif similarity evidence
+created_by: snadendla
+creation_date: 2015-10-09T13:51:52Z
+
+[Term]
 id: ECO:0005506
 name: missense mutation evidence
 is_a: ECO:0001113 ! point mutation evidence
@@ -5462,6 +5469,13 @@ created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
 
 [Term]
+id: ECO:0005532
+name: consensus search evidence
+is_a: ECO:0000028 ! motif similarity evidence
+created_by: snadendla
+creation_date: 2015-10-09T14:12:54Z
+
+[Term]
 id: ECO:0005533
 name: phylogenetic footprinting evidence
 is_a: ECO:0005531 ! motif discovery evidence
@@ -5469,11 +5483,27 @@ created_by: snadendla
 creation_date: 2015-09-30T16:23:02Z
 
 [Term]
+id: ECO:0005534
+name: comparative genomics motif search evidence
+is_a: ECO:0000028 ! motif similarity evidence
+created_by: snadendla
+creation_date: 2015-10-09T14:30:38Z
+
+[Term]
 id: ECO:0005535
 name: machine learning prediction of motif instance evidence
 is_a: ECO:0000202 ! match to sequence model evidence
 created_by: snadendla
 creation_date: 2015-10-01T11:58:36Z
+
+[Term]
+id: ECO:0005536
+name: position-specific scoring matrix motif search evidence
+synonym: "PSSM" NARROW []
+synonym: "PSSM motif search" EXACT []
+is_a: ECO:0000028 ! motif similarity evidence
+created_by: snadendla
+creation_date: 2015-10-09T15:04:35Z
 
 [Term]
 id: ID:0001601
