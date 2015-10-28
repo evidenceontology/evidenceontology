@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 09:10:2015 16:29
-saved-by: snadendla
+date: 28:10:2015 12:31
+saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -5265,6 +5265,8 @@ creation_date: 2015-08-14T15:48:08Z
 [Term]
 id: ECO:0005505
 name: regular expression motif search evidence
+def: "A type of motif similarity evidence where the motif, a local alignment of sequences, is represented by a regular expression, which captures the variability of nucleotides at each position in a discrete form and can then be used to search genetic sequences by identifying matches to the regular expression." [ECO:SW, PMID:17337630]
+comment: Regular expression is a computational tool used for determining whether a given genome contains a DNA region resembling a transcription factor binding motif. For example A/T=W indicates A or T may be present in a column of the alignment. (PMID: 20708667).
 is_a: ECO:0000028 ! motif similarity evidence
 created_by: snadendla
 creation_date: 2015-10-09T13:51:52Z
@@ -5464,6 +5466,8 @@ creation_date: 2015-09-30T11:57:00Z
 [Term]
 id: ECO:0005531
 name: motif discovery evidence
+def: "A type of sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
+comment: Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF (PMID: 19892760), from peaks in ChIP-seq experiments with the TF (PMID: 16264194), or from the comparative genomics analysis of the promoter regions of orthologs (PMID: 23032607).
 is_a: ECO:0000200 ! sequence alignment evidence
 created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
@@ -5471,6 +5475,8 @@ creation_date: 2015-09-30T15:04:45Z
 [Term]
 id: ECO:0005532
 name: consensus search evidence
+def: "A type of motif similarity evidence where the motif is represented by a consensus sequence which incorporates the most frequent nucleotide at each position acting as a generic representative for the sequences in the alignment, and is compared to the genetic sequence  for a perfect or imperfect match." [ECO:SW, PMID:15130839]
+comment: This technique is used to identify transcription factor binding sites by searching a bacterial genome for DNA regions resembling a given TF-binding motif. PMID: 17085555.
 is_a: ECO:0000028 ! motif similarity evidence
 created_by: snadendla
 creation_date: 2015-10-09T14:12:54Z
@@ -5478,6 +5484,8 @@ creation_date: 2015-10-09T14:12:54Z
 [Term]
 id: ECO:0005533
 name: phylogenetic footprinting evidence
+def: "A type of motif discovery evidence based on a set of algorithms that infer motifs in non-coding DNA sequences from the conservation of functional regulatory sites through evolution at a higher rate than their local surroundings for the identification of an evolutionary 'footprint'." [ECO:SW, PMID:16477324, PMID:3199442]
+comment: The name derives to experimental footprinting techniques where transcription factor (TF)-binding sites are identified by sequencing the region of DNA protected from biochemical agents by the bound TF. This technique is used to identify or verify transcription factor-binding motifs, most commonly in the Eukaryota (PMID: 11997340).
 is_a: ECO:0005531 ! motif discovery evidence
 created_by: snadendla
 creation_date: 2015-09-30T16:23:02Z
@@ -5485,6 +5493,8 @@ creation_date: 2015-09-30T16:23:02Z
 [Term]
 id: ECO:0005534
 name: comparative genomics motif search evidence
+def: "A type of motif similarity evidence based on comparative genomics which uses a search method to scan a set of genomes for instances of a specific motif, and then applies a comparative criterion to analyze the collective strength of these predictions, based on the assumption that functional instances of the motif will be preserved by natural selection and their prediction will therefore be consistent across genomes." [ECO:SW, PMID:10854408]
+comment: This technique is used to predict transcription factor binding sites in gene promoter regions by identifying conserved DNA regions across multiple genomes. PMID: 22305460. Orthology is a typical comparative criterion used.
 is_a: ECO:0000028 ! motif similarity evidence
 created_by: snadendla
 creation_date: 2015-10-09T14:30:38Z
@@ -5492,6 +5502,8 @@ creation_date: 2015-10-09T14:30:38Z
 [Term]
 id: ECO:0005535
 name: machine learning prediction of motif instance evidence
+def: "A type of match to sequence model evidence which captures the application of a broad suite of supervised and unsupervised machine learning algorithms trained on known motif instances and applied to the prediction of novel putative instances of a motif in a set of biological sequences." [ECO:SW, PMID:17117497, PMID:2014171]
+comment: Machine learning algorithms include, but are not limited to artificial neural networks, random-forest, k-means clustering, hidden Markov models. This suite of methods can be used to identify or verify transcription factor-binding sites in genomic sequences (PMID: 15703297).
 is_a: ECO:0000202 ! match to sequence model evidence
 created_by: snadendla
 creation_date: 2015-10-01T11:58:36Z
@@ -5499,6 +5511,8 @@ creation_date: 2015-10-01T11:58:36Z
 [Term]
 id: ECO:0005536
 name: position-specific scoring matrix motif search evidence
+def: "A type of motif similarity evidence where the motif is represented by a position-specific frequency matrix (PSFM) that specifies the frequency of each base at each position of the motif, from which a position-specific scoring matrix (PSSM) can be derived under the framework of a log-likelihood ratio providing a scoring system based on the likelihood of a sequence given the motif, versus a genomic-frequency based null hypothesis." [ECO:SW, PMID:10812473]
+comment: This technique is used to predict transcription factor binding sites in gene promoter regions by using a position weight matrix approach. (PMID: 15604457).
 synonym: "PSSM" NARROW []
 synonym: "PSSM motif search" EXACT []
 is_a: ECO:0000028 ! motif similarity evidence
