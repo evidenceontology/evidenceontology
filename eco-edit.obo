@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:10:2015 16:21
+date: 29:10:2015 16:51
 saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -1283,7 +1283,8 @@ creation_date: 2010-11-16T01:29:08Z
 [Term]
 id: ECO:0000227
 name: chromatin immunoprecipitation-PCR evidence
-def: "A chromatin immunoprecipitation (ChIP) evidence that uses polymerase chain reaction (PCR) for DNA detection." [ECO:MCC]
+def: "A type of chromatin immunoprecipitation (ChIP) evidence that uses polymerase chain reaction (PCR) where specific primers are used on the pulled-down DNA for DNA detection." [ECO:MCC, ECO:SW, PMID:18388953]
+comment: ChIP-PCR is often used to validate ChIP-chip results and less frequently,ChIP-Seq results.
 synonym: "ChIP-PCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
@@ -1301,9 +1302,10 @@ creation_date: 2010-11-16T05:26:47Z
 [Term]
 id: ECO:0000229
 name: chromatin immunoprecipitation-seq evidence
-def: "A chromatin immunoprecipitation (ChIP) evidence that uses high-throughput sequencing for DNA detection." [ECO:MCC, OBI:0000716]
-synonym: "ChIP-seq evidence" EXACT []
+def: "A chromatin immunoprecipitation (ChIP) evidence that uses high-throughput sequencing where immunoprecipitated DNA fragments are funneled into a massively parallel sequencer to produce multiple short reads for locating binding sites of DNA-associated proteins." [ECO:MCC, ECO:SW, OBI:0000716, PMID:22955991]
+comment: ChIP-Seq experiments often use the input as a control to eliminate biases. To obtain similar results, ChIP-chip with high-density tiling arrays can be used.
 synonym: "ChIP-SEQ evidence" EXACT [OBI:0000716]
+synonym: "ChIP-seq evidence" EXACT [PMID:22955991]
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
 creation_date: 2010-11-16T05:30:41Z
@@ -1311,7 +1313,8 @@ creation_date: 2010-11-16T05:30:41Z
 [Term]
 id: ECO:0000230
 name: chromatin immunoprecipitation-chip evidence
-def: "A chromatin immunoprecipitation (ChIP) evidence that uses a tiling microarray for DNA detection." [ECO:MCC]
+def: "A type of chromatin immunoprecipitation (ChIP) evidence that uses a tiling microarray for the detection of protein-bound DNA regions where chromatin is immunoprecipitated for protein tagging and DNA is sheared from the cross-linked protein-DNA complex to be arrayed revealing the protein-bound genomic regions." [ECO:MCC, ECO:SW, PMID:18388953, PMID:19381927]
+comment: A fixating agent such as formaldehyde is used to cross link proteins and DNA. Sonication is applied for DNA shearing. For transcription factor tagging, an antibody or epitope is employed. After cross-linking is reversed, the DNA is amplified and labeled with a flourophore for microarray which produces a resolution of aproximately 500 bp.
 synonym: "ChIP-chip evidence" EXACT []
 synonym: "ChIP-on-chip evidence" EXACT []
 xref: PSI-MI:MI\:0225 "chromatin immunoprecipitation array"
@@ -5144,7 +5147,6 @@ def: "A type of reporter gene assay evidence based on the fusion of the lacZ gen
 comment: The assay is often performed using a plasmid borne construction on a lacZ strain.
 synonym: "beta-gal reporter gene assay" EXACT []
 synonym: "lacZ reporter gene assay" RELATED []
-xref: PMID:20439410
 is_a: ECO:0000049 ! reporter gene assay evidence
 created_by: swolfish
 creation_date: 2015-10-29T15:57:10Z
@@ -5175,6 +5177,15 @@ def: "A type of reporter gene assay evidence where luciferase, an oxidative enzy
 is_a: ECO:0000049 ! reporter gene assay evidence
 created_by: swolfish
 creation_date: 2015-10-29T16:15:39Z
+
+[Term]
+id: ECO:0001806
+name: chromatin immunoprecipitation- exonuclease evidence
+def: "A type of chromatin immunoprecipitation evidence that uses gama-exonuclease to digest TF-unbound DNA after ChIP for the identification of transcription factor binding site locations with high-resolution data." [ECO:SW, PMID:25249628]
+synonym: "ChIP-exo" EXACT [PMID:25249628]
+is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
+created_by: swolfish
+creation_date: 2015-10-29T16:37:36Z
 
 [Term]
 id: ECO:0005004
