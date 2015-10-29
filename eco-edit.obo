@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:10:2015 15:36
+date: 29:10:2015 16:21
 saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -5125,6 +5125,56 @@ intersection_of: ECO:0000017 ! ectopic expression evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2014-03-17T22:34:56Z
+
+[Term]
+id: ECO:0001801
+name: alkaline phosphatase reporter gene assay evidence
+def: "A type of reporter gene assay evidence based on the fusion of selected genes with the phoA gene to express alkaline phosphatase in periplasmic space for protein tracing." [ECO:SW]
+comment: Alkaline phosphatase reporter assay produces a hybrid protein with alkaline phosphatase activity following transportation across the cellular membrane.
+synonym: "SEAP reporter assay" RELATED []
+synonym: "Secreted Embryonic Alkaline Phosphatase reporter assay" RELATED []
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: swolfish
+creation_date: 2015-10-29T15:53:45Z
+
+[Term]
+id: ECO:0001802
+name: beta-galactosidase reporter gene assay evidence
+def: "A type of reporter gene assay evidence based on the fusion of the lacZ gene to a specific promoter for the expression of beta-galactosidase which will appear blue when grown on a X-gal medium." [ECO:SW, PMID:20439410]
+comment: The assay is often performed using a plasmid borne construction on a lacZ strain.
+synonym: "beta-gal reporter gene assay" EXACT []
+synonym: "lacZ reporter gene assay" RELATED []
+xref: PMID:20439410
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: swolfish
+creation_date: 2015-10-29T15:57:10Z
+
+[Term]
+id: ECO:0001803
+name: chloramphenicol acetyltransferase reporter gene assay evidence
+def: "A type of reporter gene assay evidence based on the fusion of the CAT gene to a specific promoter for the expression of chloramphenicol acetyltransferase which confers resistance to the chloramphenicol antibiotic." [ECO:SW, PMID:1630936]
+comment: The amount of acetylated chloramphenicol is directly proportional to the amount of CAT enzyme present.
+synonym: "CAT reporter gene assay" EXACT [PMID:1630936]
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: swolfish
+creation_date: 2015-10-29T16:06:42Z
+
+[Term]
+id: ECO:0001804
+name: beta-glucuronidase reporter gene assay evidence
+def: "A type of reporter gene assay evidence where the beta-glucuronidase enzyme from Escherichia coli is used as the reporter to transform non-fluorescent substrates into fluorescents for detection." [ECO:SW]
+synonym: "GUS reporter gene assay" EXACT []
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: swolfish
+creation_date: 2015-10-29T16:11:02Z
+
+[Term]
+id: ECO:0001805
+name: luciferase reporter gene assay evidence
+def: "A type of reporter gene assay evidence where luciferase, an oxidative enzyme, is used as the reporter to detect a gene product with bioluminescence." [ECO:SW, PMID:17623934]
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: swolfish
+creation_date: 2015-10-29T16:15:39Z
 
 [Term]
 id: ECO:0005004
