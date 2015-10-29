@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 28:10:2015 16:40
-saved-by: snadendla
+date: 29:10:2015 15:36
+saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -747,9 +747,10 @@ is_a: ECO:0000082 ! polymerase chain reaction evidence
 [Term]
 id: ECO:0000110
 name: RNA protection assay evidence
-def: "Used when an annotation is made based on levels of RNA expression determined by an RNA protection assay." [TAIR:TED]
+def: "A type of nuclease protection assay evidence used for transcription start-site localization where mRNA is hybridize with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions and the resistant fragment size and identity is determined with gel electrophoresis." [ECO:SW, PMID:23457339, TAIR:TED]
 synonym: "IEP: RNA protection assay" RELATED []
 synonym: "ribonuclease protection assay" EXACT []
+synonym: "RNAse protection assay" RELATED []
 synonym: "RPA" NARROW []
 is_a: ECO:0001106 ! nuclease protection assay evidence
 
@@ -3038,6 +3039,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001040
 name: RNA dot blot assay evidence
+def: "A type of RNA detection assay evidence based on the direct application of a RNA mixture in a circular motion on a matrix for hybridization with labeled DNA fragments." [ECO:SW, PMID:21424648]
+synonym: "RNA dot blot" RELATED []
 is_a: ECO:0005518 ! RNA detection assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -5250,6 +5253,8 @@ creation_date: 2015-06-26T11:46:15Z
 [Term]
 id: ECO:0005503
 name: two-dimensional polyacrylamide gel electrophoresis evidence
+def: "A type of gel electrophoresis beginning with one dimension electrophoresis where biomolecules are electrophoresed on a low percentage polyacrylamide gel  to be separated in proportion to their mass or isoelectric point, followed by high voltage electrophoresis on a higher percentage gel in the presence of ethidium bromide to alter non-linear molecular shape." [ECO:SW]
+comment: Two-dimensional polyacrylamide gel electrophoresis is commonly employed to establish a proteome for an organism and demonstrate expression changes.
 synonym: "2D-PAGE" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: snadendla
@@ -5372,6 +5377,8 @@ creation_date: 2015-09-25T19:33:25Z
 [Term]
 id: ECO:0005520
 name: interferometric reflectance imaging sensor evidence
+def: "A type of molecule detection assay evidence based on changes in surface-reflected light due to ligand binding on the surface of a semi-transparent substrate to detect proteins, DNA, and other biological material in a multiplexed, high-throughput microarray format without labels." [ECO:SW, PMID:21587155, PMID:24271115]
+comment: Differences in the optical path lengths between a surface layer and a buried silica layer can be measured very precisely allowing optical height information to be converted to accumulated mass on the surface. For the purpose of TF-binding site identification, IRIS is coupled with DNA-arrays with immobilized potential binding regions exposed to the protein of interest and eluted. Protein-bound fragments exhibit changes in reflectance that can be used to gauge binding quantitatively.
 synonym: "IRIS" EXACT []
 synonym: "Spectral Reflectance Imaging Biosensor" EXACT []
 synonym: "SRIB" EXACT []
@@ -5382,6 +5389,7 @@ creation_date: 2015-09-28T16:01:01Z
 [Term]
 id: ECO:0005521
 name: S1 nuclease protection assay evidence
+def: "A type of nuclease protection assay evidence where RNA is hybridized with complementary DNA probes and exposed to S1 nuclease for unbound RNA degradation after which the intact RNA is run on a gel for probe size determination and RNA identification to detect and map specific RNAs in a complex mixture of total cellular RNA." [ECO:SW, PMID:21390683]
 is_a: ECO:0001106 ! nuclease protection assay evidence
 created_by: snadendla
 creation_date: 2015-09-28T17:16:56Z
@@ -5406,6 +5414,10 @@ creation_date: 2015-09-30T10:04:00Z
 [Term]
 id: ECO:0005524
 name: DNA microarray evidence
+def: "A type of DNA detection assay evidence where complimentary ssDNA is attached to a solid glass, silicon, or plastic surface and is hybridized with a labeled sample of extracted mRNA or amplified cDNA and stimulated with a laser for fluorescence detected with a scanner." [ECO:SW, PMID:17660860]
+comment: The mRNA extraction is performed in induced and non-induced cells and reverse transcribed with different fluorophore labeling for controls and experiment. Fluorescence is measured at two different wavelengths and the ratio between the two fluorescence intensities corresponds to the induction level.
+synonym: "DNA chip" RELATED [PMID:10398077]
+synonym: "DNA-array expression analysis " RELATED []
 is_a: ECO:0005519 ! DNA detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-30T10:12:48Z
@@ -5522,6 +5534,7 @@ creation_date: 2015-10-09T15:04:35Z
 [Term]
 id: ECO:0005537
 name: xylE reporter gene assay evidence
+def: "A type of reporter gene assay evidence based on the fusion of the xylE gene to a specific promoter for the expression of catechol 2,3-dioxygenase that converts the colorless catechol substrate to yellow 2-hydroxymuconic semialdehyde for identification of the expression of a particular gene." [ECO:SW, PMID:2592344]
 is_a: ECO:0000049 ! reporter gene assay evidence
 created_by: snadendla
 creation_date: 2015-10-28T15:31:28Z
