@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:11:2015 12:26
+date: 03:11:2015 14:28
 saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -593,7 +593,8 @@ creation_date: 2009-03-20T11:55:18Z
 [Term]
 id: ECO:0000085
 name: immunoprecipitation evidence
-def: "A type of protein assay evidence that involves precipitation of a multivalent antigen by a bivalent antibody." [ECO:MCC, TAIR:TED]
+def: "A type of protein assay evidence that involves precipitation of a multivalent antigen by a bivalent antibody for protein isolation." [ECO:MCC, ECO:SW, TAIR:TED]
+comment: Transcription factors isolated in this way can be incubated with a radiolabeled probe to demonstrate binding.
 synonym: "IDA: immunoprecipitation" RELATED []
 is_a: ECO:0000039 ! protein assay evidence
 
@@ -665,7 +666,9 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000095
 name: cell growth assay evidence
-def: "Evidence from an assay that measures one or more aspects of cell growth, such as growth rate or extent of growth, over a specified time period." [PomBase:MAH]
+def: "A type of in vivo assay evidence that measures one or more aspects of cell growth over a specified time period to indicate an induced or repressed regulatory effect." [ECO:SW, PomBase:MAH]
+comment: Cell growth aspects can include growth rate and extent of growth. A cell growth curve acts as a natural reporter.
+synonym: "growth curve analysis" RELATED []
 is_a: ECO:0000178 ! in vivo assay evidence
 created_by: mchibucos
 creation_date: 2014-10-15T00:58:50Z
@@ -1725,7 +1728,8 @@ creation_date: 2010-12-10T03:39:41Z
 [Term]
 id: ECO:0000267
 name: enzyme-linked immunoabsorbent assay evidence
-def: "A type of protein assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen." [ECO:MCC]
+def: "A type of protein assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen which is visualized with a color change in the substrate." [ECO:MCC, ECO:SW, PMID:23949770]
+comment: ELISA is sometimes used in the study of transcriptional regulation to identify a produced protein, especially secreted protein.
 synonym: "ELISA evidence" EXACT []
 synonym: "enzyme-linked immunosorbent assay" NARROW []
 xref: PSI-MI:MI\:0411 "enzyme linked immunosorbent assay"
@@ -3282,7 +3286,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001071
 name: in vitro transcription assay evidence
-def: "A type of in vitro assay evidence where transcription is detected in vitro." [ECO:SN, PMID:21125481, SIB:PG]
+def: "A type of in vitro assay evidence where transcription is detected in vitro to validate the activation or repression ablity of a transcription factor in the absence of other proteins present in in vivo conditions." [ECO:SN, ECO:SW, PMID:21125481, SIB:PG]
 is_a: ECO:0000181 ! in vitro assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -5210,6 +5214,69 @@ created_by: swolfish
 creation_date: 2015-11-03T12:22:46Z
 
 [Term]
+id: ECO:0001809
+name: DNA affinity chromatography evidence 
+def: "A type of chromatography evidence where immobilized promoter DNA is labeled and bound to a matrix through which a protein mixture is poured and then eluted to purify specific DNA binding proteins." [ECO:SW, PMID:11694305, PMID:11725488]
+comment: Biotinylation is commonly used for labeling and beads are commonly used as the matrix. Bound protein will remain attached to the beads. Results can be detected through gel electrophoresis and then sequenced by mass-spectrometry. This technique can be used to demonstrate binding of a purified protein, or to purify the binding protein from crude extract or protein mixture.
+synonym: "DNA affinity purification" RELATED []
+is_a: ECO:0000325 ! chromatography evidence
+created_by: swolfish
+creation_date: 2015-11-03T13:48:49Z
+
+[Term]
+id: ECO:0001810
+name: DNAse footprinting evidence
+def: "A type of nucleic acid binding evidence where proteins that have been bound to DNA protect a binding site from enzymatic cleavage with DNAse, thereby detecting protein-DNA interactions." [ECO:SW, PMID:212715, PMID:22194258]
+comment: In DNAse footingprinting amplified DNA combined with TF and DNAse is electrophoresed for fragment comparison with a non-TF control sample. TF-bound fragments do not appear in the gel. Such fragments can be isolated, purified, and sequenced. This technique is often used to identify the binding motif of a TF resolving the protected region to 50-100 bp which can be further examined for TF-binding sites.
+synonym: "DNase protection" RELATED []
+is_a: ECO:0000136 ! nucleic acid binding evidence
+created_by: swolfish
+creation_date: 2015-11-03T13:55:15Z
+
+[Term]
+id: ECO:0001811
+name: fluorescence anisotropy evidence
+def: "A type of fluorescence evidence based on rapid and quantitative analysis of diverse molecular interactions, enzyme activities, and nucleic acid hybridization which uses a fluorophore to measure the binding constants and kinetics of reactions that cause a change in the rotational time of the molecules." [ECO:SW, PMID:20232898]
+comment: The degree of polarization of a fluorophore is inversely related to its molecular rotation. When the fluorophore is bound to a small molecule, the rate at which it tumbles can decrease significantly from when it is bound tightly to a large protein. If the fluorophore is attached to the larger protein in a binding pair, the difference in polarization between bound and unbound states will be smaller and less accurate. The degree of binding is calculated by using the difference in anisotropy of the partially bound, free, and fully bound states measured by titrating the two binding partners. Fluorescence polarixation assays are homogeneous.
+synonym: "FA" EXACT []
+synonym: "Fluorescence polarization" RELATED [PMCID:3277431, PMID:20232898]
+synonym: "FP" RELATED [PMCID:3277431, PMID:20232898]
+is_a: ECO:0001115 ! fluorescence evidence
+created_by: swolfish
+creation_date: 2015-11-03T14:01:36Z
+
+[Term]
+id: ECO:0001812
+name: genomic systematic evolution of ligands by exponential amplification evidence
+def: "A type of systematic evolution of ligands by exponential amplification evidence based on a restricted genomic DNA library to identify naturally occurring genomic aptamers and RNA-protein interaction networks with RNA-binding protein as bait and high-throughput sequencing." [ECO:SW, PMID:20541015, PMID:21720957]
+comment: The reported sequences should always be verified for presence in the genome sequence.
+synonym: "genomic SELEX" EXACT [PMID:20541015]
+is_a: ECO:0000293 ! systematic evolution of ligands by exponential amplification evidence
+created_by: swolfish
+creation_date: 2015-11-03T14:05:37Z
+
+[Term]
+id: ECO:0001813
+name: heteronuclear single quantum coherence spectroscopy evidence
+def: "A type of nuclear magnetic resonance based on two-dimensional NMR for elucidation of the chemical structure of an isolated or synthesized chemical compound where the characteristic transfer magnetization of a proton to a nitrogen or carbon isotope is monitored by NMR, generating a specific peak in the spectrum." [ECO:SW, PMID:19856946]
+comment: Chemical shifts in the spectrum indicating binding can be detected from analysis of a protein spectrum in the presence or absence of its cognate DNA binding site.
+synonym: "HSQC" EXACT [PMID:19856946]
+is_a: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
+created_by: swolfish
+creation_date: 2015-11-03T14:11:06Z
+
+[Term]
+id: ECO:0001814
+name: methidiumpropyl-ethylenediaminetetraacetic acid iron (II) footprinting evidence
+def: "A type of nucleic acid binding evidence where the synthetic molecule methidiumpropyl-EDTA (MPE) is used to cleave ligand-protected DNA, followed by analysis of the restriction fragments to generate a footprint (i.e. size and location) of small molecule binding sites on the DNA." [ECO:SW, PMID:6225070]
+synonym: "Methidiumpropyl-EDTA Fe(II) footprinting" RELATED [PMID:6225070]
+synonym: "MPE Fe(II) footprinting" RELATED [PMID:6225070]
+synonym: "MPE-EDTA Fe(II) footprinting" RELATED [PMID:6225070]
+is_a: ECO:0000136 ! nucleic acid binding evidence
+created_by: swolfish
+creation_date: 2015-11-03T14:24:04Z
+
+[Term]
 id: ECO:0005004
 name: cell viability assay evidence
 is_a: ECO:0005014 ! in vitro cell based assay evidence
@@ -5518,6 +5585,8 @@ creation_date: 2015-09-30T10:13:09Z
 [Term]
 id: ECO:0005526
 name: matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
+def: "A type of protein detection assay evidence where soft ionization is used for the analysis of biomolecules for mass determination in a three step process of plate preparation, radiation, and ionization with high throughput technology." [ECO:SW, PMID:21964792, PMID:25354905]
+comment: MALDI-TOF MS is commonly used for protein identification in constructing a proteome where protein fingerprints obtained by microbial cells are compared with a database of reference spectra by means of various algorithms integrated in systems recently made commercially available.
 synonym: "MALDI-TOF-MS" EXACT []
 is_a: ECO:0005517 ! protein detection assay evidence
 created_by: snadendla
