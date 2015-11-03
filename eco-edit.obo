@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:10:2015 16:51
+date: 03:11:2015 12:26
 saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -673,8 +673,10 @@ creation_date: 2014-10-15T00:58:50Z
 [Term]
 id: ECO:0000096
 name: electrophoretic mobility shift assay evidence
-def: "Used when an annotation is made based on electrophoretic mobility shift of macromolecules, compounds, and proteins. Most commonly used for detecting the binding of protein to DNA." [ECO:KIM, TAIR:TED]
+def: "A type of direct assay evidence based on an electrophoretic mobility shift of macromolecules, compounds, and proteins where solutions of protein and nucleic acid are combined and the resulting mixtures are electrophoresed under native conditions through polyacrylamide or agarose gel to detect protein-nucleic acid interactions." [ECO:KIM, ECO:SW, PMID:17703195, TAIR:TED]
+comment: EMSA is often used for assessing TF-binding with fluorophore labelling. Protein-nucleic acid complexes generally migrate at a slower rate than the corresponding non-bonded nucleic acid.
 synonym: "EMSA: electrophoretic mobility shift assay" EXACT []
+synonym: "Gel retardation assay" RELATED [PMID:17703195]
 synonym: "IDA: electrophoretic mobility shift assay" RELATED []
 xref: PSI-MI:MI\:0413 "electrophoretic mobility shift assay"
 is_a: ECO:0000002 ! direct assay evidence
@@ -5186,6 +5188,26 @@ synonym: "ChIP-exo" EXACT [PMID:25249628]
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: swolfish
 creation_date: 2015-10-29T16:37:36Z
+
+[Term]
+id: ECO:0001807
+name: electrophoretic mobility shift assay evidence used in manual assertion
+def: "A type of electrophoretic mobility shift that is used in a manual assertion." [ECO:SW]
+is_a: ECO:0000096 ! electrophoretic mobility shift assay evidence
+intersection_of: ECO:0000096 ! electrophoretic mobility shift assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: swolfish
+creation_date: 2015-11-03T12:13:17Z
+
+[Term]
+id: ECO:0001808
+name: reverse transcription polymerase chain reaction evidence used in manual assertion
+def: "A type of reverse transcription polymerase chain reaction evidence that is used in a manual assertion." [ECO:SW]
+is_a: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
+intersection_of: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: swolfish
+creation_date: 2015-11-03T12:22:46Z
 
 [Term]
 id: ECO:0005004
