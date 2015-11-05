@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:11:2015 11:06
+date: 05:11:2015 16:21
 saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -5376,6 +5376,42 @@ comment: X-ray crystallography can be used for a crystal used to probe at the tr
 is_a: ECO:0001034 ! crystallography evidence
 created_by: swolfish
 creation_date: 2015-11-04T10:56:22Z
+
+[Term]
+id: ECO:0001824
+name: DNA adenine methyltransferase identification evidence
+def: "A type of affinity evidence used to identify DNA binding sites in eukaryotes where Escherichia coli DNA adenine methyltransferase (Dam) is fused to a transcription factor, co-factor, chromatin-associated protein, or nuclear-associated protein, followed by a methyl-dependent PCR to localize methyltransferase in the region of the binding site." [ECO:SW, PMID:16938559, PMID:17545983, PMID:19588092]
+comment: The methylation tag is detected with methylation-sensitive restriction enzymes, DpnI and DpnII.
+synonym: "DamID" EXACT [PMID:19588092]
+is_a: ECO:0000023 ! affinity evidence
+created_by: swolfish
+creation_date: 2015-11-05T15:56:13Z
+
+[Term]
+id: ECO:0001825
+name: isothermal titration calorimetry evidence
+def: "A type of affinity evidence where the absorbed or released heat of a biomolecular binding event is directly measured in a reference cell and sample cell after the addition of a ligand using a microcalorimeter for a complete thermodynamic profile of the molecular interaction." [ECO:SW, PMID:10527727]
+comment: When ITC is used to study TF, the temperature of two identical cells containing a known concentration of TF is monitored. After the ligand is added to the cells in precisely measured aliquots, the temperature difference in each cell is observed to determine target binding. This value can be used to compute the energetics of the reaction and hence, binding affinity of the TF for the DNA fragment. The thermodynamic profile that is measured includes the values of binding constant (K(a)), stoichiometry (n), and the enthalpy of binding (DeltaH(b)).
+synonym: "ITC" EXACT [PMID:10527727]
+is_a: ECO:0000023 ! affinity evidence
+created_by: swolfish
+creation_date: 2015-11-05T16:06:20Z
+
+[Term]
+id: ECO:0001826
+name: ultraviolet light footprinting evidence
+synonym: "ultraviolet footprinting " RELATED []
+synonym: "UV footprinting" RELATED []
+is_a: ECO:0000136 ! nucleic acid binding evidence
+created_by: swolfish
+creation_date: 2015-11-05T16:13:36Z
+
+[Term]
+id: ECO:0001827
+name: premethylation interference footprinting evidence
+is_a: ECO:0000136 ! nucleic acid binding evidence
+created_by: swolfish
+creation_date: 2015-11-05T16:16:27Z
 
 [Term]
 id: ECO:0005004
