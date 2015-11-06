@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:11:2015 13:17
+date: 06:11:2015 15:23
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -744,8 +744,6 @@ comment: The starting product for PCR, and therefore amplification volume, is di
 synonym: "qRT-PCR" EXACT [PMID:12901609]
 synonym: "RT-PCR evidence" EXACT []
 is_a: ECO:0000082 ! polymerase chain reaction evidence
-intersection_of: ECO:0000082 ! polymerase chain reaction evidence
-intersection_of: uses ECO:0000231 ! quantitative polymerase chain reaction evidence
 
 [Term]
 id: ECO:0000110
@@ -1921,7 +1919,7 @@ creation_date: 2010-12-20T06:41:33Z
 
 [Term]
 id: ECO:0000286
-name: transcript expression level used in manual assertion
+name: transcript expression level evidence used in manual assertion
 def: "A type of transcript expression level data that is used in manual assertion." [ECO:MCC]
 is_a: ECO:0000048 ! transcript expression level evidence
 intersection_of: ECO:0000048 ! transcript expression level evidence
@@ -5298,8 +5296,6 @@ synonym: "GFP promoter fusion" RELATED []
 synonym: "GFP reporter gene assay" EXACT [PMID:11989662]
 synonym: "green fluorescent protein promoter fusion" RELATED []
 is_a: ECO:0000049 ! reporter gene assay evidence
-intersection_of: ECO:0000049 ! reporter gene assay evidence
-intersection_of: used_in ECO:0000126 ! green fluorescent protein fusion protein localization evidence
 created_by: swolfish
 creation_date: 2015-11-04T08:58:42Z
 
@@ -5337,8 +5333,6 @@ def: "A type of polymerase chain reaction evidence used to obtain the full lengt
 comment: RACE PCR is frequently used to verify transcription start sites relevant to the function of transcription factor binding sites such as repression.
 synonym: "RACE PCR" EXACT [PMI:17498297]
 is_a: ECO:0000082 ! polymerase chain reaction evidence
-intersection_of: ECO:0000082 ! polymerase chain reaction evidence
-intersection_of: uses ECO:0000109 ! reverse transcription polymerase chain reaction evidence
 created_by: swolfish
 creation_date: 2015-11-04T09:48:38Z
 
