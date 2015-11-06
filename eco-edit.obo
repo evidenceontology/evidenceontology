@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 05:11:2015 16:21
-saved-by: swolfish
+date: 06:11:2015 13:17
+saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -636,13 +636,6 @@ name: immunogold labelling evidence
 def: "A type of protein assay evidence that involves attaching colloidal gold particles to a secondary antibody, which is attached to a primary antibody that binds a specific protein or cell part, followed by visualization with electron microscopy." [ECO:MCC]
 synonym: "IDA: immunogold labelling" RELATED []
 is_a: ECO:0000039 ! protein assay evidence
-
-[Term]
-id: ECO:0000091
-name: isb-sib evidence
-is_a: ECO:0000000 ! evidence
-created_by: mchibucos
-creation_date: 2014-03-16T11:25:24Z
 
 [Term]
 id: ECO:0000092
@@ -2898,7 +2891,7 @@ synonym: "5-bromo-2'-deoxyuridine incorporation assay evidence" EXACT []
 synonym: "BrdU incorporation assay evidence" EXACT []
 synonym: "BrdUrd incorporation assay evidence" EXACT []
 synonym: "BUdR incorporation assay evidence" EXACT []
-is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
+is_a: ECO:0001107 ! nucleotide analog incorporation evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3570,7 +3563,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001107
 name: nucleotide analog incorporation evidence
-is_a: ECO:0000091 ! isb-sib evidence
+is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
