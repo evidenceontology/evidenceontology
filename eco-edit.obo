@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 06:11:2015 15:23
-saved-by: snadendla
+date: 10:11:2015 15:06
+saved-by: swolfish
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -5387,6 +5387,7 @@ creation_date: 2015-11-05T16:06:20Z
 [Term]
 id: ECO:0001826
 name: ultraviolet light footprinting evidence
+def: "A type of nucleic acid binding evidence where DNA is non-specifically fragmented with ultraviolet light while protein-bound regions are protected from UV damage and strand breakage patterns are analyzed by PAGE and sequenced to detect protein-DNA contacts." [ECO:SW, PMID:2842760, PMID:7602584]
 synonym: "ultraviolet footprinting " RELATED []
 synonym: "UV footprinting" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
@@ -5396,9 +5397,29 @@ creation_date: 2015-11-05T16:13:36Z
 [Term]
 id: ECO:0001827
 name: premethylation interference footprinting evidence
+def: "A type of nucleic acid binding evidence used to identify protein binding sites on the DNA molecule where multiple copies of a DNA fragment containing a putative TF-binding site are randomly methylated with dimethyl sulfate (DMS) and cleaved at the methyl group, followed by separating the cleavage products on a denaturing electrophoresis gel." [ECO:SW, PMID:1583685]
+synonym: "methylation interference footprinting" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
 created_by: swolfish
 creation_date: 2015-11-05T16:16:27Z
+
+[Term]
+id: ECO:0001828
+name: visual sequence inspection evidence
+def: "A type of inference from background scientific knowledge used in manual assertion based on the visual inspection of promoter region to identify putative binding sites." [ECO:SW]
+is_a: ECO:0000306 ! inference from background scientific knowledge used in manual assertion
+created_by: swolfish
+creation_date: 2015-11-10T14:40:16Z
+
+[Term]
+id: ECO:0001829
+name: ferric uptake regulator titration assay evidence
+def: "A type of reporter gene assay evidence used to locate and isolate Fur sites where a plasmid library is created and cloned into a cell line with a ferric uptake regulator (Fur)-repressed reporter and the Fur protein is titrated away from its binding site on the reporter, after which the cell is isolated and plasmid extracted for further sequence analysis." [ECO:SW, PMID:10713425, PMID:7642488, PMID:8107138]
+synonym: "Fluorescence polarization" RELATED [PMID:15689115]
+synonym: "FURTA" EXACT [PMID:10713425]
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: swolfish
+creation_date: 2015-11-10T14:55:36Z
 
 [Term]
 id: ECO:0005004
