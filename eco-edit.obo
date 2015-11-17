@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 10:11:2015 15:06
-saved-by: swolfish
+date: 17:11:2015 15:55
+saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -5839,6 +5839,42 @@ def: "A type of reporter gene assay evidence based on the fusion of the xylE gen
 is_a: ECO:0000049 ! reporter gene assay evidence
 created_by: snadendla
 creation_date: 2015-10-28T15:31:28Z
+
+[Term]
+id: ECO:0005538
+name: computationally derived logical inference
+is_a: ECO:0000361 ! inferential evidence
+created_by: snadendla
+creation_date: 2015-11-17T15:15:50Z
+
+[Term]
+id: ECO:0005539
+name: computationally derived logical inference used in automatic assertion
+is_a: ECO:0005538 ! computationally derived logical inference
+intersection_of: ECO:0005538 ! computationally derived logical inference
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2015-11-17T15:17:47Z
+
+[Term]
+id: ECO:0005540
+name: computationally derived logical inference from automatic assertion used in automatic assertion
+is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+intersection_of: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+intersection_of: used_in ECO:0000203 ! automatic assertion
+intersection_of: uses ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2015-11-17T15:24:42Z
+
+[Term]
+id: ECO:0005541
+name: computationally derived logical inference from manual assertion used in automatic assertion
+is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+intersection_of: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+intersection_of: used_in ECO:0000203 ! automatic assertion
+intersection_of: uses ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2015-11-17T15:32:03Z
 
 [Term]
 id: ID:0001601
