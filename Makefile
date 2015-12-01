@@ -2,7 +2,7 @@ SRC = eco-edit.obo
 TGT = eco.owl
 
 all: $(TGT)
-release: all release-diffs
+release: all
 
 $(TGT): $(SRC)
 	ontology-release-runner --allow-overwrite --simple-filtered --simple --reasoner hermit --useIsInferred $< --outdir .
