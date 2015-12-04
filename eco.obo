@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-11-24
-date: 24:11:2015 11:44
+data-version: releases/2015-12-04
+date: 01:12:2015 15:30
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -209,7 +209,7 @@ is_a: ECO:0000202 ! match to sequence model evidence
 
 [Term]
 id: ECO:0000029
-name: match to InterPro signature evidence
+name: match to InterPro member signature evidence
 is_a: ECO:0000202 ! match to sequence model evidence
 
 [Term]
@@ -1680,11 +1680,11 @@ creation_date: 2010-12-10T02:44:34Z
 
 [Term]
 id: ECO:0000259
-name: match to InterPro signature evidence used in automatic assertion
-def: "A match to InterPro signature evidence that is employed in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000029 ! match to InterPro signature evidence
+name: match to InterPro member signature evidence used in automatic assertion
+def: "A match to InterPro member signature evidence that is employed in an automatic assertion." [ECO:MCC]
+is_a: ECO:0000029 ! match to InterPro member signature evidence
 is_a: ECO:0000256 {is_inferred="true"} ! match to sequence model evidence used in automatic assertion
-intersection_of: ECO:0000029 ! match to InterPro signature evidence
+intersection_of: ECO:0000029 ! match to InterPro member signature evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
 created_by: mchibucos
@@ -1692,11 +1692,11 @@ creation_date: 2010-12-10T02:54:51Z
 
 [Term]
 id: ECO:0000260
-name: match to InterPro signature evidence used in manual assertion
-def: "A match to InterPro signature evidence that is employed in a manual assertion." [ECO:MCC]
-is_a: ECO:0000029 ! match to InterPro signature evidence
+name: match to InterPro member signature evidence used in manual assertion
+def: "A match to InterPro member signature evidence that is employed in a manual assertion." [ECO:MCC]
+is_a: ECO:0000029 ! match to InterPro member signature evidence
 is_a: ECO:0000255 {is_inferred="true"} ! match to sequence model evidence used in manual assertion
-intersection_of: ECO:0000029 ! match to InterPro signature evidence
+intersection_of: ECO:0000029 ! match to InterPro member signature evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 created_by: mchibucos
