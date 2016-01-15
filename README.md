@@ -11,4 +11,4 @@ For **further information** visit the **[Evidence Ontology website](http://www.e
 
 Please **cite** the following paper: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
-This work is made possible by **[award number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)** from the **US National Science Foundation's Division of Biological Infrastructure**.
+This material is based upon work supported by the **National Science Foundation** under **[award number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)**.
