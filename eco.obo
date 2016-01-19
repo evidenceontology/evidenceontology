@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2015-12-04
-date: 01:12:2015 15:30
+data-version: releases/2016-01-18
+date: 18:01:2016 23:10
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -620,9 +620,9 @@ is_a: ECO:0000122 ! protein localization evidence
 
 [Term]
 id: ECO:0000088
-name: biological system reconstruction
-def: "Evidence based on reconstruction of a biological system that is based on an existing experimentally supported model of that biological system." [ECO:MCC, GOC:mg]
-comment: The biological system in question might be a multi-step process or a physical complex comprising several components. A common basis for system reconstruction is orthology, where all of the components of an experimentally characterized complex exist in one organism; if a second organism contains orthologs of all components, then the existence of the complex is inferred. In the case of a genome-wide analysis, a gene product is said to fulfill a necessary function for a pathway or complex when, with all of the other necessary functions or components also present, the pathway or complex is reconstructed.
+name: biological system reconstruction evidence
+def: "A type of evidence that is based on a combination of experimental evidences or existing models of that system in a related species used for the reconstruction of a biological system." [ECO:MCC, GOC:mg]
+comment: The biological system in question might be a multi-step process or pathway or a physical complex comprising several components. The components in the experimental evidence can come from the same species or a mix of species. The experimental evidences may be only partial or weak.
 synonym: "inferred from system reconstruction" RELATED []
 synonym: "ISR" RELATED []
 is_a: ECO:0000000 ! evidence
@@ -6329,6 +6329,128 @@ name: computationally derived logical inference from manual assertion used in au
 is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
 created_by: snadendla
 creation_date: 2015-11-17T15:32:03Z
+
+[Term]
+id: ECO:0005542
+name: biological system reconstruction evidence by experimental evidence from single species used in manual assertion
+def: "A type of biological system reconstruction evidence by experimental evidence from single species that is used in a manual assertion." [ECO:SN, PMID:19450514]
+comment: Complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
+intersection_of: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2015-12-16T15:32:41Z
+
+[Term]
+id: ECO:0005543
+name: biological system reconstruction evidence by experimental evidence from mixed species used in manual assertion
+def: "A type of biological system reconstruction evidence by experimental evidence from mixed species that is used in a manual assertion." [ECO:SN, PMID:22232657]
+comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. The evidence may originate from a combination of several experiments.
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0005552 ! biological system reconstruction evidence by experimental evidence from mixed species
+intersection_of: ECO:0005552 ! biological system reconstruction evidence by experimental evidence from mixed species
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2015-12-16T15:45:01Z
+
+[Term]
+id: ECO:0005544
+name: biological system reconstruction evidence based on orthology evidence used in manual assertion
+def: "A type of biological system reconstruction evidence based on orthology evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0005545 ! biological system reconstruction evidence based on orthology evidence
+intersection_of: ECO:0005545 ! biological system reconstruction evidence based on orthology evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2015-12-18T16:20:49Z
+
+[Term]
+id: ECO:0005545
+name: biological system reconstruction evidence based on orthology evidence
+def: "A type of biological system reconstruction evidence based on homology evidence where the evidence is inferred by orthology from an existing experimentally supported model to a process, pathway or complex in another species." [ECO:SN, PMID:15660128]
+comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
+is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
+created_by: snadendla
+creation_date: 2015-12-16T15:57:37Z
+
+[Term]
+id: ECO:0005546
+name: biological system reconstruction based on paralogy evidence used in manual assertion
+def: "A type of  biological system reconstruction evidence based on paralogy evidence that is used in a manual assertion." [ECO:SN, PMID:15660128]
+comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0005550 ! biological system reconstruction evidence based on paralogy evidence
+intersection_of: ECO:0005550 ! biological system reconstruction evidence based on paralogy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2015-12-16T16:05:15Z
+
+[Term]
+id: ECO:0005547
+name: biological system reconstruction evidence based on inference from background scientific knowledge used in manual assertion
+def: "A type of biological system reconstruction evidence based on inference from background scientific knowledge that is used in a manual assertion." [ECO:SN, PMID:17876790]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
+intersection_of: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2015-12-16T16:07:42Z
+
+[Term]
+id: ECO:0005548
+name: biological system reconstruction evidence based on inference from background scientific knowledge
+def: "A type of biological system reconstruction based solely on background scientific knowledge of that biological system." [ECO:SN, PMID:17876790]
+comment: The available knowledge is usually a combination of partial or weak experimental evidence where either some components are missing or no physical interaction evidence can be found but the system is inferred by similarity to related systems in taxonomically-disparate organisms with experimental evidence. Functional studies or ligand binding evidence are often used for the reconstruction of biological systems. It does not provide physical interaction evidence but uses proxies such a ligand binding evidences to infer the presence or absence of the complex components.
+is_a: ECO:0000088 ! biological system reconstruction evidence
+created_by: snadendla
+creation_date: 2015-12-18T15:32:15Z
+
+[Term]
+id: ECO:0005549
+name: biological system reconstruction evidence based on homology evidence
+def: "A type of biological system reconstruction where the evidence is inferred by homology based on conservation of sequence, function, and composition from an existing experimentally supported model to a process, pathway, or complex." [ECO:SN, PMID:15660128]
+comment: Inference may be based on paralogy or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
+is_a: ECO:0000088 ! biological system reconstruction evidence
+created_by: snadendla
+creation_date: 2015-12-18T15:49:46Z
+
+[Term]
+id: ECO:0005550
+name: biological system reconstruction evidence based on paralogy evidence
+def: "A type of  biological system reconstruction evidence based on homology evidence where the evidence is inferred by paralogy from an existing experimentally supported model to a process, pathway, or complex in the same species." [ECO:SN, PMID:15660128]
+is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
+created_by: snadendla
+creation_date: 2015-12-18T16:24:08Z
+
+[Term]
+id: ECO:0005551
+name: biological system reconstruction evidence by experimental evidence
+def: "A type of biological system reconstruction evidence that uses experimental evidence as support." [ECO:SN, PMID:19450514, PMID:22232657]
+is_a: ECO:0000088 ! biological system reconstruction evidence
+created_by: snadendla
+creation_date: 2015-12-18T16:34:13Z
+
+[Term]
+id: ECO:0005552
+name: biological system reconstruction evidence by experimental evidence from mixed species
+def: "A type of biological system reconstruction evidence where the experimental evidence is derived by using a mix of species used in the same experiment." [ECO:SN, PMID:22232657]
+is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
+created_by: snadendla
+creation_date: 2015-12-18T16:35:13Z
+
+[Term]
+id: ECO:0005553
+name: biological system reconstruction evidence by experimental evidence from single species
+def: "A type of biological system reconstruction where the experimental evidence is derived by using multiple experiments in a single species." [ECO:SN]
+is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
+created_by: snadendla
+creation_date: 2015-12-18T16:36:44Z
 
 [Term]
 id: ID:0001601
