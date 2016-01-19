@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 18:12:2015 17:01
+date: 18:01:2016 23:10
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -5938,8 +5938,6 @@ name: biological system reconstruction evidence based on inference from backgrou
 def: "A type of biological system reconstruction based solely on background scientific knowledge of that biological system." [ECO:SN, PMID:17876790]
 comment: The available knowledge is usually a combination of partial or weak experimental evidence where either some components are missing or no physical interaction evidence can be found but the system is inferred by similarity to related systems in taxonomically-disparate organisms with experimental evidence. Functional studies or ligand binding evidence are often used for the reconstruction of biological systems. It does not provide physical interaction evidence but uses proxies such a ligand binding evidences to infer the presence or absence of the complex components.
 is_a: ECO:0000088 ! biological system reconstruction evidence
-intersection_of: ECO:0000088 ! biological system reconstruction evidence
-intersection_of: uses ECO:0000001 ! inference from background scientific knowledge
 created_by: snadendla
 creation_date: 2015-12-18T15:32:15Z
 
@@ -5949,8 +5947,6 @@ name: biological system reconstruction evidence based on homology evidence
 def: "A type of biological system reconstruction where the evidence is inferred by homology based on conservation of sequence, function, and composition from an existing experimentally supported model to a process, pathway, or complex." [ECO:SN, PMID:15660128]
 comment: Inference may be based on paralogy or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
 is_a: ECO:0000088 ! biological system reconstruction evidence
-intersection_of: ECO:0000088 ! biological system reconstruction evidence
-intersection_of: uses ECO:0000041 ! similarity evidence
 created_by: snadendla
 creation_date: 2015-12-18T15:49:46Z
 
@@ -5983,8 +5979,6 @@ id: ECO:0005553
 name: biological system reconstruction evidence by experimental evidence from single species
 def: "A type of biological system reconstruction where the experimental evidence is derived by using multiple experiments in a single species." [ECO:SN]
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
-intersection_of: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
-intersection_of: uses ECO:0000021 ! physical interaction evidence
 created_by: snadendla
 creation_date: 2015-12-18T16:36:44Z
 
