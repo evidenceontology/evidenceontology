@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 18:01:2016 23:10
+date: 29:01:2016 17:06
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -1287,7 +1287,7 @@ creation_date: 2010-11-16T01:29:08Z
 [Term]
 id: ECO:0000227
 name: chromatin immunoprecipitation-PCR evidence
-def: "A type of chromatin immunoprecipitation (ChIP) evidence that uses polymerase chain reaction (PCR) where specific primers are used on the pulled-down DNA for DNA detection." [ECO:MCC, ECO:SW, PMID:18388953]
+def: "A type of chromatin immunoprecipitation evidence that uses polymerase chain reaction (PCR) where specific primers are used on the pulled-down DNA for DNA detection." [ECO:MCC, ECO:SW, PMID:18388953]
 comment: ChIP-PCR is often used to validate ChIP-chip results and less frequently,ChIP-Seq results.
 synonym: "ChIP-PCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
@@ -1306,7 +1306,7 @@ creation_date: 2010-11-16T05:26:47Z
 [Term]
 id: ECO:0000229
 name: chromatin immunoprecipitation-seq evidence
-def: "A chromatin immunoprecipitation (ChIP) evidence that uses high-throughput sequencing where immunoprecipitated DNA fragments are funneled into a massively parallel sequencer to produce multiple short reads for locating binding sites of DNA-associated proteins." [ECO:MCC, ECO:SW, OBI:0000716, PMID:22955991]
+def: "A type of chromatin immunoprecipitation evidence that uses high-throughput sequencing where immunoprecipitated DNA fragments are funnelled into a massively parallel sequencer to produce multiple short reads for locating binding sites of DNA-associated proteins." [ECO:MCC, ECO:SW, OBI:0000716, PMID:22955991]
 comment: ChIP-Seq experiments often use the input as a control to eliminate biases. To obtain similar results, ChIP-chip with high-density tiling arrays can be used.
 synonym: "ChIP-SEQ evidence" EXACT [OBI:0000716]
 synonym: "ChIP-seq evidence" EXACT [PMID:22955991]
@@ -1317,7 +1317,7 @@ creation_date: 2010-11-16T05:30:41Z
 [Term]
 id: ECO:0000230
 name: chromatin immunoprecipitation-chip evidence
-def: "A type of chromatin immunoprecipitation (ChIP) evidence that uses a tiling microarray for the detection of protein-bound DNA regions where chromatin is immunoprecipitated for protein tagging and DNA is sheared from the cross-linked protein-DNA complex to be arrayed revealing the protein-bound genomic regions." [ECO:MCC, ECO:SW, PMID:18388953, PMID:19381927]
+def: "A type of chromatin immunoprecipitation evidence that uses a tiling microarray for the detection of protein-bound DNA regions where chromatin is immunoprecipitated for protein tagging and DNA is sheared from the cross-linked protein-DNA complex to be arrayed revealing the protein-bound genomic regions." [ECO:MCC, ECO:SW, PMID:18388953, PMID:19381927]
 comment: A fixating agent such as formaldehyde is used to cross link proteins and DNA. Sonication is applied for DNA shearing. For transcription factor tagging, an antibody or epitope is employed. After cross-linking is reversed, the DNA is amplified and labeled with a flourophore for microarray which produces a resolution of aproximately 500 bp.
 synonym: "ChIP-chip evidence" EXACT []
 synonym: "ChIP-on-chip evidence" EXACT []
@@ -1727,7 +1727,7 @@ creation_date: 2010-12-10T03:39:41Z
 [Term]
 id: ECO:0000267
 name: enzyme-linked immunoabsorbent assay evidence
-def: "A type of protein assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen which is visualized with a color change in the substrate." [ECO:MCC, ECO:SW, PMID:23949770]
+def: "A type of protein detection assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen which is visualized with a color change in the substrate." [ECO:MCC, ECO:SW, PMID:23949770]
 comment: ELISA is sometimes used in the study of transcriptional regulation to identify a produced protein, especially secreted protein.
 synonym: "ELISA evidence" EXACT []
 synonym: "enzyme-linked immunosorbent assay" NARROW []
@@ -5140,7 +5140,7 @@ creation_date: 2014-03-17T22:34:56Z
 [Term]
 id: ECO:0001801
 name: alkaline phosphatase reporter gene assay evidence
-def: "A type of reporter gene assay evidence based on the fusion of selected genes with the phoA gene to express alkaline phosphatase in periplasmic space for protein tracing." [ECO:SW]
+def: "A type of reporter gene assay evidence based on the fusion of selected genes with the phoA gene to express alkaline phosphatase in periplasmic space for protein tracing." [ECO:SW, PMID:11823238]
 comment: Alkaline phosphatase reporter assay produces a hybrid protein with alkaline phosphatase activity following transportation across the cellular membrane.
 synonym: "SEAP reporter assay" RELATED []
 synonym: "Secreted Embryonic Alkaline Phosphatase reporter assay" RELATED []
@@ -5281,7 +5281,7 @@ creation_date: 2015-11-03T14:24:04Z
 [Term]
 id: ECO:0001815
 name: copper-phenanthroline footprinting evidence
-def: "A type of nucleic acid binding evidence \nwhere nucleic acid that has been bound to protein is cleaved with 1,10-phenanthroline-copper complex resulting in a high-resolution footprint of sequence-specific protein-DNA contacts." [ECO:SW, PMID:11691942]
+def: "A type of nucleic acid binding evidence where nucleic acid that has been bound to protein is cleaved with 1,10-phenanthroline-copper complex resulting in a high-resolution footprint of sequence-specific protein-DNA contacts." [ECO:SW, PMID:11691942]
 synonym: "1,10-Phenanthroline-copper footprinting" EXACT [PMID:1384472]
 synonym: "OP-Cu Complex" RELATED [PMID:1384472]
 is_a: ECO:0000136 ! nucleic acid binding evidence
@@ -5548,8 +5548,9 @@ creation_date: 2015-06-26T11:46:15Z
 [Term]
 id: ECO:0005503
 name: two-dimensional polyacrylamide gel electrophoresis evidence
-def: "A type of gel electrophoresis beginning with one dimension electrophoresis where biomolecules are electrophoresed on a low percentage polyacrylamide gel  to be separated in proportion to their mass or isoelectric point, followed by high voltage electrophoresis on a higher percentage gel in the presence of ethidium bromide to alter non-linear molecular shape." [ECO:SW]
+def: "A type of gel electrophoresis evidence that involves one dimension electrophoresis where biomolecules are electrophoresed on a low percentage polyacrylamide gel  to be separated in proportion to their mass or isoelectric point, followed by high voltage electrophoresis on a higher percentage gel in the presence of ethidium bromide to alter non-linear molecular shape." [ECO:SW, url:http\://www.nature.com/nmeth/journal/v2/n1/full/nmeth0105-83.html]
 comment: Two-dimensional polyacrylamide gel electrophoresis is commonly employed to establish a proteome for an organism and demonstrate expression changes.
+synonym: "2D PAGE" EXACT []
 synonym: "2D-PAGE" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: snadendla
