@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 29:01:2016 17:06
+date: 03:02:2016 09:22
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -721,7 +721,7 @@ is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
 id: ECO:0000106
-name: Northern assay evidence
+name: northern assay evidence
 def: "A type of transcript expression level evidence based on electrophoresis and probing to determine levels of RNA expression using a complementary hybridization probe on the separated RNA samples." [ECO:SW, TAIR:TED]
 synonym: "IEP: transcript levels (e.g. Northerns)" RELATED []
 synonym: "Northern blot" EXACT []
@@ -5260,7 +5260,7 @@ creation_date: 2015-11-03T14:05:37Z
 [Term]
 id: ECO:0001813
 name: heteronuclear single quantum coherence spectroscopy evidence
-def: "A type of nuclear magnetic resonance based on two-dimensional NMR for elucidation of the chemical structure of an isolated or synthesized chemical compound where the characteristic transfer magnetization of a proton to a nitrogen or carbon isotope is monitored by NMR, generating a specific peak in the spectrum." [ECO:SW, PMID:19856946]
+def: "A type of nuclear magnetic resonance spectroscopy evidence based on two-dimensional NMR for elucidation of the chemical structure of an isolated or synthesized chemical compound where the characteristic transfer magnetization of a proton to a nitrogen or carbon isotope is monitored by NMR, generating a specific peak in the spectrum." [ECO:SW, PMID:19856946]
 comment: Chemical shifts in the spectrum indicating binding can be detected from analysis of a protein spectrum in the presence or absence of its cognate DNA binding site.
 synonym: "HSQC" EXACT [PMID:19856946]
 is_a: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
@@ -5733,6 +5733,7 @@ id: ECO:0005526
 name: matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
 def: "A type of protein detection assay evidence where soft ionization is used for the analysis of biomolecules for mass determination in a three step process of plate preparation, radiation, and ionization with high throughput technology." [ECO:SW, PMID:21964792, PMID:25354905]
 comment: MALDI-TOF MS is commonly used for protein identification in constructing a proteome where protein fingerprints obtained by microbial cells are compared with a database of reference spectra by means of various algorithms integrated in systems recently made commercially available.
+synonym: "MALDI-TOF Mass Spectrometry" EXACT []
 synonym: "MALDI-TOF-MS" EXACT []
 is_a: ECO:0005517 ! protein detection assay evidence
 created_by: snadendla
