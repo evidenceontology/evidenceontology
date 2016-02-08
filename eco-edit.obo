@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:02:2016 09:22
+date: 08:02:2016 17:05
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -748,7 +748,7 @@ is_a: ECO:0000082 ! polymerase chain reaction evidence
 [Term]
 id: ECO:0000110
 name: RNA protection assay evidence
-def: "A type of nuclease protection assay evidence used for transcription start-site localization where mRNA is hybridize with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions and the resistant fragment size and identity is determined with gel electrophoresis." [ECO:SW, PMID:23457339, TAIR:TED]
+def: "A type of nuclease protection assay evidence where mRNA is hybridize with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions and the remaining probe target hybrids are purified resolved on denaturing polyacrylamide gel, and quantified by autoradiography." [ECO:SW, PMID:23457339, TAIR:TED]
 synonym: "IEP: RNA protection assay" RELATED []
 synonym: "ribonuclease protection assay" EXACT []
 synonym: "RNAse protection assay" RELATED []
@@ -758,12 +758,12 @@ is_a: ECO:0001106 ! nuclease protection assay evidence
 [Term]
 id: ECO:0000112
 name: western blot evidence
-def: "A type of protein expression level evidence where specific proteins from a mixed sample are detected and their expression levels are quantified using Western blotting technique." [ECO:SW, PMID:23050259, TAIR:TED]
+def: "A type of protein detection assay evidence where proteins are separated using gel electrophoresis and then they are blotted on a nitrocellulose or polyvinylidene difluoride (PVDF) membrane, later an antibody with a dye or an enzyme is added to the solution which is able to bind to its specific protein and this product is detected either by chemiluminescent detection technique or fluorescence imaging technique." [ECO:SW, PMID:23050259, TAIR:TED]
 comment: Western blot is used for protein detection and analysis. A mixed protein sample is separated through polyacrylamide gel electrophoresis then transferred to a membrane, such as polyvinylidene fluoride (PVDF), and labeled with protein-specific antibodies.
 synonym: "IEP: protein levels (e.g. Western blots)" RELATED []
 synonym: "protein immunoblot" RELATED []
 synonym: "Western blot expression analysis" RELATED []
-is_a: ECO:0000046 ! protein expression level evidence
+is_a: ECO:0005517 ! protein detection assay evidence
 
 [Term]
 id: ECO:0000114
@@ -1024,7 +1024,7 @@ is_a: ECO:0000020 ! specific protein inhibition evidence
 id: ECO:0000200
 name: sequence alignment evidence
 alt_id: ECO:00000057
-def: "Used when a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments. BLAST produces pairwise alignments and any annotations based solely on the evaluation of BLAST results should use this code." [url:http\://www.geneontology.org/GO.evidence.shtml]
+def: "A type of sequence similarity evidence where a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments." [url:http\://www.geneontology.org/GO.evidence.shtml]
 synonym: "inferred from sequence alignment" EXACT [GO:ISA]
 synonym: "ISA" EXACT [GO:ISA]
 is_a: ECO:0000044 ! sequence similarity evidence
@@ -1087,8 +1087,8 @@ creation_date: 2010-08-18T05:55:12Z
 [Term]
 id: ECO:0000206
 name: BLAST evidence
-def: "A type of sequence alignment evidence obtained with basic local alignment search tool (BLAST)." [ECO:MCC]
-is_a: ECO:0000200 ! sequence alignment evidence
+def: "A type of pairwise sequence alignment evidence obtained with basic local alignment search tool (BLAST)." [ECO:MCC]
+is_a: ECO:0005554 ! pairwise sequence alignment evidence
 created_by: mchibucos
 creation_date: 2010-08-06T04:48:24Z
 
@@ -5329,7 +5329,7 @@ creation_date: 2015-11-04T09:33:18Z
 [Term]
 id: ECO:0001820
 name: rapid amplification of cDNA ends polymerase chain reaction evidence
-def: "A type of polymerase chain reaction evidence used to obtain the full length sequence of a RNA transcript where a mRNA primer is used for RT-PCR and terminal deoxynucleotidyl transferase (TdT) is used to add identical nucleotides to the 3' end of the cDNA after which PCR with a different primer and TdT-oligomer are performed in the other sense." [ECO:SW, PMID:17498297]
+def: "A type of polymerase chain reaction evidence where a mRNA primer is used for RT-PCR and terminal deoxynucleotidyl transferase (TdT) is used to add identical nucleotides to the 3' end of the cDNA after which PCR with a different primer and TdT-oligomer are performed in the other sense to obtain the full length sequence of a RNA transcript." [ECO:SW, PMID:17498297]
 comment: RACE PCR is frequently used to verify transcription start sites relevant to the function of transcription factor binding sites such as repression.
 synonym: "RACE PCR" EXACT [PMI:17498297]
 is_a: ECO:0000082 ! polymerase chain reaction evidence
@@ -5339,7 +5339,7 @@ creation_date: 2015-11-04T09:48:38Z
 [Term]
 id: ECO:0001821
 name: RNA sequencing assay evidence
-def: "A type of nucleotide sequencing assay evidence where RNA is extracted from a cell, reverse transcribed to cDNA, and sequenced for a snapshot of an organism's transcriptome with precise measurement of transcript levels and their isoforms." [ECO:SW, PMID:19015660]
+def: "A type of nucleotide sequencing assay evidence where RNA is extracted from a cell, reverse transcribed to cDNA for a snapshot of an organism's transcriptome with precise measurement of transcript levels and their isoforms." [ECO:SW, PMID:19015660]
 synonym: "RNA-Seq" EXACT [PMID:23851085]
 synonym: "Whole Transcriptome Shotgun Sequencing" EXACT [PMID:23851085]
 synonym: "WTTS" EXACT []
@@ -5357,8 +5357,8 @@ creation_date: 2015-11-04T10:48:59Z
 
 [Term]
 id: ECO:0001823
-name: X-ray crystallography evidence
-def: "A type of crystallography evidence based on X-ray diffraction of a crystal to determine molecular structure." [ECO:SW, PMID:23135450, PMID:24648090]
+name: x-ray crystallography evidence
+def: "A type of crystallography evidence where a purified sample at high concentration is crystallised and the crystals are exposed to an x ray beam to obtain three dimensional molecular structure of proteins and biological macromolecules." [ECO:SW, PMID:23135450, PMID:24648090]
 comment: X-ray crystallography can be used for a crystal used to probe at the tridimensional structure of proteins. In some cases, it is possible to co-crystallize the protein bound to its DNA binding site, providing detail on the particular arrangement of the two components.
 is_a: ECO:0001034 ! crystallography evidence
 created_by: swolfish
@@ -5406,7 +5406,7 @@ creation_date: 2015-11-05T16:16:27Z
 [Term]
 id: ECO:0001828
 name: visual sequence inspection evidence
-def: "A type of inference from background scientific knowledge used in manual assertion based on the visual inspection of promoter region to identify putative binding sites." [ECO:SW]
+def: "A type of inference from background scientific knowledge used in manual assertion where a visual inspection of promoter region is made to identify putative binding sites." [ECO:SW]
 is_a: ECO:0000306 ! inference from background scientific knowledge used in manual assertion
 created_by: swolfish
 creation_date: 2015-11-10T14:40:16Z
@@ -5781,9 +5781,9 @@ creation_date: 2015-09-30T11:57:00Z
 [Term]
 id: ECO:0005531
 name: motif discovery evidence
-def: "A type of sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
+def: "A type of multiple sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
 comment: Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF (PMID: 19892760), from peaks in ChIP-seq experiments with the TF (PMID: 16264194), or from the comparative genomics analysis of the promoter regions of orthologs (PMID: 23032607).
-is_a: ECO:0000200 ! sequence alignment evidence
+is_a: ECO:0005555 ! multiple sequence alignment evidence
 created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
 
@@ -5983,6 +5983,82 @@ def: "A type of biological system reconstruction where the experimental evidence
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
 created_by: snadendla
 creation_date: 2015-12-18T16:36:44Z
+
+[Term]
+id: ECO:0005554
+name: pairwise sequence alignment evidence
+def: "A type of sequence alignment evidence where two sequences are aligned to identify regions of similarity that may indicate functional, structural and/or evolutionary relationships between two biological sequences (protein or nucleic acid)." [ECO:SN, url:http\://www.ebi.ac.uk/Tools/psa/]
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: snadendla
+creation_date: 2016-02-08T14:30:46Z
+
+[Term]
+id: ECO:0005555
+name: multiple sequence alignment evidence
+def: "A type of sequence alignment evidence where three or more biological sequences (protein or nucleic acid) of similar length are aligned to infer homology and the evolutionary relationships between the sequences studied." [ECO:SN, url:http\://www.ebi.ac.uk/Tools/msa/]
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: snadendla
+creation_date: 2016-02-08T14:31:24Z
+
+[Term]
+id: ECO:0005556
+name: multiple sequence alignment evidence used in manual assertion
+def: "A type of multiple sequence alignment evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-08T14:59:18Z
+
+[Term]
+id: ECO:0005557
+name: multiple sequence alignment evidence used in automatic assertion
+def: "A type of multiple sequence alignment evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:00:50Z
+
+[Term]
+id: ECO:0005558
+name: motif discovery evidence used in manual assertion
+def: "A type of motif discovery evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005531 ! motif discovery evidence
+intersection_of: ECO:0005531 ! motif discovery evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:07:47Z
+
+[Term]
+id: ECO:0005559
+name: motif discovery evidence used in automatic assertion
+def: "A type of motif discovery evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005531 ! motif discovery evidence
+intersection_of: ECO:0005531 ! motif discovery evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:08:19Z
+
+[Term]
+id: ECO:0005560
+name: pairwise sequence alignment evidence used in manual assertion
+def: "A type of pairwise sequence alignment evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:17:05Z
+
+[Term]
+id: ECO:0005561
+name: pairwise sequence alignment evidence used in automatic assertion
+def: "A type of pairwise sequence alignment evidence that is used in an automatic evidence." [ECO:SN]
+is_a: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:17:52Z
 
 [Term]
 id: ID:0001601
