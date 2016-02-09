@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:02:2016 17:05
+date: 09:02:2016 14:38
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -748,7 +748,7 @@ is_a: ECO:0000082 ! polymerase chain reaction evidence
 [Term]
 id: ECO:0000110
 name: RNA protection assay evidence
-def: "A type of nuclease protection assay evidence where mRNA is hybridize with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions and the remaining probe target hybrids are purified resolved on denaturing polyacrylamide gel, and quantified by autoradiography." [ECO:SW, PMID:23457339, TAIR:TED]
+def: "A type of nuclease protection assay evidence where mRNA is hybridized with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions, later the remaining probe target hybrids are purified and resolved on denaturing polyacrylamide gel, and quantified by autoradiography." [ECO:SW, PMID:23457339, TAIR:TED]
 synonym: "IEP: RNA protection assay" RELATED []
 synonym: "ribonuclease protection assay" EXACT []
 synonym: "RNAse protection assay" RELATED []
@@ -5876,7 +5876,7 @@ creation_date: 2015-11-17T15:32:03Z
 id: ECO:0005542
 name: biological system reconstruction evidence by experimental evidence from single species used in manual assertion
 def: "A type of biological system reconstruction evidence by experimental evidence from single species that is used in a manual assertion." [ECO:SN, PMID:19450514]
-comment: Complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
+comment: Processes, pathways and complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
 is_a: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
 intersection_of: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -5928,6 +5928,7 @@ creation_date: 2015-12-16T16:05:15Z
 id: ECO:0005547
 name: biological system reconstruction evidence based on inference from background scientific knowledge used in manual assertion
 def: "A type of biological system reconstruction evidence based on inference from background scientific knowledge that is used in a manual assertion." [ECO:SN, PMID:17876790]
+comment: Functional studies or ligand binding evidence are often used for the reconstruction of biological systems. It does not provide physical interaction evidence but uses proxies such a ligand binding evidences to infer the presence or absence of the complex components.
 is_a: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
 intersection_of: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -6059,6 +6060,77 @@ intersection_of: ECO:0005554 ! pairwise sequence alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: snadendla
 creation_date: 2016-02-08T15:17:52Z
+
+[Term]
+id: ECO:0005562
+name: in gel protein kinase assay evidence
+is_a: ECO:0000181 ! in vitro assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:05:29Z
+
+[Term]
+id: ECO:0005563
+name: macroscopic current trace evidence
+xref: birnlex:2278 "current clamp voltage recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:40:03Z
+
+[Term]
+id: ECO:0005564
+name: current density evidence
+xref: birnlex:2279 "voltage clamp current recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:43:07Z
+
+[Term]
+id: ECO:0005565
+name: single channel conductance evidence
+xref: birnlex:2281 "whole-cell voltage clamp recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:45:42Z
+
+[Term]
+id: ECO:0005566
+name: sustained current evidence
+xref: birnlex:2283 "cell-attached single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:46:54Z
+
+[Term]
+id: ECO:0005567
+name: steady state activation curve evidence
+xref: birnlex:2283 "cell-attached single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:48:17Z
+
+[Term]
+id: ECO:0005568
+name: steady state inactivation curve evidence
+xref: birnlex:2286 "cell-detached inside-out single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:50:45Z
+
+[Term]
+id: ECO:0005569
+name: window current trace evidence
+xref: birnlex:2287 "reconstituted bilayer single-channel patch recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:57:16Z
+
+[Term]
+id: ECO:0005570
+name: use dependence of inactivation evidence
+xref: birnlex:2293 "electroencephalography recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:58:18Z
 
 [Term]
 id: ID:0001601
