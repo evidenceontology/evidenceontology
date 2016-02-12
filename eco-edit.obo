@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:02:2016 14:38
+date: 12:02:2016 16:45
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -6071,7 +6071,6 @@ creation_date: 2016-02-09T12:05:29Z
 [Term]
 id: ECO:0005563
 name: macroscopic current trace evidence
-xref: birnlex:2278 "current clamp voltage recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:40:03Z
@@ -6079,7 +6078,6 @@ creation_date: 2016-02-09T12:40:03Z
 [Term]
 id: ECO:0005564
 name: current density evidence
-xref: birnlex:2279 "voltage clamp current recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:43:07Z
@@ -6087,7 +6085,6 @@ creation_date: 2016-02-09T12:43:07Z
 [Term]
 id: ECO:0005565
 name: single channel conductance evidence
-xref: birnlex:2281 "whole-cell voltage clamp recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:45:42Z
@@ -6095,7 +6092,6 @@ creation_date: 2016-02-09T12:45:42Z
 [Term]
 id: ECO:0005566
 name: sustained current evidence
-xref: birnlex:2283 "cell-attached single-channel recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:46:54Z
@@ -6103,7 +6099,6 @@ creation_date: 2016-02-09T12:46:54Z
 [Term]
 id: ECO:0005567
 name: steady state activation curve evidence
-xref: birnlex:2283 "cell-attached single-channel recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:48:17Z
@@ -6111,7 +6106,6 @@ creation_date: 2016-02-09T12:48:17Z
 [Term]
 id: ECO:0005568
 name: steady state inactivation curve evidence
-xref: birnlex:2286 "cell-detached inside-out single-channel recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:50:45Z
@@ -6119,7 +6113,6 @@ creation_date: 2016-02-09T12:50:45Z
 [Term]
 id: ECO:0005569
 name: window current trace evidence
-xref: birnlex:2287 "reconstituted bilayer single-channel patch recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:57:16Z
@@ -6127,10 +6120,103 @@ creation_date: 2016-02-09T12:57:16Z
 [Term]
 id: ECO:0005570
 name: use dependence of inactivation evidence
-xref: birnlex:2293 "electroencephalography recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:58:18Z
+
+[Term]
+id: ECO:0005571
+name: current clamp voltage recording evidence
+xref: birnlex:2278 "current clamp voltage recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T13:58:32Z
+
+[Term]
+id: ECO:0005572
+name: whole-cell voltage clamp recording evidence
+xref: birnlex:2281 "whole-cell voltage clamp recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:06:40Z
+
+[Term]
+id: ECO:0005573
+name: cell-attached single-channel recording evidence
+xref: birnlex:2283 "cell-attached single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:07:39Z
+
+[Term]
+id: ECO:0005574
+name: cell-detached inside-out single-channel recording evidence
+xref: birnlex:2286 "cell-detached inside-out single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:16:53Z
+
+[Term]
+id: ECO:0005575
+name: reconstituted bilayer single-channel patch recording evidence
+xref: birnlex:2287 "reconstituted bilayer single-channel patch recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:17:46Z
+
+[Term]
+id: ECO:0005576
+name: voltage clamp current recording evidence
+xref: birnlex:2279 "voltage clamp current recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:18:36Z
+
+[Term]
+id: ECO:0005577
+name: electroencephalography recording evidence
+xref: birnlex:2293 "electroencephalography recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:19:21Z
+
+[Term]
+id: ECO:0005578
+name: super-resolution microscopy evidence
+def: "A type of microscopy evidence where the images are taken with a higher resolution than the diffraction limit that help in studying nanoscopic sub-cellular structures." [ECO:SN, url:http\://journal.frontiersin.org/article/10.3389/fncel.2015.00007/full]
+is_a: ECO:0001098 ! microscopy evidence
+created_by: snadendla
+creation_date: 2016-02-12T15:20:47Z
+
+[Term]
+id: ECO:0005579
+name: immunogold labelling evidence used in manual assertion
+def: "A type of immunogold labelling evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000090 ! immunogold labelling evidence
+intersection_of: ECO:0000090 ! immunogold labelling evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-12T15:38:03Z
+
+[Term]
+id: ECO:0005580
+name: flow cytometry evidence used in manual assertion
+def: "A type of flow cytometry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000268 ! flow cytometry evidence
+intersection_of: ECO:0000268 ! flow cytometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-12T16:04:23Z
+
+[Term]
+id: ECO:0005581
+name: enzyme-linked immunoabsorbent assay evidence used in manual assertion
+def: "A type of enzyme-linked immunoabsorbent assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000267 ! enzyme-linked immunoabsorbent assay evidence
+intersection_of: ECO:0000267 ! enzyme-linked immunoabsorbent assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-12T16:23:38Z
 
 [Term]
 id: ID:0001601
