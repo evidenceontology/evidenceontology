@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:02:2016 16:32
+date: 01:03:2016 17:25
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -937,6 +937,7 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000166
 name: two-electrode voltage clamp experiment evidence
+def: "A type of electrophysiology assay evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current." [ECO:SN, PMID:23529422]
 synonym: "IDA: two-electrode voltage clamp technique" RELATED []
 is_a: ECO:0000164 ! electrophysiology assay evidence
 
@@ -6071,6 +6072,7 @@ creation_date: 2016-02-09T12:05:29Z
 [Term]
 id: ECO:0005563
 name: macroscopic current trace evidence
+def: "A type of electrophysiology assay evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording." [ECO:SN, PMID:17938230, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch03.pdf]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:40:03Z
@@ -6078,6 +6080,7 @@ creation_date: 2016-02-09T12:40:03Z
 [Term]
 id: ECO:0005564
 name: current density evidence
+def: "A type of electrophysiology assay evidence that involves measuring the amount of current (pA) going through the ion channels per unit  of membrane." [ECO:SN, url:http\://circres.ahajournals.org/content/102/11/1298.full, url:http\://www.bem.fi/book/04/04.htm]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:43:07Z
@@ -6092,6 +6095,7 @@ creation_date: 2016-02-09T12:45:42Z
 [Term]
 id: ECO:0005566
 name: sustained current evidence
+def: "A type of electrophysiology assay evidence that involves the measurement of the current that persists after the fast and slow inactivation of the analyzed channels." [ECO:SN, url:http\://www.nature.com/ncomms/journal/v3/n2/full/ncomms1717.html]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:46:54Z
@@ -6120,6 +6124,7 @@ creation_date: 2016-02-09T12:57:16Z
 [Term]
 id: ECO:0005570
 name: use dependence of inactivation evidence
+def: "A type of electrophysiology assay evidence in which the amount of current remaining after a series of depolarization at different frequencies described as the normalized current related to the time course." [ECO:SN, url:http\://circres.ahajournals.org/content/89/8/700.full]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:58:18Z
