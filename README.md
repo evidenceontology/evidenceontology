@@ -1,5 +1,10 @@
 [![Build Status](https://travis-ci.org/evidenceontology/evidenceontology.svg?branch=master)](https://travis-ci.org/evidenceontology/evidenceontology)
 [![DOI](https://zenodo.org/badge/13996/evidenceontology/evidenceontology.svg)](https://zenodo.org/badge/latestdoi/13996/evidenceontology/evidenceontology)
+<<<<<<< HEAD
+=======
+
+The **Evidence Ontology (EO)** describes types of scientific evidence within the realm of biological research that can arise from laboratory experiments, computational methods, manual literature curation, and other means. Researchers can use these types of evidence to support assertions about things (such as scientific conclusions, gene annotations, or other statements of fact) that result from scientific research.
+>>>>>>> origin/travis
 
 The **Evidence & Conclusion Ontology (ECO)** describes types of scientific evidence within the realm of biological research that can arise from laboratory experiments, computational methods, manual literature curation, and other means. Researchers can use these types of evidence to support assertions about things (such as scientific conclusions, gene annotations, or other statements of fact) that result from scientific research.
 

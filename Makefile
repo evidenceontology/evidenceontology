@@ -2,7 +2,11 @@ SRC = eco-edit.obo
 TGT = eco.owl
 
 all: $(TGT)
+<<<<<<< HEAD
 release: all release-diffs
+=======
+release: all
+>>>>>>> origin/travis
 test: all
 
 $(TGT): $(SRC)
