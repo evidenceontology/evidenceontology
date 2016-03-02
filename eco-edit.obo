@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 01:03:2016 17:25
+date: 02:03:2016 11:47
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2477,7 +2477,7 @@ creation_date: 2012-08-24T12:03:58Z
 [Term]
 id: ECO:0000337
 name: gel electrophoresis evidence
-def: "A type of direct assay evidence  where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
+def: "A type of direct assay evidence where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
 comment: Molecules typically separated include DNA, RNA, or protein. The gel is typically made of agarose, polyacrylamide, or starch.
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
@@ -6229,6 +6229,30 @@ intersection_of: ECO:0000267 ! enzyme-linked immunoabsorbent assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2016-02-12T16:23:38Z
+
+[Term]
+id: ECO:0005582
+name: cell-detached outside-out single-channel recording evidence
+def: "A type of electrophysiology assay evidence where a part of cellular membrane is detached from the cell and whose external face is exposed to the extracellular medium which allows isolating and studying a single or at least a small number of channels into that fragment (patch)." [ECO:SN, url:http\://www.nature.com/nprot/journal/v2/n11/full/nprot.2007.403.html]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-03-02T10:47:25Z
+
+[Term]
+id: ECO:0005583
+name: cut-open oocyte voltage clamp recording evidence
+def: "A type of electrophysiology assay evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway." [ECO:SN, PMID:9711615]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-03-02T11:29:32Z
+
+[Term]
+id: ECO:0005584
+name: macropatch voltage clamp recording evidence
+def: "A type of electrophysiology assay evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch)." [ECO:SN, url:http\://jxb.oxfordjournals.org/content/50/Special_Issue/1037.full.pdf]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-03-02T11:33:48Z
 
 [Term]
 id: ID:0001601
