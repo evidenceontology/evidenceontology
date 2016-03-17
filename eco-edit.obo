@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:03:2016 11:47
+date: 17:03:2016 17:31
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -606,10 +606,9 @@ is_a: ECO:0000073 ! experimental genomic evidence
 [Term]
 id: ECO:0000087
 name: immunolocalization evidence
-def: "A type of protein assay evidence that involves the use of antibodies to detect biomolecules." [ECO:MCC]
+def: "A type of microscopy evidence where antibodies are used to detect the location of molecules or other structures within cells or tissues." [ECO:MCC, ECO:SN]
 synonym: "IDA: immunolocalization" RELATED []
-is_a: ECO:0000039 ! protein assay evidence
-is_a: ECO:0000122 ! protein localization evidence
+is_a: ECO:0001098 ! microscopy evidence
 
 [Term]
 id: ECO:0000088
@@ -633,9 +632,9 @@ is_a: ECO:0005519 ! DNA detection assay evidence
 [Term]
 id: ECO:0000090
 name: immunogold labelling evidence
-def: "A type of protein assay evidence that involves attaching colloidal gold particles to a secondary antibody, which is attached to a primary antibody that binds a specific protein or cell part, followed by visualization with electron microscopy." [ECO:MCC]
+def: "A type of immunolocalization evidence where the antibodies are labeled with colloidal gold particles whose location is then detected via microscopy." [ECO:MCC]
 synonym: "IDA: immunogold labelling" RELATED []
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0000087 ! immunolocalization evidence
 
 [Term]
 id: ECO:0000092
@@ -5509,6 +5508,7 @@ creation_date: 2015-03-20T12:16:17Z
 [Term]
 id: ECO:0005033
 name: electron microscopy evidence
+is_a: ECO:0001098 ! microscopy evidence
 is_a: ECO:0005031 ! structure determination evidence
 created_by: snadendla
 creation_date: 2015-03-20T12:21:48Z
@@ -5846,30 +5846,28 @@ creation_date: 2015-10-28T15:31:28Z
 [Term]
 id: ECO:0005538
 name: computationally derived logical inference
-is_a: ECO:0000361 ! inferential evidence
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:15:50Z
 
 [Term]
 id: ECO:0005539
 name: computationally derived logical inference used in automatic assertion
-is_a: ECO:0005538 ! computationally derived logical inference
-intersection_of: ECO:0005538 ! computationally derived logical inference
-intersection_of: used_in ECO:0000203 ! automatic assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:17:47Z
 
 [Term]
 id: ECO:0005540
 name: computationally derived logical inference from automatic assertion used in automatic assertion
-is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:24:42Z
 
 [Term]
 id: ECO:0005541
 name: computationally derived logical inference from manual assertion used in automatic assertion
-is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:32:03Z
 
@@ -6253,6 +6251,121 @@ def: "A type of electrophysiology assay evidence where recording is done on a fr
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
 creation_date: 2016-03-02T11:33:48Z
+
+[Term]
+id: ECO:0005585
+name: high throughput mass spectrometry evidence
+def: "A type of mass spectrometry evidence where mass-to-charge ratio (m/z) of gas-phase ions is measured which is used to identify and quantify molecules in complex solutions within the framework of high throughput studies." [ECO:SN, PMID:20805795]
+comment: There are significant differences in data analysis and data evaluation if to compare a HTP mass-spec and a regular mass-spec. The regular mass spec method is quite a reliable technique for identifying a protein molecular weight and analysing its post-modifications, other mass-spec applications might require the additional quality controls and more stringent data evaluation. More complex sample mixture is processed, more quality questions should be addressed, such as a sample contamination and sensitivity of the mass spectrometer while using HTP mass-spec.\nFor HTP mass-spec, the analysis of the small data sets allows to manually assign the spectra to proteins or peptides, but for large data sets only the statistical tools can be used instead.
+is_a: ECO:0001096 ! mass spectrometry evidence
+created_by: snadendla
+creation_date: 2016-03-02T12:33:07Z
+
+[Term]
+id: ECO:0005586
+name: high throughput mass spectrometry evidence used in manual assertion
+def: "A type of high throughput mass spectrometry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005585 ! high throughput mass spectrometry evidence
+created_by: snadendla
+creation_date: 2016-03-02T12:50:02Z
+
+[Term]
+id: ECO:0005587
+name: confocal microscopy evidence
+def: "A type of microscopy evidence where sharp images are taken by excluding most of the light from the specimen that is not from the microscope's focal plane, thus allowing better contrast and less haze, which makes it possible to build three-dimensional reconstructions of a volume of the specimen by assembling a series of thin slices taken along the vertical axis." [ECO:SN, url:http\://www.physics.emory.edu/faculty/weeks//lab/papers/ebbe05.pdf]
+is_a: ECO:0001098 ! microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-17T12:29:45Z
+
+[Term]
+id: ECO:0005588
+name: wide-field microscopy evidence
+def: "A type of microscopy evidence where imaging of a thin cell or a tissue specimen is performed by full aperture emission of light gathered by the microscope's objective, which maximizes the recorded signal and simultaneously minimizes the required exposure times." [ECO:SN, url:http\://jcb.rupress.org/content/172/1/9.full, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048960/, url:http\://zeiss-campus.magnet.fsu.edu/articles/livecellimaging/techniques.html]
+is_a: ECO:0001098 ! microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-17T12:30:27Z
+
+[Term]
+id: ECO:0005589
+name: confocal microscopy evidence used in manual assertion
+def: "A type confocal microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005587 ! confocal microscopy evidence
+intersection_of: ECO:0005587 ! confocal microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T12:32:24Z
+
+[Term]
+id: ECO:0005590
+name: wide-field microscopy evidence used in manual assertion
+def: "A type of wide-field microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005588 ! wide-field microscopy evidence
+intersection_of: ECO:0005588 ! wide-field microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T12:34:42Z
+
+[Term]
+id: ECO:0005591
+name:  immunogold labelling electron microscopy assay evidence
+def: "A type of immunogold labelling evidence where electron microscopy technique is used to detect the location of the antibodies labeled with colloidal gold particles." [ECO:SN, PMID:4110101]
+is_a: ECO:0000090 ! immunogold labelling evidence
+created_by: snadendla
+creation_date: 2016-03-17T15:43:00Z
+
+[Term]
+id: ECO:0005592
+name: immunogold labelling electron microscopy assay evidence used in manual assertion
+def: "A type of immunogold labelling electron microscopy assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005591 !  immunogold labelling electron microscopy assay evidence
+intersection_of: ECO:0005591 !  immunogold labelling electron microscopy assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T16:39:37Z
+
+[Term]
+id: ECO:0005593
+name: immunodetection assay evidence
+def: "A type of direct assay evidence that involves the use of antibodies to detect biomolecules." [ECO:SN]
+is_a: ECO:0000002 ! direct assay evidence
+created_by: snadendla
+creation_date: 2016-03-17T17:07:33Z
+
+[Term]
+id: ECO:0005594
+name: immunoperoxidase immunolocalization evidence
+def: "A type of immunolocalization evidence involving enzymatic detection of a peroxidase tagged antibody." [ECO:SN]
+is_a: ECO:0000087 ! immunolocalization evidence
+created_by: snadendla
+creation_date: 2016-03-17T17:11:34Z
+
+[Term]
+id: ECO:0005595
+name: immunoperoxidase immunolocalization evidence used in manual assertion
+def: "A type of immunoperoxidase immunolocalization evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+intersection_of: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T17:14:05Z
+
+[Term]
+id: ECO:0005596
+name: immunoperoxidase immunolocalization electron microscopy evidence
+def: "A type of immunoperoxidase immunolocalization evidence where electron microscopy technique is used for enzymatic detection of a peroxidase tagged antibody." [ECO:SN]
+is_a: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+created_by: snadendla
+creation_date: 2016-03-17T17:16:38Z
+
+[Term]
+id: ECO:0005597
+name: immunoperoxidase immunolocalization electron microscopy evidence used in manual assertion
+def: "A type of immunoperoxidase immunolocalization electron microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005596 ! immunoperoxidase immunolocalization electron microscopy evidence
+intersection_of: ECO:0005596 ! immunoperoxidase immunolocalization electron microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T17:23:56Z
 
 [Term]
 id: ID:0001601
