@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 18:03:2016 10:49
+date: 18:03:2016 13:15
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -609,6 +609,7 @@ name: immunolocalization evidence
 def: "A type of microscopy evidence where antibodies are used to detect the location of molecules or other structures within cells or tissues." [ECO:MCC, ECO:SN]
 synonym: "IDA: immunolocalization" RELATED []
 is_a: ECO:0001098 ! microscopy evidence
+is_a: ECO:0005593 ! immunodetection assay evidence
 
 [Term]
 id: ECO:0000088
@@ -757,12 +758,13 @@ is_a: ECO:0001106 ! nuclease protection assay evidence
 [Term]
 id: ECO:0000112
 name: western blot evidence
-def: "A type of protein detection assay evidence where proteins are separated using gel electrophoresis and then they are blotted on a nitrocellulose or polyvinylidene difluoride (PVDF) membrane, later an antibody with a dye or an enzyme is added to the solution which is able to bind to its specific protein and this product is detected either by chemiluminescent detection technique or fluorescence imaging technique." [ECO:SW, PMID:23050259, TAIR:TED]
+def: "A type of gel electrophoresis evidence where proteins are separated using gel electrophoresis and then they are blotted on a nitrocellulose or polyvinylidene difluoride (PVDF) membrane, later an antibody with a dye or an enzyme is added to the solution which is able to bind to its specific protein and this product is detected either by chemiluminescent detection technique or fluorescence imaging technique." [ECO:SW, PMID:23050259, TAIR:TED]
 comment: Western blot is used for protein detection and analysis. A mixed protein sample is separated through polyacrylamide gel electrophoresis then transferred to a membrane, such as polyvinylidene fluoride (PVDF), and labeled with protein-specific antibodies.
 synonym: "IEP: protein levels (e.g. Western blots)" RELATED []
 synonym: "protein immunoblot" RELATED []
 synonym: "Western blot expression analysis" RELATED []
-is_a: ECO:0005517 ! protein detection assay evidence
+is_a: ECO:0000333 ! sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
+is_a: ECO:0005593 ! immunodetection assay evidence
 
 [Term]
 id: ECO:0000114
@@ -6312,6 +6314,7 @@ id: ECO:0005591
 name: immunogold labelling electron microscopy assay evidence
 def: "A type of immunogold labelling evidence where electron microscopy technique is used to detect the location of the antibodies labeled with colloidal gold particles." [ECO:SN, PMID:4110101]
 is_a: ECO:0000090 ! immunogold labelling evidence
+is_a: ECO:0005033 ! electron microscopy evidence
 created_by: snadendla
 creation_date: 2016-03-17T15:43:00Z
 
@@ -6355,6 +6358,8 @@ creation_date: 2016-03-17T17:14:05Z
 id: ECO:0005596
 name: immunoperoxidase immunolocalization electron microscopy evidence
 def: "A type of immunoperoxidase immunolocalization evidence where electron microscopy technique is used for enzymatic detection of a peroxidase tagged antibody." [ECO:SN]
+synonym: "Immunoperoxidase labelling electron microscopy" EXACT []
+is_a: ECO:0005033 ! electron microscopy evidence
 is_a: ECO:0005594 ! immunoperoxidase immunolocalization evidence
 created_by: snadendla
 creation_date: 2016-03-17T17:16:38Z
@@ -6368,6 +6373,63 @@ intersection_of: ECO:0005596 ! immunoperoxidase immunolocalization electron micr
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2016-03-17T17:23:56Z
+
+[Term]
+id: ECO:0005598
+name: wide-field fluorescence microscopy evidence
+def: "A type of wide-field microscopy evidence where pure white and ultraviolet light are produced by a mercury lamp, passed through an optical filter (excitation filter), and directed to a sample via a dichroic mirror, followed by detection of the fluorescent light by a camera after it passes through an emission filter." [ECO:SN, url:http\://www.bristol.ac.uk/synaptic/research/techniques/widefield.html]
+comment: The optical filter is used to select the wavelength of excitation light. The detection camera is typically a CCD camera. Both topographical and dynamic information of a sample are obtained.
+is_a: ECO:0005588 ! wide-field microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-18T11:53:56Z
+
+[Term]
+id: ECO:0005599
+name: immunofluorescence wide-field microscopy evidence
+def: "A type of wide-field fluorescence microscopy evidence where fluorescently tagged antibodies are imaged that are used to bind to their antigens." [ECO:SN, url:http\://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057135]
+synonym: "wide-field epifluorescence microscopy" EXACT []
+is_a: ECO:0000007 ! immunofluorescence evidence
+is_a: ECO:0005598 ! wide-field fluorescence microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-18T11:55:40Z
+
+[Term]
+id: ECO:0005600
+name: immunofluorescence confocal microscopy evidence
+def: "A type of confocal microscopy evidence where light passes through immunofluorescent-stained tissue sections or cells and then the emitted light passes through the dichroic mirror and is focused onto the pinhole for subsequent detection." [ECO:SN, url:http\://www.physics.emory.edu/faculty/weeks/confocal/, url:https\://www.hycultbiotech.com/media/wysiwyg/protocol_Immunofluorescence.pdf]
+comment: This allows visualization of sub cellular distribution of biomolecules of interest.
+is_a: ECO:0000007 ! immunofluorescence evidence
+is_a: ECO:0005587 ! confocal microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-18T12:48:42Z
+
+[Term]
+id: ECO:0005601
+name: immunofluorescence confocal microscopy evidence used in manual assertion
+def: "A type of immunofluorescence confocal microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005600 ! immunofluorescence confocal microscopy evidence
+intersection_of: ECO:0005600 ! immunofluorescence confocal microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-18T12:52:04Z
+
+[Term]
+id: ECO:0005602
+name: protein expression level evidence based on western blot
+def: "A type of protein expression level evidence where the level of expression of a protein is determined in a cell or tissue extract by western blot technique." [ECO:SN]
+is_a: ECO:0000046 ! protein expression level evidence
+is_a: ECO:0000112 ! western blot evidence
+created_by: snadendla
+creation_date: 2016-03-18T13:02:29Z
+
+[Term]
+id: ECO:0005603
+name: protein mass spectrometry evidence
+def: "A type of mass spectrometry evidence where one or more protein analyses are performed." [ECO:SN]
+is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0001096 ! mass spectrometry evidence
+created_by: snadendla
+creation_date: 2016-03-18T13:11:37Z
 
 [Term]
 id: ID:0001601
