@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 17:03:2016 17:31
+date: 18:03:2016 10:49
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -1609,6 +1609,7 @@ name: match to sequence model evidence used in automatic assertion
 def: "A match to sequence model evidence that is employed in an automatic assertion." [ECO:MCC]
 xref: GO_REF:0000002 "Gene Ontology annotation through association of InterPro records with GO terms."
 xref: GO_REF:0000019 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"
+xref: GO_REF:0000107 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl"
 is_a: ECO:0000202 ! match to sequence model evidence
 intersection_of: ECO:0000202 ! match to sequence model evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -2714,6 +2715,7 @@ creation_date: 2015-07-14T11:24:27Z
 id: ECO:0000363
 name: evidence based on computational logical inference used in automatic assertion
 def: "A type of evidence based on computational logical inference that is used in automatic assertion." [ECO:MCC]
+xref: GO_REF:0000108 "Automatic assignment of GO terms using logical inference, based on on inter-ontology links"
 is_a: ECO:0000362 ! evidence based on computational logical inference
 intersection_of: ECO:0000362 ! evidence based on computational logical inference
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -6307,7 +6309,7 @@ creation_date: 2016-03-17T12:34:42Z
 
 [Term]
 id: ECO:0005591
-name:  immunogold labelling electron microscopy assay evidence
+name: immunogold labelling electron microscopy assay evidence
 def: "A type of immunogold labelling evidence where electron microscopy technique is used to detect the location of the antibodies labeled with colloidal gold particles." [ECO:SN, PMID:4110101]
 is_a: ECO:0000090 ! immunogold labelling evidence
 created_by: snadendla
@@ -6317,8 +6319,8 @@ creation_date: 2016-03-17T15:43:00Z
 id: ECO:0005592
 name: immunogold labelling electron microscopy assay evidence used in manual assertion
 def: "A type of immunogold labelling electron microscopy assay evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0005591 !  immunogold labelling electron microscopy assay evidence
-intersection_of: ECO:0005591 !  immunogold labelling electron microscopy assay evidence
+is_a: ECO:0005591 ! immunogold labelling electron microscopy assay evidence
+intersection_of: ECO:0005591 ! immunogold labelling electron microscopy assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2016-03-17T16:39:37Z
