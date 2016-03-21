@@ -1,0 +1,31 @@
+pattern_name: evidence_used_in_assertion
+
+classes:
+  'assertion_method': ECO_0000217
+  
+
+relations:
+  'used_in': ECO_9000000
+
+vars: 
+  assertion_type: "'assertion_method'"
+  evidence: "'evidence'"
+
+name:
+  text: "%s used in %s"
+  vars: 
+    - evidence
+    - assertion_type
+    
+
+def: 
+  text: "A type of %s that is used in a %s."
+  vars:
+    - evidence
+    - assertion_type
+    
+equivalentTo: 
+  text: "%s that 'used_in' some %s"
+  vars:
+    - evidence
+    - assertion_type
