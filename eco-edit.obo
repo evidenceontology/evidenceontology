@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 18:03:2016 13:15
+date: 29:03:2016 17:07
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -6430,6 +6430,31 @@ is_a: ECO:0000039 ! protein assay evidence
 is_a: ECO:0001096 ! mass spectrometry evidence
 created_by: snadendla
 creation_date: 2016-03-18T13:11:37Z
+
+[Term]
+id: ECO:0005604
+name: cross-streak test evidence
+def: "A type of experimental evidence where the investigated organism or a potential antagonist is inoculated so as to grow along the diameter line of the agar medium in a Petri dish, then, potentially susceptible microbes (usually bacteria) are streaked perpendicularly to the growth line and inhibition of growth of a test microbe in the vicinity of that line suggests that the antagonist secretes one or more diffusible antibiotics." [ECO:SN, url:www.jstor.org/stable/3792785]
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2016-03-29T15:40:54Z
+
+[Term]
+id: ECO:0005605
+name: disk diffusion test evidence
+def: "A type of experimental evidence where sensitivity/resistance to an antimicrobial agent is tested by impregnating small filter disks with a known concentration of antimicrobial agent which is then placed on a Mueller-Hinton agar plate inoculated with the test organism." [ECO:SN, url:http\://www.cdc.gov/nczved/resources/cholera/ch9.pdf]
+synonym: "zone of inhibition evidence" EXACT []
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2016-03-29T16:02:22Z
+
+[Term]
+id: ECO:0005606
+name: cell transfection experiment evidence
+def: "A type of experimental evidence where a foreign genetic material is introduced into the cell for study of gene function and regulation and protein function." [ECO:SN, url:http\://ch.promega.com/resources/product-guides-and-selectors/protocols-and-applications-guide/transfection/, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2911531/]
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2016-03-29T16:59:17Z
 
 [Term]
 id: ID:0001601
