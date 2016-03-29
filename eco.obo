@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2016-01-18
-date: 18:01:2016 23:10
+data-version: releases/2016-03-29
+date: 18:03:2016 13:15
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -218,7 +218,7 @@ name: BLAST evidence used in manual assertion
 def: "A type of BLAST evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "curated BLAST analysis" RELATED []
 is_a: ECO:0000206 ! BLAST evidence
-is_a: ECO:0000247 {is_inferred="true"} ! sequence alignment evidence used in manual assertion
+is_a: ECO:0005560 {is_inferred="true"} ! pairwise sequence alignment evidence used in manual assertion
 intersection_of: ECO:0000206 ! BLAST evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -614,9 +614,10 @@ is_a: ECO:0000073 ! experimental genomic evidence
 [Term]
 id: ECO:0000087
 name: immunolocalization evidence
-def: "A type of protein assay evidence that involves the use of antibodies to detect biomolecules." [ECO:MCC]
+def: "A type of microscopy evidence where antibodies are used to detect the location of molecules or other structures within cells or tissues." [ECO:MCC, ECO:SN]
 synonym: "IDA: immunolocalization" RELATED []
-is_a: ECO:0000122 ! protein localization evidence
+is_a: ECO:0001098 ! microscopy evidence
+is_a: ECO:0005593 ! immunodetection assay evidence
 
 [Term]
 id: ECO:0000088
@@ -640,9 +641,9 @@ is_a: ECO:0005519 ! DNA detection assay evidence
 [Term]
 id: ECO:0000090
 name: immunogold labelling evidence
-def: "A type of protein assay evidence that involves attaching colloidal gold particles to a secondary antibody, which is attached to a primary antibody that binds a specific protein or cell part, followed by visualization with electron microscopy." [ECO:MCC]
+def: "A type of immunolocalization evidence where the antibodies are labeled with colloidal gold particles whose location is then detected via microscopy." [ECO:MCC]
 synonym: "IDA: immunogold labelling" RELATED []
-is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0000087 ! immunolocalization evidence
 
 [Term]
 id: ECO:0000092
@@ -728,7 +729,7 @@ is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
 id: ECO:0000106
-name: Northern assay evidence
+name: northern assay evidence
 def: "A type of transcript expression level evidence based on electrophoresis and probing to determine levels of RNA expression using a complementary hybridization probe on the separated RNA samples." [ECO:SW, TAIR:TED]
 synonym: "IEP: transcript levels (e.g. Northerns)" RELATED []
 synonym: "Northern blot" EXACT []
@@ -755,7 +756,7 @@ is_a: ECO:0000082 ! polymerase chain reaction evidence
 [Term]
 id: ECO:0000110
 name: RNA protection assay evidence
-def: "A type of nuclease protection assay evidence used for transcription start-site localization where mRNA is hybridize with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions and the resistant fragment size and identity is determined with gel electrophoresis." [ECO:SW, PMID:23457339, TAIR:TED]
+def: "A type of nuclease protection assay evidence where mRNA is hybridized with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions, later the remaining probe target hybrids are purified and resolved on denaturing polyacrylamide gel, and quantified by autoradiography." [ECO:SW, PMID:23457339, TAIR:TED]
 synonym: "IEP: RNA protection assay" RELATED []
 synonym: "ribonuclease protection assay" EXACT []
 synonym: "RNAse protection assay" RELATED []
@@ -765,12 +766,13 @@ is_a: ECO:0001106 ! nuclease protection assay evidence
 [Term]
 id: ECO:0000112
 name: western blot evidence
-def: "A type of protein expression level evidence where specific proteins from a mixed sample are detected and their expression levels are quantified using Western blotting technique." [ECO:SW, PMID:23050259, TAIR:TED]
+def: "A type of gel electrophoresis evidence where proteins are separated using gel electrophoresis and then they are blotted on a nitrocellulose or polyvinylidene difluoride (PVDF) membrane, later an antibody with a dye or an enzyme is added to the solution which is able to bind to its specific protein and this product is detected either by chemiluminescent detection technique or fluorescence imaging technique." [ECO:SW, PMID:23050259, TAIR:TED]
 comment: Western blot is used for protein detection and analysis. A mixed protein sample is separated through polyacrylamide gel electrophoresis then transferred to a membrane, such as polyvinylidene fluoride (PVDF), and labeled with protein-specific antibodies.
 synonym: "IEP: protein levels (e.g. Western blots)" RELATED []
 synonym: "protein immunoblot" RELATED []
 synonym: "Western blot expression analysis" RELATED []
-is_a: ECO:0000046 ! protein expression level evidence
+is_a: ECO:0000333 ! sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
+is_a: ECO:0005593 ! immunodetection assay evidence
 
 [Term]
 id: ECO:0000114
@@ -943,6 +945,7 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000166
 name: two-electrode voltage clamp experiment evidence
+def: "A type of electrophysiology assay evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current." [ECO:SN, PMID:23529422]
 synonym: "IDA: two-electrode voltage clamp technique" RELATED []
 is_a: ECO:0000164 ! electrophysiology assay evidence
 
@@ -1030,7 +1033,7 @@ is_a: ECO:0000020 ! specific protein inhibition evidence
 id: ECO:0000200
 name: sequence alignment evidence
 alt_id: ECO:00000057
-def: "Used when a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments. BLAST produces pairwise alignments and any annotations based solely on the evaluation of BLAST results should use this code." [url:http\://www.geneontology.org/GO.evidence.shtml]
+def: "A type of sequence similarity evidence where a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments." [url:http\://www.geneontology.org/GO.evidence.shtml]
 synonym: "inferred from sequence alignment" EXACT [GO:ISA]
 synonym: "ISA" EXACT [GO:ISA]
 is_a: ECO:0000044 ! sequence similarity evidence
@@ -1093,8 +1096,8 @@ creation_date: 2010-08-18T05:55:12Z
 [Term]
 id: ECO:0000206
 name: BLAST evidence
-def: "A type of sequence alignment evidence obtained with basic local alignment search tool (BLAST)." [ECO:MCC]
-is_a: ECO:0000200 ! sequence alignment evidence
+def: "A type of pairwise sequence alignment evidence obtained with basic local alignment search tool (BLAST)." [ECO:MCC]
+is_a: ECO:0005554 ! pairwise sequence alignment evidence
 created_by: mchibucos
 creation_date: 2010-08-06T04:48:24Z
 
@@ -1119,7 +1122,7 @@ id: ECO:0000209
 name: BLAST evidence used in automatic assertion
 def: "A type of BLAST evidence that is used in an automatic assertion." [ECO:MCC]
 is_a: ECO:0000206 ! BLAST evidence
-is_a: ECO:0000248 {is_inferred="true"} ! sequence alignment evidence used in automatic assertion
+is_a: ECO:0005561 {is_inferred="true"} ! pairwise sequence alignment evidence used in automatic assertion
 intersection_of: ECO:0000206 ! BLAST evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
@@ -1300,7 +1303,7 @@ creation_date: 2010-11-16T01:29:08Z
 [Term]
 id: ECO:0000227
 name: chromatin immunoprecipitation-PCR evidence
-def: "A type of chromatin immunoprecipitation (ChIP) evidence that uses polymerase chain reaction (PCR) where specific primers are used on the pulled-down DNA for DNA detection." [ECO:MCC, ECO:SW, PMID:18388953]
+def: "A type of chromatin immunoprecipitation evidence that uses polymerase chain reaction (PCR) where specific primers are used on the pulled-down DNA for DNA detection." [ECO:MCC, ECO:SW, PMID:18388953]
 comment: ChIP-PCR is often used to validate ChIP-chip results and less frequently,ChIP-Seq results.
 synonym: "ChIP-PCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
@@ -1319,7 +1322,7 @@ creation_date: 2010-11-16T05:26:47Z
 [Term]
 id: ECO:0000229
 name: chromatin immunoprecipitation-seq evidence
-def: "A chromatin immunoprecipitation (ChIP) evidence that uses high-throughput sequencing where immunoprecipitated DNA fragments are funneled into a massively parallel sequencer to produce multiple short reads for locating binding sites of DNA-associated proteins." [ECO:MCC, ECO:SW, OBI:0000716, PMID:22955991]
+def: "A type of chromatin immunoprecipitation evidence that uses high-throughput sequencing where immunoprecipitated DNA fragments are funnelled into a massively parallel sequencer to produce multiple short reads for locating binding sites of DNA-associated proteins." [ECO:MCC, ECO:SW, OBI:0000716, PMID:22955991]
 comment: ChIP-Seq experiments often use the input as a control to eliminate biases. To obtain similar results, ChIP-chip with high-density tiling arrays can be used.
 synonym: "ChIP-SEQ evidence" EXACT [OBI:0000716]
 synonym: "ChIP-seq evidence" EXACT [PMID:22955991]
@@ -1330,7 +1333,7 @@ creation_date: 2010-11-16T05:30:41Z
 [Term]
 id: ECO:0000230
 name: chromatin immunoprecipitation-chip evidence
-def: "A type of chromatin immunoprecipitation (ChIP) evidence that uses a tiling microarray for the detection of protein-bound DNA regions where chromatin is immunoprecipitated for protein tagging and DNA is sheared from the cross-linked protein-DNA complex to be arrayed revealing the protein-bound genomic regions." [ECO:MCC, ECO:SW, PMID:18388953, PMID:19381927]
+def: "A type of chromatin immunoprecipitation evidence that uses a tiling microarray for the detection of protein-bound DNA regions where chromatin is immunoprecipitated for protein tagging and DNA is sheared from the cross-linked protein-DNA complex to be arrayed revealing the protein-bound genomic regions." [ECO:MCC, ECO:SW, PMID:18388953, PMID:19381927]
 comment: A fixating agent such as formaldehyde is used to cross link proteins and DNA. Sonication is applied for DNA shearing. For transcription factor tagging, an antibody or epitope is employed. After cross-linking is reversed, the DNA is amplified and labeled with a flourophore for microarray which produces a resolution of aproximately 500 bp.
 synonym: "ChIP-chip evidence" EXACT []
 synonym: "ChIP-on-chip evidence" EXACT []
@@ -1646,6 +1649,7 @@ name: match to sequence model evidence used in automatic assertion
 def: "A match to sequence model evidence that is employed in an automatic assertion." [ECO:MCC]
 xref: GO_REF:0000002 "Gene Ontology annotation through association of InterPro records with GO terms."
 xref: GO_REF:0000019 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"
+xref: GO_REF:0000107 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl"
 is_a: ECO:0000202 ! match to sequence model evidence
 is_a: ECO:0000249 {is_inferred="true"} ! sequence similarity evidence used in automatic assertion
 intersection_of: ECO:0000202 ! match to sequence model evidence
@@ -1786,7 +1790,7 @@ creation_date: 2010-12-10T03:39:41Z
 [Term]
 id: ECO:0000267
 name: enzyme-linked immunoabsorbent assay evidence
-def: "A type of protein assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen which is visualized with a color change in the substrate." [ECO:MCC, ECO:SW, PMID:23949770]
+def: "A type of protein detection assay evidence where an antigen is bound to a substrate, and an antibody directly or indirectly linked to an enzyme is utilized to determine the amount of bound antigen which is visualized with a color change in the substrate." [ECO:MCC, ECO:SW, PMID:23949770]
 comment: ELISA is sometimes used in the study of transcriptional regulation to identify a produced protein, especially secreted protein.
 synonym: "ELISA evidence" EXACT []
 synonym: "enzyme-linked immunosorbent assay" NARROW []
@@ -1931,7 +1935,7 @@ id: ECO:0000279
 name: western blot evidence used in manual assertion
 def: "A type of Western blot assay that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000112 ! western blot evidence
-is_a: ECO:0000280 {is_inferred="true"} ! protein expression level evidence used in manual assertion
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 intersection_of: ECO:0000112 ! western blot evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -2623,7 +2627,7 @@ creation_date: 2012-08-24T12:03:58Z
 [Term]
 id: ECO:0000337
 name: gel electrophoresis evidence
-def: "A type of direct assay evidence  where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
+def: "A type of direct assay evidence where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
 comment: Molecules typically separated include DNA, RNA, or protein. The gel is typically made of agarose, polyacrylamide, or starch.
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
@@ -2878,6 +2882,7 @@ creation_date: 2015-07-14T11:24:27Z
 id: ECO:0000363
 name: evidence based on computational logical inference used in automatic assertion
 def: "A type of evidence based on computational logical inference that is used in automatic assertion." [ECO:MCC]
+xref: GO_REF:0000108 "Automatic assignment of GO terms using logical inference, based on on inter-ontology links"
 is_a: ECO:0000362 ! evidence based on computational logical inference
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 intersection_of: ECO:0000362 ! evidence based on computational logical inference
@@ -5584,7 +5589,7 @@ creation_date: 2014-03-17T22:34:56Z
 [Term]
 id: ECO:0001801
 name: alkaline phosphatase reporter gene assay evidence
-def: "A type of reporter gene assay evidence based on the fusion of selected genes with the phoA gene to express alkaline phosphatase in periplasmic space for protein tracing." [ECO:SW]
+def: "A type of reporter gene assay evidence based on the fusion of selected genes with the phoA gene to express alkaline phosphatase in periplasmic space for protein tracing." [ECO:SW, PMID:11823238]
 comment: Alkaline phosphatase reporter assay produces a hybrid protein with alkaline phosphatase activity following transportation across the cellular membrane.
 synonym: "SEAP reporter assay" RELATED []
 synonym: "Secreted Embryonic Alkaline Phosphatase reporter assay" RELATED []
@@ -5708,7 +5713,7 @@ creation_date: 2015-11-03T14:05:37Z
 [Term]
 id: ECO:0001813
 name: heteronuclear single quantum coherence spectroscopy evidence
-def: "A type of nuclear magnetic resonance based on two-dimensional NMR for elucidation of the chemical structure of an isolated or synthesized chemical compound where the characteristic transfer magnetization of a proton to a nitrogen or carbon isotope is monitored by NMR, generating a specific peak in the spectrum." [ECO:SW, PMID:19856946]
+def: "A type of nuclear magnetic resonance spectroscopy evidence based on two-dimensional NMR for elucidation of the chemical structure of an isolated or synthesized chemical compound where the characteristic transfer magnetization of a proton to a nitrogen or carbon isotope is monitored by NMR, generating a specific peak in the spectrum." [ECO:SW, PMID:19856946]
 comment: Chemical shifts in the spectrum indicating binding can be detected from analysis of a protein spectrum in the presence or absence of its cognate DNA binding site.
 synonym: "HSQC" EXACT [PMID:19856946]
 is_a: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
@@ -5729,7 +5734,7 @@ creation_date: 2015-11-03T14:24:04Z
 [Term]
 id: ECO:0001815
 name: copper-phenanthroline footprinting evidence
-def: "A type of nucleic acid binding evidence \nwhere nucleic acid that has been bound to protein is cleaved with 1,10-phenanthroline-copper complex resulting in a high-resolution footprint of sequence-specific protein-DNA contacts." [ECO:SW, PMID:11691942]
+def: "A type of nucleic acid binding evidence where nucleic acid that has been bound to protein is cleaved with 1,10-phenanthroline-copper complex resulting in a high-resolution footprint of sequence-specific protein-DNA contacts." [ECO:SW, PMID:11691942]
 synonym: "1,10-Phenanthroline-copper footprinting" EXACT [PMID:1384472]
 synonym: "OP-Cu Complex" RELATED [PMID:1384472]
 is_a: ECO:0000136 ! nucleic acid binding evidence
@@ -5777,7 +5782,7 @@ creation_date: 2015-11-04T09:33:18Z
 [Term]
 id: ECO:0001820
 name: rapid amplification of cDNA ends polymerase chain reaction evidence
-def: "A type of polymerase chain reaction evidence used to obtain the full length sequence of a RNA transcript where a mRNA primer is used for RT-PCR and terminal deoxynucleotidyl transferase (TdT) is used to add identical nucleotides to the 3' end of the cDNA after which PCR with a different primer and TdT-oligomer are performed in the other sense." [ECO:SW, PMID:17498297]
+def: "A type of polymerase chain reaction evidence where a mRNA primer is used for RT-PCR and terminal deoxynucleotidyl transferase (TdT) is used to add identical nucleotides to the 3' end of the cDNA after which PCR with a different primer and TdT-oligomer are performed in the other sense to obtain the full length sequence of a RNA transcript." [ECO:SW, PMID:17498297]
 comment: RACE PCR is frequently used to verify transcription start sites relevant to the function of transcription factor binding sites such as repression.
 synonym: "RACE PCR" EXACT [PMI:17498297]
 is_a: ECO:0000082 ! polymerase chain reaction evidence
@@ -5787,7 +5792,7 @@ creation_date: 2015-11-04T09:48:38Z
 [Term]
 id: ECO:0001821
 name: RNA sequencing assay evidence
-def: "A type of nucleotide sequencing assay evidence where RNA is extracted from a cell, reverse transcribed to cDNA, and sequenced for a snapshot of an organism's transcriptome with precise measurement of transcript levels and their isoforms." [ECO:SW, PMID:19015660]
+def: "A type of nucleotide sequencing assay evidence where RNA is extracted from a cell, reverse transcribed to cDNA for a snapshot of an organism's transcriptome with precise measurement of transcript levels and their isoforms." [ECO:SW, PMID:19015660]
 synonym: "RNA-Seq" EXACT [PMID:23851085]
 synonym: "Whole Transcriptome Shotgun Sequencing" EXACT [PMID:23851085]
 synonym: "WTTS" EXACT []
@@ -5805,8 +5810,8 @@ creation_date: 2015-11-04T10:48:59Z
 
 [Term]
 id: ECO:0001823
-name: X-ray crystallography evidence
-def: "A type of crystallography evidence based on X-ray diffraction of a crystal to determine molecular structure." [ECO:SW, PMID:23135450, PMID:24648090]
+name: x-ray crystallography evidence
+def: "A type of crystallography evidence where a purified sample at high concentration is crystallised and the crystals are exposed to an x ray beam to obtain three dimensional molecular structure of proteins and biological macromolecules." [ECO:SW, PMID:23135450, PMID:24648090]
 comment: X-ray crystallography can be used for a crystal used to probe at the tridimensional structure of proteins. In some cases, it is possible to co-crystallize the protein bound to its DNA binding site, providing detail on the particular arrangement of the two components.
 is_a: ECO:0001034 ! crystallography evidence
 created_by: swolfish
@@ -5854,7 +5859,7 @@ creation_date: 2015-11-05T16:16:27Z
 [Term]
 id: ECO:0001828
 name: visual sequence inspection evidence
-def: "A type of inference from background scientific knowledge used in manual assertion based on the visual inspection of promoter region to identify putative binding sites." [ECO:SW]
+def: "A type of inference from background scientific knowledge used in manual assertion where a visual inspection of promoter region is made to identify putative binding sites." [ECO:SW]
 is_a: ECO:0000306 ! inference from background scientific knowledge used in manual assertion
 created_by: swolfish
 creation_date: 2015-11-10T14:40:16Z
@@ -5956,6 +5961,7 @@ creation_date: 2015-03-20T12:16:17Z
 [Term]
 id: ECO:0005033
 name: electron microscopy evidence
+is_a: ECO:0001098 ! microscopy evidence
 is_a: ECO:0005031 ! structure determination evidence
 created_by: snadendla
 creation_date: 2015-03-20T12:21:48Z
@@ -5998,8 +6004,9 @@ creation_date: 2015-06-26T11:46:15Z
 [Term]
 id: ECO:0005503
 name: two-dimensional polyacrylamide gel electrophoresis evidence
-def: "A type of gel electrophoresis beginning with one dimension electrophoresis where biomolecules are electrophoresed on a low percentage polyacrylamide gel  to be separated in proportion to their mass or isoelectric point, followed by high voltage electrophoresis on a higher percentage gel in the presence of ethidium bromide to alter non-linear molecular shape." [ECO:SW]
+def: "A type of gel electrophoresis evidence that involves one dimension electrophoresis where biomolecules are electrophoresed on a low percentage polyacrylamide gel  to be separated in proportion to their mass or isoelectric point, followed by high voltage electrophoresis on a higher percentage gel in the presence of ethidium bromide to alter non-linear molecular shape." [ECO:SW, url:http\://www.nature.com/nmeth/journal/v2/n1/full/nmeth0105-83.html]
 comment: Two-dimensional polyacrylamide gel electrophoresis is commonly employed to establish a proteome for an organism and demonstrate expression changes.
+synonym: "2D PAGE" EXACT []
 synonym: "2D-PAGE" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: snadendla
@@ -6186,6 +6193,7 @@ id: ECO:0005526
 name: matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
 def: "A type of protein detection assay evidence where soft ionization is used for the analysis of biomolecules for mass determination in a three step process of plate preparation, radiation, and ionization with high throughput technology." [ECO:SW, PMID:21964792, PMID:25354905]
 comment: MALDI-TOF MS is commonly used for protein identification in constructing a proteome where protein fingerprints obtained by microbial cells are compared with a database of reference spectra by means of various algorithms integrated in systems recently made commercially available.
+synonym: "MALDI-TOF Mass Spectrometry" EXACT []
 synonym: "MALDI-TOF-MS" EXACT []
 is_a: ECO:0005517 ! protein detection assay evidence
 created_by: snadendla
@@ -6237,9 +6245,9 @@ creation_date: 2015-09-30T11:57:00Z
 [Term]
 id: ECO:0005531
 name: motif discovery evidence
-def: "A type of sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
+def: "A type of multiple sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
 comment: Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF (PMID: 19892760), from peaks in ChIP-seq experiments with the TF (PMID: 16264194), or from the comparative genomics analysis of the promoter regions of orthologs (PMID: 23032607).
-is_a: ECO:0000200 ! sequence alignment evidence
+is_a: ECO:0005555 ! multiple sequence alignment evidence
 created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
 
@@ -6301,32 +6309,28 @@ creation_date: 2015-10-28T15:31:28Z
 [Term]
 id: ECO:0005538
 name: computationally derived logical inference
-is_a: ECO:0000361 ! inferential evidence
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:15:50Z
 
 [Term]
 id: ECO:0005539
 name: computationally derived logical inference used in automatic assertion
-is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
-is_a: ECO:0005538 ! computationally derived logical inference
-intersection_of: ECO:0005538 ! computationally derived logical inference
-intersection_of: used_in ECO:0000203 ! automatic assertion
-relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:17:47Z
 
 [Term]
 id: ECO:0005540
 name: computationally derived logical inference from automatic assertion used in automatic assertion
-is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:24:42Z
 
 [Term]
 id: ECO:0005541
 name: computationally derived logical inference from manual assertion used in automatic assertion
-is_a: ECO:0005539 ! computationally derived logical inference used in automatic assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2015-11-17T15:32:03Z
 
@@ -6334,7 +6338,7 @@ creation_date: 2015-11-17T15:32:03Z
 id: ECO:0005542
 name: biological system reconstruction evidence by experimental evidence from single species used in manual assertion
 def: "A type of biological system reconstruction evidence by experimental evidence from single species that is used in a manual assertion." [ECO:SN, PMID:19450514]
-comment: Complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
+comment: Processes, pathways and complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
 intersection_of: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
@@ -6394,6 +6398,7 @@ creation_date: 2015-12-16T16:05:15Z
 id: ECO:0005547
 name: biological system reconstruction evidence based on inference from background scientific knowledge used in manual assertion
 def: "A type of biological system reconstruction evidence based on inference from background scientific knowledge that is used in a manual assertion." [ECO:SN, PMID:17876790]
+comment: Functional studies or ligand binding evidence are often used for the reconstruction of biological systems. It does not provide physical interaction evidence but uses proxies such a ligand binding evidences to infer the presence or absence of the complex components.
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
 intersection_of: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
@@ -6451,6 +6456,479 @@ def: "A type of biological system reconstruction where the experimental evidence
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
 created_by: snadendla
 creation_date: 2015-12-18T16:36:44Z
+
+[Term]
+id: ECO:0005554
+name: pairwise sequence alignment evidence
+def: "A type of sequence alignment evidence where two sequences are aligned to identify regions of similarity that may indicate functional, structural and/or evolutionary relationships between two biological sequences (protein or nucleic acid)." [ECO:SN, url:http\://www.ebi.ac.uk/Tools/psa/]
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: snadendla
+creation_date: 2016-02-08T14:30:46Z
+
+[Term]
+id: ECO:0005555
+name: multiple sequence alignment evidence
+def: "A type of sequence alignment evidence where three or more biological sequences (protein or nucleic acid) of similar length are aligned to infer homology and the evolutionary relationships between the sequences studied." [ECO:SN, url:http\://www.ebi.ac.uk/Tools/msa/]
+is_a: ECO:0000200 ! sequence alignment evidence
+created_by: snadendla
+creation_date: 2016-02-08T14:31:24Z
+
+[Term]
+id: ECO:0005556
+name: multiple sequence alignment evidence used in manual assertion
+def: "A type of multiple sequence alignment evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000247 {is_inferred="true"} ! sequence alignment evidence used in manual assertion
+is_a: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-08T14:59:18Z
+
+[Term]
+id: ECO:0005557
+name: multiple sequence alignment evidence used in automatic assertion
+def: "A type of multiple sequence alignment evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000248 {is_inferred="true"} ! sequence alignment evidence used in automatic assertion
+is_a: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: ECO:0005555 ! multiple sequence alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:00:50Z
+
+[Term]
+id: ECO:0005558
+name: motif discovery evidence used in manual assertion
+def: "A type of motif discovery evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005531 ! motif discovery evidence
+is_a: ECO:0005556 {is_inferred="true"} ! multiple sequence alignment evidence used in manual assertion
+intersection_of: ECO:0005531 ! motif discovery evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:07:47Z
+
+[Term]
+id: ECO:0005559
+name: motif discovery evidence used in automatic assertion
+def: "A type of motif discovery evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005531 ! motif discovery evidence
+is_a: ECO:0005557 {is_inferred="true"} ! multiple sequence alignment evidence used in automatic assertion
+intersection_of: ECO:0005531 ! motif discovery evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:08:19Z
+
+[Term]
+id: ECO:0005560
+name: pairwise sequence alignment evidence used in manual assertion
+def: "A type of pairwise sequence alignment evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000247 {is_inferred="true"} ! sequence alignment evidence used in manual assertion
+is_a: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:17:05Z
+
+[Term]
+id: ECO:0005561
+name: pairwise sequence alignment evidence used in automatic assertion
+def: "A type of pairwise sequence alignment evidence that is used in an automatic evidence." [ECO:SN]
+is_a: ECO:0000248 {is_inferred="true"} ! sequence alignment evidence used in automatic assertion
+is_a: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: ECO:0005554 ! pairwise sequence alignment evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
+created_by: snadendla
+creation_date: 2016-02-08T15:17:52Z
+
+[Term]
+id: ECO:0005562
+name: in gel protein kinase assay evidence
+is_a: ECO:0000181 ! in vitro assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:05:29Z
+
+[Term]
+id: ECO:0005563
+name: macroscopic current trace evidence
+def: "A type of electrophysiology assay evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording." [ECO:SN, PMID:17938230, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch03.pdf]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:40:03Z
+
+[Term]
+id: ECO:0005564
+name: current density evidence
+def: "A type of electrophysiology assay evidence that involves measuring the amount of current (pA) going through the ion channels per unit  of membrane." [ECO:SN, url:http\://circres.ahajournals.org/content/102/11/1298.full, url:http\://www.bem.fi/book/04/04.htm]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:43:07Z
+
+[Term]
+id: ECO:0005565
+name: single channel conductance evidence
+is_obsolete: true
+created_by: snadendla
+creation_date: 2016-02-09T12:45:42Z
+
+[Term]
+id: ECO:0005566
+name: sustained current evidence
+def: "A type of electrophysiology assay evidence that involves the measurement of the current that persists after the fast and slow inactivation of the analyzed channels." [ECO:SN, url:http\://www.nature.com/ncomms/journal/v3/n2/full/ncomms1717.html]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:46:54Z
+
+[Term]
+id: ECO:0005567
+name: steady state activation curve evidence
+is_obsolete: true
+created_by: snadendla
+creation_date: 2016-02-09T12:48:17Z
+
+[Term]
+id: ECO:0005568
+name: steady state inactivation curve evidence
+is_obsolete: true
+created_by: snadendla
+creation_date: 2016-02-09T12:50:45Z
+
+[Term]
+id: ECO:0005569
+name: window current trace evidence
+is_obsolete: true
+created_by: snadendla
+creation_date: 2016-02-09T12:57:16Z
+
+[Term]
+id: ECO:0005570
+name: use dependence of inactivation evidence
+def: "A type of electrophysiology assay evidence in which the amount of current remaining after a series of depolarization at different frequencies described as the normalized current related to the time course." [ECO:SN, url:http\://circres.ahajournals.org/content/89/8/700.full]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-09T12:58:18Z
+
+[Term]
+id: ECO:0005571
+name: current clamp voltage recording evidence
+def: "A type of electrophysiology assay evidence that involves recording the change in membrane potential caused by applying specific current to the cell." [ECO:SN, url:http\://www.nature.com/nprot/journal/v4/n8/full/nprot.2009.91.html]
+xref: birnlex:2278 "current clamp voltage recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T13:58:32Z
+
+[Term]
+id: ECO:0005572
+name: whole-cell voltage clamp recording evidence
+def: "A type of electrophysiology assay evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage." [ECO:SN, url:http\://circres.ahajournals.org/content/72/1/91.full.pdf]
+xref: birnlex:2281 "whole-cell voltage clamp recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:06:40Z
+
+[Term]
+id: ECO:0005573
+name: cell-attached single-channel recording evidence
+def: "A type of electrophysiology assay evidence that involves isolation of a patch of membrane electrically from the external solution and to record current flowing into the patch and this is achieved by pressing a fire-polished glass pipette, which has been filled with a suitable electrolyte solution, against the surface of a cell and applying light suction." [ECO:SN, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch04.pdf]
+xref: birnlex:2283 "cell-attached single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:07:39Z
+
+[Term]
+id: ECO:0005574
+name: cell-detached inside-out single-channel recording evidence
+def: "A type of electrophysiology assay evidence that involves study of individual ion channels by gently pulling the patch of membrane away from the cell, and the patch remains attached to the pipette with its cytoplasmic surface exposed to the bathing solution." [ECO:SN, url:http\://www.acnp.org/g4/GN401000005/CH005.html]
+xref: birnlex:2286 "cell-detached inside-out single-channel recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:16:53Z
+
+[Term]
+id: ECO:0005575
+name: reconstituted bilayer single-channel patch recording evidence
+def: "A type of electrophysiology assay evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane." [ECO:SN, url:http\://nanion.de/images/stories/papers/Bilayers_lab-on-a-chip08.pdf]
+xref: birnlex:2287 "reconstituted bilayer single-channel patch recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:17:46Z
+
+[Term]
+id: ECO:0005576
+name: voltage clamp current recording evidence
+def: "A type of electrophysiology assay evidence that involves recording membrane potential by controlling the membrane voltage and measuring the transmembrane current required to maintain that voltage." [ECO:SN, url:http\://neurobio.drexelmed.edu/GaoWeb/Resources/Recording%20_Techniques.pdf, url:http\://www.acnp.org/g4/GN401000005/CH005.html]
+xref: birnlex:2279 "voltage clamp current recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:18:36Z
+
+[Term]
+id: ECO:0005577
+name: electroencephalography recording evidence
+def: "A type of electrophysiology assay evidence that involves recording the electrical activity of the brain by means of electrodes placed on the surface of the head." [ECO:SN, url:http\://www.jove.com/science-education/5420/electro-encephalography-eeg]
+xref: birnlex:2293 "electroencephalography recording protocol"
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-02-12T14:19:21Z
+
+[Term]
+id: ECO:0005578
+name: super-resolution microscopy evidence
+def: "A type of microscopy evidence where the images are taken with a higher resolution than the diffraction limit that help in studying nanoscopic sub-cellular structures." [ECO:SN, url:http\://journal.frontiersin.org/article/10.3389/fncel.2015.00007/full]
+is_a: ECO:0001098 ! microscopy evidence
+created_by: snadendla
+creation_date: 2016-02-12T15:20:47Z
+
+[Term]
+id: ECO:0005579
+name: immunogold labelling evidence used in manual assertion
+def: "A type of immunogold labelling evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000090 ! immunogold labelling evidence
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+intersection_of: ECO:0000090 ! immunogold labelling evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-12T15:38:03Z
+
+[Term]
+id: ECO:0005580
+name: flow cytometry evidence used in manual assertion
+def: "A type of flow cytometry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000268 ! flow cytometry evidence
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+intersection_of: ECO:0000268 ! flow cytometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-12T16:04:23Z
+
+[Term]
+id: ECO:0005581
+name: enzyme-linked immunoabsorbent assay evidence used in manual assertion
+def: "A type of enzyme-linked immunoabsorbent assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000267 ! enzyme-linked immunoabsorbent assay evidence
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+intersection_of: ECO:0000267 ! enzyme-linked immunoabsorbent assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-02-12T16:23:38Z
+
+[Term]
+id: ECO:0005582
+name: cell-detached outside-out single-channel recording evidence
+def: "A type of electrophysiology assay evidence where a part of cellular membrane is detached from the cell and whose external face is exposed to the extracellular medium which allows isolating and studying a single or at least a small number of channels into that fragment (patch)." [ECO:SN, url:http\://www.nature.com/nprot/journal/v2/n11/full/nprot.2007.403.html]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-03-02T10:47:25Z
+
+[Term]
+id: ECO:0005583
+name: cut-open oocyte voltage clamp recording evidence
+def: "A type of electrophysiology assay evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway." [ECO:SN, PMID:9711615]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-03-02T11:29:32Z
+
+[Term]
+id: ECO:0005584
+name: macropatch voltage clamp recording evidence
+def: "A type of electrophysiology assay evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch)." [ECO:SN, url:http\://jxb.oxfordjournals.org/content/50/Special_Issue/1037.full.pdf]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: snadendla
+creation_date: 2016-03-02T11:33:48Z
+
+[Term]
+id: ECO:0005585
+name: high throughput mass spectrometry evidence
+def: "A type of mass spectrometry evidence where mass-to-charge ratio (m/z) of gas-phase ions is measured which is used to identify and quantify molecules in complex solutions within the framework of high throughput studies." [ECO:SN, PMID:20805795]
+comment: There are significant differences in data analysis and data evaluation if to compare a HTP mass-spec and a regular mass-spec. The regular mass spec method is quite a reliable technique for identifying a protein molecular weight and analysing its post-modifications, other mass-spec applications might require the additional quality controls and more stringent data evaluation. More complex sample mixture is processed, more quality questions should be addressed, such as a sample contamination and sensitivity of the mass spectrometer while using HTP mass-spec.\nFor HTP mass-spec, the analysis of the small data sets allows to manually assign the spectra to proteins or peptides, but for large data sets only the statistical tools can be used instead.
+is_a: ECO:0001096 ! mass spectrometry evidence
+created_by: snadendla
+creation_date: 2016-03-02T12:33:07Z
+
+[Term]
+id: ECO:0005586
+name: high throughput mass spectrometry evidence used in manual assertion
+def: "A type of high throughput mass spectrometry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005585 ! high throughput mass spectrometry evidence
+created_by: snadendla
+creation_date: 2016-03-02T12:50:02Z
+
+[Term]
+id: ECO:0005587
+name: confocal microscopy evidence
+def: "A type of microscopy evidence where sharp images are taken by excluding most of the light from the specimen that is not from the microscope's focal plane, thus allowing better contrast and less haze, which makes it possible to build three-dimensional reconstructions of a volume of the specimen by assembling a series of thin slices taken along the vertical axis." [ECO:SN, url:http\://www.physics.emory.edu/faculty/weeks//lab/papers/ebbe05.pdf]
+is_a: ECO:0001098 ! microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-17T12:29:45Z
+
+[Term]
+id: ECO:0005588
+name: wide-field microscopy evidence
+def: "A type of microscopy evidence where imaging of a thin cell or a tissue specimen is performed by full aperture emission of light gathered by the microscope's objective, which maximizes the recorded signal and simultaneously minimizes the required exposure times." [ECO:SN, url:http\://jcb.rupress.org/content/172/1/9.full, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048960/, url:http\://zeiss-campus.magnet.fsu.edu/articles/livecellimaging/techniques.html]
+is_a: ECO:0001098 ! microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-17T12:30:27Z
+
+[Term]
+id: ECO:0005589
+name: confocal microscopy evidence used in manual assertion
+def: "A type confocal microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+is_a: ECO:0005587 ! confocal microscopy evidence
+intersection_of: ECO:0005587 ! confocal microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T12:32:24Z
+
+[Term]
+id: ECO:0005590
+name: wide-field microscopy evidence used in manual assertion
+def: "A type of wide-field microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+is_a: ECO:0005588 ! wide-field microscopy evidence
+intersection_of: ECO:0005588 ! wide-field microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T12:34:42Z
+
+[Term]
+id: ECO:0005591
+name: immunogold labelling electron microscopy assay evidence
+def: "A type of immunogold labelling evidence where electron microscopy technique is used to detect the location of the antibodies labeled with colloidal gold particles." [ECO:SN, PMID:4110101]
+is_a: ECO:0000090 ! immunogold labelling evidence
+is_a: ECO:0005033 ! electron microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-17T15:43:00Z
+
+[Term]
+id: ECO:0005592
+name: immunogold labelling electron microscopy assay evidence used in manual assertion
+def: "A type of immunogold labelling electron microscopy assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005579 {is_inferred="true"} ! immunogold labelling evidence used in manual assertion
+is_a: ECO:0005591 ! immunogold labelling electron microscopy assay evidence
+intersection_of: ECO:0005591 ! immunogold labelling electron microscopy assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T16:39:37Z
+
+[Term]
+id: ECO:0005593
+name: immunodetection assay evidence
+def: "A type of direct assay evidence that involves the use of antibodies to detect biomolecules." [ECO:SN]
+is_a: ECO:0000002 ! direct assay evidence
+created_by: snadendla
+creation_date: 2016-03-17T17:07:33Z
+
+[Term]
+id: ECO:0005594
+name: immunoperoxidase immunolocalization evidence
+def: "A type of immunolocalization evidence involving enzymatic detection of a peroxidase tagged antibody." [ECO:SN]
+is_a: ECO:0000087 ! immunolocalization evidence
+created_by: snadendla
+creation_date: 2016-03-17T17:11:34Z
+
+[Term]
+id: ECO:0005595
+name: immunoperoxidase immunolocalization evidence used in manual assertion
+def: "A type of immunoperoxidase immunolocalization evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+is_a: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+intersection_of: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T17:14:05Z
+
+[Term]
+id: ECO:0005596
+name: immunoperoxidase immunolocalization electron microscopy evidence
+def: "A type of immunoperoxidase immunolocalization evidence where electron microscopy technique is used for enzymatic detection of a peroxidase tagged antibody." [ECO:SN]
+synonym: "Immunoperoxidase labelling electron microscopy" EXACT []
+is_a: ECO:0005033 ! electron microscopy evidence
+is_a: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+created_by: snadendla
+creation_date: 2016-03-17T17:16:38Z
+
+[Term]
+id: ECO:0005597
+name: immunoperoxidase immunolocalization electron microscopy evidence used in manual assertion
+def: "A type of immunoperoxidase immunolocalization electron microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005595 {is_inferred="true"} ! immunoperoxidase immunolocalization evidence used in manual assertion
+is_a: ECO:0005596 ! immunoperoxidase immunolocalization electron microscopy evidence
+intersection_of: ECO:0005596 ! immunoperoxidase immunolocalization electron microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-17T17:23:56Z
+
+[Term]
+id: ECO:0005598
+name: wide-field fluorescence microscopy evidence
+def: "A type of wide-field microscopy evidence where pure white and ultraviolet light are produced by a mercury lamp, passed through an optical filter (excitation filter), and directed to a sample via a dichroic mirror, followed by detection of the fluorescent light by a camera after it passes through an emission filter." [ECO:SN, url:http\://www.bristol.ac.uk/synaptic/research/techniques/widefield.html]
+comment: The optical filter is used to select the wavelength of excitation light. The detection camera is typically a CCD camera. Both topographical and dynamic information of a sample are obtained.
+is_a: ECO:0005588 ! wide-field microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-18T11:53:56Z
+
+[Term]
+id: ECO:0005599
+name: immunofluorescence wide-field microscopy evidence
+def: "A type of wide-field fluorescence microscopy evidence where fluorescently tagged antibodies are imaged that are used to bind to their antigens." [ECO:SN, url:http\://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057135]
+synonym: "wide-field epifluorescence microscopy" EXACT []
+is_a: ECO:0000007 ! immunofluorescence evidence
+is_a: ECO:0005598 ! wide-field fluorescence microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-18T11:55:40Z
+
+[Term]
+id: ECO:0005600
+name: immunofluorescence confocal microscopy evidence
+def: "A type of confocal microscopy evidence where light passes through immunofluorescent-stained tissue sections or cells and then the emitted light passes through the dichroic mirror and is focused onto the pinhole for subsequent detection." [ECO:SN, url:http\://www.physics.emory.edu/faculty/weeks/confocal/, url:https\://www.hycultbiotech.com/media/wysiwyg/protocol_Immunofluorescence.pdf]
+comment: This allows visualization of sub cellular distribution of biomolecules of interest.
+is_a: ECO:0000007 ! immunofluorescence evidence
+is_a: ECO:0005587 ! confocal microscopy evidence
+created_by: snadendla
+creation_date: 2016-03-18T12:48:42Z
+
+[Term]
+id: ECO:0005601
+name: immunofluorescence confocal microscopy evidence used in manual assertion
+def: "A type of immunofluorescence confocal microscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005589 {is_inferred="true"} ! confocal microscopy evidence used in manual assertion
+is_a: ECO:0005600 ! immunofluorescence confocal microscopy evidence
+intersection_of: ECO:0005600 ! immunofluorescence confocal microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-18T12:52:04Z
+
+[Term]
+id: ECO:0005602
+name: protein expression level evidence based on western blot
+def: "A type of protein expression level evidence where the level of expression of a protein is determined in a cell or tissue extract by western blot technique." [ECO:SN]
+is_a: ECO:0000046 ! protein expression level evidence
+is_a: ECO:0000112 ! western blot evidence
+created_by: snadendla
+creation_date: 2016-03-18T13:02:29Z
+
+[Term]
+id: ECO:0005603
+name: protein mass spectrometry evidence
+def: "A type of mass spectrometry evidence where one or more protein analyses are performed." [ECO:SN]
+is_a: ECO:0000039 ! protein assay evidence
+is_a: ECO:0001096 ! mass spectrometry evidence
+created_by: snadendla
+creation_date: 2016-03-18T13:11:37Z
 
 [Term]
 id: ID:0001601
