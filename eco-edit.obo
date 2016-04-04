@@ -2,6 +2,7 @@ format-version: 1.2
 date: 31:03:2016 17:11
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
+subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
@@ -61,6 +62,7 @@ is_a: ECO:0000039 ! protein assay evidence
 id: ECO:0000006
 name: experimental evidence
 def: "An evidence type that is based on the results of a laboratory assay." [ECO:MCC, GOC:ecd]
+subset: go_groupings
 synonym: "EXP" EXACT [GO:EXP]
 synonym: "inferred from experiment" EXACT [GO:EXP]
 is_a: ECO:0000000 ! evidence
@@ -1567,6 +1569,7 @@ creation_date: 2010-12-09T05:28:12Z
 id: ECO:0000252
 name: similarity evidence used in manual assertion
 def: "Similarity evidence that is used in a manual assertion." [ECO:MCC]
+subset: go_groupings
 is_a: ECO:0000041 ! similarity evidence
 intersection_of: ECO:0000041 ! similarity evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
