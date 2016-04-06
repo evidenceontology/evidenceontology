@@ -1,8 +1,9 @@
 format-version: 1.2
-data-version: releases/2016-03-29
-date: 18:03:2016 13:15
+data-version: releases/2016-04-06
+date: 31:03:2016 17:11
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
+subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
 subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
@@ -63,6 +64,7 @@ is_a: ECO:0000039 ! protein assay evidence
 id: ECO:0000006
 name: experimental evidence
 def: "An evidence type that is based on the results of a laboratory assay." [ECO:MCC, GOC:ecd]
+subset: go_groupings
 synonym: "EXP" EXACT [GO:EXP]
 synonym: "inferred from experiment" EXACT [GO:EXP]
 is_a: ECO:0000000 ! evidence
@@ -1597,6 +1599,7 @@ creation_date: 2010-12-09T05:28:12Z
 id: ECO:0000252
 name: similarity evidence used in manual assertion
 def: "Similarity evidence that is used in a manual assertion." [ECO:MCC]
+subset: go_groupings
 is_a: ECO:0000041 ! similarity evidence
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 intersection_of: ECO:0000041 ! similarity evidence
@@ -6364,8 +6367,9 @@ creation_date: 2015-12-16T15:45:01Z
 id: ECO:0005544
 name: biological system reconstruction evidence based on orthology evidence used in manual assertion
 def: "A type of biological system reconstruction evidence based on orthology evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
 is_a: ECO:0005545 ! biological system reconstruction evidence based on orthology evidence
+is_a: ECO:0005610 ! biological system reconstruction evidence based on homology evidence used in manual assertion
 intersection_of: ECO:0005545 ! biological system reconstruction evidence based on orthology evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -6383,11 +6387,11 @@ creation_date: 2015-12-16T15:57:37Z
 
 [Term]
 id: ECO:0005546
-name: biological system reconstruction based on paralogy evidence used in manual assertion
+name: biological system reconstruction evidence based on paralogy evidence used in manual assertion
 def: "A type of  biological system reconstruction evidence based on paralogy evidence that is used in a manual assertion." [ECO:SN, PMID:15660128]
 comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005550 ! biological system reconstruction evidence based on paralogy evidence
+is_a: ECO:0005610 ! biological system reconstruction evidence based on homology evidence used in manual assertion
 intersection_of: ECO:0005550 ! biological system reconstruction evidence based on paralogy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -6429,6 +6433,7 @@ creation_date: 2015-12-18T15:49:46Z
 id: ECO:0005550
 name: biological system reconstruction evidence based on paralogy evidence
 def: "A type of  biological system reconstruction evidence based on homology evidence where the evidence is inferred by paralogy from an existing experimentally supported model to a process, pathway, or complex in the same species." [ECO:SN, PMID:15660128]
+comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
 is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
 created_by: snadendla
 creation_date: 2015-12-18T16:24:08Z
@@ -6445,6 +6450,7 @@ creation_date: 2015-12-18T16:34:13Z
 id: ECO:0005552
 name: biological system reconstruction evidence by experimental evidence from mixed species
 def: "A type of biological system reconstruction evidence where the experimental evidence is derived by using a mix of species used in the same experiment." [ECO:SN, PMID:22232657]
+comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. The evidence may originate from a combination of several experiments.
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
 created_by: snadendla
 creation_date: 2015-12-18T16:35:13Z
@@ -6453,6 +6459,7 @@ creation_date: 2015-12-18T16:35:13Z
 id: ECO:0005553
 name: biological system reconstruction evidence by experimental evidence from single species
 def: "A type of biological system reconstruction where the experimental evidence is derived by using multiple experiments in a single species." [ECO:SN]
+comment: Processes, pathways and complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
 created_by: snadendla
 creation_date: 2015-12-18T16:36:44Z
@@ -6929,6 +6936,70 @@ is_a: ECO:0000039 ! protein assay evidence
 is_a: ECO:0001096 ! mass spectrometry evidence
 created_by: snadendla
 creation_date: 2016-03-18T13:11:37Z
+
+[Term]
+id: ECO:0005604
+name: cross-streak test evidence
+def: "A type of experimental evidence where the investigated organism or a potential antagonist is inoculated so as to grow along the diameter line of the agar medium in a Petri dish, then, potentially susceptible microbes (usually bacteria) are streaked perpendicularly to the growth line and inhibition of growth of a test microbe in the vicinity of that line suggests that the antagonist secretes one or more diffusible antibiotics." [ECO:SN, url:www.jstor.org/stable/3792785]
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2016-03-29T15:40:54Z
+
+[Term]
+id: ECO:0005605
+name: disk diffusion test evidence
+def: "A type of experimental evidence where sensitivity/resistance to an antimicrobial agent is tested by impregnating small filter disks with a known concentration of antimicrobial agent which is then placed on a Mueller-Hinton agar plate inoculated with the test organism." [ECO:SN, url:http\://www.cdc.gov/nczved/resources/cholera/ch9.pdf]
+synonym: "zone of inhibition evidence" EXACT []
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2016-03-29T16:02:22Z
+
+[Term]
+id: ECO:0005606
+name: cell transfection experiment evidence
+def: "A type of experimental evidence where a foreign genetic material is introduced into the cell for study of gene function and regulation and protein function." [ECO:SN, url:http\://ch.promega.com/resources/product-guides-and-selectors/protocols-and-applications-guide/transfection/, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2911531/]
+is_a: ECO:0000006 ! experimental evidence
+created_by: snadendla
+creation_date: 2016-03-29T16:59:17Z
+
+[Term]
+id: ECO:0005607
+name: tethered cell assay evidence
+def: "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined by observing the rotational behavior of the organism tethered to a coverslip by their flagella." [ECO:SN, PMID:1103143]
+is_a: ECO:0005021 ! chemotaxis assay evidence
+created_by: snadendla
+creation_date: 2016-03-31T15:51:10Z
+
+[Term]
+id: ECO:0005608
+name: tumble frequency assay evidence
+def: "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined by measuring chemotaxis in response to sudden concentration changes from one uniform spatial environment to another." [ECO:SN, PMID:4576832]
+synonym: "Temporal assay" EXACT []
+is_a: ECO:0005021 ! chemotaxis assay evidence
+created_by: snadendla
+creation_date: 2016-03-31T16:42:35Z
+
+[Term]
+id: ECO:0005609
+name: capillary assay evidence
+def: "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined (typically bacteria or archaea) by measuring the rate of accumulation of the organism into a capillary." [ECO:SN, PMID:4632978]
+comment: To determine the presence of positive chemotaxis, an attractant is placed in the capillary and the presence of positive chemotaxis is determined based on the amount of organism that accumulated in the capillary.\nTo determine the presence of negative chemotaxis, a repellent is added to the organismal suspension (but not in the capillary) and the organisms that fled into the capillary are measured.
+is_a: ECO:0005021 ! chemotaxis assay evidence
+created_by: snadendla
+creation_date: 2016-03-31T16:45:29Z
+
+[Term]
+id: ECO:0005610
+name: biological system reconstruction evidence based on homology evidence used in manual assertion
+def: "A type of biological system reconstruction evidence based on homology evidence that is used in a manual assertion." [ECO:SN]
+comment: Inference may be based on paralogy and/or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
+intersection_of: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+created_by: snadendla
+creation_date: 2016-03-31T17:00:03Z
 
 [Term]
 id: ID:0001601

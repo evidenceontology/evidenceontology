@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://purl.obolibrary.org/obo/eco/subsets/valid_with_gene.owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_gene.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2016-03-29/subsets/valid_with_gene.owl">
+     versionIRI="http://purl.obolibrary.org/obo/eco/2016-04-06/subsets/valid_with_gene.owl">
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
@@ -1107,6 +1107,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/eco#go_groupings</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Grouping classes used by GO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.obolibrary.org/obo/eco#valid_with_biological_process</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO biological process terms should be used in the GO with/from field</Literal>
     </AnnotationAssertion>
@@ -1200,6 +1205,10 @@
         <IRI>http://www.geneontology.org/formats/oboInOwl#shorthand</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">shorthand</Literal>
     </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
