@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 31:03:2016 17:11
+date: 08:04:2016 14:56
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -5957,7 +5957,7 @@ creation_date: 2015-12-18T15:32:15Z
 id: ECO:0005549
 name: biological system reconstruction evidence based on homology evidence
 def: "A type of biological system reconstruction where the evidence is inferred by homology based on conservation of sequence, function, and composition from an existing experimentally supported model to a process, pathway, or complex." [ECO:SN, PMID:15660128]
-comment: Inference may be based on paralogy or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
+comment: Inference may be based on paralogy and/or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
 is_a: ECO:0000088 ! biological system reconstruction evidence
 created_by: snadendla
 creation_date: 2015-12-18T15:49:46Z
@@ -6495,7 +6495,7 @@ creation_date: 2016-03-31T16:45:29Z
 id: ECO:0005610
 name: biological system reconstruction evidence based on homology evidence used in manual assertion
 def: "A type of biological system reconstruction evidence based on homology evidence that is used in a manual assertion." [ECO:SN]
-comment: Inference may be based on paralogy and/or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
+comment: Inference may be based on paralogy and/or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
 is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
 intersection_of: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
