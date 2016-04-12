@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:04:2016 14:56
+date: 12:04:2016 17:41
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -6501,6 +6501,38 @@ intersection_of: ECO:0005549 ! biological system reconstruction evidence based o
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2016-03-31T17:00:03Z
+
+[Term]
+id: ECO:0005611
+name: inference from experimental data evidence
+def: "A type of direct assay evidence used in manual assertion where phenotype or disease association is made with the gene because of involvement in the molecular mechanism of disease or involvement in a pathway known to contribute to a disease." [ECO:SN]
+synonym: "IED" EXACT []
+synonym: "inferred from experimental data" EXACT []
+is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+created_by: snadendla
+creation_date: 2016-04-12T16:55:16Z
+
+[Term]
+id: ECO:0005612
+name: inference from phenotype manipulation evidence
+def: "A type of mutant phenotype evidence used in manual assertion where variations or changes, such as mutations or abnormal levels of the product(s) of a single gene of interest, including non-mutational changes such as inhibition with antibodies or other inhibitors are determined." [ECO:SN]
+comment: Changes can include any gene mutation/knockout, over-expression or ectopic expression of wild-type or mutant genes, anti-sense experiments, RNAi experiments, specific protein inhibitors.
+synonym: "inferred from phenotype manipulation" EXACT []
+synonym: "IPM" EXACT []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+created_by: snadendla
+creation_date: 2016-04-12T17:09:43Z
+
+[Term]
+id: ECO:0005613
+name: inference by association of genotype from phenotype
+def: "A type of natural variation mutant evidence used in manual assertion where alleles are directly linked to phenotype and Mendelian diseases as a result of various experiments." [ECO:SN]
+comment: Used for 1) polymorphism or segregation of genetic markers (SNPs, mutations, RFLPs, microsatellites); 2) polymorphism or segregation of physical markers (FISH, centromeric or heterochromatic regions, chromosomal banding patterns); 3) detection of polymorphisms in inbred stock.
+synonym: "IAGP" EXACT []
+synonym: "inferred by association of genotype from phenotype" EXACT []
+is_a: ECO:0001237 ! natural variation mutant evidence used in manual assertion
+created_by: snadendla
+creation_date: 2016-04-12T17:24:00Z
 
 [Term]
 id: ID:0001601
