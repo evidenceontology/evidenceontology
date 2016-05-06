@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:04:2016 17:41
+date: 06:05:2016 11:35
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -6533,6 +6533,86 @@ synonym: "inferred by association of genotype from phenotype" EXACT []
 is_a: ECO:0001237 ! natural variation mutant evidence used in manual assertion
 created_by: snadendla
 creation_date: 2016-04-12T17:24:00Z
+
+[Term]
+id: ECO:0005614
+name: two-dimensional polyacrylamide gel electrophoresis evidence used in manual assertion
+def: "A type of two-dimensional polyacrylamide gel electrophoresis evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005503 ! two-dimensional polyacrylamide gel electrophoresis evidence
+intersection_of: ECO:0005503 ! two-dimensional polyacrylamide gel electrophoresis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:03:08Z
+
+[Term]
+id: ECO:0005615
+name: alkaline phosphatase reporter gene assay evidence used in manual assertion
+def: "A type of alkaline phosphatase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001801 ! alkaline phosphatase reporter gene assay evidence
+intersection_of: ECO:0001801 ! alkaline phosphatase reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:05:59Z
+
+[Term]
+id: ECO:0005616
+name: beta-galactosidase reporter gene assay evidence used in manual assertion
+def: "A type of beta-galactosidase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001802 ! beta-galactosidase reporter gene assay evidence
+intersection_of: ECO:0001802 ! beta-galactosidase reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:08:57Z
+
+[Term]
+id: ECO:0005617
+name: chloramphenicol acetyltransferase reporter gene assay evidence used in manual assertion
+def: "A type of chloramphenicol acetyltransferase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001803 ! chloramphenicol acetyltransferase reporter gene assay evidence
+intersection_of: ECO:0001803 ! chloramphenicol acetyltransferase reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:11:07Z
+
+[Term]
+id: ECO:0005618
+name: chromatin immunoprecipitation-chip evidence used in automatic assertion
+def: "A type of chromatin immunoprecipitation-chip evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000230 ! chromatin immunoprecipitation-chip evidence
+intersection_of: ECO:0000230 ! chromatin immunoprecipitation-chip evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:17:04Z
+
+[Term]
+id: ECO:0005619
+name: chromatin immunoprecipitation- exonuclease evidence used in automatic assertion
+def: "A type of chromatin immunoprecipitation- exonuclease evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001806 ! chromatin immunoprecipitation- exonuclease evidence
+intersection_of: ECO:0001806 ! chromatin immunoprecipitation- exonuclease evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:22:25Z
+
+[Term]
+id: ECO:0005620
+name: chromatin immunoprecipitation-PCR evidence used in manual assertion
+def: "A type of chromatin immunoprecipitation-PCR evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000227 ! chromatin immunoprecipitation-PCR evidence
+intersection_of: ECO:0000227 ! chromatin immunoprecipitation-PCR evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:25:01Z
+
+[Term]
+id: ECO:0005621
+name: chromatin immunoprecipitation-seq evidence used in automatic assertion
+def: "A type of chromatin immunoprecipitation-seq evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
+intersection_of: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T11:29:13Z
 
 [Term]
 id: ID:0001601
