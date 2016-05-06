@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:05:2016 11:35
+date: 06:05:2016 17:01
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -6613,6 +6613,206 @@ intersection_of: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: snadendla
 creation_date: 2016-05-06T11:29:13Z
+
+[Term]
+id: ECO:0005622
+name: comparative genomics motif search evidence used in manual assertion
+def: "A type of comparative genomics motif search evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005534 ! comparative genomics motif search evidence
+intersection_of: ECO:0005534 ! comparative genomics motif search evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T14:49:36Z
+
+[Term]
+id: ECO:0005623
+name: comparative genomics motif search evidence used in automatic assertion
+def: "A type of comparative genomics motif search evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005534 ! comparative genomics motif search evidence
+intersection_of: ECO:0005534 ! comparative genomics motif search evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T14:52:21Z
+
+[Term]
+id: ECO:0005624
+name: consensus search evidence used in manual assertion
+def: "A type of consensus search evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005532 ! consensus search evidence
+intersection_of: ECO:0005532 ! consensus search evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T14:54:53Z
+
+[Term]
+id: ECO:0005625
+name: consensus search evidence used in automatic assertion
+def: "A type of consensus search evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005532 ! consensus search evidence
+intersection_of: ECO:0005532 ! consensus search evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T14:58:22Z
+
+[Term]
+id: ECO:0005626
+name: copper-phenanthroline footprinting evidence used in manual assertion
+def: "A type of copper-phenanthroline footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001815 ! copper-phenanthroline footprinting evidence
+intersection_of: ECO:0001815 ! copper-phenanthroline footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:01:25Z
+
+[Term]
+id: ECO:0005627
+name: DNA adenine methyltransferase identification evidence used in manual assertion
+def: "A type of DNA adenine methyltransferase identification evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001824 ! DNA adenine methyltransferase identification evidence
+intersection_of: ECO:0001824 ! DNA adenine methyltransferase identification evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:05:14Z
+
+[Term]
+id: ECO:0005628
+name: DNA adenine methyltransferase identification evidence used in automatic assertion
+def: "A type of DNA adenine methyltransferase identification evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001824 ! DNA adenine methyltransferase identification evidence
+intersection_of: ECO:0001824 ! DNA adenine methyltransferase identification evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:06:46Z
+
+[Term]
+id: ECO:0005629
+name: DNA affinity chromatography evidence used in manual assertion
+def: "A type of DNA affinity chromatography evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001809 ! DNA affinity chromatography evidence
+intersection_of: ECO:0001809 ! DNA affinity chromatography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:08:40Z
+
+[Term]
+id: ECO:0005630
+name: DNA microarray evidence used in automatic assertion
+def: "A type of DNA microarray evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005524 ! DNA microarray evidence
+intersection_of: ECO:0005524 ! DNA microarray evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:31:51Z
+
+[Term]
+id: ECO:0005631
+name: DNAse footprinting evidence used in manual assertion
+def: "A type of DNAse footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001810 ! DNAse footprinting evidence
+intersection_of: ECO:0001810 ! DNAse footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:35:41Z
+
+[Term]
+id: ECO:0005632
+name: fluorescence anisotropy evidence used in manual assertion
+def: "A type of fluorescence anisotropy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001811 ! fluorescence anisotropy evidence
+intersection_of: ECO:0001811 ! fluorescence anisotropy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:45:40Z
+
+[Term]
+id: ECO:0005633
+name: ferric uptake regulator titration assay evidence used in manual assertion
+def: "A type of ferric uptake regulator titration assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001829 ! ferric uptake regulator titration assay evidence
+intersection_of: ECO:0001829 ! ferric uptake regulator titration assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T15:49:18Z
+
+[Term]
+id: ECO:0005634
+name: genomic systematic evolution of ligands by exponential amplification evidence used in manual assertion
+def: "A type of genomic systematic evolution of ligands by exponential amplification evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001812 ! genomic systematic evolution of ligands by exponential amplification evidence
+intersection_of: ECO:0001812 ! genomic systematic evolution of ligands by exponential amplification evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:41:30Z
+
+[Term]
+id: ECO:0005635
+name: genomic systematic evolution of ligands by exponential amplification evidence used in automatic assertion
+def: "A type of genomic systematic evolution of ligands by exponential amplification evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001812 ! genomic systematic evolution of ligands by exponential amplification evidence
+intersection_of: ECO:0001812 ! genomic systematic evolution of ligands by exponential amplification evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:43:03Z
+
+[Term]
+id: ECO:0005636
+name: green fluorescent protein reporter gene assay evidence used in manual assertion
+def: "A type of green fluorescent protein reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
+intersection_of: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:46:32Z
+
+[Term]
+id: ECO:0005637
+name: green fluorescent protein reporter gene assay evidence used in automatic assertion
+def: "A type of green fluorescent protein reporter gene assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
+intersection_of: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:48:29Z
+
+[Term]
+id: ECO:0005638
+name: cell growth assay evidence used in manual assertion
+def: "A type of cell growth assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000095 ! cell growth assay evidence
+intersection_of: ECO:0000095 ! cell growth assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:52:15Z
+
+[Term]
+id: ECO:0005639
+name: cell growth assay evidence used in automatic assertion
+def: "A type of cell growth assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000095 ! cell growth assay evidence
+intersection_of: ECO:0000095 ! cell growth assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:53:28Z
+
+[Term]
+id: ECO:0005640
+name: glutathione S-transferase pull-down assay evidence used in manual assertion
+def: "A type of glutathione S-transferase pull-down assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001817 ! glutathione S-transferase pull-down assay evidence
+intersection_of: ECO:0001817 ! glutathione S-transferase pull-down assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:56:39Z
+
+[Term]
+id: ECO:0005641
+name: beta-glucuronidase reporter gene assay evidence used in manual assertion
+def: "A type of beta-glucuronidase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001804 ! beta-glucuronidase reporter gene assay evidence
+intersection_of: ECO:0001804 ! beta-glucuronidase reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T16:58:29Z
 
 [Term]
 id: ID:0001601
