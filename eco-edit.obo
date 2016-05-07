@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:05:2016 17:01
+date: 07:05:2016 00:00
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -4446,7 +4446,7 @@ creation_date: 2014-03-17T17:41:25Z
 
 [Term]
 id: ECO:0001204
-name: in vitro transcription assay used in manual assertion
+name: in vitro transcription assay evidence used in manual assertion
 def: "A type of in vitro transcription assay evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0001071 ! in vitro transcription assay evidence
 intersection_of: ECO:0001071 ! in vitro transcription assay evidence
@@ -6813,6 +6813,106 @@ intersection_of: ECO:0001804 ! beta-glucuronidase reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2016-05-06T16:58:29Z
+
+[Term]
+id: ECO:0005642
+name: heteronuclear single quantum coherence spectroscopy evidence used in manual assertion
+def: "A type of heteronuclear single quantum coherence spectroscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001813 ! heteronuclear single quantum coherence spectroscopy evidence
+intersection_of: ECO:0001813 ! heteronuclear single quantum coherence spectroscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:10:13Z
+
+[Term]
+id: ECO:0005643
+name: hydroxyl-radical footprinting evidence used in manual assertion
+def: "A type of hydroxyl-radical footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001818 ! hydroxyl-radical footprinting evidence
+intersection_of: ECO:0001818 ! hydroxyl-radical footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:14:48Z
+
+[Term]
+id: ECO:0005644
+name: immunoprecipitation evidence used in manual assertion
+def: "A type of immunoprecipitation evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000085 ! immunoprecipitation evidence
+intersection_of: ECO:0000085 ! immunoprecipitation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:20:49Z
+
+[Term]
+id: ECO:0005645
+name: interferometric reflectance imaging sensor evidence used in manual assertion
+def: "A type of interferometric reflectance imaging sensor evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005520 ! interferometric reflectance imaging sensor evidence
+intersection_of: ECO:0005520 ! interferometric reflectance imaging sensor evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:27:58Z
+
+[Term]
+id: ECO:0005646
+name: interferometric reflectance imaging sensor evidence used in automatic assertion
+def: "A type of interferometric reflectance imaging sensor evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005520 ! interferometric reflectance imaging sensor evidence
+intersection_of: ECO:0005520 ! interferometric reflectance imaging sensor evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:29:23Z
+
+[Term]
+id: ECO:0005647
+name: isothermal titration calorimetry evidence used in manual assertion
+def: "A type of isothermal titration calorimetry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001825 ! isothermal titration calorimetry evidence
+intersection_of: ECO:0001825 ! isothermal titration calorimetry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:36:26Z
+
+[Term]
+id: ECO:0005648
+name: luciferase reporter gene assay evidence used in manual assertion
+def: "A type of luciferase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001805 ! luciferase reporter gene assay evidence
+intersection_of: ECO:0001805 ! luciferase reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:44:52Z
+
+[Term]
+id: ECO:0005649
+name: machine learning prediction of motif instance evidence used in manual assertion
+def: "A type of machine learning prediction of motif instance evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005535 ! machine learning prediction of motif instance evidence
+intersection_of: ECO:0005535 ! machine learning prediction of motif instance evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:51:30Z
+
+[Term]
+id: ECO:0005650
+name: machine learning prediction of motif instance evidence used in automatic assertion
+def: "A type of machine learning prediction of motif instance evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005535 ! machine learning prediction of motif instance evidence
+intersection_of: ECO:0005535 ! machine learning prediction of motif instance evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:54:00Z
+
+[Term]
+id: ECO:0005651
+name: matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence used in automatic assertion
+def: "A type of matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005526 ! matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
+intersection_of: ECO:0005526 ! matrix-assisted laser desorption/ionization time-of-flight mass spectrometry evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-06T23:57:30Z
 
 [Term]
 id: ID:0001601
