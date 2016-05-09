@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:05:2016 00:00
+date: 09:05:2016 16:36
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -5356,7 +5356,7 @@ creation_date: 2015-11-04T10:15:57Z
 
 [Term]
 id: ECO:0001822
-name: survival analysis evidence
+name: survival rate analysis evidence
 def: "A type of knockout evidence based on the survival of an organism in a particular environment where a gene for an enzyme or regulator is knocked out and results are used as a natural reporter." [ECO:SW]
 is_a: ECO:0001091 ! knockout evidence
 created_by: swolfish
@@ -6913,6 +6913,186 @@ intersection_of: ECO:0005526 ! matrix-assisted laser desorption/ionization time-
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: snadendla
 creation_date: 2016-05-06T23:57:30Z
+
+[Term]
+id: ECO:0005652
+name: methidiumpropyl-ethylenediaminetetraacetic acid iron (II) footprinting evidence used in manual assertion
+def: "A type of methidiumpropyl-ethylenediaminetetraacetic acid iron (II) footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001814 ! methidiumpropyl-ethylenediaminetetraacetic acid iron (II) footprinting evidence
+intersection_of: ECO:0001814 ! methidiumpropyl-ethylenediaminetetraacetic acid iron (II) footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T14:42:28Z
+
+[Term]
+id: ECO:0005653
+name: northern assay evidence used in manual assertion
+def: "A type of northern assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000106 ! northern assay evidence
+intersection_of: ECO:0000106 ! northern assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T14:48:03Z
+
+[Term]
+id: ECO:0005654
+name: phylogenetic footprinting evidence used in manual assertion
+def: "A type of phylogenetic footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005533 ! phylogenetic footprinting evidence
+intersection_of: ECO:0005533 ! phylogenetic footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T14:50:52Z
+
+[Term]
+id: ECO:0005655
+name: phylogenetic footprinting evidence used in automatic assertion
+def: "A type of phylogenetic footprinting evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005533 ! phylogenetic footprinting evidence
+intersection_of: ECO:0005533 ! phylogenetic footprinting evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-09T14:51:55Z
+
+[Term]
+id: ECO:0005656
+name: premethylation interference footprinting evidence used in manual assertion
+def: "A type of premethylation interference footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001827 ! premethylation interference footprinting evidence
+intersection_of: ECO:0001827 ! premethylation interference footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T14:55:25Z
+
+[Term]
+id: ECO:0005657
+name: primer extension assay evidence used in manual assertion
+def: "A type of primer extension assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001819 ! primer extension assay evidence
+intersection_of: ECO:0001819 ! primer extension assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T14:58:38Z
+
+[Term]
+id: ECO:0005658
+name: position-specific scoring matrix motif search evidence used in manual assertion
+def: "A type of position-specific scoring matrix motif search evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005536 ! position-specific scoring matrix motif search evidence
+intersection_of: ECO:0005536 ! position-specific scoring matrix motif search evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T15:01:31Z
+
+[Term]
+id: ECO:0005659
+name: position-specific scoring matrix motif search evidence used in automatic assertion
+def: "A type of position-specific scoring matrix motif search evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005536 ! position-specific scoring matrix motif search evidence
+intersection_of: ECO:0005536 ! position-specific scoring matrix motif search evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-09T15:02:31Z
+
+[Term]
+id: ECO:0005660
+name: quantitative polymerase chain reaction evidence used in manual assertion
+def: "A type of quantitative polymerase chain reaction evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000231 ! quantitative polymerase chain reaction evidence
+intersection_of: ECO:0000231 ! quantitative polymerase chain reaction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T15:09:01Z
+
+[Term]
+id: ECO:0005661
+name: rapid amplification of cDNA ends polymerase chain reaction evidence used in manual assertion
+def: "A type of rapid amplification of cDNA ends polymerase chain reaction evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001820 ! rapid amplification of cDNA ends polymerase chain reaction evidence
+intersection_of: ECO:0001820 ! rapid amplification of cDNA ends polymerase chain reaction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T15:19:20Z
+
+[Term]
+id: ECO:0005662
+name: regular expression motif search evidence used in manual assertion
+def: "A type of regular expression motif search evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005505 ! regular expression motif search evidence
+intersection_of: ECO:0005505 ! regular expression motif search evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:13:55Z
+
+[Term]
+id: ECO:0005663
+name: regular expression motif search evidence used in automatic assertion
+def: "A type of regular expression motif search evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005505 ! regular expression motif search evidence
+intersection_of: ECO:0005505 ! regular expression motif search evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:15:03Z
+
+[Term]
+id: ECO:0005664
+name: RNA sequencing assay evidence used in manual assertion
+def: "A type of RNA sequencing assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001821 ! RNA sequencing assay evidence
+intersection_of: ECO:0001821 ! RNA sequencing assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:18:35Z
+
+[Term]
+id: ECO:0005665
+name: RNA sequencing assay evidence used in automatic assertion
+def: "A type of RNA sequencing assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001821 ! RNA sequencing assay evidence
+intersection_of: ECO:0001821 ! RNA sequencing assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:19:38Z
+
+[Term]
+id: ECO:0005666
+name: S1 nuclease protection assay evidence used in manual assertion
+def: "A type of S1 nuclease protection assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005521 ! S1 nuclease protection assay evidence
+intersection_of: ECO:0005521 ! S1 nuclease protection assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:22:58Z
+
+[Term]
+id: ECO:0005667
+name: site-directed mutagenesis evidence used in manual assertion
+def: "A type of site-directed mutagenesis evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005528 ! site-directed mutagenesis evidence
+intersection_of: ECO:0005528 ! site-directed mutagenesis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:29:13Z
+
+[Term]
+id: ECO:0005668
+name: survival rate analysis evidence used in manual assertion
+def: "A type of survival rate analysis evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001822 ! survival rate analysis evidence
+intersection_of: ECO:0001822 ! survival rate analysis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:31:08Z
+
+[Term]
+id: ECO:0005669
+name: ultraviolet light footprinting evidence used in manual assertion
+def: "A type of ultraviolet light footprinting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001826 ! ultraviolet light footprinting evidence
+intersection_of: ECO:0001826 ! ultraviolet light footprinting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-09T16:33:44Z
 
 [Term]
 id: ID:0001601
