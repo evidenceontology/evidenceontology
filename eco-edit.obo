@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:05:2016 16:36
+date: 10:05:2016 15:33
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -968,14 +968,14 @@ id: ECO:0000174
 name: mutant physiological response evidence
 def: "Used when an annotation is made based on the physiological response of a mutant to an external stimulus; for example, abnormal growth of the root in response to gravity, delay in flowering in response to varying light conditions." [TAIR:TED]
 synonym: "IMP: analysis of physiological response" RELATED []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000176
 name: mutant visible phenotype evidence
 def: "Used when an annotation is made based on the visual examination of a mutant phenotype; for example, abnormalities in organism morphology." [TAIR:TED]
 synonym: "IMP: analysis of visible trait" RELATED []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000177
@@ -7093,6 +7093,72 @@ intersection_of: ECO:0001826 ! ultraviolet light footprinting evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
 creation_date: 2016-05-09T16:33:44Z
+
+[Term]
+id: ECO:0005670
+name: x-ray crystallography evidence used in manual assertion
+def: "A type of x-ray crystallography evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001823 ! x-ray crystallography evidence
+intersection_of: ECO:0001823 ! x-ray crystallography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-10T11:53:00Z
+
+[Term]
+id: ECO:0005671
+name: x-ray crystallography evidence used in automatic assertion
+def: "A type of x-ray crystallography evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001823 ! x-ray crystallography evidence
+intersection_of: ECO:0001823 ! x-ray crystallography evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+creation_date: 2016-05-10T11:54:03Z
+
+[Term]
+id: ECO:0005672
+name: xylE reporter gene assay evidence used in manual assertion
+def: "A type of xylE reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005537 ! xylE reporter gene assay evidence
+intersection_of: ECO:0005537 ! xylE reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-10T11:57:15Z
+
+[Term]
+id: ECO:0005673
+name: ad-hoc qualitative phenotype observation evidence
+def: "A type of experimental phenotypic evidence where a non-standard trait (e.g. natural competence) is assessed qualitatively (e.g. presence/absence) and used as a natural reporter to conclude that some genes or pathways are regulated by the transcription factor." [ECO:SN, PMID:15150239]
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2016-05-10T12:57:41Z
+
+[Term]
+id: ECO:0005674
+name: ad-hoc qualitative phenotype observation evidence used in manual assertion
+def: "A type of ad-hoc qualitative phenotype observation that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005673 ! ad-hoc qualitative phenotype observation evidence
+intersection_of: ECO:0005673 ! ad-hoc qualitative phenotype observation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-10T14:28:47Z
+
+[Term]
+id: ECO:0005675
+name: ad-hoc quantitative phenotype observation evidence
+def: "A type of experimental phenotypic evidence where a quantifiable phenotypic trait (e.g. glucose intake) is assessed in a quantitative manner after induction of the regulatory mechanism and used as a natural reporter to conclude that some genes or pathways are regulated by the transcription factor." [ECO:SN, PMID:15150239]
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: snadendla
+creation_date: 2016-05-10T14:30:50Z
+
+[Term]
+id: ECO:0005676
+name: ad-hoc quantitative phenotype observation evidence used in manual assertion
+def: "A type of ad-hoc quantitative phenotype observation evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005675 ! ad-hoc quantitative phenotype observation evidence
+intersection_of: ECO:0005675 ! ad-hoc quantitative phenotype observation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+creation_date: 2016-05-10T14:34:50Z
 
 [Term]
 id: ID:0001601
