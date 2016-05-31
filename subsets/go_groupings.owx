@@ -1,24 +1,21 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://purl.obolibrary.org/obo/eco/subsets/valid_with_chemical_entity.owl"
+     xml:base="http://purl.obolibrary.org/obo/eco/subsets/go_groupings.owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_chemical_entity.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2016-05-31/subsets/valid_with_chemical_entity.owl">
+     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/go_groupings.owl"
+     versionIRI="http://purl.obolibrary.org/obo/eco/2016-05-31/subsets/go_groupings.owl">
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000006"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000315"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000353"/>
+        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000252"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -101,66 +98,51 @@
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
             <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
         </Annotation>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of direct assay evidence that is used in a manual assertion.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mchibucos</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2011-10-28T04:59:31Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from direct assay</Literal>
+            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOC:ecd</Literal>
         </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IDA</Literal>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An evidence type that is based on the results of a laboratory assay.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IDA</Literal>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO:EXP</Literal>
         </Annotation>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from direct assay</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">EXP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO:EXP</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from experiment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eco</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IDA</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IDA</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:0000314</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:0000006</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity</IRI>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <IRI>http://purl.obolibrary.org/obo/eco#go_groupings</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000314</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">direct assay evidence used in manual assertion</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">experimental evidence</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>
@@ -168,161 +150,38 @@
             <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
         </Annotation>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of mutant phenotype evidence that is used in a manual assertion.</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Similarity evidence that is used in a manual assertion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mchibucos</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2011-10-28T05:12:49Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from mutant phenotype</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2010-12-09T05:28:12Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eco</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IMP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from mutant phenotype</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:0000315</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_gene</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_protein</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_protein_complex</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000315</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mutant phenotype evidence used in manual assertion</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of physical interaction evidence that is used in a manual assertion.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mchibucos</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2013-10-31T21:01:27Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from physical interaction</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IPI</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from physical interaction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eco</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:0000353</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:0000252</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_gene</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_protein</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_protein_complex</IRI>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
+        <IRI>http://purl.obolibrary.org/obo/eco#go_groupings</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000353</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">physical interaction evidence used in manual assertion</Literal>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">similarity evidence used in manual assertion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>
