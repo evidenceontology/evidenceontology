@@ -824,6 +824,8 @@ Declaration(Class(obo:ECO_0005674))
 Declaration(Class(obo:ECO_0005675))
 Declaration(Class(obo:ECO_0005676))
 Declaration(Class(obo:ECO_0005800))
+Declaration(Class(obo:ECO_0005801))
+Declaration(Class(obo:ECO_0005802))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -10084,6 +10086,24 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0005800 "spot assay")
 AnnotationAssertion(rdfs:comment obo:ECO_0005800 "For chemicals, bacteriocins, or phage, the indicator culture is typically present in a soft-agar layer on top of nutrient agar and a small quantity of each dilution is spotted onto the soft agar overlay.")
 AnnotationAssertion(rdfs:label obo:ECO_0005800 "dilution assay evidence"@en)
 SubClassOf(obo:ECO_0005800 obo:ECO_0000002)
+
+# Class: obo:ECO_0005801 (enzyme assay evidence used in manual assertion)
+
+AnnotationAssertion(oboInOwl:id obo:ECO_0005801 "ECO:0005801"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0005801 "enzyme assay evidence used in manual assertion"@en)
+EquivalentClasses(obo:ECO_0005801 ObjectIntersectionOf(obo:ECO_0000005 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0005801 obo:ECO_0000005)
+SubClassOf(obo:ECO_0005801 obo:ECO_0000352)
+SubClassOf(obo:ECO_0005801 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0005802 (cell transfection experiment evidence used in manual assertion)
+
+AnnotationAssertion(oboInOwl:id obo:ECO_0005802 "ECO:0005802"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0005802 "cell transfection experiment evidence used in manual assertion"@en)
+EquivalentClasses(obo:ECO_0005802 ObjectIntersectionOf(obo:ECO_0005606 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0005802 obo:ECO_0000352)
+SubClassOf(obo:ECO_0005802 obo:ECO_0005606)
+SubClassOf(obo:ECO_0005802 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 
 )
