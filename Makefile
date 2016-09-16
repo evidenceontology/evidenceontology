@@ -1,4 +1,4 @@
-SRC = eco-edit.obo
+SRC = eco-edit.owl
 TGT = eco.owl
 
 all: $(TGT)
