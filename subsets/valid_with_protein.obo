@@ -43,10 +43,12 @@ creation_date: 2010-12-09T05:12:27Z
 id: ECO:0000250
 name: sequence similarity evidence used in manual assertion
 namespace: eco
-def: "Sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
+synonym: "inferred from sequence or structural similarity" EXACT [GOECO:ISS]
+synonym: "ISS" EXACT [GOECO:ISS]
 xref: GOECO:ISS "inferred from sequence or structural similarity"
 created_by: mchibucos
 creation_date: 2010-12-09T05:22:30Z
@@ -55,10 +57,12 @@ creation_date: 2010-12-09T05:22:30Z
 id: ECO:0000266
 name: sequence orthology evidence used in manual assertion
 namespace: eco
-def: "Sequence orthology evidence that is employed in a manual assertion." [ECO:MCC]
+def: "A type of sequence orthology evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
+synonym: "inferred from sequence orthology" EXACT [] {name="GOECO:ISO"}
+synonym: "ISO" EXACT [GOECO:ISO]
 synonym: "Ortholog evidence" RELATED []
 xref: GOECO:ISO "inferred from sequence orthology"
 is_a: ECO:0000250 ! sequence similarity evidence used in manual assertion
@@ -102,7 +106,7 @@ namespace: eco
 def: "A type of genomic context evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_gene
 subset: valid_with_protein
-synonym: "IGC" RELATED [GOECO:IGC]
+synonym: "IGC" EXACT [GOECO:IGC]
 synonym: "inferred from genomic context" EXACT [GOECO:IGC]
 xref: GOECO:IGC "inferred from genomic context"
 created_by: mchibucos
@@ -172,6 +176,7 @@ subset: valid_with_protein
 subset: valid_with_protein_complex
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
+xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
 xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
 xref: GO_REF:0000023 "Gene Ontology annotation based on Swiss-Prot Subcellular Location vocabulary mapping."
 xref: GOECO:IEA "inferred from electronic annotation"

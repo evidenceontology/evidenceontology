@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2016-09-16
+data-version: releases/2016-10-07
 date: 10:05:2016 15:33
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
@@ -28,14 +28,12 @@ disjoint_from: ECO:0000217 ! assertion method
 id: ECO:0000001
 name: inference from background scientific knowledge
 def: "A curator inference that links the current annotation to a different evidence-based annotation via background knowledge of the curator." [ECO:go, ECO:MCC]
-synonym: "IC" EXACT [GO:IC]
-synonym: "inferred by curator" EXACT [GO:IC]
 is_a: ECO:0000205 ! curator inference
 
 [Term]
 id: ECO:0000002
 name: direct assay evidence
-def: "Experimental evidence that is based on direct measurement of some aspect of a biological feature." [ECO:MCC, GO:IDA]
+def: "Experimental evidence that is based on direct measurement of some aspect of a biological feature." [ECO:MCC]
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
@@ -65,8 +63,7 @@ id: ECO:0000006
 name: experimental evidence
 def: "An evidence type that is based on the results of a laboratory assay." [ECO:MCC, GOC:ecd]
 subset: go_groupings
-synonym: "EXP" EXACT [GO:EXP]
-synonym: "inferred from experiment" EXACT [GO:EXP]
+xref: inferred from experiment
 is_a: ECO:0000000 ! evidence
 
 [Term]
@@ -79,10 +76,8 @@ is_a: ECO:0005517 ! protein detection assay evidence
 [Term]
 id: ECO:0000008
 name: expression pattern evidence
-def: "Experimental evidence that is based on characterization of gene expression." [ECO:MCC, GO:IEP]
+def: "A type of experimental evidence that is based on characterization of gene expression." [ECO:MCC, GO:IEP]
 comment: Use this evidence type when the annotation is inferred from the timing or location of expression of a gene. It may be difficult to determine whether the expression pattern truly indicates that a gene plays a role in a given process.
-synonym: "IEP" EXACT [GO:IEP]
-synonym: "inferred from expression pattern" EXACT [GO:IEP]
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
@@ -252,7 +247,7 @@ relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 [Term]
 id: ECO:0000033
 name: traceable author statement
-def: "An author statement that is based on a cited reference." [ECO:MCC, GO:TAS]
+def: "A type of author statement that is based on a cited reference." [ECO:MCC, GO:TAS]
 comment: The traceable author statement (TAS) evidence code covers author statements that are attributed to a cited source. Typically this type of information comes from review articles. Material from the introductions and discussion sections of non-review papers may also be suitable if another reference is cited as the source of experimental work or analysis. When annotating with this code the curator should use caution and be aware that authors often cite papers dealing with experiments that were performed in organisms different from the one being discussed in the paper at hand. Thus a problem with the TAS code is that it may turn out from following up the references in the paper that no experiments were performed on the gene in the organism actually being characterized in the primary paper. For this reason we recommend (when time and resources allow) that curators track down the cited paper and annotate directly from the experimental paper using the appropriate experimental evidence code. When this is not possible and it is necessary to annotate from reviews, the TAS code is the appropriate code to use for statements that are associated with a cited reference. Once an annotation has been made to a given term using an experimental evidence code, we recommend removing any annotations made to the same term using the TAS evidence code.
 is_a: ECO:0000204 ! author statement
 disjoint_from: ECO:0000034 ! non-traceable author statement
@@ -269,8 +264,6 @@ id: ECO:0000035
 name: no biological data found
 def: "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources." [ECO:MCC, GO:ND]
 comment: An assertion of "no biological data found" carries the assumption that a more-or-less exhaustive search has been conducted.
-synonym: "ND" EXACT [GO:ND]
-synonym: "no biological data available" EXACT [GO:ND]
 is_a: ECO:0000205 ! curator inference
 
 [Term]
@@ -315,9 +308,6 @@ id: ECO:0000044
 name: sequence similarity evidence
 def: "A type of similarity based on biomolecular sequence." [ECO:MCC, TAIR:TED]
 comment: A sequence similarity analysis may involve a gene or a gene product, and it could be based on similarity to a single other gene or to a group of other genes.
-synonym: "inferred from sequence or structural similarity" BROAD [GO:ISS]
-synonym: "inferred from sequence similarity" EXACT []
-synonym: "ISS" BROAD [GO:ISS]
 is_a: ECO:0000041 ! similarity evidence
 
 [Term]
@@ -1036,8 +1026,6 @@ id: ECO:0000200
 name: sequence alignment evidence
 alt_id: ECO:00000057
 def: "A type of sequence similarity evidence where a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments." [url:http\://www.geneontology.org/GO.evidence.shtml]
-synonym: "inferred from sequence alignment" EXACT [GO:ISA]
-synonym: "ISA" EXACT [GO:ISA]
 is_a: ECO:0000044 ! sequence similarity evidence
 created_by: mchibucos
 creation_date: 2010-03-18T12:21:31Z
@@ -1047,8 +1035,6 @@ id: ECO:0000201
 name: sequence orthology evidence
 alt_id: ECO:00000060
 def: "Orthology is a relationship between genes in different species indicating that the genes derive from a common ancestor. Orthology is established by multiple criteria generally including amino acid and/or nucleotide sequence comparisons and one or more of the following: phylogenetic analysis, coincident expression, conserved map location, functional complementation, immunological cross-reaction, similarity in subcellular localization, subunit structure, substrate specificity, and response to specific inhibitors." [url:http\://www.geneontology.org/GO.evidence.shtml]
-synonym: "inferred from sequence orthology" EXACT [GO:ISO]
-synonym: "ISO" EXACT [GO:ISO]
 synonym: "ortholog evidence" RELATED []
 is_a: ECO:0000044 ! sequence similarity evidence
 created_by: mchibucos
@@ -1060,8 +1046,6 @@ name: match to sequence model evidence
 alt_id: ECO:00000063
 def: "Sequence similarity evidence that is based on a sequence-based statistical model that predicts the function of a gene product." [ECO:MCC, url:http\://www.geneontology.org/GO.evidence.shtml]
 comment: Used when evidence from any kind of statistical model of a sequence or group of sequences is used to make a prediction about the function of a protein or RNA. Examples of relevant evidence are: Hidden Markov Models, PROSITE motifs, and tools such as tRNASCAN.
-synonym: "inferred from sequence model" EXACT [GO:ISM]
-synonym: "ISM" EXACT [GO:ISM]
 is_a: ECO:0000044 ! sequence similarity evidence
 created_by: mchibucos
 creation_date: 2010-03-18T12:32:30Z
@@ -1570,10 +1554,12 @@ creation_date: 2010-12-09T05:22:30Z
 [Term]
 id: ECO:0000250
 name: sequence similarity evidence used in manual assertion
-def: "Sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
+synonym: "inferred from sequence or structural similarity" EXACT [GOECO:ISS]
+synonym: "ISS" EXACT [GOECO:ISS]
 xref: GOECO:ISS "inferred from sequence or structural similarity"
 is_a: ECO:0000044 ! sequence similarity evidence
 is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual assertion
@@ -1636,6 +1622,8 @@ creation_date: 2010-12-10T01:42:44Z
 id: ECO:0000255
 name: match to sequence model evidence used in manual assertion
 def: "A match to sequence model evidence that is employed in a manual assertion." [ECO:MCC]
+synonym: "inferred from sequence model" EXACT [GOECO:ISM]
+synonym: "ISM" EXACT [GOECO:ISM]
 xref: GO_REF:0000011 "Hidden Markov Models (TIGR)"
 xref: GOECO:ISM "inferred from sequence model"
 is_a: ECO:0000202 ! match to sequence model evidence
@@ -1651,7 +1639,6 @@ id: ECO:0000256
 name: match to sequence model evidence used in automatic assertion
 def: "A match to sequence model evidence that is employed in an automatic assertion." [ECO:MCC]
 xref: GO_REF:0000002 "Gene Ontology annotation through association of InterPro records with GO terms."
-xref: GO_REF:0000019 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"
 xref: GO_REF:0000107 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl"
 is_a: ECO:0000202 ! match to sequence model evidence
 is_a: ECO:0000249 {is_inferred="true"} ! sequence similarity evidence used in automatic assertion
@@ -1762,9 +1749,10 @@ id: ECO:0000265
 name: sequence orthology evidence used in automatic assertion
 def: "Sequence orthology evidence that is employed in an automatic assertion." [ECO:MCC]
 synonym: "Ortholog evidence" RELATED []
-xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
 xref: GO_REF:0000019 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"
+xref: GO_REF:0000020 "Electronic Gene Ontology annotations created by transferring manual GO annotations between orthologous microbial proteins."
 xref: GO_REF:0000035 "Automatic transfer of experimentally verified manual GO annotation data to plant orthologs using Ensembl Compara"
+xref: GO_REF:0000049 "Automatic transfer of experimentally verified manual GO annotation data to fungal orthologs using Ensembl Compara"
 is_a: ECO:0000201 ! sequence orthology evidence
 is_a: ECO:0000249 {is_inferred="true"} ! sequence similarity evidence used in automatic assertion
 intersection_of: ECO:0000201 ! sequence orthology evidence
@@ -1776,10 +1764,12 @@ creation_date: 2010-12-10T03:39:41Z
 [Term]
 id: ECO:0000266
 name: sequence orthology evidence used in manual assertion
-def: "Sequence orthology evidence that is employed in a manual assertion." [ECO:MCC]
+def: "A type of sequence orthology evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
+synonym: "inferred from sequence orthology" EXACT [] {name="GOECO:ISO"}
+synonym: "ISO" EXACT [GOECO:ISO]
 synonym: "Ortholog evidence" RELATED []
 xref: GOECO:ISO "inferred from sequence orthology"
 is_a: ECO:0000201 ! sequence orthology evidence
@@ -1815,6 +1805,8 @@ creation_date: 2010-12-14T02:07:08Z
 id: ECO:0000269
 name: experimental evidence used in manual assertion
 def: "A type of experimental evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "EXP" EXACT [GOECO:EXP]
+synonym: "inferred from experiment" EXACT [GOECO:EXP]
 xref: GOECO:EXP "inferred from experiment"
 is_a: ECO:0000006 ! experimental evidence
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
@@ -1828,6 +1820,8 @@ creation_date: 2010-12-20T05:36:49Z
 id: ECO:0000270
 name: expression evidence used in manual assertion
 def: "A type of expression pattern evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "IEP" EXACT [GOECO:IEP]
+synonym: "inferred from expression pattern" EXACT [GOECO:IEP]
 xref: GOECO:IEP "inferred from expression pattern"
 is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
@@ -2242,6 +2236,8 @@ def: "A type of curator inference that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_biological_process
 subset: valid_with_cellular_component
 subset: valid_with_molecular_function
+synonym: "IC" EXACT [GOECO:IC]
+synonym: "inferred by curator" EXACT [GOECO:IC]
 xref: GOECO:IC "inferred by curator"
 is_a: ECO:0000205 ! curator inference
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
@@ -2267,6 +2263,8 @@ creation_date: 2011-01-20T02:35:11Z
 id: ECO:0000307
 name: no biological data found used in manual assertion
 def: "A type of no biological data found that is used in a manual assertion." [ECO:MCC]
+synonym: "ND" EXACT [GOECO:ND]
+synonym: "no biological data available" EXACT [GOECO:ND]
 xref: GOECO:ND "no biological data available"
 is_a: ECO:0000035 ! no biological data found
 is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assertion
@@ -2396,7 +2394,7 @@ name: genomic context evidence used in manual assertion
 def: "A type of genomic context evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_gene
 subset: valid_with_protein
-synonym: "IGC" RELATED [GOECO:IGC]
+synonym: "IGC" EXACT [GOECO:IGC]
 synonym: "inferred from genomic context" EXACT [GOECO:IGC]
 xref: GOECO:IGC "inferred from genomic context"
 is_a: ECO:0000177 ! genomic context evidence
@@ -2480,6 +2478,8 @@ creation_date: 2011-10-28T05:26:42Z
 id: ECO:0000322
 name: imported manually asserted information used in automatic assertion
 def: "Evidence that was initially used in manual assertion by one person or group, which is imported by a second person or group and used in automatic assertion." [ECO:MCC]
+xref: GO_REF:0000037 "Gene Ontology annotation based on manual assignment of UniProtKB keywords in UniProtKB/Swiss-Prot entries."
+xref: GO_REF:0000039 "Gene Ontology annotation based on the manual assignment of UniProtKB Subcellular Location terms in UniProtKB/Swiss-Prot entries."
 xref: GO_REF:0000041 "IEA (UniProt UniPathway)"
 is_a: ECO:0000313 ! imported information used in automatic assertion
 created_by: mchibucos
@@ -2488,7 +2488,9 @@ creation_date: 2011-12-13T12:04:48Z
 [Term]
 id: ECO:0000323
 name: imported automatically asserted information used in automatic assertion
-def: "Evidence that was initially used in automatic assertion by one person or group, which is imported by a second person or group and used in automatic assertion." [ECO:MCC]
+def: "A type of imported information used in automatic assertion that was initially used in automatic assertion by one person or group, which is imported by a second person or group and used in automatic assertion." [ECO:MCC]
+xref: GO_REF:0000038 "Gene Ontology annotation based on automatic assignment of UniProtKB keywords in UniProtKB/TrEMBL entries."
+xref: GO_REF:0000040 "Gene Ontology annotation based on the automatic assignment of UniProtKB Subcellular Location terms in UniProtKB/TrEMBL entries."
 is_a: ECO:0000313 ! imported information used in automatic assertion
 created_by: mchibucos
 creation_date: 2011-12-13T02:06:25Z
@@ -2919,6 +2921,7 @@ subset: valid_with_protein
 subset: valid_with_protein_complex
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
+xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
 xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
 xref: GO_REF:0000023 "Gene Ontology annotation based on Swiss-Prot Subcellular Location vocabulary mapping."
 xref: GOECO:IEA "inferred from electronic annotation"
@@ -6932,6 +6935,7 @@ name: immunofluorescence confocal microscopy evidence used in manual assertion
 def: "A type of immunofluorescence confocal microscopy evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0005589 {is_inferred="true"} ! confocal microscopy evidence used in manual assertion
 is_a: ECO:0005600 ! immunofluorescence confocal microscopy evidence
+is_a: ECO:0005804 {is_inferred="true"} ! immunofluorescence evidence used in manual assertion
 intersection_of: ECO:0005600 ! immunofluorescence confocal microscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -7827,6 +7831,32 @@ def: "A type of cell transfection experiment evidence that is used in a manual a
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0005606 ! cell transfection experiment evidence
 intersection_of: ECO:0005606 ! cell transfection experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+
+[Term]
+id: ECO:0005803
+name: motility assay evidence
+xref: A type of direct assay evidence where the motility of a cell or cells is determined. {xref="ECO:SN"}
+is_a: ECO:0000002 ! direct assay evidence
+
+[Term]
+id: ECO:0005804
+name: immunofluorescence evidence used in manual assertion
+def: "A type of immunofluorescence evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000007 ! immunofluorescence evidence
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+intersection_of: ECO:0000007 ! immunofluorescence evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+
+[Term]
+id: ECO:0005805
+name: yeast 2-hybrid evidence used in manual assertion
+def: "A type of yeast 2-hybrid evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000068 ! yeast 2-hybrid evidence
+is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
+intersection_of: ECO:0000068 ! yeast 2-hybrid evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 

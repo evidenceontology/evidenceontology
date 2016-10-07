@@ -233,7 +233,7 @@
         </Annotation>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000250</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sequence similarity evidence that is used in a manual assertion.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of sequence similarity evidence that is used in a manual assertion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
@@ -253,6 +253,24 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000250</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000250</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ISS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000250</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from sequence or structural similarity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
@@ -291,7 +309,7 @@
         </Annotation>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000266</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sequence orthology evidence that is employed in a manual assertion.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of sequence orthology evidence that is used in a manual assertion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
@@ -311,6 +329,24 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000266</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:ISO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:ISO</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000266</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ISO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:ISO</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000266</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">inferred from sequence orthology</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
@@ -607,6 +643,15 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000501</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOECO:IEA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gene Ontology annotation based on Enzyme Commission mapping.</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000501</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000003</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>

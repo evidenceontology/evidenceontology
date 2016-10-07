@@ -18,6 +18,8 @@ def: "A type of curator inference that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_biological_process
 subset: valid_with_cellular_component
 subset: valid_with_molecular_function
+synonym: "IC" EXACT [GOECO:IC]
+synonym: "inferred by curator" EXACT [GOECO:IC]
 xref: GOECO:IC "inferred by curator"
 created_by: mchibucos
 creation_date: 2011-01-20T02:33:32Z
