@@ -1051,7 +1051,6 @@ SubClassOf(obo:ECO_0000005 obo:ECO_0000039)
 # Class: obo:ECO_0000006 (experimental evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GOC:ecd"^^xsd:string) obo:IAO_0000115 obo:ECO_0000006 "An evidence type that is based on the results of a laboratory assay."^^xsd:string)
-AnnotationAssertion(oboInOwl:hasDbXref obo:ECO_0000006 "inferred from experiment"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000006 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000006 "ECO:0000006"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:ECO_0000006 eco:go_groupings)
@@ -10117,7 +10116,7 @@ SubClassOf(obo:ECO_0005802 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0005803 (motility assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0005803 "A type of direct assay evidence where the motility of a cell or cells is determined."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005803 "A type of direct assay evidence where the motility of a cell or cells is determined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005803 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005803 "ECO:0005803"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005803 "motility assay evidence"^^xsd:string)
