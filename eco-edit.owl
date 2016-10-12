@@ -833,6 +833,11 @@ Declaration(Class(obo:ECO_0006003))
 Declaration(Class(obo:ECO_0006004))
 Declaration(Class(obo:ECO_0006005))
 Declaration(Class(obo:ECO_0006006))
+Declaration(Class(obo:ECO_0006001))
+Declaration(Class(obo:ECO_0006002))
+Declaration(Class(obo:ID_0001601))
+Declaration(Class(obo:ID_0001603))
+Declaration(Class(obo:ID_0001706))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -10086,7 +10091,7 @@ EquivalentClasses(obo:ECO_0005676 ObjectIntersectionOf(obo:ECO_0005675 ObjectSom
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005676 obo:ECO_0000269)
 SubClassOf(obo:ECO_0005676 obo:ECO_0005675)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005676 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
-
+ 
 # Class: obo:ECO_0005800 (dilution assay evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "http://www.sciencedirect.com/science/article/pii/016770129400068I") obo:IAO_0000115 obo:ECO_0005800 "A direct assay evidence where the activity of a solution is determined by exposing an indicator culture or organism to a series of dilutions and determining the lowest concentration that elicits a biological response.")
@@ -10191,6 +10196,61 @@ AnnotationAssertion(rdfs:label obo:ECO_0006006 "electrophysiology assay evidence
 EquivalentClasses(obo:ECO_0006006 ObjectIntersectionOf(obo:ECO_0000164 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0006006 obo:ECO_0000164)
 SubClassOf(obo:ECO_0006006 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0006001 (Cya fusion reporter assay evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10217833"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:14702323"^^xsd:string) obo:IAO_0000115 obo:ECO_0006001 "A type of evidence derived from exploiting the CyaA (calmodulin-activated adenylate cyclase toxin) secreted by Bordatella pertussis to synthesize cAMP and alter cellular physiology in a host cell for various biological applications."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006001 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006001 "2016-06-15T08:42:16Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006001 "eco"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006001 "Cya fusion reporter assay evidence"^^xsd:string)
+SubClassOf(obo:ECO_0006001 obo:ECO_0000017)
+SubClassOf(obo:ECO_0006001 obo:ECO_0000049)
+
+# Class: obo:ECO_0006002 (Cya fusion reporter assay evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006002 "A type of Cya fusion reporter assay evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006002 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006002 "2010-06-15T08:44:10Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006002 "eco"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006002 "Cya fusion reporter assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0006002 ObjectIntersectionOf(obo:ECO_0006001 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0006002 obo:ECO_0000269)
+SubClassOf(obo:ECO_0006002 obo:ECO_0006001)
+SubClassOf(obo:ECO_0006002 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ID_0001601 (protein-binding microarray evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22146299"^^xsd:string) obo:IAO_0000115 obo:ID_0001601 "A type of oligonucleotide microarray evidence that detects binding of a tagged protein to an array of oligonucleotide probes representing potential binding sites."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ID_0001601 "swolfish"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ID_0001601 "2015-06-05T14:36:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ID_0001601 "PBM evidence"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ID_0001601 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ID_0001601 "ID:0001601"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ID_0001601 "protein-binding microarray evidence"^^xsd:string)
+SubClassOf(obo:ID_0001601 obo:ECO_0000093)
+SubClassOf(obo:ID_0001601 obo:ECO_0000136)
+
+# Class: obo:ID_0001603 (in vivo cell staining evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) obo:IAO_0000115 obo:ID_0001603 "A type of in vivo assay evidence in which living cells are stained with a vital stain, i.e. dye that can be used on living cells without causing cell death."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ID_0001603 "swolfish"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ID_0001603 "2015-06-08T11:51:37Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ID_0001603 "eco"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) oboInOwl:hasRelatedSynonym obo:ID_0001603 "vital staining evidence"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ID_0001603 "ID:0001603"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ID_0001603 "in vivo cell staining evidence"^^xsd:string)
+SubClassOf(obo:ID_0001603 obo:ECO_0000178)
+
+# Class: obo:ID_0001706 (computational image-based phenotypic evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:KIM"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:25373780"^^xsd:string) obo:IAO_0000115 obo:ID_0001706 "A type of phenotypic evidence based on unsupervised computational examination of a visual mutant phenotype such as abnormalities in organism morphology."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ID_0001706 "kvillanova"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ID_0001706 "2015-06-09T16:13:20Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ID_0001706 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ID_0001706 "ID:0001706"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ID_0001706 "computational image-based phenotypic evidence"^^xsd:string)
+AnnotationAssertion(owl:deprecated obo:ID_0001706 "true"^^xsd:boolean)
 
 
 )
