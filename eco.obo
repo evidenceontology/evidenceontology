@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2016-10-10
+data-version: releases/2016-11-04
 date: 10:05:2016 15:33
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
@@ -1494,6 +1494,7 @@ is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual a
 intersection_of: ECO:0000053 ! computational combinatorial evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/rca-inferred-reviewed-computational-analysis xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T02:37:54Z
 
@@ -1523,6 +1524,7 @@ is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in ma
 intersection_of: ECO:0000200 ! sequence alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/isa-inferred-sequence-alignment xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T05:12:27Z
 
@@ -1565,6 +1567,7 @@ is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual asse
 intersection_of: ECO:0000044 ! sequence similarity evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/iss-inferred-sequence-or-structural-similarity xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T05:22:30Z
 
@@ -1630,6 +1633,7 @@ is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in ma
 intersection_of: ECO:0000202 ! match to sequence model evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ism-inferred-sequence-model xsd:string
 created_by: mchibucos
 creation_date: 2010-12-10T02:26:35Z
 
@@ -1776,6 +1780,7 @@ is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in ma
 intersection_of: ECO:0000201 ! sequence orthology evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/iso-inferred-sequence-orthology xsd:string
 created_by: mchibucos
 creation_date: 2010-12-10T03:39:41Z
 
@@ -1812,6 +1817,7 @@ is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 intersection_of: ECO:0000006 ! experimental evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/exp-inferred-experiment xsd:string
 created_by: mchibucos
 creation_date: 2010-12-20T05:36:49Z
 
@@ -1827,6 +1833,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 intersection_of: ECO:0000008 ! expression pattern evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/iep-inferred-expression-pattern xsd:string
 created_by: mchibucos
 creation_date: 2010-12-20T05:46:39Z
 
@@ -2210,6 +2217,7 @@ is_a: ECO:0000302 {is_inferred="true"} ! author statement used in manual asserti
 intersection_of: ECO:0000034 ! non-traceable author statement
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/nas-non-traceable-author-statement xsd:string
 created_by: mchibucos
 creation_date: 2011-01-20T02:29:50Z
 
@@ -2225,6 +2233,7 @@ is_a: ECO:0000302 {is_inferred="true"} ! author statement used in manual asserti
 intersection_of: ECO:0000033 ! traceable author statement
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/tas-traceable-author-statement xsd:string
 created_by: mchibucos
 creation_date: 2011-01-20T02:31:03Z
 
@@ -2243,6 +2252,7 @@ is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 intersection_of: ECO:0000205 ! curator inference
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ic-inferred-curator xsd:string
 created_by: mchibucos
 creation_date: 2011-01-20T02:33:32Z
 
@@ -2270,6 +2280,7 @@ is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assert
 intersection_of: ECO:0000035 ! no biological data found
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/nd-no-biological-data-available xsd:string
 created_by: mchibucos
 creation_date: 2011-01-20T02:43:18Z
 
@@ -2347,6 +2358,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 intersection_of: ECO:0000002 ! direct assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ida-inferred-direct-assay xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T04:59:31Z
 
@@ -2366,6 +2378,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 intersection_of: ECO:0000015 ! mutant phenotype evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/imp-inferred-mutant-phenotype xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:12:49Z
 
@@ -2384,6 +2397,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 intersection_of: ECO:0000011 ! genetic interaction evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/igi-inferred-genetic-interaction xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:14:42Z
 
@@ -2401,6 +2415,7 @@ is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 intersection_of: ECO:0000177 ! genomic context evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/igc-inferred-genomic-context xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:22:53Z
 
@@ -2418,6 +2433,7 @@ is_a: ECO:0000308 ! biological aspect of ancestor evidence
 intersection_of: ECO:0000308 ! biological aspect of ancestor evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/iba-inferred-biological-aspect-ancestor xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:23:51Z
 
@@ -2435,6 +2451,7 @@ is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual asse
 intersection_of: ECO:0000214 ! biological aspect of descendant evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ibd-inferred-biological-aspect-descendent xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:25:09Z
 
@@ -2453,6 +2470,7 @@ is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual asse
 intersection_of: ECO:0000216 ! phylogenetic determination of loss of key residues evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ikr-inferred-key-residues xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:25:48Z
 
@@ -2470,6 +2488,7 @@ is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual asse
 intersection_of: ECO:0000215 ! rapid divergence from ancestral sequence evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ird-inferred-rapid-divergence xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:26:42Z
 
@@ -2805,6 +2824,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 intersection_of: ECO:0000021 ! physical interaction evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
+property_value: seeAlso http://geneontology.org/page/ipi-inferred-physical-interaction xsd:string
 created_by: mchibucos
 creation_date: 2013-10-31T21:01:27Z
 
@@ -2928,6 +2948,7 @@ is_a: ECO:0000000 {is_inferred="true"} ! evidence
 intersection_of: ECO:0000000 ! evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
+property_value: seeAlso http://geneontology.org/page/automatically-assigned-evidence-codes xsd:string
 created_by: cjm
 
 [Term]
@@ -3282,6 +3303,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001047
 name: fluorescence in situ hybridization evidence
 is_a: ECO:0000008 ! expression pattern evidence
+is_a: ECO:0000098 ! in situ hybridization evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -6843,6 +6865,7 @@ name: immunogold labelling electron microscopy assay evidence used in manual ass
 def: "A type of immunogold labelling electron microscopy assay evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0005579 {is_inferred="true"} ! immunogold labelling evidence used in manual assertion
 is_a: ECO:0005591 ! immunogold labelling electron microscopy assay evidence
+is_a: ECO:0006003 {is_inferred="true"} ! electron microscopy evidence used in manual assertion
 intersection_of: ECO:0005591 ! immunogold labelling electron microscopy assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -6893,6 +6916,7 @@ name: immunoperoxidase immunolocalization electron microscopy evidence used in m
 def: "A type of immunoperoxidase immunolocalization electron microscopy evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0005595 {is_inferred="true"} ! immunoperoxidase immunolocalization evidence used in manual assertion
 is_a: ECO:0005596 ! immunoperoxidase immunolocalization electron microscopy evidence
+is_a: ECO:0006003 {is_inferred="true"} ! electron microscopy evidence used in manual assertion
 intersection_of: ECO:0005596 ! immunoperoxidase immunolocalization electron microscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -7858,6 +7882,132 @@ is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000068 ! yeast 2-hybrid evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
+
+[Term]
+id: ECO:0006001
+name: Cya fusion reporter assay evidence
+def: "A type of evidence derived from exploiting the CyaA (calmodulin-activated adenylate cyclase toxin) secreted by Bordatella pertussis to synthesize cAMP and alter cellular physiology in a host cell for various biological applications." [PMID:10217833, PMID:14702323]
+is_a: ECO:0000017 ! ectopic expression evidence
+is_a: ECO:0000049 ! reporter gene assay evidence
+created_by: rctauber
+creation_date: 2016-06-15T08:42:16Z
+
+[Term]
+id: ECO:0006002
+name: Cya fusion reporter assay evidence used in manual assertion
+def: "A type of Cya fusion reporter assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0001273 {is_inferred="true"} ! ectopic expression evidence used in manual assertion
+is_a: ECO:0006001 ! Cya fusion reporter assay evidence
+intersection_of: ECO:0006001 ! Cya fusion reporter assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2010-06-15T08:44:10Z
+
+[Term]
+id: ECO:0006003
+name: electron microscopy evidence used in manual assertion
+def: "A type of electron microscopy evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+is_a: ECO:0005033 ! electron microscopy evidence
+intersection_of: ECO:0005033 ! electron microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-12T12:32:29Z
+
+[Term]
+id: ECO:0006004
+name: super-resolution microscopy evidence used in manual assertion
+def: "A type of super-resolution microscopy evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+is_a: ECO:0005578 ! super-resolution microscopy evidence
+intersection_of: ECO:0005578 ! super-resolution microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-12T12:32:29Z
+
+[Term]
+id: ECO:0006005
+name: fractionation evidence used in manual assertion
+def: "A type of fractionation evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000100 ! fractionation evidence
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+intersection_of: ECO:0000100 ! fractionation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-12T12:32:29Z
+
+[Term]
+id: ECO:0006006
+name: electrophysiology assay evidence used in manual assertion
+def: "A type of electrophysiology assay evidence that is used in a manual assertion." [] {comment="ECO:RCT"}
+is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+intersection_of: ECO:0000164 ! electrophysiology assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-12T12:32:29Z
+
+[Term]
+id: ECO:0006007
+name: chromatin immunoprecipitation-chip evidence used in manual assertion
+def: "A type of chromatin immunoprecipitation-chip evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000230 ! chromatin immunoprecipitation-chip evidence
+is_a: ECO:0005644 ! immunoprecipitation evidence used in manual assertion
+intersection_of: ECO:0000230 ! chromatin immunoprecipitation-chip evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-21T11:55:53Z
+
+[Term]
+id: ECO:0006008
+name: chromatin immunoprecipitation- exonuclease evidence used in manual assertion
+def: "A type of chromatin immunoprecipitation- exonuclease evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0001806 ! chromatin immunoprecipitation- exonuclease evidence
+is_a: ECO:0005644 ! immunoprecipitation evidence used in manual assertion
+intersection_of: ECO:0001806 ! chromatin immunoprecipitation- exonuclease evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-21T11:55:53Z
+
+[Term]
+id: ECO:0006009
+name: chromatin immunoprecipitation-seq evidence used in manual assertion
+def: "A type of chromatin immunoprecipitation-seq evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
+is_a: ECO:0005644 ! immunoprecipitation evidence used in manual assertion
+intersection_of: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-21T11:55:53Z
+
+[Term]
+id: ECO:0006010
+name: mRNA interactome capture evidence
+def: "A type of nucleic acid binding evidence where RNA and proteins are cross-linked by ultraviolet light and RNA-protein complexes are captured on oligo(dT) beads. After RNAse treatment, the RNA-bound proteins are identified by mass spectrometry." [PMID:27729395]
+synonym: "ultraviolet light cross-linking RNA binding evidence" EXACT []
+is_a: ECO:0000136 ! nucleic acid binding evidence
+created_by: rctauber
+creation_date: 2016-10-21T12:28:17Z
+
+[Term]
+id: ECO:0006011
+name: mRNA interactome capture evidence used in manual assertion
+def: "A type of mRNA interactome capture evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
+is_a: ECO:0006010 ! mRNA interactome capture evidence
+intersection_of: ECO:0006010 ! mRNA interactome capture evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-10-21T12:28:17Z
 
 [Typedef]
 id: used_in

@@ -21,6 +21,7 @@ subset: valid_with_protein_complex
 synonym: "inferred from reviewed computational analysis" EXACT [GOECO:RCA]
 synonym: "RCA" EXACT [GOECO:RCA]
 xref: GOECO:RCA "inferred from reviewed computational analysis"
+property_value: seeAlso http://geneontology.org/page/rca-inferred-reviewed-computational-analysis xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T02:37:54Z
 
@@ -36,6 +37,7 @@ synonym: "ISA" EXACT [GOECO:ISA]
 xref: GOECO:ISA "inferred from sequence alignment"
 is_a: ECO:0000250 ! sequence similarity evidence used in manual assertion
 is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in manual assertion
+property_value: seeAlso http://geneontology.org/page/isa-inferred-sequence-alignment xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T05:12:27Z
 
@@ -50,6 +52,7 @@ subset: valid_with_protein_complex
 synonym: "inferred from sequence or structural similarity" EXACT [GOECO:ISS]
 synonym: "ISS" EXACT [GOECO:ISS]
 xref: GOECO:ISS "inferred from sequence or structural similarity"
+property_value: seeAlso http://geneontology.org/page/iss-inferred-sequence-or-structural-similarity xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T05:22:30Z
 
@@ -67,6 +70,7 @@ synonym: "Ortholog evidence" RELATED []
 xref: GOECO:ISO "inferred from sequence orthology"
 is_a: ECO:0000250 ! sequence similarity evidence used in manual assertion
 is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in manual assertion
+property_value: seeAlso http://geneontology.org/page/iso-inferred-sequence-orthology xsd:string
 created_by: mchibucos
 creation_date: 2010-12-10T03:39:41Z
 
@@ -82,6 +86,7 @@ subset: valid_with_protein_complex
 synonym: "IMP" RELATED [GOECO:IMP]
 synonym: "inferred from mutant phenotype" RELATED [GOECO:IMP]
 xref: GOECO:IMP "inferred from mutant phenotype"
+property_value: seeAlso http://geneontology.org/page/imp-inferred-mutant-phenotype xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:12:49Z
 
@@ -96,6 +101,7 @@ subset: valid_with_protein_complex
 synonym: "IGI" EXACT [GOECO:IGI]
 synonym: "inferred from genetic interaction" EXACT [GOECO:IGI]
 xref: GOECO:IGI "inferred from genetic interaction"
+property_value: seeAlso http://geneontology.org/page/igi-inferred-genetic-interaction xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:14:42Z
 
@@ -109,6 +115,7 @@ subset: valid_with_protein
 synonym: "IGC" EXACT [GOECO:IGC]
 synonym: "inferred from genomic context" EXACT [GOECO:IGC]
 xref: GOECO:IGC "inferred from genomic context"
+property_value: seeAlso http://geneontology.org/page/igc-inferred-genomic-context xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:22:53Z
 
@@ -122,6 +129,7 @@ subset: valid_with_protein
 synonym: "IBA" EXACT [GOECO:IBA]
 synonym: "inferred from biological aspect of ancestor" EXACT [GOECO:IBA]
 xref: GOECO:IBA "inferred from biological aspect of ancestor"
+property_value: seeAlso http://geneontology.org/page/iba-inferred-biological-aspect-ancestor xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:23:51Z
 
@@ -135,6 +143,7 @@ subset: valid_with_protein
 synonym: "IBD" EXACT [GOECO:IBD]
 synonym: "inferred from biological aspect of descendant" EXACT [GOECO:IBD]
 xref: GOECO:IBD "inferred from biological aspect of descendant"
+property_value: seeAlso http://geneontology.org/page/ibd-inferred-biological-aspect-descendent xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:25:09Z
 
@@ -148,6 +157,7 @@ subset: valid_with_protein
 synonym: "inferred from rapid divergence" EXACT [GOECO:IRD]
 synonym: "IRD" EXACT [GOECO:IRD]
 xref: GOECO:IRD "inferred from rapid divergence"
+property_value: seeAlso http://geneontology.org/page/ird-inferred-rapid-divergence xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:26:42Z
 
@@ -163,6 +173,7 @@ subset: valid_with_protein_complex
 synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
 synonym: "IPI" EXACT [GOECO:IPI]
 xref: GOECO:IPI "inferred from physical interaction"
+property_value: seeAlso http://geneontology.org/page/ipi-inferred-physical-interaction xsd:string
 created_by: mchibucos
 creation_date: 2013-10-31T21:01:27Z
 
@@ -180,6 +191,7 @@ xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mappin
 xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
 xref: GO_REF:0000023 "Gene Ontology annotation based on Swiss-Prot Subcellular Location vocabulary mapping."
 xref: GOECO:IEA "inferred from electronic annotation"
+property_value: seeAlso http://geneontology.org/page/automatically-assigned-evidence-codes xsd:string
 created_by: cjm
 
 [Typedef]

@@ -335,24 +335,13 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCA</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/rca-inferred-reviewed-computational-analysis</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from reviewed computational analysis</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from reviewed computational analysis</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCA</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
     <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from reviewed computational analysis</rdfs:label>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</owl:annotatedTarget>
@@ -364,6 +353,18 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCA</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from reviewed computational analysis</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     
 
@@ -379,22 +380,23 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISA</oboInOwl:hasExactSynonym>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sequence alignment evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/isa-inferred-sequence-alignment</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence alignment</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
     </owl:Class>
     <owl:Axiom>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence alignment</rdfs:label>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISA</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000247"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000247"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000250"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence alignment</rdfs:label>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISA</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000247"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISA</oboInOwl:hasDbXref>
@@ -427,18 +429,13 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iss-inferred-sequence-or-structural-similarity</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence or structural similarity</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence or structural similarity</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000250"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISS</owl:annotatedTarget>
@@ -450,6 +447,12 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000250"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISS</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence or structural similarity</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000250"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of sequence similarity evidence that is used in a manual assertion.</owl:annotatedTarget>
@@ -472,12 +475,25 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ortholog evidence</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iso-inferred-sequence-orthology</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence orthology</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
+    <owl:Axiom>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000250"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000266"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of sequence orthology evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000266"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    </owl:Axiom>
     <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:ISO</rdfs:label>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence orthology</owl:annotatedTarget>
@@ -489,18 +505,6 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000266"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of sequence orthology evidence that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000266"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000250"/>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000266"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
     </owl:Axiom>
     <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence orthology</rdfs:label>
@@ -521,6 +525,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMP</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/imp-inferred-mutant-phenotype</rdfs:seeAlso>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from mutant phenotype</oboInOwl:hasRelatedSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
@@ -529,10 +534,10 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of mutant phenotype evidence that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from mutant phenotype</rdfs:label>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000315"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</oboInOwl:hasDbXref>
@@ -547,10 +552,10 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from mutant phenotype</rdfs:label>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IMP</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of mutant phenotype evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000315"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:Axiom>
     
 
@@ -565,6 +570,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGI</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IGI</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/igi-inferred-genetic-interaction</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genetic interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
@@ -572,10 +578,10 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGI</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IGI</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genetic interaction</rdfs:label>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGI</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000316"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of genetic interaction experiment evidence that is used in a manual assertion.</owl:annotatedTarget>
@@ -590,10 +596,10 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genetic interaction</rdfs:label>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGI</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGI</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IGI</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000316"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     
 
@@ -608,23 +614,12 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGC</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IGC</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/igc-inferred-genomic-context</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genomic context</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
     </owl:Class>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGC</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IGC</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000317"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of genomic context evidence that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000317"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGC</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genomic context</owl:annotatedTarget>
@@ -636,6 +631,18 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGC</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000317"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IGC</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IGC</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000317"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of genomic context evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000317"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:Axiom>
     
 
@@ -650,6 +657,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBA</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBA</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iba-inferred-biological-aspect-ancestor</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of ancestor</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
@@ -663,13 +671,13 @@
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBA</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of ancestor</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBA</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000318"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBA</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBA</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of ancestor</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000318"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
@@ -692,16 +700,17 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBD</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBD</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ibd-inferred-biological-aspect-descendent</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of descendant</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBD</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBD</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of biological aspect of descendant evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000319"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:Axiom>
     <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of descendant</rdfs:label>
@@ -710,10 +719,10 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of biological aspect of descendant evidence that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBD</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IBD</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000319"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IBD</oboInOwl:hasDbXref>
@@ -734,17 +743,12 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IRD</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRD</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ird-inferred-rapid-divergence</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from rapid divergence</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
     </owl:Class>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IRD</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRD</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000321"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </owl:Axiom>
     <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from rapid divergence</rdfs:label>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IRD</owl:annotatedTarget>
@@ -754,6 +758,12 @@
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IRD</oboInOwl:hasDbXref>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from rapid divergence</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000321"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IRD</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRD</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000321"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
@@ -776,6 +786,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ipi-inferred-physical-interaction</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from physical interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
@@ -784,10 +795,10 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of physical interaction evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</oboInOwl:hasDbXref>
@@ -796,16 +807,16 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of physical interaction evidence that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from physical interaction</rdfs:label>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IPI</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     
 
@@ -823,11 +834,18 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/automatically-assigned-evidence-codes</rdfs:seeAlso>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from electronic annotation</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </owl:Class>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IEA</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from electronic annotation</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    </owl:Axiom>
     <owl:Axiom>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Ontology annotation based on Swiss-Prot keyword mapping.</rdfs:label>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000004</owl:annotatedTarget>
@@ -842,7 +860,7 @@
     </owl:Axiom>
     <owl:Axiom>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IEA</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from electronic annotation</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
@@ -851,12 +869,6 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000003</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:IEA</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of evidence that is used in an automatic assertion.</owl:annotatedTarget>
