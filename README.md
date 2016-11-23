@@ -7,6 +7,8 @@ ECO was originally created around the year 2000 to support gene product annotati
 ***
 For **advice on requesting new terms**, please see **[the Evidence & Conclusion Ontology wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**.
 
+For **information on editing**, please see **[the editors subdirectory](https://github.com/evidenceontology/evidenceontology/tree/master/editors)**.
+
 For **further information** visit the **[Evidence & Conclusion Ontology website](http://www.evidenceontology.org/)**.
 
 Please **cite** the following paper: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long)
