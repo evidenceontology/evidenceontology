@@ -85,6 +85,9 @@ robot template --template [PATH_TO_CSV]
     --output [NAME_OF_OUTPUT.OWL]
 ```
 
+**Please note:**
+ROBOT generates OWL files in RDF/XML syntax. `eco-edit.owl` is saved in OWL Functional Syntax. *Make sure* to open your final file (after merging) in Protege, SAVE AS and select 'OWL Function Syntax'. Simply replace your generated file with this new save to keep the format consistent.
+
 ### Post-editing steps
 
 * Check Jenkins
