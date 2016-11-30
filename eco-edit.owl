@@ -840,6 +840,10 @@ Declaration(Class(obo:ECO_0006008))
 Declaration(Class(obo:ECO_0006009))
 Declaration(Class(obo:ECO_0006010))
 Declaration(Class(obo:ECO_0006011))
+Declaration(Class(obo:ECO_0006012))
+Declaration(Class(obo:ECO_0006013))
+Declaration(Class(obo:ECO_0006014))
+Declaration(Class(obo:ECO_0006015))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -8834,25 +8838,27 @@ SubClassOf(obo:ECO_0005572 obo:ECO_0000164)
 
 # Class: obo:ECO_0005573 (cell-attached single-channel recording evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch04.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0005573 "A type of electrophysiology assay evidence that involves isolation of a patch of membrane electrically from the external solution and to record current flowing into the patch and this is achieved by pressing a fire-polished glass pipette, which has been filled with a suitable electrolyte solution, against the surface of a cell and applying light suction."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch04.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0005573 "A type of patch-clamp recording evidence that involves isolation of a patch of membrane electrically from the external solution and to record current flowing into the patch and this is achieved by pressing a fire-polished glass pipette, which has been filled with a suitable electrolyte solution, against the surface of a cell and applying light suction."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005573 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005573 "2016-02-12T14:07:39Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "cell-attached single-channel recording protocol"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0005573 "birnlex:2283"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0005573 "cell-attached patch-clamp recording evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005573 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005573 "ECO:0005573"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005573 "cell-attached single-channel recording evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005573 obo:ECO_0000164)
+SubClassOf(obo:ECO_0005573 obo:ECO_0006012)
 
 # Class: obo:ECO_0005574 (cell-detached inside-out single-channel recording evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.acnp.org/g4/GN401000005/CH005.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0005574 "A type of electrophysiology assay evidence that involves study of individual ion channels by gently pulling the patch of membrane away from the cell, and the patch remains attached to the pipette with its cytoplasmic surface exposed to the bathing solution."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.acnp.org/g4/GN401000005/CH005.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0005574 "A type of patch-clamp recording evidence that involves study of individual ion channels by gently pulling the patch of membrane away from the cell, and the patch remains attached to the pipette with its cytoplasmic surface exposed to the bathing solution."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005574 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005574 "2016-02-12T14:16:53Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "cell-detached inside-out single-channel recording protocol"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0005574 "birnlex:2286"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0005574 "cell-detached inside-out patch-clamp recording evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005574 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005574 "ECO:0005574"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005574 "cell-detached inside-out single-channel recording evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005574 obo:ECO_0000164)
+SubClassOf(obo:ECO_0005574 obo:ECO_0006012)
 
 # Class: obo:ECO_0005575 (reconstituted bilayer single-channel patch recording evidence)
 
@@ -8938,13 +8944,14 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005581 O
 
 # Class: obo:ECO_0005582 (cell-detached outside-out single-channel recording evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.nature.com/nprot/journal/v2/n11/full/nprot.2007.403.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0005582 "A type of electrophysiology assay evidence where a part of cellular membrane is detached from the cell and whose external face is exposed to the extracellular medium which allows isolating and studying a single or at least a small number of channels into that fragment (patch)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.nature.com/nprot/journal/v2/n11/full/nprot.2007.403.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0005582 "A type of patch-clamp recording evidence where a part of cellular membrane is detached from the cell and whose external face is exposed to the extracellular medium which allows isolating and studying a single or at least a small number of channels into that fragment (patch)."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005582 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005582 "2016-03-02T10:47:25Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0005582 "cell-detached outside-out patch-clamp evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005582 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005582 "ECO:0005582"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005582 "cell-detached outside-out single-channel recording evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005582 obo:ECO_0000164)
+SubClassOf(obo:ECO_0005582 obo:ECO_0006012)
 
 # Class: obo:ECO_0005583 (cut-open oocyte voltage clamp recording evidence)
 
@@ -10311,6 +10318,52 @@ EquivalentClasses(obo:ECO_0006011 ObjectIntersectionOf(obo:ECO_0006010 ObjectSom
 SubClassOf(obo:ECO_0006011 obo:ECO_0000353)
 SubClassOf(obo:ECO_0006011 obo:ECO_0006010)
 SubClassOf(obo:ECO_0006011 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0006012 (patch-clamp recording evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006012 "A type of electrophysiology assay evidence in which a glass micropipette is sealed to the surface of a cell membrane (patch) to study ion channels."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006012 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006012 "2016-11-28T11:44:05Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006012 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006012 "ECO:0006012"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006012 "patch-clamp recording evidence"^^xsd:string)
+SubClassOf(obo:ECO_0006012 obo:ECO_0000164)
+
+# Class: obo:ECO_0006013 (patch-clamp recording evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006013 "A type of patch-clamp recording evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006013 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006013 "2016-11-28T11:44:05Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006013 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006013 "ECO:0006013"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006013 "patch-clamp recording evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0006013 ObjectIntersectionOf(obo:ECO_0006012 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0006013 obo:ECO_0006006)
+SubClassOf(obo:ECO_0006013 obo:ECO_0006012)
+SubClassOf(obo:ECO_0006013 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0006014 (whole-cell patch-clamp recording evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:27341060"^^xsd:string) obo:IAO_0000115 obo:ECO_0006014 "A type of patch-clamp recording evidence in which a glass micropipette filled with a prepared solution is used to form a seal with the cell membrane followed by rupture of membrane to provide accurate and high resolution electrical property measurements of the whole cell."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006014 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006014 "2016-11-28T11:44:05Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006014 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006014 "ECO:0006014"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006014 "whole-cell patch-clamp recording evidence"^^xsd:string)
+SubClassOf(obo:ECO_0006014 obo:ECO_0006012)
+
+# Class: obo:ECO_0006015 (whole-cell patch-clamp recording evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006015 "A type of whole-cell patch-clamp recording evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006015 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006015 "2016-11-28T11:44:05Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006015 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006015 "ECO:0006015"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006015 "whole-cell patch-clamp recording evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0006015 ObjectIntersectionOf(obo:ECO_0006014 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0006015 obo:ECO_0006013)
+SubClassOf(obo:ECO_0006015 obo:ECO_0006014)
+SubClassOf(obo:ECO_0006015 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 
 )
