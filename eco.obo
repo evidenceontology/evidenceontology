@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2016-11-04
+data-version: releases/2016-05-31
 date: 10:05:2016 15:33
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
@@ -6683,18 +6683,20 @@ creation_date: 2016-02-12T14:06:40Z
 [Term]
 id: ECO:0005573
 name: cell-attached single-channel recording evidence
-def: "A type of electrophysiology assay evidence that involves isolation of a patch of membrane electrically from the external solution and to record current flowing into the patch and this is achieved by pressing a fire-polished glass pipette, which has been filled with a suitable electrolyte solution, against the surface of a cell and applying light suction." [ECO:SN, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch04.pdf]
+def: "A type of patch-clamp recording evidence that involves isolation of a patch of membrane electrically from the external solution and to record current flowing into the patch and this is achieved by pressing a fire-polished glass pipette, which has been filled with a suitable electrolyte solution, against the surface of a cell and applying light suction." [ECO:SN, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch04.pdf]
+synonym: "cell-attached patch-clamp recording evidence" EXACT []
 xref: birnlex:2283 "cell-attached single-channel recording protocol"
-is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0006012 ! patch-clamp recording evidence
 created_by: snadendla
 creation_date: 2016-02-12T14:07:39Z
 
 [Term]
 id: ECO:0005574
 name: cell-detached inside-out single-channel recording evidence
-def: "A type of electrophysiology assay evidence that involves study of individual ion channels by gently pulling the patch of membrane away from the cell, and the patch remains attached to the pipette with its cytoplasmic surface exposed to the bathing solution." [ECO:SN, url:http\://www.acnp.org/g4/GN401000005/CH005.html]
+def: "A type of patch-clamp recording evidence that involves study of individual ion channels by gently pulling the patch of membrane away from the cell, and the patch remains attached to the pipette with its cytoplasmic surface exposed to the bathing solution." [ECO:SN, url:http\://www.acnp.org/g4/GN401000005/CH005.html]
+synonym: "cell-detached inside-out patch-clamp recording evidence" EXACT []
 xref: birnlex:2286 "cell-detached inside-out single-channel recording protocol"
-is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0006012 ! patch-clamp recording evidence
 created_by: snadendla
 creation_date: 2016-02-12T14:16:53Z
 
@@ -6772,8 +6774,9 @@ creation_date: 2016-02-12T16:23:38Z
 [Term]
 id: ECO:0005582
 name: cell-detached outside-out single-channel recording evidence
-def: "A type of electrophysiology assay evidence where a part of cellular membrane is detached from the cell and whose external face is exposed to the extracellular medium which allows isolating and studying a single or at least a small number of channels into that fragment (patch)." [ECO:SN, url:http\://www.nature.com/nprot/journal/v2/n11/full/nprot.2007.403.html]
-is_a: ECO:0000164 ! electrophysiology assay evidence
+def: "A type of patch-clamp recording evidence where a part of cellular membrane is detached from the cell and whose external face is exposed to the extracellular medium which allows isolating and studying a single or at least a small number of channels into that fragment (patch)." [ECO:SN, url:http\://www.nature.com/nprot/journal/v2/n11/full/nprot.2007.403.html]
+synonym: "cell-detached outside-out patch-clamp evidence" EXACT []
+is_a: ECO:0006012 ! patch-clamp recording evidence
 created_by: snadendla
 creation_date: 2016-03-02T10:47:25Z
 
@@ -8008,6 +8011,94 @@ intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2016-10-21T12:28:17Z
+
+[Term]
+id: ECO:0006012
+name: patch-clamp recording evidence
+def: "A type of electrophysiology assay evidence in which a glass micropipette is sealed to the surface of a cell membrane (patch) to study ion channels." [ECO:RCT]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: rctauber
+creation_date: 2016-11-28T11:44:05Z
+
+[Term]
+id: ECO:0006013
+name: patch-clamp recording evidence used in manual assertion
+def: "A type of patch-clamp recording evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006006 ! electrophysiology assay evidence used in manual assertion
+is_a: ECO:0006012 ! patch-clamp recording evidence
+intersection_of: ECO:0006012 ! patch-clamp recording evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-11-28T11:44:05Z
+
+[Term]
+id: ECO:0006014
+name: whole-cell patch-clamp recording evidence
+def: "A type of patch-clamp recording evidence in which a glass micropipette filled with a prepared solution is used to form a seal with the cell membrane followed by rupture of membrane to provide accurate and high resolution electrical property measurements of the whole cell." [PMID:27341060]
+is_a: ECO:0006012 ! patch-clamp recording evidence
+created_by: rctauber
+creation_date: 2016-11-28T11:44:05Z
+
+[Term]
+id: ECO:0006015
+name: whole-cell patch-clamp recording evidence used in manual assertion
+def: "A type of whole-cell patch-clamp recording evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006013 ! patch-clamp recording evidence used in manual assertion
+is_a: ECO:0006014 ! whole-cell patch-clamp recording evidence
+intersection_of: ECO:0006014 ! whole-cell patch-clamp recording evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-11-28T11:44:05Z
+
+[Term]
+id: ECO:0006016
+name: traceable author statement from published clinical study
+def: "A type of traceable author statement that is based on a publication about a clinical study." []
+synonym: "published clinical study evidence" EXACT []
+is_a: ECO:0000033 ! traceable author statement
+created_by: rctauber
+creation_date: 2016-11-30T09:44:47Z
+
+[Term]
+id: ECO:0006017
+name: traceable author statement from published clinical study used in manual assertion
+def: "A type of traceable author statement from published clinical study that is used in a manual assertion." []
+comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature. 
+synonym: "PCS" EXACT [HPO]
+is_a: ECO:0000304 ! traceable author statement used in manual assertion
+is_a: ECO:0006016 ! traceable author statement from published clinical study
+intersection_of: ECO:0006016 ! traceable author statement from published clinical study
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+property_value: seeAlso http://human-phenotype-ontology.github.io/documentation.html#annot xsd:string
+created_by: rctauber
+creation_date: 2016-11-30T09:44:47Z
+
+[Term]
+id: ECO:0006018
+name: inference based on individual clinical experience
+def: "A type of curator inference that is based on the individual clinical experience of a clinician" []
+synonym: "individual clinical experience evidence" EXACT []
+is_a: ECO:0000205 ! curator inference
+created_by: rctauber
+creation_date: 2016-11-30T09:44:47Z
+
+[Term]
+id: ECO:0006019
+name: inference based on individual clinical experience used in manual assertion
+def: "A type of inference based on individual clinical experience that is used in a manual assertion." []
+comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used for annotating disorders with a limited amount of published data, and is accompanied by a reference to the individual or center performing the annotation.
+synonym: "ICE" EXACT [HPO]
+is_a: ECO:0000305 ! curator inference used in manual assertion
+is_a: ECO:0006018 ! inference based on individual clinical experience
+intersection_of: ECO:0006018 ! inference based on individual clinical experience
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+property_value: seeAlso http://human-phenotype-ontology.github.io/documentation.html#annot xsd:string
+created_by: rctauber
+creation_date: 2016-11-30T09:44:47Z
 
 [Typedef]
 id: used_in
