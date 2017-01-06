@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2016-05-31
+data-version: releases/2017-01-06
 date: 10:05:2016 15:33
 saved-by: snadendla
 auto-generated-by: OBO-Edit 2.3.1
@@ -8065,7 +8065,7 @@ creation_date: 2016-11-30T09:44:47Z
 id: ECO:0006017
 name: traceable author statement from published clinical study used in manual assertion
 def: "A type of traceable author statement from published clinical study that is used in a manual assertion." []
-comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature. 
+comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature.
 synonym: "PCS" EXACT [HPO]
 is_a: ECO:0000304 ! traceable author statement used in manual assertion
 is_a: ECO:0006016 ! traceable author statement from published clinical study
@@ -8099,6 +8099,109 @@ relationship: used_in ECO:0000218 ! manual assertion
 property_value: seeAlso http://human-phenotype-ontology.github.io/documentation.html#annot xsd:string
 created_by: rctauber
 creation_date: 2016-11-30T09:44:47Z
+
+[Term]
+id: ECO:0006020
+name: biofilm formation assay evidence
+def: "A type of in vitro culture assay evidence in which biofilm growth is monitored and detected from attachment to development." [PMID:10547784]
+is_a: ECO:0000182 ! in vitro culture assay evidence
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006021
+name: biofilm formation assay evidence used in manual assertion
+def: "A type of biofilm formation assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+is_a: ECO:0006020 ! biofilm formation assay evidence
+intersection_of: ECO:0006020 ! biofilm formation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006022
+name: microtiter plate biofilm assay evidence
+def: "A type of biofilm formation assay evidence in which microtiter dishes or tubes are inoculated and incubated to promote biofilm formation, and then biofilms are detected by staining with crystal violet or safranin to observe phenotypes." [PMID:10547784]
+is_a: ECO:0006020 ! biofilm formation assay evidence
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006023
+name: microtiter plate biofilm assay evidence used in manual assertion
+def: "A type of microtiter plate biofilm assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006022 ! microtiter plate biofilm assay evidence
+intersection_of: ECO:0006022 ! microtiter plate biofilm assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006024
+name: air-liquid interface assay evidence
+def: "A type of biofilm formation assay evidence in which biofilm formation is analyzed, without staining, over 4 to 48 hours by growth on a tilted multiwell plate." [PMID:18770545]
+comment: Tilting of the plate positions the air-liquid interface on a clear portion to improve visability.
+synonym: "ALI biofilm assay evidence" EXACT []
+is_a: ECO:0006020 ! biofilm formation assay evidence
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006025
+name: air-liquid interface assay evidence used in manual assertion
+def: "A type of air-liquid interface assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006024 ! air-liquid interface assay evidence
+intersection_of: ECO:0006024 ! air-liquid interface assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006026
+name: colony biofilm assay evidence
+def: "A type of biofilm formation assay evidence in which a colony is grown on a semipermeable membrane on an agar plate to continously supply nutrients by relocating to fresh plates." [PMID:18770545]
+comment: The plates commonly contain different carbon sources or antibiotic treatments to observe properties of the cells.
+is_a: ECO:0006020 ! biofilm formation assay evidence
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006027
+name: colony biofilm assay evidence used in manual assertion
+def: "A type of colony biofilm assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006026 ! colony biofilm assay evidence
+intersection_of: ECO:0006026 ! colony biofilm assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006028
+name: Kadouri drip-fed biofilm assay evidence
+def: "A type of biofilm formation assay evidence in which mature bacterial biofilms are grown in a multiwell plate that has a growth medium continually pumped through the wells while waste is continually pumped out." [PMID:18770545]
+is_a: ECO:0006020 ! biofilm formation assay evidence
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006029
+name: Kadouri drip-fed biofilm assay evidence used in manual assertion
+def: "A type of Kadouri drip-fed biofilm assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006028 ! Kadouri drip-fed biofilm assay evidence
+intersection_of: ECO:0006028 ! Kadouri drip-fed biofilm assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-12-05T09:33:18Z
 
 [Typedef]
 id: used_in
