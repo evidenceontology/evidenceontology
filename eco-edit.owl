@@ -12,7 +12,7 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
 <http://purl.obolibrary.org/obo/eco/releases/2017-01-06/eco.owl>
 Import(<http://purl.obolibrary.org/obo/obi/2016-10-11/obi.owl>)
-Import(<http://purl.obolibrary.org/obo/go/releases/2017-01-11/go.owl>)
+Import(<http://purl.obolibrary.org/obo/go/releases/2017-01-12/go.owl>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:date "10:05:2016 15:33"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
@@ -898,7 +898,7 @@ Declaration(AnnotationProperty(owl:deprecated))
 #   Annotation Properties
 ############################
 
-# Annotation Property: obo:IAO_0000115 (definition)
+# Annotation Property: obo:IAO_0000115 (textual definition)
 
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
 
@@ -5350,6 +5350,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001088 "2014-03-16T11:30:54Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001088 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001088 "ECO:0001088"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001088 "in vivo translation assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0001088 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000966)))
+EquivalentClasses(obo:ECO_0001088 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001199))))))
+EquivalentClasses(obo:ECO_0001088 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0006412))))))))
 SubClassOf(obo:ECO_0001088 obo:ECO_0000178)
 
 # Class: obo:ECO_0001089 (in vivo ubiquitination assay evidence)
