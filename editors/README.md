@@ -53,11 +53,23 @@ ROBOT includes a template tool to build OWL files from a CSV spreadsheet. The ea
 | Namespace | A oboInOwl:hasOBONamespace | Should always be 'eco'.
 | CreatedBy | A oboInOwl:created_by | Reference to the creator of term (i.e. jdoe). |
 | Date | A oboInOwl:creation_date | Formated date (i.e. 2016-12-29T16:01:01Z). |
+| Class Type | CLASS_TYPE | Specifies if the class expression will be for a subclass or equivalent class*. |
 | ParentIRI | CI | ID of parent class (ECO:xxxxxxx). |
-| Synonym | A oboInOwl:hasExactSynonym | Exact synonym. For related, broad, or narrow synonyms use the respective annotation properties. |
-| Comment | A rdfs:comment | Clarification of definition or for use case. |
+| Exact Synonym | A oboInOwl:hasExactSynonym | Synonym is interchangeable with the term. |
+| Broad Synonym | A oboInOwl:hasBroadSynonym | Synonym is less specific than the term. |
+| Narrow Synonym | A oboInOwl:hasNarrowSynonym | Synonym is more specific than the term. |
+| Related Synonym | A oboInOwl:hasRelatedSynonym | Synonym is not exactly the same, but not broader or narrower. |
+| Comment | A rdfs:comment | Clarification of definition or use case. |
+
+\* *CLASS_TYPE should generally be 'subclass', unless a manual assertion term or OBI mapping is being created. In that case, 'equivalent' should be used. 'equivalent' classes do not need an entry in the ParentIRI column, rather they will have a different column with a ROBOT string that begins with a 'C'. See the other templates below for examples.*
 
 This is not an exhaustive list of the annotation properties used in ECO, but it is what is recommended for a new term. Synonym and Comment are not necessary, but may add clarity. Any cell that is left blank will not be tranlsated into OWL.
+
+In this subdirectory, there are various other template examples which cover different scenarios. The template described above works for general term additions. Please read the 'Comment' column for more information in these templates.
+* [Manual Assertion Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/manual-robot-template.csv) - new term + 'used in manual assertion' child 
+* [OBI Mapping Template](http://github.com/evidenceontology/evidenceontology/blob/master/editors/obi-mapping-template.csv) - addition of OBI mappings to existing terms
+* [New Term with Mapping Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/new-with-mapping-template.csv) - new term addition + OBI mappings
+* [Full New Term Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/full-robot-template.csv) - new term + 'used in manual assertion' child + OBI mappings
 
 Once you are done adding terms to the spreadsheet, save it as CSV and run the following command:
 ```
@@ -87,6 +99,8 @@ robot template --template [PATH_TO_CSV]
 
 **Please note:**
 ROBOT generates OWL files in RDF/XML syntax. `eco-edit.owl` is saved in OWL Functional Syntax. *Make sure* to open your final file (after merging) in Protege, SAVE AS and select 'OWL Function Syntax'. Simply replace your generated file with this new save to keep the format consistent.
+
+Additionally, definitions need to be annotated with 'database_cross_reference' to signify the source of the definition. This can be a person (i.e. ECO:XYZ or OBI:XYZ where XYZ are the initials), a PMID, or a link. At the present time, there is no method to annotate an annotation with ROBOT so this must be done manually after adding the terms.
 
 ### Post-editing steps
 
