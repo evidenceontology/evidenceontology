@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/eco.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/eco.owl/>)
 Prefix(eco:=<http://purl.obolibrary.org/obo/eco#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -858,6 +858,7 @@ Declaration(Class(obo:ECO_0006026))
 Declaration(Class(obo:ECO_0006027))
 Declaration(Class(obo:ECO_0006028))
 Declaration(Class(obo:ECO_0006029))
+Declaration(Class(obo:ECO_0006030))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -1621,6 +1622,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000070 "IPI: co-immunopr
 AnnotationAssertion(oboInOwl:id obo:ECO_0000070 "ECO:0000070"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000070 "If performing GO annotation, the interacting protein is referenced in the evidence_with column."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000070 "co-immunoprecipitation evidence"^^xsd:string)
+SubClassOf(obo:ECO_0000070 obo:ECO_0000021)
 SubClassOf(obo:ECO_0000070 obo:ECO_0000085)
 
 # Class: obo:ECO_0000071 (morphological similarity evidence)
@@ -10550,6 +10552,18 @@ EquivalentClasses(obo:ECO_0006029 ObjectIntersectionOf(obo:ECO_0006028 ObjectSom
 SubClassOf(obo:ECO_0006029 obo:ECO_0006021)
 SubClassOf(obo:ECO_0006029 obo:ECO_0006028)
 SubClassOf(obo:ECO_0006029 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0006030 (co-immunoprecipitation evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006030 "A type of co-immunoprecipitation evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006030 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006030 "2016-01-13T11:32:26Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006030 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006030 "ECO:0006030"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006030 "co-immunoprecipitation evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0006030 ObjectIntersectionOf(obo:ECO_0000070 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0006030 obo:ECO_0000070)
+SubClassOf(obo:ECO_0006030 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 
 )
