@@ -12,7 +12,7 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
 <http://purl.obolibrary.org/obo/eco/releases/2017-01-06/eco.owl>
 Import(<http://purl.obolibrary.org/obo/obi/2016-10-11/obi.owl>)
-Import(<http://purl.obolibrary.org/obo/go/releases/2017-01-12/go.owl>)
+Import(<http://purl.obolibrary.org/obo/go/subsets/goslim_generic.owl>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:date "10:05:2016 15:33"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
@@ -898,7 +898,7 @@ Declaration(AnnotationProperty(owl:deprecated))
 #   Annotation Properties
 ############################
 
-# Annotation Property: obo:IAO_0000115 (textual definition)
+# Annotation Property: obo:IAO_0000115 (definition)
 
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
 
