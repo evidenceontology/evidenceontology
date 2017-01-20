@@ -860,8 +860,28 @@ Declaration(Class(obo:ECO_0006026))
 Declaration(Class(obo:ECO_0006027))
 Declaration(Class(obo:ECO_0006028))
 Declaration(Class(obo:ECO_0006029))
+Declaration(Class(obo:GO_0006412))
+Declaration(Class(obo:GO_0008150))
+Declaration(Class(obo:OBI_0000070))
+Declaration(Class(obo:OBI_0000115))
+Declaration(Class(obo:OBI_0000153))
+Declaration(Class(obo:OBI_0000471))
+Declaration(Class(obo:OBI_0000750))
+Declaration(Class(obo:OBI_0000751))
+Declaration(Class(obo:OBI_0000931))
+Declaration(Class(obo:OBI_0000966))
+Declaration(Class(obo:OBI_0000978))
+Declaration(Class(obo:OBI_0001199))
+Declaration(Class(obo:OBI_0001285))
+Declaration(Class(obo:OBI_0500000))
+Declaration(Class(obo:OBI_0600054))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000055))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:OBI_0000312))
+Declaration(ObjectProperty(obo:RO_0000059))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(eco:go_groupings))
 Declaration(AnnotationProperty(eco:valid_with_biological_process))
@@ -892,6 +912,7 @@ Declaration(AnnotationProperty(oboInOwl:is_inferred))
 Declaration(AnnotationProperty(oboInOwl:saved-by))
 Declaration(AnnotationProperty(oboInOwl:shorthand))
 Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:hasDbXref))
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(owl:deprecated))
 ############################
@@ -996,6 +1017,18 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 #   Object Properties
 ############################
 
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BFO:0000051"^^xsd:string) obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasDbXref obo:BFO_0000051 "BFO:0000051"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"^^xsd:string)
+
+# Object Property: obo:BFO_0000055 (realizes)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BFO:0000055"^^xsd:string) obo:IAO_0000115 obo:BFO_0000055 "to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasDbXref obo:BFO_0000055 "BFO:0000055"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:BFO_0000055 "realizes"^^xsd:string)
+
 # Object Property: obo:ECO_9000000 (used_in)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:cjm"^^xsd:string) obo:IAO_0000115 obo:ECO_9000000 "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence."^^xsd:string)
@@ -1018,6 +1051,24 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_9000001 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_9000001 "uses"^^xsd:string)
 AnnotationAssertion(oboInOwl:shorthand obo:ECO_9000001 "uses"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_9000001 "uses"^^xsd:string)
+
+# Object Property: obo:IAO_0000136 (is about)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "IAO:0000136"^^xsd:string) obo:IAO_0000115 obo:IAO_0000136 "is_about is a (currently) primitive relation that relates an information artifact to an entity."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasDbXref obo:IAO_0000136 "IAO:0000136"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"^^xsd:string)
+
+# Object Property: obo:OBI_0000312 (is_specified_output_of)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000312"^^xsd:string) obo:IAO_0000115 obo:OBI_0000312 "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasDbXref obo:OBI_0000312 "OBI:0000312"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:OBI_0000312 "is_specified_output_of"^^xsd:string)
+
+# Object Property: obo:RO_0000059 (concretizes)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "RO:0000059"^^xsd:string) obo:IAO_0000115 obo:RO_0000059 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasDbXref obo:RO_0000059 "RO:0000059"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:RO_0000059 "concretizes"^^xsd:string)
 
 
 
@@ -1843,6 +1894,10 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000094 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000094 "IDA: bioassay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000094 "ECO:0000094"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000094 "biological assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000094 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000070)))
+EquivalentClasses(obo:ECO_0000094 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0000115))))))
+EquivalentClasses(obo:ECO_0000094 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0000931))))))))
+EquivalentClasses(obo:ECO_0000094 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0008150))))))))
 SubClassOf(obo:ECO_0000094 obo:ECO_0000002)
 
 # Class: obo:ECO_0000095 (cell growth assay evidence)
@@ -10561,6 +10616,30 @@ EquivalentClasses(obo:ECO_0006029 ObjectIntersectionOf(obo:ECO_0006028 ObjectSom
 SubClassOf(obo:ECO_0006029 obo:ECO_0006021)
 SubClassOf(obo:ECO_0006029 obo:ECO_0006028)
 SubClassOf(obo:ECO_0006029 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:OBI_0000471 (study design execution)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000471"^^xsd:string) obo:IAO_0000115 obo:OBI_0000471 "a planned process that realizes the concretization of a study design"^^xsd:string)
+AnnotationAssertion(rdfs:hasDbXref obo:OBI_0000471 "OBI:0000471"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:OBI_0000471 "study design execution"^^xsd:string)
+
+# Class: obo:OBI_0000750 (study design independent variable)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000750"^^xsd:string) obo:IAO_0000115 obo:OBI_0000750 "a directive information entity that is part of a study design. Independent variables are entities whose values are selected to determine its relationship to an observed phenomenon (the dependent variable). In such an experiment, an attempt is made to find evidence that the values of the independent variable determine the values of the dependent variable (that which is being measured). The independent variable can be changed as required, and its values do not represent a problem requiring explanation in an analysis, but are taken simply as given. The dependent variable on the other hand, usually cannot be directly controlled"^^xsd:string)
+AnnotationAssertion(rdfs:hasDbXref obo:OBI_0000750 "OBI:0000750"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:OBI_0000750 "study design independent variable"^^xsd:string)
+
+# Class: obo:OBI_0000751 (study design dependent variable)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000751"^^xsd:string) obo:IAO_0000115 obo:OBI_0000751 "dependent variable specification is part of a study design. The dependent variable is the event studied and expected to change when the independent variable varies."^^xsd:string)
+AnnotationAssertion(rdfs:hasDbXref obo:OBI_0000751 "OBI:0000751"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:OBI_0000751 "study design dependent variable"^^xsd:string)
+
+# Class: obo:OBI_0500000 (study design)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0500000"^^xsd:string) obo:IAO_0000115 obo:OBI_0500000 "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution."^^xsd:string)
+AnnotationAssertion(rdfs:hasDbXref obo:OBI_0500000 "OBI:0500000"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:OBI_0500000 "study design"^^xsd:string)
 
 
 )
