@@ -859,6 +859,7 @@ Declaration(Class(obo:ECO_0006027))
 Declaration(Class(obo:ECO_0006028))
 Declaration(Class(obo:ECO_0006029))
 Declaration(Class(obo:ECO_0006030))
+Declaration(Class(obo:ECO_0006031))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -10564,6 +10565,18 @@ AnnotationAssertion(rdfs:label obo:ECO_0006030 "co-immunoprecipitation evidence 
 EquivalentClasses(obo:ECO_0006030 ObjectIntersectionOf(obo:ECO_0000070 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0006030 obo:ECO_0000070)
 SubClassOf(obo:ECO_0006030 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0006031 (immunolocalization evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006031 "A type of immunolocalization evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006031 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006031 "2017-01-23T07:54:37Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006031 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006031 "ECO:0006031"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006031 "immunolocalization evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0006031 ObjectIntersectionOf(obo:ECO_0000087 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0006031 obo:ECO_0000087)
+SubClassOf(obo:ECO_0006031 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 
 )
