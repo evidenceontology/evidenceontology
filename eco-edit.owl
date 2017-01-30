@@ -17,7 +17,7 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
 <http://purl.obolibrary.org/obo/eco/releases/2017-01-06/eco.owl>
 Import(<http://purl.obolibrary.org/obo/obi/2016-10-11/obi.owl>)
-Import(<http://purl.obolibrary.org/obo/go/releases/2017-01-21/go.owl>)
+Import(<http://purl.obolibrary.org/obo/go/releases/2017-01-26/go.owl>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:date "10:05:2016 15:33"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
@@ -939,7 +939,7 @@ Declaration(AnnotationProperty(owl:deprecated))
 #   Annotation Properties
 ############################
 
-# Annotation Property: obo:IAO_0000115 (definition)
+# Annotation Property: obo:IAO_0000115 (textual definition)
 
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
 
@@ -1037,7 +1037,7 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 #   Object Properties
 ############################
 
-# Object Property: obo:BFO_0000051 (has_part)
+# Object Property: obo:BFO_0000051 (has part)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "BFO:0000051"^^xsd:string) obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasDbXref obo:BFO_0000051 "BFO:0000051"^^xsd:string)
@@ -1326,6 +1326,7 @@ SubClassOf(obo:ECO_0000025 obo:ECO_0000023)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000026 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000026 "ECO:0000026"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000026 "nucleic acid hybridization evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000026 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000113)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0302903))))))))
 SubClassOf(obo:ECO_0000026 obo:ECO_0000073)
 
 # Class: obo:ECO_0000027 (structural similarity evidence)
@@ -1512,6 +1513,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000049 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000049 "IEP: expression of a reporter gene"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000049 "ECO:0000049"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000049 "reporter gene assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000049 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0002082) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000131)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0010467))))))))
 SubClassOf(obo:ECO_0000049 obo:ECO_0000059)
 
 # Class: obo:ECO_0000050 (voucher specimen analysis evidence)
@@ -1789,6 +1791,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000079 "IDA: affinity ch
 AnnotationAssertion(oboInOwl:id obo:ECO_0000079 "ECO:0000079"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000079 "\"Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent\" (from original definition by TAIR:TED). Types of highly specific interaction might include those of antigen and antibody, enzyme and substrate, or receptor and ligand."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000079 "affinity chromatography evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000079 ObjectIntersectionOf(obo:ECO_0000000 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0600046 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0000533)))))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0302902))))))) ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001630)))
 SubClassOf(obo:ECO_0000079 obo:ECO_0000023)
 
 # Class: obo:ECO_0000080 (phylogenetic evidence)
@@ -1966,6 +1969,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000098 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000098 "IDA: in situ hybridization"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000098 "ECO:0000098"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000098 "in situ hybridization evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000098 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001686) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000113)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0302903)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0033036))))))))
 SubClassOf(obo:ECO_0000098 obo:ECO_0000026)
 
 # Class: obo:ECO_0000100 (fractionation evidence)
@@ -2027,6 +2031,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000108 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000108 "IEP: transcript levels (e.g. RT-PCR)"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000108 "ECO:0000108"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000108 "reverse transcription polymerase chain reaction transcription evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000108 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001361) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001313)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0000552)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0010467))))))))
 SubClassOf(obo:ECO_0000108 obo:ECO_0000048)
 SubClassOf(obo:ECO_0000108 obo:ECO_0000109)
 
@@ -2176,6 +2181,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000138 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000138 "IDA: ribohomopolymer binding assay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000138 "ECO:0000138"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000138 "ribohomopolymer binding assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000138 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001146) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000113)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0005488))))))))
 SubClassOf(obo:ECO_0000138 obo:ECO_0000136)
 
 # Class: obo:ECO_0000140 (thin layer chromatography evidence)
@@ -2227,6 +2233,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000150 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000150 "IDA: in vitro reconstitution assay with recombinant protein"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000150 "ECO:0000150"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000150 "in vitro transcription reconstitution assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000150 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000424) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001285)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0034645))))))))
 SubClassOf(obo:ECO_0000150 obo:ECO_0000003)
 
 # Class: obo:ECO_0000152 (in vitro recombinant protein transcription reconstitution assay evidence)
@@ -2235,7 +2242,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000152 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000152 "IDA: in vitro reconstitution assay with recombinant protein"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000152 "ECO:0000152"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000152 "in vitro recombinant protein transcription reconstitution assay evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0000152 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001365)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0600064)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0009987))))))))
+EquivalentClasses(obo:ECO_0000152 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000424) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001285)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0600064 ObjectSomeValuesFrom(obo:RO_0000057 obo:PR_000000001)))))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0034645))))))))
 SubClassOf(obo:ECO_0000152 obo:ECO_0000150)
 
 # Class: obo:ECO_0000154 (heterologous protein expression evidence)
@@ -2366,6 +2373,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000179 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000179 "ECO:0000179"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000179 "animal model system study evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000179 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000966) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0000115 obo:OBI_0001199))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0008150))))))))
 SubClassOf(obo:ECO_0000179 obo:ECO_0000006)
 
 # Class: obo:ECO_0000180 (clinical study evidence)
@@ -2388,6 +2396,7 @@ SubClassOf(obo:ECO_0000181 obo:ECO_0000094)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000182 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000182 "ECO:0000182"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000182 "in vitro culture assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000182 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001285)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0600024)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000978 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0100060)))))
 SubClassOf(obo:ECO_0000182 obo:ECO_0000094)
 
 # Class: obo:ECO_0000183 (cell-free assay evidence)
@@ -2840,6 +2849,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000235 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000235 "ECO:0000235"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000235 "5C is used to study the structural properties and spatial organization of chromosomes inside cells. Like other types of chromosome conformation capture technology, 5C differs only in the fifth step, which involves ligation-mediated amplification (LMA) followed by product quantitation."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000235 "carbon-copy chromosome conformation capture evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000235 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001919) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0001917))))))))
 SubClassOf(obo:ECO_0000235 obo:ECO_0000232)
 
 # Class: obo:ECO_0000236 (chromosome conformation capture-PCR evidence)
@@ -3303,6 +3313,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000268 "FCM"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000268 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000268 "ECO:0000268"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000268 "flow cytometry evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0000268 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000916) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000015))))))))
 SubClassOf(obo:ECO_0000268 obo:ECO_0000002)
 
 # Class: obo:ECO_0000269 (experimental evidence used in manual assertion)
@@ -4757,6 +4768,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001016 "2014-03-16T11:30:54Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001016 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001016 "ECO:0001016"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001016 "blood test evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0001016 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000630) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0000094 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0000178))))))))))
 SubClassOf(obo:ECO_0001016 obo:ECO_0000002)
 
 # Class: obo:ECO_0001017 (Boyden chamber assay evidence)
@@ -4912,6 +4924,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001032 "2014-03-16T11:30:54Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001032 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001032 "ECO:0001032"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001032 "constitutively active mutant evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0001032 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000966) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001365)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0010467))))))))
 SubClassOf(obo:ECO_0001032 obo:ECO_0000059)
 
 # Class: obo:ECO_0001033 (cross-linking evidence)
@@ -5056,7 +5069,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001047 "2014-03-16T11:30:54Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001047 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001047 "ECO:0001047"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001047 "fluorescence in situ hybridization evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0001047 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001683) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0600038))))))))
+EquivalentClasses(obo:ECO_0001047 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001683) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000113)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0302903)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0051276))))))))
 SubClassOf(obo:ECO_0001047 obo:ECO_0000008)
 SubClassOf(obo:ECO_0001047 obo:ECO_0000098)
 
@@ -5666,6 +5679,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001106 "2014-03-16T11:30:54Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001106 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001106 "ECO:0001106"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001106 "nuclease protection assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0001106 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000424 obo:OBI_0001670)) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001430)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0010467))))))))
 SubClassOf(obo:ECO_0001106 obo:ECO_0005518)
 
 # Class: obo:ECO_0001107 (nucleotide analog incorporation evidence)
@@ -7852,6 +7866,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0001809 "DNA affinity pur
 AnnotationAssertion(oboInOwl:id obo:ECO_0001809 "ECO:0001809"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0001809 "Biotinylation is commonly used for labeling and beads are commonly used as the matrix. Bound protein will remain attached to the beads. Results can be detected through gel electrophoresis and then sequenced by mass-spectrometry. This technique can be used to demonstrate binding of a purified protein, or to purify the binding protein from crude extract or protein mixture."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001809 "DNA affinity chromatography evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0001809 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0001630) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0600046 ObjectSomeValuesFrom(obo:RO_0000057 obo:CHEBI_16991)))))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0302902))))))))
 SubClassOf(obo:ECO_0001809 obo:ECO_0000325)
 
 # Class: obo:ECO_0001810 (DNAse footprinting evidence)
@@ -8120,6 +8135,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005008 "2015-02-11T16:30:10Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005008 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005008 "ECO:0005008"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005008 "DNA synthesis cell proliferation assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0005008 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000891) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001365)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:GO_0006260 obo:GO_0008283)))))))))
 SubClassOf(obo:ECO_0005008 obo:ECO_0005007)
 
 # Class: obo:ECO_0005009 (metabolic cell proliferation assay evidence)
@@ -8204,6 +8220,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005031 "2015-03-20T12:16:17Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005031 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005031 "ECO:0005031"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005031 "structure determination evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0005031 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0001691))))))))
 SubClassOf(obo:ECO_0005031 obo:ECO_0000006)
 
 # Class: obo:ECO_0005033 (electron microscopy evidence)
@@ -8411,6 +8428,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005518 "2015-09-25T14:43:53Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005518 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005518 "ECO:0005518"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005518 "RNA detection assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0005518 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000424 obo:OBI_0600025)) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001430))))))
 SubClassOf(obo:ECO_0005518 obo:ECO_0005516)
 
 # Class: obo:ECO_0005519 (DNA detection assay evidence)
@@ -9192,6 +9210,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005587 "2016-03-17T12:29:45Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005587 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005587 "ECO:0005587"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005587 "confocal microscopy evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0005587 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000185 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0001079)))))
 SubClassOf(obo:ECO_0005587 obo:ECO_0001098)
 
 # Class: obo:ECO_0005588 (wide-field microscopy evidence)
@@ -9346,6 +9365,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005600 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005600 "ECO:0005600"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0005600 "This allows visualization of sub cellular distribution of biomolecules of interest."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005600 "immunofluorescence confocal microscopy evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0005600 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000185 ObjectSomeValuesFrom(obo:RO_0000057 obo:OBI_0001079))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0302887))))))))
 SubClassOf(obo:ECO_0005600 obo:ECO_0000007)
 SubClassOf(obo:ECO_0005600 obo:ECO_0005587)
 
