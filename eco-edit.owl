@@ -10,12 +10,12 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-<http://purl.obolibrary.org/obo/eco/releases/2017-01-06/eco.owl>
+<http://purl.obolibrary.org/obo/eco/releases/2017-02-03/eco.owl>
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
-Annotation(oboInOwl:date "10:05:2016 15:33"^^xsd:string)
+Annotation(oboInOwl:date "02:03:2017 09:10"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
 Annotation(oboInOwl:hasOBOFormatVersion "1.2"^^xsd:string)
-Annotation(oboInOwl:saved-by "snadendla"^^xsd:string)
+Annotation(oboInOwl:saved-by "rctauber"^^xsd:string)
 Annotation(rdfs:comment "For more details, see https://github.com/evidenceontology/evidenceontology"^^xsd:string)
 
 Declaration(Class(obo:ECO_0000000))
@@ -2221,11 +2221,11 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0000166 "ECO:0000166"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000166 "two-electrode voltage clamp experiment evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000166 obo:ECO_0000164)
 
-# Class: obo:ECO_0000168 (transcription assay)
+# Class: obo:ECO_0000168 (transcription assay evidence)
 
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000168 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000168 "ECO:0000168"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0000168 "transcription assay"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0000168 "transcription assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000168 obo:ECO_0000002)
 
 # Class: obo:ECO_0000170 (transcriptional activation assay)
@@ -10601,7 +10601,7 @@ SubClassOf(obo:ECO_0006032 obo:ECO_0000059)
 
 # Class: obo:ECO_0006033 (optogenetic evidence used in manual assertion)
 
-AnnotationAssertion(obo:IAO_0000115 obo:ECO_0006033 "A type of optogenetic evidence that is used in a manual assertion.ECO:RCT"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006033 "A type of optogenetic evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006033 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006033 "2017-01-23T11:58:48Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006033 "eco"^^xsd:string)
