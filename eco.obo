@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: releases/2017-01-06
-date: 10:05:2016 15:33
-saved-by: snadendla
+data-version: releases/2017-02-03
+date: 02:03:2017 09:10
+saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -481,6 +481,7 @@ def: "A type of immunoprecipitation evidence that involves precipitating two or 
 comment: If performing GO annotation, the interacting protein is referenced in the evidence_with column.
 synonym: "IPI: co-immunoprecipitation" RELATED []
 xref: PSI-MI:MI\:0019 "coimmunoprecipitation"
+is_a: ECO:0000021 ! physical interaction evidence
 is_a: ECO:0000085 ! immunoprecipitation evidence
 
 [Term]
@@ -942,7 +943,7 @@ is_a: ECO:0000164 ! electrophysiology assay evidence
 
 [Term]
 id: ECO:0000168
-name: transcription assay
+name: transcription assay evidence
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
@@ -950,7 +951,7 @@ id: ECO:0000170
 name: transcriptional activation assay
 def: "Used when an annotation is made based on assays that show transcriptional activation of a specific target reporter gene." [TAIR:TED]
 synonym: "IDA: transcriptional activation assay" RELATED []
-is_a: ECO:0000168 ! transcription assay
+is_a: ECO:0000168 ! transcription assay evidence
 
 [Term]
 id: ECO:0000172
@@ -6740,7 +6741,7 @@ id: ECO:0005579
 name: immunogold labelling evidence used in manual assertion
 def: "A type of immunogold labelling evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000090 ! immunogold labelling evidence
-is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+is_a: ECO:0006031 {is_inferred="true"} ! immunolocalization evidence used in manual assertion
 intersection_of: ECO:0000090 ! immunogold labelling evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -6895,8 +6896,8 @@ creation_date: 2016-03-17T17:11:34Z
 id: ECO:0005595
 name: immunoperoxidase immunolocalization evidence used in manual assertion
 def: "A type of immunoperoxidase immunolocalization evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
 is_a: ECO:0005594 ! immunoperoxidase immunolocalization evidence
+is_a: ECO:0006031 {is_inferred="true"} ! immunolocalization evidence used in manual assertion
 intersection_of: ECO:0005594 ! immunoperoxidase immunolocalization evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8065,7 +8066,7 @@ creation_date: 2016-11-30T09:44:47Z
 id: ECO:0006017
 name: traceable author statement from published clinical study used in manual assertion
 def: "A type of traceable author statement from published clinical study that is used in a manual assertion." []
-comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature.
+comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature. 
 synonym: "PCS" EXACT [HPO]
 is_a: ECO:0000304 ! traceable author statement used in manual assertion
 is_a: ECO:0006016 ! traceable author statement from published clinical study
@@ -8202,6 +8203,139 @@ intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2016-12-05T09:33:18Z
+
+[Term]
+id: ECO:0006030
+name: co-immunoprecipitation evidence used in manual assertion
+def: "A type of co-immunoprecipitation evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000070 ! co-immunoprecipitation evidence
+is_a: ECO:0000353 {is_inferred="true"} ! physical interaction evidence used in manual assertion
+is_a: ECO:0005644 {is_inferred="true"} ! immunoprecipitation evidence used in manual assertion
+intersection_of: ECO:0000070 ! co-immunoprecipitation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2016-01-13T11:32:26Z
+
+[Term]
+id: ECO:0006031
+name: immunolocalization evidence used in manual assertion
+def: "A type of immunolocalization evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000087 ! immunolocalization evidence
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
+intersection_of: ECO:0000087 ! immunolocalization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-01-23T07:54:37Z
+
+[Term]
+id: ECO:0006032
+name: optogenetic evidence
+def: "A type of experimental phenotypic evidence arising from experiment in which neuronal activity is manipulated using genetically encoded, optically activated neuronal actuators." [GO:DOS, PMID:17035522]
+synonym: "optogenetic actuator evidence" EXACT []
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006033
+name: optogenetic evidence used in manual assertion
+def: "A type of optogenetic evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0006032 ! optogenetic evidence
+intersection_of: ECO:0006032 ! optogenetic evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006034
+name: fluorescent sensor evidence
+def: "A type of fluorescence evidence that is based on direct, quantitative measurement of some cellular property using a fluorescent sensor." [GO:DOS]
+comment: Examples include sensors for ion concentration and potential difference across a membrane.
+is_a: ECO:0001115 ! fluorescence evidence
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006035
+name: fluorescent sensor evidence used in manual assertion
+def: "A type of fluorescent sensor evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0001249 {is_inferred="true"} ! fluorescence evidence used in manual assertion
+is_a: ECO:0006034 ! fluorescent sensor evidence
+intersection_of: ECO:0006034 ! fluorescent sensor evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006036
+name: genetically encoded fluorescent sensor evidence
+def: "A type of fluorescent sensor evidence that is based on direct, quantitative measurement of some cellular property using a genetically encoded fluorescent sensor." [GO:DOS]
+synonym: "optogenetic sensor evidence" EXACT []
+is_a: ECO:0006034 ! fluorescent sensor evidence
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006037
+name: genetically encoded fluorescent sensor evidence used in manual assertion
+def: "A type of genetically encoded fluorescent sensor evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006035 {is_inferred="true"} ! fluorescent sensor evidence used in manual assertion
+is_a: ECO:0006036 ! genetically encoded fluorescent sensor evidence
+intersection_of: ECO:0006036 ! genetically encoded fluorescent sensor evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006038
+name: genetically encoded fluorescent electrophysiology assay evidence
+def: "A type of fluorescent sensor evidence and electrophysiology assay evidence where the electrical properties of cells or tissues are studied using fluorescent sensors." [GO:DOS]
+comment: Examples include genetically encoded sensors that detect potential difference across plasma membrane.
+synonym: "electrophysiology - optical assay evidence" EXACT []
+is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0006034 ! fluorescent sensor evidence
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006039
+name: genetically encoded fluorescent electrophysiology assay evidence used in manual assertion
+def: "A type of genetically encoded fluorescent electrophysiology assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006006 {is_inferred="true"} ! electrophysiology assay evidence used in manual assertion
+is_a: ECO:0006035 {is_inferred="true"} ! fluorescent sensor evidence used in manual assertion
+is_a: ECO:0006038 ! genetically encoded fluorescent electrophysiology assay evidence
+intersection_of: ECO:0006038 ! genetically encoded fluorescent electrophysiology assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006040
+name: genetically encoded fluorescent ion concentration sensor assay evidence
+def: "A type of genetically encoded fluorescent electrophysiology assay evidence that is based on direct, quantitative measurement of ion concentration using a genetically encoded fluorescent sensor." [GO:DOS]
+comment: Examples include the genetically encoded calcium indicator GCaMP.
+is_a: ECO:0006038 ! genetically encoded fluorescent electrophysiology assay evidence
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006041
+name: genetically encoded fluorescent ion concentration sensor assay evidence used in manual assertion
+def: "A type of genetically encoded fluorescent ion concentration sensor assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006039 {is_inferred="true"} ! genetically encoded fluorescent electrophysiology assay evidence used in manual assertion
+is_a: ECO:0006040 ! genetically encoded fluorescent ion concentration sensor assay evidence
+intersection_of: ECO:0006040 ! genetically encoded fluorescent ion concentration sensor assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-01-23T11:58:48Z
 
 [Typedef]
 id: used_in
