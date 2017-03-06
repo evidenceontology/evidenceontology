@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-02-03
-date: 02:03:2017 09:10
+data-version: releases/2017-03-03
+date: 03:03:2017 11:15
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -131,14 +131,14 @@ id: ECO:0000018
 name: anti-sense experiment evidence
 def: "Used when an annotation is based on a phenotype observed when expressing an anti-sense version of a gene product in a wild-type (for that gene product) background." [TAIR:TED]
 synonym: "IMP: anti-sense experiments" RELATED []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000019
 name: RNAi evidence
-def: "Inference based on a phenotype observed when expressing an RNAi construct that includes a fragment of the gene product in a wild-type (for that gene product) background. A double-stranded RNA specifically suppresses the expression of the gene bearing its complementary sequence." [TAIR:TED]
+def: "A type of mutant phenotype evidence where an RNA construct is introduced into a cell and the expression of the gene bearing its complementary sequence is suppressed." [] {comment="ECO:MCC"}
 synonym: "IMP: RNAi experiment" RELATED []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000020
@@ -393,6 +393,7 @@ def: "A type of similarity based on the expression of a genotype in an environme
 comment: Phenotype is defined as the outcome of the expression of a genotype in a given environment. A comparison might involve whole organisms or sub-parts of organisms.
 synonym: "inferred from phenotypic similarity" RELATED []
 synonym: "IPTS" EXACT []
+synonym: "phenotype similarity evidence" EXACT []
 is_a: ECO:0000041 ! similarity evidence
 
 [Term]
@@ -2095,10 +2096,10 @@ creation_date: 2010-12-20T07:02:08Z
 [Term]
 id: ECO:0000292
 name: morpholino experiment evidence
-def: "A type of experimental phenotypic evidence that uses anti-sense by introducing morpholino oligonucleotides into the cytosol of a cell." [ECO:MCC]
+def: "A type of mutant phenotype evidence that uses anti-sense by introducing morpholino oligonucleotides into the cytosol of a cell." [ECO:MCC]
 comment: Morpholino oligonucleotides modify gene expression by blocking access of other molecules to specific, approximately 25-base-long regions of the base-pairing surfaces of ribonucleic acid (RNA). To achieve this anti-sense knockdown technique, delivery of the morpholino can be achieved via microinjection, electroporation, or another method.
 synonym: "anti-sense" BROAD []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: mchibucos
 creation_date: 2011-01-10T03:36:25Z
 
@@ -5005,8 +5006,8 @@ creation_date: 2014-03-17T18:44:11Z
 id: ECO:0001223
 name: induced mutation evidence used in manual assertion
 def: "A type of induced mutation evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001056 ! induced mutation evidence
+is_a: ECO:0006049 {is_inferred="true"} ! genetic transformation evidence used in manual assertion
 intersection_of: ECO:0001056 ! induced mutation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5017,8 +5018,8 @@ creation_date: 2014-03-17T18:45:56Z
 id: ECO:0001224
 name: knockin evidence used in manual assertion
 def: "A type of knockin evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001090 ! knockin evidence
+is_a: ECO:0006049 {is_inferred="true"} ! genetic transformation evidence used in manual assertion
 intersection_of: ECO:0001090 ! knockin evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5029,8 +5030,8 @@ creation_date: 2014-03-17T18:49:35Z
 id: ECO:0001225
 name: knockout evidence used in manual assertion
 def: "A type of knockout evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001091 ! knockout evidence
+is_a: ECO:0006049 {is_inferred="true"} ! genetic transformation evidence used in manual assertion
 intersection_of: ECO:0001091 ! knockout evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5522,8 +5523,8 @@ creation_date: 2014-03-17T20:29:38Z
 id: ECO:0001266
 name: transgenic organism evidence used in manual assertion
 def: "A type of transgenic organism evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001131 ! transgenic organism evidence
+is_a: ECO:0006049 {is_inferred="true"} ! genetic transformation evidence used in manual assertion
 intersection_of: ECO:0001131 ! transgenic organism evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5994,7 +5995,8 @@ creation_date: 2015-02-19T13:10:20Z
 [Term]
 id: ECO:0005027
 name: genetic transformation evidence
-is_a: ECO:0000059 ! experimental phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from the conversion of one genotype into another by the introduction of exogenous DNA." [ECO:RCT]
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: snadendla
 creation_date: 2015-03-16T15:33:50Z
 
@@ -8336,6 +8338,127 @@ intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2017-01-23T11:58:48Z
+
+[Term]
+id: ECO:0006042
+name: cell fractionation evidence used in manual assertion
+def: "A type of cell fractionation evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000004 ! cell fractionation evidence
+is_a: ECO:0006005 {is_inferred="true"} ! fractionation evidence used in manual assertion
+intersection_of: ECO:0000004 ! cell fractionation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006043
+name: extracellular recording evidence
+def: "A type of electrophysiology assay evidence resulting from the use of electrodes to measure in vivo electrical activity coming from adjacent neurons." [url:http\://www.nature.com/subjects/extracellular-recording]
+is_a: ECO:0000164 ! electrophysiology assay evidence
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006044
+name: extracellular recording evidence used in manual assertion
+def: "A type of extracellular recording evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006006 {is_inferred="true"} ! electrophysiology assay evidence used in manual assertion
+is_a: ECO:0006043 ! extracellular recording evidence
+intersection_of: ECO:0006043 ! extracellular recording evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006045
+name: single-unit extracellular recording evidence
+def: "A type of extracellular recording evidence in which an extracellular microelectrode is used to measure the electrical activity of a single neuron." [doi:10.1385/0-89603-185-3\:1]
+is_a: ECO:0006043 ! extracellular recording evidence
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006046
+name: single-unit extracellular recording evidence used in manual assertion
+def: "A type of single-unit extracellular recording evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006044 {is_inferred="true"} ! extracellular recording evidence used in manual assertion
+is_a: ECO:0006045 ! single-unit extracellular recording evidence
+intersection_of: ECO:0006045 ! single-unit extracellular recording evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006047
+name: field potential recording evidence
+def: "A type of extracellular recording evidence in which electrical activity is measured in either tissue or at a cellular level with microelectrodes." [ECO:RCT]
+synonym: "local field potential recording evidence" NARROW []
+is_a: ECO:0006043 ! extracellular recording evidence
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006048
+name: field potential recording evidence used in manual assertion
+def: "A type of field potential recording evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006044 {is_inferred="true"} ! extracellular recording evidence used in manual assertion
+is_a: ECO:0006047 ! field potential recording evidence
+intersection_of: ECO:0006047 ! field potential recording evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-02-21T07:26:28Z
+
+[Term]
+id: ECO:0006049
+name: genetic transformation evidence used in manual assertion
+def: "A type of genetic transformation evidence that is used in a manual assertion" [ECO:RCT]
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005027 ! genetic transformation evidence
+intersection_of: ECO:0005027 ! genetic transformation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 02-21-2017T18:98:58Z
+
+[Term]
+id: ECO:0006050
+name: anti-sense experiment evidence used in manual assertion
+def: "A type of anti-sense experiment evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000018 ! anti-sense experiment evidence
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+intersection_of: ECO:0000018 ! anti-sense experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 02-21-2017T18:98:58Z
+
+[Term]
+id: ECO:0006051
+name: morpholino experiment evidence used in manual assertion
+def: "A type of morpholino experiment evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000292 ! morpholino experiment evidence
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+intersection_of: ECO:0000292 ! morpholino experiment evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 02-21-2017T18:98:58Z
+
+[Term]
+id: ECO:0006052
+name: RNAi evidence used in manual assertion
+def: "A type of RNAi evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000019 ! RNAi evidence
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+intersection_of: ECO:0000019 ! RNAi evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 02-21-2017T18:98:58Z
 
 [Typedef]
 id: used_in
