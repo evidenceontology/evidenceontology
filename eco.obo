@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-03-03
-date: 03:03:2017 11:15
+data-version: releases/2017-03-28
+date: 03:28:2017 15:22
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -8459,6 +8459,77 @@ intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 02-21-2017T18:98:58Z
+
+[Term]
+id: ECO:0006055
+name: high throughput evidence
+def: "A type of evidence where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:MCC]
+comment: Some relevant articles include: PMID: 23340846, doi:10.1038/nmeth0607-523
+synonym: "high throughput cell biology evidence" NARROW []
+synonym: "high throughput screening evidence" NARROW []
+synonym: "high-throughput evidence" EXACT []
+synonym: "HT evidence" EXACT []
+is_a: ECO:0000000 ! evidence
+created_by: mchibucos
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006056
+name: high throughput evidence used in manual assertion
+def: "A type of evidence that is used in a manual assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:RCT]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0006055 ! high throughput evidence
+intersection_of: ECO:0006055 ! high throughput evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006057
+name: high throughput evidence used in automatic assertion
+def: "A type of evidence that is used in an automatic assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:RCT]
+is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
+is_a: ECO:0006055 ! high throughput evidence
+intersection_of: ECO:0006055 ! high throughput evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006058
+name: high throughput cell biology evidence
+def: "A type of high throughput evidence where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:MCC]
+comment: HT methodologies may incorporate techniques from optics, chemistry, biology or image analysis (https://en.wikipedia.org/wiki/High_throughput_biology)
+synonym: "omics experiment" RELATED []
+is_a: ECO:0006055 ! high throughput evidence
+created_by: mchibucos
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006059
+name: high throughput cell biology evidence used in manual assertion
+def: "A type of high throughput evidence used in a manual assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:RCT]
+is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
+is_a: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006060
+name: high throughput cell biology evidence used in automatic assertion
+def: "A type of high throughput evidence used in an automatic assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:RCT]
+is_a: ECO:0006057 {is_inferred="true"} ! high throughput evidence used in automatic assertion
+is_a: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
 
 [Typedef]
 id: used_in
