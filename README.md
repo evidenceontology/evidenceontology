@@ -4,7 +4,7 @@ The **[Evidence & Conclusion Ontology (ECO)](http://www.evidenceontology.org/)**
 
 ECO is an ontology comprising two high-level classes, **'evidence'** and **'assertion method'**, where 'evidence' is defined as "a type of information that is used to support an assertion" and 'assertion method' is defined as "a means by which a statement is made about an entity." Together 'evidence' and 'assertion method' can be combined to describe both the _supporting evidence_ for an assertion and _the agent who made the assertion_, i.e. a human being or a computer. However, ECO can not be used to make an assertion itself; for that, one would use some other means, such as another ontology, controlled vocabulary, or a free text description.
 
-ECO was originally created around the year 2000 to support Gene Ontology (GO) gene product annotations, and GO uses ECO in AmiGO 2, Noctua, and other applications. Today many groups use ECO to document evidence in scientific research, including protein & gene resources, model organism databases, software applications, phenotype projects, and others.
+ECO was originally created around the year 2000 to support [Gene Ontology](http://geneontology.org/) (GO) gene product annotations, and GO uses ECO in [AmiGO2], [Noctua](http://noctua.berkeleybop.org/), and other applications. Today many groups use ECO to document evidence in scientific research, including protein & gene resources, model organism databases, software applications, phenotype projects, and others.
 
 ***
 
