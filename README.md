@@ -24,6 +24,8 @@ Although ECO is free for all, we certainly apreciate attribution _and_ collabora
 
 [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
+***
+
 **COLLABORATION**
 
 If you want to help grow ECO for your project or contribute to ECO so that others may benefit, too, please **contact** us via the GitHub Issues tracker or email Dr. Marcus Chibucos of the University of Maryland School of Medicine at mchibucos@som.umaryland.edu.
