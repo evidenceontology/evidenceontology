@@ -32,10 +32,10 @@ If you want to **help grow ECO for your own project** please contact us via the 
 
 **LICENSING**
 
-ECO is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full license text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for detailed information.
+ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full license text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for detailed information.
 
 ***
 
 **FUNDING ACKNOWLEDGEMENT**
 
-This material (the ontology & related resources) is based upon work supported by the **National Science Foundation** Division of Biological Infrastructure under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)**.
+This material (the ontology & related resources) is based upon work supported by the **National Science Foundation Division of Biological Infrastructure** under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)**.
