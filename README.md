@@ -1,4 +1,4 @@
-**WHY ECO?**
+**ABOUT ECO**
 
 The **Evidence & Conclusion Ontology (ECO)** describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means. Researchers use evidence to support conclusions that arise out of scientific research. Documenting evidence during scientific research is essential, because evidence gives us a sense of _why_ we believe what we _think_ we know. Conclusions are asserted as statements about things that are believed to be true, for example that a protein has a particular function (i.e. a protein functional annotation) or that a disease is associated with a particular gene variant (i.e. a phenotype-gene association). A systematic and structured (i.e. ontological) classification of evidence allows us to store, retreive, share, and compare data associated with that evidence using computers, which are essential to navigate the massive amount of scientific data in existence.
 
