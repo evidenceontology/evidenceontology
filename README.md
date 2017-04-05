@@ -1,4 +1,4 @@
-**ABOUT ECO**
+**WHY ECO?**
 
 The **Evidence & Conclusion Ontology (ECO)** describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means. Researchers use evidence to support conclusions that arise out of scientific research. Documenting evidence during scientific research is essential, because evidence gives us a sense of _why_ we believe what we _think_ we know. Conclusions are asserted as statements about things that are believed to be true, for example that a protein has a particular function (i.e. a protein functional annotation) or that a disease is associated with a particular gene variant (i.e. a phenotype-gene association). A systematic and structured (i.e. ontological) classification of evidence allows us to store, retreive, share, and compare data associated with that evidence using computers, which are essential to navigate the massive amount of scientific data in existence.
 
@@ -16,14 +16,26 @@ For **information on editing**, please see **[the editors subdirectory](https://
 
 For **further information** visit the **[Evidence & Conclusion Ontology website](http://www.evidenceontology.org/)**.
 
+***
+
+**CITING ECO**
+
+Although ECO is free for all, we certainly apreciate attribution _and_ collaboration! If you use ECO in your work, please **cite** the following paper:
+
+[Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long)
+
+**COLLABORATION**
+
+If you want to help grow ECO for your project or contribute to ECO so that others may benefit, too, please **contact** us via the GitHub Issues tracker or email Dr. Marcus Chibucos of the University of Maryland School of Medicine at mchibucos@som.umaryland.edu.
+
+***
+
 **LICENSING**
 
 ECO is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full license text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for detailed information.
 
-**CITATION**
-
-Although ECO is free for all, we certainly apreciate attribution & collaboration! If you use ECO, please **cite** the following paper: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long) If you want to help us grow ECO for your projects so that others may benefit, too, please **contact** Dr. Marcus Chibucos at the University of Maryland School of Medicine at mchibucos@som.umaryland.edu.
+***
 
 **FUNDING ACKNOWLEDGEMENT**
 
-This material (the ontology and related resources) is based upon work supported by the **National Science Foundation** under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)**.
+This material (the ontology & related resources) is based upon work supported by the **National Science Foundation** Division of Biological Infrastructure under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)**.
