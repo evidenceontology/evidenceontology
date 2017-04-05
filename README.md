@@ -32,7 +32,7 @@ If you want to **help grow ECO for your own project** please contact us via the 
 
 **LICENSING**
 
-ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full license text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for detailed information.
+ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for more detailed information.
 
 ***
 
