@@ -42,4 +42,4 @@ ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. An
 
 This material (the ontology & related resources) is based upon work supported by the **National Science Foundation Division of Biological Infrastructure** under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)** to Dr. Marcus Chibucos, Principal Investigator.
 
-Prior development was supported in part by **National Institutes of Health/National Institute of General Medical Sciences** under **[Grant Number 2R01GM089636](https://projectreporter.nih.gov/project_info_description.cfm?aid=8579651&icde=0)**. 
+Prior development was supported in part by **National Institutes of Health/National Institute of General Medical Sciences** under **[Grant Number 2R01GM089636](https://projectreporter.nih.gov/project_info_description.cfm?aid=8579651&icde=0)** and by **[Dr. Owen White](http://www.medschool.umaryland.edu/profiles/White-Owen/)**.
