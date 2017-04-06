@@ -34,10 +34,12 @@ When you contribute your knowledge to ECO, everyone can benefit!
 
 **LICENSING**
 
-ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for more detailed information. To get a sense of **_why_ ECO is CC0** as opposed to licensed under **CC-BY**, please read this [thoughtful discussion](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
+ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for more detailed information. To get a sense of _why_ **ECO is CC0** as opposed to licensed under **CC-BY**, please read this [thoughtful discussion](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
 
 ***
 
 **FUNDING ACKNOWLEDGEMENT**
 
 This material (the ontology & related resources) is based upon work supported by the **National Science Foundation Division of Biological Infrastructure** under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)** to Dr. Marcus Chibucos, Principal Investigator.
+
+Prior development was supported, in part, by **National Institutes of Health/National Institute of General Medical Sciences** under **[Grant Number 2R01GM089636](https://projectreporter.nih.gov/project_info_description.cfm?aid=8579651&icde=0)**. 
