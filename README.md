@@ -8,13 +8,13 @@ ECO was originally created around the year 2000 to support [Gene Ontology](http:
 
 ***
 
-**DEVELOP & COLLABORATE**
+**DEVELOPMENT INFORMATION**
 
 For **advice on requesting new terms**, please see the **[Evidence & Conclusion Ontology wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**.
 
 For **information about editing**, please see the **[GitHub editors subdirectory](https://github.com/evidenceontology/evidenceontology/tree/master/editors)**.
 
-For **further information** visit the **[Evidence & Conclusion Ontology website](http://www.evidenceontology.org/)**.
+For **further information** including history, detailed discussion of evidence, and a complete bibliography, please visit the **[Evidence & Conclusion Ontology website](http://www.evidenceontology.org/)**.
 
 ***
 
