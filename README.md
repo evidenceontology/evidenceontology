@@ -4,7 +4,7 @@ The **[Evidence & Conclusion Ontology (ECO)](http://www.evidenceontology.org/)**
 
 ECO is an ontology comprising two high-level classes, **'evidence'** and **'assertion method'**, where 'evidence' is defined as "a type of information that is used to support an assertion" and 'assertion method' is defined as "a means by which a statement is made about an entity." Together 'evidence' and 'assertion method' can be combined to describe both the _supporting evidence_ for an assertion and _the agent who made the assertion_, i.e. a human being or a computer. However, ECO can not be used to make an assertion itself; for that, one would use some other means, such as another ontology, controlled vocabulary, or a free text description.
 
-ECO was originally created around the year 2000 to support [Gene Ontology](http://geneontology.org/) (GO) gene product annotations, and GO uses ECO in [AmiGO2](http://amigo2.geneontology.org/amigo), [Noctua](http://noctua.berkeleybop.org/), and other applications. Today many groups use ECO to document evidence in scientific research, including protein & gene resources, model organism databases, software applications, phenotype projects, and others. ECO collaborates with the [Ontology for Biomedical Investigations](http://obi-ontology.org/page/Main_Page) Consortium in order to achieve [harmonious interactions](https://f1000research.com/posters/6-395).
+ECO was originally created around the year 2000 to support [Gene Ontology](http://geneontology.org/) (GO) gene product annotations, and GO uses ECO in [AmiGO2](http://amigo2.geneontology.org/amigo), [Noctua](http://noctua.berkeleybop.org/), and other applications. Today many groups use ECO to document evidence in scientific research, including protein & gene resources, model organism databases, software applications, and phenotype projects, among others. ECO collaborates with the [Ontology for Biomedical Investigations](http://obi-ontology.org/page/Main_Page) Consortium in order to achieve [harmonious interactions](https://f1000research.com/posters/6-395). ECO is committed to the principles established by the [Open Biological and Biomedical Ontologies Foundry](http://obofoundry.org/) (OBO Foundry).
 
 ***
 
@@ -26,7 +26,7 @@ ECO is free for all, but we certainly apreciate attribution _and_ collaboration!
 
 **...AND COLLABORATE WITH US!**
 
-If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker** or **email Dr. Marcus Chibucos** of the University of Maryland School of Medicine: **mchibucos@som.umaryland.edu**.
+If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker** or **email [Dr. Marcus Chibucos](http://www.medschool.umaryland.edu/profiles/Chibucos-Marcus/)** of the University of Maryland School of Medicine: **mchibucos@som.umaryland.edu**.
 
 When you contribute your knowledge to ECO, everyone can benefit!
 
@@ -34,10 +34,10 @@ When you contribute your knowledge to ECO, everyone can benefit!
 
 **LICENSING**
 
-ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for more detailed information.
+ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see **[Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)** for an easy-to-read description of CC0 1.0 or **[full text](https://creativecommons.org/publicdomain/zero/1.0/legalcode)** for more detailed information. To get a sense of **_why_ ECO is CC0** as opposed to licensed under **CC-BY**, please read this [thoughtful discussion](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
 
 ***
 
 **FUNDING ACKNOWLEDGEMENT**
 
-This material (the ontology & related resources) is based upon work supported by the **National Science Foundation Division of Biological Infrastructure** under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)**.
+This material (the ontology & related resources) is based upon work supported by the **National Science Foundation Division of Biological Infrastructure** under **[Award Number 1458400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1458400)** to Dr. Marcus Chibucos, Principal Investigator.
