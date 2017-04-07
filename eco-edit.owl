@@ -881,6 +881,8 @@ Declaration(Class(obo:ECO_0006049))
 Declaration(Class(obo:ECO_0006050))
 Declaration(Class(obo:ECO_0006051))
 Declaration(Class(obo:ECO_0006052))
+Declaration(Class(obo:ECO_0006053))
+Declaration(Class(obo:ECO_0006054))
 Declaration(Class(obo:ECO_0006055))
 Declaration(Class(obo:ECO_0006056))
 Declaration(Class(obo:ECO_0006057))
@@ -10602,7 +10604,7 @@ SubClassOf(obo:ECO_0006031 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006032 (optogenetic evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:DOS"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17035522"^^xsd:string) obo:IAO_0000115 obo:ECO_0006032 "A type of experimental phenotypic evidence arising from experiment in which neuronal activity is manipulated using genetically encoded, optically activated neuronal actuators."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17035522"^^xsd:string) obo:IAO_0000115 obo:ECO_0006032 "A type of experimental phenotypic evidence arising from experiment in which neuronal activity is manipulated using genetically encoded, optically activated neuronal actuators."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006032 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006032 "2017-01-23T11:58:48Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0006032 "optogenetic actuator evidence"^^xsd:string)
@@ -10625,7 +10627,7 @@ SubClassOf(obo:ECO_0006033 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006034 (fluorescent sensor evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006034 "A type of fluorescence evidence that is based on direct, quantitative measurement of some cellular property using a fluorescent sensor."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006034 "A type of fluorescence evidence that is based on direct, quantitative measurement of some cellular property using a fluorescent sensor."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006034 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006034 "2017-01-23T11:58:48Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006034 "eco"^^xsd:string)
@@ -10648,7 +10650,7 @@ SubClassOf(obo:ECO_0006035 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006036 (genetically encoded fluorescent sensor evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006036 "A type of fluorescent sensor evidence that is based on direct, quantitative measurement of some cellular property using a genetically encoded fluorescent sensor."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006036 "A type of fluorescent sensor evidence that is based on direct, quantitative measurement of some cellular property using a genetically encoded fluorescent sensor."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006036 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006036 "2017-01-23T11:58:48Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0006036 "optogenetic sensor evidence"^^xsd:string)
@@ -10671,7 +10673,7 @@ SubClassOf(obo:ECO_0006037 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006038 (genetically encoded fluorescent electrophysiology assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006038 "A type of fluorescent sensor evidence and electrophysiology assay evidence where the electrical properties of cells or tissues are studied using fluorescent sensors."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006038 "A type of fluorescent sensor evidence and electrophysiology assay evidence where the electrical properties of cells or tissues are studied using fluorescent sensors."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006038 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006038 "2017-01-23T11:58:48Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0006038 "electrophysiology - optical assay evidence"^^xsd:string)
@@ -10696,7 +10698,7 @@ SubClassOf(obo:ECO_0006039 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006040 (genetically encoded fluorescent ion concentration sensor assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006040 "A type of genetically encoded fluorescent electrophysiology assay evidence that is based on direct, quantitative measurement of ion concentration using a genetically encoded fluorescent sensor."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006040 "A type of genetically encoded fluorescent electrophysiology assay evidence that is based on direct, quantitative measurement of ion concentration using a genetically encoded fluorescent sensor."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006040 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006040 "2017-01-23T11:58:48Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006040 "eco"^^xsd:string)
@@ -10843,6 +10845,28 @@ AnnotationAssertion(rdfs:label obo:ECO_0006052 "RNAi evidence used in manual ass
 EquivalentClasses(obo:ECO_0006052 ObjectIntersectionOf(obo:ECO_0000019 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0006052 obo:ECO_0000019)
 SubClassOf(obo:ECO_0006052 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0006053 (pharmacological assay evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006053 "A type of experimental phenotypic evidence that arises from assaying the response of a cell, tissue, organ or organism following exposure to a receptor agonist or antagonist."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006053 "dosumis"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006053 "2017-03-07T08:51:02Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006053 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006053 "ECO:0006053"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006053 "pharmacological assay evidence"^^xsd:string)
+SubClassOf(obo:ECO_0006053 obo:ECO_0000059)
+
+# Class: obo:ECO_0006054 (pharmacological assay evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:DOS"^^xsd:string) obo:IAO_0000115 obo:ECO_0006054 "A type of experimental phenotypic evidence used in a manual assertion that arises from assaying the response of a cell, tissue, organ or organism following exposure to a receptor agonist or antagonist."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0006054 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006054 "2017-03-07T08:51:02Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006054 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0006054 "ECO:0006054"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006054 "pharmacological assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0006054 ObjectIntersectionOf(obo:ECO_0006053 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0006054 obo:ECO_0006053)
+SubClassOf(obo:ECO_0006054 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0006055 (high throughput evidence)
 
