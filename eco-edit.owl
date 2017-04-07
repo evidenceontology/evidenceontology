@@ -1,4 +1,5 @@
 Prefix(:=<http://purl.obolibrary.org/obo/eco.owl/>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(eco:=<http://purl.obolibrary.org/obo/eco#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -11,12 +12,13 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
 <http://purl.obolibrary.org/obo/eco/releases/2017-03-28/eco.owl>
+Annotation(dc:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:date "03:28:2017 15:22"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
 Annotation(oboInOwl:hasOBOFormatVersion "1.2"^^xsd:string)
 Annotation(oboInOwl:saved-by "rctauber"^^xsd:string)
-Annotation(rdfs:comment "For more details, see https://github.com/evidenceontology/evidenceontology"^^xsd:string)
+Annotation(rdfs:comment "ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site."^^xsd:string)
 
 Declaration(Class(obo:ECO_0000000))
 Declaration(Class(obo:ECO_0000001))
@@ -901,6 +903,7 @@ Declaration(AnnotationProperty(eco:valid_with_molecular_function))
 Declaration(AnnotationProperty(eco:valid_with_protein))
 Declaration(AnnotationProperty(eco:valid_with_protein_complex))
 Declaration(AnnotationProperty(eco:valid_with_transcript))
+Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
 Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
 Declaration(AnnotationProperty(oboInOwl:created_by))
