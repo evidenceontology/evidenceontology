@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-03-03
-date: 03:03:2017 11:15
+data-version: releases/2017-03-28
+date: 03:04:2019 15:22
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -13,8 +13,9 @@ subsetdef: valid_with_protein "Protein IDs should be used in the GO with/from fi
 subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"
 subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
-remark: For more details, see https://github.com/evidenceontology/evidenceontology
+remark: ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
 ontology: eco
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
 
 [Term]
 id: ECO:0000000
@@ -8069,7 +8070,7 @@ id: ECO:0006017
 name: traceable author statement from published clinical study used in manual assertion
 def: "A type of traceable author statement from published clinical study that is used in a manual assertion." []
 comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature. 
-synonym: "PCS" EXACT [HPO]
+synonym: "PCS" EXACT [HPO:PCS]
 is_a: ECO:0000304 ! traceable author statement used in manual assertion
 is_a: ECO:0006016 ! traceable author statement from published clinical study
 intersection_of: ECO:0006016 ! traceable author statement from published clinical study
@@ -8093,7 +8094,7 @@ id: ECO:0006019
 name: inference based on individual clinical experience used in manual assertion
 def: "A type of inference based on individual clinical experience that is used in a manual assertion." []
 comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used for annotating disorders with a limited amount of published data, and is accompanied by a reference to the individual or center performing the annotation.
-synonym: "ICE" EXACT [HPO]
+synonym: "ICE" EXACT [HPO:ICE]
 is_a: ECO:0000305 ! curator inference used in manual assertion
 is_a: ECO:0006018 ! inference based on individual clinical experience
 intersection_of: ECO:0006018 ! inference based on individual clinical experience
@@ -8234,7 +8235,7 @@ creation_date: 2017-01-23T07:54:37Z
 [Term]
 id: ECO:0006032
 name: optogenetic evidence
-def: "A type of experimental phenotypic evidence arising from experiment in which neuronal activity is manipulated using genetically encoded, optically activated neuronal actuators." [GO:DOS, PMID:17035522]
+def: "A type of experimental phenotypic evidence arising from experiment in which neuronal activity is manipulated using genetically encoded, optically activated neuronal actuators." [GOC:DOS, PMID:17035522]
 synonym: "optogenetic actuator evidence" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: rctauber
@@ -8255,7 +8256,7 @@ creation_date: 2017-01-23T11:58:48Z
 [Term]
 id: ECO:0006034
 name: fluorescent sensor evidence
-def: "A type of fluorescence evidence that is based on direct, quantitative measurement of some cellular property using a fluorescent sensor." [GO:DOS]
+def: "A type of fluorescence evidence that is based on direct, quantitative measurement of some cellular property using a fluorescent sensor." [GOC:DOS]
 comment: Examples include sensors for ion concentration and potential difference across a membrane.
 is_a: ECO:0001115 ! fluorescence evidence
 created_by: rctauber
@@ -8276,7 +8277,7 @@ creation_date: 2017-01-23T11:58:48Z
 [Term]
 id: ECO:0006036
 name: genetically encoded fluorescent sensor evidence
-def: "A type of fluorescent sensor evidence that is based on direct, quantitative measurement of some cellular property using a genetically encoded fluorescent sensor." [GO:DOS]
+def: "A type of fluorescent sensor evidence that is based on direct, quantitative measurement of some cellular property using a genetically encoded fluorescent sensor." [GOC:DOS]
 synonym: "optogenetic sensor evidence" EXACT []
 is_a: ECO:0006034 ! fluorescent sensor evidence
 created_by: rctauber
@@ -8297,7 +8298,7 @@ creation_date: 2017-01-23T11:58:48Z
 [Term]
 id: ECO:0006038
 name: genetically encoded fluorescent electrophysiology assay evidence
-def: "A type of fluorescent sensor evidence and electrophysiology assay evidence where the electrical properties of cells or tissues are studied using fluorescent sensors." [GO:DOS]
+def: "A type of fluorescent sensor evidence and electrophysiology assay evidence where the electrical properties of cells or tissues are studied using fluorescent sensors." [GOC:DOS]
 comment: Examples include genetically encoded sensors that detect potential difference across plasma membrane.
 synonym: "electrophysiology - optical assay evidence" EXACT []
 is_a: ECO:0000164 ! electrophysiology assay evidence
@@ -8321,7 +8322,7 @@ creation_date: 2017-01-23T11:58:48Z
 [Term]
 id: ECO:0006040
 name: genetically encoded fluorescent ion concentration sensor assay evidence
-def: "A type of genetically encoded fluorescent electrophysiology assay evidence that is based on direct, quantitative measurement of ion concentration using a genetically encoded fluorescent sensor." [GO:DOS]
+def: "A type of genetically encoded fluorescent electrophysiology assay evidence that is based on direct, quantitative measurement of ion concentration using a genetically encoded fluorescent sensor." [GOC:DOS]
 comment: Examples include the genetically encoded calcium indicator GCaMP.
 is_a: ECO:0006038 ! genetically encoded fluorescent electrophysiology assay evidence
 created_by: rctauber
@@ -8459,6 +8460,97 @@ intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 02-21-2017T18:98:58Z
+
+[Term]
+id: ECO:0006053
+name: pharmacological assay evidence
+def: "A type of experimental phenotypic evidence that arises from assaying the response of a cell, tissue, organ or organism following exposure to a receptor agonist or antagonist." [GOC:DOS]
+is_a: ECO:0000059 ! experimental phenotypic evidence
+created_by: dosumis
+creation_date: 2017-03-07T08:51:02Z
+
+[Term]
+id: ECO:0006054
+name: pharmacological assay evidence used in manual assertion
+def: "A type of experimental phenotypic evidence used in a manual assertion that arises from assaying the response of a cell, tissue, organ or organism following exposure to a receptor agonist or antagonist." [GOC:DOS]
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0006053 ! pharmacological assay evidence
+intersection_of: ECO:0006053 ! pharmacological assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-03-07T08:51:02Z
+
+[Term]
+id: ECO:0006055
+name: high throughput evidence
+def: "A type of evidence where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:MCC]
+comment: Some relevant articles include: PMID: 23340846, doi:10.1038/nmeth0607-523
+synonym: "high throughput cell biology evidence" NARROW []
+synonym: "high throughput screening evidence" NARROW []
+synonym: "high-throughput evidence" EXACT []
+synonym: "HT evidence" EXACT []
+is_a: ECO:0000000 ! evidence
+created_by: mchibucos
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006056
+name: high throughput evidence used in manual assertion
+def: "A type of evidence that is used in a manual assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:RCT]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0006055 ! high throughput evidence
+intersection_of: ECO:0006055 ! high throughput evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006057
+name: high throughput evidence used in automatic assertion
+def: "A type of evidence that is used in an automatic assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:RCT]
+is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
+is_a: ECO:0006055 ! high throughput evidence
+intersection_of: ECO:0006055 ! high throughput evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006058
+name: high throughput cell biology evidence
+def: "A type of high throughput evidence where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:MCC]
+comment: HT methodologies may incorporate techniques from optics, chemistry, biology or image analysis (https://en.wikipedia.org/wiki/High_throughput_biology)
+synonym: "omics experiment" RELATED []
+is_a: ECO:0006055 ! high throughput evidence
+created_by: mchibucos
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006059
+name: high throughput cell biology evidence used in manual assertion
+def: "A type of high throughput evidence used in a manual assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:RCT]
+is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
+is_a: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006060
+name: high throughput cell biology evidence used in automatic assertion
+def: "A type of high throughput evidence used in an automatic assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:RCT]
+is_a: ECO:0006057 {is_inferred="true"} ! high throughput evidence used in automatic assertion
+is_a: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: ECO:0006058 ! high throughput cell biology evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+relationship: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2017-03-28T14:48:39Z
 
 [Typedef]
 id: used_in

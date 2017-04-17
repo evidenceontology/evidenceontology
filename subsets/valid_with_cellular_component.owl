@@ -3,6 +3,7 @@
      xml:base="http://purl.obolibrary.org/obo/eco/subsets/valid_with_cellular_component.owl"
      xmlns:eco="http://purl.obolibrary.org/obo/eco#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/subsets/valid_with_cellular_component.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/2017-02-03/subsets/valid_with_cellular_component.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/2017-03-28/subsets/valid_with_cellular_component.owl"/>
     </owl:Ontology>
     
 
@@ -112,6 +113,12 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcript IDs should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
