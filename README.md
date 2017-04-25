@@ -20,7 +20,7 @@ For **further information** including history, detailed discussion of evidence, 
 
 **PLEASE CITE ECO**
 
-ECO is free for all, but we certainly apreciate attribution _and_ collaboration! If you use ECO in your work, please **cite** the following paper:
+ECO is free for all, but we certainly appreciate attribution _and_ collaboration! If you use ECO in your work, please **cite** the following paper:
 
 [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
