@@ -893,7 +893,11 @@ Declaration(Class(obo:ECO_0006059))
 Declaration(Class(obo:ECO_0006060))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
+Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000117))
+Declaration(AnnotationProperty(obo:IAO_0000119))
+Declaration(AnnotationProperty(obo:ECO_9000002))
 Declaration(AnnotationProperty(eco:go_groupings))
 Declaration(AnnotationProperty(eco:valid_with_biological_process))
 Declaration(AnnotationProperty(eco:valid_with_cellular_component))
@@ -930,9 +934,25 @@ Declaration(AnnotationProperty(owl:deprecated))
 #   Annotation Properties
 ############################
 
+# Annotation Property: obo:ECO_9000002 (requested by)
+
+AnnotationAssertion(rdfs:label obo:ECO_9000002 "requested by"^^xsd:string)
+
+# Annotation Property: obo:IAO_0000112 (example of usage)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000112 "example of usage"^^xsd:string)
+
 # Annotation Property: obo:IAO_0000115 (definition)
 
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
+
+# Annotation Property: obo:IAO_0000117 (term editor)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000117 "term editor"^^xsd:string)
+
+# Annotation Property: obo:IAO_0000119 (definition source)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000119 "definition source"^^xsd:string)
 
 # Annotation Property: eco:go_groupings (eco:go_groupings)
 
