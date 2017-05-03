@@ -893,11 +893,11 @@ Declaration(Class(obo:ECO_0006059))
 Declaration(Class(obo:ECO_0006060))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
+Declaration(AnnotationProperty(obo:ECO_9000002))
 Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000117))
 Declaration(AnnotationProperty(obo:IAO_0000119))
-Declaration(AnnotationProperty(obo:ECO_9000002))
 Declaration(AnnotationProperty(eco:go_groupings))
 Declaration(AnnotationProperty(eco:valid_with_biological_process))
 Declaration(AnnotationProperty(eco:valid_with_cellular_component))
@@ -936,22 +936,30 @@ Declaration(AnnotationProperty(owl:deprecated))
 
 # Annotation Property: obo:ECO_9000002 (requested by)
 
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_9000002 "Name of the group or person who requested the term. This provides insight into the reasons for which the term was added."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_9000002 "requested by"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000112 (example of usage)
 
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000112 "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000112 "IAO"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:IAO_0000112 "example of usage"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000115 (definition)
 
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000115 "IAO"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000117 (term editor)
 
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000117 "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000117 "IAO"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:IAO_0000117 "term editor"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000119 (definition source)
 
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000119 "formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000119 "IAO"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:IAO_0000119 "definition source"^^xsd:string)
 
 # Annotation Property: eco:go_groupings (eco:go_groupings)
@@ -998,6 +1006,12 @@ SubAnnotationPropertyOf(eco:valid_with_protein_complex oboInOwl:SubsetProperty)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_transcript "Transcript IDs should be used in the GO with/from field"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_transcript oboInOwl:SubsetProperty)
+
+# Annotation Property: dc:license (license)
+
+AnnotationAssertion(obo:IAO_0000115 dc:license "A legal document giving official permission to do something with the resource."^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy dc:license "DC"^^xsd:string)
+AnnotationAssertion(rdfs:label dc:license "license"^^xsd:string)
 
 # Annotation Property: oboInOwl:SubsetProperty (subset_property)
 
