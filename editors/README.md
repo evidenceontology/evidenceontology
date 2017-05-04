@@ -233,8 +233,8 @@ This generates derived files such as eco.owl and eco.obo. The versionIRI will be
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/obophenotype/eco/releases
- * https://github.com/obophenotype/eco/releases/new
+ * https://github.com/evidenceontology/evidenceontology/releases
+ * https://github.com/evidenceontology/evidenceontology/releases/new
 
 The value of the "Tag version" field MUST be
 
