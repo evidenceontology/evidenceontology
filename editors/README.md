@@ -79,11 +79,13 @@ Each ECO editor has a specified ID range in `eco-idranges.owl`. After acquiring 
     * id ("ECO:xxxxxxx")
     * has_obo_namespace ("eco")
     * definition ("A type of X that ...")
-       * Annotate your definition with a source in the format namespace:identifier (i.e. PMID:123)
-    * created_by (class author)
+    * definition source (source in the format namespace:identifier (i.e. PMID:123))
+    * term editor (class author)
     * creation_date (yyyy-mm-ddThh:mm:ssZ)
     
 6. Add optional annotations (make sure to select "xsd:string" as the type):
+    * ontology term requester
+    * example of usage
     * rdfs:comment
     * has_broad_synonym
     * has_exact_synonym
@@ -129,8 +131,9 @@ Our template includes the following (headers in bold are required):
 | **OBO ID** | A oboInOwl:id | Annotation property to display ID, should be the same as ID. |
 | **Label** | A rdfs:label | Textual label for class ('...evidence'). |
 | **Definition** | A obo:IAO_0000115 | Aristotelian definition ('A type of [parent evidence]...'). |
+| **Source** | A obo:IAO_0000119 | Reference to the source for definition (i.e. PMID, the person, etc.) |
 | **Namespace** | A oboInOwl:hasOBONamespace | Should always be 'eco'.
-| **CreatedBy** | A oboInOwl:created_by | Reference to the creator of class (i.e. jdoe). |
+| **Term Editor** | A obo:IAO_0000117 | Reference to the creator of class (i.e. jdoe). |
 | **Date** | A oboInOwl:creation_date | Formatted date (i.e. 2016-12-29T16:01:01Z). |
 | **Class Type** | CLASS_TYPE | Specifies if the class expression will be for a subclass or equivalent class*. |
 | **ParentIRI** | CI | ID of parent class (ECO:xxxxxxx). |
@@ -138,7 +141,9 @@ Our template includes the following (headers in bold are required):
 | Broad Synonym | A oboInOwl:hasBroadSynonym | Synonym is less specific than the class. |
 | Narrow Synonym | A oboInOwl:hasNarrowSynonym | Synonym is more specific than the class. |
 | Related Synonym | A oboInOwl:hasRelatedSynonym | Synonym is not exactly the same, but not broader or narrower. |
-| Comment | A rdfs:comment | Clarification of definition or use case. |
+| Term Requester | A obo:IAO_0000234 | The person, group, or project that requested the term. |
+| Example of Use | A obo:IAO_0000112 | Clarification of how the term should be used for annotations. |
+| Comment | A rdfs:comment | Clarification of definition. See above for use cases. |
 
 \* *CLASS_TYPE should generally be 'subclass', unless a manual assertion class or OBI mapping is being created. In that case, 'equivalent' should be used. 'equivalent' classes do not need an entry in the ParentIRI column, rather they will have a different column with a ROBOT string that begins with a 'C'. See the other templates below for examples.*
 
@@ -176,8 +181,6 @@ robot template --template [PATH_TO_CSV]
 
 **Please note:**
 ROBOT generates OWL files in RDF/XML syntax. `eco-edit.owl` is saved in OWL Functional Syntax. *Make sure* to open your final file (after merging) in Protege, SAVE AS and select 'OWL Function Syntax'. Simply replace your generated file with this new save to keep the format consistent.
-
-Additionally, definitions need to be annotated with 'database_cross_reference' to signify the source of the definition. This can be a person (i.e. ECO:XYZ or OBI:XYZ where XYZ are the initials), a PMID, or a link. At the present time, there is no method to annotate an annotation with ROBOT so this must be done manually after adding the classes.
 
 ### Run the Reasoner
 Before saving any changes, it is a good idea to run the reasoner. The ELK reasoner should be selected in Protégé (ELK 0.4.3 for Protege-OWL 5). Start the reasoner, and ignore the alerts that state reasoning may be incomplete and that axiom is ignored. For more information on ELK, [visit the wiki](http://protegewiki.stanford.edu/wiki/ELK).
