@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2017-05-05/eco.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2017-06-02/eco.owl"/>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
         <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.3.1</oboInOwl:auto-generated-by>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06:02:2017 15:49</oboInOwl:date>
         <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:saved-by>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05:05:2017 12:42</oboInOwl:date>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
     </owl:Ontology>
     
@@ -2839,17 +2839,17 @@
     <!-- http://purl.obolibrary.org/obo/ECO_0000166 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000166">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000164"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005576"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA: two-electrode voltage clamp technique</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000166</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">two-electrode voltage clamp experiment evidence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">two-electrode voltage clamp recording evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000166"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:23529422</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -10641,9 +10641,10 @@ computationally derived.</owl:annotatedTarget>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000059"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-16T11:30:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005510</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001038</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deletion evidence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deletion mutation evidence</rdfs:label>
     </owl:Class>
     
 
@@ -12328,8 +12329,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12346,7 +12347,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001138"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -12383,8 +12384,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12401,7 +12402,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001139"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -12493,8 +12494,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12511,7 +12512,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001141"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -12548,8 +12549,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12566,7 +12567,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001142"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -12603,8 +12604,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12621,7 +12622,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001143"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -12713,8 +12714,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001008"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12731,7 +12732,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001145"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -12878,8 +12879,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -12896,7 +12897,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001148"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -13208,8 +13209,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -13226,7 +13227,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001154"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -13318,8 +13319,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001019"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -13336,7 +13337,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001156"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -13373,8 +13374,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001020"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -13391,7 +13392,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001157"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -13428,8 +13429,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001021"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -13446,7 +13447,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001158"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -14260,8 +14261,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001036"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -14278,7 +14279,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001173"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -14383,7 +14384,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-17T16:25:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001175</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deletion evidence used in manual assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deletion mutation evidence used in manual assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001175"/>
@@ -14425,8 +14426,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001039"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -14443,7 +14444,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001176"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -17615,8 +17616,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001100"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -17633,7 +17634,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001234"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -17670,8 +17671,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001101"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -17688,7 +17689,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001235"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -17890,8 +17891,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001104"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -17908,7 +17909,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001239"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -18000,8 +18001,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001107"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -18018,7 +18019,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001241"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -19107,8 +19108,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001136"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -19125,7 +19126,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001261"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -19162,8 +19163,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001135"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -19180,7 +19181,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001262"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -19272,8 +19273,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001133"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -19290,7 +19291,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001264"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -21112,19 +21113,6 @@ computationally derived.</owl:annotatedTarget>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECO_0005510 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005510">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000059"/>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-09-18T17:02:45Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005510</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deletion mutation evidence</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECO_0005511 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005511">
@@ -22646,8 +22634,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005563 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005563">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000164"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005576"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-02-09T12:40:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
@@ -22657,7 +22645,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005563"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17938230</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch03.pdf</oboInOwl:hasDbXref>
@@ -22789,9 +22777,10 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-02-12T13:58:32Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2278</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current clamp voltage recording evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005571</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current clamp voltage recording evidence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current clamp recording evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005571"/>
@@ -22812,8 +22801,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005572 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005572">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000164"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005576"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-02-12T14:06:40Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2281</oboInOwl:hasDbXref>
@@ -22824,7 +22813,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005572"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://circres.ahajournals.org/content/72/1/91.full.pdf</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -22898,8 +22887,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005575 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005575">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000164"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006012"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of patch-clamp reocrding evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-02-12T14:17:46Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2287</oboInOwl:hasDbXref>
@@ -22910,7 +22899,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of patch-clamp reocrding evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://nanion.de/images/stories/papers/Bilayers_lab-on-a-chip08.pdf</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -22931,9 +22920,10 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-02-12T14:18:36Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2279</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voltage clamp current recording evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005576</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voltage clamp current recording evidence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voltage clamp recording evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005576"/>
@@ -23191,8 +23181,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005583 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005583">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000164"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005576"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-03-02T11:29:32Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
@@ -23202,7 +23192,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005583"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:9711615</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -23212,8 +23202,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005584 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005584">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000164"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005576"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-03-02T11:33:48Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
@@ -23223,7 +23213,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005584"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrophysiology assay evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of voltage clamp recording evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://jxb.oxfordjournals.org/content/50/Special_Issue/1037.full.pdf</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -29777,6 +29767,302 @@ To determine the presence of negative chemotaxis, a repellent is added to the or
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of high throughput evidence used in an automatic assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006061">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0005599"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005599"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005804"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006062"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of wide-field fluorescence microscopy evidence used in a manual assertion where fluorescently tagged antibodies are imaged that are used to bind to their antigens.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-15T08:57:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006061</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immunofluorescence wide-field microscopy evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006061"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0005804"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006061"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006062"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006061"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of wide-field fluorescence microscopy evidence used in a manual assertion where fluorescently tagged antibodies are imaged that are used to bind to their antigens.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057135</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006062">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0005598"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005590"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005598"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of wide-field microscopy evidence that is used in a manual assertion where pure white and ultraviolet light are produced by a mercury lamp, passed through an optical filter (excitation filter), and directed to a sample via a dichroic mirror, followed by detection of the fluorescent light by a camera after it passes through an emission filter.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-15T09:01:19Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006062</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wide-field fluorescence microscopy evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006062"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0005590"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006062"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of wide-field microscopy evidence that is used in a manual assertion where pure white and ultraviolet light are produced by a mercury lamp, passed through an optical filter (excitation filter), and directed to a sample via a dichroic mirror, followed by detection of the fluorescent light by a camera after it passes through an emission filter.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.bristol.ac.uk/synaptic/research/techniques/widefield.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006063">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000120"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000120"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental phenotypic evidence that is used in a manual assertion where a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-15T09:03:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006063</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">over expression analysis evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006063"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006063"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental phenotypic evidence that is used in a manual assertion where a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22419077</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006064">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000183"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000183"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of in vitro assay evidence that is used in a manual assertion where components are derived from resting, nonstimulated cells, therefore all reactions occur in vitro.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-15T09:08:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006064</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell-free assay evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006064"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006064"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of in vitro assay evidence that is used in a manual assertion where components are derived from resting, nonstimulated cells, therefore all reactions occur in vitro.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:18453125</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006065">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0005014"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005014"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of in vitro assay evidence that is used in a manual assertion where live cells are used.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-15T09:11:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006065</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in vitro cell based assay evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006065"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of in vitro assay evidence that is used in a manual assertion where live cells are used.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001115"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of fluorescence evidence where quantitative information on the diffusion properties of a sample is produced from the measurement of diffusion of fluorescent probes over time into an area that has been photobleached by a high-intensity laser pulse.</obo:IAO_0000115>
+        <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dosumis</obo:IAO_0000234>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-16T10:55:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRAP evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006066</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRAP is a fluorescence microscopy-based technique.</rdfs:comment>
+        <rdfs:label xml:lang="en">fluorescence recovery after photobleaching evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006066"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of fluorescence evidence where quantitative information on the diffusion properties of a sample is produced from the measurement of diffusion of fluorescent probes over time into an area that has been photobleached by a high-intensity laser pulse.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26314367</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006066"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRAP is a fluorescence microscopy-based technique.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26314367</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006067">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0006066"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001249"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006066"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of fluorescence evidence that is used in a manual assertion where quantitative information on the diffusion properties of a sample is produced from the measurement of diffusion of fluorescent probes over time into an area that has been photobleached by a high-intensity laser pulse.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-05-16T10:55:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006067</oboInOwl:id>
+        <rdfs:label xml:lang="en">fluorescence recovery after photobleaching evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006067"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0001249"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
 </rdf:RDF>
 

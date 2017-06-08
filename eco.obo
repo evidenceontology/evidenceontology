@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-05-05
-date: 05:05:2017 12:42
+data-version: releases/2017-06-02
+date: 06:02:2017 15:49
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -938,10 +938,10 @@ is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
 id: ECO:0000166
-name: two-electrode voltage clamp experiment evidence
-def: "A type of electrophysiology assay evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current." [ECO:SN, PMID:23529422]
+name: two-electrode voltage clamp recording evidence
+def: "A type of voltage clamp recording evidence which involves using two electrodes inserted into a large cell (often a xenopus oocyte) where one electrode is used to measure the internal potential (voltage) of the cell and the other electrode is used to clamp the current." [ECO:SN, PMID:23529422]
 synonym: "IDA: two-electrode voltage clamp technique" RELATED []
-is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0005576 ! voltage clamp recording evidence
 
 [Term]
 id: ECO:0000168
@@ -3234,7 +3234,8 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001038
-name: deletion evidence
+name: deletion mutation evidence
+alt_id: ECO:0005510
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3986,8 +3987,8 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001138
 name: 3D cell culture evidence used in manual assertion
 def: "A type of 3D cell culture evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001001 ! 3D cell culture evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001001 ! 3D cell culture evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -3998,8 +3999,8 @@ creation_date: 2014-03-17T15:18:35Z
 id: ECO:0001139
 name: 51Cr release assay evidence used in manual assertion
 def: "A type of 51Cr release assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001004 ! 51Cr release assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001004 ! 51Cr release assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4022,8 +4023,8 @@ creation_date: 2014-03-17T15:22:01Z
 id: ECO:0001141
 name: [3H]-thymidine incorporation assay evidence used in manual assertion
 def: "A type of [3H]-thymidine incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001003 ! [3H]-thymidine incorporation assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001003 ! [3H]-thymidine incorporation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4034,8 +4035,8 @@ creation_date: 2014-03-17T15:31:52Z
 id: ECO:0001142
 name: [3H]arachidonic acid release assay evidence used in manual assertion
 def: "A type of [3H]arachidonic acid release assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001002 ! [3H]arachidonic acid release assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001002 ! [3H]arachidonic acid release assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4046,8 +4047,8 @@ creation_date: 2014-03-17T15:32:44Z
 id: ECO:0001143
 name: adhesion assay evidence used in manual assertion
 def: "A type of adhesion assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001006 ! adhesion assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001006 ! adhesion assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4070,8 +4071,8 @@ creation_date: 2014-03-17T15:36:19Z
 id: ECO:0001145
 name: Alamar blue assay evidence used in manual assertion
 def: "A type of Alamar blue assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001008 ! Alamar blue assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001008 ! Alamar blue assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4106,8 +4107,8 @@ creation_date: 2014-03-17T15:44:30Z
 id: ECO:0001148
 name: annexin-V staining evidence used in manual assertion
 def: "A type of annexin-V staining evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001011 ! annexin-V staining evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001011 ! annexin-V staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4178,8 +4179,8 @@ creation_date: 2014-03-17T16:02:47Z
 id: ECO:0001154
 name: Boyden chamber assay evidence used in manual assertion
 def: "A type of Boyden chamber assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001017 ! Boyden chamber assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001017 ! Boyden chamber assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4202,8 +4203,8 @@ creation_date: 2014-03-17T16:04:49Z
 id: ECO:0001156
 name: caspase assay evidence used in manual assertion
 def: "A type of caspase assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001019 ! caspase assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001019 ! caspase assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4214,8 +4215,8 @@ creation_date: 2014-03-17T16:06:06Z
 id: ECO:0001157
 name: cell counting evidence used in manual assertion
 def: "A type of cell counting evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001020 ! cell counting evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001020 ! cell counting evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4226,8 +4227,8 @@ creation_date: 2014-03-17T16:07:13Z
 id: ECO:0001158
 name: cell permeability assay evidence used in manual assertion
 def: "A type of cell permeability assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001021 ! cell permeability assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001021 ! cell permeability assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4407,8 +4408,8 @@ creation_date: 2014-03-17T16:23:10Z
 id: ECO:0001173
 name: cytochrome C release assay evidence used in manual assertion
 def: "A type of cytochrome C release assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001036 ! cytochrome C release assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001036 ! cytochrome C release assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4429,11 +4430,11 @@ creation_date: 2014-03-17T16:25:03Z
 
 [Term]
 id: ECO:0001175
-name: deletion evidence used in manual assertion
+name: deletion mutation evidence used in manual assertion
 def: "A type of deletion evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
-is_a: ECO:0001038 ! deletion evidence
-intersection_of: ECO:0001038 ! deletion evidence
+is_a: ECO:0001038 ! deletion mutation evidence
+intersection_of: ECO:0001038 ! deletion mutation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 created_by: mchibucos
@@ -4443,8 +4444,8 @@ creation_date: 2014-03-17T16:25:54Z
 id: ECO:0001176
 name: DNA laddering assay evidence used in manual assertion
 def: "A type of DNA laddering assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001039 ! DNA laddering assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001039 ! DNA laddering assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5139,8 +5140,8 @@ creation_date: 2014-03-17T19:08:13Z
 id: ECO:0001234
 name: MTS assay evidence used in manual assertion
 def: "A type of MTS assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001100 ! MTS assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001100 ! MTS assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5151,8 +5152,8 @@ creation_date: 2014-03-17T19:08:51Z
 id: ECO:0001235
 name: MTT assay evidence used in manual assertion
 def: "A type of MTT assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001101 ! MTT assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001101 ! MTT assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5199,8 +5200,8 @@ creation_date: 2014-03-17T19:18:50Z
 id: ECO:0001239
 name: nuclear fragmentation evidence used in manual assertion
 def: "A type of nuclear fragmentation evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001104 ! nuclear fragmentation evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001104 ! nuclear fragmentation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5223,8 +5224,8 @@ creation_date: 2014-03-17T19:23:41Z
 id: ECO:0001241
 name: nucleotide analog incorporation evidence used in manual assertion
 def: "A type of nucleotide analog incorporation evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001107 ! nucleotide analog incorporation evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001107 ! nucleotide analog incorporation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5464,8 +5465,8 @@ creation_date: 2014-03-17T20:29:18Z
 id: ECO:0001261
 name: WST-1 assay evidence used in manual assertion
 def: "A type of WST-1 assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001136 ! WST-1 assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001136 ! WST-1 assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5476,8 +5477,8 @@ creation_date: 2014-03-17T20:29:22Z
 id: ECO:0001262
 name: wound healing assay evidence used in manual assertion
 def: "A type of wound healing assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001135 ! wound healing assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001135 ! wound healing assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5500,8 +5501,8 @@ creation_date: 2014-03-17T20:29:30Z
 id: ECO:0001264
 name: terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence used in manual assertion
 def: "A type of TUNEL assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001133 ! terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
+is_a: ECO:0006065 {is_inferred="true"} ! in vitro cell based assay evidence used in manual assertion
 intersection_of: ECO:0001133 ! terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -6107,13 +6108,6 @@ created_by: snadendla
 creation_date: 2015-09-18T17:02:03Z
 
 [Term]
-id: ECO:0005510
-name: deletion mutation evidence
-is_a: ECO:0000059 ! experimental phenotypic evidence
-created_by: snadendla
-creation_date: 2015-09-18T17:02:45Z
-
-[Term]
 id: ECO:0005511
 name: duplication mutation evidence
 is_a: ECO:0000059 ! experimental phenotypic evidence
@@ -6609,8 +6603,8 @@ creation_date: 2016-02-09T12:05:29Z
 [Term]
 id: ECO:0005563
 name: macroscopic current trace evidence
-def: "A type of electrophysiology assay evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording." [ECO:SN, PMID:17938230, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch03.pdf]
-is_a: ECO:0000164 ! electrophysiology assay evidence
+def: "A type of voltage clamp recording evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording." [ECO:SN, PMID:17938230, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch03.pdf]
+is_a: ECO:0005576 ! voltage clamp recording evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:40:03Z
 
@@ -6668,8 +6662,9 @@ creation_date: 2016-02-09T12:58:18Z
 
 [Term]
 id: ECO:0005571
-name: current clamp voltage recording evidence
+name: current clamp recording evidence
 def: "A type of electrophysiology assay evidence that involves recording the change in membrane potential caused by applying specific current to the cell." [ECO:SN, url:http\://www.nature.com/nprot/journal/v4/n8/full/nprot.2009.91.html]
+synonym: "current clamp voltage recording evidence" EXACT []
 xref: birnlex:2278 "current clamp voltage recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
@@ -6678,9 +6673,9 @@ creation_date: 2016-02-12T13:58:32Z
 [Term]
 id: ECO:0005572
 name: whole-cell voltage clamp recording evidence
-def: "A type of electrophysiology assay evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage." [ECO:SN, url:http\://circres.ahajournals.org/content/72/1/91.full.pdf]
+def: "A type of voltage clamp recording evidence that involves direct measurement of ionic current across a membrane while controlling the membrane potential by maintaining the voltage." [ECO:SN, url:http\://circres.ahajournals.org/content/72/1/91.full.pdf]
 xref: birnlex:2281 "whole-cell voltage clamp recording protocol"
-is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0005576 ! voltage clamp recording evidence
 created_by: snadendla
 creation_date: 2016-02-12T14:06:40Z
 
@@ -6707,16 +6702,17 @@ creation_date: 2016-02-12T14:16:53Z
 [Term]
 id: ECO:0005575
 name: reconstituted bilayer single-channel patch recording evidence
-def: "A type of electrophysiology assay evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane." [ECO:SN, url:http\://nanion.de/images/stories/papers/Bilayers_lab-on-a-chip08.pdf]
+def: "A type of patch-clamp reocrding evidence that involves ion channel analysis by incorporating the ion channels into liposomes suitable for patch-clamping which allows isolation and study of a specific population of channels into that bilayer membrane." [ECO:SN, url:http\://nanion.de/images/stories/papers/Bilayers_lab-on-a-chip08.pdf]
 xref: birnlex:2287 "reconstituted bilayer single-channel patch recording protocol"
-is_a: ECO:0000164 ! electrophysiology assay evidence
+is_a: ECO:0006012 ! patch-clamp recording evidence
 created_by: snadendla
 creation_date: 2016-02-12T14:17:46Z
 
 [Term]
 id: ECO:0005576
-name: voltage clamp current recording evidence
+name: voltage clamp recording evidence
 def: "A type of electrophysiology assay evidence that involves recording membrane potential by controlling the membrane voltage and measuring the transmembrane current required to maintain that voltage." [ECO:SN, url:http\://neurobio.drexelmed.edu/GaoWeb/Resources/Recording%20_Techniques.pdf, url:http\://www.acnp.org/g4/GN401000005/CH005.html]
+synonym: "voltage clamp current recording evidence" EXACT []
 xref: birnlex:2279 "voltage clamp current recording protocol"
 is_a: ECO:0000164 ! electrophysiology assay evidence
 created_by: snadendla
@@ -6787,16 +6783,16 @@ creation_date: 2016-03-02T10:47:25Z
 [Term]
 id: ECO:0005583
 name: cut-open oocyte voltage clamp recording evidence
-def: "A type of electrophysiology assay evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway." [ECO:SN, PMID:9711615]
-is_a: ECO:0000164 ! electrophysiology assay evidence
+def: "A type of voltage clamp recording evidence that involves inserting the oocyte in a chamber that separates the surface into 3 regions where the top portion of the oocyte membrane is the region that is clamped from which currents are actually recorded while the bottom portion is the region of the oocyte that is cut-open, making it possible to inject current intracellularly through a low resistance pathway." [ECO:SN, PMID:9711615]
+is_a: ECO:0005576 ! voltage clamp recording evidence
 created_by: snadendla
 creation_date: 2016-03-02T11:29:32Z
 
 [Term]
 id: ECO:0005584
 name: macropatch voltage clamp recording evidence
-def: "A type of electrophysiology assay evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch)." [ECO:SN, url:http\://jxb.oxfordjournals.org/content/50/Special_Issue/1037.full.pdf]
-is_a: ECO:0000164 ! electrophysiology assay evidence
+def: "A type of voltage clamp recording evidence where recording is done on a fragment of the cell membrane (attached to or detached from the cell) using a large tip diameter pipette that allows isolating and studying a small number of channels into that fragment (patch)." [ECO:SN, url:http\://jxb.oxfordjournals.org/content/50/Special_Issue/1037.full.pdf]
+is_a: ECO:0005576 ! voltage clamp recording evidence
 created_by: snadendla
 creation_date: 2016-03-02T11:33:48Z
 
@@ -8551,6 +8547,90 @@ intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2017-03-28T14:48:39Z
+
+[Term]
+id: ECO:0006061
+name: immunofluorescence wide-field microscopy evidence used in manual assertion
+def: "A type of wide-field fluorescence microscopy evidence used in a manual assertion where fluorescently tagged antibodies are imaged that are used to bind to their antigens." [ECO:SN, url:http\://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057135]
+is_a: ECO:0005599 ! immunofluorescence wide-field microscopy evidence
+is_a: ECO:0005804 {is_inferred="true"} ! immunofluorescence evidence used in manual assertion
+is_a: ECO:0006062 {is_inferred="true"} ! wide-field fluorescence microscopy evidence used in manual assertion
+intersection_of: ECO:0005599 ! immunofluorescence wide-field microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-05-15T08:57:07Z
+
+[Term]
+id: ECO:0006062
+name: wide-field fluorescence microscopy evidence used in manual assertion
+def: "A type of wide-field microscopy evidence that is used in a manual assertion where pure white and ultraviolet light are produced by a mercury lamp, passed through an optical filter (excitation filter), and directed to a sample via a dichroic mirror, followed by detection of the fluorescent light by a camera after it passes through an emission filter." [ECO:SN, url:http\://www.bristol.ac.uk/synaptic/research/techniques/widefield.html]
+is_a: ECO:0005590 {is_inferred="true"} ! wide-field microscopy evidence used in manual assertion
+is_a: ECO:0005598 ! wide-field fluorescence microscopy evidence
+intersection_of: ECO:0005598 ! wide-field fluorescence microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-05-15T09:01:19Z
+
+[Term]
+id: ECO:0006063
+name: over expression analysis evidence used in manual assertion
+def: "A type of experimental phenotypic evidence that is used in a manual assertion where a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product." [PMID:22419077]
+is_a: ECO:0000120 ! over expression analysis evidence
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+intersection_of: ECO:0000120 ! over expression analysis evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-05-15T09:03:49Z
+
+[Term]
+id: ECO:0006064
+name: cell-free assay evidence used in manual assertion
+def: "A type of in vitro assay evidence that is used in a manual assertion where components are derived from resting, nonstimulated cells, therefore all reactions occur in vitro." [PMID:18453125]
+is_a: ECO:0000183 ! cell-free assay evidence
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+intersection_of: ECO:0000183 ! cell-free assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-05-15T09:08:17Z
+
+[Term]
+id: ECO:0006065
+name: in vitro cell based assay evidence used in manual assertion
+def: "A type of in vitro assay evidence that is used in a manual assertion where live cells are used." [ECO:RCT]
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0005014 ! in vitro cell based assay evidence
+intersection_of: ECO:0005014 ! in vitro cell based assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-05-15T09:11:13Z
+
+[Term]
+id: ECO:0006066
+name: fluorescence recovery after photobleaching evidence
+def: "A type of fluorescence evidence where quantitative information on the diffusion properties of a sample is produced from the measurement of diffusion of fluorescent probes over time into an area that has been photobleached by a high-intensity laser pulse." [PMID:26314367]
+comment: FRAP is a fluorescence microscopy-based technique. {xref="PMID:26314367"}
+synonym: "FRAP evidence" EXACT []
+is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000234 "dosumis" xsd:string
+created_by: rctauber
+creation_date: 2017-05-16T10:55:40Z
+
+[Term]
+id: ECO:0006067
+name: fluorescence recovery after photobleaching evidence used in manual assertion
+def: "A type of fluorescence evidence that is used in a manual assertion where quantitative information on the diffusion properties of a sample is produced from the measurement of diffusion of fluorescent probes over time into an area that has been photobleached by a high-intensity laser pulse." []
+is_a: ECO:0001249 {is_inferred="true"} ! fluorescence evidence used in manual assertion
+is_a: ECO:0006066 ! fluorescence recovery after photobleaching evidence
+intersection_of: ECO:0006066 ! fluorescence recovery after photobleaching evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-05-16T10:55:40Z
 
 [Typedef]
 id: used_in
