@@ -7,12 +7,13 @@ Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(terms:=<http://purl.org/dc/terms/>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
 <http://purl.obolibrary.org/obo/eco/releases/2017-06-02/eco.owl>
+Import(<http://purl.obolibrary.org/obo/go/releases/2017-06-12/go.owl>)
+Import(<http://purl.obolibrary.org/obo/obi/2017-02-22/obi.owl>)
 Annotation(dc:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:date "06:02:2017 15:49"^^xsd:string)
@@ -1148,7 +1149,7 @@ Declaration(AnnotationProperty(eco:valid_with_molecular_function))
 Declaration(AnnotationProperty(eco:valid_with_protein))
 Declaration(AnnotationProperty(eco:valid_with_protein_complex))
 Declaration(AnnotationProperty(eco:valid_with_transcript))
-Declaration(AnnotationProperty(terms:license))
+Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
 Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
 Declaration(AnnotationProperty(oboInOwl:created_by))
@@ -1250,11 +1251,11 @@ SubAnnotationPropertyOf(eco:valid_with_protein_complex oboInOwl:SubsetProperty)
 AnnotationAssertion(rdfs:comment eco:valid_with_transcript "Transcript IDs should be used in the GO with/from field"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_transcript oboInOwl:SubsetProperty)
 
-# Annotation Property: terms:license (license)
+# Annotation Property: dc:license (license)
 
-AnnotationAssertion(obo:IAO_0000115 terms:license "A legal document giving official permission to do something with the resource."^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy terms:license "DC"^^xsd:string)
-AnnotationAssertion(rdfs:label terms:license "license"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 dc:license "A legal document giving official permission to do something with the resource."^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy dc:license "DC"^^xsd:string)
+AnnotationAssertion(rdfs:label dc:license "license"^^xsd:string)
 
 # Annotation Property: oboInOwl:SubsetProperty (subset_property)
 
@@ -11241,6 +11242,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006043 "2017-02-21T07:26:28Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006043 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006043 "ECO:0006043"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006043 "extracellular recording evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0006043 ObjectIntersectionOf(obo:ECO_0000164 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000454) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001365)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0001508))))))))
 SubClassOf(obo:ECO_0006043 obo:ECO_0000164)
 
 # Class: obo:ECO_0006044 (extracellular recording evidence used in manual assertion)
@@ -11356,6 +11358,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006053 "2017-03-07T08:51:02Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006053 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006053 "ECO:0006053"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006053 "pharmacological assay evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0006053 ObjectIntersectionOf(obo:ECO_0000059 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000966) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001199)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:OBI_0600007)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0042493))))))))
 SubClassOf(obo:ECO_0006053 obo:ECO_0000059)
 
 # Class: obo:ECO_0006054 (pharmacological assay evidence used in manual assertion)
@@ -11516,6 +11519,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006066 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006066 "ECO:0006066"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:26314367"^^xsd:string) rdfs:comment obo:ECO_0006066 "FRAP is a fluorescence microscopy-based technique."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006066 "fluorescence recovery after photobleaching evidence"@en)
+EquivalentClasses(obo:ECO_0006066 ObjectIntersectionOf(obo:ECO_0001115 ObjectSomeValuesFrom(obo:OBI_0000312 obo:CHMO_0000087) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0500000)))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000131)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000750) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0006810))))))))
 SubClassOf(obo:ECO_0006066 obo:ECO_0001115)
 
 # Class: obo:ECO_0006067 (fluorescence recovery after photobleaching evidence used in manual assertion)
@@ -11553,5 +11557,7 @@ AnnotationAssertion(rdfs:label obo:OBI_0000751 "study design dependent variable"
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0500000"^^xsd:string) obo:IAO_0000115 obo:OBI_0500000 "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution."^^xsd:string)
 AnnotationAssertion(rdfs:hasDbXref obo:OBI_0500000 "OBI:0500000"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:OBI_0500000 "study design"^^xsd:string)
+
+
 
 )
