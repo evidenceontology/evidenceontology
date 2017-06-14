@@ -9073,7 +9073,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005586 "2016-03-02T12:50:02Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005586 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005586 "ECO:0005586"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005586 "high throughput mass spectrometry evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0005586 ObjectIntersectionOf(obo:ECO_0005585 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0005586 obo:ECO_0005585)
+SubClassOf(obo:ECO_0005586 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0005587 (confocal microscopy evidence)
 
