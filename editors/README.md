@@ -39,8 +39,9 @@ Each ECO editor has a specified ID range in `eco-idranges.owl`. After acquiring 
 1. Go to File -> Preferences, and select **New Entities** tab
 
 2. Edit **Entity IRI** settings
-    * Start with: Active ontology IRI
-    * Followed by: #
+    * Start with: Specified IRI
+      * Enter in: http://purl.obolibrary.org/obo
+    * Followed by: /
     * End with: Auto-generated ID
     
 3. Edit **Entity Label** settings
