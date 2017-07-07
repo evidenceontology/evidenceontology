@@ -14,15 +14,16 @@ ontology: eco/subsets/valid_with_biological_process
 id: ECO:0000305
 name: curator inference used in manual assertion
 namespace: eco
-def: "A type of curator inference that is used in a manual assertion." [ECO:MCC]
+def: "A type of curator inference that is used in a manual assertion." []
 subset: valid_with_biological_process
 subset: valid_with_cellular_component
 subset: valid_with_molecular_function
 synonym: "IC" EXACT [GOECO:IC]
 synonym: "inferred by curator" EXACT [GOECO:IC]
 xref: GOECO:IC "inferred by curator"
+property_value: IAO:0000117 "mchibucos" xsd:string
+property_value: IAO:0000119 ECO:MCC xsd:string
 property_value: seeAlso http://geneontology.org/page/ic-inferred-curator xsd:string
-created_by: mchibucos
 creation_date: 2011-01-20T02:33:32Z
 
 [Typedef]
@@ -32,8 +33,8 @@ namespace: eco
 def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
 comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO, RO or OBI.
 xref: ECO:9000000
+property_value: IAO:0000117 "mchibucos" xsd:string
 inverse_of: uses ! uses
-created_by: mchibucos
 creation_date: 2010-12-09T05:00:20Z
 
 [Typedef]
