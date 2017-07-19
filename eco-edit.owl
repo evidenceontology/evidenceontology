@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/eco.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/eco.owl/>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(eco:=<http://purl.obolibrary.org/obo/eco/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
@@ -11,10 +11,10 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-<http://purl.obolibrary.org/obo/eco/releases/2017-06-02/eco.owl>
+<http://purl.obolibrary.org/obo/eco/releases/2017-07-19/eco.owl>
 Annotation(dc:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
-Annotation(oboInOwl:date "06:02:2017 15:49"^^xsd:string)
+Annotation(oboInOwl:date "07:19:2017 10:40"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
 Annotation(oboInOwl:hasOBOFormatVersion "1.2"^^xsd:string)
 Annotation(oboInOwl:saved-by "rctauber"^^xsd:string)
@@ -3642,7 +3642,7 @@ SubClassOf(obo:ECO_0000294 obo:ECO_0000025)
 
 # Class: obo:ECO_0000295 (RNA-seq evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000295 "A type of high throughput nucleotide sequencing assay evidence based on high-throughput (HT) sequencing of fragmented cDNA molecules."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000295 "A type of transcript evidence based on high-throughput (HT) sequencing of fragmented cDNA molecules."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000295 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000295 "2011-01-11T12:54:50Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000295 "WTSS"^^xsd:string)
@@ -3652,7 +3652,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000295 "RNA sequencing"^
 AnnotationAssertion(oboInOwl:id obo:ECO_0000295 "ECO:0000295"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000295 "Total RNA is isolated from cells and mRNA is purified by targeting the 3' polyadenylated (poly(A)) tail with poly(T) oligos covalently attached to a substrate. Next, cDNA fragments are generated either by hydrolysis of RNA into 200-300 base oligonucleotides, preceded by reverse transcription, or by reverse transcription initiated by random primers. The cDNA second strand is synthesized, fragments are adapter ligated and high-throughput sequencing is performed by Roche 454, Illumina, ABI-SOLiD, or another HT sequencing technology. Resulting sort reads are aligned against a reference genome, and downstream analysis is performed."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000295 "RNA-seq evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000295 obo:ECO_0000221)
+SubClassOf(obo:ECO_0000295 obo:ECO_0000009)
 
 # Class: obo:ECO_0000296 (green fluorescent protein transcript localization evidence)
 
