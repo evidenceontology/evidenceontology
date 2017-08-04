@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-07-19
-date: 07:07:2018 10:40
+data-version: releases/2017-08-04
+date: 08:04:2017 09:28
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go:groupings "Grouping classes used by GO"
@@ -56,7 +56,7 @@ id: ECO:0000005
 name: enzyme assay evidence
 def: "Used when an annotation is made based on assays that determine the catalytic activity of enzymes." [TAIR:TED]
 synonym: "IDA: enzyme assays" RELATED []
-xref: PSI-MI:MI\:0415 "enzymatic study"
+xref: MI:0415 "enzymatic study"
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
@@ -94,7 +94,7 @@ is_a: ECO:0000039 ! protein assay evidence
 [Term]
 id: ECO:0000011
 name: genetic interaction evidence
-xref: TAIR:TED\:0000006
+xref: TAIR:TED
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
@@ -152,7 +152,7 @@ id: ECO:0000021
 name: physical interaction evidence
 def: "Experimental evidence that is based on characterization of an interaction between a gene product and another molecule." [ECO:MCC]
 comment: Molecules interacted with might include protein, nucleic acid, ion, or complex.
-xref: PSI-MI:MI\:0045 "experimental interaction detection"
+xref: MI:0045 "experimental interaction detection"
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
@@ -160,7 +160,7 @@ id: ECO:0000022
 name: co-purification evidence
 def: "A type of physical interaction evidence where a cellular component subunit is isolated as part of purification of its larger complex." [TAIR:TED]
 synonym: "IPI: co-purification" RELATED []
-xref: PSI-MI:MI\:0025 "copurification"
+xref: MI:0025 "copurification"
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
@@ -168,7 +168,7 @@ id: ECO:0000023
 name: affinity evidence
 def: "A type of physical interaction evidence that depends on the strength of the interaction between two entities." [ECO:MCC, PSI-MI:MI\:0400]
 synonym: "ligand binding evidence" NARROW []
-xref: PSI-MI:MI\:0400 "affinity technology"
+xref: MI:0400 "affinity technology"
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
@@ -182,7 +182,7 @@ id: ECO:0000025
 name: hybrid interaction evidence
 def: "A type of affinity evidence where proteins of interest (bait and prey) are covalently linked to incomplete fragments of a third protein (reporter) and expressed in vivo, at which time interaction between bait and prey proteins brings reporter fragments in close enough proximity to allow them to reform and become a functional reporter protein." [ECO:MCC, PSI-MI:MI\:0090]
 comment: Typically enzymes which confer resistance to antibiotics, such as Dihydrofolate reductase or Beta-lactamase, or proteins that give colorimetric or fluorescent signals are used. The Bait protein is generally the protein under study and the methods are readily adaptable to highthroughput mode.
-xref: PSI-MI:MI\:0090 "protein complementation assay"
+xref: MI:0090 "protein complementation assay"
 is_a: ECO:0000023 ! affinity evidence
 
 [Term]
@@ -357,7 +357,7 @@ is_a: ECO:0000041 ! similarity evidence
 id: ECO:0000052
 name: suppressor/enhancer interaction evidence
 synonym: "IGI: 'traditional' genetic interactions (e.g. suppressors, synthetic lethals)" RELATED []
-xref: TAIR:TED\:0000063
+xref: TAIR:TED
 is_a: ECO:0000011 ! genetic interaction evidence
 
 [Term]
@@ -365,7 +365,7 @@ id: ECO:0000053
 name: computational combinatorial evidence
 def: "A type of combinatorial analysis where data are combined and evaluated by an algorithm." [ECO:go, ECO:MCC]
 comment: Combinatorial analyses could include experimental or computational results. Examples include: (i) large-scale experiment such as a genome-wide two-hybrid or genome-wide synthetic interactions; (ii) integration of large-scale data sets of various types; and (iii) text-based-computation, e.g. text-mining. For simple sequence comparisons, one should use the sequence similarity analysis evidence type. For microarray results alone, expression pattern analysis is appropriate; whereas, large-scale computational analysis should be used when microarray results are combined with the results of other types of large-scale experiments.
-xref: TAIR:TED\:0000004
+xref: TAIR:TED
 is_a: ECO:0000212 ! combinatorial evidence
 
 [Term]
@@ -454,7 +454,7 @@ name: yeast one-hybrid evidence
 def: "A type of hybrid interaction evidence that is based on a protein-DNA complementation assay where a single promoter acts as bait and is screened against a library of prey transcription factors." [ECO:MCC, PSI-MI:MI\:0432, TAIR:TED]
 comment: The assay involves screening a library of candidate proteins for the ability bind to a target, cis-regulatory element or any other short, DNA binding sequence placed 5' to a yeast reporter gene (TAIR:TED).
 synonym: "IPI: yeast one-hybrid assay" RELATED []
-xref: PSI-MI:MI\:0432 "one hybrid"
+xref: MI:0432 "one hybrid"
 is_a: ECO:0000025 ! hybrid interaction evidence
 
 [Term]
@@ -482,7 +482,7 @@ name: co-immunoprecipitation evidence
 def: "A type of immunoprecipitation evidence that involves precipitating two or more proteins via binding to an antibody specific to a single protein, followed by protein identification." [ECO:MCC]
 comment: If performing GO annotation, the interacting protein is referenced in the evidence_with column.
 synonym: "IPI: co-immunoprecipitation" RELATED []
-xref: PSI-MI:MI\:0019 "coimmunoprecipitation"
+xref: MI:0019 "coimmunoprecipitation"
 is_a: ECO:0000021 ! physical interaction evidence
 is_a: ECO:0000085 ! immunoprecipitation evidence
 
@@ -512,7 +512,7 @@ id: ECO:0000074
 name: split-ubiquitin assay evidence
 def: "Used when an annotation is based on the interaction of two proteins in a split-ubiquitin assay. The bait protein is fused to the C-terminal ubiquitin (Cub) domain followed by a reporter protein, and the prey protein is fused to a mutated N terminal ubiquiting (NubG) domain. If bait and prey interact, their interaction brings the NubG and Cub domains close enough together to reconstitute split-ubiquitin, resulting in the release of the reporter protein by the action of the UBPs." [TAIR:TED]
 synonym: "IPI: split-ubiquitin assay" RELATED []
-xref: PSI-MI:MI\:0112 "ubiquitin reconstruction"
+xref: MI:0112 "ubiquitin reconstruction"
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
@@ -527,7 +527,7 @@ id: ECO:0000076
 name: far-Western blotting evidence
 def: "Used when an annotation is based on the interaction of protein with another in a far-Western assay. The assay involves separating target proteins on an SDS-PAGE gel, blotting to a membrane, hybridization with a protein probe and visualization using a probe-directed antibody. The interacting protein is referenced in the evidence_with column." [TAIR:TED]
 synonym: "IPI: far-Western analysis" RELATED []
-xref: PSI-MI:MI\:0047
+xref: MI:0047
 is_a: ECO:0000021 ! physical interaction evidence
 
 [Term]
@@ -550,7 +550,7 @@ name: affinity chromatography evidence
 def: "A type of affinity evidence that results from separation of biochemical mixtures by selective binding of a compound to an immobilized compound on a polymeric matrix, subsequent removal of unattached components, and then displacement of the bond compound." [ECO:MCC, TAIR:TED]
 comment: "Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent" (from original definition by TAIR:TED). Types of highly specific interaction might include those of antigen and antibody, enzyme and substrate, or receptor and ligand.
 synonym: "IDA: affinity chromatography" RELATED []
-xref: PSI-MI:MI\:0004 "affinity chromatography technology"
+xref: MI:0004 "affinity chromatography technology"
 is_a: ECO:0000023 ! affinity evidence
 
 [Term]
@@ -676,7 +676,7 @@ comment: EMSA is often used for assessing TF-binding with fluorophore labelling.
 synonym: "EMSA: electrophoretic mobility shift assay" EXACT []
 synonym: "Gel retardation assay" RELATED [PMID:17703195]
 synonym: "IDA: electrophoretic mobility shift assay" RELATED []
-xref: PSI-MI:MI\:0413 "electrophoretic mobility shift assay"
+xref: MI:0413 "electrophoretic mobility shift assay"
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
@@ -1283,7 +1283,7 @@ name: chromatin immunoprecipitation evidence
 def: "A type of immunoprecipitation evidence that is used to identify a protein binding site on a genomic DNA sequence." [ECO:MCC]
 comment: Chromatin immunoprecipitation (ChIP) is used to investigate protein-DNA interactions in vivo. DNA and proteins are chemically cross-linked in vivo to form chromatin complexes, followed by cell lysis and DNA shearing. Fragmented DNA-protein complexes are selectively enriched for a protein of interest using a specific antibody (immunoprecipitation). Protein digestion and DNA purification are performed prior to DNA detection via molecular cloning and sequencing, polymerase chain reaction (PCR), microarray analysis (ChIP-on-chip), or direct high-throughput sequencing (ChIP-seq).
 synonym: "ChIP evidence" EXACT []
-xref: PSI-MI:MI\:0402 "chromatin immunoprecipitation assay"
+xref: MI:0402 "chromatin immunoprecipitation assay"
 is_a: ECO:0000085 ! immunoprecipitation evidence
 created_by: mchibucos
 creation_date: 2010-11-16T01:29:08Z
@@ -1325,7 +1325,7 @@ def: "A type of chromatin immunoprecipitation evidence that uses a tiling microa
 comment: A fixating agent such as formaldehyde is used to cross link proteins and DNA. Sonication is applied for DNA shearing. For transcription factor tagging, an antibody or epitope is employed. After cross-linking is reversed, the DNA is amplified and labeled with a flourophore for microarray which produces a resolution of aproximately 500 bp.
 synonym: "ChIP-chip evidence" EXACT []
 synonym: "ChIP-on-chip evidence" EXACT []
-xref: PSI-MI:MI\:0225 "chromatin immunoprecipitation array"
+xref: MI:0225 "chromatin immunoprecipitation array"
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
 creation_date: 2010-11-16T05:43:55Z
@@ -1794,7 +1794,7 @@ def: "A type of protein detection assay evidence where an antigen is bound to a 
 comment: ELISA is sometimes used in the study of transcriptional regulation to identify a produced protein, especially secreted protein.
 synonym: "ELISA evidence" EXACT []
 synonym: "enzyme-linked immunosorbent assay" NARROW []
-xref: PSI-MI:MI\:0411 "enzyme linked immunosorbent assay"
+xref: MI:0411 "enzyme linked immunosorbent assay"
 is_a: ECO:0005517 ! protein detection assay evidence
 created_by: mchibucos
 creation_date: 2010-12-14T01:57:13Z
@@ -2112,7 +2112,7 @@ comment: SELEX begins with the synthesis of a large oligonucleotide library, eit
 synonym: "in vitro evolution evidence" RELATED []
 synonym: "in vitro selection evidence" EXACT []
 synonym: "SELEX evidence" EXACT []
-xref: PSI-MI:MI\:0657 "systematic evolution of ligands by exponential enrichment"
+xref: MI:0657 "systematic evolution of ligands by exponential enrichment"
 is_a: ECO:0000021 ! physical interaction evidence
 created_by: mchibucos
 creation_date: 2011-01-10T04:23:50Z
@@ -2837,7 +2837,7 @@ name: gene neighbors evidence used in manual assertion
 def: "A type of gene neighbors evidence that is used in a manual assertion." [ECO:MCC]
 xref: GO_REF:0000025 "operon structure as IGC evidence"
 is_a: ECO:0000084 ! gene neighbors evidence
-is_a: ECO:0000317 ! genomic context evidence used in manual assertion
+is_a: ECO:0000317 {is_inferred="true"} ! genomic context evidence used in manual assertion
 intersection_of: ECO:0000084 ! gene neighbors evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -7870,7 +7870,7 @@ id: ECO:0005804
 name: immunofluorescence evidence used in manual assertion
 def: "A type of immunofluorescence evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000007 ! immunofluorescence evidence
-is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 intersection_of: ECO:0000007 ! immunofluorescence evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
@@ -7880,7 +7880,7 @@ id: ECO:0005805
 name: yeast 2-hybrid evidence used in manual assertion
 def: "A type of yeast 2-hybrid evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000068 ! yeast 2-hybrid evidence
-is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
+is_a: ECO:0000353 {is_inferred="true"} ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000068 ! yeast 2-hybrid evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
@@ -7959,7 +7959,7 @@ id: ECO:0006007
 name: chromatin immunoprecipitation-chip evidence used in manual assertion
 def: "A type of chromatin immunoprecipitation-chip evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000230 ! chromatin immunoprecipitation-chip evidence
-is_a: ECO:0005644 ! immunoprecipitation evidence used in manual assertion
+is_a: ECO:0005644 {is_inferred="true"} ! immunoprecipitation evidence used in manual assertion
 intersection_of: ECO:0000230 ! chromatin immunoprecipitation-chip evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
@@ -7971,7 +7971,7 @@ id: ECO:0006008
 name: chromatin immunoprecipitation- exonuclease evidence used in manual assertion
 def: "A type of chromatin immunoprecipitation- exonuclease evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0001806 ! chromatin immunoprecipitation- exonuclease evidence
-is_a: ECO:0005644 ! immunoprecipitation evidence used in manual assertion
+is_a: ECO:0005644 {is_inferred="true"} ! immunoprecipitation evidence used in manual assertion
 intersection_of: ECO:0001806 ! chromatin immunoprecipitation- exonuclease evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
@@ -7983,7 +7983,7 @@ id: ECO:0006009
 name: chromatin immunoprecipitation-seq evidence used in manual assertion
 def: "A type of chromatin immunoprecipitation-seq evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
-is_a: ECO:0005644 ! immunoprecipitation evidence used in manual assertion
+is_a: ECO:0005644 {is_inferred="true"} ! immunoprecipitation evidence used in manual assertion
 intersection_of: ECO:0000229 ! chromatin immunoprecipitation-seq evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
@@ -8003,7 +8003,7 @@ creation_date: 2016-10-21T12:28:17Z
 id: ECO:0006011
 name: mRNA interactome capture evidence used in manual assertion
 def: "A type of mRNA interactome capture evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
+is_a: ECO:0000353 {is_inferred="true"} ! physical interaction evidence used in manual assertion
 is_a: ECO:0006010 ! mRNA interactome capture evidence
 intersection_of: ECO:0006010 ! mRNA interactome capture evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8064,9 +8064,9 @@ creation_date: 2016-11-30T09:44:47Z
 id: ECO:0006017
 name: traceable author statement from published clinical study used in manual assertion
 def: "A type of traceable author statement from published clinical study that is used in a manual assertion." []
-comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature.
+comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature. 
 synonym: "PCS" EXACT [HPO:PCS]
-is_a: ECO:0000304 ! traceable author statement used in manual assertion
+is_a: ECO:0000304 {is_inferred="true"} ! traceable author statement used in manual assertion
 is_a: ECO:0006016 ! traceable author statement from published clinical study
 intersection_of: ECO:0006016 ! traceable author statement from published clinical study
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8090,7 +8090,7 @@ name: inference based on individual clinical experience used in manual assertion
 def: "A type of inference based on individual clinical experience that is used in a manual assertion." []
 comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used for annotating disorders with a limited amount of published data, and is accompanied by a reference to the individual or center performing the annotation.
 synonym: "ICE" EXACT [HPO:ICE]
-is_a: ECO:0000305 ! curator inference used in manual assertion
+is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assertion
 is_a: ECO:0006018 ! inference based on individual clinical experience
 intersection_of: ECO:0006018 ! inference based on individual clinical experience
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8111,7 +8111,7 @@ creation_date: 2016-12-05T09:33:18Z
 id: ECO:0006021
 name: biofilm formation assay evidence used in manual assertion
 def: "A type of biofilm formation assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0006020 ! biofilm formation assay evidence
 intersection_of: ECO:0006020 ! biofilm formation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8131,7 +8131,7 @@ creation_date: 2016-12-05T09:33:18Z
 id: ECO:0006023
 name: microtiter plate biofilm assay evidence used in manual assertion
 def: "A type of microtiter plate biofilm assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006021 {is_inferred="true"} ! biofilm formation assay evidence used in manual assertion
 is_a: ECO:0006022 ! microtiter plate biofilm assay evidence
 intersection_of: ECO:0006022 ! microtiter plate biofilm assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8153,7 +8153,7 @@ creation_date: 2016-12-05T09:33:18Z
 id: ECO:0006025
 name: air-liquid interface assay evidence used in manual assertion
 def: "A type of air-liquid interface assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006021 {is_inferred="true"} ! biofilm formation assay evidence used in manual assertion
 is_a: ECO:0006024 ! air-liquid interface assay evidence
 intersection_of: ECO:0006024 ! air-liquid interface assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8174,7 +8174,7 @@ creation_date: 2016-12-05T09:33:18Z
 id: ECO:0006027
 name: colony biofilm assay evidence used in manual assertion
 def: "A type of colony biofilm assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006021 {is_inferred="true"} ! biofilm formation assay evidence used in manual assertion
 is_a: ECO:0006026 ! colony biofilm assay evidence
 intersection_of: ECO:0006026 ! colony biofilm assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -8194,7 +8194,7 @@ creation_date: 2016-12-05T09:33:18Z
 id: ECO:0006029
 name: Kadouri drip-fed biofilm assay evidence used in manual assertion
 def: "A type of Kadouri drip-fed biofilm assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0006021 ! biofilm formation assay evidence used in manual assertion
+is_a: ECO:0006021 {is_inferred="true"} ! biofilm formation assay evidence used in manual assertion
 is_a: ECO:0006028 ! Kadouri drip-fed biofilm assay evidence
 intersection_of: ECO:0006028 ! Kadouri drip-fed biofilm assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
