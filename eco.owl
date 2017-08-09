@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/eco.owl#"
      xml:base="http://purl.obolibrary.org/obo/eco.owl"
-     xmlns:eco="http://purl.obolibrary.org/obo/eco/"
+     xmlns:eco="http://purl.obolibrary.org/obo/eco#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,8 +11,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2017-08-04/eco.owl"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08:04:2017 09:28</oboInOwl:date>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2017-08-09/eco.owl"/>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08:09:2017 16:35</oboInOwl:date>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
         <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.3.1</oboInOwl:auto-generated-by>
@@ -92,72 +92,72 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_biological_process -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_biological_process -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_biological_process">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_biological_process">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO biological process terms should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_cellular_component -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_cellular_component -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_cellular_component">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO cellular component terms should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical entity IDs should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_gene -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_gene -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_gene">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_gene">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene IDs should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_molecular_function -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_molecular_function -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_molecular_function">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO molecular function terms should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_protein -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_protein -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_protein">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_protein">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protein IDs should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_protein_complex -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_protein_complex -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protein complex IDs should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/eco/valid_with_transcript -->
+    <!-- http://purl.obolibrary.org/obo/eco#valid_with_transcript -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco/valid_with_transcript">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_transcript">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcript IDs should be used in the GO with/from field</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
@@ -4315,9 +4315,9 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from reviewed computational analysis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000245</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computational combinatorial evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/rca-inferred-reviewed-computational-analysis</rdfs:seeAlso>
     </owl:Class>
@@ -4450,8 +4450,8 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence alignment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000247</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence alignment evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/isa-inferred-sequence-alignment</rdfs:seeAlso>
     </owl:Class>
@@ -4639,9 +4639,9 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from sequence or structural similarity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000250</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence similarity evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iss-inferred-sequence-or-structural-similarity</rdfs:seeAlso>
     </owl:Class>
@@ -5618,9 +5618,9 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ortholog evidence</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000266</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence orthology evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iso-inferred-sequence-orthology</rdfs:seeAlso>
     </owl:Class>
@@ -7518,9 +7518,9 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred by curator</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000305</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_biological_process"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_cellular_component"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_molecular_function"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">curator inference used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ic-inferred-curator</rdfs:seeAlso>
     </owl:Class>
@@ -7937,7 +7937,7 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000314</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">direct assay evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ida-inferred-direct-assay</rdfs:seeAlso>
     </owl:Class>
@@ -8015,10 +8015,10 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMP</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from mutant phenotype</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000315</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mutant phenotype evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/imp-inferred-mutant-phenotype</rdfs:seeAlso>
     </owl:Class>
@@ -8096,9 +8096,9 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genetic interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000316</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genetic interaction evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/igi-inferred-genetic-interaction</rdfs:seeAlso>
     </owl:Class>
@@ -8176,8 +8176,8 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from genomic context</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000317</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genomic context evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/igc-inferred-genomic-context</rdfs:seeAlso>
     </owl:Class>
@@ -8255,8 +8255,8 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of ancestor</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000318</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological aspect of ancestor evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iba-inferred-biological-aspect-ancestor</rdfs:seeAlso>
     </owl:Class>
@@ -8334,8 +8334,8 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from biological aspect of descendant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000319</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological aspect of descendant evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ibd-inferred-biological-aspect-descendent</rdfs:seeAlso>
     </owl:Class>
@@ -8511,8 +8511,8 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from rapid divergence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000321</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rapid divergence from ancestral sequence evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ird-inferred-rapid-divergence</rdfs:seeAlso>
     </owl:Class>
@@ -9664,10 +9664,10 @@ Although qRT-PCR is commonly found in literature synonymous to qPCR, it is prefe
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from physical interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000353</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical interaction evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/ipi-inferred-physical-interaction</rdfs:seeAlso>
     </owl:Class>
@@ -10041,9 +10041,9 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from electronic annotation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000501</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco/valid_with_protein_complex"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evidence used in automatic assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/automatically-assigned-evidence-codes</rdfs:seeAlso>
     </owl:Class>

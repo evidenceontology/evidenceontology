@@ -1,17 +1,17 @@
 format-version: 1.2
-data-version: releases/2017-08-04
-date: 08:04:2017 09:28
+data-version: releases/2017-08-09
+date: 08:09:2017 16:35
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go:groupings "Grouping classes used by GO"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_gene "Gene IDs should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_molecular_function "GO molecular function terms should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_protein "Protein IDs should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"
-subsetdef: http://purl.obolibrary.org/obo/eco/valid_with_transcript "Transcript IDs should be used in the GO with/from field"
+subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
+subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
+subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
+subsetdef: valid_with_gene "Gene IDs should be used in the GO with/from field"
+subsetdef: valid_with_molecular_function "GO molecular function terms should be used in the GO with/from field"
+subsetdef: valid_with_protein "Protein IDs should be used in the GO with/from field"
+subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"
+subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
 remark: ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
 ontology: eco
@@ -1486,9 +1486,9 @@ creation_date: 2010-12-09T02:02:12Z
 id: ECO:0000245
 name: computational combinatorial evidence used in manual assertion
 def: "A type of computational combinatorial analysis that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from reviewed computational analysis" EXACT [GOECO:RCA]
 synonym: "RCA" EXACT [GOECO:RCA]
 xref: GOECO:RCA "inferred from reviewed computational analysis"
@@ -1517,8 +1517,8 @@ creation_date: 2010-12-09T02:37:54Z
 id: ECO:0000247
 name: sequence alignment evidence used in manual assertion
 def: "Sequence alignment evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "inferred from sequence alignment" EXACT [GOECO:ISA]
 synonym: "ISA" EXACT [GOECO:ISA]
 xref: GOECO:ISA "inferred from sequence alignment"
@@ -1559,9 +1559,9 @@ creation_date: 2010-12-09T05:22:30Z
 id: ECO:0000250
 name: sequence similarity evidence used in manual assertion
 def: "A type of sequence similarity evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from sequence or structural similarity" EXACT [GOECO:ISS]
 synonym: "ISS" EXACT [GOECO:ISS]
 xref: GOECO:ISS "inferred from sequence or structural similarity"
@@ -1771,9 +1771,9 @@ creation_date: 2010-12-10T03:39:41Z
 id: ECO:0000266
 name: sequence orthology evidence used in manual assertion
 def: "A type of sequence orthology evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from sequence orthology" EXACT [] {name="GOECO:ISO"}
 synonym: "ISO" EXACT [GOECO:ISO]
 synonym: "Ortholog evidence" RELATED []
@@ -2244,9 +2244,9 @@ creation_date: 2011-01-20T02:31:03Z
 id: ECO:0000305
 name: curator inference used in manual assertion
 def: "A type of curator inference that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_biological_process
-subset: http://purl.obolibrary.org/obo/eco/valid_with_cellular_component
-subset: http://purl.obolibrary.org/obo/eco/valid_with_molecular_function
+subset: valid_with_biological_process
+subset: valid_with_cellular_component
+subset: valid_with_molecular_function
 synonym: "IC" EXACT [GOECO:IC]
 synonym: "inferred by curator" EXACT [GOECO:IC]
 xref: GOECO:IC "inferred by curator"
@@ -2352,7 +2352,7 @@ creation_date: 2011-03-02T05:33:43Z
 id: ECO:0000314
 name: direct assay evidence used in manual assertion
 def: "A type of direct assay evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity
+subset: valid_with_chemical_entity
 synonym: "IDA" RELATED [GOECO:IDA]
 synonym: "inferred from direct assay" EXACT [GOECO:IDA]
 xref: GOECO:IDA "inferred from direct assay"
@@ -2369,10 +2369,10 @@ creation_date: 2011-10-28T04:59:31Z
 id: ECO:0000315
 name: mutant phenotype evidence used in manual assertion
 def: "A type of mutant phenotype evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_chemical_entity
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IMP" RELATED [GOECO:IMP]
 synonym: "inferred from mutant phenotype" RELATED [GOECO:IMP]
 xref: GOECO:IMP "inferred from mutant phenotype"
@@ -2389,9 +2389,9 @@ creation_date: 2011-10-28T05:12:49Z
 id: ECO:0000316
 name: genetic interaction evidence used in manual assertion
 def: "A type of genetic interaction experiment evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IGI" EXACT [GOECO:IGI]
 synonym: "inferred from genetic interaction" EXACT [GOECO:IGI]
 xref: GOECO:IGI "inferred from genetic interaction"
@@ -2408,8 +2408,8 @@ creation_date: 2011-10-28T05:14:42Z
 id: ECO:0000317
 name: genomic context evidence used in manual assertion
 def: "A type of genomic context evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IGC" EXACT [GOECO:IGC]
 synonym: "inferred from genomic context" EXACT [GOECO:IGC]
 xref: GOECO:IGC "inferred from genomic context"
@@ -2426,8 +2426,8 @@ creation_date: 2011-10-28T05:22:53Z
 id: ECO:0000318
 name: biological aspect of ancestor evidence used in manual assertion
 def: "A type of biological aspect of ancestor evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IBA" EXACT [GOECO:IBA]
 synonym: "inferred from biological aspect of ancestor" EXACT [GOECO:IBA]
 xref: GOECO:IBA "inferred from biological aspect of ancestor"
@@ -2444,8 +2444,8 @@ creation_date: 2011-10-28T05:23:51Z
 id: ECO:0000319
 name: biological aspect of descendant evidence used in manual assertion
 def: "A type of biological aspect of descendant evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "IBD" EXACT [GOECO:IBD]
 synonym: "inferred from biological aspect of descendant" EXACT [GOECO:IBD]
 xref: GOECO:IBD "inferred from biological aspect of descendant"
@@ -2481,8 +2481,8 @@ creation_date: 2011-10-28T05:25:48Z
 id: ECO:0000321
 name: rapid divergence from ancestral sequence evidence used in manual assertion
 def: "A type of rapid divergence from ancestral sequence evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
+subset: valid_with_gene
+subset: valid_with_protein
 synonym: "inferred from rapid divergence" EXACT [GOECO:IRD]
 synonym: "IRD" EXACT [GOECO:IRD]
 xref: GOECO:IRD "inferred from rapid divergence"
@@ -2815,10 +2815,10 @@ created_by: mchibucos
 id: ECO:0000353
 name: physical interaction evidence used in manual assertion
 def: "A type of physical interaction evidence that is used in a manual assertion." [ECO:MCC]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_chemical_entity
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_chemical_entity
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
 synonym: "IPI" EXACT [GOECO:IPI]
 xref: GOECO:IPI "inferred from physical interaction"
@@ -2938,9 +2938,9 @@ creation_date: 2015-07-14T11:45:25Z
 id: ECO:0000501
 name: evidence used in automatic assertion
 def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
-subset: http://purl.obolibrary.org/obo/eco/valid_with_gene
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein
-subset: http://purl.obolibrary.org/obo/eco/valid_with_protein_complex
+subset: valid_with_gene
+subset: valid_with_protein
+subset: valid_with_protein_complex
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
 xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
