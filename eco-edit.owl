@@ -12,6 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
 <http://purl.obolibrary.org/obo/eco/releases/2017-08-09/eco.owl>
+Import(<http://purl.obolibrary.org/obo/go/releases/2017-08-30/go.owl>)
+Import(<http://purl.obolibrary.org/obo/obi/2017-02-22/obi.owl>)
 Annotation(dc:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:date "08:09:2017 16:35"^^xsd:string)
@@ -11531,6 +11533,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0006070 "immunolabelling el
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006070 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006070 "ECO:0006070"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006070 "immuno-labelling electron microscopy evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0006070 ObjectIntersectionOf(obo:ECO_0005033 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000131)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000471 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 ObjectIntersectionOf(obo:OBI_0500000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0000751) ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0033036)))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0001631 ObjectSomeValuesFrom(obo:BFO_0000051 obo:OBI_0001632)))))
 SubClassOf(obo:ECO_0006070 obo:ECO_0005033)
 
 # Class: obo:ECO_0006071 (immuno-labelling electron microscopy evidence used in manual assertion)
