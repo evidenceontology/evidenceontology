@@ -931,6 +931,7 @@ Declaration(Class(obo:ECO_0006098))
 Declaration(Class(obo:ECO_0006099))
 Declaration(Class(obo:ECO_0006100))
 Declaration(Class(obo:ECO_0006101))
+Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000112))
@@ -1102,6 +1103,13 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 ############################
 #   Object Properties
 ############################
+
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "A core relation that holds between a whole and its part"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000051 obo:bfo.owl)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"^^xsd:string)
+TransitiveObjectProperty(obo:BFO_0000051)
 
 # Object Property: obo:ECO_9000000 (used_in)
 
