@@ -1,0 +1,599 @@
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?eco ?go ?def WHERE { { ?s oboInOwl:id "ECO:0000269" .    # Search for EXP
+            ?c rdfs:subClassOf* ?s .
+            ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+            BIND("EXP" AS ?go) .
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0000314" .        # Filter IDA
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0000353" .        # Filter IPI
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0000315" .        # Filter IMP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0000316" .        # Filter IGI
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0000270" .        # Filter IEP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007001" .        # Filter HMP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007003" .        # Filter HGI
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007005" .        # Filter HDA
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007007" .        # Filter HEP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?c oboInOwl:id "ECO:0000269" .        # Filter EXP for Default
+                }      
+             } UNION
+            { ?s oboInOwl:id "ECO:0000269" .          # Set Default for EXP
+              ?s oboInOwl:id ?eco .
+              ?s rdfs:label ?label .
+              BIND("Default" AS ?def) .
+              BIND("EXP" AS ?go)
+             } 
+                    
+      UNION 
+      { ?s oboInOwl:id "ECO:0000314" .                 # Search for IDA
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IDA" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000353" .      # Filter IPI
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000315" .      # Filter IMP
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000316" .      # Filter IGI
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000270" .      # Filter IEP
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0007005" .        # Filter HDA
+                  ?c rdfs:subClassOf* ?s2 .
+                }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000314" .        # Filter IDA for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000314" .        # Set Default for IDA
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IDA" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000353" .                 # Search for IPI
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IPI" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000315" .      # Filter IMP
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000316" .      # Filter IGI
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000270" .      # Filter IEP
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000353" .        # Filter IPI for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000353" .        # Set Default for IPI
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IPI" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000315" .                 # Search for IMP
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IMP" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000316" .      # Filter IGI
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000270" .      # Filter IEP
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0007001" .        # Filter HMP
+                  ?c rdfs:subClassOf* ?s2 .
+                }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000315" .        # Filter IMP for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000315" .        # Set Default for IMP
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IMP" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000316" .                 # Search for IGI
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IGI" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000270" .      # Filter IEP
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0007003" .        # Filter HGI
+                  ?c rdfs:subClassOf* ?s2 .
+                }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000316" .        # Filter IGI for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000316" .        # Set Default for IGI
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IGI" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000270" .                 # Search for IEP
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IEP" AS ?go) .
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007007" .        # Filter HEP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000270" .        # Filter IEP for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000270" .        # Set Default for IEP
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IEP" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000250" .                 # Search for ISS
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("ISS" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000247" .      # Filter ISA
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000266" .      # Filter ISO
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000255" .      # Filter ISM
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000250" .        # Filter ISS for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000250" .        # Set Default for ISS
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("ISS" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000247" .                 # Search for ISA
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("ISA" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000266" .      # Filter ISO
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000255" .      # Filter ISM
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000247" .        # Filter ISA for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000247" .        # Set Default for ISA
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("ISA" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000266" .                 # Search for ISO
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("ISO" AS ?go) .
+                FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000255" .      # Filter ISM
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000266" .        # Filter ISO for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000266" .        # Set Default for ISO
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("ISO" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000255" .                 # Search for ISM
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("ISM" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000255" .        # Filter ISM for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000255" .        # Set Default for ISM
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("ISM" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000318" .                 # Search for IBA
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IBA" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000318" .        # Filter IBA for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000318" .        # Set Default for IBA
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IBA" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000319" .                 # Search for IBD
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+                ?c rdfs:label ?label .
+              BIND("IBD" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000319" .        # Filter IBD for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000319" .        # Set Default for IBD
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IBD" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000305" .                 # Search for IC
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("IC" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?s2 oboInOwl:id "ECO:0000307" .      # Filter ND
+                  ?c rdfs:subClassOf* ?s2 .
+                  }
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000305" .        # Filter IC for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000305" .        # Set Default for IC
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IC" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000501" .                 # Search for IEA
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("IEA" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000501" .        # Filter IEA for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000501" .        # Set Default for IEA
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IEA" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000317" .                 # Search for IGC
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("IGC" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000317" .        # Filter IGC for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000317" .        # Set Default for IGC
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IGC" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000320" .                 # Search for IKR
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("IKR" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000320" .        # Filter IKR for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000320" .        # Set Default for IKR
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IKR" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000320" .                 # Search for IMR
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("IMR" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000320" .        # Filter IMR for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000320" .        # Set Default for IMR
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IMR" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000321" .                 # Search for IRD
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("IRD" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000321" .        # Filter IRD for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000321" .        # Set Default for IRD
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("IRD" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000303" .                 # Search for NAS
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("NAS" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000303" .        # Filter NAS for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000303" .        # Set Default for NAS
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("NAS" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000307" .                 # Search for ND
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("ND" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000307" .        # Filter ND for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000307" .        # Set Default for ND
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("ND" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000245" .                 # Search for RCA
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("RCA" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000245" .        # Filter RCA for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000245" .        # Set Default for RCA
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("RCA" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0000304" .                 # Search for TAS
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("TAS" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0000304" .        # Filter TAS for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0000304" .        # Set Default for TAS
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("TAS" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0006056" .                 # Search for HTP
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("HTP" AS ?go) .
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007001" .        # Filter HMP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007003" .        # Filter HGI
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007005" .        # Filter HDA
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                ?s2 oboInOwl:id "ECO:0007007" .        # Filter HEP
+                ?c rdfs:subClassOf* ?s2 .
+                }
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0006056" .        # Filter HTP for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0006056" .        # Set Default for HTP
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("HTP" AS ?go)
+               }
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0007001" .                 # Search for HMP
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("HMP" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0007001" .        # Filter HMP for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0007001" .        # Set Default for HMP
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("HMP" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0007003" .                 # Search for HGI
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("HGI" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0007003" .        # Filter HGI for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0007003" .        # Set Default for HGI
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("HGI" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0007005" .                 # Search for HDA
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("HDA" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0007005" .        # Filter HDA for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0007005" .        # Set Default for HDA
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("HDA" AS ?go)
+               } 
+
+      UNION 
+      { ?s oboInOwl:id "ECO:0007007" .                 # Search for HEP
+              ?c rdfs:subClassOf* ?s .
+              ?c oboInOwl:id ?eco .
+              ?c rdfs:label ?label .
+              BIND("HEP" AS ?go) .
+              FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0007007" .        # Filter HEP for Default
+                } 
+      } UNION
+              { ?s oboInOwl:id "ECO:0007007" .        # Set Default for HEP
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("Default" AS ?def) .
+                BIND("HEP" AS ?go)
+               } 
+    }
+
+ORDER BY ?go ?def
