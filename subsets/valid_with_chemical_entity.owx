@@ -5,8 +5,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_chemical_entity.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2017-08-09/subsets/valid_with_chemical_entity.owl">
+     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_chemical_entity.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -37,10 +36,10 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000234"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000234"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#date"/>
@@ -109,37 +108,37 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000353"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000001"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000001"/>
+        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000353"/>
     </Declaration>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000000"/>

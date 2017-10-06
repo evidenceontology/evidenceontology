@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-09-21
-date: 09:21:2017 15:29
+data-version: releases/2017-10-06
+date: 10:06:2017 08:35
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -5890,7 +5890,7 @@ creation_date: 2015-11-05T16:06:20Z
 id: ECO:0001826
 name: ultraviolet light footprinting evidence
 def: "A type of nucleic acid binding evidence where DNA is non-specifically fragmented with ultraviolet light while protein-bound regions are protected from UV damage and strand breakage patterns are analyzed by PAGE and sequenced to detect protein-DNA contacts." [ECO:SW, PMID:2842760, PMID:7602584]
-synonym: "ultraviolet footprinting " RELATED []
+synonym: "ultraviolet footprinting" RELATED []
 synonym: "UV footprinting" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
 created_by: swolfish
@@ -6214,7 +6214,7 @@ name: DNA microarray evidence
 def: "A type of DNA detection assay evidence where complimentary ssDNA is attached to a solid glass, silicon, or plastic surface and is hybridized with a labeled sample of extracted mRNA or amplified cDNA and stimulated with a laser for fluorescence detected with a scanner." [ECO:SW, PMID:17660860]
 comment: The mRNA extraction is performed in induced and non-induced cells and reverse transcribed with different fluorophore labeling for controls and experiment. Fluorescence is measured at two different wavelengths and the ratio between the two fluorescence intensities corresponds to the induction level.
 synonym: "DNA chip" RELATED [PMID:10398077]
-synonym: "DNA-array expression analysis " RELATED []
+synonym: "DNA-array expression analysis" RELATED []
 is_a: ECO:0005519 ! DNA detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-30T10:12:48Z
@@ -8061,7 +8061,7 @@ creation_date: 2016-11-30T09:44:47Z
 id: ECO:0006017
 name: traceable author statement from published clinical study used in manual assertion
 def: "A type of traceable author statement from published clinical study that is used in a manual assertion." []
-comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature. 
+comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature.
 synonym: "PCS" EXACT [HPO:PCS]
 is_a: ECO:0000304 {is_inferred="true"} ! traceable author statement used in manual assertion
 is_a: ECO:0006016 ! traceable author statement from published clinical study
@@ -8476,7 +8476,7 @@ creation_date: 2017-03-07T08:51:02Z
 [Term]
 id: ECO:0006055
 name: high throughput evidence
-def: "A type of evidence where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:MCC]
+def: "A type of evidence where data generation is automated with equipment to allow for assaying samples or molecules in parallel." [ECO:MCC]
 comment: Some relevant articles include: PMID: 23340846, doi:10.1038/nmeth0607-523
 synonym: "high throughput cell biology evidence" NARROW []
 synonym: "high throughput screening evidence" NARROW []
@@ -8490,6 +8490,9 @@ creation_date: 2017-03-28T14:48:39Z
 id: ECO:0006056
 name: high throughput evidence used in manual assertion
 def: "A type of evidence that is used in a manual assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:RCT]
+synonym: "HTP" EXACT [GOECO:HTP]
+synonym: "inferred from high throughput experiment" EXACT [GOECO:HTP]
+xref: GOECO:HTP "inferred from high throughput experiment"
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0006055 ! high throughput evidence
 intersection_of: ECO:0006055 ! high throughput evidence
@@ -8501,7 +8504,7 @@ creation_date: 2017-03-28T14:48:39Z
 [Term]
 id: ECO:0006057
 name: high throughput evidence used in automatic assertion
-def: "A type of evidence that is used in an automatic assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel." [ECO:RCT]
+def: "A type of evidence that is used in an automatic assertion where data generation is automated with equipment to allow for assaying samples or molecules in parallel." [ECO:RCT]
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 is_a: ECO:0006055 ! high throughput evidence
 intersection_of: ECO:0006055 ! high throughput evidence
@@ -8513,7 +8516,7 @@ creation_date: 2017-03-28T14:48:39Z
 [Term]
 id: ECO:0006058
 name: high throughput cell biology evidence
-def: "A type of high throughput evidence where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:MCC]
+def: "A type of high throughput evidence where a classical cell biology technique is automated with equipment to allow for assaying biomolecules in parallel." [ECO:MCC]
 comment: HT methodologies may incorporate techniques from optics, chemistry, biology or image analysis (https://en.wikipedia.org/wiki/High_throughput_biology)
 synonym: "omics experiment" RELATED []
 is_a: ECO:0006055 ! high throughput evidence
@@ -8523,7 +8526,7 @@ creation_date: 2017-03-28T14:48:39Z
 [Term]
 id: ECO:0006059
 name: high throughput cell biology evidence used in manual assertion
-def: "A type of high throughput evidence used in a manual assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:RCT]
+def: "A type of high throughput evidence used in a manual assertion where a classical cell biology technique is automated with equipment to allow for assaying biomolecules in parallel." [ECO:RCT]
 is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
 is_a: ECO:0006058 ! high throughput cell biology evidence
 intersection_of: ECO:0006058 ! high throughput cell biology evidence
@@ -8535,7 +8538,7 @@ creation_date: 2017-03-28T14:48:39Z
 [Term]
 id: ECO:0006060
 name: high throughput cell biology evidence used in automatic assertion
-def: "A type of high throughput evidence used in an automatic assertion where a classical cell biology technique is automated with equipment to allow for assaying large numbers of biomolecules." [ECO:RCT]
+def: "A type of high throughput evidence used in an automatic assertion where a classical cell biology technique is automated with equipment to allow for assaying biomolecules in parallel." [ECO:RCT]
 is_a: ECO:0006057 {is_inferred="true"} ! high throughput evidence used in automatic assertion
 is_a: ECO:0006058 ! high throughput cell biology evidence
 intersection_of: ECO:0006058 ! high throughput cell biology evidence
@@ -9032,6 +9035,118 @@ relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "pgaudet" xsd:string
 created_by: rctauber
 creation_date: 2017-09-18T07:58:28
+
+[Term]
+id: ECO:0007000
+name: high throughput mutant phenotype evidence
+def: "A type of high throughput evidence derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
+is_a: ECO:0000015 ! mutant phenotype evidence
+is_a: ECO:0006055 ! high throughput evidence
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007001
+name: high throughput mutant phenotype evidence used in manual assertion
+def: "A type of high throughput evidence that is used in a manual assertion derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
+comment: When using the HMP evidence code, the guidelines for IMP should be adhered to (http://geneontology.org/page/imp-inferred-mutant-phenotype)
+synonym: "HMP" EXACT [GOECO:HMP]
+synonym: "inferred from high throughput mutant phenotype" EXACT [GOECO:HMP]
+xref: GOECO:HMP "inferred from high throughput mutant phenotype"
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
+is_a: ECO:0007000 ! high throughput mutant phenotype evidence
+intersection_of: ECO:0007000 ! high throughput mutant phenotype evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007002
+name: high throughput genetic interaction evidence
+def: "A type of high throughput evidence derived from the high throughput analysis of the effect that a given gene has on another gene or genes, and products." [PMID:11822023]
+is_a: ECO:0000011 ! genetic interaction evidence
+is_a: ECO:0006055 ! high throughput evidence
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007003
+name: high throughput genetic interaction evidence used in manual assertion
+def: "A type of high throughput evidence that is used in a manual assertion derived from the high throughput analysis of the effect that a given gene has on another gene or genes, and products." [PMID:11822023]
+comment: When using the HGI evidence code, the guidelines for IGI should be adhered to (http://geneontology.org/page/igi-inferred-genetic-interaction)
+synonym: "HGI" EXACT [GOECO:HGI]
+synonym: "inferred from high throughput genetic interaction" EXACT [GOECO:HGI]
+xref: GOECO:HGI "inferred from high throughput genetic interaction"
+is_a: ECO:0000316 {is_inferred="true"} ! genetic interaction evidence used in manual assertion
+is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
+is_a: ECO:0007002 ! high throughput genetic interaction evidence
+intersection_of: ECO:0007002 ! high throughput genetic interaction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007004
+name: high throughput direct assay evidence
+def: "A type of high throughput evidence derived from the high throughput direct measurement of some aspect of a biological feature." [ECO:MCC]
+is_a: ECO:0000002 ! direct assay evidence
+is_a: ECO:0006055 ! high throughput evidence
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007005
+name: high throughput direct assay evidence used in manual assertion
+def: "A type of high throughput evidence that is used in a manual assertion derived from the high throughput direct measurement of some aspect of a biological feature." [ECO:MCC]
+comment: When using the HDA evidence code, the guidelines for IDA should be adhered to (http://geneontology.org/page/ida-inferred-direct-assay)
+synonym: "HDA" EXACT [GOECO:HDA]
+synonym: "inferred from high throughput direct assay" EXACT [GOECO:HDA]
+xref: GOECO:HDA "inferred from high throughput direct assay"
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
+is_a: ECO:0007004 ! high throughput direct assay evidence
+intersection_of: ECO:0007004 ! high throughput direct assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007006
+name: high throughput expression pattern evidence
+def: "A type of high throughput evidence derived from the high throughput characterization of gene expression." [GO:IEP]
+is_a: ECO:0000008 ! expression pattern evidence
+is_a: ECO:0006055 ! high throughput evidence
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007007
+name: high throughput expression pattern evidence used in manual assertion
+def: "A type of high throughput evidence that is used in a manual assertion derived from the high throughput characterization of gene expression." [GO:IEP]
+comment: When using the HEP evidence code, the guidelines for EXP should be adhered to (http://geneontology.org/page/iep-inferred-expression-pattern)
+synonym: "HEP" EXACT [GOECO:HEP]
+synonym: "inferred from high throughput expression pattern" EXACT [GOECO:HEP]
+xref: GOECO:HEP "inferred from high throughput expression pattern"
+is_a: ECO:0000270 {is_inferred="true"} ! expression evidence used in manual assertion
+is_a: ECO:0006056 {is_inferred="true"} ! high throughput evidence used in manual assertion
+is_a: ECO:0007006 ! high throughput expression pattern evidence
+intersection_of: ECO:0007006 ! high throughput expression pattern evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "GOC" xsd:string
+created_by: rctauber
+creation_date: 2017-10–05T07:39:47Z
 
 [Typedef]
 id: BFO:0000051
