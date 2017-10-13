@@ -5,8 +5,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_molecular_function.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2017-07-10/subsets/valid_with_molecular_function.owl">
+     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_molecular_function.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -38,6 +37,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000234"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#date"/>
@@ -76,6 +78,9 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#is_inferred"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     </Declaration>
     <Declaration>
@@ -100,28 +105,28 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
@@ -133,20 +138,37 @@
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000000"/>
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000001"/>
     </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </TransitiveObjectProperty>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A core relation that holds between a whole and its part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <IRI>http://purl.obolibrary.org/obo/bfo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
+        </Annotation>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000305</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of curator inference that is used in a manual assertion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000305</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mchibucos</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_0000305</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
@@ -225,7 +247,7 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mchibucos</Literal>
     </AnnotationAssertion>

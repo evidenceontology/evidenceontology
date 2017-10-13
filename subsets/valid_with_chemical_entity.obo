@@ -14,21 +14,20 @@ ontology: eco/subsets/valid_with_chemical_entity
 id: ECO:0000314
 name: direct assay evidence used in manual assertion
 namespace: eco
-def: "A type of direct assay evidence that is used in a manual assertion." []
+def: "A type of direct assay evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_chemical_entity
 synonym: "IDA" RELATED [GOECO:IDA]
 synonym: "inferred from direct assay" EXACT [GOECO:IDA]
 xref: GOECO:IDA "inferred from direct assay"
-property_value: IAO:0000117 "mchibucos" xsd:string
-property_value: IAO:0000119 ECO:MCC xsd:string
 property_value: seeAlso http://geneontology.org/page/ida-inferred-direct-assay xsd:string
+created_by: mchibucos
 creation_date: 2011-10-28T04:59:31Z
 
 [Term]
 id: ECO:0000315
 name: mutant phenotype evidence used in manual assertion
 namespace: eco
-def: "A type of mutant phenotype evidence that is used in a manual assertion." []
+def: "A type of mutant phenotype evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_chemical_entity
 subset: valid_with_gene
 subset: valid_with_protein
@@ -36,16 +35,15 @@ subset: valid_with_protein_complex
 synonym: "IMP" RELATED [GOECO:IMP]
 synonym: "inferred from mutant phenotype" RELATED [GOECO:IMP]
 xref: GOECO:IMP "inferred from mutant phenotype"
-property_value: IAO:0000117 "mchibucos" xsd:string
-property_value: IAO:0000119 ECO:MCC xsd:string
 property_value: seeAlso http://geneontology.org/page/imp-inferred-mutant-phenotype xsd:string
+created_by: mchibucos
 creation_date: 2011-10-28T05:12:49Z
 
 [Term]
 id: ECO:0000353
 name: physical interaction evidence used in manual assertion
 namespace: eco
-def: "A type of physical interaction evidence that is used in a manual assertion." []
+def: "A type of physical interaction evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_chemical_entity
 subset: valid_with_gene
 subset: valid_with_protein
@@ -53,10 +51,16 @@ subset: valid_with_protein_complex
 synonym: "inferred from physical interaction" EXACT [GOECO:IPI]
 synonym: "IPI" EXACT [GOECO:IPI]
 xref: GOECO:IPI "inferred from physical interaction"
-property_value: IAO:0000117 "mchibucos" xsd:string
-property_value: IAO:0000119 ECO:MCC xsd:string
 property_value: seeAlso http://geneontology.org/page/ipi-inferred-physical-interaction xsd:string
+created_by: mchibucos
 creation_date: 2013-10-31T21:01:27Z
+
+[Typedef]
+id: BFO:0000051
+name: has part
+def: "A core relation that holds between a whole and its part" []
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+is_transitive: true
 
 [Typedef]
 id: used_in
@@ -65,8 +69,8 @@ namespace: eco
 def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
 comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO, RO or OBI.
 xref: ECO:9000000
-property_value: IAO:0000117 "mchibucos" xsd:string
 inverse_of: uses ! uses
+created_by: mchibucos
 creation_date: 2010-12-09T05:00:20Z
 
 [Typedef]
