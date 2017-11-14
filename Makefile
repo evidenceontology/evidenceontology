@@ -10,6 +10,7 @@ V = $(shell date +'%Y-%m-%d')
 
 all: $(TGT) $(OBO) gaf-eco-mapping-derived.txt sparql_test slims
 release: all
+test: all
 
 # Main release from editor file
 $(TGT): $(SRC)
