@@ -1158,7 +1158,7 @@ DisjointClasses(obo:ECO_0000000 obo:ECO_0000217)
 
 # Class: obo:ECO_0000001 (inference from background scientific knowledge)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:go"^^xsd:string) obo:IAO_0000115 obo:ECO_0000001 "A curator inference that links the current annotation to a different evidence-based annotation via background knowledge of the curator."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000001 "A type of curator inference where conclusions are drawn based on the background scientific knowledge of the curator."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000001 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000001 "ECO:0000001"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000001 "inference from background scientific knowledge"^^xsd:string)
@@ -1166,7 +1166,7 @@ SubClassOf(obo:ECO_0000001 obo:ECO_0000205)
 
 # Class: obo:ECO_0000002 (direct assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000002 "Experimental evidence that is based on direct measurement of some aspect of a biological feature."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000002 "A type of experimental evidence resulting from the direct measurement of some aspect of a biological feature."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000002 "ECO:0005006"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000002 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000002 "ECO:0000002"^^xsd:string)
@@ -1193,7 +1193,7 @@ SubClassOf(obo:ECO_0000004 obo:ECO_0000100)
 
 # Class: obo:ECO_0000005 (enzyme assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000005 "Used when an annotation is made based on assays that determine the catalytic activity of enzymes."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.sciencedirect.com/science/article/pii/S2213020914000068"^^xsd:string) obo:IAO_0000115 obo:ECO_0000005 "A type of protein assay evidence where the catalytic activity of an enzyme is determined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000005 "ECO:0005001"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "enzymatic study"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000005 "MI:0415"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000005 "eco"^^xsd:string)
@@ -1204,7 +1204,7 @@ SubClassOf(obo:ECO_0000005 obo:ECO_0000039)
 
 # Class: obo:ECO_0000006 (experimental evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GOC:ecd"^^xsd:string) obo:IAO_0000115 obo:ECO_0000006 "An evidence type that is based on the results of a laboratory assay."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://holah.co.uk/page/experimental/"^^xsd:string) obo:IAO_0000115 obo:ECO_0000006 "A type of evidence resulting from manipulation of variables in order to discover cause and effect."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000006 "ECO:0005023"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000006 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000006 "ECO:0000006"^^xsd:string)
@@ -1258,7 +1258,7 @@ SubClassOf(obo:ECO_0000011 obo:ECO_0000059)
 
 # Class: obo:ECO_0000012 (functional complementation evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000012 "Used when an annotation is made based on a functional complementation assay in which a wild-type copy of the gene in question is inserted into a mutant background in the organism of the gene's origin or a heterologous organism with a mutation in the homologous gene."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:27403640"^^xsd:string) obo:IAO_0000115 obo:ECO_0000012 "A type of genetic interaction evidence where a wild-type copy of the gene in question is inserted into a mutant cell to see if it restores the wild-type phenotype in the mutant background."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000012 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000012 "IGI: functional complementation"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000012 "ECO:0000012"^^xsd:string)
@@ -1275,7 +1275,7 @@ SubClassOf(obo:ECO_0000013 obo:ECO_0000012)
 
 # Class: obo:ECO_0000015 (mutant phenotype evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:IMP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000015 "The IMP evidence code covers those cases when the function, process or cellular localization of a gene product is inferred based on differences in the function, process, or cellular localization between two different alleles of the corresponding gene. The IMP code is used for cases where one allele may be designated 'wild-type' and another as 'mutant'. It is also used in cases where allelic variation occurs naturally and no specific allele is designated as wild-type or mutant. Caution should be used when making annotations from gain-of-function mutations as it may be difficult to infer a gene's normal function from a gain of function mutation, although it is sometimes possible."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:IMP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000015 "A type of experimental phenotypic evidence derived from the difference in two alleles of a corresponding gene that result from one or more changes in the genome."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000015 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000015 "ECO:0000015"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000015 "mutant phenotype evidence"^^xsd:string)
@@ -1291,7 +1291,7 @@ SubClassOf(obo:ECO_0000016 obo:ECO_0000015)
 
 # Class: obo:ECO_0000017 (ectopic expression evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000017 "Used when an annotation is made based on the analysis of the phenotype of a wild-type or mutant transgenic organism that has been engineered to overexpress or ectopically express the gene product in question."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10948520"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:19301619"^^xsd:string) obo:IAO_0000115 obo:ECO_0000017 "A type of experimental phenotypic evidence where a transgenic strain carrying the construct of a promoter cDNA fusion in which a gene of interest is driven by a defined promoter or enhancer is ectopically expressed in the defined pattern to characterize potential cellular properties and functions of a protein of interest."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000017 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000017 "IMP: analysis of overexpression/ectopic expression phenotype"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000017 "ECO:0000017"^^xsd:string)
@@ -1300,7 +1300,7 @@ SubClassOf(obo:ECO_0000017 obo:ECO_0000059)
 
 # Class: obo:ECO_0000018 (anti-sense experiment evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000018 "Used when an annotation is based on a phenotype observed when expressing an anti-sense version of a gene product in a wild-type (for that gene product) background."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000018 "A type of mutant phenotype evidence where a phenotype is observed while expressing an anti-sense version of a gene product in a wild-type (for that gene product) background."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000018 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000018 "IMP: anti-sense experiments"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000018 "ECO:0000018"^^xsd:string)
@@ -1309,7 +1309,7 @@ SubClassOf(obo:ECO_0000018 obo:ECO_0000015)
 
 # Class: obo:ECO_0000019 (RNAi evidence)
 
-AnnotationAssertion(Annotation(rdfs:comment "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000019 "A type of mutant phenotype evidence where an RNA construct is introduced into a cell and the expression of the gene bearing its complementary sequence is suppressed."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000019 "A type of mutant phenotype evidence where an RNA construct is introduced into a cell and the expression of the gene bearing its complementary sequence is suppressed."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000019 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000019 "IMP: RNAi experiment"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000019 "ECO:0000019"^^xsd:string)
@@ -1326,7 +1326,7 @@ SubClassOf(obo:ECO_0000020 obo:ECO_0000039)
 
 # Class: obo:ECO_0000021 (physical interaction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000021 "Experimental evidence that is based on characterization of an interaction between a gene product and another molecule."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000021 "A type of experimental evidence that is based on characterization of an interaction between a gene product and another molecule."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000021 "ECO:0005025"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "experimental interaction detection"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000021 "MI:0045"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000021 "eco"^^xsd:string)
@@ -1393,7 +1393,7 @@ SubClassOf(obo:ECO_0000027 obo:ECO_0000057)
 
 # Class: obo:ECO_0000028 (motif similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000028 "Used when an annotation is made based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000028 "A type of match to sequence model evidence that is based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000028 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000028 "ISS: recognized domains"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000028 "ECO:0000028"^^xsd:string)
@@ -1421,7 +1421,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000030 O
 
 # Class: obo:ECO_0000031 (protein BLAST evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000031 "Protein BLAST evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000031 "A type of protein BLAST evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "Pairwise alignment (TIGR)"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000031 "GO_REF:0000012"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "BLAST search criteria for ISS assignment in PAMGO_GAT"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000031 "GO_REF:0000027"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000031 "eco"^^xsd:string)
@@ -1434,7 +1434,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000031 O
 
 # Class: obo:ECO_0000032 (nucleotide BLAST evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000032 "Nucleotide BLAST evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000032 "A type of nucleotide BLAST evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000032 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000032 "curated nucleic acid BLAST analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000032 "ECO:0000032"^^xsd:string)
@@ -1455,7 +1455,7 @@ DisjointClasses(obo:ECO_0000033 obo:ECO_0000034)
 
 # Class: obo:ECO_0000034 (non-traceable author statement)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000034 "An author statement that is not associated with results presented or a cited reference."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000034 "A type of author statement that is not associated with results presented or a cited reference."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000034 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000034 "ECO:0000034"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000034 "The non-traceable author statement evidence code should be used in all cases where the author makes a statement that a curator wants to capture but for which there are neither results presented nor a specific reference cited in the source used to make the annotation. The source of the information may be peer reviewed papers, textbooks, database records or vouchered specimens."^^xsd:string)
@@ -1464,7 +1464,7 @@ SubClassOf(obo:ECO_0000034 obo:ECO_0000204)
 
 # Class: obo:ECO_0000035 (no biological data found)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GO:ND"^^xsd:string) obo:IAO_0000115 obo:ECO_0000035 "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000035 "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000035 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000035 "ECO:0000035"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000035 "An assertion of \"no biological data found\" carries the assumption that a more-or-less exhaustive search has been conducted."^^xsd:string)
@@ -1509,7 +1509,7 @@ SubClassOf(obo:ECO_0000040 obo:ECO_0000023)
 
 # Class: obo:ECO_0000041 (similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "PhenoScape:IS"^^xsd:string) obo:IAO_0000115 obo:ECO_0000041 "An evidence type that is based on comparing likeness of distinct biological entities."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000041 "A type of evidence resulting from comparing likeness of distinct biological entities."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000041 "IS"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000041 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000041 "inferred from similarity"^^xsd:string)
@@ -1566,7 +1566,7 @@ SubClassOf(obo:ECO_0000048 obo:ECO_0000009)
 
 # Class: obo:ECO_0000049 (reporter gene assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000049 "Used when an annotation is made on the basis of the expression pattern of a reporter gene. The reporter gene may consist of the native promoter of the gene in question that drives the expression of a readily assayable gene product such as GUS or GFP. The reporter gene may also be a marker of a particular type of physiological response."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000049 "A type of experimental phenotypic evidence that is based on the expression pattern of a reporter gene."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000049 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000049 "IEP: expression of a reporter gene"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000049 "ECO:0000049"^^xsd:string)
@@ -1575,7 +1575,7 @@ SubClassOf(obo:ECO_0000049 obo:ECO_0000059)
 
 # Class: obo:ECO_0000050 (voucher specimen analysis evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:DOA"^^xsd:string) obo:IAO_0000115 obo:ECO_0000050 "Used when an annotation is made on the basis of for a phenotype description for a species or higher level group that given by an author who explicitly references an observation of a voucher specimen(s). Voucher specimens are defined as those specimens with permanent museum catalog numbers. Thus it would be possible for a person to examine this particular specimen and observe the annotated phenotype."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000050 "A type of phenotypic evidence based on an author's phenotypic description of a species or higher level group explicitly referencing an observation of a voucher specimen, a specimen with a permanent museum catalog."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000050 "IVS"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000050 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000050 "ECO:0000050"^^xsd:string)
@@ -1615,7 +1615,7 @@ SubClassOf(obo:ECO_0000053 obo:ECO_0000212)
 
 # Class: obo:ECO_0000054 (double mutant phenotype evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIT:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000054 "Used when an annotation is made based on the phenotype of double mutant organism that contains a mutation in the gene product of interest in addition to a second mutation at an unrelated locus."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000054 "A type of genetic interaction evidence that is based on the phenotypic outcome of two mutations in unrelated genetic loci."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000054 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000054 "IGI: double mutant analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000054 "ECO:0000054"^^xsd:string)
@@ -1632,10 +1632,11 @@ SubClassOf(obo:ECO_0000055 obo:ECO_0000008)
 
 # Class: obo:ECO_0000056 (epistatic interaction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000056 "Used when an annotation is based on results of epistatis analysis of an allele of the gene in question and a mutant allele at another locus."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18852697"^^xsd:string) obo:IAO_0000115 obo:ECO_0000056 "A type of genetic interaction evidence that is based on the suppression of one allelic effect by an allele at another genetic locus."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000056 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000056 "IGI: epistatic interactions"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000056 "ECO:0000056"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000056 "Epistasis' can be used in different contexts in different areas of genetics. It is sometimes used to mean 'genetic interaction', whereas other times it may be specific to mutations that block the effects of other mutations."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000056 "epistatic interaction evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000056 obo:ECO_0000011)
 
@@ -1661,7 +1662,7 @@ SubClassOf(obo:ECO_0000058 obo:ECO_0000055)
 
 # Class: obo:ECO_0000059 (experimental phenotypic evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000059 "Experimental evidence that is based on the expression of a genotype in an environment."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000059 "A type of experimental evidence that is based on the expression of a genotype in an environment."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000059 "ECO:0000014"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000059 "ECO:0005017"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000059 "eco"^^xsd:string)
@@ -1672,7 +1673,7 @@ SubClassOf(obo:ECO_0000059 obo:ECO_0000006)
 
 # Class: obo:ECO_0000060 (positional similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:IPS"^^xsd:string) obo:IAO_0000115 obo:ECO_0000060 "Used when an annotation is made based on the similarity of the location and or arrangement of structures."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000060 "A type of phenotypic similarity evidence based on the similarity of stucture locations or arrangements."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000060 "IPS"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000060 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000060 "ECO:0000060"^^xsd:string)
@@ -1681,7 +1682,8 @@ SubClassOf(obo:ECO_0000060 obo:ECO_0000057)
 
 # Class: obo:ECO_0000061 (quantitative trait analysis evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:tn"^^xsd:string) obo:IAO_0000115 obo:ECO_0000061 "A type of experimental phenotypic evidence where an annotation is made for a gene product that has not been cloned but is associated with a quantitative trait locus."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000061 "A type of phenotypic evidence that is based on a gene product that is associated with a quantitative trait locus, but has not been cloned."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000061 "QTL analysis evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000061 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000061 "IGI: quantitative trait analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000061 "ECO:0000061"^^xsd:string)
@@ -1697,7 +1699,7 @@ SubClassOf(obo:ECO_0000062 obo:ECO_0000055)
 
 # Class: obo:ECO_0000063 (compositional similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:ICS"^^xsd:string) obo:IAO_0000115 obo:ECO_0000063 "Used when an annotation is made based on the similarity of the histological makeup of structures."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000063 "A type of phenotypic similarity evidence based on the similarity of the histological makeup of structures."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000063 "ICS"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000063 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000063 "ECO:0000063"^^xsd:string)
@@ -1706,7 +1708,7 @@ SubClassOf(obo:ECO_0000063 obo:ECO_0000057)
 
 # Class: obo:ECO_0000064 (functional complementation in heterologous system evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000064 "Used when an annotation is made based on a functional complementation assay in which a wild-type copy of the gene in question is inserted into a heterologous organism with a mutation in the homologous gene."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000064 "A type of functional complementation evidence that is based on the insertion of a wild-type copy of a gene into a heterologous organism, with the mutation occurring in a homologous gene."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000064 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000064 "IGI: functional complementation in heterologous system"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000064 "ECO:0000064"^^xsd:string)
@@ -1734,7 +1736,7 @@ SubClassOf(obo:ECO_0000066 obo:ECO_0000025)
 
 # Class: obo:ECO_0000067 (developmental similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:IDS"^^xsd:string) obo:IAO_0000115 obo:ECO_0000067 "Used when an annotation is made based on the similarity of embryological and/or post-embryonic origin of structures."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000067 "A type of phenotypic similarity evidence based on the similarity of embryological or post-embryonic orgin of structures."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000067 "IDS"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000067 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000067 "ECO:0000067"^^xsd:string)
@@ -1743,7 +1745,7 @@ SubClassOf(obo:ECO_0000067 obo:ECO_0000057)
 
 # Class: obo:ECO_0000068 (yeast 2-hybrid evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000068 "Used when an annotation is based on the interaction between two proteins in a yeast two-hybrid assay. The assay involves screening a trap-tagged library with a bait-tagged vector. The library is tagged with a DNA-binding domain (trap) and the bait is tagged with a transcriptional activation domain. Interaction between a library-trap protein and the bait results in activation of a yeast reporter gene whose transcription can be experimentally assayed."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:12734586"^^xsd:string) obo:IAO_0000115 obo:ECO_0000068 "A type of hybrid interaction evidence that is based on detection of protein-protein interaction by activation of a yeast reporter gene after a bait protein fused to a DNA-binding domain (which has been transfected into a yeast cell) is used to screen a cDNA library of clones fused to an activation domain."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000068 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000068 "IPI: yeast two-hybrid assay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000068 "ECO:0000068"^^xsd:string)
@@ -1772,7 +1774,7 @@ SubClassOf(obo:ECO_0000070 obo:ECO_0000085)
 
 # Class: obo:ECO_0000071 (morphological similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:IMS"^^xsd:string) obo:IAO_0000115 obo:ECO_0000071 "Used when an annotation is made based on the similarity of the shape, structure or overall configuration of structures."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000071 "A type of phenotypic similarity evidence based on the similarity of shape, structure, or configuration in structures."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000071 "IMS"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000071 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000071 "ECO:0000071"^^xsd:string)
@@ -1790,7 +1792,7 @@ AnnotationAssertion(owl:deprecated obo:ECO_0000072 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000073 (experimental genomic evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000073 "Experimental evidence that characterizes an attribute of the genome underlying a gene product."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000073 "A type of experimental evidence that is based on the characterization of an attribute of the genome underlying a gene product."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000073 "inferred from genomic analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000073 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000073 "ECO:0000073"^^xsd:string)
@@ -1799,17 +1801,18 @@ SubClassOf(obo:ECO_0000073 obo:ECO_0000006)
 
 # Class: obo:ECO_0000074 (split-ubiquitin assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000074 "Used when an annotation is based on the interaction of two proteins in a split-ubiquitin assay. The bait protein is fused to the C-terminal ubiquitin (Cub) domain followed by a reporter protein, and the prey protein is fused to a mutated N terminal ubiquiting (NubG) domain. If bait and prey interact, their interaction brings the NubG and Cub domains close enough together to reconstitute split-ubiquitin, resulting in the release of the reporter protein by the action of the UBPs."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15064465"^^xsd:string) obo:IAO_0000115 obo:ECO_0000074 "A type of physical interaction evidence that is based on detection of protein-protein interaction between a bait and prey protein by in vivo reconstitution of split-ubiquitin (when bait and prey interact) and release of a reporter protein."^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "ubiquitin reconstruction"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000074 "MI:0112"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000074 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000074 "IPI: split-ubiquitin assay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000074 "ECO:0000074"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000074 "The bait protein is fused to the C-terminal ubiquitin (Cub) domain followed by a reporter protein, and the prey protein is fused to a mutated N terminal ubiquitin (NubG) domain. If bait and prey interact, their interaction brings the NubG and Cub domains close enough to reconstitute.TAIR:TED"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000074 "split-ubiquitin assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000074 obo:ECO_0000021)
 
 # Class: obo:ECO_0000075 (gene expression similarity evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:IGES"^^xsd:string) obo:IAO_0000115 obo:ECO_0000075 "Used when an annotation is made based on the similarity of expression of genes in structures."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19958477"^^xsd:string) obo:IAO_0000115 obo:ECO_0000075 "A type of phenotypic similarity evidence that is based on the categorization of genes by the similarity of expression profiles."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000075 "IGES"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000075 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000075 "ECO:0000075"^^xsd:string)
@@ -1818,11 +1821,12 @@ SubClassOf(obo:ECO_0000075 obo:ECO_0000057)
 
 # Class: obo:ECO_0000076 (far-Western blotting evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000076 "Used when an annotation is based on the interaction of protein with another in a far-Western assay. The assay involves separating target proteins on an SDS-PAGE gel, blotting to a membrane, hybridization with a protein probe and visualization using a probe-directed antibody. The interacting protein is referenced in the evidence_with column."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18079728"^^xsd:string) obo:IAO_0000115 obo:ECO_0000076 "A type of physical interaction evidence that is based on detection of protein-protein interactions by separation of target proteins by SDS-PAGE which are blotted to a membrane, followed by denaturation and renaturation, probing with purified bait proteins, and detection of the target-bait complexes."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasDbXref obo:ECO_0000076 "MI:0047"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000076 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000076 "IPI: far-Western analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000076 "ECO:0000076"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000076 "The interacting protein is referenced in the evidence_with column."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000076 "far-Western blotting evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000076 obo:ECO_0000021)
 
@@ -1837,11 +1841,12 @@ SubClassOf(obo:ECO_0000077 obo:ECO_0000082)
 
 # Class: obo:ECO_0000078 (southern hybridization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000078 "Used when an annotation is based on the hybridization of a probe derived from the gene in question with a gene of known function/process/component. Can also be used when a probe derived from a gene of known function/process/component hybridizes with the gene in question."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18432697"^^xsd:string) obo:IAO_0000115 obo:ECO_0000078 "A type of DNA detection assay evidence that is based on detection of a specific DNA sequence by hybridization of labeled probes to any immobilized DNA fragment with sequence similarity."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000078 "Southern blot"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000078 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000078 "ISS: Southern blotting"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000078 "ECO:0000078"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000078 "The DNA fragments are prepared through gel electrophoresis then transferred to a filter membrane."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000078 "southern hybridization evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000078 obo:ECO_0005519)
 
@@ -1867,7 +1872,7 @@ SubClassOf(obo:ECO_0000080 obo:ECO_0000041)
 
 # Class: obo:ECO_0000081 (targeting sequence prediction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000081 "Used when a component annotation is made based on the presence of a targeting sequence in a protein's primary sequence. The presence of the targeting sequence may be detected by computational prediction and/or the author's manual examination of the sequence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000081 "A type of motif similarity evidence that is based on detection of a targeting sequence in the primary sequence of a protein through computational prediction and/or a manual examination of the sequence."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000081 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000081 "ISS: targeting sequence prediction"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000081 "ECO:0000081"^^xsd:string)
@@ -1885,7 +1890,7 @@ SubClassOf(obo:ECO_0000082 obo:ECO_0000073)
 
 # Class: obo:ECO_0000083 (transmembrane domain prediction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000083 "Used when a component annotation is made based on the presence of one or more transmembrane domains in a protein's primary sequence. The presence of the transmembrane domains may be detected by computational prediction and/or the author's manual examination of the sequence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000083 "A type of motif similarity evidence that is based on detection of one, or more, transmembrane domains in the primary sequence of a protein through computational prediction and/or a manual examination of the sequence."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000083 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000083 "ISS: transmembrane domain prediction"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000083 "ECO:0000083"^^xsd:string)
@@ -1894,7 +1899,7 @@ SubClassOf(obo:ECO_0000083 obo:ECO_0000028)
 
 # Class: obo:ECO_0000084 (gene neighbors evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GOC:mg"^^xsd:string) obo:IAO_0000115 obo:ECO_0000084 "Evidence that supports the identity of a gene product on the basis of the identity of neighboring genes."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GOC:MG"^^xsd:string) obo:IAO_0000115 obo:ECO_0000084 "A type of genomic context evidence in which a gene product's identity is supported on the basis of the identity of neighboring genes."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000084 "mgiglio"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000084 "2009-03-20T11:55:18Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "Operon structure as IGC evidence"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000084 "GO_REF:0000025"^^xsd:string)
@@ -1970,7 +1975,7 @@ SubClassOf(obo:ECO_0000090 obo:ECO_0000087)
 
 # Class: obo:ECO_0000092 (epitope-tagged protein immunolocalization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000092 "Used when an annotation is made based on immunolocalization of recombinant proteins fused with epitopes that are recognized by antibodies."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000092 "A type of immunolocalization evidence in which recombinant proteins fused with epitopes are recognized by antibodies."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000092 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000092 "IDA: immunolocalization of epitope-tagged protein"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000092 "ECO:0000092"^^xsd:string)
@@ -1987,7 +1992,7 @@ SubClassOf(obo:ECO_0000093 obo:ECO_0000055)
 
 # Class: obo:ECO_0000094 (biological assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000094 "Direct assay evidence that is derived by using a living organism to measure the effect of a substance, factor, or condition."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000094 "A type of direct assay evidence based on the effect of a substance, factor, or condition as measured in a living organism."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000094 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000094 "IDA: bioassay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000094 "ECO:0000094"^^xsd:string)
@@ -2029,7 +2034,7 @@ SubClassOf(obo:ECO_0000097 obo:ECO_0000055)
 
 # Class: obo:ECO_0000098 (in situ hybridization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000098 "Used when an annotation is made based on a method that hybridizes a labeled nucleic acid probe to a tissue or cell specimen in which the cellular structures are still intact. Depending on the label and protocol used, the probe may detect complementary DNA or RNA by hybridizing specifically to that gene or sequence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.ncbi.nlm.nih.gov/probe/docs/techish/"^^xsd:string) obo:IAO_0000115 obo:ECO_0000098 "A type of nucleic acid hybridization evidence based on localization of a specific segment of DNA or RNA by the application of a complementary strand of nucleic acid to which a reporter molecule is attached."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000098 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000098 "IDA: in situ hybridization"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000098 "ECO:0000098"^^xsd:string)
@@ -2054,7 +2059,7 @@ SubClassOf(obo:ECO_0000101 obo:ECO_0000055)
 
 # Class: obo:ECO_0000102 (co-fractionation evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000102 "Used when an annotation is made based on fractionation of a protein with other compounds, factors, or macromolecules."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000102 "A type of fractionation evidence resulting from a protein fractionated with other compounds, factors, or macromolecules."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000102 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000102 "IDA: co-fractionation"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000102 "ECO:0000102"^^xsd:string)
@@ -2063,7 +2068,8 @@ SubClassOf(obo:ECO_0000102 obo:ECO_0000100)
 
 # Class: obo:ECO_0000104 (microarray RNA expression level evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000104 "Used when an annotation is made based on levels of RNA expression determined by microarray experiment."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20967621"^^xsd:string) obo:IAO_0000115 obo:ECO_0000104 "A type of expression microarray evidence in which levels of RNA expression are determined by simultaneous measurement of tens of thousands of mRNA transcripts on a microarray."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000104 "REM evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000104 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000104 "IEP: transcript levels (e.g. microarray data)"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000104 "ECO:0000104"^^xsd:string)
@@ -2091,7 +2097,7 @@ SubClassOf(obo:ECO_0000106 obo:ECO_0000048)
 
 # Class: obo:ECO_0000108 (reverse transcription polymerase chain reaction transcription evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000108 "Used when an annotation is made based on levels of RNA expression determined by an RT-PCR experiment (quantitative or otherwise)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000108 "A type of polymerase chain reaction evidence in which levels of RNA expression are determined through RT-PCR (quantitative or otherwise)."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000108 "RT-PCR transcription evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000108 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000108 "IEP: transcript levels (e.g. RT-PCR)"^^xsd:string)
@@ -2147,27 +2153,29 @@ SubClassOf(obo:ECO_0000114 obo:ECO_0000010)
 
 # Class: obo:ECO_0000116 (differential hybridization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000116 "Used when an annotation is made based on results of a differential hybridization experiment that demonstrates expression of an RNA under one condition and not another."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:14668817"^^xsd:string) obo:IAO_0000115 obo:ECO_0000116 "A type of nucleic acid hybridization evidence in which preferential or exclusive expression of genes in one cell type or tissue is compared to another cell type or tissue when mRNA from each sample is reverse transcribed, labeled, and hybridized to a cDNA library to compare hybridization patterns."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000116 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000116 "IEP: differential hybridization"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000116 "ECO:0000116"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000116 "Differential hybridization identifies differentially expressed cloned genes. Two different mRNA-derived probes are used to demonstrate RNA expression under a specific condition."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000116 "differential hybridization evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000116 obo:ECO_0000009)
 SubClassOf(obo:ECO_0000116 obo:ECO_0000026)
 
 # Class: obo:ECO_0000118 (subtractive hybridization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000118 "Used when an annotation is made based on results of a subtractive hybridization experiment that demonstrates expression of an RNA under one condition and not another."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11298187"^^xsd:string) obo:IAO_0000115 obo:ECO_0000118 "A type of nucleic acid hybridization evidence in which preferential or exclusive expression of genes in one cell type or tissue are compared to another cell type or tissue when denatured ds-cDNA from the two samples are hybridized, and the common sequences are 'subtracted'."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000118 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000118 "IEP: subtractive hybridization"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000118 "ECO:0000118"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000118 "Subtractive hybridization is used for isolation and identification of transcripts involving the removal of any sequences present in the control from the test probe to detect only transcripts present in the sample. The method is PCR-based for the comparison of two cDNA libraries."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000118 "subtractive hybridization evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000118 obo:ECO_0000009)
 SubClassOf(obo:ECO_0000118 obo:ECO_0000026)
 
 # Class: obo:ECO_0000120 (over expression analysis evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000120 "Used when an annotation is made based on the analysis of the phenotype of a wild-type or mutant transgenic organism that has been engineered to overexpress the gene product in question."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22419077"^^xsd:string) obo:IAO_0000115 obo:ECO_0000120 "A type of experimental phenotypic evidence in which a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000120 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000120 "IMP: analysis of overexpression/ectopic expression phenotype"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000120 "ECO:0000120"^^xsd:string)
@@ -2276,7 +2284,7 @@ SubClassOf(obo:ECO_0000142 obo:ECO_0000024)
 
 # Class: obo:ECO_0000144 (Southwestern blot evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000144 "Used when an annotation is made based on a Southwestern blot analysis, which detects DNA binding of proteins using labeled DNA as probe hybridizing to electrophoretically separated proteins."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000144 "A type of nucleic acid binding evidence in which DNA-protein binding is detected using labeled DNA as probes, hybridized to electrophoretically separated proteins."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000144 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000144 "IDA: Southwestern analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000144 "ECO:0000144"^^xsd:string)
@@ -2285,7 +2293,7 @@ SubClassOf(obo:ECO_0000144 obo:ECO_0000136)
 
 # Class: obo:ECO_0000146 (Northwestern blot evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000146 "Used when an annotation is made based on a Northwestern blot analysis, which detects RNA binding of proteins using labeled RNA as probe hybridizing to electrophoretically separated proteins."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000146 "A type of nucleic acid binding evidence in which RNA-protein binding is detected using labeled RNA as probes, hybridized to electrophoretically separated proteins."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000146 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000146 "IDA: Northwestern analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000146 "ECO:0000146"^^xsd:string)
@@ -2353,10 +2361,11 @@ SubClassOf(obo:ECO_0000160 obo:ECO_0000156)
 
 # Class: obo:ECO_0000162 (heterologous system uptake evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000162 "Used when an annotation is made based on small molecule update assays carried out in a heterologous system that contains a recombinant protein."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "doi:10.1146/annurev.pp.46.060195.002223"^^xsd:string) obo:IAO_0000115 obo:ECO_0000162 "A type of transport assay evidence in which the uptake mechanism of a transporter is investigated in a cell that does not normally express that protein."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000162 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000162 "IDA: uptake assay in heterologous system"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000162 "ECO:0000162"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000162 "The transporter is a recombinant protein."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000162 "heterologous system uptake evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000162 obo:ECO_0000134)
 
@@ -2388,7 +2397,7 @@ SubClassOf(obo:ECO_0000168 obo:ECO_0000002)
 
 # Class: obo:ECO_0000170 (transcriptional activation assay)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000170 "Used when an annotation is made based on assays that show transcriptional activation of a specific target reporter gene."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://smcg.ccg.unam.mx/enp-unam/05-TranscripYRegulacion/transcription.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0000170 "A type of transcription assay evidence in which sequence-specific binding proteins that increase transcription of a specific target gene or genes are identified, quantified, and/or analyzed."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000170 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000170 "IDA: transcriptional activation assay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000170 "ECO:0000170"^^xsd:string)
@@ -2397,25 +2406,27 @@ SubClassOf(obo:ECO_0000170 obo:ECO_0000168)
 
 # Class: obo:ECO_0000172 (biochemical trait analysis evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000172 "Used when an annotation is made based on the analysis of a biochemical aspect of a mutant phenotype; for example, the accumulation of a biosynthetic intermediate."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000172 "A type of experimental phenotypic evidence in which the biochemical aspect of a mutation is analyzed."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000172 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000172 "IMP: analysis of biochemical trait"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000172 "ECO:0000172"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000172 "For example, the accumulation of a biosynthetic intermediate."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000172 "biochemical trait analysis evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000172 obo:ECO_0000059)
 
 # Class: obo:ECO_0000174 (mutant physiological response evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000174 "Used when an annotation is made based on the physiological response of a mutant to an external stimulus; for example, abnormal growth of the root in response to gravity, delay in flowering in response to varying light conditions."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000174 "A type of mutant phenotype evidence in which the physiological response of a mutant when presented with an external stimulus is determined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000174 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000174 "IMP: analysis of physiological response"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000174 "ECO:0000174"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000174 "Examples include: abnormal growth of the root in response to gravity, delay in flowering in response to varying light conditions."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000174 "mutant physiological response evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000174 obo:ECO_0000015)
 
 # Class: obo:ECO_0000176 (mutant visible phenotype evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000176 "Used when an annotation is made based on the visual examination of a mutant phenotype; for example, abnormalities in organism morphology."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000176 "A type of mutant phenotype evidence in which traits arising from a mutation are visually examined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000176 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000176 "IMP: analysis of visible trait"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000176 "ECO:0000176"^^xsd:string)
@@ -2424,7 +2435,7 @@ SubClassOf(obo:ECO_0000176 obo:ECO_0000015)
 
 # Class: obo:ECO_0000177 (genomic context evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:go"^^xsd:string) obo:IAO_0000115 obo:ECO_0000177 "An evidence type that is based on the location of a gene, which gives rise to a gene product, within the genome."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21609955"^^xsd:string) obo:IAO_0000115 obo:ECO_0000177 "A type of evidence in which the location of the gene within the genome provides insight into its function, or provides evolutionary insight."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000177 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000177 "ECO:0000177"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000177 "This type of evidence might include identity of neighboring genes, operon structure, synteny, phylogenetic analysis, or other whole-genome analysis."^^xsd:string)
@@ -2492,30 +2503,32 @@ SubClassOf(obo:ECO_0000184 obo:ECO_0000020)
 
 # Class: obo:ECO_0000200 (sequence alignment evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.geneontology.org/GO.evidence.shtml"^^xsd:string) obo:IAO_0000115 obo:ECO_0000200 "A type of sequence similarity evidence where a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.geneontology.org/GO.evidence.shtml"^^xsd:string) obo:IAO_0000115 obo:ECO_0000200 "A type of sequence similarity evidence in which an annotation is made based on a manually-reviewed or published sequence alignment"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000200 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000200 "2010-03-18T12:21:31Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000200 "ECO:00000057"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000200 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000200 "ECO:0000200"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000200 "Such alignments may be pairwise alignments or multiple alignments."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000200 "sequence alignment evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000200 obo:ECO_0000044)
 
 # Class: obo:ECO_0000201 (sequence orthology evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.geneontology.org/GO.evidence.shtml"^^xsd:string) obo:IAO_0000115 obo:ECO_0000201 "Orthology is a relationship between genes in different species indicating that the genes derive from a common ancestor. Orthology is established by multiple criteria generally including amino acid and/or nucleotide sequence comparisons and one or more of the following: phylogenetic analysis, coincident expression, conserved map location, functional complementation, immunological cross-reaction, similarity in subcellular localization, subunit structure, substrate specificity, and response to specific inhibitors."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.geneontology.org/GO.evidence.shtml"^^xsd:string) obo:IAO_0000115 obo:ECO_0000201 "A type of sequence similarity evidence in which orthology is established by multiple criteria, including amino acid and/or nucleotide sequence comparisons and one or more of the following: phylogenetic analysis, coincident expression, conserved map location, functional complementation, immunological cross-reaction, similarity in subcellular localization, subunit structure, substrate specificity, and response to specific inhibitors."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000201 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000201 "2010-03-18T12:30:06Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000201 "ECO:00000060"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000201 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000201 "ortholog evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000201 "ECO:0000201"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000201 "Orthology is a relationship between genes in different species indicating that the genes derive from a common ancestor."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000201 "sequence orthology evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000201 obo:ECO_0000044)
 
 # Class: obo:ECO_0000202 (match to sequence model evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.geneontology.org/GO.evidence.shtml"^^xsd:string) obo:IAO_0000115 obo:ECO_0000202 "Sequence similarity evidence that is based on a sequence-based statistical model that predicts the function of a gene product."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(rdfs:comment "url:http://www.geneontology.org/GO.evidence.shtml") obo:IAO_0000115 obo:ECO_0000202 "A type of sequence similarity evidence in which the function of a gene product is predicted based on a sequence-based statistical model."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000202 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000202 "2010-03-18T12:32:30Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000202 "ECO:00000063"^^xsd:string)
@@ -2571,7 +2584,7 @@ SubClassOf(obo:ECO_0000206 obo:ECO_0005554)
 
 # Class: obo:ECO_0000207 (nucleotide BLAST evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000207 "BLAST evidence from aligning nucleotide sequence with nucleotide sequence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000207 "A type of BLAST evidence in which nucleotide sequences are aligned."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000207 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000207 "2010-08-06T04:49:58Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000207 "eco"^^xsd:string)
@@ -2581,7 +2594,7 @@ SubClassOf(obo:ECO_0000207 obo:ECO_0000206)
 
 # Class: obo:ECO_0000208 (protein BLAST evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000208 "BLAST evidence from aligning amino acid or translated nucleotide sequence with amino acid or translated nucleotide sequence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000208 "A type of BLAST evidence in which amino acid or translated nucleotide sequences are aligned."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000208 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000208 "2010-08-06T04:50:45Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000208 "eco"^^xsd:string)
@@ -2603,7 +2616,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000209 O
 
 # Class: obo:ECO_0000210 (nucleotide BLAST evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000210 "Nucleotide BLAST evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000210 "A type of nucleotide BLAST evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000210 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000210 "2010-08-06T05:09:51Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000210 "eco"^^xsd:string)
@@ -2615,7 +2628,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000210 O
 
 # Class: obo:ECO_0000211 (protein BLAST evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000211 "Protein BLAST evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000211 "A type of protein BLAST evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000211 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000211 "2010-08-06T05:11:04Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000211 "eco"^^xsd:string)
@@ -2708,7 +2721,7 @@ SubClassOf(obo:ECO_0000218 obo:ECO_0000217)
 
 # Class: obo:ECO_0000219 (nucleotide sequencing assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000219 "A sequencing assay result for a biopolymer that comprises nucleotides."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000219 "A type of sequencing assay that determines the sequence of a biopolymer comprised of nucleotides."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000219 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000219 "2010-11-15T12:22:40Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000219 "eco"^^xsd:string)
@@ -2729,10 +2742,11 @@ SubClassOf(obo:ECO_0000220 obo:ECO_0000006)
 
 # Class: obo:ECO_0000221 (high throughput nucleotide sequencing assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000221 "A nucleotide sequencing assay result that is derived from a parallelized sequencing technique."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000221 "A type of nucleotide sequencing assay evidence in which a sequence is derived from a parallelized sequencing technique."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000221 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000221 "2010-11-15T02:19:34Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000221 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000221 "next generation sequencing evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000221 "ECO:0000221"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000221 "Typically thousands to millions of reads are produced in parallel."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000221 "high throughput nucleotide sequencing assay evidence"^^xsd:string)
@@ -2740,7 +2754,7 @@ SubClassOf(obo:ECO_0000221 obo:ECO_0000219)
 
 # Class: obo:ECO_0000222 (Illumina sequencing evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000222 "A high throughput nucleotide sequencing result derived by Illumina (Solexa) sequencing technology."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000724"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:26000844"^^xsd:string) obo:IAO_0000115 obo:ECO_0000222 "A type of high throughput nucleotide sequencing evidence in which sequence is determined through hybridization of adaptor-ligated DNA to a glass slide on which each fragment is simultaneously clonally amplified, followed by progressive rounds of base incorporation with fluorescently-tagged nucleotides, washing, imaging, and cleavage."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000222 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000222 "2010-11-15T02:38:03Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000222 "eco"^^xsd:string)
@@ -2752,30 +2766,32 @@ SubClassOf(obo:ECO_0000222 obo:ECO_0000221)
 
 # Class: obo:ECO_0000223 (454 pyrosequencing evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000223 "A high throughput nucleotide sequencing result derived by 454 pyrosequencing technology."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "EFO:0005016"^^xsd:string) obo:IAO_0000115 obo:ECO_0000223 "A type of high throughput nucleotide sequencing evidence in which the sequence for a ssDNA is determined by addition of primers and then nucleotides, one base pair at a time (which generate a specific fluorescence), to the target strand."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000223 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000223 "2010-11-15T03:50:14Z"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000730"^^xsd:string) oboInOwl:hasBroadSynonym obo:ECO_0000223 "pyrosequencing"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000223 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000223 "ECO:0000223"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000223 "454 pyrosequencing technology amplifies individual DNA fragments inside water droplets within an oil solution (emulsion PCR). Within each droplet, a single DNA template is attached to a single primer-coated bead. Each bead is subsequently captured in a picolitre well within the sequencing machine. A luciferase-based readout system is used to identify individual nucleotides added to the nascent DNA."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000223 "The target strand is usually prepared by fragmentation, adaptor ligation, and amplification by emulsion PCR."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000223 "454 pyrosequencing evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000223 obo:ECO_0000221)
 
 # Class: obo:ECO_0000224 (SOLiD sequencing evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "OBI:0000706"^^xsd:string) obo:IAO_0000115 obo:ECO_0000224 "A high throughput nucleotide sequencing result derived by SOLiD sequencing technology."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000706"^^xsd:string) obo:IAO_0000115 obo:ECO_0000224 "A type of high throughput nucleotide sequencing evidence in which sequence is determined through rounds of ligation-based sequencing with fluorescently-labeled Di-base probes and cleavage, after which the template is reset, with a primer offset by one base, for subsequent rounds of ligation."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000224 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000224 "2010-11-15T04:17:41Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000224 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000224 "ECO:0000224"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000224 "SOLiD sequencing technology is based on sequencing by ligation. After library preparation, emulsion PCR and bead enrichment are performed, including 3' modification of templates on selected beads to allow covalent bonding to a slide. 3' modified beads are attached to a glass slide and primers are added. Four fluorescently labeled di-base probes are added and multiple cycles of ligation, detection and cleavage are performed. The number of cycles determines read length. After a number of ligation cycles, the extension product is removed and another round of ligation cycles is performed with a new primer complimentary to the n-1 position of the template. Five rounds of primer reset are performed for each sequence tag."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000224 "Samples are prepared by fragmentation of a sample library, adaptor ligation, emulsion PCR, and attachment of resultant beads to glass slides."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000224 "SOLiD sequencing evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000224 obo:ECO_0000221)
 
 # Class: obo:ECO_0000225 (chain termination sequencing evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "OBI:0000695"^^xsd:string) obo:IAO_0000115 obo:ECO_0000225 "A nucleotide sequencing assay result derived by the chain termination sequencing method."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000695"^^xsd:string) obo:IAO_0000115 obo:ECO_0000225 "A type of nucleotide sequencing assay in which DNA sequence is determined by addition of a primed DNA template to a reaction mixture, followed by addition of DNA polymerase, deoxynucleosidetriphosphates (dNTPs - one of which may be radiolabeled), and one of four di-deoxynucleotidetriphosphates (ddNTPs), after which DNA elongation is terminated and the DNA is separated by size and imaged."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000225 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000225 "2010-11-15T04:46:31Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000225 "Sanger sequencing"^^xsd:string)
@@ -2783,6 +2799,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000225 "dye terminator seq
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000225 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000225 "ECO:0000225"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000225 "Chain termination sequencing, also called Sanger sequencing after its developer, uses dideoxynucleotide triphosphates (ddNTPs) as DNA chain terminators. Single-stranded DNA template, DNA primer, DNA polymerase, fluorescently or radioactively labeled nucleotides, and one of four ddNTPs are added together in each of four separate sequencing reactions. The synthesized and labeled DNA fragments from each of the four reactions are denatured, separated by size by gel electrophoresis, and visualized by autoradiography or UV light."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000225 "The ddNTPs lack an OH group so the next dNTP cannot be attached, causing chain termination."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000225 "chain termination sequencing evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000225 obo:ECO_0000219)
 
@@ -2813,7 +2830,7 @@ SubClassOf(obo:ECO_0000227 obo:ECO_0000226)
 
 # Class: obo:ECO_0000228 (chromatin immunoprecipitation-qPCR evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000228 "A chromatin immunoprecipitation (ChIP) evidence that uses quantitative polymerase chain reaction (qPCR) for DNA detection."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.diagenode.com/applications/chip-qpcr"^^xsd:string) obo:IAO_0000115 obo:ECO_0000228 "A type of chromatin immunoprecipitation evidence in which protein-DNA interactions are investigated at known genomic binding sites through a process of ChIP, DNA purification, and finally quantitative polymerase chain reaction (qPCR) for DNA detection."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000228 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000228 "2010-11-16T05:26:47Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000228 "ChIP-qPCR evidence"^^xsd:string)
@@ -2973,7 +2990,7 @@ SubClassOf(obo:ECO_0000239 obo:ECO_0000232)
 
 # Class: obo:ECO_0000240 (anatomical perturbation evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000240 "Experimental phenotypic evidence where a structural feature of an organism is disrupted."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000240 "A type of experimental phenotypic evidence in which the phenotype of an organism is observed after the disruption of a structural feature."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000240 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000240 "2010-12-06T12:24:16Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000240 "eco"^^xsd:string)
@@ -2983,7 +3000,7 @@ SubClassOf(obo:ECO_0000240 obo:ECO_0000059)
 
 # Class: obo:ECO_0000241 (environmental perturbation evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000241 "Experimental phenotypic evidence where the extra-organismal context of an organism is modified."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000241 "A type of experimental phenotypic evidence in which the phenotype of an organism is observed after modification of the extra-organismal context."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000241 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000241 "2010-12-06T12:33:58Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000241 "eco"^^xsd:string)
@@ -3061,7 +3078,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000246 O
 
 # Class: obo:ECO_0000247 (sequence alignment evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000247 "Sequence alignment evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000247 "A type of sequence alignment evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000247 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000247 "2010-12-09T05:12:27Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "inferred from sequence alignment"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000247 "GOECO:ISA"^^xsd:string)
@@ -3079,7 +3096,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000247 O
 
 # Class: obo:ECO_0000248 (sequence alignment evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000248 "Sequence alignment evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000248 "A type of sequence alignment evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000248 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000248 "2010-12-09T05:12:27Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000248 "eco"^^xsd:string)
@@ -3091,7 +3108,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000248 O
 
 # Class: obo:ECO_0000249 (sequence similarity evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000249 "Sequence similarity evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000249 "A type of sequence similarity evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000249 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000249 "2010-12-09T05:22:30Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000249 "eco"^^xsd:string)
@@ -3122,7 +3139,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000250 O
 
 # Class: obo:ECO_0000251 (similarity evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000251 "Similarity evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000251 "A type of similarity evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000251 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000251 "2010-12-09T05:28:12Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000251 "eco"^^xsd:string)
@@ -3134,7 +3151,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000251 O
 
 # Class: obo:ECO_0000252 (similarity evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000252 "Similarity evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000252 "A type of similarity evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000252 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000252 "2010-12-09T05:28:12Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000252 "eco"^^xsd:string)
@@ -3147,7 +3164,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000252 O
 
 # Class: obo:ECO_0000253 (genetic similarity evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000253 "Genetic similarity evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000253 "A type of genetic similarity evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000253 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000253 "2010-12-10T01:42:44Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000253 "eco"^^xsd:string)
@@ -3159,7 +3176,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000253 O
 
 # Class: obo:ECO_0000254 (genetic similarity evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000254 "Genetic similarity evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000254 "A type of genetic similarity evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000254 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000254 "2010-12-10T01:42:44Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000254 "eco"^^xsd:string)
@@ -3171,7 +3188,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000254 O
 
 # Class: obo:ECO_0000255 (match to sequence model evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000255 "A match to sequence model evidence that is employed in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000255 "A type of match to sequence model evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000255 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000255 "2010-12-10T02:26:35Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "inferred from sequence model"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000255 "GOECO:ISM"^^xsd:string)
@@ -3188,7 +3205,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000255 O
 
 # Class: obo:ECO_0000256 (match to sequence model evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000256 "A match to sequence model evidence that is employed in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000256 "A type of match to sequence model evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000256 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000256 "2010-12-10T02:26:35Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "Gene Ontology annotation through association of InterPro records with GO terms."^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000256 "GO_REF:0000002"^^xsd:string)
@@ -3202,7 +3219,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000256 O
 
 # Class: obo:ECO_0000257 (motif similarity evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000257 "Motif similarity evidence that is employed in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000257 "A type of motif similarity evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000257 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000257 "2010-12-10T02:44:34Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000257 "eco"^^xsd:string)
@@ -3214,7 +3231,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000257 O
 
 # Class: obo:ECO_0000258 (motif similarity evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000258 "Motif similarity evidence that is employed in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000258 "A type of motif similarity evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000258 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000258 "2010-12-10T02:44:34Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000258 "eco"^^xsd:string)
@@ -3226,7 +3243,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000258 O
 
 # Class: obo:ECO_0000259 (match to InterPro member signature evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000259 "A match to InterPro member signature evidence that is employed in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000259 "A type of match to InterPro member signature evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000259 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000259 "2010-12-10T02:54:51Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000259 "eco"^^xsd:string)
@@ -3238,7 +3255,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000259 O
 
 # Class: obo:ECO_0000260 (match to InterPro member signature evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000260 "A match to InterPro member signature evidence that is employed in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000260 "A type of match to InterPro member signature evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000260 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000260 "2010-12-10T02:54:51Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000260 "eco"^^xsd:string)
@@ -3250,7 +3267,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000260 O
 
 # Class: obo:ECO_0000261 (targeting sequence prediction evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000261 "A targeting sequence prediction that is employed in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000261 "A type of targeting sequence prediction that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000261 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000261 "2010-12-10T03:02:49Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000261 "eco"^^xsd:string)
@@ -3262,7 +3279,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000261 O
 
 # Class: obo:ECO_0000262 (targeting sequence prediction evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000262 "A targeting sequence prediction that is employed in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000262 "A type of targeting sequence prediction that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000262 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000262 "2010-12-10T03:02:49Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000262 "eco"^^xsd:string)
@@ -3274,7 +3291,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000262 O
 
 # Class: obo:ECO_0000263 (transmembrane domain prediction evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000263 "Transmembrane domain prediction that is employed in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000263 "A type of transmembrane domain prediction that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000263 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000263 "2010-12-10T03:28:35Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000263 "eco"^^xsd:string)
@@ -3286,7 +3303,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000263 O
 
 # Class: obo:ECO_0000264 (transmembrane domain prediction evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000264 "Transmembrane domain prediction that is employed in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000264 "A type of transmembrane domain prediction that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000264 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000264 "2010-12-10T03:28:35Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000264 "eco"^^xsd:string)
@@ -3298,7 +3315,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000264 O
 
 # Class: obo:ECO_0000265 (sequence orthology evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000265 "Sequence orthology evidence that is employed in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000265 "A type of sequence orthology evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000265 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000265 "2010-12-10T03:39:41Z"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000265 "GO_REF:0000019"^^xsd:string)
@@ -3349,7 +3366,7 @@ SubClassOf(obo:ECO_0000267 obo:ECO_0005517)
 
 # Class: obo:ECO_0000268 (flow cytometry evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000268 "A direct assay that passes a stream of cells or particles past a light source, followed by using a detector to monitor light scatter or fluorochrome excitation to characterize the cells or particles."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000268 "A type of direct assay evidence in which cells or particles are characterized by passing them through a light source and monitoring the resultant light scatter or fluorochrome excitation."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000268 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000268 "2010-12-14T02:07:08Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000268 "FCM"^^xsd:string)
@@ -3697,7 +3714,7 @@ SubClassOf(obo:ECO_0000295 obo:ECO_0000009)
 
 # Class: obo:ECO_0000296 (green fluorescent protein transcript localization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000296 "A transcriptional activation assay that uses a green fluorescent protein (GFP) reporter gene."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000296 "A type of transcriptional activation assay evidence that is based on transcriptional activation of a green fluorescent protein (GFP) reporter gene."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000296 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000296 "2011-01-11T02:31:19Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000296 "localization of GFP transcript"^^xsd:string)
@@ -3709,7 +3726,7 @@ SubClassOf(obo:ECO_0000296 obo:ECO_0000170)
 
 # Class: obo:ECO_0000297 (LacZ transcript localization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000297 "A transcriptional activation assay that uses a LacZ reporter gene."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000297 "A type of transcriptional activation assay evidence that is based on transcriptional activation of a LacZ reporter gene."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000297 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000297 "2011-01-11T02:53:19Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000297 "eco"^^xsd:string)
@@ -3892,7 +3909,7 @@ SubClassOf(obo:ECO_0000310 obo:ECO_0000009)
 
 # Class: obo:ECO_0000311 (imported information)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000311 "An evidence type that is based on work performed by a person or group prior to a use by different person or group."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000311 "A type of evidence that is based on work performed by a person or group prior to a use by a different person or group."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000311 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000311 "2011-03-02T05:24:13Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000311 "eco"^^xsd:string)
@@ -4098,11 +4115,12 @@ SubClassOf(obo:ECO_0000323 obo:ECO_0000313)
 
 # Class: obo:ECO_0000324 (imaging assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000324 "Direct assay evidence derived from analysis of an image."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0000324 "A type of direct assay evidence in which an image is created and analyzed."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000324 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000324 "2012-02-23T12:01:43Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000324 "ECO:0001122"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000324 "ECO:0005024"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasDbXref obo:ECO_0000324 "ECO:MCC"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:ECO_0000324 "radiologic test evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000324 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000324 "ECO:0000324"^^xsd:string)
@@ -4263,7 +4281,7 @@ SubClassOf(obo:ECO_0000337 obo:ECO_0000002)
 
 # Class: obo:ECO_0000338 (pulsed-field gel electrophoresis evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:6373014"^^xsd:string) obo:IAO_0000115 obo:ECO_0000338 "Gel electrophoresis evidence that employs alternately pulsed, perpendicularly oriented electrical fields, at least one of which is inhomogeneous, to separate large DNA molecules on an agarose gel."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:6373014"^^xsd:string) obo:IAO_0000115 obo:ECO_0000338 "A type of gel electrophoresis evidence in which large DNA molecules are separated on agarose gel by alternately pulsed, perpendicularly oriented electrical fields, at least one of which is inhomogeneous."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000338 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000338 "2012-08-24T12:34:01Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000338 "PFGE"^^xsd:string)
@@ -4286,12 +4304,13 @@ SubClassOf(obo:ECO_0000339 obo:ECO_0000337)
 
 # Class: obo:ECO_0000340 (plasmid maintenance assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:6323245"^^xsd:string) obo:IAO_0000115 obo:ECO_0000340 "Experimental evidence from an assay in which a mitotically stable plasmid (or minichromosome) is introduced into cells, cells are grown without selection for several generations, the proportion of cells that retain the plasmid is then determined (by comparing colony numbers on selective versus non-selective media), and the loss per generation calculated."^^xsd:string)
+AnnotationAssertion(Annotation(rdfs:comment "ECO:MCC"^^xsd:string) Annotation(rdfs:comment "PMID:6323245"^^xsd:string) obo:IAO_0000115 obo:ECO_0000340 "A type of experimental evidence in which retention of an introduced plasmid is determined when a mitotically stable plasmid (or minichromosome) is introduced into cells, which are grown without selection for several generations."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000340 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000340 "2012-08-24T01:27:58Z"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:6323245"^^xsd:string) oboInOwl:hasExactSynonym obo:ECO_0000340 "minichromosome maintenance assay evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000340 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000340 "ECO:0000340"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000340 "Loss per generation is determined by comparing colony numbers on selective and non-selective media."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000340 "plasmid maintenance assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000340 obo:ECO_0000006)
 
@@ -5248,7 +5267,7 @@ SubClassOf(obo:ECO_0001057 obo:ECO_0000181)
 
 # Class: obo:ECO_0001058 (in vitro cleavage assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:21121091"^^xsd:string) Annotation(oboInOwl:hasDbXref "SIB:PG"^^xsd:string) obo:IAO_0000115 obo:ECO_0001058 "A type of in vitro assay evidence where the cleavage of a protein by a protease is detected in an in vitro experiment. The cleavage gives rise to protein fragments."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21121091"^^xsd:string) obo:IAO_0000115 obo:ECO_0001058 "A type of in vitro assay evidence that is based on the detection protein fragements from the cleavage of a protein by a protease in vitro."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001058 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001058 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001058 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -5435,7 +5454,7 @@ SubClassOf(obo:ECO_0001074 obo:ECO_0000178)
 
 # Class: obo:ECO_0001075 (in vivo cleavage assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:22154596"^^xsd:string) Annotation(oboInOwl:hasDbXref "SIB:PG"^^xsd:string) obo:IAO_0000115 obo:ECO_0001075 "A type of in vivo assay evidence where the cleavage of a protein by a protease is detected in cells in vivo. The cleavage gives rise to protein fragments."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:22154596"^^xsd:string) obo:IAO_0000115 obo:ECO_0001075 "A type of in vivo assay evidence that is based on the detection of protein fragments from the cleavage of a protein by a protease in vivo."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001075 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001075 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001075 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -10558,7 +10577,7 @@ SubClassOf(obo:ECO_0006009 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006010 (mRNA interactome capture evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:27729395"^^xsd:string) obo:IAO_0000115 obo:ECO_0006010 "A type of nucleic acid binding evidence where RNA and proteins are cross-linked by ultraviolet light and RNA-protein complexes are captured on oligo(dT) beads. After RNAse treatment, the RNA-bound proteins are identified by mass spectrometry."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:27729395"^^xsd:string) obo:IAO_0000115 obo:ECO_0006010 "A type of nucleic acid binding evidence in which RNA-binding proteins are identified through cross-linking RNA and proteins by UV light, capturing RNA-protein complexes on oligo(dT) beads, and finally identifying by mass spectrometry."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006010 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006010 "2016-10-21T12:28:17Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0006010 "ultraviolet light cross-linking RNA binding evidence"^^xsd:string)
