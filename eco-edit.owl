@@ -4813,7 +4813,7 @@ SubClassOf(obo:ECO_0001017 obo:ECO_0005021)
 
 # Class: obo:ECO_0001018 (bromodeoxyuridine incorporation assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23690005"^^xsd:string) obo:IAO_0000115 obo:ECO_0001018 "A type of DNA synthesis cell proliferation assay evidence and nucleotide analog incorporation evidence resulting from the incorporation of bromodeoxyuridine (BrdU) as a thymidine analog into nuclear DNA, resulting in a label that can be tracked using antibody probes."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23690005"^^xsd:string) obo:IAO_0000115 obo:ECO_0001018 "A type of nucleotide analog incorporation evidence resulting from the incorporation of bromodeoxyuridine (BrdU) as a thymidine analog into nuclear DNA, resulting in a label that can be tracked using antibody probes."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001018 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001018 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001018 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -8744,7 +8744,7 @@ AnnotationAssertion(oboInOwl:created_by obo:ECO_0005531 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005531 "2015-09-30T15:04:45Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005531 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005531 "ECO:0005531"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0005531 "Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF (PMID: 19892760), from peaks in ChIP-seq experiments with the TF (PMID: 16264194), or from the comparative genomics analysis of the promoter regions of orthologs (PMID: 23032607)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19892760"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:23032607"^^xsd:string) rdfs:comment obo:ECO_0005531 "Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF, from peaks in ChIP-seq experiments with the TF, or from the comparative genomics analysis of the promoter regions of orthologs."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005531 "motif discovery evidence"^^xsd:string)
 SubClassOf(obo:ECO_0005531 obo:ECO_0005555)
 
