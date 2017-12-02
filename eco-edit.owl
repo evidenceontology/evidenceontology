@@ -2772,8 +2772,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000223 "2010-11-15T03:50:14Z
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000730"^^xsd:string) oboInOwl:hasBroadSynonym obo:ECO_0000223 "pyrosequencing"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000223 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000223 "ECO:0000223"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000223 "454 pyrosequencing technology amplifies individual DNA fragments inside water droplets within an oil solution (emulsion PCR). Within each droplet, a single DNA template is attached to a single primer-coated bead. Each bead is subsequently captured in a picolitre well within the sequencing machine. A luciferase-based readout system is used to identify individual nucleotides added to the nascent DNA."^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000223 "The target strand is usually prepared by fragmentation, adaptor ligation, and amplification by emulsion PCR."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000223 "454 pyrosequencing technology amplifies individual DNA fragments inside water droplets within an oil solution (emulsion PCR). Within each droplet, a single DNA template is attached to a single primer-coated bead. Each bead is subsequently captured in a picolitre well within the sequencing machine. A luciferase-based readout system is used to identify individual nucleotides added to the nascent DNA.
+
+The target strand is usually prepared by fragmentation, adaptor ligation, and amplification by emulsion PCR."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000223 "454 pyrosequencing evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000223 obo:ECO_0000221)
 
@@ -2784,8 +2785,9 @@ AnnotationAssertion(oboInOwl:created_by obo:ECO_0000224 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000224 "2010-11-15T04:17:41Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000224 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000224 "ECO:0000224"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000224 "SOLiD sequencing technology is based on sequencing by ligation. After library preparation, emulsion PCR and bead enrichment are performed, including 3' modification of templates on selected beads to allow covalent bonding to a slide. 3' modified beads are attached to a glass slide and primers are added. Four fluorescently labeled di-base probes are added and multiple cycles of ligation, detection and cleavage are performed. The number of cycles determines read length. After a number of ligation cycles, the extension product is removed and another round of ligation cycles is performed with a new primer complimentary to the n-1 position of the template. Five rounds of primer reset are performed for each sequence tag."^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000224 "Samples are prepared by fragmentation of a sample library, adaptor ligation, emulsion PCR, and attachment of resultant beads to glass slides."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000224 "SOLiD sequencing technology is based on sequencing by ligation. After library preparation, emulsion PCR and bead enrichment are performed, including 3' modification of templates on selected beads to allow covalent bonding to a slide. 3' modified beads are attached to a glass slide and primers are added. Four fluorescently labeled di-base probes are added and multiple cycles of ligation, detection and cleavage are performed. The number of cycles determines read length. After a number of ligation cycles, the extension product is removed and another round of ligation cycles is performed with a new primer complimentary to the n-1 position of the template. Five rounds of primer reset are performed for each sequence tag.
+
+Samples are prepared by fragmentation of a sample library, adaptor ligation, emulsion PCR, and attachment of resultant beads to glass slides."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000224 "SOLiD sequencing evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000224 obo:ECO_0000221)
 
@@ -2798,8 +2800,9 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000225 "Sanger sequencing"
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000225 "dye terminator sequencing"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000225 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000225 "ECO:0000225"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000225 "Chain termination sequencing, also called Sanger sequencing after its developer, uses dideoxynucleotide triphosphates (ddNTPs) as DNA chain terminators. Single-stranded DNA template, DNA primer, DNA polymerase, fluorescently or radioactively labeled nucleotides, and one of four ddNTPs are added together in each of four separate sequencing reactions. The synthesized and labeled DNA fragments from each of the four reactions are denatured, separated by size by gel electrophoresis, and visualized by autoradiography or UV light."^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000225 "The ddNTPs lack an OH group so the next dNTP cannot be attached, causing chain termination."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000225 "Chain termination sequencing, also called Sanger sequencing after its developer, uses dideoxynucleotide triphosphates (ddNTPs) as DNA chain terminators. Single-stranded DNA template, DNA primer, DNA polymerase, fluorescently or radioactively labeled nucleotides, and one of four ddNTPs are added together in each of four separate sequencing reactions. The synthesized and labeled DNA fragments from each of the four reactions are denatured, separated by size by gel electrophoresis, and visualized by autoradiography or UV light.
+
+The ddNTPs lack an OH group so the next dNTP cannot be attached, causing chain termination."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000225 "chain termination sequencing evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000225 obo:ECO_0000219)
 

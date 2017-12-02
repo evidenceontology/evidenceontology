@@ -162,15 +162,16 @@
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOC:ecd</Literal>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">url:http://holah.co.uk/page/experimental/</Literal>
         </Annotation>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An evidence type that is based on the results of a laboratory assay.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of evidence resulting from manipulation of variables in order to discover cause and effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000006</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:0005023</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
@@ -195,11 +196,11 @@
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</Literal>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</Literal>
         </Annotation>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Similarity evidence that is used in a manual assertion.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type of similarity evidence that is used in a manual assertion.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
