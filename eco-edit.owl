@@ -2487,12 +2487,12 @@ SubClassOf(obo:ECO_0000180 obo:ECO_0000006)
 
 # Class: obo:ECO_0000181 (in vitro assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.cancer.gov/publications/dictionaries/cancer-terms?cdrid=45733"^^xsd:string) obo:IAO_0000115 obo:ECO_0000181 "A type of biological assay evidence resulting from an assay performed outside the living organism, in an artificial setting."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.cancer.gov/publications/dictionaries/cancer-terms?cdrid=45733"^^xsd:string) obo:IAO_0000115 obo:ECO_0000181 "A type of direct assay evidence resulting from a process performed outside the living organism, where the components of an organism have been isolated from their usual biological context, to permit a more detailed or more convenient analysis in an artificial setting."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000181 "ECO:0005013"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000181 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000181 "ECO:0000181"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000181 "in vitro assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000181 obo:ECO_0000094)
+SubClassOf(obo:ECO_0000181 obo:ECO_0000002)
 
 # Class: obo:ECO_0000182 (in vitro culture assay evidence)
 
@@ -2504,12 +2504,12 @@ SubClassOf(obo:ECO_0000182 obo:ECO_0000094)
 
 # Class: obo:ECO_0000183 (cell-free assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18453125"^^xsd:string) obo:IAO_0000115 obo:ECO_0000183 "A type of in vitro assay evidence resulting from studies in which the components are derived from resting, nonstimulated cells, therefore all reactions occur in vitro."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18453125"^^xsd:string) obo:IAO_0000115 obo:ECO_0000183 "A type of direct assay evidence resulting from studies in which cytoplasmic and/or nuclear cellular components from resting, nonstimulated cells, are isolated by ultracentrifugation to provide molecular machinery that can be used in reactions in the absence of many of the other cellular components for the purpose of in vitro protein synthesis, transcription, DNA replication, etc."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:ECO_0000183 "in vitro assay"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000183 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000183 "ECO:0000183"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000183 "cell-free assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000183 obo:ECO_0000181)
+SubClassOf(obo:ECO_0000183 obo:ECO_0000002)
 
 # Class: obo:ECO_0000184 (enzyme inhibition evidence)
 
@@ -5740,13 +5740,14 @@ SubClassOf(obo:ECO_0001098 obo:ECO_0000324)
 
 # Class: obo:ECO_0001099 (motility wound healing assay evidence)
 
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001099 "A type of cell-based assay evidence to measure cell motility in which a \"wound\" is created in a cell monolayer and the migration of the cells is captured by imaging at regular intervals during cell migration to close the wound."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001099 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001099 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001099 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001099 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001099 "ECO:0001099"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001099 "motility wound healing assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001099 obo:ECO_0000181)
+SubClassOf(obo:ECO_0001099 obo:ECO_0001565)
 
 # Class: obo:ECO_0001100 (MTS assay evidence)
 
@@ -8125,9 +8126,9 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0001564 "ECO:0001564"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001564 "cell proliferation assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001564 obo:ECO_0000002)
 
-# Class: obo:ECO_0001565 (cell based assay evidence)
+# Class: obo:ECO_0001565 (cell-based assay evidence)
 
-AnnotationAssertion(rdfs:label obo:ECO_0001565 "cell based assay evidence"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001565 "cell-based assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001565 obo:ECO_0000002)
 
 # Class: obo:ECO_0001601 (protein-binding microarray evidence)
@@ -8659,13 +8660,13 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005501 O
 
 # Class: obo:ECO_0005502 (ex vivo assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:16305312"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2305722/pdf/nihms42807.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0005502 "A type of biological assay evidence derived by studying an organ, tissues, or cells taken from an organism in an external environment with the minimum alteration of natural conditions."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:16305312"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2305722/pdf/nihms42807.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0005502 "A type of direct assay evidence derived by studying an organ, tissues, or cells taken from an organism and studied in an external environment with the minimum alteration of natural conditions."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005502 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005502 "2015-06-26T11:46:15Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005502 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005502 "ECO:0005502"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005502 "ex vivo assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005502 obo:ECO_0000094)
+SubClassOf(obo:ECO_0005502 obo:ECO_0000002)
 
 # Class: obo:ECO_0005503 (two-dimensional polyacrylamide gel electrophoresis evidence)
 
@@ -9311,15 +9312,15 @@ EquivalentClasses(obo:ECO_0005561 ObjectIntersectionOf(obo:ECO_0005554 ObjectSom
 SubClassOf(obo:ECO_0005561 obo:ECO_0005554)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005561 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
-# Class: obo:ECO_0005562 (in gel protein kinase assay evidence)
+# Class: obo:ECO_0005562 (in-gel protein kinase assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:12372853"^^xsd:string) obo:IAO_0000115 obo:ECO_0005562 "A type of in vitro assay evidence resulting from the evaluation of the phosphorylation activity of kinase on a gel-incorporated substrate."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:12372853"^^xsd:string) obo:IAO_0000115 obo:ECO_0005562 "A type of protein kinase assay evidence resulting from the evaluation of the phosphorylation activity of kinase on a gel-incorporated kinase substrate."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005562 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005562 "2016-02-09T12:05:29Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005562 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005562 "ECO:0005562"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0005562 "in gel protein kinase assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005562 obo:ECO_0000181)
+AnnotationAssertion(rdfs:label obo:ECO_0005562 "in-gel protein kinase assay evidence"^^xsd:string)
+SubClassOf(obo:ECO_0005562 obo:ECO_0001558)
 
 # Class: obo:ECO_0005563 (macroscopic current trace evidence)
 
@@ -11440,7 +11441,7 @@ SubClassOf(obo:ECO_0006063 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006064 (cell-free assay evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18453125"^^xsd:string) obo:IAO_0000115 obo:ECO_0006064 "A type of in vitro assay evidence that is used in a manual assertion where components are derived from resting, nonstimulated cells, therefore all reactions occur in vitro."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18453125"^^xsd:string) obo:IAO_0000115 obo:ECO_0006064 "A type of cell-free assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006064 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006064 "2017-05-15T09:08:17Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006064 "eco"^^xsd:string)
