@@ -618,7 +618,6 @@ Declaration(Class(obo:ECO_0001559))
 Declaration(Class(obo:ECO_0001561))
 Declaration(Class(obo:ECO_0001562))
 Declaration(Class(obo:ECO_0001563))
-Declaration(Class(obo:ECO_0001564))
 Declaration(Class(obo:ECO_0001565))
 Declaration(Class(obo:ECO_0001601))
 Declaration(Class(obo:ECO_0001603))
@@ -2016,7 +2015,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000094 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000094 "IDA: bioassay"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000094 "ECO:0000094"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000094 "biological assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000094 obo:ECO_0000002)
+AnnotationAssertion(owl:deprecated obo:ECO_0000094 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000095 (cell growth regulation assay evidence)
 
@@ -2463,11 +2462,11 @@ SubClassOf(obo:ECO_0000177 obo:ECO_0000000)
 
 # Class: obo:ECO_0000178 (in vivo assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.cancer.gov/publications/dictionaries/cancer-terms?cdrid=46352"^^xsd:string) obo:IAO_0000115 obo:ECO_0000178 "A type of biological assay evidence resulting from an assay performed on or in an organism."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.cancer.gov/publications/dictionaries/cancer-terms?cdrid=46352"^^xsd:string) obo:IAO_0000115 obo:ECO_0000178 "A type of direct assay evidence resulting from a sample of microorganisms or living tissue grown in a medium."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000178 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000178 "ECO:0000178"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000178 "in vivo assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000178 obo:ECO_0000094)
+SubClassOf(obo:ECO_0000178 obo:ECO_0000002)
 
 # Class: obo:ECO_0000179 (animal model system study evidence)
 
@@ -2499,8 +2498,9 @@ SubClassOf(obo:ECO_0000181 obo:ECO_0000002)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000182 "A type of biological assay evidence resulting from a sample of microorganisms or living tissue grown in a medium."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000182 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000182 "ECO:0000182"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000182 "This term has been replaced with cell growth assay evidence."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000182 "in vitro culture assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000182 obo:ECO_0000094)
+AnnotationAssertion(owl:deprecated obo:ECO_0000182 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000183 (cell-free assay evidence)
 
@@ -4280,14 +4280,14 @@ SubClassOf(obo:ECO_0000335 obo:ECO_0000002)
 
 # Class: obo:ECO_0000336 (competitive growth assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:14718172"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20537132"^^xsd:string) obo:IAO_0000115 obo:ECO_0000336 "A type of biological assay evidence in which a mutated strain of a microorganism, such as a yeast or bacterium, is grown competitively with wild-type cells and the relative fitness of the strains is assessed."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:14718172"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20537132"^^xsd:string) obo:IAO_0000115 obo:ECO_0000336 "A type of cell proliferation assay evidence in which a mutated strain of a microorganism, such as a yeast or bacterium, is grown competitively with wild-type cells and the relative fitness of the strains is assessed usually by means of a fluorescent marker and flow cytometric analysis."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000336 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000336 "2012-08-24T12:03:58Z"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20537132"^^xsd:string) oboInOwl:hasExactSynonym obo:ECO_0000336 "fitness profiling"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000336 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000336 "ECO:0000336"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000336 "competitive growth assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000336 obo:ECO_0000094)
+SubClassOf(obo:ECO_0000336 obo:ECO_0005007)
 
 # Class: obo:ECO_0000337 (gel electrophoresis evidence)
 
@@ -4642,25 +4642,25 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000501 O
 
 # Class: obo:ECO_0001001 (3D cell culture evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21042962"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://volttecnologia.com.br/wp-content/uploads/2016/03/Drug-discovery.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0001001 "A type of in vitro cell based assay evidence resulting from the growth of cells in a micro-environment that mimics real tissue and establishes physiological cell-cell and cell-substrate interactions that regulate proliferation and differentiation."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21042962"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://volttecnologia.com.br/wp-content/uploads/2016/03/Drug-discovery.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0001001 "A type of cell proliferation assay evidence resulting from the growth of cells in a micro-environment that mimics real tissue and establishes physiological cell-cell and cell-substrate interactions that regulate proliferation and differentiation."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001001 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001001 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001001 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001001 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001001 "ECO:0001001"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001001 "3D cell culture evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001001 obo:ECO_0005014)
+SubClassOf(obo:ECO_0001001 obo:ECO_0005007)
 
 # Class: obo:ECO_0001002 ([3H]arachidonic acid release assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0323152295"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20693009"^^xsd:string) obo:IAO_0000115 obo:ECO_0001002 "A type of in vitro cell based assay evidence resulting from labeling cells with [3H]arachidonic acid and subsequently determining the release of the arachidonic acid by the cells."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ISBN:0323152295"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20693009"^^xsd:string) obo:IAO_0000115 obo:ECO_0001002 "A type of cell-based assay evidence resulting from labeling cells with [3H]arachidonic acid and subsequently determining the release of the arachidonic acid by the cells."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001002 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001002 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001002 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001002 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001002 "ECO:0001002"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001002 "[3H]arachidonic acid release assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001002 obo:ECO_0005014)
+SubClassOf(obo:ECO_0001002 obo:ECO_0001565)
 
 # Class: obo:ECO_0001003 ([3H]-thymidine incorporation assay evidence)
 
@@ -4699,14 +4699,14 @@ SubClassOf(obo:ECO_0001005 obo:ECO_0005019)
 
 # Class: obo:ECO_0001006 (adhesion assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15576904"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:21909903"^^xsd:string) obo:IAO_0000115 obo:ECO_0001006 "A type of in vitro cell based assay evidence resulting from the analysis of cell binding either to extracellular matrix proteins or other cells."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15576904"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:21909903"^^xsd:string) obo:IAO_0000115 obo:ECO_0001006 "A type of cell-based assay evidence resulting from the analysis of cell binding either to extracellular matrix proteins or other cells."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001006 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001006 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001006 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001006 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001006 "ECO:0001006"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001006 "adhesion assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001006 obo:ECO_0005014)
+SubClassOf(obo:ECO_0001006 obo:ECO_0001565)
 
 # Class: obo:ECO_0001007 (adoptive cell transfer evidence)
 
@@ -4721,15 +4721,15 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0001007 "ECO:0001007"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001007 "adoptive cell transfer evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001007 obo:ECO_0005502)
 
-# Class: obo:ECO_0001008 (Alamar blue assay evidence)
+# Class: obo:ECO_0001008 (alamarBlue assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3478843"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.thermofisher.com/us/en/home/references/protocols/cell-and-tissue-analysis/cell-profilteration-assay-protocols/cell-viability-with-alamarblue.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0001008 "A type of cell viability assay evidence resulting from the continuous measurement of fluorescence intensity from the viable cells, where cell permeable compound, resazurin in Alamar blue is reduced to fluorescent resorufin."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3478843"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.thermofisher.com/us/en/home/references/protocols/cell-and-tissue-analysis/cell-profilteration-assay-protocols/cell-viability-with-alamarblue.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0001008 "A type of cell viability assay evidence resulting from the continuous measurement of fluorescence intensity from the viable cells, where a cell permeable compound, resazurin (the active ingredient of alamarBlue), is reduced to fluorescent resorufin."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001008 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001008 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001008 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001008 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001008 "ECO:0001008"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0001008 "Alamar blue assay evidence"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001008 "alamarBlue assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001008 obo:ECO_0005004)
 
 # Class: obo:ECO_0001009 (allograft transplantation experiment evidence)
@@ -4824,7 +4824,7 @@ SubClassOf(obo:ECO_0001016 obo:ECO_0000002)
 
 # Class: obo:ECO_0001017 (Boyden chamber assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:13872176"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:15576901"^^xsd:string) obo:IAO_0000115 obo:ECO_0001017 "A type of chemotaxis assay evidence resulting from the analysis of the number of cells that migrate from the upper compartment of a chamber (separated by a micro-porous membrane) to the lower compartment, in which chemotactic agents are present."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:13872176"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:15576901"^^xsd:string) obo:IAO_0000115 obo:ECO_0001017 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis is determined by measuring the number of cells that migrate from the upper compartment of a chamber (separated by a micro-porous membrane) to the lower compartment, in which chemotactic agents are present."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001017 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001017 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001017 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -4861,25 +4861,25 @@ SubClassOf(obo:ECO_0001019 obo:ECO_0005034)
 
 # Class: obo:ECO_0001020 (cell counting evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0001020 "A type of in vitro cell based assay evidence resulting from the quantification of a sample of cells."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0001020 "A type of cell-based assay evidence resulting from the quantification of a sample of cells."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001020 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001020 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001020 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001020 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001020 "ECO:0001020"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001020 "cell counting evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001020 obo:ECO_0005014)
+SubClassOf(obo:ECO_0001020 obo:ECO_0001565)
 
 # Class: obo:ECO_0001021 (cell permeability assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:16962665"^^xsd:string) obo:IAO_0000115 obo:ECO_0001021 "A type of in vitro cell based assay evidence resulting from the quantification of cell permeability."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:16962665"^^xsd:string) obo:IAO_0000115 obo:ECO_0001021 "A type of cell-based assay evidence resulting from the quantification of cell permeability."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001021 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001021 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001021 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001021 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001021 "ECO:0001021"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001021 "cell permeability assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001021 obo:ECO_0005014)
+SubClassOf(obo:ECO_0001021 obo:ECO_0001565)
 
 # Class: obo:ECO_0001022 (carboxyfluorescein diacetate succinimidyl ester staining evidence)
 
@@ -5040,7 +5040,7 @@ SubClassOf(obo:ECO_0001035 obo:ECO_0000008)
 
 # Class: obo:ECO_0001036 (cytochrome C release assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10914021"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:12815469"^^xsd:string) obo:IAO_0000115 obo:ECO_0001036 "A type of apoptotic assay evidence resulting from the identification of an accumulation of Cytochrome c in the cytoplasm after its release from the mitochondria, an early event in apoptosis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10914021"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:12815469"^^xsd:string) obo:IAO_0000115 obo:ECO_0001036 "A type of apoptotic assay evidence resulting from the identification of an accumulation of cytochrome C in the cytoplasm after its release from the mitochondria, an early event in apoptosis."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001036 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001036 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001036 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -5075,7 +5075,7 @@ SubClassOf(obo:ECO_0001038 obo:ECO_0000059)
 
 # Class: obo:ECO_0001039 (DNA laddering assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:4401164"^^xsd:string) obo:IAO_0000115 obo:ECO_0001039 "A type of apoptotic assay evidence resulting from the visualization of the DNA ladder (apoptotic DNA fragmentation) in gel electrophoresis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:4401164"^^xsd:string) obo:IAO_0000115 obo:ECO_0001039 "A type of apoptotic assay evidence resulting from the visualization via gel electrophoresis of the fragmented DNA (DNA ladder) which is the result of apoptotic DNA fragmentation."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001039 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001039 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001039 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -5751,7 +5751,7 @@ SubClassOf(obo:ECO_0001099 obo:ECO_0001565)
 
 # Class: obo:ECO_0001100 (MTS assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:1867954"^^xsd:string) obo:IAO_0000115 obo:ECO_0001100 "A type of metabolic cell proliferation assay evidence resulting from 3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium (MTS) in combination with phenazine methyl sulfate (PMS) as an intermediate electron acceptor reagent to produce a soluble formazan dye in viable cells."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:1867954"^^xsd:string) obo:IAO_0000115 obo:ECO_0001100 "A type of apoptotic assay evidence resulting from the reduction of 3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium (MTS) in combination with phenazine methyl sulfate (PMS) as an intermediate electron acceptor reagent to produce a soluble formazan dye in viable cells."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001100 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001100 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001100 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -5763,7 +5763,7 @@ SubClassOf(obo:ECO_0001100 obo:ECO_0005034)
 
 # Class: obo:ECO_0001101 (MTT assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:6606682"^^xsd:string) obo:IAO_0000115 obo:ECO_0001101 "A type of metabolic cell proliferation assay evidence resulting from the reduction of 3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide (MTT) to its insoluble purple formazan dye in viable cells."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:6606682"^^xsd:string) obo:IAO_0000115 obo:ECO_0001101 "A type of apoptotic assay evidence resulting from the reduction of 3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide (MTT) to its insoluble purple formazan dye in viable cells and measures cell viability / metabolic activity."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001101 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001101 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001101 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -5829,15 +5829,15 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0001106 "ECO:0001106"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001106 "nuclease protection assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001106 obo:ECO_0005518)
 
-# Class: obo:ECO_0001107 (nucleotide analog incorporation evidence)
+# Class: obo:ECO_0001107 (nucleotide analog incorporation assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3149870"^^xsd:string) obo:IAO_0000115 obo:ECO_0001107 "A type of DNA synthesis cell proliferation assay evidence resulting from the analysis and measurement of the incorporation of nucleotide analog(s) into the DNA."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3149870"^^xsd:string) obo:IAO_0000115 obo:ECO_0001107 "A type of DNA synthesis cell proliferation assay evidence resulting from the analysis and measurement of the incorporation of fluorescently labeled nucleotide analog(s) into the DNA."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001107 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001107 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001107 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001107 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001107 "ECO:0001107"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0001107 "nucleotide analog incorporation evidence"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001107 "nucleotide analog incorporation assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001107 obo:ECO_0005008)
 
 # Class: obo:ECO_0001108 (phage display evidence)
@@ -6133,11 +6133,11 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001135 "2014-03-16T11:30:54Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001135 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001135 "ECO:0001135"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001135 "wound healing assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001135 obo:ECO_0005014)
+SubClassOf(obo:ECO_0001135 obo:ECO_0001565)
 
 # Class: obo:ECO_0001136 (WST-1 assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18417231"^^xsd:string) obo:IAO_0000115 obo:ECO_0001136 "A type of metabolic cell proliferation assay evidence resulting from the assessment of metabolic activity from a water-soluble tetrazolium salt WST-1 being reduced outside the cell (by reacting with mitochondrial succinate-tetrazolium reductase) to form a formazan dye."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18417231"^^xsd:string) obo:IAO_0000115 obo:ECO_0001136 "A type of cell proliferation assay evidence resulting from the assessment of metabolic activity from a water-soluble tetrazolium salt WST-1 being reduced outside the cell (by reacting with mitochondrial succinate-tetrazolium reductase) to form a formazan dye."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001136 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001136 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001136 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -6252,15 +6252,15 @@ EquivalentClasses(obo:ECO_0001144 ObjectIntersectionOf(obo:ECO_0001007 ObjectSom
 SubClassOf(obo:ECO_0001144 obo:ECO_0001007)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001144 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
-# Class: obo:ECO_0001145 (Alamar blue assay evidence used in manual assertion)
+# Class: obo:ECO_0001145 (alamarBlue assay evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001145 "A type of Alamar blue assay evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001145 "A type of alamarBlue assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001145 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001145 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001145 "2014-03-17T15:37:21Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001145 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001145 "ECO:0001145"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0001145 "Alamar blue assay evidence used in manual assertion"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001145 "alamarBlue assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0001145 ObjectIntersectionOf(obo:ECO_0001008 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001145 obo:ECO_0001008)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001145 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
@@ -6384,7 +6384,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001154 O
 
 # Class: obo:ECO_0001155 (bromodeoxyuridine incorporation assay evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001155 "A type of BrdU incorporation assay evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001155 "A type of bromodeoxyuridine incorporation assay evidence used in manual assertion"^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001155 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001155 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001155 "2014-03-17T16:04:49Z"^^xsd:string)
@@ -7500,15 +7500,15 @@ EquivalentClasses(obo:ECO_0001240 ObjectIntersectionOf(obo:ECO_0001106 ObjectSom
 SubClassOf(obo:ECO_0001240 obo:ECO_0001106)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001240 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
-# Class: obo:ECO_0001241 (nucleotide analog incorporation evidence used in manual assertion)
+# Class: obo:ECO_0001241 (nucleotide analog incorporation assay evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001241 "A type of nucleotide analog incorporation evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001241 "A type of nucleotide analog incorporation assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001241 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001241 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001241 "2014-03-17T19:25:17Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001241 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001241 "ECO:0001241"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0001241 "nucleotide analog incorporation evidence used in manual assertion"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001241 "nucleotide analog incorporation assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0001241 ObjectIntersectionOf(obo:ECO_0001107 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001241 obo:ECO_0001107)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001241 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
@@ -7801,7 +7801,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001263 O
 
 # Class: obo:ECO_0001264 (terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001264 "A type of TUNEL assay evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001264 "A type of terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001264 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001264 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001264 "2014-03-17T20:29:34Z"^^xsd:string)
@@ -8115,19 +8115,13 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0001563 "ECO:0001563"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001563 "cell growth assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001563 obo:ECO_0001565)
 
-# Class: obo:ECO_0001564 (cell proliferation assay evidence)
-
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:0008283"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:11057898"^^xsd:string) obo:IAO_0000115 obo:ECO_0001564 "A type of direct assay evidence where cell division, i.e. reproduction and the increase in cell number are measured."^^xsd:string)
-AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001564 "ECO_AssayCleanup"^^xsd:string)
-AnnotationAssertion(oboInOwl:created_by obo:ECO_0001564 "snadendla / jbmunro"^^xsd:string)
-AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001564 "2017-11-30T14:00:00Z"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001564 "eco"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:ECO_0001564 "ECO:0001564"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0001564 "cell proliferation assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001564 obo:ECO_0000002)
-
 # Class: obo:ECO_0001565 (cell-based assay evidence)
 
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001565 "A type of direct assay evidence resulting from the study of cells."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001565 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001565 "2017-11-30T14:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001565 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001565 "ECO:0001565"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001565 "cell-based assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001565 obo:ECO_0000002)
 
@@ -8143,16 +8137,16 @@ AnnotationAssertion(rdfs:label obo:ECO_0001601 "protein-binding microarray evide
 SubClassOf(obo:ECO_0001601 obo:ECO_0000093)
 SubClassOf(obo:ECO_0001601 obo:ECO_0000136)
 
-# Class: obo:ECO_0001603 (in vivo cell staining evidence)
+# Class: obo:ECO_0001603 (cell staining evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) obo:IAO_0000115 obo:ECO_0001603 "A type of in vivo assay evidence in which living cells are stained with a vital stain, i.e. dye that can be used on living cells without causing cell death."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) obo:IAO_0000115 obo:ECO_0001603 "A type of cell-based assay evidence in which living cells are stained with a vital stain, i.e. dye that can be used on living cells without causing cell death."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001603 "swolfish"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001603 "2015-06-08T11:51:37Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001603 "eco"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) oboInOwl:hasRelatedSynonym obo:ECO_0001603 "vital staining evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001603 "ECO:0001603"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0001603 "in vivo cell staining evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001603 obo:ECO_0000178)
+AnnotationAssertion(rdfs:label obo:ECO_0001603 "cell staining evidence"^^xsd:string)
+SubClassOf(obo:ECO_0001603 obo:ECO_0001565)
 
 # Class: obo:ECO_0001801 (alkaline phosphatase reporter gene assay evidence)
 
@@ -8499,27 +8493,27 @@ SubClassOf(obo:ECO_0001829 obo:ECO_0000049)
 
 # Class: obo:ECO_0005004 (cell viability assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) obo:IAO_0000115 obo:ECO_0005004 "A type of in vitro cell based assay evidence resulting from analyzing the difference between the number (estimation) of cells at the start and the remaining viable cells at the end of the assay."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) obo:IAO_0000115 obo:ECO_0005004 "A type of cell-based assay evidence resulting from analyzing the ability of cells to survive or live successfully."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005004 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005004 "2015-02-13T12:08:01Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005004 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005004 "ECO:0005004"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005004 "cell viability assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005004 obo:ECO_0005014)
+SubClassOf(obo:ECO_0005004 obo:ECO_0001565)
 
 # Class: obo:ECO_0005007 (cell proliferation assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0005007 "A type of in vitro cell based assay evidence resulting from the measurement of cell proliferation."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(rdfs:comment "GO:0008283"^^xsd:string) Annotation(rdfs:comment "PMID:11057898"^^xsd:string) obo:IAO_0000115 obo:ECO_0005007 "A type of cell-based assay evidence resulting from the measurement of the number of cells, which is a reflection of the balance between cell division and cell loss through cell differentiation or cell death."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005007 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005007 "2015-02-11T16:27:13Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005007 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005007 "ECO:0005007"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005007 "cell proliferation assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005007 obo:ECO_0005014)
+SubClassOf(obo:ECO_0005007 obo:ECO_0001565)
 
 # Class: obo:ECO_0005008 (DNA synthesis cell proliferation assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3908118"^^xsd:string) obo:IAO_0000115 obo:ECO_0005008 "A type of cell proliferation assay evidence resulting from the measure of proliferation by estimation of DNA synthesis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3908118"^^xsd:string) obo:IAO_0000115 obo:ECO_0005008 "A type of cell proliferation assay evidence resulting from the measure of DNA synthesis in the presece of a label."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005008 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005008 "2015-02-11T16:30:10Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005008 "eco"^^xsd:string)
@@ -8548,22 +8542,23 @@ SubClassOf(obo:ECO_0005010 obo:ECO_0005007)
 
 # Class: obo:ECO_0005011 (ATP bioluminescence assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15344559"^^xsd:string) obo:IAO_0000115 obo:ECO_0005011 "A type of cell proliferation assay evidence resulting from the analysis of ATP concentration (light intensity) when luciferase catalyzes the oxidation of luciferin in the presence of ATP, magnesium ions and molecular oxygen."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15344559"^^xsd:string) obo:IAO_0000115 obo:ECO_0005011 "A type of cell viability assay evidence resulting from the analysis of ATP concentration (by measuring light intensity) when luciferase catalyzes the oxidation of luciferin in the presence of ATP, magnesium ions and molecular oxygen."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005011 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005011 "2015-02-11T16:47:30Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005011 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005011 "ECO:0005011"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005011 "ATP bioluminescence assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005011 obo:ECO_0005007)
+SubClassOf(obo:ECO_0005011 obo:ECO_0005004)
 
 # Class: obo:ECO_0005012 (cytotoxicity assay evidence)
 
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0005012 "A type of  cell-based assay evidence resulting from the ability of an agent to induce cellular necrosis or apoptosis and the subsequent analysis of cell death mechanism."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005012 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005012 "2015-02-12T11:39:35Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005012 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005012 "ECO:0005012"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005012 "cytotoxicity assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005012 obo:ECO_0005014)
+SubClassOf(obo:ECO_0005012 obo:ECO_0001565)
 
 # Class: obo:ECO_0005014 (in vitro cell based assay evidence)
 
@@ -8573,7 +8568,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005014 "2015-02-12T13:26:55Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005014 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005014 "ECO:0005014"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005014 "in vitro cell based assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005014 obo:ECO_0000181)
+AnnotationAssertion(owl:deprecated obo:ECO_0005014 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0005019 (staining evidence)
 
@@ -8587,13 +8582,13 @@ SubClassOf(obo:ECO_0005019 obo:ECO_0000002)
 
 # Class: obo:ECO_0005021 (chemotaxis assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3667641"^^xsd:string) obo:IAO_0000115 obo:ECO_0005021 "A type of in vitro cell based assay evidence resulting from a given chemical substance causing a movement response, or not, in the sample cells or organisms."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:3667641"^^xsd:string) obo:IAO_0000115 obo:ECO_0005021 "A type of cell-based assay evidence resulting from the evaluation of chemotactic ability (i.e. the movement, or lack of movement, in response to a chemical stimulus) of prokaryotic or eukaryotic cells."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005021 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005021 "2015-02-19T13:10:20Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005021 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005021 "ECO:0005021"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005021 "chemotaxis assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005021 obo:ECO_0005014)
+SubClassOf(obo:ECO_0005021 obo:ECO_0001565)
 
 # Class: obo:ECO_0005027 (genetic transformation evidence)
 
@@ -8628,13 +8623,13 @@ SubClassOf(obo:ECO_0005033 obo:ECO_0005031)
 
 # Class: obo:ECO_0005034 (apoptotic assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0005034 "A type of in vitro cell based assay evidence resulting from the occurrence, visualization, and/or analysis of apoptosis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0005034 "A type of cell-based assay evidence resulting from the occurrence, visualization, and/or analysis of apoptosis."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005034 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005034 "2015-04-07T21:58:24Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005034 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005034 "ECO:0005034"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005034 "apoptotic assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005034 obo:ECO_0005014)
+SubClassOf(obo:ECO_0005034 obo:ECO_0001565)
 
 # Class: obo:ECO_0005500 (in vivo polyADP-ribosylation assay evidence)
 
@@ -9774,13 +9769,13 @@ SubClassOf(obo:ECO_0005603 obo:ECO_0001096)
 
 # Class: obo:ECO_0005604 (cross-streak test evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:www.jstor.org/stable/3792785"^^xsd:string) obo:IAO_0000115 obo:ECO_0005604 "A type of experimental evidence where the investigated organism or a potential antagonist is inoculated so as to grow along the diameter line of the agar medium in a Petri dish, then, potentially susceptible microbes (usually bacteria) are streaked perpendicularly to the growth line and inhibition of growth of a test microbe in the vicinity of that line suggests that the antagonist secretes one or more diffusible antibiotics."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:www.jstor.org/stable/3792785"^^xsd:string) obo:IAO_0000115 obo:ECO_0005604 "A type of cell proliferation assay evidence where the investigated organism or a potential antagonist is inoculated so as to grow along the diameter line of the agar medium in a Petri dish, then, potentially susceptible microbes (usually bacteria) are streaked perpendicularly to the growth line and inhibition of growth of a test microbe in the vicinity of that line suggests that the antagonist secretes one or more diffusible antibiotics."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005604 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005604 "2016-03-29T15:40:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005604 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005604 "ECO:0005604"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005604 "cross-streak test evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005604 obo:ECO_0000006)
+SubClassOf(obo:ECO_0005604 obo:ECO_0005007)
 
 # Class: obo:ECO_0005605 (disk diffusion test evidence)
 
@@ -9805,7 +9800,7 @@ SubClassOf(obo:ECO_0005606 obo:ECO_0000006)
 
 # Class: obo:ECO_0005607 (tethered cell assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:1103143"^^xsd:string) obo:IAO_0000115 obo:ECO_0005607 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined by observing the rotational behavior of the organism tethered to a coverslip by their flagella."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:1103143"^^xsd:string) obo:IAO_0000115 obo:ECO_0005607 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis is determined by observing the rotational behavior of the cells tethered to a coverslip by their flagella."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005607 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005607 "2016-03-31T15:51:10Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005607 "eco"^^xsd:string)
@@ -9815,7 +9810,7 @@ SubClassOf(obo:ECO_0005607 obo:ECO_0005021)
 
 # Class: obo:ECO_0005608 (tumble frequency assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:4576832"^^xsd:string) obo:IAO_0000115 obo:ECO_0005608 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined by measuring chemotaxis in response to sudden concentration changes from one uniform spatial environment to another."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:4576832"^^xsd:string) obo:IAO_0000115 obo:ECO_0005608 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis is determined by observing the rotational behavior of the cells tethered to a coverslip by their flagella."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005608 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005608 "2016-03-31T16:42:35Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0005608 "Temporal assay"^^xsd:string)
@@ -9826,7 +9821,7 @@ SubClassOf(obo:ECO_0005608 obo:ECO_0005021)
 
 # Class: obo:ECO_0005609 (capillary assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:4632978"^^xsd:string) obo:IAO_0000115 obo:ECO_0005609 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined (typically bacteria or archaea) by measuring the rate of accumulation of the organism into a capillary."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:4632978"^^xsd:string) obo:IAO_0000115 obo:ECO_0005609 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis is determined by measuring the rate of accumulation of the cells into a capillary."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005609 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005609 "2016-03-31T16:45:29Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005609 "eco"^^xsd:string)
@@ -10924,13 +10919,13 @@ SubClassOf(obo:ECO_0006019 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006020 (biofilm formation assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10547784"^^xsd:string) obo:IAO_0000115 obo:ECO_0006020 "A type of in vitro culture assay evidence in which biofilm growth is monitored and detected from attachment to development."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10547784"^^xsd:string) obo:IAO_0000115 obo:ECO_0006020 "A type of cell proliferation assay evidence in which a mutated strain of a microorganism, such as a yeast or bacterium, is grown competitively with wild-type cells and the relative fitness of the strains is assessed usually by means of a fluorescent marker and flow cytometric analysis."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006020 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006020 "2016-12-05T09:33:18Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006020 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006020 "ECO:0006020"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006020 "biofilm formation assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0006020 obo:ECO_0000182)
+SubClassOf(obo:ECO_0006020 obo:ECO_0005007)
 
 # Class: obo:ECO_0006021 (biofilm formation assay evidence used in manual assertion)
 
@@ -10992,7 +10987,7 @@ SubClassOf(obo:ECO_0006025 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006026 (colony biofilm assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18770545"^^xsd:string) obo:IAO_0000115 obo:ECO_0006026 "A type of biofilm formation assay evidence in which a colony is grown on a semipermeable membrane on an agar plate to continously supply nutrients by relocating to fresh plates."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18770545"^^xsd:string) obo:IAO_0000115 obo:ECO_0006026 "A type of biofilm formation assay evidence in which a colony is grown on a semipermeable membrane on an agar plate. The plate serves to supply nutrients and the semipermeable membrane can be relocated to fresh plates."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006026 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006026 "2016-12-05T09:33:18Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006026 "eco"^^xsd:string)
@@ -11458,10 +11453,9 @@ AnnotationAssertion(oboInOwl:created_by obo:ECO_0006065 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006065 "2017-05-15T09:11:13Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006065 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006065 "ECO:0006065"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0006065 "This term has been made obsolute with its parent in vitro cell based assay evidence having been made obsolete."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006065 "in vitro cell based assay evidence used in manual assertion"^^xsd:string)
-EquivalentClasses(obo:ECO_0006065 ObjectIntersectionOf(obo:ECO_0005014 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
-SubClassOf(obo:ECO_0006065 obo:ECO_0005014)
-SubClassOf(obo:ECO_0006065 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+AnnotationAssertion(owl:deprecated obo:ECO_0006065 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0006066 (fluorescence recovery after photobleaching evidence)
 
