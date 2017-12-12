@@ -14,14 +14,15 @@ ontology: eco/subsets/go_groupings
 id: ECO:0000006
 name: experimental evidence
 namespace: eco
-def: "An evidence type that is based on the results of a laboratory assay." [ECO:MCC, GOC:ecd]
+alt_id: ECO:0005023
+def: "A type of evidence resulting from manipulation of variables in order to discover cause and effect." [url:http\://holah.co.uk/page/experimental/]
 subset: go_groupings
 
 [Term]
 id: ECO:0000252
 name: similarity evidence used in manual assertion
 namespace: eco
-def: "Similarity evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of similarity evidence that is used in a manual assertion." [ECO:RCT]
 subset: go_groupings
 created_by: mchibucos
 creation_date: 2010-12-09T05:28:12Z

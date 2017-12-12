@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-11-03
-date: 11:03:2017 07:53
+data-version: releases/2017-12-02
+date: 12:02:2017 08:52
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -28,13 +28,14 @@ disjoint_from: ECO:0000217 ! assertion method
 [Term]
 id: ECO:0000001
 name: inference from background scientific knowledge
-def: "A curator inference that links the current annotation to a different evidence-based annotation via background knowledge of the curator." [ECO:go, ECO:MCC]
+def: "A type of curator inference where conclusions are drawn based on the background scientific knowledge of the curator." [ECO:SN]
 is_a: ECO:0000205 ! curator inference
 
 [Term]
 id: ECO:0000002
 name: direct assay evidence
-def: "Experimental evidence that is based on direct measurement of some aspect of a biological feature." [ECO:MCC]
+alt_id: ECO:0005006
+def: "A type of experimental evidence resulting from the direct measurement of some aspect of a biological feature." [ECO:SN]
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
@@ -54,7 +55,8 @@ is_a: ECO:0000100 ! fractionation evidence
 [Term]
 id: ECO:0000005
 name: enzyme assay evidence
-def: "Used when an annotation is made based on assays that determine the catalytic activity of enzymes." [TAIR:TED]
+alt_id: ECO:0005001
+def: "A type of protein assay evidence where the catalytic activity of an enzyme is determined." [url:http\://www.sciencedirect.com/science/article/pii/S2213020914000068]
 synonym: "IDA: enzyme assays" RELATED []
 xref: MI:0415 "enzymatic study"
 is_a: ECO:0000039 ! protein assay evidence
@@ -62,7 +64,8 @@ is_a: ECO:0000039 ! protein assay evidence
 [Term]
 id: ECO:0000006
 name: experimental evidence
-def: "An evidence type that is based on the results of a laboratory assay." [ECO:MCC, GOC:ecd]
+alt_id: ECO:0005023
+def: "A type of evidence resulting from manipulation of variables in order to discover cause and effect." [url:http\://holah.co.uk/page/experimental/]
 subset: go_groupings
 is_a: ECO:0000000 ! evidence
 
@@ -83,61 +86,66 @@ is_a: ECO:0000006 ! experimental evidence
 [Term]
 id: ECO:0000009
 name: transcript expression evidence
+def: "A type of expression pattern evidence where abundance of a transcript is analyzed." [ECO:RCT]
 is_a: ECO:0000008 ! expression pattern evidence
 
 [Term]
 id: ECO:0000010
 name: protein expression evidence
+def: "A type of expression pattern evidence resulting from protein abundance quantification techniques." [PMC:4029002, url:https\://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-protein-expression-systems.html]
 is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000011
 name: genetic interaction evidence
+def: "A type of experimental phenotypic evidence resulting from the effect that a given gene has on another gene or genes, and the products." [ECO:RCT, PMID:11822023]
 xref: TAIR:TED
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000012
 name: functional complementation evidence
-def: "Used when an annotation is made based on a functional complementation assay in which a wild-type copy of the gene in question is inserted into a mutant background in the organism of the gene's origin or a heterologous organism with a mutation in the homologous gene." [TAIR:TED]
+def: "A type of genetic interaction evidence where a wild-type copy of the gene in question is inserted into a mutant cell to see if it restores the wild-type phenotype in the mutant background." [PMID:27403640]
 synonym: "IGI: functional complementation" RELATED []
 is_a: ECO:0000011 ! genetic interaction evidence
 
 [Term]
 id: ECO:0000013
 name: transgenic rescue experiment evidence
+def: "A type of functional complementation evidence resulting from the introduction of a transgene to prevent, or \"rescue\" an organism from a condition." [url:http\://www.mdpi.com/1420-3049/19/9/13932/pdf, url:http\://www.nature.com/gt/journal/v11/n15/full/3302282a.html]
 is_a: ECO:0000012 ! functional complementation evidence
 
 [Term]
 id: ECO:0000015
 name: mutant phenotype evidence
-def: "The IMP evidence code covers those cases when the function, process or cellular localization of a gene product is inferred based on differences in the function, process, or cellular localization between two different alleles of the corresponding gene. The IMP code is used for cases where one allele may be designated 'wild-type' and another as 'mutant'. It is also used in cases where allelic variation occurs naturally and no specific allele is designated as wild-type or mutant. Caution should be used when making annotations from gain-of-function mutations as it may be difficult to infer a gene's normal function from a gain of function mutation, although it is sometimes possible." [GO:IMP]
+def: "A type of experimental phenotypic evidence derived from the difference in two alleles of a corresponding gene that result from one or more changes in the genome." [GO:IMP]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000016
 name: loss-of-function mutant phenotype evidence
+def: "A type of mutant phenotype evidence where a phenotype is associated with altered gene product which lacks the molecular function of the wild-type gene." [SO:0002054]
 is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000017
 name: ectopic expression evidence
-def: "Used when an annotation is made based on the analysis of the phenotype of a wild-type or mutant transgenic organism that has been engineered to overexpress or ectopically express the gene product in question." [TAIR:TED]
+def: "A type of experimental phenotypic evidence where a transgenic strain carrying the construct of a promoter cDNA fusion in which a gene of interest is driven by a defined promoter or enhancer is ectopically expressed in the defined pattern to characterize potential cellular properties and functions of a protein of interest." [PMID:10948520, PMID:19301619]
 synonym: "IMP: analysis of overexpression/ectopic expression phenotype" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000018
 name: anti-sense experiment evidence
-def: "Used when an annotation is based on a phenotype observed when expressing an anti-sense version of a gene product in a wild-type (for that gene product) background." [TAIR:TED]
+def: "A type of mutant phenotype evidence where a phenotype is observed while expressing an anti-sense version of a gene product in a wild-type (for that gene product) background." [ECO:SN]
 synonym: "IMP: anti-sense experiments" RELATED []
 is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000019
 name: RNAi evidence
-def: "A type of mutant phenotype evidence where an RNA construct is introduced into a cell and the expression of the gene bearing its complementary sequence is suppressed." [] {comment="ECO:MCC"}
+def: "A type of mutant phenotype evidence where an RNA construct is introduced into a cell and the expression of the gene bearing its complementary sequence is suppressed." [ECO:MCC]
 synonym: "IMP: RNAi experiment" RELATED []
 is_a: ECO:0000015 ! mutant phenotype evidence
 
@@ -150,7 +158,8 @@ is_a: ECO:0000039 ! protein assay evidence
 [Term]
 id: ECO:0000021
 name: physical interaction evidence
-def: "Experimental evidence that is based on characterization of an interaction between a gene product and another molecule." [ECO:MCC]
+alt_id: ECO:0005025
+def: "A type of experimental evidence that is based on characterization of an interaction between a gene product and another molecule." [ECO:SN]
 comment: Molecules interacted with might include protein, nucleic acid, ion, or complex.
 xref: MI:0045 "experimental interaction detection"
 is_a: ECO:0000006 ! experimental evidence
@@ -174,6 +183,7 @@ is_a: ECO:0000021 ! physical interaction evidence
 [Term]
 id: ECO:0000024
 name: protein binding evidence
+def: "A type of affinity evidence resulting from the binding of a molecule to a protein or protein complex." [GO:0005515, url:https\://en.wikipedia.org/wiki/Mutation]
 is_a: ECO:0000023 ! affinity evidence
 is_a: ECO:0000039 ! protein assay evidence
 
@@ -188,6 +198,7 @@ is_a: ECO:0000023 ! affinity evidence
 [Term]
 id: ECO:0000026
 name: nucleic acid hybridization evidence
+def: "A type of experimental genomic evidence resulting from a process in which single stranded nucleic acids are allowed to interact so that complexes, or hybrids, are formed by molecules with sufficiently similar, complementary sequences." [OBI:0302903]
 is_a: ECO:0000073 ! experimental genomic evidence
 
 [Term]
@@ -200,13 +211,14 @@ is_a: ECO:0000057 ! phenotypic similarity evidence
 [Term]
 id: ECO:0000028
 name: motif similarity evidence
-def: "Used when an annotation is made based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence." [TAIR:TED]
+def: "A type of match to sequence model evidence that is based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence." [ECO:SN]
 synonym: "ISS: recognized domains" RELATED []
 is_a: ECO:0000202 ! match to sequence model evidence
 
 [Term]
 id: ECO:0000029
 name: match to InterPro member signature evidence
+def: "A type of match to sequence model evidence resulting from a positive match of a protein, or set of proteins to a predictive model (signature) in the InterPro database." [PMC:2686546, url:http\://www.ncbi.nlm.nih.gov/mesh?term=Nucleic+Acid+Hybridization]
 is_a: ECO:0000202 ! match to sequence model evidence
 
 [Term]
@@ -223,7 +235,7 @@ relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 [Term]
 id: ECO:0000031
 name: protein BLAST evidence used in manual assertion
-def: "Protein BLAST evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of protein BLAST evidence that is used in a manual assertion." [ECO:SN]
 synonym: "curated protein BLAST analysis" RELATED []
 xref: GO_REF:0000012 "Pairwise alignment (TIGR)"
 xref: GO_REF:0000027 "BLAST search criteria for ISS assignment in PAMGO_GAT"
@@ -236,7 +248,7 @@ relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 [Term]
 id: ECO:0000032
 name: nucleotide BLAST evidence used in manual assertion
-def: "Nucleotide BLAST evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of nucleotide BLAST evidence that is used in a manual assertion." [ECO:SN]
 synonym: "curated nucleic acid BLAST analysis" RELATED []
 is_a: ECO:0000030 {is_inferred="true"} ! BLAST evidence used in manual assertion
 is_a: ECO:0000207 ! nucleotide BLAST evidence
@@ -255,14 +267,14 @@ disjoint_from: ECO:0000034 ! non-traceable author statement
 [Term]
 id: ECO:0000034
 name: non-traceable author statement
-def: "An author statement that is not associated with results presented or a cited reference." [ECO:MCC]
+def: "A type of author statement that is not associated with results presented or a cited reference." [ECO:SN]
 comment: The non-traceable author statement evidence code should be used in all cases where the author makes a statement that a curator wants to capture but for which there are neither results presented nor a specific reference cited in the source used to make the annotation. The source of the information may be peer reviewed papers, textbooks, database records or vouchered specimens.
 is_a: ECO:0000204 ! author statement
 
 [Term]
 id: ECO:0000035
 name: no biological data found
-def: "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources." [ECO:MCC, GO:ND]
+def: "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources." [ECO:SN]
 comment: An assertion of "no biological data found" carries the assumption that a more-or-less exhaustive search has been conducted.
 is_a: ECO:0000205 ! curator inference
 
@@ -283,17 +295,21 @@ is_a: ECO:0000012 ! functional complementation evidence
 [Term]
 id: ECO:0000039
 name: protein assay evidence
+alt_id: ECO:0005022
+def: "A type of direct assay evidence resulting from determining the presence, abundance, structure, function, or activity of proteins." [PMID:18429326]
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
 id: ECO:0000040
 name: immunological assay evidence
+alt_id: ECO:0005018
+def: "A type of affinity evidence resulting from quantitation of the analyte which depends on the reaction of an antigen (analyte) and an antibody." [ERO:0001362, url:http\://www.ncbi.nlm.nih.gov/books/NBK21589/\,http\://cores.ucsf.edu/protein-assay.html]
 is_a: ECO:0000023 ! affinity evidence
 
 [Term]
 id: ECO:0000041
 name: similarity evidence
-def: "An evidence type that is based on comparing likeness of distinct biological entities." [ECO:MCC, PhenoScape:IS]
+def: "A type of evidence resulting from comparing likeness of distinct biological entities." [ECO:SN]
 synonym: "inferred from similarity" RELATED []
 synonym: "IS" EXACT []
 is_a: ECO:0000000 ! evidence
@@ -301,6 +317,7 @@ is_a: ECO:0000000 ! evidence
 [Term]
 id: ECO:0000042
 name: gain-of-function mutant phenotype evidence
+def: "A type of mutant phenotype evidence resulting from a phenotype that is associated with the altered gene product which possesses a new molecular function or a new pattern of gene expression." [SO:0002053, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614608/]
 is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
@@ -318,6 +335,7 @@ is_a: ECO:0000010 ! protein expression evidence
 [Term]
 id: ECO:0000046
 name: protein expression level evidence
+def: "A type of protein expression evidence resulting from the quantification of protein production in a sample." [NBK:22011, url:http\://www.informatics.jax.org/glossary/gain-of-function]
 is_a: ECO:0000010 ! protein expression evidence
 
 [Term]
@@ -328,19 +346,20 @@ is_a: ECO:0000009 ! transcript expression evidence
 [Term]
 id: ECO:0000048
 name: transcript expression level evidence
+def: "A type of transcript expression evidence resulting from quantifying transcript abundance." [ECO:RCT]
 is_a: ECO:0000009 ! transcript expression evidence
 
 [Term]
 id: ECO:0000049
 name: reporter gene assay evidence
-def: "Used when an annotation is made on the basis of the expression pattern of a reporter gene. The reporter gene may consist of the native promoter of the gene in question that drives the expression of a readily assayable gene product such as GUS or GFP. The reporter gene may also be a marker of a particular type of physiological response." [TAIR:TED]
+def: "A type of experimental phenotypic evidence that is based on the expression pattern of a reporter gene." [TAIR:TED]
 synonym: "IEP: expression of a reporter gene" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000050
 name: voucher specimen analysis evidence
-def: "Used when an annotation is made on the basis of for a phenotype description for a species or higher level group that given by an author who explicitly references an observation of a voucher specimen(s). Voucher specimens are defined as those specimens with permanent museum catalog numbers. Thus it would be possible for a person to examine this particular specimen and observe the annotated phenotype." [PhenoScape:DOA]
+def: "A type of phenotypic evidence based on an author's phenotypic description of a species or higher level group explicitly referencing an observation of a voucher specimen, a specimen with a permanent museum catalog." [TAIR:TED]
 synonym: "IVS" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
@@ -356,6 +375,7 @@ is_a: ECO:0000041 ! similarity evidence
 [Term]
 id: ECO:0000052
 name: suppressor/enhancer interaction evidence
+def: "A type of genetic interaction evidence resulting from a second mutation that either suppresses or enhances the phenotype expressed from an original mutation." [url:http\://biorxiv.org/content/early/2015/10/03/021592, url:http\://www.wormbook.org/chapters/www\:geneticsuppression/geneticsuppression.html]
 synonym: "IGI: 'traditional' genetic interactions (e.g. suppressors, synthetic lethals)" RELATED []
 xref: TAIR:TED
 is_a: ECO:0000011 ! genetic interaction evidence
@@ -371,19 +391,21 @@ is_a: ECO:0000212 ! combinatorial evidence
 [Term]
 id: ECO:0000054
 name: double mutant phenotype evidence
-def: "Used when an annotation is made based on the phenotype of double mutant organism that contains a mutation in the gene product of interest in addition to a second mutation at an unrelated locus." [TAIT:TED]
+def: "A type of genetic interaction evidence that is based on the phenotypic outcome of two mutations in unrelated genetic loci." [ECO:RCT]
 synonym: "IGI: double mutant analysis" RELATED []
 is_a: ECO:0000011 ! genetic interaction evidence
 
 [Term]
 id: ECO:0000055
 name: array experiment evidence
+def: "A type of expression pattern evidence resulting from the hybridization of a target with a probe which is attached to the microarray surface." [url:http\://www.premierbiosoft.com/tech\:notes/microarray.html]
 is_a: ECO:0000008 ! expression pattern evidence
 
 [Term]
 id: ECO:0000056
 name: epistatic interaction evidence
-def: "Used when an annotation is based on results of epistatis analysis of an allele of the gene in question and a mutant allele at another locus." [TAIR:TED]
+def: "A type of genetic interaction evidence that is based on the suppression of one allelic effect by an allele at another genetic locus." [PMID:18852697]
+comment: Epistasis' can be used in different contexts in different areas of genetics. It is sometimes used to mean 'genetic interaction', whereas other times it may be specific to mutations that block the effects of other mutations.
 synonym: "IGI: epistatic interactions" RELATED []
 is_a: ECO:0000011 ! genetic interaction evidence
 
@@ -400,28 +422,31 @@ is_a: ECO:0000041 ! similarity evidence
 [Term]
 id: ECO:0000058
 name: expression microarray evidence
+def: "A type of array experiment evidence resulting from simultaneous profiling of the expression levels of thousands of genes in a single experiment allowing analysis of genes and their networks." [url:http\://www.illumina.com/techniques/microarrays/gene-expression-arrays.html, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/]
 is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
 id: ECO:0000059
 name: experimental phenotypic evidence
 alt_id: ECO:0000014
-def: "Experimental evidence that is based on the expression of a genotype in an environment." [ECO:MCC]
+alt_id: ECO:0005017
+def: "A type of experimental evidence that is based on the expression of a genotype in an environment." [ECO:SN]
 synonym: "inferred from phenotype" RELATED []
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
 id: ECO:0000060
 name: positional similarity evidence
-def: "Used when an annotation is made based on the similarity of the location and or arrangement of structures." [PhenoScape:IPS]
+def: "A type of phenotypic similarity evidence based on the similarity of stucture locations or arrangements." [TAIR:TED]
 synonym: "IPS" EXACT []
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
 id: ECO:0000061
 name: quantitative trait analysis evidence
-def: "A type of experimental phenotypic evidence where an annotation is made for a gene product that has not been cloned but is associated with a quantitative trait locus." [TAIR:tn]
+def: "A type of phenotypic evidence that is based on a gene product that is associated with a quantitative trait locus, but has not been cloned." [TAIR:TED]
 synonym: "IGI: quantitative trait analysis" RELATED []
+synonym: "QTL analysis evidence" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
@@ -432,20 +457,21 @@ is_a: ECO:0000055 ! array experiment evidence
 [Term]
 id: ECO:0000063
 name: compositional similarity evidence
-def: "Used when an annotation is made based on the similarity of the histological makeup of structures." [PhenoScape:ICS]
+def: "A type of phenotypic similarity evidence based on the similarity of the histological makeup of structures." [TAIR:TED]
 synonym: "ICS" EXACT []
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
 id: ECO:0000064
 name: functional complementation in heterologous system evidence
-def: "Used when an annotation is made based on a functional complementation assay in which a wild-type copy of the gene in question is inserted into a heterologous organism with a mutation in the homologous gene." [TAIR:TED]
+def: "A type of functional complementation evidence that is based on the insertion of a wild-type copy of a gene into a heterologous organism, with the mutation occurring in a homologous gene." [TAIR:TED]
 synonym: "IGI: functional complementation in heterologous system" RELATED []
 is_a: ECO:0000012 ! functional complementation evidence
 
 [Term]
 id: ECO:0000065
 name: CpG island microarray evidence
+def: "A type of array experiment evidence resulting from the use of a CpG island (primarily unmethylated GC-rich, CpG-rich DNA sequences) microarray, that may be hybridized with methylated DNA fragments." [PMID:21576262, url:http\://www.atsjournals.org/doi/pdf/10.1165/ajrcmb.23.3.f196]
 is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
@@ -460,20 +486,21 @@ is_a: ECO:0000025 ! hybrid interaction evidence
 [Term]
 id: ECO:0000067
 name: developmental similarity evidence
-def: "Used when an annotation is made based on the similarity of embryological and/or post-embryonic origin of structures." [PhenoScape:IDS]
+def: "A type of phenotypic similarity evidence based on the similarity of embryological or post-embryonic orgin of structures." [TAIR:TED]
 synonym: "IDS" EXACT []
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
 id: ECO:0000068
 name: yeast 2-hybrid evidence
-def: "Used when an annotation is based on the interaction between two proteins in a yeast two-hybrid assay. The assay involves screening a trap-tagged library with a bait-tagged vector. The library is tagged with a DNA-binding domain (trap) and the bait is tagged with a transcriptional activation domain. Interaction between a library-trap protein and the bait results in activation of a yeast reporter gene whose transcription can be experimentally assayed." [TAIR:TED]
+def: "A type of hybrid interaction evidence that is based on detection of protein-protein interaction by activation of a yeast reporter gene after a bait protein fused to a DNA-binding domain (which has been transfected into a yeast cell) is used to screen a cDNA library of clones fused to an activation domain." [PMID:12734586]
 synonym: "IPI: yeast two-hybrid assay" RELATED []
 is_a: ECO:0000025 ! hybrid interaction evidence
 
 [Term]
 id: ECO:0000069
 name: differential methylation hybridization evidence
+def: "A type of nucleic acid hybridization evidence where methylation-sensitive restriction enzymes are utilized to analyze methylated DNA fragments by hybridizing them to a CpG island microarray." [PMID:18987809]
 is_a: ECO:0000026 ! nucleic acid hybridization evidence
 
 [Term]
@@ -489,7 +516,7 @@ is_a: ECO:0000085 ! immunoprecipitation evidence
 [Term]
 id: ECO:0000071
 name: morphological similarity evidence
-def: "Used when an annotation is made based on the similarity of the shape, structure or overall configuration of structures." [PhenoScape:IMS]
+def: "A type of phenotypic similarity evidence based on the similarity of shape, structure, or configuration in structures." [TAIR:TED]
 synonym: "IMS" EXACT []
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
@@ -503,14 +530,15 @@ is_obsolete: true
 [Term]
 id: ECO:0000073
 name: experimental genomic evidence
-def: "Experimental evidence that characterizes an attribute of the genome underlying a gene product." [ECO:MCC]
+def: "A type of experimental evidence that is based on the characterization of an attribute of the genome underlying a gene product." [ECO:MCC]
 synonym: "inferred from genomic analysis" EXACT []
 is_a: ECO:0000006 ! experimental evidence
 
 [Term]
 id: ECO:0000074
 name: split-ubiquitin assay evidence
-def: "Used when an annotation is based on the interaction of two proteins in a split-ubiquitin assay. The bait protein is fused to the C-terminal ubiquitin (Cub) domain followed by a reporter protein, and the prey protein is fused to a mutated N terminal ubiquiting (NubG) domain. If bait and prey interact, their interaction brings the NubG and Cub domains close enough together to reconstitute split-ubiquitin, resulting in the release of the reporter protein by the action of the UBPs." [TAIR:TED]
+def: "A type of physical interaction evidence that is based on detection of protein-protein interaction between a bait and prey protein by in vivo reconstitution of split-ubiquitin (when bait and prey interact) and release of a reporter protein." [PMID:15064465]
+comment: The bait protein is fused to the C-terminal ubiquitin (Cub) domain followed by a reporter protein, and the prey protein is fused to a mutated N terminal ubiquitin (NubG) domain. If bait and prey interact, their interaction brings the NubG and Cub domains close enough to reconstitute.TAIR:TED
 synonym: "IPI: split-ubiquitin assay" RELATED []
 xref: MI:0112 "ubiquitin reconstruction"
 is_a: ECO:0000021 ! physical interaction evidence
@@ -518,14 +546,15 @@ is_a: ECO:0000021 ! physical interaction evidence
 [Term]
 id: ECO:0000075
 name: gene expression similarity evidence
-def: "Used when an annotation is made based on the similarity of expression of genes in structures." [PhenoScape:IGES]
+def: "A type of phenotypic similarity evidence that is based on the categorization of genes by the similarity of expression profiles." [PMID:19958477]
 synonym: "IGES" EXACT []
 is_a: ECO:0000057 ! phenotypic similarity evidence
 
 [Term]
 id: ECO:0000076
 name: far-Western blotting evidence
-def: "Used when an annotation is based on the interaction of protein with another in a far-Western assay. The assay involves separating target proteins on an SDS-PAGE gel, blotting to a membrane, hybridization with a protein probe and visualization using a probe-directed antibody. The interacting protein is referenced in the evidence_with column." [TAIR:TED]
+def: "A type of physical interaction evidence that is based on detection of protein-protein interactions by separation of target proteins by SDS-PAGE which are blotted to a membrane, followed by denaturation and renaturation, probing with purified bait proteins, and detection of the target-bait complexes." [PMID:18079728]
+comment: The interacting protein is referenced in the evidence_with column.
 synonym: "IPI: far-Western analysis" RELATED []
 xref: MI:0047
 is_a: ECO:0000021 ! physical interaction evidence
@@ -533,13 +562,15 @@ is_a: ECO:0000021 ! physical interaction evidence
 [Term]
 id: ECO:0000077
 name: methylation-specific polymerase chain reaction evidence
+def: "A type of polymerase chain reaction evidence resulting from initial modification of DNA by sodium bisulfite, converting all unmethylated cytosines to uracil, and subsequent amplification with primers specific for methylated versus unmethylated DNA." [PMC:38513]
 synonym: "methylation-specific PCR evidence" EXACT []
 is_a: ECO:0000082 ! polymerase chain reaction evidence
 
 [Term]
 id: ECO:0000078
 name: southern hybridization evidence
-def: "Used when an annotation is based on the hybridization of a probe derived from the gene in question with a gene of known function/process/component. Can also be used when a probe derived from a gene of known function/process/component hybridizes with the gene in question." [TAIR:TED]
+def: "A type of DNA detection assay evidence that is based on detection of a specific DNA sequence by hybridization of labeled probes to any immobilized DNA fragment with sequence similarity." [PMID:18432697]
+comment: The DNA fragments are prepared through gel electrophoresis then transferred to a filter membrane.
 synonym: "ISS: Southern blotting" RELATED []
 synonym: "Southern blot" EXACT []
 is_a: ECO:0005519 ! DNA detection assay evidence
@@ -563,27 +594,28 @@ is_a: ECO:0000041 ! similarity evidence
 [Term]
 id: ECO:0000081
 name: targeting sequence prediction evidence
-def: "Used when a component annotation is made based on the presence of a targeting sequence in a protein's primary sequence. The presence of the targeting sequence may be detected by computational prediction and/or the author's manual examination of the sequence." [TAIR:TED]
+def: "A type of motif similarity evidence that is based on detection of a targeting sequence in the primary sequence of a protein through computational prediction and/or a manual examination of the sequence." [ECO:RCT, TAIR:TED]
 synonym: "ISS: targeting sequence prediction" RELATED []
 is_a: ECO:0000028 ! motif similarity evidence
 
 [Term]
 id: ECO:0000082
 name: polymerase chain reaction evidence
+def: "A type of experimental genomic evidence where DNA polymerase is used to synthesize new strand of DNA complementary to the offered template strand." [OBI:0000415]
 synonym: "PCR evidence" EXACT []
 is_a: ECO:0000073 ! experimental genomic evidence
 
 [Term]
 id: ECO:0000083
 name: transmembrane domain prediction evidence
-def: "Used when a component annotation is made based on the presence of one or more transmembrane domains in a protein's primary sequence. The presence of the transmembrane domains may be detected by computational prediction and/or the author's manual examination of the sequence." [TAIR:TED]
+def: "A type of motif similarity evidence that is based on detection of one, or more, transmembrane domains in the primary sequence of a protein through computational prediction and/or a manual examination of the sequence." [ECO:RCT, TAIR:TED]
 synonym: "ISS: transmembrane domain prediction" RELATED []
 is_a: ECO:0000028 ! motif similarity evidence
 
 [Term]
 id: ECO:0000084
 name: gene neighbors evidence
-def: "Evidence that supports the identity of a gene product on the basis of the identity of neighboring genes." [ECO:MCC, GOC:mg]
+def: "A type of genomic context evidence in which a gene product's identity is supported on the basis of the identity of neighboring genes." [ECO:MCC, GOC:MG]
 comment: Genomic cluster analyses include synteny and operon structure.
 synonym: "ICL" RELATED []
 synonym: "inferred from genome cluster" EXACT []
@@ -603,6 +635,7 @@ is_a: ECO:0000039 ! protein assay evidence
 [Term]
 id: ECO:0000086
 name: intermethylated site amplification evidence
+def: "A type of experimental genomic evidence resulting from a genome-wide estimate of DNA methylation by differential enzymatic digestion of genomic DNA with methylation-sensitive and methylation-insensitive isoschizomers followed by restrained PCR amplification of methylated sequences." [PMID:18987810, url:https\://www.ncbi.nlm.nih.gov/probe/docs/techpcr/]
 is_a: ECO:0000073 ! experimental genomic evidence
 
 [Term]
@@ -628,6 +661,7 @@ creation_date: 2009-03-20T12:00:17Z
 id: ECO:0000089
 name: restriction landmark genomic scanning evidence
 alt_id: ECO:0001125
+def: "A type of DNA detection assay evidence resulting from the use of restriction enzymes for direct end-labeling of DNA (creating landmarks), followed by high-resolution two-dimensional electrophoresis to visualize the landmarks." [PMID:8388788]
 synonym: "restriction landmark genome scanning evidence" EXACT []
 synonym: "RLGS evidence" EXACT []
 is_a: ECO:0005519 ! DNA detection assay evidence
@@ -643,19 +677,20 @@ is_a: ECO:0000087 ! immunolocalization evidence
 [Term]
 id: ECO:0000092
 name: epitope-tagged protein immunolocalization evidence
-def: "Used when an annotation is made based on immunolocalization of recombinant proteins fused with epitopes that are recognized by antibodies." [TAIR:TED]
+def: "A type of immunolocalization evidence in which recombinant proteins fused with epitopes are recognized by antibodies." [TAIR:TED]
 synonym: "IDA: immunolocalization of epitope-tagged protein" RELATED []
 is_a: ECO:0000087 ! immunolocalization evidence
 
 [Term]
 id: ECO:0000093
 name: oligonucleotide microarray evidence
+def: "A type of array experiment evidence resulting from the hybridization of a nucleic acid sample to a very large set of oligonucleotide probes, which have been attached individually in columns and rows to a solid support, to determine a base sequence, or to detect variations in a gene sequence, gene expression, or for gene mapping." [ECO:RCT]
 is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
 id: ECO:0000094
 name: biological assay evidence
-def: "Direct assay evidence that is derived by using a living organism to measure the effect of a substance, factor, or condition." [ECO:MCC, TAIR:TED]
+def: "A type of direct assay evidence based on the effect of a substance, factor, or condition as measured in a living organism." [ECO:MCC, TAIR:TED]
 synonym: "IDA: bioassay" RELATED []
 is_a: ECO:0000002 ! direct assay evidence
 
@@ -683,43 +718,48 @@ is_a: ECO:0000002 ! direct assay evidence
 [Term]
 id: ECO:0000097
 name: cDNA microarray evidence
+def: "A type of array experiment evidence resulting from the use of a collection of cDNA molecules spotted in a 2D array onto a glass slide or other membrane for hybridization." [REO:0000924, url:https\://www.ncbi.nlm.nih.gov/mesh?Db=mesh&term=Oligonucleotide+Array+Sequence+Analysis]
 is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
 id: ECO:0000098
 name: in situ hybridization evidence
-def: "Used when an annotation is made based on a method that hybridizes a labeled nucleic acid probe to a tissue or cell specimen in which the cellular structures are still intact. Depending on the label and protocol used, the probe may detect complementary DNA or RNA by hybridizing specifically to that gene or sequence." [TAIR:TED]
+def: "A type of nucleic acid hybridization evidence based on localization of a specific segment of DNA or RNA by the application of a complementary strand of nucleic acid to which a reporter molecule is attached." [url:https\://www.ncbi.nlm.nih.gov/probe/docs/techish/]
 synonym: "IDA: in situ hybridization" RELATED []
 is_a: ECO:0000026 ! nucleic acid hybridization evidence
 
 [Term]
 id: ECO:0000100
 name: fractionation evidence
+def: "A type of direct assay evidence resulting from the separation of various cell components while preserving their individual functions." [NBK:26936, url:https\://www.ncbi.nlm.nih.gov/books/NBK26936/]
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
 id: ECO:0000101
 name: Affymetrix array experiment evidence
+def: "A type of array experiment evidence resulting from the use of a proprietary Affymetrix array which uses the proprietary GeneChip System for analyzing complex genetic information." [ERO:0001265]
 is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
 id: ECO:0000102
 name: co-fractionation evidence
-def: "Used when an annotation is made based on fractionation of a protein with other compounds, factors, or macromolecules." [TAIR:TED]
+def: "A type of fractionation evidence resulting from a protein fractionated with other compounds, factors, or macromolecules." [TAIR:TED]
 synonym: "IDA: co-fractionation" RELATED []
 is_a: ECO:0000100 ! fractionation evidence
 
 [Term]
 id: ECO:0000104
 name: microarray RNA expression level evidence
-def: "Used when an annotation is made based on levels of RNA expression determined by microarray experiment." [TAIR:TED]
+def: "A type of expression microarray evidence in which levels of RNA expression are determined by simultaneous measurement of tens of thousands of mRNA transcripts on a microarray." [PMID:20967621]
 synonym: "IEP: transcript levels (e.g. microarray data)" RELATED []
+synonym: "REM evidence" EXACT []
 is_a: ECO:0000048 ! transcript expression level evidence
 is_a: ECO:0000058 ! expression microarray evidence
 
 [Term]
 id: ECO:0000105
 name: Nimblegen array evidence
+def: "A type of array experiment evidence resulting from the use of a proprietary NimbleGen array for measuring gene expression levels." [PMID:15607417, url:https\://roche-biochem.jp/pdf/products/microarray/user_guide/SeqCap/SeqCap_UserGuide_Delivery_ver3.0.pdf]
 is_a: ECO:0000055 ! array experiment evidence
 
 [Term]
@@ -733,7 +773,7 @@ is_a: ECO:0000048 ! transcript expression level evidence
 [Term]
 id: ECO:0000108
 name: reverse transcription polymerase chain reaction transcription evidence
-def: "Used when an annotation is made based on levels of RNA expression determined by an RT-PCR experiment (quantitative or otherwise)." [TAIR:TED]
+def: "A type of polymerase chain reaction evidence in which levels of RNA expression are determined through RT-PCR (quantitative or otherwise)." [TAIR:TED]
 synonym: "IEP: transcript levels (e.g. RT-PCR)" RELATED []
 synonym: "RT-PCR transcription evidence" EXACT []
 is_a: ECO:0000048 ! transcript expression level evidence
@@ -779,7 +819,8 @@ is_a: ECO:0000010 ! protein expression evidence
 [Term]
 id: ECO:0000116
 name: differential hybridization evidence
-def: "Used when an annotation is made based on results of a differential hybridization experiment that demonstrates expression of an RNA under one condition and not another." [TAIR:TED]
+def: "A type of nucleic acid hybridization evidence in which preferential or exclusive expression of genes in one cell type or tissue is compared to another cell type or tissue when mRNA from each sample is reverse transcribed, labeled, and hybridized to a cDNA library to compare hybridization patterns." [PMID:14668817]
+comment: Differential hybridization identifies differentially expressed cloned genes. Two different mRNA-derived probes are used to demonstrate RNA expression under a specific condition.
 synonym: "IEP: differential hybridization" RELATED []
 is_a: ECO:0000009 ! transcript expression evidence
 is_a: ECO:0000026 ! nucleic acid hybridization evidence
@@ -787,7 +828,8 @@ is_a: ECO:0000026 ! nucleic acid hybridization evidence
 [Term]
 id: ECO:0000118
 name: subtractive hybridization evidence
-def: "Used when an annotation is made based on results of a subtractive hybridization experiment that demonstrates expression of an RNA under one condition and not another." [TAIR:TED]
+def: "A type of nucleic acid hybridization evidence in which preferential or exclusive expression of genes in one cell type or tissue are compared to another cell type or tissue when denatured ds-cDNA from the two samples are hybridized, and the common sequences are 'subtracted'." [PMID:11298187]
+comment: Subtractive hybridization is used for isolation and identification of transcripts involving the removal of any sequences present in the control from the test probe to detect only transcripts present in the sample. The method is PCR-based for the comparison of two cDNA libraries.
 synonym: "IEP: subtractive hybridization" RELATED []
 is_a: ECO:0000009 ! transcript expression evidence
 is_a: ECO:0000026 ! nucleic acid hybridization evidence
@@ -795,23 +837,26 @@ is_a: ECO:0000026 ! nucleic acid hybridization evidence
 [Term]
 id: ECO:0000120
 name: over expression analysis evidence
-def: "Used when an annotation is made based on the analysis of the phenotype of a wild-type or mutant transgenic organism that has been engineered to overexpress the gene product in question." [TAIR:TED]
+def: "A type of experimental phenotypic evidence in which a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product." [PMID:22419077]
 synonym: "IMP: analysis of overexpression/ectopic expression phenotype" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000122
 name: protein localization evidence
+def: "A type of protein assay evidence where sub-cellular localization of a protein within a cell is determined." [GO:0008104, url:http\://journals.plos.org/plosone/article?id=10.1371/journal.pone.0019937]
 is_a: ECO:0000039 ! protein assay evidence
 
 [Term]
 id: ECO:0000124
 name: fusion protein localization evidence
+def: "A type of protein localization evidence resulting from the fusion of a protein of interest to a labeling protein which has enzymatic activity or fluorescence properties." [MI:0240]
 is_a: ECO:0000122 ! protein localization evidence
 
 [Term]
 id: ECO:0000126
 name: green fluorescent protein fusion protein localization evidence
+def: "A type of fusion protein localization evidence resulting from the labeling of a protein of interest with green fluorescent protein (GFP) from the jellyfish Aequorea victoria." [PMID:9759496]
 synonym: "GFP fusion protein localization evidence" EXACT []
 synonym: "IDA: localization of GFP/YFP fusion protein" RELATED []
 is_a: ECO:0000124 ! fusion protein localization evidence
@@ -819,6 +864,7 @@ is_a: ECO:0000124 ! fusion protein localization evidence
 [Term]
 id: ECO:0000128
 name: yellow fluorescent protein fusion protein localization evidence
+def: "A type of fusion protein localization evidence resulting from the labeling of a protein of interest with yellow fluorescent protein (YFP), which was created by mutating green fluorescent protein (GFP) of the Aequorea victoria." [MI:0368, url:http\://www.jbc.org/content/276/31/29188.long]
 synonym: "IDA: localization of GFP/YFP fusion protein" RELATED []
 synonym: "YFP fusion protein localization evidence" EXACT []
 is_a: ECO:0000124 ! fusion protein localization evidence
@@ -826,6 +872,7 @@ is_a: ECO:0000124 ! fusion protein localization evidence
 [Term]
 id: ECO:0000130
 name: beta-glucuronidase fusion protein localization evidence
+def: "A type of fusion protein localization evidence resulting from the targeted insertion of the beta-glucuronidase (GUS) coding gene as a reporter gene for the localization of a particular gene product." [ECO:RCT]
 synonym: "GUS fusion protein localization evidence" EXACT []
 synonym: "GUS staining evidence" NARROW []
 synonym: "IDA: localization of GUS fusion protein" RELATED []
@@ -834,23 +881,27 @@ is_a: ECO:0000124 ! fusion protein localization evidence
 [Term]
 id: ECO:0000132
 name: beta-galactosidase fusion protein localization evidence
+def: "A type of fusion protein localization evidence resulting from the targeted insertion of the beta-galactosidase coding gene (lacZ) into a specific gene to create a beta-galactosidase-tagged fusion protein." [PMID:23681629]
 synonym: "LacZ fusion protein localization evidence" EXACT []
 is_a: ECO:0000124 ! fusion protein localization evidence
 
 [Term]
 id: ECO:0000134
 name: transport assay evidence
+def: "A type of direct assay evidence resulting from the activity assessment of transport proteins." [PMID:18401524]
 synonym: "IDA: transport assay" RELATED []
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
 id: ECO:0000136
 name: nucleic acid binding evidence
+def: "A type of affinity evidence resulting from the binding of a molecule to a nucleic acid." [GO:0003676]
 is_a: ECO:0000023 ! affinity evidence
 
 [Term]
 id: ECO:0000138
 name: ribohomopolymer binding assay evidence
+def: "A type of nucleic acid binding evidence resulting from an enzyme displaying binding activity to specific ribohomopolymer." [PMC:102612]
 synonym: "IDA: ribohomopolymer binding assay" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
 
@@ -865,19 +916,20 @@ is_a: ECO:0000325 ! chromatography evidence
 [Term]
 id: ECO:0000142
 name: protein:ion binding evidence
+def: "A type of protein binding evidence resulting from a metal ion binding to a protein at a specific binding site." [PMID:2377604]
 is_a: ECO:0000024 ! protein binding evidence
 
 [Term]
 id: ECO:0000144
 name: Southwestern blot evidence
-def: "Used when an annotation is made based on a Southwestern blot analysis, which detects DNA binding of proteins using labeled DNA as probe hybridizing to electrophoretically separated proteins." [TAIR:TED]
+def: "A type of nucleic acid binding evidence in which DNA-protein binding is detected using labeled DNA as probes, hybridized to electrophoretically separated proteins." [ECO:RCT, TAIR:TED]
 synonym: "IDA: Southwestern analysis" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
 
 [Term]
 id: ECO:0000146
 name: Northwestern blot evidence
-def: "Used when an annotation is made based on a Northwestern blot analysis, which detects RNA binding of proteins using labeled RNA as probe hybridizing to electrophoretically separated proteins." [TAIR:TED]
+def: "A type of nucleic acid binding evidence in which RNA-protein binding is detected using labeled RNA as probes, hybridized to electrophoretically separated proteins." [ECO:RCT, TAIR:TED]
 synonym: "IDA: Northwestern analysis" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
 
@@ -890,12 +942,14 @@ is_obsolete: true
 [Term]
 id: ECO:0000150
 name: in vitro transcription reconstitution assay evidence
+def: "A type of reconstitution assay evidence resulting from the use of reconstituted polymerase transcription systems to investigate RNA synthesis." [PMID:9237163]
 synonym: "IDA: in vitro reconstitution assay with recombinant protein" RELATED []
 is_a: ECO:0000003 ! reconstitution assay evidence
 
 [Term]
 id: ECO:0000152
 name: in vitro recombinant protein transcription reconstitution assay evidence
+def: "A type of in vitro transcription reconstitution assay evidence resulting from the use of recombinant proteins in preparation of a fully-defined transcription system." [PMID:9237165]
 synonym: "IDA: in vitro reconstitution assay with recombinant protein" RELATED []
 is_a: ECO:0000150 ! in vitro transcription reconstitution assay evidence
 
@@ -909,6 +963,7 @@ is_a: ECO:0000010 ! protein expression evidence
 [Term]
 id: ECO:0000156
 name: protein separation evidence
+def: "A type of fractionation evidence resulting from the isolation of a single type of protein from a complex mixture." [ERO:0000526]
 is_a: ECO:0000100 ! fractionation evidence
 
 [Term]
@@ -926,7 +981,8 @@ is_a: ECO:0000156 ! protein separation evidence
 [Term]
 id: ECO:0000162
 name: heterologous system uptake evidence
-def: "Used when an annotation is made based on small molecule update assays carried out in a heterologous system that contains a recombinant protein." [TAIR:TED]
+def: "A type of transport assay evidence in which the uptake mechanism of a transporter is investigated in a cell that does not normally express that protein." [doi:10.1146/annurev.pp.46.060195.002223, ECO:RCT]
+comment: The transporter is a recombinant protein.
 synonym: "IDA: uptake assay in heterologous system" RELATED []
 is_a: ECO:0000134 ! transport assay evidence
 
@@ -947,46 +1003,50 @@ is_a: ECO:0005576 ! voltage clamp recording evidence
 [Term]
 id: ECO:0000168
 name: transcription assay evidence
+def: "A type of direct assay evidence resulting from the detection and quantification of transcribed RNA." [MeSH:D014158, url:https\://bmcmolbiol.biomedcentral.com/articles/10.1186/1471-2199-15-7]
 is_a: ECO:0000002 ! direct assay evidence
 
 [Term]
 id: ECO:0000170
 name: transcriptional activation assay
-def: "Used when an annotation is made based on assays that show transcriptional activation of a specific target reporter gene." [TAIR:TED]
+def: "A type of transcription assay evidence in which sequence-specific binding proteins that increase transcription of a specific target gene or genes are identified, quantified, and/or analyzed." [url:http\://smcg.ccg.unam.mx/enp-unam/05-TranscripYRegulacion/transcription.pdf]
 synonym: "IDA: transcriptional activation assay" RELATED []
 is_a: ECO:0000168 ! transcription assay evidence
 
 [Term]
 id: ECO:0000172
 name: biochemical trait analysis evidence
-def: "Used when an annotation is made based on the analysis of a biochemical aspect of a mutant phenotype; for example, the accumulation of a biosynthetic intermediate." [TAIR:TED]
+def: "A type of experimental phenotypic evidence in which the biochemical aspect of a mutation is analyzed." [ECO:RCT]
+comment: For example, the accumulation of a biosynthetic intermediate.
 synonym: "IMP: analysis of biochemical trait" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
 id: ECO:0000174
 name: mutant physiological response evidence
-def: "Used when an annotation is made based on the physiological response of a mutant to an external stimulus; for example, abnormal growth of the root in response to gravity, delay in flowering in response to varying light conditions." [TAIR:TED]
+def: "A type of mutant phenotype evidence in which the physiological response of a mutant when presented with an external stimulus is determined." [ECO:RCT]
+comment: Examples include: abnormal growth of the root in response to gravity, delay in flowering in response to varying light conditions.
 synonym: "IMP: analysis of physiological response" RELATED []
 is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000176
 name: mutant visible phenotype evidence
-def: "Used when an annotation is made based on the visual examination of a mutant phenotype; for example, abnormalities in organism morphology." [TAIR:TED]
+def: "A type of mutant phenotype evidence in which traits arising from a mutation are visually examined." [ECO:RCT]
 synonym: "IMP: analysis of visible trait" RELATED []
 is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000177
 name: genomic context evidence
-def: "An evidence type that is based on the location of a gene, which gives rise to a gene product, within the genome." [ECO:go, ECO:MCC]
+def: "A type of evidence in which the location of the gene within the genome provides insight into its function, or provides evolutionary insight." [PMID:21609955]
 comment: This type of evidence might include identity of neighboring genes, operon structure, synteny, phylogenetic analysis, or other whole-genome analysis.
 is_a: ECO:0000000 ! evidence
 
 [Term]
 id: ECO:0000178
 name: in vivo assay evidence
+def: "A type of biological assay evidence resulting from an assay performed on or in an organism." [ECO:RCT, url:https\://www.cancer.gov/publications/dictionaries/cancer-terms?cdrid=46352]
 is_a: ECO:0000094 ! biological assay evidence
 
 [Term]
@@ -1004,16 +1064,20 @@ is_a: ECO:0000006 ! experimental evidence
 [Term]
 id: ECO:0000181
 name: in vitro assay evidence
+alt_id: ECO:0005013
+def: "A type of biological assay evidence resulting from an assay performed outside the living organism, in an artificial setting." [ECO:RCT, url:https\://www.cancer.gov/publications/dictionaries/cancer-terms?cdrid=45733]
 is_a: ECO:0000094 ! biological assay evidence
 
 [Term]
 id: ECO:0000182
 name: in vitro culture assay evidence
+def: "A type of biological assay evidence resulting from a sample of microorganisms or living tissue grown in a medium." [ECO:RCT]
 is_a: ECO:0000094 ! biological assay evidence
 
 [Term]
 id: ECO:0000183
 name: cell-free assay evidence
+def: "A type of in vitro assay evidence resulting from studies in which the components are derived from resting, nonstimulated cells, therefore all reactions occur in vitro." [PMID:18453125]
 synonym: "in vitro assay" BROAD []
 is_a: ECO:0000181 ! in vitro assay evidence
 
@@ -1028,7 +1092,8 @@ is_a: ECO:0000020 ! specific protein inhibition evidence
 id: ECO:0000200
 name: sequence alignment evidence
 alt_id: ECO:00000057
-def: "A type of sequence similarity evidence where a sequence alignment is the basis for making an annotation, but only when the alignment has been manually reviewed; or if the information is in a published paper, the authors have manually reviewed the evidence. Such alignments may be pairwise alignments or multiple alignments." [url:http\://www.geneontology.org/GO.evidence.shtml]
+def: "A type of sequence similarity evidence in which an annotation is made based on a manually-reviewed or published sequence alignment" [url:http\://www.geneontology.org/GO.evidence.shtml]
+comment: Such alignments may be pairwise alignments or multiple alignments.
 is_a: ECO:0000044 ! sequence similarity evidence
 created_by: mchibucos
 creation_date: 2010-03-18T12:21:31Z
@@ -1037,7 +1102,8 @@ creation_date: 2010-03-18T12:21:31Z
 id: ECO:0000201
 name: sequence orthology evidence
 alt_id: ECO:00000060
-def: "Orthology is a relationship between genes in different species indicating that the genes derive from a common ancestor. Orthology is established by multiple criteria generally including amino acid and/or nucleotide sequence comparisons and one or more of the following: phylogenetic analysis, coincident expression, conserved map location, functional complementation, immunological cross-reaction, similarity in subcellular localization, subunit structure, substrate specificity, and response to specific inhibitors." [url:http\://www.geneontology.org/GO.evidence.shtml]
+def: "A type of sequence similarity evidence in which orthology is established by multiple criteria, including amino acid and/or nucleotide sequence comparisons and one or more of the following: phylogenetic analysis, coincident expression, conserved map location, functional complementation, immunological cross-reaction, similarity in subcellular localization, subunit structure, substrate specificity, and response to specific inhibitors." [url:http\://www.geneontology.org/GO.evidence.shtml]
+comment: Orthology is a relationship between genes in different species indicating that the genes derive from a common ancestor.
 synonym: "ortholog evidence" RELATED []
 is_a: ECO:0000044 ! sequence similarity evidence
 created_by: mchibucos
@@ -1047,7 +1113,7 @@ creation_date: 2010-03-18T12:30:06Z
 id: ECO:0000202
 name: match to sequence model evidence
 alt_id: ECO:00000063
-def: "Sequence similarity evidence that is based on a sequence-based statistical model that predicts the function of a gene product." [ECO:MCC, url:http\://www.geneontology.org/GO.evidence.shtml]
+def: "A type of sequence similarity evidence in which the function of a gene product is predicted based on a sequence-based statistical model." [ECO:MCC] {comment="url:http://www.geneontology.org/GO.evidence.shtml"}
 comment: Used when evidence from any kind of statistical model of a sequence or group of sequences is used to make a prediction about the function of a protein or RNA. Examples of relevant evidence are: Hidden Markov Models, PROSITE motifs, and tools such as tRNASCAN.
 is_a: ECO:0000044 ! sequence similarity evidence
 created_by: mchibucos
@@ -1093,7 +1159,7 @@ creation_date: 2010-08-06T04:48:24Z
 [Term]
 id: ECO:0000207
 name: nucleotide BLAST evidence
-def: "BLAST evidence from aligning nucleotide sequence with nucleotide sequence." [ECO:MCC]
+def: "A type of BLAST evidence in which nucleotide sequences are aligned." [ECO:MCC]
 is_a: ECO:0000206 ! BLAST evidence
 created_by: mchibucos
 creation_date: 2010-08-06T04:49:58Z
@@ -1101,7 +1167,7 @@ creation_date: 2010-08-06T04:49:58Z
 [Term]
 id: ECO:0000208
 name: protein BLAST evidence
-def: "BLAST evidence from aligning amino acid or translated nucleotide sequence with amino acid or translated nucleotide sequence." [ECO:MCC]
+def: "A type of BLAST evidence in which amino acid or translated nucleotide sequences are aligned." [ECO:MCC]
 is_a: ECO:0000206 ! BLAST evidence
 created_by: mchibucos
 creation_date: 2010-08-06T04:50:45Z
@@ -1121,7 +1187,7 @@ creation_date: 2010-08-06T04:55:21Z
 [Term]
 id: ECO:0000210
 name: nucleotide BLAST evidence used in automatic assertion
-def: "Nucleotide BLAST evidence that is used in an automatic assertion." [ECO:MCC]
+def: "A type of nucleotide BLAST evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000207 ! nucleotide BLAST evidence
 is_a: ECO:0000209 {is_inferred="true"} ! BLAST evidence used in automatic assertion
 intersection_of: ECO:0000207 ! nucleotide BLAST evidence
@@ -1133,7 +1199,7 @@ creation_date: 2010-08-06T05:09:51Z
 [Term]
 id: ECO:0000211
 name: protein BLAST evidence used in automatic assertion
-def: "Protein BLAST evidence that is used in an automatic assertion." [ECO:MCC]
+def: "A type of protein BLAST evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000208 ! protein BLAST evidence
 is_a: ECO:0000209 {is_inferred="true"} ! BLAST evidence used in automatic assertion
 intersection_of: ECO:0000208 ! protein BLAST evidence
@@ -1215,7 +1281,7 @@ creation_date: 2010-11-12T04:20:02Z
 [Term]
 id: ECO:0000219
 name: nucleotide sequencing assay evidence
-def: "A sequencing assay result for a biopolymer that comprises nucleotides." [ECO:MCC]
+def: "A type of sequencing assay that determines the sequence of a biopolymer comprised of nucleotides." [ECO:MCC]
 synonym: "DNA sequencing" RELATED [OBI:0000626]
 is_a: ECO:0000220 ! sequencing assay evidence
 created_by: mchibucos
@@ -1232,8 +1298,9 @@ creation_date: 2010-11-15T01:44:45Z
 [Term]
 id: ECO:0000221
 name: high throughput nucleotide sequencing assay evidence
-def: "A nucleotide sequencing assay result that is derived from a parallelized sequencing technique." [ECO:MCC]
+def: "A type of nucleotide sequencing assay evidence in which a sequence is derived from a parallelized sequencing technique." [ECO:MCC]
 comment: Typically thousands to millions of reads are produced in parallel.
+synonym: "next generation sequencing evidence" RELATED []
 is_a: ECO:0000219 ! nucleotide sequencing assay evidence
 created_by: mchibucos
 creation_date: 2010-11-15T02:19:34Z
@@ -1241,7 +1308,7 @@ creation_date: 2010-11-15T02:19:34Z
 [Term]
 id: ECO:0000222
 name: Illumina sequencing evidence
-def: "A high throughput nucleotide sequencing result derived by Illumina (Solexa) sequencing technology." [ECO:MCC]
+def: "A type of high throughput nucleotide sequencing evidence in which sequence is determined through hybridization of adaptor-ligated DNA to a glass slide on which each fragment is simultaneously clonally amplified, followed by progressive rounds of base incorporation with fluorescently-tagged nucleotides, washing, imaging, and cleavage." [OBI:0000724, PMID:26000844]
 comment: In Illumina sequencing technology, adapters are ligated onto the ends of randomly fragmented DNA. After single-stranded fragments are bound to the inside surface of a flow cell channel, they undergo in-place bridge PCR amplification. To begin the sequencing cycle, labeled reversible terminators, primers and DNA polymerase are added, followed by laser excitation of the fluorescent label and high resolution scanning. After non-incorporated nucleotides are washed away and the dye is chemically removed, the next cycle repeats with four labeled reversible terminators, primers and DNA polymerase, again followed by imaging.
 synonym: "Solexa sequencing result" RELATED [OBI:0000724]
 is_a: ECO:0000221 ! high throughput nucleotide sequencing assay evidence
@@ -1251,8 +1318,8 @@ creation_date: 2010-11-15T02:38:03Z
 [Term]
 id: ECO:0000223
 name: 454 pyrosequencing evidence
-def: "A high throughput nucleotide sequencing result derived by 454 pyrosequencing technology." [ECO:MCC]
-comment: 454 pyrosequencing technology amplifies individual DNA fragments inside water droplets within an oil solution (emulsion PCR). Within each droplet, a single DNA template is attached to a single primer-coated bead. Each bead is subsequently captured in a picolitre well within the sequencing machine. A luciferase-based readout system is used to identify individual nucleotides added to the nascent DNA.
+def: "A type of high throughput nucleotide sequencing evidence in which the sequence for a ssDNA is determined by addition of primers and then nucleotides, one base pair at a time (which generate a specific fluorescence), to the target strand." [EFO:0005016]
+comment: 454 pyrosequencing technology amplifies individual DNA fragments inside water droplets within an oil solution (emulsion PCR). Within each droplet, a single DNA template is attached to a single primer-coated bead. Each bead is subsequently captured in a picolitre well within the sequencing machine. A luciferase-based readout system is used to identify individual nucleotides added to the nascent DNA.\n\nThe target strand is usually prepared by fragmentation, adaptor ligation, and amplification by emulsion PCR.
 synonym: "pyrosequencing" BROAD [OBI:0000730]
 is_a: ECO:0000221 ! high throughput nucleotide sequencing assay evidence
 created_by: mchibucos
@@ -1261,8 +1328,8 @@ creation_date: 2010-11-15T03:50:14Z
 [Term]
 id: ECO:0000224
 name: SOLiD sequencing evidence
-def: "A high throughput nucleotide sequencing result derived by SOLiD sequencing technology." [ECO:MCC, OBI:0000706]
-comment: SOLiD sequencing technology is based on sequencing by ligation. After library preparation, emulsion PCR and bead enrichment are performed, including 3' modification of templates on selected beads to allow covalent bonding to a slide. 3' modified beads are attached to a glass slide and primers are added. Four fluorescently labeled di-base probes are added and multiple cycles of ligation, detection and cleavage are performed. The number of cycles determines read length. After a number of ligation cycles, the extension product is removed and another round of ligation cycles is performed with a new primer complimentary to the n-1 position of the template. Five rounds of primer reset are performed for each sequence tag.
+def: "A type of high throughput nucleotide sequencing evidence in which sequence is determined through rounds of ligation-based sequencing with fluorescently-labeled Di-base probes and cleavage, after which the template is reset, with a primer offset by one base, for subsequent rounds of ligation." [OBI:0000706]
+comment: SOLiD sequencing technology is based on sequencing by ligation. After library preparation, emulsion PCR and bead enrichment are performed, including 3' modification of templates on selected beads to allow covalent bonding to a slide. 3' modified beads are attached to a glass slide and primers are added. Four fluorescently labeled di-base probes are added and multiple cycles of ligation, detection and cleavage are performed. The number of cycles determines read length. After a number of ligation cycles, the extension product is removed and another round of ligation cycles is performed with a new primer complimentary to the n-1 position of the template. Five rounds of primer reset are performed for each sequence tag.\n\nSamples are prepared by fragmentation of a sample library, adaptor ligation, emulsion PCR, and attachment of resultant beads to glass slides.
 is_a: ECO:0000221 ! high throughput nucleotide sequencing assay evidence
 created_by: mchibucos
 creation_date: 2010-11-15T04:17:41Z
@@ -1270,8 +1337,8 @@ creation_date: 2010-11-15T04:17:41Z
 [Term]
 id: ECO:0000225
 name: chain termination sequencing evidence
-def: "A nucleotide sequencing assay result derived by the chain termination sequencing method." [ECO:MCC, OBI:0000695]
-comment: Chain termination sequencing, also called Sanger sequencing after its developer, uses dideoxynucleotide triphosphates (ddNTPs) as DNA chain terminators. Single-stranded DNA template, DNA primer, DNA polymerase, fluorescently or radioactively labeled nucleotides, and one of four ddNTPs are added together in each of four separate sequencing reactions. The synthesized and labeled DNA fragments from each of the four reactions are denatured, separated by size by gel electrophoresis, and visualized by autoradiography or UV light.
+def: "A type of nucleotide sequencing assay in which DNA sequence is determined by addition of a primed DNA template to a reaction mixture, followed by addition of DNA polymerase, deoxynucleosidetriphosphates (dNTPs - one of which may be radiolabeled), and one of four di-deoxynucleotidetriphosphates (ddNTPs), after which DNA elongation is terminated and the DNA is separated by size and imaged." [OBI:0000695]
+comment: Chain termination sequencing, also called Sanger sequencing after its developer, uses dideoxynucleotide triphosphates (ddNTPs) as DNA chain terminators. Single-stranded DNA template, DNA primer, DNA polymerase, fluorescently or radioactively labeled nucleotides, and one of four ddNTPs are added together in each of four separate sequencing reactions. The synthesized and labeled DNA fragments from each of the four reactions are denatured, separated by size by gel electrophoresis, and visualized by autoradiography or UV light.\n\nThe ddNTPs lack an OH group so the next dNTP cannot be attached, causing chain termination.
 synonym: "dye terminator sequencing" EXACT []
 synonym: "Sanger sequencing" EXACT []
 is_a: ECO:0000219 ! nucleotide sequencing assay evidence
@@ -1302,7 +1369,7 @@ creation_date: 2010-11-16T05:02:00Z
 [Term]
 id: ECO:0000228
 name: chromatin immunoprecipitation-qPCR evidence
-def: "A chromatin immunoprecipitation (ChIP) evidence that uses quantitative polymerase chain reaction (qPCR) for DNA detection." [ECO:MCC]
+def: "A type of chromatin immunoprecipitation evidence in which protein-DNA interactions are investigated at known genomic binding sites through a process of ChIP, DNA purification, and finally quantitative polymerase chain reaction (qPCR) for DNA detection." [url:https\://www.diagenode.com/applications/chip-qpcr]
 synonym: "ChIP-qPCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
 created_by: mchibucos
@@ -1437,7 +1504,7 @@ creation_date: 2010-11-30T03:22:25Z
 [Term]
 id: ECO:0000240
 name: anatomical perturbation evidence
-def: "Experimental phenotypic evidence where a structural feature of an organism is disrupted." [ECO:MCC]
+def: "A type of experimental phenotypic evidence in which the phenotype of an organism is observed after the disruption of a structural feature." [ECO:MCC]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2010-12-06T12:24:16Z
@@ -1445,7 +1512,7 @@ creation_date: 2010-12-06T12:24:16Z
 [Term]
 id: ECO:0000241
 name: environmental perturbation evidence
-def: "Experimental phenotypic evidence where the extra-organismal context of an organism is modified." [ECO:MCC]
+def: "A type of experimental phenotypic evidence in which the phenotype of an organism is observed after modification of the extra-organismal context." [ECO:MCC]
 comment: Many environmental factors are subject to modification, such as temperature, pressure, humidity, radiation, and so forth.
 synonym: "mechanical constraint evidence" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
@@ -1517,7 +1584,7 @@ creation_date: 2010-12-09T02:37:54Z
 [Term]
 id: ECO:0000247
 name: sequence alignment evidence used in manual assertion
-def: "Sequence alignment evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of sequence alignment evidence that is used in a manual assertion." [ECO:RCT]
 subset: valid_with_gene
 subset: valid_with_protein
 synonym: "inferred from sequence alignment" EXACT [GOECO:ISA]
@@ -1535,7 +1602,7 @@ creation_date: 2010-12-09T05:12:27Z
 [Term]
 id: ECO:0000248
 name: sequence alignment evidence used in automatic assertion
-def: "Sequence alignment evidence that is used in an automatic assertion." [ECO:MCC]
+def: "A type of sequence alignment evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000200 ! sequence alignment evidence
 is_a: ECO:0000249 {is_inferred="true"} ! sequence similarity evidence used in automatic assertion
 intersection_of: ECO:0000200 ! sequence alignment evidence
@@ -1547,7 +1614,7 @@ creation_date: 2010-12-09T05:12:27Z
 [Term]
 id: ECO:0000249
 name: sequence similarity evidence used in automatic assertion
-def: "Sequence similarity evidence that is used in an automatic assertion." [ECO:MCC]
+def: "A type of sequence similarity evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000044 ! sequence similarity evidence
 is_a: ECO:0000251 {is_inferred="true"} ! similarity evidence used in automatic assertion
 intersection_of: ECO:0000044 ! sequence similarity evidence
@@ -1578,7 +1645,7 @@ creation_date: 2010-12-09T05:22:30Z
 [Term]
 id: ECO:0000251
 name: similarity evidence used in automatic assertion
-def: "Similarity evidence that is used in an automatic assertion." [ECO:MCC]
+def: "A type of similarity evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000041 ! similarity evidence
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 intersection_of: ECO:0000041 ! similarity evidence
@@ -1590,7 +1657,7 @@ creation_date: 2010-12-09T05:28:12Z
 [Term]
 id: ECO:0000252
 name: similarity evidence used in manual assertion
-def: "Similarity evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of similarity evidence that is used in a manual assertion." [ECO:RCT]
 subset: go_groupings
 is_a: ECO:0000041 ! similarity evidence
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
@@ -1603,7 +1670,7 @@ creation_date: 2010-12-09T05:28:12Z
 [Term]
 id: ECO:0000253
 name: genetic similarity evidence used in manual assertion
-def: "Genetic similarity evidence that is used in a manual assertion." [ECO:MCC]
+def: "A type of genetic similarity evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000051 ! genetic similarity evidence
 is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual assertion
 intersection_of: ECO:0000051 ! genetic similarity evidence
@@ -1615,7 +1682,7 @@ creation_date: 2010-12-10T01:42:44Z
 [Term]
 id: ECO:0000254
 name: genetic similarity evidence used in automatic assertion
-def: "Genetic similarity evidence that is used in an automatic assertion." [ECO:MCC]
+def: "A type of genetic similarity evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000051 ! genetic similarity evidence
 is_a: ECO:0000251 {is_inferred="true"} ! similarity evidence used in automatic assertion
 intersection_of: ECO:0000051 ! genetic similarity evidence
@@ -1627,7 +1694,7 @@ creation_date: 2010-12-10T01:42:44Z
 [Term]
 id: ECO:0000255
 name: match to sequence model evidence used in manual assertion
-def: "A match to sequence model evidence that is employed in a manual assertion." [ECO:MCC]
+def: "A type of match to sequence model evidence that is used in a manual assertion." [ECO:RCT]
 synonym: "inferred from sequence model" EXACT [GOECO:ISM]
 synonym: "ISM" EXACT [GOECO:ISM]
 xref: GO_REF:0000011 "Hidden Markov Models (TIGR)"
@@ -1644,7 +1711,7 @@ creation_date: 2010-12-10T02:26:35Z
 [Term]
 id: ECO:0000256
 name: match to sequence model evidence used in automatic assertion
-def: "A match to sequence model evidence that is employed in an automatic assertion." [ECO:MCC]
+def: "A type of match to sequence model evidence that is used in an automatic assertion." [ECO:RCT]
 xref: GO_REF:0000002 "Gene Ontology annotation through association of InterPro records with GO terms."
 xref: GO_REF:0000107 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl"
 is_a: ECO:0000202 ! match to sequence model evidence
@@ -1658,7 +1725,7 @@ creation_date: 2010-12-10T02:26:35Z
 [Term]
 id: ECO:0000257
 name: motif similarity evidence used in manual assertion
-def: "Motif similarity evidence that is employed in a manual assertion." [ECO:MCC]
+def: "A type of motif similarity evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000028 ! motif similarity evidence
 is_a: ECO:0000255 {is_inferred="true"} ! match to sequence model evidence used in manual assertion
 intersection_of: ECO:0000028 ! motif similarity evidence
@@ -1670,7 +1737,7 @@ creation_date: 2010-12-10T02:44:34Z
 [Term]
 id: ECO:0000258
 name: motif similarity evidence used in automatic assertion
-def: "Motif similarity evidence that is employed in an automatic assertion." [ECO:MCC]
+def: "A type of motif similarity evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000028 ! motif similarity evidence
 is_a: ECO:0000256 {is_inferred="true"} ! match to sequence model evidence used in automatic assertion
 intersection_of: ECO:0000028 ! motif similarity evidence
@@ -1682,7 +1749,7 @@ creation_date: 2010-12-10T02:44:34Z
 [Term]
 id: ECO:0000259
 name: match to InterPro member signature evidence used in automatic assertion
-def: "A match to InterPro member signature evidence that is employed in an automatic assertion." [ECO:MCC]
+def: "A type of match to InterPro member signature evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000029 ! match to InterPro member signature evidence
 is_a: ECO:0000256 {is_inferred="true"} ! match to sequence model evidence used in automatic assertion
 intersection_of: ECO:0000029 ! match to InterPro member signature evidence
@@ -1694,7 +1761,7 @@ creation_date: 2010-12-10T02:54:51Z
 [Term]
 id: ECO:0000260
 name: match to InterPro member signature evidence used in manual assertion
-def: "A match to InterPro member signature evidence that is employed in a manual assertion." [ECO:MCC]
+def: "A type of match to InterPro member signature evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000029 ! match to InterPro member signature evidence
 is_a: ECO:0000255 {is_inferred="true"} ! match to sequence model evidence used in manual assertion
 intersection_of: ECO:0000029 ! match to InterPro member signature evidence
@@ -1706,7 +1773,7 @@ creation_date: 2010-12-10T02:54:51Z
 [Term]
 id: ECO:0000261
 name: targeting sequence prediction evidence used in automatic assertion
-def: "A targeting sequence prediction that is employed in an automatic assertion." [ECO:MCC]
+def: "A type of targeting sequence prediction that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000081 ! targeting sequence prediction evidence
 is_a: ECO:0000258 {is_inferred="true"} ! motif similarity evidence used in automatic assertion
 intersection_of: ECO:0000081 ! targeting sequence prediction evidence
@@ -1718,7 +1785,7 @@ creation_date: 2010-12-10T03:02:49Z
 [Term]
 id: ECO:0000262
 name: targeting sequence prediction evidence used in manual assertion
-def: "A targeting sequence prediction that is employed in a manual assertion." [ECO:MCC]
+def: "A type of targeting sequence prediction that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000081 ! targeting sequence prediction evidence
 is_a: ECO:0000257 {is_inferred="true"} ! motif similarity evidence used in manual assertion
 intersection_of: ECO:0000081 ! targeting sequence prediction evidence
@@ -1730,7 +1797,7 @@ creation_date: 2010-12-10T03:02:49Z
 [Term]
 id: ECO:0000263
 name: transmembrane domain prediction evidence used in automatic assertion
-def: "Transmembrane domain prediction that is employed in an automatic assertion." [ECO:MCC]
+def: "A type of transmembrane domain prediction that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000083 ! transmembrane domain prediction evidence
 is_a: ECO:0000258 {is_inferred="true"} ! motif similarity evidence used in automatic assertion
 intersection_of: ECO:0000083 ! transmembrane domain prediction evidence
@@ -1742,7 +1809,7 @@ creation_date: 2010-12-10T03:28:35Z
 [Term]
 id: ECO:0000264
 name: transmembrane domain prediction evidence used in manual assertion
-def: "Transmembrane domain prediction that is employed in a manual assertion." [ECO:MCC]
+def: "A type of transmembrane domain prediction that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000083 ! transmembrane domain prediction evidence
 is_a: ECO:0000257 {is_inferred="true"} ! motif similarity evidence used in manual assertion
 intersection_of: ECO:0000083 ! transmembrane domain prediction evidence
@@ -1754,7 +1821,7 @@ creation_date: 2010-12-10T03:28:35Z
 [Term]
 id: ECO:0000265
 name: sequence orthology evidence used in automatic assertion
-def: "Sequence orthology evidence that is employed in an automatic assertion." [ECO:MCC]
+def: "A type of sequence orthology evidence that is used in an automatic assertion." [ECO:RCT]
 synonym: "Ortholog evidence" RELATED []
 xref: GO_REF:0000019 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"
 xref: GO_REF:0000020 "Electronic Gene Ontology annotations created by transferring manual GO annotations between orthologous microbial proteins."
@@ -1803,7 +1870,7 @@ creation_date: 2010-12-14T01:57:13Z
 [Term]
 id: ECO:0000268
 name: flow cytometry evidence
-def: "A direct assay that passes a stream of cells or particles past a light source, followed by using a detector to monitor light scatter or fluorochrome excitation to characterize the cells or particles." [ECO:MCC]
+def: "A type of direct assay evidence in which cells or particles are characterized by passing them through a light source and monitoring the resultant light scatter or fluorochrome excitation." [ECO:MCC]
 synonym: "FCM" EXACT []
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
@@ -2143,7 +2210,7 @@ creation_date: 2011-01-11T12:54:50Z
 [Term]
 id: ECO:0000296
 name: green fluorescent protein transcript localization evidence
-def: "A transcriptional activation assay that uses a green fluorescent protein (GFP) reporter gene." [ECO:MCC]
+def: "A type of transcriptional activation assay evidence that is based on transcriptional activation of a green fluorescent protein (GFP) reporter gene." [ECO:MCC, ECO:RCT]
 comment: This term describes transcriptional activation; to describe immunolocalization of the protein, use the term "immunolocalization of green fluorescent protein".
 synonym: "localization of GFP transcript" EXACT []
 is_a: ECO:0000170 ! transcriptional activation assay
@@ -2153,7 +2220,7 @@ creation_date: 2011-01-11T02:31:19Z
 [Term]
 id: ECO:0000297
 name: LacZ transcript localization evidence
-def: "A transcriptional activation assay that uses a LacZ reporter gene." [ECO:MCC]
+def: "A type of transcriptional activation assay evidence that is based on transcriptional activation of a LacZ reporter gene." [ECO:MCC]
 comment: This term describes transcriptional activation; to describe immunolocalization of the protein, use the term "immunolocalization of LacZ protein".
 is_a: ECO:0000170 ! transcriptional activation assay
 created_by: mchibucos
@@ -2320,7 +2387,7 @@ creation_date: 2011-02-17T01:33:34Z
 [Term]
 id: ECO:0000311
 name: imported information
-def: "An evidence type that is based on work performed by a person or group prior to a use by different person or group." [ECO:MCC]
+def: "A type of evidence that is based on work performed by a person or group prior to a use by a different person or group." [ECO:MCC]
 is_a: ECO:0000000 ! evidence
 created_by: mchibucos
 creation_date: 2011-03-02T05:24:13Z
@@ -2521,8 +2588,10 @@ creation_date: 2011-12-13T02:06:25Z
 id: ECO:0000324
 name: imaging assay evidence
 alt_id: ECO:0001122
-def: "Direct assay evidence derived from analysis of an image." [ECO:MCC]
+alt_id: ECO:0005024
+def: "A type of direct assay evidence in which an image is created and analyzed." []
 synonym: "radiologic test evidence" NARROW []
+xref: ECO:MCC
 is_a: ECO:0000002 ! direct assay evidence
 created_by: mchibucos
 creation_date: 2012-02-23T12:01:43Z
@@ -2654,6 +2723,7 @@ creation_date: 2012-08-24T12:03:58Z
 [Term]
 id: ECO:0000337
 name: gel electrophoresis evidence
+alt_id: ECO:0005026
 def: "A type of direct assay evidence where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
 comment: Molecules typically separated include DNA, RNA, or protein. The gel is typically made of agarose, polyacrylamide, or starch.
 is_a: ECO:0000002 ! direct assay evidence
@@ -2663,7 +2733,7 @@ creation_date: 2012-08-24T12:11:51Z
 [Term]
 id: ECO:0000338
 name: pulsed-field gel electrophoresis evidence
-def: "Gel electrophoresis evidence that employs alternately pulsed, perpendicularly oriented electrical fields, at least one of which is inhomogeneous, to separate large DNA molecules on an agarose gel." [PMID:6373014]
+def: "A type of gel electrophoresis evidence in which large DNA molecules are separated on agarose gel by alternately pulsed, perpendicularly oriented electrical fields, at least one of which is inhomogeneous." [PMID:6373014]
 synonym: "PFGE" EXACT []
 is_a: ECO:0000337 ! gel electrophoresis evidence
 created_by: mchibucos
@@ -2682,7 +2752,8 @@ creation_date: 2012-08-24T12:42:37Z
 [Term]
 id: ECO:0000340
 name: plasmid maintenance assay evidence
-def: "Experimental evidence from an assay in which a mitotically stable plasmid (or minichromosome) is introduced into cells, cells are grown without selection for several generations, the proportion of cells that retain the plasmid is then determined (by comparing colony numbers on selective versus non-selective media), and the loss per generation calculated." [ECO:MCC, PMID:6323245]
+def: "A type of experimental evidence in which retention of an introduced plasmid is determined when a mitotically stable plasmid (or minichromosome) is introduced into cells, which are grown without selection for several generations." [] {comment="ECO:MCC", comment="PMID:6323245"}
+comment: Loss per generation is determined by comparing colony numbers on selective and non-selective media.
 synonym: "minichromosome maintenance assay evidence" EXACT [PMID:6323245]
 is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
@@ -2857,6 +2928,7 @@ creation_date: 2014-04-22T17:02:31Z
 [Term]
 id: ECO:0000356
 name: differential gene expression evidence from microarray experiment
+def: "A type of transcript expression evidence resulting from the assessment of microarray data to detect differential gene expression." [PMC:2762517]
 is_a: ECO:0000009 ! transcript expression evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:21:45Z
@@ -2864,6 +2936,7 @@ creation_date: 2014-09-26T16:21:45Z
 [Term]
 id: ECO:0000357
 name: differential gene expression evidence from RNA-seq experiment
+def: "A type of transcript expression evidence resulting from the detection and analysis of differential gene expression in an RNA-seq dataset." [PMID:24020486]
 is_a: ECO:0000009 ! transcript expression evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:22:57Z
@@ -2871,6 +2944,7 @@ creation_date: 2014-09-26T16:22:57Z
 [Term]
 id: ECO:0000358
 name: differential geneset expression evidence from microarray experiment (GSEA, Fisher-exact)
+def: "A type of transcript expression evidence resulting from a microarray analysis with the use of the Gene Set Enrichment Analysis (GSEA) method or the Fisher's-Exact (FE) method to assess the differential expression." [PMID:19725948]
 is_a: ECO:0000009 ! transcript expression evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:25:47Z
@@ -2878,6 +2952,7 @@ creation_date: 2014-09-26T16:25:47Z
 [Term]
 id: ECO:0000359
 name: differential geneset expression evidence from RNA-seq experiment (GSEA, Fisher-exact)
+def: "A type of transcript expression evidence resulting from the use of the Gene Set Enrichment Analysis (GSEA) method or Fisher's-Exact (FE) method to assess an RNA-seq dataset for differential gene expression." [PMC:2881125]
 is_a: ECO:0000009 ! transcript expression evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:26:48Z
@@ -2958,6 +3033,7 @@ created_by: cjm
 [Term]
 id: ECO:0001001
 name: 3D cell culture evidence
+def: "A type of in vitro cell based assay evidence resulting from the growth of cells in a micro-environment that mimics real tissue and establishes physiological cell-cell and cell-substrate interactions that regulate proliferation and differentiation." [PMID:21042962, url:http\://volttecnologia.com.br/wp-content/uploads/2016/03/Drug-discovery.pdf]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -2966,6 +3042,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001002
 name: [3H]arachidonic acid release assay evidence
+def: "A type of in vitro cell based assay evidence resulting from labeling cells with [3H]arachidonic acid and subsequently determining the release of the arachidonic acid by the cells." [ISBN:0323152295, PMID:20693009]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -2974,6 +3051,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001003
 name: [3H]-thymidine incorporation assay evidence
+def: "A type of DNA synthesis cell proliferation assay evidence resulting from the measurement of cell proliferation rate by determining the incorporation of [3H]-thymidine into cellular nucleic acids." [OBI:0000669, url:http\://www.scientistsolutions.com/forum/cell-culture-and-tissue-culture-proliferationapoptosis/3h-thymidine-incorporation-assay-rat-1a]
 is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -2982,6 +3060,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001004
 name: 51Cr release assay evidence
+def: "A type of cytotoxicity assay evidence resulting from the measurement of the amount of radioactive 51Cr released in the supernatant of a sample of 51Cr pre-labeled cells via cytolysis by effector cells (cytotoxic T-cells)." [PMC:3929704, url:http\://www4.mpbio.com/ecom/docs/proddata.nsf/5f64ffd4f38c2fda8525645d00769d68/53d2a75653615bab852568cb00572ff3?OpenDocument]
 is_a: ECO:0005012 ! cytotoxicity assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -2990,6 +3069,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001005
 name: 7-aminoactinomycin staining evidence
+def: "A type of apoptotic assay evidence resulting from the use of 7-aminoactinomycin D (7-AAD) to distinguish viable, apoptotic, and dead cells, using the fact that permeability of the cell membrane, and fluorescence intensity, is low in early apoptotic cells and high in late apoptotic and dead cells." [ECO:RCT]
 synonym: "7-AAD staining evidence" EXACT []
 synonym: "7-amino-actinomycin D staining evidence" EXACT []
 is_a: ECO:0005019 ! staining evidence
@@ -3000,6 +3080,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001006
 name: adhesion assay evidence
+def: "A type of in vitro cell based assay evidence resulting from the analysis of cell binding either to extracellular matrix proteins or other cells." [PMID:15576904, PMID:21909903]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3019,6 +3100,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001008
 name: Alamar blue assay evidence
+def: "A type of cell viability assay evidence resulting from the continuous measurement of fluorescence intensity from the viable cells, where cell permeable compound, resazurin in Alamar blue is reduced to fluorescent resorufin." [PMC:3478843, url:https\://www.thermofisher.com/us/en/home/references/protocols/cell-and-tissue-analysis/cell-profilteration-assay-protocols/cell-viability-with-alamarblue.html]
 is_a: ECO:0005004 ! cell viability assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3048,6 +3130,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001011
 name: annexin-V staining evidence
+def: "A type of apoptotic assay evidence resulting from the addition and subsequent binding of Annexin V to phosphatidylserine in cells to detect if they are viable, apoptotic, or necrotic." [PMC:3169266]
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3056,6 +3139,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001012
 name: behavioral assay evidence
+def: "A type of experimental phenotypic evidence resulting from behavioral phenotyping and analysis to assess cognitive functioning." [PMID:24462904]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3064,6 +3148,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001013
 name: blocking monoclonal antibody evidence
+def: "A type of immunological assay evidence resulting from inhibitory effect of monoclonal antibody combining with an antigen over other antibodies." [PMID:11292349, url:http\://www.sciencedirect.com/science/article/pii/S0140673600034966]
 is_a: ECO:0000040 ! immunological assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3072,6 +3157,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001014
 name: blocking peptide evidence
+def: "A type of immunological assay evidence resulting from the use of peptides to block antibodies from binding to their targets." [ECO:RCT]
 is_a: ECO:0000040 ! immunological assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3097,6 +3183,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001017
 name: Boyden chamber assay evidence
+def: "A type of chemotaxis assay evidence resulting from the analysis of the number of cells that migrate from the upper compartment of a chamber (separated by a micro-porous membrane) to the lower compartment, in which chemotactic agents are present." [PMID:13872176, PMID:15576901]
 is_a: ECO:0005021 ! chemotaxis assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3105,6 +3192,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001018
 name: bromodeoxyuridine incorporation assay evidence
+def: "A type of nucleotide analog incorporation evidence resulting from the incorporation of bromodeoxyuridine (BrdU) as a thymidine analog into nuclear DNA, resulting in a label that can be tracked using antibody probes." [PMID:23690005]
 synonym: "5-bromo-2'-deoxyuridine incorporation assay evidence" EXACT []
 synonym: "BrdU incorporation assay evidence" EXACT []
 synonym: "BrdUrd incorporation assay evidence" EXACT []
@@ -3117,6 +3205,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001019
 name: caspase assay evidence
+def: "A type of apoptotic assay evidence resulting from the detection of caspase activation, which results in the cleaving of intracellular substrates during apoptosis." [PMID:18314058, PMID:25086023]
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3125,6 +3214,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001020
 name: cell counting evidence
+def: "A type of in vitro cell based assay evidence resulting from the quantification of a sample of cells." [ECO:RCT]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3133,6 +3223,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001021
 name: cell permeability assay evidence
+def: "A type of in vitro cell based assay evidence resulting from the quantification of cell permeability." [PMID:16962665]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3141,6 +3232,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001022
 name: carboxyfluorescein diacetate succinimidyl ester staining evidence
+def: "A type of staining evidence resulting from monitoring division by the use of carboxyfluorescein diacetate succinimidyl ester (CFSE) to label intracellular molecules with carboxyfluorescein; when a labeled cell divides, the number of carboxyfluorescein-tagged molecules is split." [PMC:3185625]
 synonym: "CFDA-SE staining evidence" EXACT []
 synonym: "CFSE-staining evidence" EXACT []
 is_a: ECO:0005019 ! staining evidence
@@ -3151,6 +3243,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001023
 name: chemiluminescence-linked immunoassay evidence
+def: "A type of protein detection assay evidence resulting from a complex (a chemiluminescent compound, protein and a steroidal hapten) utilized as a labeled antigen, which emits light when treated with hydrogen peroxide and copper acetate at a high pH." [PMID:659901]
 synonym: "CLIA evidence" EXACT []
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3160,6 +3253,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001024
 name: chimeric protein evidence
+def: "A type of mutant phenotype evidence resulting from the fusion of two or more different genes to create one protein product." [PMID:22588898, PMID:25832756]
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3168,6 +3262,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001025
 name: co-electrophoresis evidence
+def: "A type of gel electrophoresis evidence resulting from the electrophoresis of two substances together, allowing for the characterization of ligand/nucleic acid binding interactions." [PMID:7668395]
 is_a: ECO:0000337 ! gel electrophoresis evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3176,6 +3271,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001026
 name: co-localization evidence
+def: "A type of imaging assay evidence resulting from the limited observation of the co-occurrence of molecules in a subcellular location." [PMC:3074624]
 is_a: ECO:0000324 ! imaging assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3184,6 +3280,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001027
 name: colony counting evidence
+def: "A type of direct assay evidence resulting from the counting of microbial colonies that arise from viable cells grown on a plate or dish." [PMID:16558698, PMID:23457446]
 is_a: ECO:0000002 ! direct assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3192,6 +3289,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001028
 name: co-sedimentation assay evidence
+def: "A type of physical interaction evidence resulting from the separation of a mixture of molecules under the influence of a force such as artificial gravity, where molecules sedimenting together are assumed to interact." [MI:0027]
 is_a: ECO:0000021 ! physical interaction evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3200,6 +3298,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001029
 name: comet assay evidence
+def: "A type of gel electrophoresis evidence resulting in the assessment of DNA breakage in a cell, based on size and shape of DNA migration." [OBI:0302736, PMID:10737956]
 is_a: ECO:0000337 ! gel electrophoresis evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3208,6 +3307,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001030
 name: conditional knockout evidence
+def: "A type of knockout evidence resulting from a temporally-restricted and/or tissue-specific targeted gene removal." [PMC:3572410]
 is_a: ECO:0001091 ! knockout evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3216,6 +3316,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001031
 name: conditional knockin evidence
+def: "A type of knockin evidence resulting from the targeted introduction of a temporally-restricted and/or tissue-specific mutation." [PMID:16832820]
 is_a: ECO:0001090 ! knockin evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3224,6 +3325,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001032
 name: constitutively active mutant evidence
+def: "A type of experimental phenotypic evidence resulting from a constitutively active mutant (CAM), resulting in mutant proteins that remain active in the absence of upstream signals." [PMID:12217490]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3232,6 +3334,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001033
 name: cross-linking evidence
+def: "A type of protein binding evidence resulting from the identification of two interacting proteins (that exist in close proximity) by linking through covalent bonds followed by identification" [PMID:15530987, PMID:19241040]
 is_a: ECO:0000024 ! protein binding evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3240,6 +3343,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001034
 name: crystallography evidence
+def: "A type of structure determination evidence resulting from the use of a narrow beam of x-rays to identify molecular structures by creating a diffraction pattern." [MI:0114]
 is_a: ECO:0005031 ! structure determination evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3248,6 +3352,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001035
 name: cytochemistry evidence
+def: "A type of expression pattern evidence resulting from localizing chemical components of cells and organelles on histological sections." [PMID:11597006]
 is_a: ECO:0000008 ! expression pattern evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3256,6 +3361,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001036
 name: cytochrome C release assay evidence
+def: "A type of apoptotic assay evidence resulting from the identification of an accumulation of Cytochrome c in the cytoplasm after its release from the mitochondria, an early event in apoptosis." [PMID:10914021, PMID:12815469]
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3264,6 +3370,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001037
 name: 4',6-diamidino-2-phenylindole staining evidence
+def: "A type of staining evidence resulting from 4',6-diamidino-2-phenylindole (DAPI) binding to AT regions of DNA and emitting a blue fluorescence." [PMID:8580206, url:https\://www.thermofisher.com/us/en/home/references/protocols/cell-and-tissue-analysis/protocols/dapi-imaging-protocol.html]
 synonym: "DAPI staining evidence" EXACT []
 is_a: ECO:0005019 ! staining evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3274,6 +3381,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001038
 name: deletion mutation evidence
 alt_id: ECO:0005510
+def: "A type of experimental phenotypic evidence resulting from a mutation in which there is a removal of one or more contiguous nucleotides." [SO:0000159]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3282,6 +3390,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001039
 name: DNA laddering assay evidence
+def: "A type of apoptotic assay evidence resulting from the visualization of the DNA ladder (apoptotic DNA fragmentation) in gel electrophoresis." [PMC:4401164]
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3300,6 +3409,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001041
 name: RNA microarray evidence
+def: "A type of RNA detection assay evidence resulting from sample mRNAs (to be compared) that are reverse transcribed, labeled with fluorescent markers, and hybridized to a microarray for analysis of the intensity of each fluorophore at each array location with a laser scanner." [PMID:20967621]
 is_a: ECO:0005518 ! RNA detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3308,6 +3418,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001042
 name: dominant-negative mutant evidence
+def: "A type of experimental phenotypic evidence resulting from the analysis of a mutated gene producing mutant polypeptides that disrupt the activity of the wild-type genes." [PMC:2217636, PMID:8018332]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3329,6 +3440,7 @@ creation_date: 2014-03-17T16:59:00Z
 [Term]
 id: ECO:0001044
 name: Edman degradation evidence
+def: "A type of protein detection assay evidence resulting from labeling a termonal amino acid residue and cleaving it from a peptide by sequentially removing one residue at a time from the amino end of the peptide, without disrupting the bonds." [doi:10.3891/acta.chem.scand.04-0283, OBI:0000705]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3337,6 +3449,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001045
 name: eTag assay evidence
+def: "A type of affinity evidence resulting from the quantitative analysis of gene and protein expression monitored by proprietary eTag reporters." [PMID:15137949]
 is_a: ECO:0000023 ! affinity evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3345,6 +3458,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001046
 name: filter binding assay evidence
+def: "A type of physical interaction evidence resulting from a mixture of two molecules passed through a nitrocellulose filter, where one may be immobilized on the filter, and if the immobilized molecule is capable of binding to the other, it will be retained on the filter as well." [PMID:23028069]
 is_a: ECO:0000021 ! physical interaction evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3353,6 +3467,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001047
 name: fluorescence in situ hybridization evidence
+def: "A type of expression pattern evidence and in situ hybridization evidence resulting from the use of fluorescent probes to detect complementary sequences of nucleic acids." [PMC:346675, PMID:6812046]
 is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0000098 ! in situ hybridization evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3362,6 +3477,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001048
 name: fluorescence resonance energy transfer evidence
+def: "A type of physical interaction evidence resulting from the measurement of the proximity of two fluorophores, where the energy from an excited molecular fluorophore to another fluorophore can only occur within ~10nm." [PMID:11516318, PMID:15696158]
 synonym: "FRET" EXACT []
 is_a: ECO:0000021 ! physical interaction evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3371,6 +3487,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001049
 name: gel-filtration evidence
+def: "A type of chromatography evidence resulting from the exclusion of proteins based on molecular size by filtration through a porous matrix (swollen gel), from which larger molecules are excluded." [CHMO:0001011, doi:10.1038/nmeth0506-410]
 is_a: ECO:0000325 ! chromatography evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3379,6 +3496,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001050
 name: histochemistry evidence
+def: "A type of expression pattern evidence resulting from the identification of chemical components in cells and tissues." [MMO:0000497]
 is_a: ECO:0000008 ! expression pattern evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3387,6 +3505,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001051
 name: histology evidence
+def: "A type of imaging assay evidence resulting from the qualitative microscopic examination of cells or tissues." [OBI:0600020]
 is_a: ECO:0000324 ! imaging assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3395,6 +3514,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001052
 name: high-performance liquid chromatography evidence
+def: "A type of chromatography evidence resulting from the separation of molecules in a solute by forcing the solvent containing the sample through a column packed with nonporous particles at high pressure." [PMID:16376355]
 synonym: "HPLC evidence" EXACT []
 is_a: ECO:0000325 ! chromatography evidence
 created_by: mchibucos
@@ -3403,6 +3523,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001053
 name: immunocytochemistry evidence
+def: "A type of protein detection assay evidence resulting from the use of antibodies linked to coloring agents to localize structures in cell cultures to identify proteins." [MI:1200, OBI:0001986]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3411,6 +3532,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001054
 name: immunodepletion evidence
+def: "A type of immunological assay evidence resulting from the use of antibodies to remove specific proteins from a sample." [BAO:0002505]
 is_a: ECO:0000040 ! immunological assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3419,6 +3541,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001055
 name: immunohistochemistry evidence
+def: "A type of protein detection assay evidence resulting from the use of antibodies to detect proteins in localized cells of tissue sections." [OBI:0001986]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3427,6 +3550,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001056
 name: induced mutation evidence
+def: "A type of genetic transformation evidence resulting from a mutation induced by a mutagenic compounds or irradiation." [OBI:0001154]
 is_a: ECO:0005027 ! genetic transformation evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3444,7 +3568,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001058
 name: in vitro cleavage assay evidence
-def: "A type of in vitro assay evidence where the cleavage of a protein by a protease is detected in an in vitro experiment. The cleavage gives rise to protein fragments." [ECO:SN, PMID:21121091, SIB:PG]
+def: "A type of in vitro assay evidence that is based on the detection protein fragements from the cleavage of a protein by a protease in vitro." [PMID:21121091]
 is_a: ECO:0000181 ! in vitro assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3597,7 +3721,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001075
 name: in vivo cleavage assay evidence
-def: "A type of in vivo assay evidence where the cleavage of a protein by a protease is detected in cells in vivo. The cleavage gives rise to protein fragments." [ECO:SN, PMID:22154596, SIB:PG]
+def: "A type of in vivo assay evidence that is based on the detection of protein fragments from the cleavage of a protein by a protease in vivo." [ECO:SN, PMID:22154596]
 is_a: ECO:0000178 ! in vivo assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3732,6 +3856,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001090
 name: knockin evidence
+def: "A type of genetic transformation evidence resulting from the targetted replacement of a wild-type DNA sequence with a different sequence." [PMID:18077807, PMID:21800101]
 is_a: ECO:0005027 ! genetic transformation evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3740,6 +3865,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001091
 name: knockout evidence
+def: "A type of genetic transformation evidence resulting from the removal of a particular gene (or genes), disrupting the function and allowing for functional analysis." [PMC:2782548]
 is_a: ECO:0005027 ! genetic transformation evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3748,6 +3874,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001092
 name: lipid binding assay evidence
+def: "A type of physical interaction evidence resulting from the qualitative and quantitative analysis of the affinity with which a protein binds to a lipid." [PMID:22848065, PMID:23681540]
 is_a: ECO:0000021 ! physical interaction evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3756,6 +3883,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001093
 name: luminescence-based mammalian interactome mapping assay evidence
+def: "A type of physical interaction evidence resulting from the analysis of protein-protein interactions by use of a luciferase enzyme fused to a particular protein (or proteins), which are coexpressed with epitope-tagged partners in mammalian cells." [MI:0729, PMID:15761153]
 synonym: "LUMIER assay" EXACT []
 is_a: ECO:0000021 ! physical interaction evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3773,6 +3901,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001095
 name: mammalian 2-hybrid assay evidence
+def: "A type of hybrid interaction evidence resulting from the analysis of proteins of interest attached to two portions of the transcriptional activator, and in interaction bring the two portions together to increase expression of the reporter gene." [ECO:RCT, PMID:9043710]
 is_a: ECO:0000025 ! hybrid interaction evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3781,6 +3910,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001096
 name: mass spectrometry evidence
+def: "A type of spectrometry evidence resulting from identifying the amount and type of material entities present in a sample by fragmenting it and measuring the mass-to-charge ratio of the resulting particles." [OBI:0000470]
 is_a: ECO:0005504 ! spectrometry evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3789,6 +3919,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001097
 name: medical imaging evidence
+def: "A type of imaging assay evidence resulting from the use of technology to visualize and provide information about the body to diagnose, treat, or monitor medical conditions." [url:http\://www.fda.gov/Radiation-EmittingProducts/RadiationEmittingProductsandProcedures/MedicalImaging/ucm2005914.htm]
 is_a: ECO:0000324 ! imaging assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3814,6 +3945,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001100
 name: MTS assay evidence
+def: "A type of metabolic cell proliferation assay evidence resulting from 3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium (MTS) in combination with phenazine methyl sulfate (PMS) as an intermediate electron acceptor reagent to produce a soluble formazan dye in viable cells." [NBK:144065, PMID:1867954]
 synonym: "3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium" NARROW []
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3823,6 +3955,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001101
 name: MTT assay evidence
+def: "A type of metabolic cell proliferation assay evidence resulting from the reduction of 3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide (MTT) to its insoluble purple formazan dye in viable cells." [NBK:144065, PMID:6606682]
 synonym: "3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide" NARROW []
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3832,6 +3965,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001102
 name: multiplex bead-based immunoassay evidence
+def: "A type of protein detection assay evidence resulting from determination of analyte concentration by fluorescent bead sets attached to an antibody (to a specific analyte) with a fluorescent reporter dye label attached to a second antibody (to a specific analyte)." [PMC:1534009]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3840,6 +3974,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001103
 name: natural variation mutant evidence
+def: "A type of experimental phenotypic evidence resulting from the observation of the impact of a natural mutation on the expressed traits." [ECO:RCT]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3848,6 +3983,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001104
 name: nuclear fragmentation evidence
+def: "A type of apoptotic assay evidence resulting from the nuclei fragmenting into smaller pieces during programmed cell death." [PMID:16738861]
 is_a: ECO:0005034 ! apoptotic assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3856,6 +3992,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001105
 name: nuclear magnetic resonance spectroscopy evidence
+def: "A type of structure determination evidence resulting from the use of an MRI to provide chemical information about tissue metabolites." [PMID:16428685]
 synonym: "NMR spectroscopy" EXACT []
 is_a: ECO:0005031 ! structure determination evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3865,6 +4002,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001106
 name: nuclease protection assay evidence
+def: "A type of RNA detection assay evidence resulting from the detection and quantitation of specific RNAs (from a sample of total cellular RNA) that are bound by antisense RNA or DNA probes and therefore protected from nucleases." [PMID:17486122, PMID:18428580]
 is_a: ECO:0005518 ! RNA detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3873,6 +4011,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001107
 name: nucleotide analog incorporation evidence
+def: "A type of DNA synthesis cell proliferation assay evidence resulting from the analysis and measurement of the incorporation of nucleotide analog(s) into the DNA." [PMC:3149870]
 is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3881,6 +4020,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001108
 name: phage display evidence
+def: "A type of protein binding evidence resulting from the panning of a phage library where the individual phage displayed a different peptide or protein by fusion to coat proteins on the capsid." [MI:0084, PMID:11680867]
 is_a: ECO:0000024 ! protein binding evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3889,6 +4029,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001109
 name: phosphoamino acid analysis evidence
+def: "A type of protein assay evidence resulting from the identification of the phosphorylated residue in a protein by amino acid analysis." [PMID:11680867, PMID:18429115]
 is_a: ECO:0000039 ! protein assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3906,6 +4047,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001111
 name: physical examination evidence
+def: "A type of direct assay evidence resulting from the physical examination and measurement of the feature of a subject or sample." [ECO:RCT]
 is_a: ECO:0000002 ! direct assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3914,6 +4056,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001112
 name: peptide array evidence
+def: "A type of protein assay evidence resulting from protein-bound peptides detected from a collection of peptides arranged as an array and incubated with the partner protein in order to map protein-protein interaction sites." [PMID:21243154]
 synonym: "phosphopeptide array evidence" NARROW []
 is_a: ECO:0000039 ! protein assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3923,6 +4066,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001113
 name: point mutation evidence
+def: "A type of experimental phenotypic evidence resulting from the change in a single nucleotide." [SO:1000008]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3931,6 +4075,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001114
 name: propidium iodide staining evidence
+def: "A type of staining evidence resulting from the binding and labeling of DNA (during apoptosis, when there is a loss of nuclear DNA content) with propidium iodide (PI) to identify the cells from which it originated." [PMID:17406435]
 is_a: ECO:0005019 ! staining evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3939,6 +4084,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001115
 name: fluorescence evidence
+def: "A type of direct assay evidence resulting from the analysis of a molecule by its intrinsic fluorescence, or by attaching it with a fluorophore." [url:http\://www.nature.com/subjects/biological-fluorescence]
 is_a: ECO:0000002 ! direct assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3947,6 +4093,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001116
 name: protein dot blot assay evidence
+def: "A type of protein detection assay evidence resulting from protein samples immobilized on a membrane, then subsequently incubated and imaged." [doi:10.1007/978-94-009-0951-9_24]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3955,6 +4102,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001117
 name: protein microarray evidence
+def: "A type of protein detection assay evidence resulting from proteins immobilized to prepare protein chips, or microwells, that can be utilized to determine presence of proteins, monitor differential expression profiles, and/or study protein interactions." [PMC:1828913]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3963,6 +4111,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001118
 name: protein sequencing assay evidence
+def: "A type of sequencing assay evidence resulting from determining the sequence of amino acids in a protein." [ERO:0001287]
 is_a: ECO:0000220 ! sequencing assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3971,6 +4120,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001119
 name: quantitative mass spectrometry evidence
+def: "A type of mass spectrometry evidence resulting from quantitative analysis of peptides, proteins, and proteomes." [PMID:22665296]
 is_a: ECO:0001096 ! mass spectrometry evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3979,6 +4129,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001120
 name: radioisotope assay evidence
+def: "A type of direct assay evidence resulting from the assessment of biological reactions by use of a radioactive isotope to label the reactant." [ISBN:978-3-642-50036-7]
 synonym: "radioassay" EXACT []
 synonym: "radioisotopic assay" EXACT []
 is_a: ECO:0000002 ! direct assay evidence
@@ -3989,6 +4140,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001121
 name: radioimmunoassay evidence
+def: "A type of protein detection assay evidence resulting from the use of a radioligand to measure the binding of a substance to a specific antibody or other receptor system." [MeSH:D011863]
 is_a: ECO:0005517 ! protein detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3997,6 +4149,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001123
 name: resonant mirror biosensor evidence
+def: "A type of direct assay evidence from the analysis of the real-time interaction between an analyte in solution and its interactant linked to the surface of the resonant mirror." [PMID:19151938]
 is_a: ECO:0000002 ! direct assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4005,6 +4158,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001124
 name: restriction fragment detection evidence
+def: "A type of DNA detection assay evidence resulting from homologous DNA fragments digested by restriction enzymes, and the resulting restriction fragments are sorted by length to illustrate differences." [doi:10.1007/978-94-009-0951-9_24, url:http\://www.ncbi.nlm.nih.gov/probe/docs/techrflp/]
 is_a: ECO:0005519 ! DNA detection assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4013,6 +4167,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001126
 name: spectrophotometry evidence
+def: "A type of spectrometry evidence resulting from the evaluation of a molecule in a fluid by its ability to alter the transmission of light at specific wavelengths." [MMO:0000173]
 is_a: ECO:0005504 ! spectrometry evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4032,6 +4187,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001128
 name: syngeneic transplantation experiment evidence
+def: "A type of experimental phenotypic evidence resulting from a transplantation in which the transplanted material (stem cells) is from an individual's identical twin." [PMID:18469352]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4040,6 +4196,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001129
 name: TACE activity assay evidence
+def: "A type of enzyme assay evidence resulting from the analysis of tumor necrosis factor (TNF)-a converting enzyme (TACE), which releases a soluble TNF-a from the membrane-bound precursor protein." [PMC:1808921]
 synonym: "Tumor necrosis factor - alpha converting enzyme activity assay" EXACT []
 is_a: ECO:0000005 ! enzyme assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4049,6 +4206,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001130
 name: tissue microarray evidence
+def: "A type of array experiment evidence resulting from the analysis of section(s) of a paraffin block containing embedded tissues cores arranged in an array pattern." [PMID:11770905]
 is_a: ECO:0000055 ! array experiment evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4057,6 +4215,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001131
 name: transgenic organism evidence
+def: "A type of genetic transformation evidence resulting from an organism that has had its expressed phenotype altered by modification." [OBI:1000048]
 is_a: ECO:0005027 ! genetic transformation evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4065,6 +4224,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001132
 name: tryptic phosphopeptide mapping assay evidence
+def: "A type of mass spectrometry evidence resulting from the analysis of prepared phosphopeptides separated in two dimensions on a TLC plate." [PMID:18429120]
 is_a: ECO:0001096 ! mass spectrometry evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4073,6 +4233,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001133
 name: terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
+def: "A type of apoptotic assay evidence resulting from the visualization of DNA fragmentation by detection of exposed 3'-OH ends, localized by terminal deoxynucleotidyl transferase (TdT) which then catalyzes the addition of labeled dUTPs." [PMID:22566045]
 synonym: "TdT-mediated dUTP-biotin nick end labeling assay" EXACT []
 synonym: "terminal deoxynucleotidyl transferase-dUTP nick end labeling assay evidence" EXACT []
 synonym: "TUNEL assay evidence" EXACT []
@@ -4084,6 +4245,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001134
 name: urine test evidence
+def: "A type of direct assay evidence resulting from the analysis of a urine sample." [ECO:RCT]
 is_a: ECO:0000002 ! direct assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4092,6 +4254,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001135
 name: wound healing assay evidence
+def: "A type of in vitro assay evidence resulting from the creation of a wound in a cell monolayer, then capturing images at regular intervals to observe directional cell migration during the closure of the wound." [PMID:15576902]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4100,6 +4263,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001136
 name: WST-1 assay evidence
+def: "A type of metabolic cell proliferation assay evidence resulting from the assessment of metabolic activity from a water-soluble tetrazolium salt WST-1 being reduced outside the cell (by reacting with mitochondrial succinate-tetrazolium reductase) to form a formazan dye." [PMID:18417231]
 is_a: ECO:0005007 ! cell proliferation assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -6196,6 +6360,7 @@ creation_date: 2015-11-10T14:55:36Z
 [Term]
 id: ECO:0005004
 name: cell viability assay evidence
+def: "A type of in vitro cell based assay evidence resulting from analyzing the difference between the number (estimation) of cells at the start and the remaining viable cells at the end of the assay." [NBK:144065]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-13T12:08:01Z
@@ -6203,6 +6368,7 @@ creation_date: 2015-02-13T12:08:01Z
 [Term]
 id: ECO:0005007
 name: cell proliferation assay evidence
+def: "A type of in vitro cell based assay evidence resulting from the measurement of cell proliferation." [ECO:RCT]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:27:13Z
@@ -6210,6 +6376,7 @@ creation_date: 2015-02-11T16:27:13Z
 [Term]
 id: ECO:0005008
 name: DNA synthesis cell proliferation assay evidence
+def: "A type of cell proliferation assay evidence resulting from the measure of proliferation by estimation of DNA synthesis." [PMC:3908118]
 is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:30:10Z
@@ -6217,6 +6384,7 @@ creation_date: 2015-02-11T16:30:10Z
 [Term]
 id: ECO:0005009
 name: metabolic cell proliferation assay evidence
+def: "A type of cell proliferation assay resulting from the assessment of metabolic activity." [ECO:RCT]
 is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:36:33Z
@@ -6231,6 +6399,7 @@ creation_date: 2015-02-11T16:37:23Z
 [Term]
 id: ECO:0005011
 name: ATP bioluminescence assay evidence
+def: "A type of cell proliferation assay evidence resulting from the analysis of ATP concentration (light intensity) when luciferase catalyzes the oxidation of luciferin in the presence of ATP, magnesium ions and molecular oxygen." [PMID:15344559]
 is_a: ECO:0005007 ! cell proliferation assay evidence
 created_by: snadendla
 creation_date: 2015-02-11T16:47:30Z
@@ -6245,6 +6414,7 @@ creation_date: 2015-02-12T11:39:35Z
 [Term]
 id: ECO:0005014
 name: in vitro cell based assay evidence
+def: "A type of in vitro assay evidence resulting from the use of live cells." [ECO:RCT]
 is_a: ECO:0000181 ! in vitro assay evidence
 created_by: snadendla
 creation_date: 2015-02-12T13:26:55Z
@@ -6252,6 +6422,7 @@ creation_date: 2015-02-12T13:26:55Z
 [Term]
 id: ECO:0005019
 name: staining evidence
+def: "A type of direct assay evidence resulting from the use of stains or dyes to aid in analysis of a microscopic image." [ECO:RCT]
 is_a: ECO:0000002 ! direct assay evidence
 created_by: snadendla
 creation_date: 2015-02-19T11:48:57Z
@@ -6259,6 +6430,7 @@ creation_date: 2015-02-19T11:48:57Z
 [Term]
 id: ECO:0005021
 name: chemotaxis assay evidence
+def: "A type of in vitro cell based assay evidence resulting from a given chemical substance causing a movement response, or not, in the sample cells or organisms." [PMC:3667641]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-02-19T13:10:20Z
@@ -6274,6 +6446,7 @@ creation_date: 2015-03-16T15:33:50Z
 [Term]
 id: ECO:0005031
 name: structure determination evidence
+def: "A type of experimental evidence resulting from the visualization and examination of chemical and/or molecular structures." [ECO:RCT]
 is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-03-20T12:16:17Z
@@ -6281,6 +6454,7 @@ creation_date: 2015-03-20T12:16:17Z
 [Term]
 id: ECO:0005033
 name: electron microscopy evidence
+def: "A type of microscopy evidence and structure determination evidence resulting from an electron beam utilized to create an image." [ECO:RCT]
 is_a: ECO:0001098 ! microscopy evidence
 is_a: ECO:0005031 ! structure determination evidence
 created_by: snadendla
@@ -6289,6 +6463,7 @@ creation_date: 2015-03-20T12:21:48Z
 [Term]
 id: ECO:0005034
 name: apoptotic assay evidence
+def: "A type of in vitro cell based assay evidence resulting from the occurrence, visualization, and/or analysis of apoptosis." [ECO:RCT]
 is_a: ECO:0005014 ! in vitro cell based assay evidence
 created_by: snadendla
 creation_date: 2015-04-07T21:58:24Z
@@ -6335,6 +6510,7 @@ creation_date: 2015-10-01T16:23:20Z
 [Term]
 id: ECO:0005504
 name: spectrometry evidence
+def: "A type of experimental evidence resulting from the use of a spectrometer." [ECO:RCT]
 is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-08-14T15:48:08Z
@@ -6351,6 +6527,7 @@ creation_date: 2015-10-09T13:51:52Z
 [Term]
 id: ECO:0005506
 name: missense mutation evidence
+def: "A type of point mutation evidence resulting from a change in a base (or bases) causing the substitution of one amino acid for another." [SO:0001583]
 is_a: ECO:0001113 ! point mutation evidence
 created_by: snadendla
 creation_date: 2015-09-18T16:52:34Z
@@ -6358,6 +6535,7 @@ creation_date: 2015-09-18T16:52:34Z
 [Term]
 id: ECO:0005507
 name: nonsense mutation evidence
+def: "A type of point mutation evidence resulting in an incomplete and usually nonfunctional protein product because of a premature stop codon." [url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
 is_a: ECO:0001113 ! point mutation evidence
 created_by: snadendla
 creation_date: 2015-09-18T16:55:32Z
@@ -6365,6 +6543,7 @@ creation_date: 2015-09-18T16:55:32Z
 [Term]
 id: ECO:0005508
 name: silent mutation evidence
+def: "A type of point mutation evidence resulting from the change of a DNA nucleotide that does not cause any changes in the amino acid sequence." [url:http\://www.sciencemag.org/news/2006/12/sound-silent-mutation]
 is_a: ECO:0001113 ! point mutation evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:01:12Z
@@ -6372,6 +6551,7 @@ creation_date: 2015-09-18T17:01:12Z
 [Term]
 id: ECO:0005509
 name: insertion mutation evidence
+def: "A type of experimental phenotypic evidence resulting from a mutation in which there is an insertion of an additional nucleotide, or nucleotides." [GO:0070705]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:02:03Z
@@ -6379,6 +6559,7 @@ creation_date: 2015-09-18T17:02:03Z
 [Term]
 id: ECO:0005511
 name: duplication mutation evidence
+def: "A type of experimental phenotypic evidence resulting from a mutation in which inserted nucleotide(s) have a sequence identical to, or derived from, adjacent nucleotides." [SO:1000035]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:03:25Z
@@ -6386,6 +6567,7 @@ creation_date: 2015-09-18T17:03:25Z
 [Term]
 id: ECO:0005512
 name: frameshift mutation evidence
+def: "A type of experimental phenotypic evidence resulting from any mutation that causes a shift in bases and therefore changes the code for the amino acids." [url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:05:49Z
@@ -6393,6 +6575,7 @@ creation_date: 2015-09-18T17:05:49Z
 [Term]
 id: ECO:0005513
 name: repeat expansion mutation evidence
+def: "A type of experimental phenotypic evidence resulting from a mutation that increases the number of times that a DNA sequence is repeated." [PMID:9397685, url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:06:34Z
@@ -6400,6 +6583,7 @@ creation_date: 2015-09-18T17:06:34Z
 [Term]
 id: ECO:0005514
 name: splice site mutation evidence
+def: "A type of experimental phenotypic evidence resulting from a mutation in which there is a change in nucleotides at a splice site" [ECO:RCT]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:07:29Z
@@ -6407,6 +6591,7 @@ creation_date: 2015-09-18T17:07:29Z
 [Term]
 id: ECO:0005515
 name: translocation mutation evidence
+def: "A type of experimental phenotypic evidence resulting from a mutation in which a region of a chromosome is transferred to a nonhomologous chromosome" [ECO:RCT]
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:08:01Z
@@ -6414,6 +6599,7 @@ creation_date: 2015-09-18T17:08:01Z
 [Term]
 id: ECO:0005516
 name: molecule detection assay evidence
+def: "A type of experimental evidence resulting from the detection and analysis of molecular markers." [ECO:RCT]
 is_a: ECO:0000006 ! experimental evidence
 created_by: snadendla
 creation_date: 2015-09-24T15:54:21Z
@@ -6421,6 +6607,7 @@ creation_date: 2015-09-24T15:54:21Z
 [Term]
 id: ECO:0005517
 name: protein detection assay evidence
+def: "A type of molecule detection assay evidence resulting from the detection and quantification of a protein, or multiple proteins." [ECO:RCT]
 is_a: ECO:0005516 ! molecule detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-25T14:27:40Z
@@ -6428,6 +6615,7 @@ creation_date: 2015-09-25T14:27:40Z
 [Term]
 id: ECO:0005518
 name: RNA detection assay evidence
+def: "A type of molecule detection assay evidence resulting from the detection of specific RNAs." [ECO:RCT]
 is_a: ECO:0005516 ! molecule detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-25T14:43:53Z
@@ -6435,6 +6623,7 @@ creation_date: 2015-09-25T14:43:53Z
 [Term]
 id: ECO:0005519
 name: DNA detection assay evidence
+def: "A type of molecule detection assay evidence resulting from the detection and visualization of a sequence of DNA." [ECO:RCT]
 is_a: ECO:0005516 ! molecule detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-25T19:33:25Z
@@ -6462,6 +6651,7 @@ creation_date: 2015-09-28T17:16:56Z
 [Term]
 id: ECO:0005522
 name: DNA dot blot assay evidence
+def: "A type of DNA detection assay evidence resulting from evaluation of the relative abundance of target sequences hybridizing to DNA samples that are immobilized on a nitrocellulose or nylon membrane." [PMID:18265189]
 is_a: ECO:0005519 ! DNA detection assay evidence
 created_by: snadendla
 creation_date: 2015-09-30T10:03:03Z
@@ -6559,7 +6749,7 @@ creation_date: 2015-09-30T11:57:00Z
 id: ECO:0005531
 name: motif discovery evidence
 def: "A type of multiple sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
-comment: Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF (PMID: 19892760), from peaks in ChIP-seq experiments with the TF (PMID: 16264194), or from the comparative genomics analysis of the promoter regions of orthologs (PMID: 23032607).
+comment: Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF, from peaks in ChIP-seq experiments with the TF, or from the comparative genomics analysis of the promoter regions of orthologs. {xref="PMID:19892760", xref="PMID:23032607"}
 is_a: ECO:0005555 ! multiple sequence alignment evidence
 created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
@@ -6865,6 +7055,7 @@ creation_date: 2016-02-08T15:17:52Z
 [Term]
 id: ECO:0005562
 name: in gel protein kinase assay evidence
+def: "A type of in vitro assay evidence resulting from the evaluation of the phosphorylation activity of kinase on a gel-incorporated substrate." [PMID:12372853]
 is_a: ECO:0000181 ! in vitro assay evidence
 created_by: snadendla
 creation_date: 2016-02-09T12:05:29Z
@@ -8260,7 +8451,7 @@ creation_date: 2016-10-21T11:55:53Z
 [Term]
 id: ECO:0006010
 name: mRNA interactome capture evidence
-def: "A type of nucleic acid binding evidence where RNA and proteins are cross-linked by ultraviolet light and RNA-protein complexes are captured on oligo(dT) beads. After RNAse treatment, the RNA-bound proteins are identified by mass spectrometry." [PMID:27729395]
+def: "A type of nucleic acid binding evidence in which RNA-binding proteins are identified through cross-linking RNA and proteins by UV light, capturing RNA-protein complexes on oligo(dT) beads, and finally identifying by mass spectrometry." [PMID:27729395]
 synonym: "ultraviolet light cross-linking RNA binding evidence" EXACT []
 is_a: ECO:0000136 ! nucleic acid binding evidence
 created_by: rctauber
