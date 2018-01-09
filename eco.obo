@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2017-12-02
-date: 12:02:2017 08:52
+data-version: releases/2018-01-09
+date: 01:09:2018 10:49
 saved-by: rctauber
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: go_groupings "Grouping classes used by GO"
@@ -9608,6 +9608,30 @@ relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
 creation_date: 2017-10–05T07:39:47Z
+
+[Term]
+id: ECO:0007008
+name: radioligand binding assay evidence
+def: "A type of protein binding evidence in which radioactive ligands are used to measure receptor-ligand interactions, such as in determining selectivity for a particular ligand." [PMID:27471749]
+synonym: "competitive binding assay evidence" NARROW []
+synonym: "radioactive ligand binding assay evidence" EXACT []
+synonym: "radiometric ligand-binding assay evidence" EXACT []
+is_a: ECO:0000024 ! protein binding evidence
+property_value: IAO:0000234 "fjungo" xsd:string
+created_by: rctauber
+creation_date: 2017-12-15T10:46:19Z
+
+[Term]
+id: ECO:0007009
+name: radioligand binding assay evidence used in manual assertion
+def: "A type of radioligand binding assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0006076 {is_inferred="true"} ! protein binding evidence used in manual assertion
+is_a: ECO:0007008 ! radioligand binding assay evidence
+intersection_of: ECO:0007008 ! radioligand binding assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+relationship: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2017-12-15T10:48:44Z
 
 [Typedef]
 id: BFO:0000051
