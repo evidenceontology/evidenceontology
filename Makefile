@@ -11,14 +11,16 @@ SHELL := bash
 SRC = eco-edit.owl
 TGT = eco.owl
 OBO = eco.obo
+IMPORTS = imports
 
 # annotation vars
 NOW = $(shell date +'%m:%d:%Y %H:%M')
 NS = http://purl.obolibrary.org/obo/eco/
 V = $(shell date +'%Y-%m-%d')
 
-all: $(TGT) $(OBO) gaf-eco-mapping-derived.txt sparql_test slims clean
-release: all
+all: $(TGT) $(OBO) gaf-eco-mapping-derived.txt sparql_test slims
+release: all clean
+import: extract clean
 
 # ----------------------------------------
 # ROBOT
@@ -42,6 +44,18 @@ $(TGT): $(SRC) | build/robot.jar build
 
 $(OBO): $(TGT)
 	$(ROBOT) convert --input $< --format obo --output $@
+
+# ----------------------------------------
+# IMPORTS
+# ----------------------------------------
+
+$(IMPORTS)/obi_imports.owl: $(IMPORTS)/obi_terms.txt | build/robot.jar build
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method STAR --term-file $< --output-iri http://purl.obolibrary.org/obo/obi_imports.owl --output $@
+
+$(IMPORTS)/go_imports.owl: $(IMPORTS)/go_terms.txt | build/robot.jar build
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method STAR --term-file $< --output-iri http://purl.obolibrary.org/obo/go_imports.owl --output $@
+
+extract: $(IMPORTS)/go_imports.owl $(IMPORTS)/obi_imports.owl
 
 # ----------------------------------------
 # SPARQL
@@ -138,6 +152,5 @@ $(SUB)valid_with_protein_complex.owx: $(SUB)valid_with_protein_complex.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 # Clean up
-.PHONY: clean
-clean:
-	rm -rf build
+clean: build
+	rm -rf $<
