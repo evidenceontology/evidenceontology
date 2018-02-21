@@ -11,8 +11,6 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/obi_imports.owl>)
-Import(<http://purl.obolibrary.org/obo/go_imports.owl>)
 Annotation(dc:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:auto-generated-by "OBO-Edit 2.3.1"^^xsd:string)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
@@ -937,7 +935,6 @@ Declaration(Class(obo:ECO_0007011))
 Declaration(Class(obo:ECO_0007012))
 Declaration(Class(obo:ECO_0007013))
 Declaration(Class(obo:ECO_0007014))
-Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000112))
@@ -1109,13 +1106,6 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 ############################
 #   Object Properties
 ############################
-
-# Object Property: obo:BFO_0000051 (has part)
-
-AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "A core relation that holds between a whole and its part"^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000051 obo:bfo.owl)
-AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"^^xsd:string)
-TransitiveObjectProperty(obo:BFO_0000051)
 
 # Object Property: obo:ECO_9000000 (used_in)
 
@@ -2030,6 +2020,7 @@ SubClassOf(obo:ECO_0000096 obo:ECO_0000002)
 # Class: obo:ECO_0000097 (cDNA to DNA expression microarray evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000097 "A type of expression microarray evidence where expression level is quantified by fluroescently-labeled cDNA (reverse transcribed from an unknown RNA sample) hybridized to DNA immobilized on a solid surface."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000097 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000097 "ECO:0001041"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000097 "ECO:0005524"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000097 "eco"^^xsd:string)

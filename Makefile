@@ -18,9 +18,8 @@ NOW = $(shell date +'%m:%d:%Y %H:%M')
 NS = http://purl.obolibrary.org/obo/eco/
 V = $(shell date +'%Y-%m-%d')
 
-all: $(TGT) $(OBO) gaf-eco-mapping-derived.txt sparql_test slims
+all: $(TGT) $(OBO) import gaf-eco-mapping-derived.txt sparql_test slims
 release: all clean
-import: extract clean
 
 # ----------------------------------------
 # ROBOT
@@ -38,9 +37,10 @@ ROBOT := java -jar build/robot.jar
 # MAIN
 # ----------------------------------------
 
-$(TGT): $(SRC) | build/robot.jar build
-	$(ROBOT) annotate --input $< --version-iri "$(NS)releases/$(V)/eco.owl" --annotation oboInOwl:date "$(NOW)"\
-	 reason --reasoner elk --create-new-ontology false --annotate-inferred-axioms true --exclude-duplicate-axioms true --output $@
+$(TGT): $(SRC) | extract
+	$(ROBOT) merge --input $< --input build/go_import.owl --input build/obi_import.owl --output $@
+	 reason --reasoner elk --create-new-ontology false --annotate-inferred-axioms true --exclude-duplicate-axioms true \
+	annotate --version-iri "$(NS)releases/$(V)/eco.owl" --annotation oboInOwl:date "$(NOW)"\
 
 $(OBO): $(TGT)
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -49,13 +49,22 @@ $(OBO): $(TGT)
 # IMPORTS
 # ----------------------------------------
 
-$(IMPORTS)/obi_imports.owl: $(IMPORTS)/obi_terms.txt | build/robot.jar build
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method STAR --term-file $< --output-iri http://purl.obolibrary.org/obo/obi_imports.owl --output $@
+build/obi_lower_terms.owl: eco-edit.owl | build/robot.jar build
+	python $(IMPORTS)/get_obi_terms.py
 
-$(IMPORTS)/go_imports.owl: $(IMPORTS)/go_terms.txt | build/robot.jar build
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method STAR --term-file $< --output-iri http://purl.obolibrary.org/obo/go_imports.owl --output $@
+build/go_lower_terms.owl: eco-edit.owl | build/robot.jar build
+	python $(IMPORTS)/get_go_terms.py
 
-extract: $(IMPORTS)/go_imports.owl $(IMPORTS)/obi_imports.owl
+# Force extract to get any new releases
+
+build/obi_imports.owl: build/obi_lower_terms.txt | build/robot.jar build
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms $< --output $@
+
+build/go_imports.owl: build/go_lower_terms.txt | build/robot.jar build
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms $< --output $@
+
+.PHONY: extract
+extract: build/go_imports.owl build/obi_imports.owl | build/robot.jar build
 
 # ----------------------------------------
 # SPARQL
