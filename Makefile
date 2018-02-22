@@ -18,17 +18,17 @@ NOW = $(shell date +'%m:%d:%Y %H:%M')
 NS = http://purl.obolibrary.org/obo/eco/
 V = $(shell date +'%Y-%m-%d')
 
-all: $(TGT) $(OBO) import gaf-eco-mapping-derived.txt sparql_test slims
-release: all clean
+all: pre build post
+release: all
 
 # ----------------------------------------
 # ROBOT
 # ----------------------------------------
 
-build:
-	mkdir -p $@
+mk: 
+	mkdir -p build
 
-build/robot.jar: | build
+build/robot.jar: | mk
 	curl -L -o build/robot.jar https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := java -jar build/robot.jar
@@ -37,38 +37,56 @@ ROBOT := java -jar build/robot.jar
 # MAIN
 # ----------------------------------------
 
-$(TGT): $(SRC) | extract
-	$(ROBOT) merge --input $< --input build/go_import.owl --input build/obi_import.owl --output $@
-	 reason --reasoner elk --create-new-ontology false --annotate-inferred-axioms true --exclude-duplicate-axioms true \
+build: $(TGT) $(OBO)
+
+$(TGT): $(SRC)
+	$(ROBOT) merge --input $< --input build/go_imports.owl --input build/obi_imports.owl --output $@ \
+	reason --reasoner elk --create-new-ontology false --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	annotate --version-iri "$(NS)releases/$(V)/eco.owl" --annotation oboInOwl:date "$(NOW)"\
 
 $(OBO): $(TGT)
 	$(ROBOT) convert --input $< --format obo --output $@
 
 # ----------------------------------------
-# IMPORTS
+# PRE-BUILD
 # ----------------------------------------
 
-build/obi_lower_terms.owl: eco-edit.owl | build/robot.jar build
+pre: verify extract
+
+# run all violation checks (from ontology-starter-kit)
+# requires 'reports' directory
+VCHECKS = equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
+VQUERIES = $(foreach V,$(VCHECKS),sparql/$V-violation.sparql)
+
+# extract term IDs for imports
+# first step, ensure we grab ROBOT
+.PHONY: verify
+verify: $(SRC) | build/robot.jar
+	$(ROBOT) verify -i $< --queries $(VQUERIES) -O build/
+
+.PHONY: obi_lower_terms
+obi_lower_terms: eco-edit.owl
 	python $(IMPORTS)/get_obi_terms.py
 
-build/go_lower_terms.owl: eco-edit.owl | build/robot.jar build
+.PHONY: go_lower_terms
+go_lower_terms: eco-edit.owl
 	python $(IMPORTS)/get_go_terms.py
 
-# Force extract to get any new releases
+# extract from IRI
+build/obi_imports.owl: obi_lower_terms
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms build/$<.txt --output $@
 
-build/obi_imports.owl: build/obi_lower_terms.txt | build/robot.jar build
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms $< --output $@
-
-build/go_imports.owl: build/go_lower_terms.txt | build/robot.jar build
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms $< --output $@
+build/go_imports.owl: go_lower_terms
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms build/$<.txt --output $@
 
 .PHONY: extract
-extract: build/go_imports.owl build/obi_imports.owl | build/robot.jar build
+extract: build/go_imports.owl build/obi_imports.owl
 
 # ----------------------------------------
-# SPARQL
+# POST-BUILD
 # ----------------------------------------
+
+post: gaf-eco-mapping-derived.txt slims clean
 
 # create derived GO mapping file
 gaf-eco-mapping-derived.txt: $(TGT)
@@ -77,22 +95,7 @@ gaf-eco-mapping-derived.txt: $(TGT)
 	 | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g'\
 	 | tail -n +2 > $@
 
-# run all violation checks (from ontology-starter-kit)
-# requires 'reports' directory
-VCHECKS = equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
-VQUERIES = $(foreach V,$(VCHECKS),sparql/$V-violation.sparql)
-
-.PHONY: sparql_test
-sparql_test: $(SRC) | build/robot.jar build
-	$(ROBOT) verify -i $< --queries $(VQUERIES) -O build/
-
-.PHONY: test
-test: sparql_test clean
-
-# ----------------------------------------
-# SLIMS
-# ----------------------------------------
-
+# extract subsets
 SUB = subsets/
 slims: go_groupings biological_process cellular_component chemical_entity gene molecular_function protein protein_complex
 
