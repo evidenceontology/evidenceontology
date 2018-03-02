@@ -78,10 +78,10 @@ go_lower_terms: eco-edit.owl
 
 # extract from IRI
 build/obi_imports.owl: obi_lower_terms
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --intermediates minimal --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms build/$<.txt --output $@
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms build/$<.txt --output $@
 
 build/go_imports.owl: go_lower_terms
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --intermediates minimal --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms build/$<.txt --output $@
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms build/$<.txt --output $@
 
 .PHONY: extract
 extract: build/go_imports.owl build/obi_imports.owl
@@ -105,7 +105,7 @@ SUB = subsets/
 slims: go_groupings biological_process cellular_component chemical_entity gene molecular_function protein protein_complex
 
 go_groupings: $(SUB)go_groupings.owl $(SUB)go_groupings.obo $(SUB)go_groupings.owx
-$(SUB)go_groupings.owl: eco.owl
+$(SUB)go_groupings.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset go_groupings --iri $(NS)$@ -o $@
 $(SUB)go_groupings.obo: $(SUB)go_groupings.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -113,7 +113,7 @@ $(SUB)go_groupings.owx: $(SUB)go_groupings.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 biological_process: $(SUB)valid_with_biological_process.owl $(SUB)valid_with_biological_process.obo $(SUB)valid_with_biological_process.owx
-$(SUB)valid_with_biological_process.owl: eco.owl
+$(SUB)valid_with_biological_process.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_biological_process --iri $(NS)$@ -o $@
 $(SUB)valid_with_biological_process.obo: $(SUB)valid_with_biological_process.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -121,7 +121,7 @@ $(SUB)valid_with_biological_process.owx: $(SUB)valid_with_biological_process.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 cellular_component: $(SUB)valid_with_cellular_component.owl $(SUB)valid_with_cellular_component.obo $(SUB)valid_with_cellular_component.owx
-$(SUB)valid_with_cellular_component.owl: eco.owl
+$(SUB)valid_with_cellular_component.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_cellular_component --iri $(NS)$@ -o $@
 $(SUB)valid_with_cellular_component.obo: $(SUB)valid_with_cellular_component.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -129,7 +129,7 @@ $(SUB)valid_with_cellular_component.owx: $(SUB)valid_with_cellular_component.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 chemical_entity: $(SUB)valid_with_chemical_entity.owl $(SUB)valid_with_chemical_entity.obo $(SUB)valid_with_chemical_entity.owx
-$(SUB)valid_with_chemical_entity.owl: eco.owl
+$(SUB)valid_with_chemical_entity.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_chemical_entity --iri $(NS)$@ -o $@
 $(SUB)valid_with_chemical_entity.obo: $(SUB)valid_with_chemical_entity.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -137,7 +137,7 @@ $(SUB)valid_with_chemical_entity.owx: $(SUB)valid_with_chemical_entity.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 gene: $(SUB)valid_with_gene.owl $(SUB)valid_with_gene.obo $(SUB)valid_with_gene.owx
-$(SUB)valid_with_gene.owl: eco.owl
+$(SUB)valid_with_gene.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_gene --iri $(NS)$@ -o $@
 $(SUB)valid_with_gene.obo: $(SUB)valid_with_gene.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -145,7 +145,7 @@ $(SUB)valid_with_gene.owx: $(SUB)valid_with_gene.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 molecular_function: $(SUB)valid_with_molecular_function.owl $(SUB)valid_with_molecular_function.obo $(SUB)valid_with_molecular_function.owx
-$(SUB)valid_with_molecular_function.owl: eco.owl
+$(SUB)valid_with_molecular_function.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_molecular_function --iri $(NS)$@ -o $@
 $(SUB)valid_with_molecular_function.obo: $(SUB)valid_with_molecular_function.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -153,7 +153,7 @@ $(SUB)valid_with_molecular_function.owx: $(SUB)valid_with_molecular_function.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 protein: $(SUB)valid_with_protein.owl $(SUB)valid_with_protein.obo $(SUB)valid_with_protein.owx
-$(SUB)valid_with_protein.owl: eco.owl
+$(SUB)valid_with_protein.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_protein --iri $(NS)$@ -o $@
 $(SUB)valid_with_protein.obo: $(SUB)valid_with_protein.owl
 	$(ROBOT) convert --input $< --format obo --output $@
@@ -161,7 +161,7 @@ $(SUB)valid_with_protein.owx: $(SUB)valid_with_protein.owl
 	$(ROBOT) convert --input $< --format owx --output $@
 
 protein_complex: $(SUB)valid_with_protein_complex.owl $(SUB)valid_with_protein_complex.obo $(SUB)valid_with_protein_complex.owx
-$(SUB)valid_with_protein_complex.owl: eco.owl
+$(SUB)valid_with_protein_complex.owl: $(SRC)
 	owltools $< --extract-ontology-subset --subset valid_with_protein_complex --iri $(NS)$@ -o $@
 $(SUB)valid_with_protein_complex.obo: $(SUB)valid_with_protein_complex.owl
 	$(ROBOT) convert --input $< --format obo --output $@
