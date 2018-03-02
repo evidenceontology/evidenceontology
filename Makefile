@@ -29,23 +29,27 @@ mk:
 	mkdir -p build
 
 build/robot.jar: | mk
-	curl -L -o build/robot.jar https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
+	# current build doesn't have all the features we need - will change this back once updated
+	# curl -L -o build/robot.jar https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
-ROBOT := java -jar build/robot.jar
+ROBOT := robot
 
 # ----------------------------------------
 # MAIN
 # ----------------------------------------
 
+.PHONY: build
 build: $(TGT) $(OBO)
 
 $(TGT): $(SRC)
-	$(ROBOT) merge --input $< --input build/go_imports.owl --input build/obi_imports.owl --output $@ \
+	$(ROBOT) merge --input $< --input build/go_imports.owl --input build/obi_imports.owl \
 	reason --reasoner elk --create-new-ontology false --annotate-inferred-axioms true --exclude-duplicate-axioms true \
-	annotate --version-iri "$(NS)releases/$(V)/eco.owl" --annotation oboInOwl:date "$(NOW)"\
+	annotate --version-iri "$(NS)releases/$(V)/eco.owl" --annotation oboInOwl:date "$(NOW)" --output $@
+
+# TODO: report on output
 
 $(OBO): $(TGT)
-	$(ROBOT) convert --input $< --format obo --output $@
+	$(ROBOT) convert --input $< --format obo --check false --output $@
 
 # ----------------------------------------
 # PRE-BUILD
@@ -74,10 +78,10 @@ go_lower_terms: eco-edit.owl
 
 # extract from IRI
 build/obi_imports.owl: obi_lower_terms
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms build/$<.txt --output $@
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/obi.owl --method MIREOT --intermediates minimal --upper-terms $(IMPORTS)/obi_upper_terms.txt --lower-terms build/$<.txt --output $@
 
 build/go_imports.owl: go_lower_terms
-	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms build/$<.txt --output $@
+	$(ROBOT) extract --input-iri http://purl.obolibrary.org/obo/go.owl --method MIREOT --intermediates minimal --upper-terms $(IMPORTS)/go_upper_terms.txt --lower-terms build/$<.txt --output $@
 
 .PHONY: extract
 extract: build/go_imports.owl build/obi_imports.owl
@@ -86,6 +90,7 @@ extract: build/go_imports.owl build/obi_imports.owl
 # POST-BUILD
 # ----------------------------------------
 
+.PHONY: post
 post: gaf-eco-mapping-derived.txt slims clean
 
 # create derived GO mapping file
