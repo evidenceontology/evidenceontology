@@ -938,6 +938,8 @@ Declaration(Class(obo:ECO_0007013))
 Declaration(Class(obo:ECO_0007014))
 Declaration(Class(obo:ECO_0007015))
 Declaration(Class(obo:ECO_0007016))
+Declaration(Class(obo:ECO_0007017))
+Declaration(Class(obo:ECO_0007018))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000112))
@@ -11888,6 +11890,29 @@ AnnotationAssertion(rdfs:label obo:ECO_0007016 "voltammetry evidence used in man
 EquivalentClasses(obo:ECO_0007016 ObjectIntersectionOf(obo:ECO_0007015 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007016 obo:ECO_0007015)
 SubClassOf(obo:ECO_0007016 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0007017 (photoconversion evidence)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:28574633"^^xsd:string) obo:IAO_0000115 obo:ECO_0007017 "A type of fluorescence evidence where a molecule tagged with a fluorescent protein is exposed to ultraviolet or blue light to shift the spectral emission properties for visualization."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0007017 "SynGO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0007017 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007017 "2018-03-02T09:01:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007017 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007017 "ECO:0007017"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007017 "photoconversion evidence"^^xsd:string)
+SubClassOf(obo:ECO_0007017 obo:ECO_0001115)
+
+# Class: obo:ECO_0007018 (photoconversion evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007018 "A type of photoconversion evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0007018 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007018 "2018-03-02T09:05:04Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007018 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007018 "ECO:0007018"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007018 "photoconversion evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007018 ObjectIntersectionOf(obo:ECO_0007017 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007018 obo:ECO_0007017)
+SubClassOf(obo:ECO_0007018 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 
 )
