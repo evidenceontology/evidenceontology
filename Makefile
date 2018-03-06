@@ -55,7 +55,7 @@ $(OBO): $(TGT)
 # PRE-BUILD
 # ----------------------------------------
 
-pre: verify extract
+pre: test extract
 
 # run all violation checks (from ontology-starter-kit)
 # requires 'reports' directory
@@ -64,8 +64,8 @@ VQUERIES = $(foreach V,$(VCHECKS),sparql/$V-violation.sparql)
 
 # extract term IDs for imports
 # first step, ensure we grab ROBOT
-.PHONY: verify
-verify: $(SRC) | build/robot.jar
+.PHONY: test
+test: $(SRC) | build/robot.jar
 	$(ROBOT) verify -i $< --queries $(VQUERIES) -O build/
 
 .PHONY: obi_lower_terms
