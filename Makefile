@@ -29,10 +29,10 @@ mk:
 	mkdir -p build
 
 build/robot.jar: | mk
-	# current build doesn't have all the features we need - will change this back once updated
-	# curl -L -o build/robot.jar https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
+	curl -L -o build/robot.jar https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := robot
+ROBOT_RELEASE := java -jar build/robot.jar
 
 # ----------------------------------------
 # MAIN
@@ -66,7 +66,7 @@ VQUERIES = $(foreach V,$(VCHECKS),sparql/$V-violation.sparql)
 # first step, ensure we grab ROBOT
 .PHONY: test
 test: $(SRC) | build/robot.jar
-	$(ROBOT) verify -i $< --queries $(VQUERIES) -O build/
+	$(ROBOT_RELEASE) verify -i $< --queries $(VQUERIES) -O build/
 
 .PHONY: obi_lower_terms
 obi_lower_terms: eco-edit.owl
