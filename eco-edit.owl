@@ -6473,7 +6473,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001154 O
 
 # Class: obo:ECO_0001155 (bromodeoxyuridine incorporation assay evidence used in manual assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001155 "A type of bromodeoxyuridine incorporation assay evidence used in manual assertion"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0001155 "A type of bromodeoxyuridine incorporation assay evidence used in manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001155 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001155 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001155 "2014-03-17T16:04:49Z"^^xsd:string)
@@ -9912,7 +9912,7 @@ SubClassOf(obo:ECO_0005607 obo:ECO_0005021)
 
 # Class: obo:ECO_0005608 (tumble frequency assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:4576832"^^xsd:string) obo:IAO_0000115 obo:ECO_0005608 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis is determined by observing the rotational behavior of the cells tethered to a coverslip by their flagella."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:4576832"^^xsd:string) obo:IAO_0000115 obo:ECO_0005608 "A type of chemotaxis assay evidence where the presence or absence of positive or negative chemotaxis in swimming organisms is determined by measuring chemotaxis in response to sudden concentration changes from one uniform spatial environment to another."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005608 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005608 "2016-03-31T16:42:35Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0005608 "Temporal assay"^^xsd:string)
@@ -9928,8 +9928,8 @@ AnnotationAssertion(oboInOwl:created_by obo:ECO_0005609 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005609 "2016-03-31T16:45:29Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005609 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005609 "ECO:0005609"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0005609 "To determine the presence of positive chemotaxis, an attractant is placed in the capillary and the presence of positive chemotaxis is determined based on the amount of organism that accumulated in the capillary.
-To determine the presence of negative chemotaxis, a repellent is added to the organismal suspension (but not in the capillary) and the organisms that fled into the capillary are measured."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0005609 "To determine the presence of negative chemotaxis, a repellent is added to the organismal suspension (but not in the capillary) and the organisms that fled into the capillary are measured."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0005609 "To determine the presence of positive chemotaxis, an attractant is placed in the capillary and the presence of positive chemotaxis is determined based on the amount of organism that accumulated in the capillary."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005609 "capillary assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0005609 obo:ECO_0005021)
 
@@ -11096,7 +11096,7 @@ SubClassOf(obo:ECO_0006019 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006020 (biofilm formation assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10547784"^^xsd:string) obo:IAO_0000115 obo:ECO_0006020 "A type of cell proliferation assay evidence in which a mutated strain of a microorganism, such as a yeast or bacterium, is grown competitively with wild-type cells and the relative fitness of the strains is assessed usually by means of a fluorescent marker and flow cytometric analysis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10547784"^^xsd:string) obo:IAO_0000115 obo:ECO_0006020 "A type of cell proliferation assay evidence in which biofilm growth is monitored and detected from attachment to development."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006020 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006020 "2016-12-05T09:33:18Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0006020 "biofilm assay evidence"^^xsd:string)
@@ -13126,8 +13126,7 @@ SubClassOf(obo:ECO_0007082 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0007083 (zone of inhibition evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "URL:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC153338/"^^xsd:string) obo:IAO_0000115 obo:ECO_0007083 "A type of cell growth assay evidence resulting from assessing the sensitivity or resistance of bacteria or fungi to an antimicrobial agent or chemical by measuring the size of the zone of inhibition that results when the test organism is grown on a solid surface in the presence of the antimicrobial agent or chemical.
-"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "URL:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC153338/"^^xsd:string) obo:IAO_0000115 obo:ECO_0007083 "A type of cell growth assay evidence resulting from assessing the sensitivity or resistance of bacteria or fungi to an antimicrobial agent or chemical by measuring the size of the zone of inhibition that results when the test organism is grown on a solid surface in the presence of the antimicrobial agent or chemical."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0007083 "OMP"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007083 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007083 "2018-03-14T12:44:11Z"^^xsd:string)
