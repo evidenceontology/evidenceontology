@@ -5986,7 +5986,6 @@ AnnotationAssertion(rdfs:label obo:ECO_0001107 "nucleotide analog incorporation 
 SubClassOf(obo:ECO_0001107 obo:ECO_0005008)
 SubClassOf(obo:ECO_0001107 ObjectSomeValuesFrom(obo:IAO_0000136 obo:GO_0090592))
 SubClassOf(obo:ECO_0001107 ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000895))
-SubClassOf(obo:ECO_0001107 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000051 obo:GO_0000166))))
 SubClassOf(obo:ECO_0001107 ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001365)))))
 
 # Class: obo:ECO_0001108 (phage display evidence)
@@ -8307,7 +8306,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001603 "eco"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) oboInOwl:hasRelatedSynonym obo:ECO_0001603 "vital staining evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001603 "ECO:0001603"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001603 "cell staining evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0001603 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000966) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:OBI_0302887 ObjectSomeValuesFrom(obo:RO_0000057 obo:CL_0000000))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001199))))))
+EquivalentClasses(obo:ECO_0001603 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000966) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:OBI_0302887 ObjectSomeValuesFrom(obo:RO_0000057 obo:GO_0005623))))) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001199))))))
 SubClassOf(obo:ECO_0001603 obo:ECO_0001565)
 
 # Class: obo:ECO_0001801 (alkaline phosphatase reporter gene assay evidence)
