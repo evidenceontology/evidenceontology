@@ -8233,9 +8233,9 @@ SubClassOf(obo:ECO_0001558 obo:ECO_0000002)
 
 # Class: obo:ECO_0001559 (sumoylation assay evidence)
 
-AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001559 "A type of direct assay evidence where sumoylated residues on a protein are detected. XREF:ID url:http://www.enzolifesciences.com/BML-UW8955/sumoylation-kit/ SIB:PG "^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIB:PG"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.enzolifesciences.com/BML-UW8955/sumoylation-kit/"^^xsd:string) obo:IAO_0000115 obo:ECO_0001559 "A type of direct assay evidence where sumoylated residues on a protein are detected."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001559 "ECO_AssayCleanup"^^xsd:string)
-AnnotationAssertion(oboInOwl:created_by obo:ECO_0001559 "mchibucos / jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001559 "jbmunro"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001559 "2017-11-30T14:00:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001559 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001559 "ECO:0001559"^^xsd:string)
