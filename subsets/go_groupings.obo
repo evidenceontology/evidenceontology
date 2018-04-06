@@ -24,15 +24,10 @@ name: similarity evidence used in manual assertion
 namespace: eco
 def: "A type of similarity evidence that is used in a manual assertion." [ECO:RCT]
 subset: go_groupings
+synonym: "inferred from similarity" RELATED []
+synonym: "IS" BROAD []
 created_by: mchibucos
 creation_date: 2010-12-09T05:28:12Z
-
-[Typedef]
-id: BFO:0000051
-name: has part
-def: "A core relation that holds between a whole and its part" []
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-is_transitive: true
 
 [Typedef]
 id: used_in

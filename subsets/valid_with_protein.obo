@@ -35,7 +35,6 @@ subset: valid_with_protein
 synonym: "inferred from sequence alignment" EXACT [GOECO:ISA]
 synonym: "ISA" EXACT [GOECO:ISA]
 xref: GOECO:ISA "inferred from sequence alignment"
-is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in manual assertion
 property_value: seeAlso http://geneontology.org/page/isa-inferred-sequence-alignment xsd:string
 created_by: mchibucos
 creation_date: 2010-12-09T05:12:27Z
@@ -66,8 +65,8 @@ subset: valid_with_protein_complex
 synonym: "inferred from sequence orthology" EXACT [] {name="GOECO:ISO"}
 synonym: "ISO" EXACT [GOECO:ISO]
 synonym: "Ortholog evidence" RELATED []
+synonym: "ortholog evidence" RELATED []
 xref: GOECO:ISO "inferred from sequence orthology"
-is_a: ECO:0000250 {is_inferred="true"} ! sequence similarity evidence used in manual assertion
 property_value: seeAlso http://geneontology.org/page/iso-inferred-sequence-orthology xsd:string
 created_by: mchibucos
 creation_date: 2010-12-10T03:39:41Z
@@ -191,13 +190,6 @@ xref: GO_REF:0000023 "Gene Ontology annotation based on Swiss-Prot Subcellular L
 xref: GOECO:IEA "inferred from electronic annotation"
 property_value: seeAlso http://geneontology.org/page/automatically-assigned-evidence-codes xsd:string
 created_by: cjm
-
-[Typedef]
-id: BFO:0000051
-name: has part
-def: "A core relation that holds between a whole and its part" []
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-is_transitive: true
 
 [Typedef]
 id: used_in

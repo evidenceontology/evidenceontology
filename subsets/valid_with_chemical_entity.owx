@@ -81,9 +81,6 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#is_inferred"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     </Declaration>
     <Declaration>
@@ -144,24 +141,6 @@
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000000"/>
         <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000001"/>
     </InverseObjectProperties>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
-    </TransitiveObjectProperty>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A core relation that holds between a whole and its part</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
-        <IRI>http://purl.obolibrary.org/obo/bfo.owl</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has part</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
