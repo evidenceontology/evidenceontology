@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/eco.owl/>)
+Prefix(:=<http://purl.obolibrary.org/obo/eco.owl#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(eco:=<http://purl.obolibrary.org/obo/eco#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
@@ -1961,8 +1961,9 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000415"^^xsd:string) obo
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000082 "PCR evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000082 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000082 "ECO:0000082"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000082 "This term has been made obsolete because PCR is not evidence.  The children have been appropriately placed under other parents."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000082 "polymerase chain reaction evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000082 obo:ECO_0000073)
+AnnotationAssertion(owl:deprecated obo:ECO_0000082 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000083 (transmembrane domain prediction evidence)
 
@@ -2971,21 +2972,25 @@ SubClassOf(obo:ECO_0000230 obo:ECO_0000226)
 
 # Class: obo:ECO_0000231 (quantitative polymerase chain reaction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) obo:IAO_0000115 obo:ECO_0000231 "A type of polymerase chain reaction evidence where the reaction product is quantified in real-time across cycles by means of fluorescent dyes for detection and quantification of specific sequences in a DNA sample."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) obo:IAO_0000115 obo:ECO_0000231 "A type of DNA detection assay evidence where the reaction product is quantified in real-time across cycles by means of fluorescent dyes or fluorescent probes for detection and quantification of specific sequences in a DNA sample."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000231 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000231 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000231 "2010-11-16T05:57:20Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000231 "Q-PCR evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000231 "quantitative PCR evidence"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000231 "quantitative real-time PCR"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000231 "real-time PCR evidence"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000231 "real-time polymerase chain reaction evidence"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000231 "real-time quantitative PCR"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000231 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000231 "qRT-PCR evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000231 "ECO:0000231"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000231 "Quantitative PCR enables both detection and quantification (as absolute number of copies or relative amount when normalized to DNA input or additional normalizing genes) of one or more specific sequences in a DNA sample. The dye is activated upon binding double-stranded DNA.
-Although qRT-PCR is commonly found in literature synonymous to qPCR, it is preferable not to use this synonym as it is the accepted abbreviation for reverse transcription PCR. qPCR should be used instead (ISBN 978-0-470-68386-6 page 173)."^^xsd:string)
+
+Although qRT-PCR is commonly found in literature synonymous to qPCR, it is preferable not to use this synonym as it is the accepted abbreviation for reverse transcription PCR. qPCR should be used instead (ISBN 978-0-470-68386-6 page 173).
+
+qPCR can be used to quantitatively determine levels of gene expression."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000231 "quantitative polymerase chain reaction evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000231 obo:ECO_0000082)
+SubClassOf(obo:ECO_0000231 obo:ECO_0005519)
 
 # Class: obo:ECO_0000232 (chromosome conformation-based evidence)
 
@@ -3052,7 +3057,7 @@ AnnotationAssertion(oboInOwl:hasBroadSynonym obo:ECO_0000236 "3C"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000236 "3C-PCR"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000236 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000236 "ECO:0000236"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0000236 "See 3C evidence."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000236 "See 3C evidence.  3C evidence was initially developed using PCR."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000236 "chromosome conformation capture-PCR evidence"^^xsd:string)
 AnnotationAssertion(owl:deprecated obo:ECO_0000236 "true"^^xsd:boolean)
 
