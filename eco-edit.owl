@@ -1025,8 +1025,13 @@ Declaration(Class(obo:ECO_0007085))
 Declaration(Class(obo:ECO_0007086))
 Declaration(Class(obo:ECO_0007087))
 Declaration(Class(obo:ECO_0007088))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000055))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0000059))
 Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000117))
@@ -1062,6 +1067,7 @@ Declaration(AnnotationProperty(oboInOwl:is_inferred))
 Declaration(AnnotationProperty(oboInOwl:saved-by))
 Declaration(AnnotationProperty(oboInOwl:shorthand))
 Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:isDefinedBy))
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(owl:deprecated))
 ############################
@@ -1071,24 +1077,25 @@ Declaration(AnnotationProperty(owl:deprecated))
 # Annotation Property: obo:IAO_0000112 (example of usage)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000112 "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000112 "IAO"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000112 obo:iao.owl)
 AnnotationAssertion(rdfs:label obo:IAO_0000112 "example of usage"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000115 (definition)
 
-AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000115 "IAO"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000115 obo:iao.owl)
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000117 (term editor)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000117 "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000117 "IAO"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000117 obo:iao.owl)
 AnnotationAssertion(rdfs:label obo:IAO_0000117 "term editor"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000119 (definition source)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000119 "formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000119 "IAO"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000119 obo:iao.owl)
 AnnotationAssertion(rdfs:label obo:IAO_0000119 "definition source"^^xsd:string)
 
 # Annotation Property: obo:IAO_0000234 (ontology term requester)
@@ -1197,6 +1204,18 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 #   Object Properties
 ############################
 
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000051 obo:bfo.owl)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"^^xsd:string)
+
+# Object Property: obo:BFO_0000055 (realizes)
+
+AnnotationAssertion(rdfs:comment obo:BFO_0000055 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000055 obo:iao.owl)
+AnnotationAssertion(rdfs:label obo:BFO_0000055 "realizes"^^xsd:string)
+
 # Object Property: obo:ECO_9000000 (used_in)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:cjm"^^xsd:string) obo:IAO_0000115 obo:ECO_9000000 "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence."^^xsd:string)
@@ -1219,6 +1238,24 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_9000001 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_9000001 "uses"^^xsd:string)
 AnnotationAssertion(oboInOwl:shorthand obo:ECO_9000001 "uses"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_9000001 "uses"^^xsd:string)
+
+# Object Property: obo:IAO_0000136 (is about)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000136 "is_about is a (currently) primitive relation that relates an information artifact to an entity."^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000136 obo:iao.owl)
+AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"^^xsd:string)
+
+# Object Property: obo:RO_0000057 (has participant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000057 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:RO_0000057 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:RO_0000057 "has participant"^^xsd:string)
+
+# Object Property: obo:RO_0000059 (concretizes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000059 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."^^xsd:string)
+AnnotationAssertion(rdfs:isDefinedBy obo:RO_0000059 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:RO_0000059 "concretizes"^^xsd:string)
 
 
 
