@@ -2042,8 +2042,9 @@ SubClassOf(obo:ECO_0000025 obo:ECO_0000023)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0302903"^^xsd:string) obo:IAO_0000115 obo:ECO_0000026 "A type of experimental genomic evidence resulting from a process in which single stranded nucleic acids are allowed to interact so that complexes, or hybrids, are formed by molecules with sufficiently similar, complementary sequences."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000026 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000026 "ECO:0000026"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000026 "This term has been made obsolete with the clean up of experimental genomic evidence branch."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000026 "nucleic acid hybridization evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000026 obo:ECO_0000073)
+AnnotationAssertion(owl:deprecated obo:ECO_0000026 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000027 (structural similarity evidence)
 
@@ -2449,8 +2450,9 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000073 "inferred from genomic analysis"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000073 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000073 "ECO:0000073"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000073 "This term has been made obsolete with the clean up of experimental genomic evidence branch."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000073 "experimental genomic evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000073 obo:ECO_0000006)
+AnnotationAssertion(owl:deprecated obo:ECO_0000073 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000074 (split-ubiquitin assay evidence)
 
@@ -2713,8 +2715,9 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.ncbi.nlm.nih.
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000098 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000098 "IDA: in situ hybridization"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000098 "ECO:0000098"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000098 "This term has been made obsolete with the clean up of experimental genomic evidence branch."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000098 "in situ hybridization evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000098 obo:ECO_0000026)
+AnnotationAssertion(owl:deprecated obo:ECO_0000098 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000100 (fractionation evidence)
 
@@ -2862,11 +2865,11 @@ SubClassOf(obo:ECO_0000120 obo:ECO_0000059)
 
 # Class: obo:ECO_0000122 (protein localization evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:0008104"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0019937"^^xsd:string) obo:IAO_0000115 obo:ECO_0000122 "A type of protein assay evidence where sub-cellular localization of a protein within a cell is determined."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:0008104"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0019937"^^xsd:string) obo:IAO_0000115 obo:ECO_0000122 "A type of localization evidence where sub-cellular localization of a protein is determined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000122 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000122 "ECO:0000122"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000122 "protein localization evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000122 obo:ECO_0000039)
+SubClassOf(obo:ECO_0000122 obo:ECO_0001533)
 
 # Class: obo:ECO_0000124 (fusion protein localization evidence)
 
@@ -5890,7 +5893,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001047 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001047 "ECO:0001047"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001047 "fluorescence in situ hybridization evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001047 obo:ECO_0000008)
-SubClassOf(obo:ECO_0001047 obo:ECO_0000098)
+SubClassOf(obo:ECO_0001047 obo:ECO_0001534)
 
 # Class: obo:ECO_0001048 (fluorescence resonance energy transfer evidence)
 
@@ -8683,7 +8686,7 @@ SubClassOf(obo:ECO_0001533 obo:ECO_0000002)
 
 # Class: obo:ECO_0001534 (nucleic acid localization evidence)
 
-AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001534 "A type of direct assay evidence based on localization of a specific segment of DNA or RNA within tissue by the application of a complementary strand of nucleic acid to which a reporter molecule (i.e. either radio-, fluorescent- or antigen-labeled probe) is attached and quantified using either autoradiography, fluorescence microscopy, or immunohistochemistry."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001534 "A type of localization evidence based on localization of a specific segment of DNA or RNA within tissue by the application of a complementary strand of nucleic acid to which a reporter molecule (i.e. either radio-, fluorescent- or antigen-labeled probe) is attached and quantified using either autoradiography, fluorescence microscopy, or immunohistochemistry."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001534 "ECO_ExpGenomicCleanup"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001534 "jbmunro"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001534 "2018-05-17T12:00:00Z"^^xsd:string)
