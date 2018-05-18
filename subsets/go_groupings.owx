@@ -5,53 +5,33 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/go_groupings.owl">
+     ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/go_groupings.owl"
+     versionIRI="http://purl.obolibrary.org/obo/eco/2018-05-18/subsets/go_groupings.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000006"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000234"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -63,81 +43,14 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000000"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#is_inferred"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000252"/>
     </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000001"/>
-    </Declaration>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000000"/>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/ECO_9000001"/>
-    </InverseObjectProperties>
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
@@ -221,301 +134,6 @@
         <IRI>http://purl.obolibrary.org/obo/ECO_0000252</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">similarity evidence used in manual assertion</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mchibucos</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2010-12-09T05:00:20Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:9000000</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eco</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">used_in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">used_in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">In the future we may use a more generic relation with weaker domain and range constraints taken from IAO, RO or OBI.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000000</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">used_in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000001</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ECO:9000001</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000001</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eco</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000001</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">uses</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000001</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">uses</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/ECO_9000001</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">uses</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000112</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000112</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IAO</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000112</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">example of usage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000115</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IAO</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000115</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">definition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000117</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000117</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IAO</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000117</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">term editor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000119</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000119</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IAO</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000119</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">definition source</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000234</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The &apos;term requester&apos; can credit the person, organization or project who request the ontology term.,The name of the person, project, or organization that motivated inclusion of an ontology term by requesting its addition.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000234</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IAO</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/IAO_0000234</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ontology term requester</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#go_groupings</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Grouping classes used by GO</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_biological_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO biological process terms should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_cellular_component</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO cellular component terms should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chemical entity IDs should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_gene</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gene IDs should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_molecular_function</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GO molecular function terms should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_protein</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Protein IDs should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_protein_complex</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Protein complex IDs should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.obolibrary.org/obo/eco#valid_with_transcript</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Transcript IDs should be used in the GO with/from field</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.org/dc/terms/license</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A legal document giving official permission to do something with the resource.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>http://purl.org/dc/terms/license</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DC</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/dc/terms/license</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">license</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#SubsetProperty</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">subset_property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasAlternativeId</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_alternative_id</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_broad_synonym</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasDbXref</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">database_cross_reference</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasExactSynonym</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_exact_synonym</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_narrow_synonym</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_obo_format_version</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasOBONamespace</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_obo_namespace</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#inSubset</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">in_subset</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.geneontology.org/formats/oboInOwl#shorthand</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">shorthand</Literal>
-    </AnnotationAssertion>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
-    <SubAnnotationPropertyOf>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </SubAnnotationPropertyOf>
 </Ontology>
 
 

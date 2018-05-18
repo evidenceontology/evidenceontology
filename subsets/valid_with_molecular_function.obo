@@ -1,13 +1,5 @@
 format-version: 1.2
-subsetdef: go_groupings "Grouping classes used by GO"
-subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
-subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
-subsetdef: valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"
-subsetdef: valid_with_gene "Gene IDs should be used in the GO with/from field"
-subsetdef: valid_with_molecular_function "GO molecular function terms should be used in the GO with/from field"
-subsetdef: valid_with_protein "Protein IDs should be used in the GO with/from field"
-subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"
-subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
+data-version: eco/2018-05-18/subsets/valid_with_molecular_function.owl
 ontology: eco/subsets/valid_with_molecular_function
 
 [Term]
@@ -24,21 +16,4 @@ xref: GOECO:IC "inferred by curator"
 property_value: seeAlso http://geneontology.org/page/ic-inferred-curator xsd:string
 created_by: mchibucos
 creation_date: 2011-01-20T02:33:32Z
-
-[Typedef]
-id: used_in
-name: used_in
-namespace: eco
-def: "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence." [GOC:cjm]
-comment: In the future we may use a more generic relation with weaker domain and range constraints taken from IAO, RO or OBI.
-xref: ECO:9000000
-inverse_of: uses ! uses
-created_by: mchibucos
-creation_date: 2010-12-09T05:00:20Z
-
-[Typedef]
-id: uses
-name: uses
-namespace: eco
-xref: ECO:9000001
 

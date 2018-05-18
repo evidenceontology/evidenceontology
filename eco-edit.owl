@@ -4935,7 +4935,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:MAH"^^xsd:string) Annotat
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000336 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000336 "ECO:0000336"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000336 "competitive growth assay evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0000336 ObjectIntersectionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001285)) ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000070)) ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0000153 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000086 obo:OBI_0001154))))) ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000978)))
+EquivalentClasses(obo:ECO_0000336 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:OBI_0000153 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:OBI_0100026 ObjectSomeValuesFrom(obo:RO_0000086 obo:OBI_0001154))))) ObjectSomeValuesFrom(obo:OBI_0000312 obo:OBI_0000978) ObjectSomeValuesFrom(obo:OBI_0000312 ObjectIntersectionOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000055 ObjectSomeValuesFrom(obo:RO_0000059 obo:OBI_0001285))))))
 SubClassOf(obo:ECO_0000336 obo:ECO_0005007)
 
 # Class: obo:ECO_0000337 (gel electrophoresis evidence)

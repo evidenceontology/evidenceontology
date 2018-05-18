@@ -1,11 +1,11 @@
-Prefix: idrange:=<http://purl.obolibrary.org/obo/ro/idrange/>
+Prefix: idrange:=<http://purl.obolibrary.org/obo/eco/idrange/>
 Prefix: allocatedto:=<http://purl.obolibrary.org/obo/IAO_0000597>
 Prefix: iddigits:=<http://purl.obolibrary.org/obo/IAO_0000596>
 Prefix: idprefix:=<http://purl.obolibrary.org/obo/IAO_0000599>
 Prefix: idsfor:=<http://purl.obolibrary.org/obo/IAO_0000598>
 
-Ontology: <http://purl.obolibrary.org/obo/ro/ro-idranges.owl>
-  Annotations: idprefix: "http://purl.obolibrary.org/obo/RO_", iddigits: 7, idsfor: "RO"
+Ontology: <http://purl.obolibrary.org/obo/eco/eco-idranges.owl>
+  Annotations: idprefix: "http://purl.obolibrary.org/obo/ECO_", iddigits: 7, idsfor: "ECO"
 
 annotationproperty: allocatedto:
 AnnotationProperty: idprefix:
@@ -50,6 +50,6 @@ EquivalentTo: xsd:integer[> 2000 , <= 2100]
 
 Datatype: idrange:10
 Annotations: allocatedto: "Rebecca Tauber"
-EquivalentTo: xsd:integer[> 6000 , <= 7000]
+EquivalentTo: xsd:integer[> 6000 , <= 8000]
 
 
