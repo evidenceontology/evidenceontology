@@ -1,5 +1,5 @@
 Prefix(:=<http://purl.obolibrary.org/obo/eco.owl#>)
-Prefix(dc:=<http://purl.org/dc/terms/>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(eco:=<http://purl.obolibrary.org/obo/eco#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -7,15 +7,16 @@ Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/obi.owl>)
-Import(<http://purl.obolibrary.org/obo/go.owl>)
-Annotation(<http://purl.org/dc/elements/1.1/description> "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
-Annotation(<http://purl.org/dc/elements/1.1/title> "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
-Annotation(dc:license <https://creativecommons.org/publicdomain/zero/1.0/>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
+Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
+Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(oboInOwl:default-namespace "eco"^^xsd:string)
 Annotation(oboInOwl:saved-by "rctauber"^^xsd:string)
 Annotation(rdfs:comment "ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site."^^xsd:string)
@@ -1557,13 +1558,8 @@ Declaration(Class(obo:ECO_0007630))
 Declaration(Class(obo:ECO_0007631))
 Declaration(Class(obo:ECO_0007632))
 Declaration(Class(obo:ECO_0007633))
-Declaration(ObjectProperty(obo:BFO_0000051))
-Declaration(ObjectProperty(obo:BFO_0000055))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
-Declaration(ObjectProperty(obo:IAO_0000136))
-Declaration(ObjectProperty(obo:RO_0000057))
-Declaration(ObjectProperty(obo:RO_0000059))
 Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000117))
@@ -1578,7 +1574,10 @@ Declaration(AnnotationProperty(eco:valid_with_molecular_function))
 Declaration(AnnotationProperty(eco:valid_with_protein))
 Declaration(AnnotationProperty(eco:valid_with_protein_complex))
 Declaration(AnnotationProperty(eco:valid_with_transcript))
+Declaration(AnnotationProperty(dc:description))
 Declaration(AnnotationProperty(dc:license))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
 Declaration(AnnotationProperty(oboInOwl:auto-generated-by))
 Declaration(AnnotationProperty(oboInOwl:created_by))
@@ -1736,18 +1735,6 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 #   Object Properties
 ############################
 
-# Object Property: obo:BFO_0000051 (has part)
-
-AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000051 obo:bfo.owl)
-AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"^^xsd:string)
-
-# Object Property: obo:BFO_0000055 (realizes)
-
-AnnotationAssertion(rdfs:comment obo:BFO_0000055 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:BFO_0000055 obo:iao.owl)
-AnnotationAssertion(rdfs:label obo:BFO_0000055 "realizes"^^xsd:string)
-
 # Object Property: obo:ECO_9000000 (used_in)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:cjm"^^xsd:string) obo:IAO_0000115 obo:ECO_9000000 "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence."^^xsd:string)
@@ -1770,24 +1757,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_9000001 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_9000001 "uses"^^xsd:string)
 AnnotationAssertion(oboInOwl:shorthand obo:ECO_9000001 "uses"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_9000001 "uses"^^xsd:string)
-
-# Object Property: obo:IAO_0000136 (is about)
-
-AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000136 "is_about is a (currently) primitive relation that relates an information artifact to an entity."^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000136 obo:iao.owl)
-AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"^^xsd:string)
-
-# Object Property: obo:RO_0000057 (has participant)
-
-AnnotationAssertion(obo:IAO_0000115 obo:RO_0000057 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:RO_0000057 obo:ro.owl)
-AnnotationAssertion(rdfs:label obo:RO_0000057 "has participant"^^xsd:string)
-
-# Object Property: obo:RO_0000059 (concretizes)
-
-AnnotationAssertion(obo:IAO_0000115 obo:RO_0000059 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy obo:RO_0000059 obo:ro.owl)
-AnnotationAssertion(rdfs:label obo:RO_0000059 "concretizes"^^xsd:string)
 
 
 
@@ -19221,6 +19190,10 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007633 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007633 "ECO:0007633"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007633 "transcriptional activation assay evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007633 ObjectIntersectionOf(obo:ECO_0000170 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+
+# Class: obo:GO_0005575 (cellular_component)
+
+SubClassOf(obo:GO_0005575 obo:BFO_0000040)
 
 
 )
