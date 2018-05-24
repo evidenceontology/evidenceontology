@@ -1,16 +1,18 @@
 import re
+import sys
 
-eco_path = "eco-edit.owl"
-term_file_path = "build/go_lower_terms.txt"
+eco_path = "modules/obi_logic.owl"
+ns = sys.argv[1]
+term_file_path = "imports/" + ns + "_terms.txt"
 
-regex = re.compile("go_[0-9]{7}")
+regex = re.compile(ns + "_[0-9]{7}")
 
 def file_to_str(filename):
-    with open(filename) as f:
-        return f.read().lower()
+	with open(filename) as f:
+		return f.read().lower()
 
 def get_obi_terms(s):
-    return (term for term in re.findall(regex, s))
+	return (term for term in re.findall(regex, s))
 
 if __name__ == '__main__':
     curies = []
