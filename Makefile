@@ -29,13 +29,15 @@ ROBOT := java -jar build/robot.jar
 TEMP = templates/
 MOD = modules/
 
+.PHONY: modules
 modules: $(MOD)obi_logic.owl
 
-$(MOD)obi_logic.owl: $(TEMP)obi_logic.csv
+.PHONY: $(MOD)obi_logic.owl
+$(MOD)obi_logic.owl:
 	robot merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
-	 --input-iri http://purl.obolibrary.org/obo/go.owl --input eco.owl\
-	 template --template $<\
-	 annotate --ontology-iri "$(OBO)$(ECO)/$(MOD)$@" --output $@
+	 --input-iri http://purl.obolibrary.org/obo/go.owl\
+	 template --template $(TEMP)obi_logic.csv\
+	 annotate --ontology-iri "$(OBO)$(ECO)/$@" --output $@
 
 # ----------------------------------------
 # IMPORTS
@@ -50,7 +52,7 @@ imports: $(IMPS)
 $(IMPS):
 	python $(IMP)get_terms.py $@ &&\
 	 robot extract --input-iri "$(OBO)$@.owl"\
-	 --method bot --term-file $(IMP)$@_terms.txt\
+	 --method bot --term-file $(IMP)$@_terms.txt --term-file $(IMP)etc_terms.txt\
 	 remove --select "complement annotation-properties"\
 	 --entities $(IMP)annotations.txt\
 	 annotate --ontology-iri "$(OBO)eco/imports/$@_import.owl"\
