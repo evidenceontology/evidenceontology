@@ -62,11 +62,9 @@ $(IMPS):
 # REPORT
 # ----------------------------------------
 
-REP = build/reports/
+report: build/report.tsv
 
-report: $(REP)report.tsv
-
-$(REP)report.tsv: $(EDIT)
+build/report.tsv: $(EDIT)
 	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
 
