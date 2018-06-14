@@ -78,6 +78,7 @@ build: $(ECO).owl $(ECO).obo
 TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
+.PHONY: $(ECO).owl
 $(ECO).owl: $(EDIT)
 	$(ROBOT) merge --input $< --collapse-import-closure true \
 	 reason --reasoner elk --create-new-ontology false \
@@ -86,7 +87,9 @@ $(ECO).owl: $(EDIT)
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
 $(ECO).obo: $(ECO).owl
-	$(ROBOT) convert --input $< --format obo --check false --output $@
+	$(ROBOT) convert --input $< --format obo --check false --output $(basename $@)-temp.obo && \
+	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
+	rm $(basename $@)-temp.obo
 
 
 # ----------------------------------------
