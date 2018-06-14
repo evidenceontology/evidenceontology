@@ -67,7 +67,7 @@ REP = build/reports/
 report: $(REP)report.tsv
 
 $(REP)report.tsv: $(EDIT)
-	$(ROBOT) report --input $< --profile build/profile.txt\
+	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
 
 # ----------------------------------------
@@ -124,7 +124,7 @@ subsets: $(SUBS)
 $(SUBS): eco.owl
 	$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<http://purl.obolibrary.org/obo/eco#$@> annotations"\
-	 annotate --version-iri "http://purl.obolibrary.org/obo/eco/$(V)/subsets/$@.owl"\
+	 annotate --version-iri "http://purl.obolibrary.org/obo/eco/$(DATE)/subsets/$@.owl"\
 	 --ontology-iri "http://purl.obolibrary.org/obo/eco/subsets/$@.owl"\
 	 --output $(addprefix $(SUB), $(addsuffix .owl, $@))\
 	 && $(ROBOT) convert --input $(addprefix $(SUB), $(addsuffix .owl, $@))\
