@@ -13,7 +13,7 @@ EDIT = eco-edit.owl
 OBO = http://purl.obolibrary.org/obo/
 
 update: | modules imports
-all: | modules imports report build mapping subsets
+all: | modules imports report build products mapping subsets
 release: all
 
 # ----------------------------------------
@@ -72,13 +72,15 @@ build/report.tsv: $(EDIT)
 # MAIN
 # ----------------------------------------
 
-build: $(ECO).owl $(ECO).obo
+BASE = $(ECO)-base.owl
+BASIC = $(ECO)-basic.owl
+
+build: $(ECO).owl $(ECO).obo $(BASE)
 
 # release vars
 TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
-.PHONY: $(ECO).owl
 $(ECO).owl: $(EDIT)
 	$(ROBOT) merge --input $< --collapse-import-closure true \
 	 reason --reasoner elk --create-new-ontology false \
@@ -91,6 +93,22 @@ $(ECO).obo: $(ECO).owl
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
+$(BASE): $(EDIT)
+	$(ROBOT) remove --input $< --select imports --trim false \
+	annotate --ontology-iri "$(OBO)$@"\
+	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
+	 --annotation oboInOwl:date "$(TS)" --output $@
+
+# Not yet implemented
+$(BASIC): $(EDIT)
+	$(ROBOT) remove --input $< --select imports --trim true \
+	reason --reasoner elk --annotate-inferred-axioms false \
+	remove --entity ECO:0000352 --entity ECO:0000501 --entity ECO:0000217\
+	 --select "self descendants" \
+	remove --select "anonymous parents" --select "equivalents" \
+	annotate --ontology-iri "$(OBO)$@"\
+	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
+	 --annotation oboInOwl:date "$(TS)" --output $@
 
 # ----------------------------------------
 # MAPPINGS
