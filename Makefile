@@ -11,10 +11,15 @@ SHELL := bash
 ECO = eco
 EDIT = eco-edit.owl
 OBO = http://purl.obolibrary.org/obo/
+SPARQL = build/sparql/
+REP = build/reports/
 
 update: | modules imports
 all: | modules imports report build products mapping subsets
 release: all
+
+# test is used for Travis integration
+test: verify
 
 # ----------------------------------------
 # ROBOT
@@ -62,17 +67,32 @@ $(IMPS):
 # REPORT
 # ----------------------------------------
 
-report: build/report.tsv
+init:
+	mkdir -p $(REP)
 
-build/report.tsv: $(EDIT)
+# A report is written to build/reports/report.tsv
+
+report: $(REP)report.tsv
+
+$(REP)report.tsv: $(EDIT) | init
 	$(ROBOT) report --input $< --fail-on none\
 	 --output $@ --format tsv
+
+# verify is part of 'test' for Travis
+
+V_QUERIES := $(wildcard $(SPARQL)verify-*.rq)
+.PHONY: verify
+verify: init
+	$(ROBOT) verify --input $(EDIT)\
+	 --queries $(V_QUERIES) --output-dir $(REP)
 
 # ----------------------------------------
 # MAIN
 # ----------------------------------------
 
+# eco-base.owl is an import-removed, non-reasoned release
 BASE = $(ECO)-base.owl
+# eco-basic.owl is not yet implemented
 BASIC = $(ECO)-basic.owl
 
 build: $(ECO).owl $(ECO).obo $(BASE)
@@ -118,7 +138,8 @@ mapping: gaf-eco-mapping-derived.txt
 
 # create derived GO mapping file
 gaf-eco-mapping-derived.txt: $(TGT)
-	$(ROBOT) query --input $(TGT) --format tsv --select build/derived.sparql build/$@ \
+	$(ROBOT) query --input $(TGT) --format tsv\
+	 --select $(SPARQL)make-derived-mapping.rq build/$@ \
 	&& sed 's/\"//g' build/$@\
 	 | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g'\
 	 | tail -n +2 > $@

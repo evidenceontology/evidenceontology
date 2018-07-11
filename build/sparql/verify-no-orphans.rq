@@ -1,0 +1,14 @@
+# Ensure that no class is orphaned (excluding 'evidence' and 'assertion method')
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?s WHERE {
+	{?s a owl:Class .
+	 FILTER NOT EXISTS {?s rdfs:subClassOf ?p}
+	 FILTER NOT EXISTS {?s owl:deprecated "true"^^xsd:boolean}
+	 FILTER NOT EXISTS {?s owl:equivalentClass ?e}
+	 FILTER (!STRENDS(str(?s), "ECO_0000000"))
+	 FILTER (!STRENDS(str(?s), "ECO_0000217"))}
+}
