@@ -14,8 +14,9 @@ OBO = http://purl.obolibrary.org/obo/
 SPARQL = build/sparql/
 REP = build/reports/
 
-update: | modules imports
-all: | modules imports report build products mapping subsets
+#update: build/robot.jar | modules imports
+update: modules imports
+all: update | report build products mapping subsets
 release: all
 
 # test is used for Travis integration
@@ -24,6 +25,11 @@ test: verify
 # ----------------------------------------
 # ROBOT
 # ----------------------------------------
+
+#.PHONY: build/robot.jar
+build/robot.jar:
+	curl -L -o build/robot.jar\
+	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := java -jar build/robot.jar
 
@@ -39,7 +45,7 @@ modules: $(MOD)obi_logic.owl
 
 .PHONY: $(MOD)obi_logic.owl
 $(MOD)obi_logic.owl:
-	robot merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
+	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
 	 --input-iri http://purl.obolibrary.org/obo/go.owl\
 	 template --template $(TEMP)obi_logic.csv\
 	 annotate --ontology-iri "$(OBO)$(ECO)/$@" --output $@
@@ -58,8 +64,8 @@ $(IMPS):
 	python $(IMP)get_terms.py $@ &&\
 	 robot extract --input-iri "$(OBO)$@.owl"\
 	 --method bot --term-file $(IMP)$@_terms.txt --term-file $(IMP)etc_terms.txt\
-	 remove --select "complement annotation-properties"\
-	 --entities $(IMP)annotations.txt\
+	 remove --select "complement" --select "annotation-properties" --trim true \
+	 --term-file $(IMP)annotations.txt\
 	 annotate --ontology-iri "$(OBO)eco/imports/$@_import.owl"\
 	 --output $(IMP)$@_import.owl
 
@@ -90,12 +96,12 @@ verify: init
 # MAIN
 # ----------------------------------------
 
-# eco-base.owl is an import-removed, non-reasoned release
-BASE = $(ECO)-base.owl
-# eco-basic.owl is not yet implemented
-BASIC = $(ECO)-basic.owl
+# eco-base.owl is an import-removed, *non-reasoned* release
+BASE = $(ECO)-base
+# eco-basic.owl is an import-removed, *reasoned* release
+BASIC = $(ECO)-basic
 
-build: $(ECO).owl $(ECO).obo $(BASE)
+build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASE).obo $(BASIC).owl $(BASIC).obo
 
 # release vars
 TS = $(shell date +'%m:%d:%Y %H:%M')
@@ -113,22 +119,25 @@ $(ECO).obo: $(ECO).owl
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
-$(BASE): $(EDIT)
+$(BASE).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim false \
 	annotate --ontology-iri "$(OBO)$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-# Not yet implemented
-$(BASIC): $(EDIT)
+$(BASIC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
 	reason --reasoner elk --annotate-inferred-axioms false \
-	remove --entity ECO:0000352 --entity ECO:0000501 --entity ECO:0000217\
 	 --select "self descendants" \
-	remove --select "anonymous parents" --select "equivalents" \
+	remove --select "equivalents parents" --select "anonymous" \
 	annotate --ontology-iri "$(OBO)$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
+
+$(BASIC).obo: $(BASIC).owl
+	$(ROBOT) convert --input $< --format obo --check false --output $(basename $@)-temp.obo && \
+	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
+	rm $(basename $@)-temp.obo
 
 # ----------------------------------------
 # MAPPINGS
