@@ -1,9 +1,9 @@
 import re
 import sys
 
-eco_path = "modules/obi_logic.owl"
+eco_path = "src/ontology/modules/obi_logic.owl"
 ns = sys.argv[1]
-term_file_path = "imports/" + ns + "_terms.txt"
+term_file_path = "src/ontology/imports/" + ns + "_terms.txt"
 
 regex = re.compile(ns + "_[0-9]{7}")
 

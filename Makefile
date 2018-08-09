@@ -7,28 +7,33 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-# path vars
 ECO = eco
-EDIT = eco-edit.owl
+EDIT = src/ontology/eco-edit.owl
 OBO = http://purl.obolibrary.org/obo/
-SPARQL = build/sparql/
-REP = build/reports/
+# folders
+BUILD = build/
+SUB = subsets/
+SPARQL = src/sparql/
 
 #update: build/robot.jar | modules imports
-update: modules imports
-all: update | report build products mapping subsets
+update: | modules imports
+all: | update report build mapping subsets
 release: all
 
 # test is used for Travis integration
-test: verify
+test: report verify
 
 # ----------------------------------------
 # ROBOT
 # ----------------------------------------
 
+init: $(BUILD)
+$(BUILD):
+	mkdir -p $@
+
 #.PHONY: build/robot.jar
-build/robot.jar:
-	curl -L -o build/robot.jar\
+build/robot.jar: | init
+	curl -L -o $(BUILD)robot.jar\
 	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := java -jar build/robot.jar
@@ -37,30 +42,27 @@ ROBOT := java -jar build/robot.jar
 # MODULES
 # ----------------------------------------
 
-TEMP = templates/
-MOD = modules/
+TEMP = src/ontology/templates/
+MOD = src/ontology/modules/
 
-.PHONY: modules
 modules: $(MOD)obi_logic.owl
 
-.PHONY: $(MOD)obi_logic.owl
-$(MOD)obi_logic.owl:
+$(MOD)obi_logic.owl: $(TEMP)obi_logic.owl
 	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
 	 --input-iri http://purl.obolibrary.org/obo/go.owl\
-	 template --template $(TEMP)obi_logic.csv\
+	 template --template $<\
 	 annotate --ontology-iri "$(OBO)$(ECO)/$@" --output $@
 
 # ----------------------------------------
 # IMPORTS
 # ----------------------------------------
 
-IMP = imports/
+IMP = src/ontology/imports/
 IMPS = go obi
 
-.PHONY: imports
 imports: $(IMPS)
 
-$(IMPS):
+$(IMPS): $(MOD)obi_logic.owl
 	python $(IMP)get_terms.py $@ &&\
 	 robot extract --input-iri "$(OBO)$@.owl"\
 	 --method bot --term-file $(IMP)$@_terms.txt --term-file $(IMP)etc_terms.txt\
@@ -73,15 +75,12 @@ $(IMPS):
 # REPORT
 # ----------------------------------------
 
-init:
-	mkdir -p $(REP)
-
 # A report is written to build/reports/report.tsv
 
-report: $(REP)report.tsv
-
-$(REP)report.tsv: $(EDIT) | init
-	$(ROBOT) report --input $< --fail-on none\
+report: $(BUILD)report.tsv
+.PHONY: $(BUILD)report.tsv
+$(BUILD)report.tsv: $(EDIT) | init
+	$(ROBOT) report --input $<\
 	 --output $@ --format tsv
 
 # verify is part of 'test' for Travis
@@ -90,7 +89,7 @@ V_QUERIES := $(wildcard $(SPARQL)verify-*.rq)
 .PHONY: verify
 verify: init
 	$(ROBOT) verify --input $(EDIT)\
-	 --queries $(V_QUERIES) --output-dir $(REP)
+	 --queries $(V_QUERIES) --output-dir $(BUILD)
 
 # ----------------------------------------
 # MAIN
@@ -101,7 +100,7 @@ BASE = $(ECO)-base
 # eco-basic.owl is an import-removed, *reasoned* release
 BASIC = $(ECO)-basic
 
-build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASE).obo $(BASIC).owl $(BASIC).obo
+build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASIC).owl $(BASIC).obo
 
 # release vars
 TS = $(shell date +'%m:%d:%Y %H:%M')
@@ -120,7 +119,7 @@ $(ECO).obo: $(ECO).owl
 	rm $(basename $@)-temp.obo
 
 $(BASE).owl: $(EDIT)
-	$(ROBOT) remove --input $< --select imports --trim false \
+	$(ROBOT) remove --input $< --select imports \
 	annotate --ontology-iri "$(OBO)$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
@@ -128,7 +127,6 @@ $(BASE).owl: $(EDIT)
 $(BASIC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
 	reason --reasoner elk --annotate-inferred-axioms false \
-	 --select "self descendants" \
 	remove --select "equivalents parents" --select "anonymous" \
 	annotate --ontology-iri "$(OBO)$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
@@ -157,7 +155,6 @@ gaf-eco-mapping-derived.txt: $(TGT)
 # SUBSETS
 # ----------------------------------------
 
-SUB = subsets/
 SUBS = go_groupings \
 valid_with_biological_process \
 valid_with_cellular_component \
@@ -167,10 +164,9 @@ valid_with_molecular_function \
 valid_with_protein \
 valid_with_protein_complex
 
-.PHONY: subsets
 subsets: $(SUBS)
 
-$(SUBS): eco.owl
+$(SUBS): $(ECO).owl
 	$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<http://purl.obolibrary.org/obo/eco#$@> annotations"\
 	 annotate --version-iri "http://purl.obolibrary.org/obo/eco/$(DATE)/subsets/$@.owl"\
