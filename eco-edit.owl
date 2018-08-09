@@ -1581,7 +1581,6 @@ Declaration(AnnotationProperty(eco:valid_with_protein))
 Declaration(AnnotationProperty(eco:valid_with_protein_complex))
 Declaration(AnnotationProperty(eco:valid_with_transcript))
 Declaration(AnnotationProperty(dc:description))
-Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(dc:title))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
@@ -1641,60 +1640,95 @@ AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000234 "The 'term requester' can cr
 AnnotationAssertion(rdfs:isDefinedBy obo:IAO_0000234 "IAO"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:IAO_0000234 "ontology term requester"^^xsd:string)
 
-# Annotation Property: eco:go_groupings (eco:go_groupings)
+# Annotation Property: eco:go_groupings (go_groupings)
 
 AnnotationAssertion(rdfs:comment eco:go_groupings "Grouping classes used by GO"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:go_groupings "go_groupings"^^xsd:string)
 SubAnnotationPropertyOf(eco:go_groupings oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_biological_process (eco:valid_with_biological_process)
+# Annotation Property: eco:valid_with_biological_process (valid_with_biological_process)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_biological_process "GO biological process terms should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_biological_process "valid_with_biological_process"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_biological_process oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_cellular_component (eco:valid_with_cellular_component)
+# Annotation Property: eco:valid_with_cellular_component (valid_with_cellular_component)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_cellular_component "valid_with_cellular_component"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_cellular_component oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_chemical_entity (eco:valid_with_chemical_entity)
+# Annotation Property: eco:valid_with_chemical_entity (valid_with_chemical_entity)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_chemical_entity "Chemical entity IDs should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_chemical_entity "valid_with_chemical_entity"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_chemical_entity oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_gene (eco:valid_with_gene)
+# Annotation Property: eco:valid_with_gene (valid_with_gene)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_gene "Gene IDs should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_gene "valid_with_gene"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_gene oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_molecular_function (eco:valid_with_molecular_function)
+# Annotation Property: eco:valid_with_molecular_function (valid_with_molecular_function)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_molecular_function "GO molecular function terms should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_molecular_function "valid_with_molecular_function"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_molecular_function oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_protein (eco:valid_with_protein)
+# Annotation Property: eco:valid_with_protein (valid_with_protein)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_protein "Protein IDs should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_protein "valid_with_protein"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_protein oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_protein_complex (eco:valid_with_protein_complex)
+# Annotation Property: eco:valid_with_protein_complex (valid_with_protein_complex)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_protein_complex "Protein complex IDs should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_protein_complex "valid_with_protein_complex"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_protein_complex oboInOwl:SubsetProperty)
 
-# Annotation Property: eco:valid_with_transcript (eco:valid_with_transcript)
+# Annotation Property: eco:valid_with_transcript (valid_with_transcript)
 
 AnnotationAssertion(rdfs:comment eco:valid_with_transcript "Transcript IDs should be used in the GO with/from field"^^xsd:string)
+AnnotationAssertion(rdfs:label eco:valid_with_transcript "valid_with_transcript"^^xsd:string)
 SubAnnotationPropertyOf(eco:valid_with_transcript oboInOwl:SubsetProperty)
 
-# Annotation Property: dc:license (license)
+# Annotation Property: dc:description (description)
 
-AnnotationAssertion(obo:IAO_0000115 dc:license "A legal document giving official permission to do something with the resource."^^xsd:string)
-AnnotationAssertion(rdfs:isDefinedBy dc:license "DC"^^xsd:string)
-AnnotationAssertion(rdfs:label dc:license "license"^^xsd:string)
+AnnotationAssertion(rdfs:label dc:description "description"^^xsd:string)
+
+# Annotation Property: dc:title (title)
+
+AnnotationAssertion(rdfs:label dc:title "title"^^xsd:string)
+
+# Annotation Property: dcterms:license (license)
+
+AnnotationAssertion(rdfs:label dcterms:license "license"^^xsd:string)
 
 # Annotation Property: oboInOwl:SubsetProperty (subset_property)
 
 AnnotationAssertion(rdfs:label oboInOwl:SubsetProperty "subset_property"^^xsd:string)
+
+# Annotation Property: oboInOwl:auto-generated-by (auto-generated-by)
+
+AnnotationAssertion(rdfs:label oboInOwl:auto-generated-by "auto-generated-by"^^xsd:string)
+
+# Annotation Property: oboInOwl:created_by (created_by)
+
+AnnotationAssertion(rdfs:label oboInOwl:created_by "created_by"^^xsd:string)
+
+# Annotation Property: oboInOwl:creation_date (creation_date)
+
+AnnotationAssertion(rdfs:label oboInOwl:creation_date "creation_date"^^xsd:string)
+
+# Annotation Property: oboInOwl:date (date)
+
+AnnotationAssertion(rdfs:label oboInOwl:date "date"^^xsd:string)
+
+# Annotation Property: oboInOwl:default-namespace (default-namespace)
+
+AnnotationAssertion(rdfs:label oboInOwl:default-namespace "default-namespace"^^xsd:string)
 
 # Annotation Property: oboInOwl:hasAlternativeId (has_alternative_id)
 
@@ -1728,9 +1762,21 @@ AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace"^^xsd
 
 AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym"^^xsd:string)
 
+# Annotation Property: oboInOwl:id (id)
+
+AnnotationAssertion(rdfs:label oboInOwl:id "id"^^xsd:string)
+
 # Annotation Property: oboInOwl:inSubset (in_subset)
 
 AnnotationAssertion(rdfs:label oboInOwl:inSubset "in_subset"^^xsd:string)
+
+# Annotation Property: oboInOwl:is_inferred (is_inferred)
+
+AnnotationAssertion(rdfs:label oboInOwl:is_inferred "is_inferred"^^xsd:string)
+
+# Annotation Property: oboInOwl:saved-by (saved-by)
+
+AnnotationAssertion(rdfs:label oboInOwl:saved-by "saved-by"^^xsd:string)
 
 # Annotation Property: oboInOwl:shorthand (shorthand)
 
@@ -15114,7 +15160,7 @@ EquivalentClasses(obo:ECO_0007233 ObjectIntersectionOf(obo:ECO_0000228 ObjectSom
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007234 "A type of 4C evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007234 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007234 "2018-05-14T09:47:55Z"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007234 "circularized chromosome conformation capture evidence used in manual assertion"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007234 "circularized chromosome conformation capture evidence used in automatic assertion"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007234 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007234 "ECO:0007234"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007234 "4C evidence used in automatic assertion"^^xsd:string)
