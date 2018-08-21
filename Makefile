@@ -16,8 +16,9 @@ SUB = subsets/
 SPARQL = src/sparql/
 
 #update: build/robot.jar | modules imports
-update: | modules imports
-all: | update report build mapping subsets
+.PHONY: update
+update: modules imports
+all: update report build mapping subsets
 release: all
 
 # test is used for Travis integration
@@ -32,9 +33,9 @@ $(BUILD):
 	mkdir -p $@
 
 #.PHONY: build/robot.jar
-build/robot.jar: | init
-	curl -L -o $(BUILD)robot.jar\
-	 https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
+#build/robot.jar: | init
+	#curl -L -o $(BUILD)robot.jar\
+	 #https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
 
 ROBOT := java -jar build/robot.jar
 
@@ -47,11 +48,11 @@ MOD = src/ontology/modules/
 
 modules: $(MOD)obi_logic.owl
 
-$(MOD)obi_logic.owl: $(TEMP)obi_logic.owl
+$(MOD)obi_logic.owl: $(TEMP)obi_logic.csv
 	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
 	 --input-iri http://purl.obolibrary.org/obo/go.owl\
 	 template --template $<\
-	 annotate --ontology-iri "$(OBO)$(ECO)/$@" --output $@
+	 annotate --ontology-iri "$(OBO)$(ECO)/modules/obi_logic.owl" --output $@
 
 # ----------------------------------------
 # IMPORTS
@@ -79,7 +80,7 @@ $(IMPS): $(MOD)obi_logic.owl
 
 report: $(BUILD)report.tsv
 .PHONY: $(BUILD)report.tsv
-$(BUILD)report.tsv: $(EDIT) | init
+$(BUILD)report.tsv: $(EDIT) # init
 	$(ROBOT) report --input $<\
 	 --output $@ --format tsv
 
@@ -144,8 +145,8 @@ $(BASIC).obo: $(BASIC).owl
 mapping: gaf-eco-mapping-derived.txt
 
 # create derived GO mapping file
-gaf-eco-mapping-derived.txt: $(TGT)
-	$(ROBOT) query --input $(TGT) --format tsv\
+gaf-eco-mapping-derived.txt: $(ECO).owl
+	$(ROBOT) query --input $(ECO).owl --format tsv\
 	 --select $(SPARQL)make-derived-mapping.rq build/$@ \
 	&& sed 's/\"//g' build/$@\
 	 | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g'\
@@ -168,7 +169,7 @@ subsets: $(SUBS)
 
 $(SUBS): $(ECO).owl
 	$(ROBOT) filter --input $< \
-	 --select "oboInOwl:inSubset=<http://purl.obolibrary.org/obo/eco#$@> annotations"\
+	 --select "oboInOwl:inSubset=<http://purl.obolibrary.org/obo/eco#$@> annotations" \
 	 annotate --version-iri "http://purl.obolibrary.org/obo/eco/$(DATE)/subsets/$@.owl"\
 	 --ontology-iri "http://purl.obolibrary.org/obo/eco/subsets/$@.owl"\
 	 --output $(addprefix $(SUB), $(addsuffix .owl, $@))\

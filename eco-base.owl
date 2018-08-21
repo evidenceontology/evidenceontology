@@ -12,13 +12,13 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-07-11/eco-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-08-21/eco-base.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07:11:2018 07:04</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
         <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:saved-by>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08:21:2018 11:52</oboInOwl:date>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
     </owl:Ontology>
     
@@ -89,6 +89,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#go_groupings">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grouping classes used by GO</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">go_groupings</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -98,6 +99,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_biological_process">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO biological process terms should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_biological_process</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -107,6 +109,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO cellular component terms should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_cellular_component</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -116,6 +119,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_chemical_entity">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical entity IDs should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_chemical_entity</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -125,6 +129,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_gene">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene IDs should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_gene</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -134,6 +139,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO molecular function terms should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_molecular_function</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -143,6 +149,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_protein">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protein IDs should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_protein</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -152,6 +159,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protein complex IDs should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_protein_complex</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -161,6 +169,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/eco#valid_with_transcript">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcript IDs should be used in the GO with/from field</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valid_with_transcript</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -168,29 +177,25 @@
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legal document giving official permission to do something with the resource.</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DC</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license</rdfs:label>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">description</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/license -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -204,31 +209,41 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#auto-generated-by -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#auto-generated-by">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auto-generated-by</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">created_by</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creation_date</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#date -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default-namespace</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -298,7 +313,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -312,13 +329,17 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#is_inferred -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_inferred"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_inferred">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_inferred</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saved-by</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -4221,8 +4242,10 @@ The ddNTPs lack an OH group so the next dNTP cannot be attached, causing chain t
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-11-16T05:57:20Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qPCR evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative real-time PCR</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative real-time PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real time polymerase chain reaction evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time PCR evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time quantitative PCR</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
@@ -20044,8 +20067,6 @@ computationally derived.</owl:annotatedTarget>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of reverse transcription polymerase chain reaction evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swolfish</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-11-03T12:22:46Z</oboInOwl:creation_date>
-        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT-PCR evidence</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qRT-PCR evidence</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001808</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reverse transcription polymerase chain reaction evidence used in manual assertion</rdfs:label>
@@ -20599,10 +20620,10 @@ computationally derived.</owl:annotatedTarget>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CollecTF</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swolfish</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-11-05T16:16:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation interference footprinting evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation interference footprinting</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001827</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">premethylation interference footprinting evidence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation interference footprinting evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001827"/>
@@ -26090,13 +26111,13 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of premethylation interference footprinting evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of methylation interference footprinting evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-05-09T14:55:25Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">premethylation interference footprinting evidence used in manual assertion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation interference footprinting</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005656</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">premethylation interference footprinting evidence used in manual assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation interference footprinting evidence used in manual assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005656"/>
@@ -26112,7 +26133,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005656"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of premethylation interference footprinting evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of methylation interference footprinting evidence that is used in a manual assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -26288,10 +26309,6 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative polymerase chain reaction evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-05-09T15:09:01Z</oboInOwl:creation_date>
-        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q-PCR evidence</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative PCR evidence</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time PCR evidence</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time polymerase chain reaction evidence</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005660</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative polymerase chain reaction evidence used in manual assertion</rdfs:label>
@@ -37335,7 +37352,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of 4C evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">circularized chromosome conformation capture evidence used in manual assertion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">circularized chromosome conformation capture evidence used in automatic assertion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0007234</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4C evidence used in automatic assertion</rdfs:label>
@@ -45790,17 +45807,18 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of premethylation interference footprinting evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of methylation interference footprinting evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">premethylation interference footprinting evidence used in automatic assertion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0007519</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">premethylation interference footprinting evidence used in automatic assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylation interference footprinting evidence used in automatic assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007519"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of premethylation interference footprinting evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of methylation interference footprinting evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -49282,6 +49300,80 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental phenotypic evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO:000156 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO:000156">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO:0001566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO:0001566"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO:0001566 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO:0001566">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000109"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of reverse transcription polymerase chain reaction evidence that combines reverse transcription polymerase chain reaction and real time polymerase chain reaction to quantitatively assay for the detection of RNA levels.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT-qPCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative RT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative real-time RT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time RT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time qRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time quantitative reverse transcription PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time reverse transcription polymerase chain reaction evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001566</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO:0001567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO:0001567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO:0001566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO:0001566"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative reverse transcription polymerase chain reaction evidence used in manual assertion.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001567</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence used in manual assertion</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
