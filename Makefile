@@ -121,7 +121,7 @@ $(ECO).obo: $(ECO).owl
 
 $(BASE).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports \
-	annotate --ontology-iri "$(OBO)$@"\
+	annotate --ontology-iri "$(OBO)eco/$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
@@ -129,7 +129,7 @@ $(BASIC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
 	reason --reasoner elk --annotate-inferred-axioms false \
 	remove --select "equivalents parents" --select "anonymous" \
-	annotate --ontology-iri "$(OBO)$@"\
+	annotate --ontology-iri "$(OBO)eco/$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
