@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/eco-basic.owl#"
-     xml:base="http://purl.obolibrary.org/obo/eco-basic.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/eco/eco-basic.owl#"
+     xml:base="http://purl.obolibrary.org/obo/eco/eco-basic.owl"
      xmlns:eco="http://purl.obolibrary.org/obo/eco#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -12,13 +12,13 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/eco-basic.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-08-21/eco-basic.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-09-03/eco-basic.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09:03:2018 09:36</oboInOwl:date>
         <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:saved-by>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08:21:2018 11:52</oboInOwl:date>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
     </owl:Ontology>
     
@@ -6037,7 +6037,7 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from expression pattern</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000270</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expression evidence used in manual assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expression pattern evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/iep-inferred-expression-pattern</rdfs:seeAlso>
     </owl:Class>
     <owl:Axiom>
@@ -20014,6 +20014,83 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001565</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell-based assay evidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0001566 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001566">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000109"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of reverse transcription polymerase chain reaction evidence that combines reverse transcription polymerase chain reaction and real time polymerase chain reaction to quantitatively assay for the detection of RNA levels.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT-qPCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative RT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative real-time RT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time RT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time qRT-PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time quantitative reverse transcription PCR evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time reverse transcription polymerase chain reaction evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001566</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0001567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0001566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001566"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001808"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative reverse transcription polymerase chain reaction evidence used in manual assertion.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001567</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0001568 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001568">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0001566"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001566"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007475"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001568</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.</rdfs:label>
     </owl:Class>
     
 
@@ -50856,82 +50933,6 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental phenotypic evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO:000156 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO:000156">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO:0001566"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007475"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO:0001566"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO:0001566 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO:0001566">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000109"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of reverse transcription polymerase chain reaction evidence that combines reverse transcription polymerase chain reaction and real time polymerase chain reaction to quantitatively assay for the detection of RNA levels.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RRT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT-qPCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qRT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative RT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative real-time RT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rRT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time RT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time qRT-PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time quantitative reverse transcription PCR evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-time reverse transcription polymerase chain reaction evidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001566</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO:0001567 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO:0001567">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO:0001566"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001808"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO:0001566"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of quantitative reverse transcription polymerase chain reaction evidence used in manual assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-07T12:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001567</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantitative reverse transcription polymerase chain reaction evidence used in manual assertion</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
 
 

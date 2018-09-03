@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2018-08-21
-date: 08:21:2018 11:52
+data-version: eco/releases/2018-09-03/eco-basic.owl
+date: 09:03:2018 09:36
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -13,7 +13,7 @@ subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the
 subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
 remark: ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
-ontology: eco-basic
+ontology: eco/eco-basic
 property_value: http://purl.org/dc/elements/1.1/description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Evidence & Conclusion Ontology (ECO)" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
@@ -1933,7 +1933,7 @@ creation_date: 2010-12-20T05:36:49Z
 
 [Term]
 id: ECO:0000270
-name: expression evidence used in manual assertion
+name: expression pattern evidence used in manual assertion
 def: "A type of expression pattern evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "IEP" EXACT [GOECO:IEP]
 synonym: "inferred from expression pattern" EXACT [GOECO:IEP]
@@ -2123,7 +2123,7 @@ id: ECO:0000284
 name: protein expression evidence used in manual assertion
 def: "A type of protein expression analysis that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000010 ! protein expression evidence
-is_a: ECO:0000270 ! expression evidence used in manual assertion
+is_a: ECO:0000270 ! expression pattern evidence used in manual assertion
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 intersection_of: ECO:0000010 ! protein expression evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -2207,7 +2207,7 @@ alt_id: ECO:0000286
 def: "A type of transcript expression evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "transcript expression level evidence" BROAD []
 is_a: ECO:0000009 ! transcript expression evidence
-is_a: ECO:0000270 ! expression evidence used in manual assertion
+is_a: ECO:0000270 ! expression pattern evidence used in manual assertion
 intersection_of: ECO:0000009 ! transcript expression evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -4873,7 +4873,7 @@ creation_date: 2014-03-17T17:03:28Z
 id: ECO:0001182
 name: fluorescence in situ hybridization evidence used in manual assertion
 def: "A type of fluorescence in situ hybridization evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000270 ! expression evidence used in manual assertion
+is_a: ECO:0000270 ! expression pattern evidence used in manual assertion
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 is_a: ECO:0001047 ! fluorescence in situ hybridization evidence
 intersection_of: ECO:0001047 ! fluorescence in situ hybridization evidence
@@ -6256,6 +6256,47 @@ def: "A type of direct assay evidence resulting from the study of cells." []
 is_a: ECO:0000002 ! direct assay evidence
 created_by: jbmunro
 creation_date: 2017-11-30T14:00:00Z
+
+[Term]
+id: ECO:0001566
+name: quantitative reverse transcription polymerase chain reaction evidence
+def: "A type of reverse transcription polymerase chain reaction evidence that combines reverse transcription polymerase chain reaction and real time polymerase chain reaction to quantitatively assay for the detection of RNA levels." []
+synonym: "qRT-PCR evidence" EXACT []
+synonym: "quantitative real-time RT-PCR evidence" EXACT []
+synonym: "quantitative RT-PCR evidence" EXACT []
+synonym: "real-time qRT-PCR evidence" EXACT []
+synonym: "real-time quantitative reverse transcription PCR evidence" EXACT []
+synonym: "real-time reverse transcription polymerase chain reaction evidence" EXACT []
+synonym: "real-time RT-PCR evidence" EXACT []
+synonym: "RRT-PCR evidence" EXACT []
+synonym: "rRT-PCR evidence" EXACT []
+synonym: "RT-qPCR evidence" EXACT []
+is_a: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
+created_by: jbmunro
+creation_date: 2018-07-07T12:00:00Z
+
+[Term]
+id: ECO:0001567
+name: quantitative reverse transcription polymerase chain reaction evidence used in manual assertion
+def: "A type of quantitative reverse transcription polymerase chain reaction evidence used in manual assertion." []
+is_a: ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
+is_a: ECO:0001808 ! reverse transcription polymerase chain reaction evidence used in manual assertion
+intersection_of: ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: jbmunro
+creation_date: 2018-07-07T12:00:00Z
+
+[Term]
+id: ECO:0001568
+name: quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.
+alt_id: ECO:000156
+def: "A type of quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion." []
+is_a: ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
+is_a: ECO:0007475 ! reverse transcription polymerase chain reaction evidence used in automatic assertion
+intersection_of: ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: jbmunro
+creation_date: 2018-07-07T12:00:00Z
 
 [Term]
 id: ECO:0001601
@@ -9949,7 +9990,7 @@ comment: When using the HEP evidence code, the guidelines for EXP should be adhe
 synonym: "HEP" EXACT [GOECO:HEP]
 synonym: "inferred from high throughput expression pattern" EXACT [GOECO:HEP]
 xref: GOECO:HEP "inferred from high throughput expression pattern"
-is_a: ECO:0000270 ! expression evidence used in manual assertion
+is_a: ECO:0000270 ! expression pattern evidence used in manual assertion
 is_a: ECO:0006056 ! high throughput evidence used in manual assertion
 is_a: ECO:0007006 ! high throughput expression pattern evidence
 intersection_of: ECO:0007006 ! high throughput expression pattern evidence
@@ -10903,7 +10944,7 @@ name: ribosome profiling evidence used in manual assertion
 def: "A type of ribosome profiling evidence that is used in a manual assertion." [ECO:RCT]
 synonym: "ribo-seq evidence" BROAD []
 synonym: "ribosome footprinting evidence" BROAD []
-is_a: ECO:0000270 ! expression evidence used in manual assertion
+is_a: ECO:0000270 ! expression pattern evidence used in manual assertion
 is_a: ECO:0007087 ! ribosome profiling evidence
 intersection_of: ECO:0007087 ! ribosome profiling evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -16824,46 +16865,6 @@ intersection_of: ECO:0000059 ! experimental phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-06-20T02:12:00Z
-
-[Term]
-id: http://purl.obolibrary.org/obo/ECO:000156
-name: quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion.
-def: "A type of quantitative reverse transcription polymerase chain reaction evidence used in automatic assertion." []
-is_a: ECO:0007475 ! reverse transcription polymerase chain reaction evidence used in automatic assertion
-is_a: http://purl.obolibrary.org/obo/ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
-intersection_of: http://purl.obolibrary.org/obo/ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
-intersection_of: used_in ECO:0000203 ! automatic assertion
-created_by: jbmunro
-creation_date: 2018-07-07T12:00:00Z
-
-[Term]
-id: http://purl.obolibrary.org/obo/ECO:0001566
-name: quantitative reverse transcription polymerase chain reaction evidence
-def: "A type of reverse transcription polymerase chain reaction evidence that combines reverse transcription polymerase chain reaction and real time polymerase chain reaction to quantitatively assay for the detection of RNA levels." []
-synonym: "qRT-PCR evidence" EXACT []
-synonym: "quantitative real-time RT-PCR evidence" EXACT []
-synonym: "quantitative RT-PCR evidence" EXACT []
-synonym: "real-time qRT-PCR evidence" EXACT []
-synonym: "real-time quantitative reverse transcription PCR evidence" EXACT []
-synonym: "real-time reverse transcription polymerase chain reaction evidence" EXACT []
-synonym: "real-time RT-PCR evidence" EXACT []
-synonym: "RRT-PCR evidence" EXACT []
-synonym: "rRT-PCR evidence" EXACT []
-synonym: "RT-qPCR evidence" EXACT []
-is_a: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
-created_by: jbmunro
-creation_date: 2018-07-07T12:00:00Z
-
-[Term]
-id: http://purl.obolibrary.org/obo/ECO:0001567
-name: quantitative reverse transcription polymerase chain reaction evidence used in manual assertion
-def: "A type of quantitative reverse transcription polymerase chain reaction evidence used in manual assertion." []
-is_a: ECO:0001808 ! reverse transcription polymerase chain reaction evidence used in manual assertion
-is_a: http://purl.obolibrary.org/obo/ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
-intersection_of: http://purl.obolibrary.org/obo/ECO:0001566 ! quantitative reverse transcription polymerase chain reaction evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: jbmunro
-creation_date: 2018-07-07T12:00:00Z
 
 [Typedef]
 id: used_in

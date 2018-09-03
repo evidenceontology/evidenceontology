@@ -6,15 +6,12 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_protein.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2018-08-21/subsets/valid_with_protein.owl">
+     versionIRI="http://purl.obolibrary.org/obo/eco/2018-09-03/subsets/valid_with_protein.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000602"/>
-    </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
     </Declaration>
@@ -22,28 +19,16 @@
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000501"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000180"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000589"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000315"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000412"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000319"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000117"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000319"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
@@ -82,25 +67,16 @@
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000245"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000601"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000318"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000233"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -109,19 +85,16 @@
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#auto-generated-by"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_transcript"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/OBI_9991118"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#go_groupings"/>
@@ -133,19 +106,13 @@
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000321"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000353"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdf:type"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component"/>
@@ -154,28 +121,16 @@
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000317"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000232"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/OBI_0001847"/>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#created_by"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
@@ -190,22 +145,13 @@
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000316"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#id"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000114"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000179"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
@@ -214,10 +160,10 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
+        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000250"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/ECO_0000250"/>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
