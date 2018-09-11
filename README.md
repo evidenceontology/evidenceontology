@@ -26,6 +26,8 @@ ECO is free for all, but we certainly appreciate attribution _and_ collaboration
 
 **...AND COLLABORATE WITH US!**
 
+Follow us on **[Twitter](https://twitter.com/ecoontology)**
+
 If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**.
 
 When you contribute your knowledge to ECO, everyone can benefit!
