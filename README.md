@@ -10,6 +10,10 @@ ECO was originally created around the year 2000 to support [Gene Ontology](http:
 
 **DEVELOPMENT INFORMATION**
 
+If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**.
+
+When you contribute your knowledge to ECO, everyone can benefit!
+
 For **advice on requesting new terms**, please see the **[Evidence & Conclusion Ontology wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**.
 
 For **information about editing & releases**, please see the **[GitHub editors README file](https://github.com/evidenceontology/evidenceontology/blob/master/src/ontology/README-editors.md)**.
@@ -18,19 +22,13 @@ For **further information** including history, detailed discussion of evidence, 
 
 ***
 
-**PLEASE CITE ECO**
+**PLEASE CITE ECO & follow us on Twitter**
+
+Follow us on **[Twitter](https://twitter.com/ecoontology)**
 
 ECO is free for all, but we certainly appreciate attribution _and_ collaboration! If you use ECO in your work, please **cite** the following paper:
 
 [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066.](http://database.oxfordjournals.org/content/2014/bau075.long)
-
-**...AND COLLABORATE WITH US!**
-
-Follow us on **[Twitter](https://twitter.com/ecoontology)**
-
-If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**.
-
-When you contribute your knowledge to ECO, everyone can benefit!
 
 ***
 
