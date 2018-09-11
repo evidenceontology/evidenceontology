@@ -26,7 +26,7 @@ ECO is free for all, but we certainly appreciate attribution _and_ collaboration
 
 **...AND COLLABORATE WITH US!**
 
-If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker** or **email [Dr. Marcus Chibucos](http://www.medschool.umaryland.edu/profiles/Chibucos-Marcus/)** of the University of Maryland School of Medicine: **mchibucos@som.umaryland.edu**.
+If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**.
 
 When you contribute your knowledge to ECO, everyone can benefit!
 
