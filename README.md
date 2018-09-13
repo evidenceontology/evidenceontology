@@ -2,9 +2,9 @@
 
 If you use ECO in your work, **please consider citing ECO**. We appreciate the attribution. 
 
-**[Please cite](https://academic.oup.com/database/article/doi/10.1093/database/bau075/2634798/Standardized-description-of-scientific-evidence)**: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
+**Please cite**: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
-Follow **[@ecoontology](https://twitter.com/ecoontology) on Twitter** & check out the **[ECO website evidenceontology.org](http://www.evidenceontology.org)**.
+Follow **[@ecoontology on Twitter](https://twitter.com/ecoontology)** and check out the **[ECO website evidenceontology.org](http://www.evidenceontology.org)**.
 
 **ABOUT ECO**
 
