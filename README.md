@@ -1,8 +1,12 @@
-**ABOUT ECO**
+**_ECO is free for all to use without restriction: see **CC0** information below._**
 
-**[Please cite ECO](https://academic.oup.com/database/article/doi/10.1093/database/bau075/2634798/Standardized-description-of-scientific-evidence)**: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
+If you use ECO in your work, **please consider citing ECO**. We appreciate the attribution. 
+
+**[Please cite](https://academic.oup.com/database/article/doi/10.1093/database/bau075/2634798/Standardized-description-of-scientific-evidence)**: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
 Follow us on **[Twitter](https://twitter.com/ecoontology)** & check out the **[ECO website](http://www.evidenceontology.org)**.
+
+**ABOUT ECO**
 
 The **[Evidence & Conclusion Ontology (ECO)](http://www.evidenceontology.org/)** describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means. Researchers use evidence to support conclusions that arise out of scientific research. Documenting evidence during scientific research is essential, because evidence gives us a sense of _why_ we believe what we _think_ we know. Conclusions are asserted as statements about things that are believed to be true, for example that a protein has a particular function (i.e. a protein functional annotation) or that a disease is associated with a particular gene variant (i.e. a phenotype-gene association). A systematic and structured (i.e. ontological) classification of evidence allows us to store, retreive, share, and compare data associated with that evidence using computers, which are essential to navigating the ever-growing (in size and complexity) corpus of scientific information.
 
@@ -34,7 +38,7 @@ ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. An
 
 **PUBLICATIONS ABOUT ECO**
 
-_ECO is free for all to use without restriction - see **CC0** information above. And we certainly appreciate attribution. If you use ECO in your work, **[please consider citing ECO (PMID:25052702)](http://database.oxfordjournals.org/content/2014/bau075.long)**._
+**[Please cite PMID:25052702](http://database.oxfordjournals.org/content/2014/bau075.long)**.
 
 Selected publications:
 
