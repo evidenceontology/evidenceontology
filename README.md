@@ -48,9 +48,6 @@ Selected publications:
 
 [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
-
-**For a complete bibliography of publications & presentations related to ECO, see the [Resources on the ECO website**.](http://www.evidenceontology.org/docs/)
-
 ***
 
 **FUNDING ACKNOWLEDGEMENT**
