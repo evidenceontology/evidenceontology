@@ -12,12 +12,12 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/eco-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-09-03/eco-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-09-14/eco-base.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09:14:2018 10:54</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09:03:2018 09:36</oboInOwl:date>
         <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:saved-by>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
     </owl:Ontology>
@@ -1262,6 +1262,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000038">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000012"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of functional complementation evidence resulting from the introduction of nucleic acids, which are not permanently incorporated into the genome, to temporarily prevent, or &quot;rescue&quot; an organism from a condition.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000038</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transient rescue experiment evidence</rdfs:label>
@@ -1371,6 +1372,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000010"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein expression evidence that accounts for the position of RNA translation to a protein product ranging in scale from differing tissues to regions of an anatomical structure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000045</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial pattern of protein expression evidence</rdfs:label>
@@ -1401,6 +1403,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000047">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of transcript expression evidence that accounts for the position of transcription ranging in scale from the position of genes on the chromosome to differing tissues to regions of an anatomical structure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000047</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial pattern of transcript expression evidence</rdfs:label>
@@ -3059,6 +3062,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000158">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000156"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein separation evidence that is followed by direct protein sequencing whereby a protein&apos;s amino acid sequence is determined experimentally by Edman degradation or by mass spectrometry.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA: protein separation and direct sequencing</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000158</oboInOwl:id>
@@ -3071,11 +3075,19 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000156"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein separation evidence which then utilizes the screening and identification of small-molecules that bind to proteins.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA: protein separation and fragment identification</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000160</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein separation followed by fragment identification evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000160"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein separation evidence which then utilizes the screening and identification of small-molecules that bind to proteins.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://pubs.acs.org/doi/10.1021/bi3005126</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632530/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -9004,12 +9016,19 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000345">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000200"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of sequence alignment evidence resulting from the comparison of a single exon transcript to a collection / database of known single exon genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-03T05:10:34Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000345</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single exon transcript confirmation via alignment evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000345"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of sequence alignment evidence resulting from the comparison of a single exon transcript to a collection / database of known single exon genes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4897596/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -9551,12 +9570,19 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000360">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental evidence resulting from the prediction of drug-target interactions by computational means.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-09-26T16:39:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000360</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological target-disease association via drug</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological target-disease association via drug evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000360"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental evidence resulting from the prediction of drug-target interactions by computational means.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2199-x</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -10117,6 +10143,7 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000040"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of immunological assay evidence resulting from the inhibitory effect of polyclonal antibodies (antibodies secreted by different B cell lineages), which while not reacting with a specific antigen, serve to prevent other antibodies from doing so.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-16T11:30:54Z</oboInOwl:creation_date>
@@ -11879,6 +11906,7 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001094">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental evidence that is visible to the naked eye cf. microscopy evidence which requires the aid of a microscope.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-16T11:30:54Z</oboInOwl:creation_date>
@@ -12213,6 +12241,7 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001110">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000023"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of affinity evidence resulting from the appending of affinity tags on proteins so that they may be purified from their biological source using an affinity technique.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-16T11:30:54Z</oboInOwl:creation_date>
@@ -35189,7 +35218,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0007156</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological target-disease association via drug used in manual assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological target-disease association via drug evidence used in manual assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007156"/>
@@ -38123,7 +38152,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0007260</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological target-disease association via drug used in automatic assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological target-disease association via drug evidence used in automatic assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007260"/>

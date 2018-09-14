@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2018-09-03/eco-basic.owl
-date: 09:03:2018 09:36
+data-version: eco/releases/2018-09-14/eco-basic.owl
+date: 09:02:2019 10:54
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -291,6 +291,7 @@ is_obsolete: true
 [Term]
 id: ECO:0000038
 name: transient rescue experiment evidence
+def: "A type of functional complementation evidence resulting from the introduction of nucleic acids, which are not permanently incorporated into the genome, to temporarily prevent, or \"rescue\" an organism from a condition." []
 is_a: ECO:0000012 ! functional complementation evidence
 
 [Term]
@@ -331,6 +332,7 @@ is_a: ECO:0000041 ! similarity evidence
 [Term]
 id: ECO:0000045
 name: spatial pattern of protein expression evidence
+def: "A type of protein expression evidence that accounts for the position of RNA translation to a protein product ranging in scale from differing tissues to regions of an anatomical structure." []
 is_a: ECO:0000010 ! protein expression evidence
 
 [Term]
@@ -342,6 +344,7 @@ is_a: ECO:0000010 ! protein expression evidence
 [Term]
 id: ECO:0000047
 name: spatial pattern of transcript expression evidence
+def: "A type of transcript expression evidence that accounts for the position of transcription ranging in scale from the position of genes on the chromosome to differing tissues to regions of an anatomical structure." []
 is_a: ECO:0000009 ! transcript expression evidence
 
 [Term]
@@ -979,12 +982,14 @@ is_a: ECO:0000100 ! fractionation evidence
 [Term]
 id: ECO:0000158
 name: protein separation followed by direct sequencing evidence
+def: "A type of protein separation evidence that is followed by direct protein sequencing whereby a protein's amino acid sequence is determined experimentally by Edman degradation or by mass spectrometry." []
 synonym: "IDA: protein separation and direct sequencing" RELATED []
 is_a: ECO:0000156 ! protein separation evidence
 
 [Term]
 id: ECO:0000160
 name: protein separation followed by fragment identification evidence
+def: "A type of protein separation evidence which then utilizes the screening and identification of small-molecules that bind to proteins." [https://pubs.acs.org/doi/10.1021/bi3005126, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632530/]
 synonym: "IDA: protein separation and fragment identification" RELATED []
 is_a: ECO:0000156 ! protein separation evidence
 
@@ -2832,6 +2837,7 @@ creation_date: 2013-04-03T04:50:46Z
 [Term]
 id: ECO:0000345
 name: single exon transcript confirmation via alignment evidence
+def: "A type of sequence alignment evidence resulting from the comparison of a single exon transcript to a collection / database of known single exon genes." [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4897596/]
 is_a: ECO:0000200 ! sequence alignment evidence
 created_by: mchibucos
 creation_date: 2013-04-03T05:10:34Z
@@ -2980,7 +2986,8 @@ creation_date: 2014-09-26T16:26:48Z
 
 [Term]
 id: ECO:0000360
-name: biological target-disease association via drug
+name: biological target-disease association via drug evidence
+def: "A type of experimental evidence resulting from the prediction of drug-target interactions by computational means." [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2199-x]
 is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:39:11Z
@@ -3187,6 +3194,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001015
 name: blocking polyclonal antibody evidence
+def: "A type of immunological assay evidence resulting from the inhibitory effect of polyclonal antibodies (antibodies secreted by different B cell lineages), which while not reacting with a specific antigen, serve to prevent other antibodies from doing so." []
 is_a: ECO:0000040 ! immunological assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3909,6 +3917,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001094
 name: macroscopy evidence
+def: "A type of experimental evidence that is visible to the naked eye cf. microscopy evidence which requires the aid of a microscope." []
 is_a: ECO:0000006 ! experimental evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4057,6 +4066,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001110
 name: peptide affinity enrichment evidence
+def: "A type of affinity evidence resulting from the appending of affinity tags on proteins so that they may be purified from their biological source using an affinity technique." []
 synonym: "phosphopeptide affinity enrichment evidence" NARROW []
 is_a: ECO:0000023 ! affinity evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -11629,11 +11639,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007156
-name: biological target-disease association via drug used in manual assertion
+name: biological target-disease association via drug evidence used in manual assertion
 def: "A type of biological target-disease association via drug that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000269 ! experimental evidence used in manual assertion
-is_a: ECO:0000360 ! biological target-disease association via drug
-intersection_of: ECO:0000360 ! biological target-disease association via drug
+is_a: ECO:0000360 ! biological target-disease association via drug evidence
+intersection_of: ECO:0000360 ! biological target-disease association via drug evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12707,11 +12717,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007260
-name: biological target-disease association via drug used in automatic assertion
+name: biological target-disease association via drug evidence used in automatic assertion
 def: "A type of biological target-disease association via drug that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000360 ! biological target-disease association via drug
+is_a: ECO:0000360 ! biological target-disease association via drug evidence
 is_a: ECO:0007297 ! experimental evidence used in automatic assertion
-intersection_of: ECO:0000360 ! biological target-disease association via drug
+intersection_of: ECO:0000360 ! biological target-disease association via drug evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2018-09-03
-date: 09:03:2018 09:35
+data-version: releases/2018-09-14
+date: 09:02:2019 10:54
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -534,6 +534,7 @@ is_obsolete: true
 [Term]
 id: ECO:0000038
 name: transient rescue experiment evidence
+def: "A type of functional complementation evidence resulting from the introduction of nucleic acids, which are not permanently incorporated into the genome, to temporarily prevent, or \"rescue\" an organism from a condition." []
 is_a: ECO:0000012 ! functional complementation evidence
 
 [Term]
@@ -574,6 +575,7 @@ is_a: ECO:0000041 ! similarity evidence
 [Term]
 id: ECO:0000045
 name: spatial pattern of protein expression evidence
+def: "A type of protein expression evidence that accounts for the position of RNA translation to a protein product ranging in scale from differing tissues to regions of an anatomical structure." []
 is_a: ECO:0000010 ! protein expression evidence
 
 [Term]
@@ -585,6 +587,7 @@ is_a: ECO:0000010 ! protein expression evidence
 [Term]
 id: ECO:0000047
 name: spatial pattern of transcript expression evidence
+def: "A type of transcript expression evidence that accounts for the position of transcription ranging in scale from the position of genes on the chromosome to differing tissues to regions of an anatomical structure." []
 is_a: ECO:0000009 ! transcript expression evidence
 
 [Term]
@@ -817,7 +820,7 @@ synonym: "MS-PCR" EXACT []
 synonym: "MSP" EXACT []
 is_a: ECO:0001065 ! in vitro methylation assay evidence
 relationship: IAO:0000136 GO:0006306 ! is about DNA methylation
-relationship: OBI:0000312 OBI:0001684 ! is_specified_output_of methylation-specific polymerase chain reaction
+relationship: OBI:0000312 OBI:0001684 ! is_specified_output_of methylation-specific polymerase chain reaction assay
 
 [Term]
 id: ECO:0000078
@@ -827,7 +830,7 @@ comment: The DNA fragments are prepared through gel electrophoresis then transfe
 synonym: "ISS: Southern blotting" RELATED []
 synonym: "Southern blot" EXACT []
 is_a: ECO:0005519 ! DNA detection assay evidence
-relationship: OBI:0000312 OBI:0000892 ! is_specified_output_of Southern blot analysis
+relationship: OBI:0000312 OBI:0000892 ! is_specified_output_of Southern blot assay
 
 [Term]
 id: ECO:0000079
@@ -897,7 +900,7 @@ comment: The bands can be individually isolated and characterized which leads to
 synonym: "AIMS" EXACT []
 is_a: ECO:0001065 ! in vitro methylation assay evidence
 relationship: IAO:0000136 GO:0006306 ! is about DNA methylation
-relationship: OBI:0000312 OBI:0001685 ! is_specified_output_of amplification of intermethylated sites (AIMS) assay
+relationship: OBI:0000312 OBI:0001685 ! is_specified_output_of amplification of intermethylated sites assay
 
 [Term]
 id: ECO:0000087
@@ -1006,7 +1009,7 @@ comment: This term has been made obsolete with the clean up of experimental geno
 synonym: "IDA: in situ hybridization" RELATED []
 is_a: IAO:0000030 {is_inferred="true"} ! information content entity
 relationship: IAO:0000136 GO:0033036 ! is about macromolecule localization
-relationship: OBI:0000312 OBI:0001686 ! is_specified_output_of in situ hybridization
+relationship: OBI:0000312 OBI:0001686 ! is_specified_output_of in-situ hybridization assay
 is_obsolete: true
 
 [Term]
@@ -1056,7 +1059,7 @@ synonym: "northern assay evidence" EXACT []
 synonym: "RNA blot evidence" EXACT []
 is_a: ECO:0000009 ! transcript expression evidence
 relationship: IAO:0000136 GO:0010467 ! is about gene expression
-relationship: OBI:0000312 OBI:0000860 ! is_specified_output_of northern blot analysis
+relationship: OBI:0000312 OBI:0000860 ! is_specified_output_of northern blot assay
 property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
@@ -1263,12 +1266,14 @@ is_a: ECO:0000100 ! fractionation evidence
 [Term]
 id: ECO:0000158
 name: protein separation followed by direct sequencing evidence
+def: "A type of protein separation evidence that is followed by direct protein sequencing whereby a protein's amino acid sequence is determined experimentally by Edman degradation or by mass spectrometry." []
 synonym: "IDA: protein separation and direct sequencing" RELATED []
 is_a: ECO:0000156 ! protein separation evidence
 
 [Term]
 id: ECO:0000160
 name: protein separation followed by fragment identification evidence
+def: "A type of protein separation evidence which then utilizes the screening and identification of small-molecules that bind to proteins." [https://pubs.acs.org/doi/10.1021/bi3005126, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5632530/]
 synonym: "IDA: protein separation and fragment identification" RELATED []
 is_a: ECO:0000156 ! protein separation evidence
 
@@ -1317,7 +1322,7 @@ comment: For example, the accumulation of a biosynthetic intermediate.
 synonym: "IMP: analysis of biochemical trait" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 relationship: IAO:0000136 GO:0010467 ! is about gene expression
-relationship: OBI:0000312 OBI:0000366 ! is_specified_output_of metabolite profiling
+relationship: OBI:0000312 OBI:0000366 ! is_specified_output_of metabolite profiling assay
 
 [Term]
 id: ECO:0000174
@@ -2723,7 +2728,7 @@ comment: Complementary DNA (cDNA) is synthesized from microgram quantities of mR
 synonym: "CAGE" EXACT [PMID:16489339]
 is_a: ECO:0000009 ! transcript expression evidence
 relationship: IAO:0000136 GO:0010467 ! is about gene expression
-relationship: OBI:0000312 OBI:0001674 ! is_specified_output_of cap analysis of gene expression
+relationship: OBI:0000312 OBI:0001674 ! is_specified_output_of cap analysis of gene expression assay
 created_by: mchibucos
 creation_date: 2011-02-17T01:33:09Z
 
@@ -2735,7 +2740,7 @@ comment: NanoCAGE captures the 5' ends of molecules by template switching. When 
 synonym: "nanoCAGE" RELATED [PMID:20543846]
 is_a: ECO:0000009 ! transcript expression evidence
 relationship: IAO:0000136 GO:0010467 ! is about gene expression
-relationship: OBI:0000312 OBI:0001673 ! is_specified_output_of nano-cap analysis of gene expression
+relationship: OBI:0000312 OBI:0001673 ! is_specified_output_of nano-cap analysis of gene expression assay
 created_by: mchibucos
 creation_date: 2011-02-17T01:33:34Z
 
@@ -3159,6 +3164,7 @@ creation_date: 2013-04-03T04:50:46Z
 [Term]
 id: ECO:0000345
 name: single exon transcript confirmation via alignment evidence
+def: "A type of sequence alignment evidence resulting from the comparison of a single exon transcript to a collection / database of known single exon genes." [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4897596/]
 is_a: ECO:0000200 ! sequence alignment evidence
 created_by: mchibucos
 creation_date: 2013-04-03T05:10:34Z
@@ -3307,7 +3313,8 @@ creation_date: 2014-09-26T16:26:48Z
 
 [Term]
 id: ECO:0000360
-name: biological target-disease association via drug
+name: biological target-disease association via drug evidence
+def: "A type of experimental evidence resulting from the prediction of drug-target interactions by computational means." [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2199-x]
 is_a: ECO:0000006 ! experimental evidence
 created_by: mchibucos
 creation_date: 2014-09-26T16:39:11Z
@@ -3395,7 +3402,7 @@ name: [3H]arachidonic acid release assay evidence
 def: "A type of cell-based assay evidence resulting from labeling cells with [3H]arachidonic acid and subsequently determining the release of the arachidonic acid by the cells." [ISBN:0323152295, PMID:20693009]
 is_a: ECO:0001565 ! cell-based assay evidence
 relationship: IAO:0000136 GO:0050482 ! is about arachidonic acid secretion
-relationship: OBI:0000312 OBI:0000366 ! is_specified_output_of metabolite profiling
+relationship: OBI:0000312 OBI:0000366 ! is_specified_output_of metabolite profiling assay
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3528,6 +3535,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001015
 name: blocking polyclonal antibody evidence
+def: "A type of immunological assay evidence resulting from the inhibitory effect of polyclonal antibodies (antibodies secreted by different B cell lineages), which while not reacting with a specific antigen, serve to prevent other antibodies from doing so." []
 is_a: ECO:0000040 ! immunological assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3852,7 +3860,7 @@ def: "A type of nucleic acid localization evidence and in situ hybridization evi
 is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0001534 ! nucleic acid localization evidence
 relationship: IAO:0000136 GO:0051276 ! is about chromosome organization
-relationship: OBI:0000312 OBI:0001683 ! is_specified_output_of chromosome organization assay by fluorescence in situ hybridization
+relationship: OBI:0000312 OBI:0001683 ! is_specified_output_of chromosome organization assay by fluorescence in-situ hybridization
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3881,7 +3889,7 @@ id: ECO:0001050
 name: histochemistry evidence
 def: "A type of histology evidence resulting from the identification of chemical components in cells and tissues." [MMO:0000497]
 is_a: ECO:0001051 ! histology evidence
-relationship: OBI:0000312 OBI:0600020 ! is_specified_output_of histology assay
+relationship: OBI:0000312 OBI:0600020 ! is_specified_output_of histological assay
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3892,7 +3900,7 @@ name: histology evidence
 def: "A type of imaging assay evidence resulting from the qualitative microscopic examination of cells or tissues." [OBI:0600020]
 is_a: ECO:0000324 ! imaging assay evidence
 relationship: IAO:0000136 GO:0048532 ! is about anatomical structure arrangement
-relationship: OBI:0000312 OBI:0600020 ! is_specified_output_of histology assay
+relationship: OBI:0000312 OBI:0600020 ! is_specified_output_of histological assay
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4286,6 +4294,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001094
 name: macroscopy evidence
+def: "A type of experimental evidence that is visible to the naked eye cf. microscopy evidence which requires the aid of a microscope." []
 is_a: ECO:0000006 ! experimental evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -4400,7 +4409,7 @@ name: nuclear magnetic resonance spectroscopy evidence
 def: "A type of structure determination evidence resulting from the use of an MRI to provide chemical information about tissue metabolites." [PMID:16428685]
 synonym: "NMR spectroscopy" EXACT []
 is_a: ECO:0005031 ! structure determination evidence
-relationship: OBI:0000312 OBI:0000623 ! is_specified_output_of NMR spectroscopy
+relationship: OBI:0000312 OBI:0000623 ! is_specified_output_of NMR spectroscopy assay
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4447,6 +4456,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001110
 name: peptide affinity enrichment evidence
+def: "A type of affinity evidence resulting from the appending of affinity tags on proteins so that they may be purified from their biological source using an affinity technique." []
 synonym: "phosphopeptide affinity enrichment evidence" NARROW []
 is_a: ECO:0000023 ! affinity evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4468,7 +4478,7 @@ name: peptide array evidence
 def: "A type of protein assay evidence resulting from protein-bound peptides detected from a collection of peptides arranged as an array and incubated with the partner protein in order to map protein-protein interaction sites." [PMID:21243154]
 synonym: "phosphopeptide array evidence" NARROW []
 is_a: ECO:0000039 ! protein assay evidence
-relationship: OBI:0000312 OBI:0000288 ! is_specified_output_of protein-protein interaction detection
+relationship: OBI:0000312 OBI:0000288 ! is_specified_output_of protein-protein interaction detection assay
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4641,7 +4651,7 @@ id: ECO:0001132
 name: tryptic phosphopeptide mapping assay evidence
 def: "A type of mass spectrometry evidence resulting from the analysis of prepared phosphopeptides separated in two dimensions on a TLC plate." [PMID:18429120]
 is_a: ECO:0001096 ! mass spectrometry evidence
-relationship: OBI:0000312 OBI:0002035 ! is_specified_output_of peptide mass fingerprinting
+relationship: OBI:0000312 OBI:0002035 ! is_specified_output_of peptide mass fingerprinting assay
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -6970,7 +6980,7 @@ name: survival rate analysis evidence
 def: "A type of knockout evidence based on the survival of an organism in a particular environment where a gene for an enzyme or regulator is knocked out and results are used as a natural reporter." [ECO:SW]
 is_a: ECO:0001091 ! knockout evidence
 relationship: IAO:0000136 OBI:0600054 ! is about selection by survival
-relationship: OBI:0000312 OBI:0000699 ! is_specified_output_of survival assessment
+relationship: OBI:0000312 OBI:0000699 ! is_specified_output_of survival assessment assay
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-04T10:48:59Z
@@ -7303,7 +7313,7 @@ id: ECO:0005516
 name: molecule detection assay evidence
 def: "A type of experimental evidence resulting from the detection and analysis of molecular markers." [ECO:RCT]
 is_a: ECO:0000006 ! experimental evidence
-relationship: OBI:0000312 OBI:0600017 ! is_specified_output_of detection of molecular label
+relationship: OBI:0000312 OBI:0600017 ! is_specified_output_of assay detecting a molecular label
 created_by: snadendla
 creation_date: 2015-09-24T15:54:21Z
 
@@ -7764,7 +7774,7 @@ name: macroscopic current trace evidence
 def: "A type of voltage clamp recording evidence that involves recording trace of the current (pA) going through the analyzed ion channels determined from voltage clamp current recording." [ECO:SN, PMID:17938230, url:http\://www.utdallas.edu/~tres/microelectrode/microelectrodes_ch03.pdf]
 is_a: ECO:0005576 ! voltage clamp recording evidence
 relationship: IAO:0000136 GO:0005216 ! is about ion channel activity
-relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording
+relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording assay
 created_by: snadendla
 creation_date: 2016-02-09T12:40:03Z
 
@@ -7774,7 +7784,7 @@ name: current density evidence
 def: "A type of electrophysiology assay evidence that involves measuring the amount of current (pA) going through the ion channels per unit  of membrane." [ECO:SN, url:http\://circres.ahajournals.org/content/102/11/1298.full, url:http\://www.bem.fi/book/04/04.htm]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 relationship: IAO:0000136 GO:0005216 ! is about ion channel activity
-relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording
+relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording assay
 created_by: snadendla
 creation_date: 2016-02-09T12:43:07Z
 
@@ -7791,7 +7801,7 @@ name: sustained current evidence
 def: "A type of electrophysiology assay evidence that involves the measurement of the current that persists after the fast and slow inactivation of the analyzed channels." [ECO:SN, url:http\://www.nature.com/ncomms/journal/v3/n2/full/ncomms1717.html]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 relationship: IAO:0000136 GO:0005216 ! is about ion channel activity
-relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording
+relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording assay
 created_by: snadendla
 creation_date: 2016-02-09T12:46:54Z
 
@@ -7875,7 +7885,7 @@ def: "A type of patch-clamp reocrding evidence that involves ion channel analysi
 xref: birnlex:2287 "reconstituted bilayer single-channel patch recording protocol"
 is_a: ECO:0006012 ! patch-clamp recording evidence
 relationship: IAO:0000136 GO:0005216 ! is about ion channel activity
-relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording
+relationship: OBI:0000312 OBI:0000447 ! is_specified_output_of intra cellular electrophysiology recording assay
 created_by: snadendla
 creation_date: 2016-02-12T14:17:46Z
 
@@ -8066,7 +8076,7 @@ name: immunodetection assay evidence
 def: "A type of direct assay evidence that involves the use of antibodies to detect biomolecules." [ECO:SN]
 is_a: ECO:0000002 ! direct assay evidence
 relationship: IAO:0000136 GO:0003823 ! is about antigen binding
-relationship: OBI:0000312 OBI:0600025 ! is_specified_output_of substance detection
+relationship: OBI:0000312 OBI:0600025 ! is_specified_output_of substance detection assay
 created_by: snadendla
 creation_date: 2016-03-17T17:07:33Z
 
@@ -9645,7 +9655,7 @@ name: extracellular recording evidence
 def: "A type of electrophysiology assay evidence resulting from the use of electrodes to measure in vivo electrical activity coming from adjacent neurons." [url:http\://www.nature.com/subjects/extracellular-recording]
 is_a: ECO:0000164 ! electrophysiology assay evidence
 relationship: IAO:0000136 GO:0001508 ! is about action potential
-relationship: OBI:0000312 OBI:0000454 ! is_specified_output_of extracellular electrophysiology recording
+relationship: OBI:0000312 OBI:0000454 ! is_specified_output_of extracellular electrophysiology recording assay
 created_by: rctauber
 creation_date: 2017-02-21T07:26:28Z
 
@@ -12131,11 +12141,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007156
-name: biological target-disease association via drug used in manual assertion
+name: biological target-disease association via drug evidence used in manual assertion
 def: "A type of biological target-disease association via drug that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
-is_a: ECO:0000360 {is_inferred="true"} ! biological target-disease association via drug
-intersection_of: ECO:0000360 ! biological target-disease association via drug
+is_a: ECO:0000360 {is_inferred="true"} ! biological target-disease association via drug evidence
+intersection_of: ECO:0000360 ! biological target-disease association via drug evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -13209,11 +13219,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007260
-name: biological target-disease association via drug used in automatic assertion
+name: biological target-disease association via drug evidence used in automatic assertion
 def: "A type of biological target-disease association via drug that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000360 {is_inferred="true"} ! biological target-disease association via drug
+is_a: ECO:0000360 {is_inferred="true"} ! biological target-disease association via drug evidence
 is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
-intersection_of: ECO:0000360 ! biological target-disease association via drug
+intersection_of: ECO:0000360 ! biological target-disease association via drug evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -17377,6 +17387,12 @@ is_a: GO:0090305 ! nucleic acid phosphodiester bond hydrolysis
 relationship: BFO:0000051 GO:0004520 ! has_part endodeoxyribonuclease activity
 
 [Term]
+id: GO:0000785
+name: chromatin
+def: "The ordered and organized complex of DNA, protein, and sometimes RNA, that forms the chromosome." []
+is_a: GO:0005575 ! cellular_component
+
+[Term]
 id: GO:0001047
 name: core promoter binding
 def: "Interacting selectively and non-covalently with the regulatory region composed of the transcription start site and binding sites for the basal transcription machinery. Binding may occur as a sequence specific interaction or as an interaction observed only once a factor has been recruited to the DNA by other factors." [GOC:txnOH]
@@ -17625,6 +17641,12 @@ def: "The basic structural and functional unit of all organisms. Includes the pl
 is_a: GO:0005575 ! cellular_component
 
 [Term]
+id: GO:0005694
+name: chromosome
+def: "A structure composed of a very long molecule of DNA and associated proteins (e.g. histones) that carries hereditary information." []
+is_a: GO:0005575 ! cellular_component
+
+[Term]
 id: GO:0006139
 name: nucleobase-containing compound metabolic process
 def: "Any cellular metabolic process involving nucleobases, nucleosides, nucleotides and nucleic acids." [GOC:ai]
@@ -17703,12 +17725,6 @@ is_a: GO:0000737 ! DNA catabolic process, endonucleolytic
 intersection_of: GO:0000737 ! DNA catabolic process, endonucleolytic
 intersection_of: BFO:0000050 GO:0030262 ! part of apoptotic nuclear changes
 relationship: BFO:0000050 GO:0030262 ! part of apoptotic nuclear changes
-
-[Term]
-id: GO:0006338
-name: chromatin remodeling
-def: "Dynamic structural changes to eukaryotic chromatin occurring throughout the cell division cycle. These changes range from the local changes necessary for transcriptional regulation to global changes necessary for chromosome segregation." []
-is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0006351
@@ -19996,7 +20012,6 @@ id: GO:0043565
 name: sequence-specific DNA binding
 def: "Interacting selectively and non-covalently with DNA of a specific nucleotide composition, e.g. GC-rich DNA binding, or with a specific sequence motif or type of DNA e.g. promotor binding or rDNA binding." [GOC:jl]
 is_a: GO:0003677 ! DNA binding
-is_a: OBI:0001588 ! binding
 
 [Term]
 id: GO:0043603
@@ -22924,18 +22939,12 @@ def: "A denotator type indicates how a term should be interpreted from an ontolo
 is_a: IAO:0000102 ! data about an ontology part
 
 [Term]
-id: IAO:0000416
-name: time measurement datum
-def: "A scalar measurement datum that is the result of measuring a temporal interval" []
+id: IAO:0000414
+name: mass measurement datum
+def: "A scalar measurement datum that is the result of measurement of mass quality" []
 is_a: IAO:0000032 ! scalar measurement datum
-relationship: IAO:0000039 UO:0000003 ! has measurement unit label time unit
-relationship: IAO:0000413 BFO:0000015 ! is duration of process
-
-[Term]
-id: IAO:0000573
-name: line graph
-def: "A line graph is a type of graph created by connecting a series of data\npoints together with a line." []
-is_a: IAO:0000038 ! graph
+relationship: IAO:0000039 UO:0000002 ! has measurement unit label mass unit
+relationship: IAO:0000221 PATO:0000125 ! is quality measurement of mass
 
 [Term]
 id: IDO:0000586
@@ -23204,10 +23213,9 @@ relationship: OBI:0000643 OBI:0000731 ! has grain recombinant vector
 [Term]
 id: OBI:0000185
 name: imaging assay
-def: "An imaging assay is an assay to produce a picture of an entity. definition_source: OBI." []
+def: "An assay that produces a picture of an entity." []
 is_a: OBI:0000070 ! assay
 relationship: OBI:0000299 IAO:0000101 ! has_specified_output image
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0000192
@@ -23215,6 +23223,12 @@ name: microtiter plate
 def: "A microtiter_plate is a flat plate with multiple wells used as small test tubes." []
 is_a: OBI:0000967 ! container
 relationship: RO:0000085 OBI:0000370 ! has function contain function
+
+[Term]
+id: OBI:00001975
+name: chromatin immunoprecipitation
+def: "An immunoprecipitation in which chromatin (i.e. packaged DNA which can include protein and RNA complexes) is cut into short regions, reversibly cross linked, and antibodies or tags are used to select for pieces of chromatin with desired characteristics." []
+is_a: OBI:0000690 ! immunoprecipitation
 
 [Term]
 id: OBI:0000201
@@ -23241,6 +23255,12 @@ id: OBI:0000245
 name: organization
 def: "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members." []
 is_a: BFO:0000040 ! material entity
+
+[Term]
+id: OBI:0000250
+name: dye role
+def: "A molecular label role which inheres in a material entity and which is realized in the process of detecting a molecular dye that imparts color to some material of interest. " []
+is_a: REO:0000171 ! molecular label role
 
 [Term]
 id: OBI:0000253
@@ -23281,19 +23301,12 @@ id: OBI:0000275
 name: analyte role
 def: "A measurand role borne by a molecular entity or an atom and realized in an analyte assay which achieves the objective to measure the magnitude/concentration/amount of the analyte in the entity bearing evaluant role." []
 is_a: OBI:0002444 ! measurand role
-relationship: BFO:0000054 OBI:0000443 ! realized in analyte assay
 
 [Term]
 id: OBI:0000288
-name: protein-protein interaction detection
-def: "An assay with the objective to determine interactions between proteins, such as protein-protein binding." []
+name: protein-protein interaction detection assay
+def: "An assay that determines interactions between proteins, such as protein-protein binding." []
 is_a: OBI:0000070 ! assay
-
-[Term]
-id: OBI:0000291
-name: transcription factor binding site assay
-def: "An assay with objective to find DNA region specifically recognized by proteins that function as transcription factors" []
-is_a: OBI:0001146 ! binding assay
 
 [Term]
 id: OBI:0000318
@@ -23344,12 +23357,10 @@ relationship: RO:0000085 OBI:0000453 ! has function measure function
 
 [Term]
 id: OBI:0000366
-name: metabolite profiling
-def: "metabolite profiling is a process which aims at detecting and identifying chemical entities resulting from biochemical and cellular metabolism" []
+name: metabolite profiling assay
+def: "An assay that detects and identifies chemical entities resulting from biochemical and cellular metabolism" []
 is_a: OBI:0000070 ! assay
 relationship: OBI:0000293 OBI:0100051 ! has_specified_input specimen
-relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0000367
@@ -23525,10 +23536,8 @@ relationship: OBI:0000312 OBI:0302884 ! is_specified_output_of extraction
 [Term]
 id: OBI:0000424
 name: transcription profiling assay
-def: "An assay which aims to provide information about gene expression and transcription activity using ribonucleic acids collected from a material entity using a range of techniques and instrument such as DNA sequencers, DNA microarrays, Northern Blot" []
-is_a: OBI:0000443 ! analyte assay
-intersection_of: OBI:0000070 ! assay
-intersection_of: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
+def: "An assay that determines gene expression and transcription activity using ribonucleic acids collected from a material entity." []
+is_a: OBI:0000070 ! assay
 
 [Term]
 id: OBI:0000427
@@ -23553,7 +23562,7 @@ is_a: OBI:0000686 ! material combination objective
 [Term]
 id: OBI:0000435
 name: genotyping assay
-def: "an assay which generates data about a genotype from a specimen of genomic DNA. A variety of\ntechniques and instruments can be used to produce information about sequence variation at particular genomic positions." []
+def: "An assay which generates data about a genotype from a specimen of genomic DNA. A variety of techniques and instruments can be used to produce information about sequence variation at particular genomic positions." []
 is_a: OBI:0000443 ! analyte assay
 relationship: OBI:0000299 OBI:0001305 ! has_specified_output genotype information
 relationship: OBI:0000417 OBI:0000113 ! achieves_planned_objective sequence feature identification objective
@@ -23582,8 +23591,8 @@ id: OBI:0000443
 name: analyte assay
 def: "An assay with the objective to capture information about the presence, concentration, or amount of an analyte in an evaluant." []
 is_a: OBI:0000070 ! assay
-relationship: BFO:0000055 OBI:0000275 ! realizes analyte role
 relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
+relationship: OBI:0000417 OBI:0000437 ! achieves_planned_objective analyte measurement objective
 
 [Term]
 id: OBI:0000444
@@ -23595,10 +23604,10 @@ relationship: RO:0000052 BFO:0000040 ! inheres in material entity
 
 [Term]
 id: OBI:0000447
-name: intra cellular electrophysiology recording
-def: "An intracellular electrophysiology recording is a process where the recording location of the electrode is intracellular" []
+name: intra cellular electrophysiology recording assay
+def: "An electrophysiology recording assay where the recording location of the electrode is intracellular" []
 is_a: OBI:0000070 ! assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+relationship: OBI:0000299 IAO:0000414 ! has_specified_output mass measurement datum
 
 [Term]
 id: OBI:0000450
@@ -23617,10 +23626,10 @@ relationship: RO:0000079 OBI:0000047 ! function of processed material
 
 [Term]
 id: OBI:0000454
-name: extracellular electrophysiology recording
-def: "An extracellular electrophysiology recording is process where the recording location of the electrode is extracellular and data" []
+name: extracellular electrophysiology recording assay
+def: "An electrophysiology recording assay where the recording location of the electrode is extracellular" []
 is_a: OBI:0000070 ! assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+relationship: OBI:0000299 IAO:0000414 ! has_specified_output mass measurement datum
 
 [Term]
 id: OBI:0000456
@@ -23645,10 +23654,8 @@ is_a: OBI:0000456 ! material transformation objective
 [Term]
 id: OBI:0000470
 name: mass spectrometry assay
-def: "An assay that identifies the amount and type of material entities present in a sample by fragmenting it and measuring the mass-to-charge ratio of the resulting particles." []
+def: "An assay that identifies the amount and type of material entities present in a sample by fragmenting the sample and measuring the mass-to-charge ratio of the resulting particles." []
 is_a: OBI:0000070 ! assay
-intersection_of: OBI:0000070 ! assay
-intersection_of: OBI:0000293 OBI:0000049 {all_some="true"} ! has_specified_input mass spectrometer
 
 [Term]
 id: OBI:0000471
@@ -23705,32 +23712,28 @@ is_a: OBI:0000038 ! chromatography column
 
 [Term]
 id: OBI:0000623
-name: NMR spectroscopy
-def: "NMR spectroscopy is a process which exploits the magnetic properties of certain nuclei (those with a spin) to resonate when placed in particular magnetic field conditions. Instruments recording NMR spectrum and sets of analysis can be used to deduce  identity of chemical as well as composition of complex chemical mixtures." []
+name: NMR spectroscopy assay
+def: "An assay that exploits the magnetic properties of certain nuclei (those with a spin) to resonate when placed in particular magnetic field conditions. Instruments recording NMR spectrum and sets of analysis can be used to deduce identity of chemical as well as composition of complex chemical mixtures." []
 is_a: OBI:0000070 ! assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0000626
-name: DNA sequencing
-def: "DNA sequencing is a sequencing process which uses deoxyribonucleic acid as input and results in a the creation of DNA sequence information artifact using a DNA sequencer instrument." []
+name: DNA sequencing assay
+def: "A sequencing assay which determines information on the sequence of a DNA molecule." []
 is_a: OBI:0600047 ! sequencing assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
 
 [Term]
 id: OBI:0000630
-name: hematology
-def: "hematology is a process studying blood and blood producing organs relying on a variety of techniques and instruments" []
+name: hematology assay
+def: "An assay that studies blood and blood producing organs using a variety of techniques and instruments" []
 is_a: OBI:0000070 ! assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0000634
 name: DNA methylation profiling assay
-def: "an assay which aims to provide information about state of methylation of DNA molecules using genomic DNA collected from a material entity using a range of techniques and instrument such as DNA sequencers and often relying on treatment with bisulfites to ensure cytosine conversion." []
-is_a: OBI:0000443 ! analyte assay
+def: "An assay that measures the state of methylation of DNA molecules using genomic DNA collected from a material entity using a range of techniques and instrument such as DNA sequencers and often relying on treatment with bisulfites to ensure cytosine conversion." []
 is_a: OBI:0002020 ! epigenetic modification assay
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
 relationship: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
 
 [Term]
@@ -23861,11 +23864,11 @@ relationship: OBI:0000417 OBI:0000639 ! achieves_planned_objective material sepa
 
 [Term]
 id: OBI:0000699
-name: survival assessment
-def: "Survival assessment is an assay that measures the occurrence of death events in one or more organisms that are monitored over time" []
+name: survival assessment assay
+def: "An assay that measures the occurrence of death events in one or more organisms over time" []
 is_a: OBI:0000070 ! assay
 relationship: OBI:0000293 OBI:0100026 ! has_specified_input organism
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+relationship: OBI:0000299 OBI:0000789 ! has_specified_output survival rate
 
 [Term]
 id: OBI:0000700
@@ -23902,17 +23905,11 @@ is_a: IAO:0000010 ! software
 [Term]
 id: OBI:0000716
 name: ChIP-seq assay
-def: "an assay which aims at identifying protein binding sites in genomic DNA and determining how protein may regulate gene transcription by relying on immunoprecipitation of DNA bound protein, creation of a library of corresponding DNA fragments  (either single or paired-end fragments) and subsequent sequencing using parallelized sequencing methods." []
-is_a: OBI:0001956 ! assay using chromatin immunoprecipitation
-is_a: OBI:0002020 ! epigenetic modification assay
-is_a: OBI:0600047 ! sequencing assay
-relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing
-relationship: BFO:0000051 OBI:0000690 ! has_part immunoprecipitation
-relationship: BFO:0000051 OBI:0000711 ! has_part library preparation
-relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
-relationship: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
-relationship: OBI:0000417 OBI:0001398 ! achieves_planned_objective protein and DNA interaction identification objective
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
+def: "An assay in which chromatin is immunoprecipitated and subsequently analyzed using a DNA sequencing step to identify which parts of DNA are part of the isolated chromatin" []
+is_a: OBI:0001954 ! ChIP assay
+intersection_of: OBI:0001954 ! ChIP assay
+intersection_of: BFO:0000051 OBI:0000626 ! has_part DNA sequencing assay
+intersection_of: OBI:0000293 OBI:0400103 {all_some="true"} ! has_specified_input DNA sequencer
 
 [Term]
 id: OBI:0000722
@@ -24010,11 +24007,6 @@ def: "A data transformation which assesses how the results of a statistical anal
 is_a: OBI:0200171 ! partitioning data transformation
 
 [Term]
-id: OBI:0000794
-name: transcription factor binding site
-is_a: OBI:0000905 ! sequence feature annotation
-
-[Term]
 id: OBI:0000796
 name: purification objective
 def: "The objective to separate a material entity into different compositions of which one or more have are purified fractions that contain higher concentration of a desired component, while others contain impurities and are not of interest" []
@@ -24096,12 +24088,6 @@ def: "The primary structure of an RNA molecule that is completely defined by the
 is_a: SO:0000001 ! region
 
 [Term]
-id: OBI:0000848
-name: polyA RNA extraction
-def: "A RNA extraction process typically involving the use of poly dT oligomers in which the desired output material is polyA RNA." []
-is_a: OBI:0666666 ! RNA extraction
-
-[Term]
 id: OBI:0000857
 name: complementary nucleotide probe role
 def: "A role played by a nucleic acid molecule that is used in a planned process for its ability to bind a nucleic acid molecules with complementary nucleotide sequence" []
@@ -24110,23 +24096,10 @@ relationship: RO:0000052 CHEBI:33696 ! inheres in nucleic acid
 
 [Term]
 id: OBI:0000860
-name: northern blot analysis
-def: "a northern blot analysis is an assay allowing monitoring presence of gene transcripts  by hybridizing labeled RNA or DNA probes against messenger RNAs isolated from tissue or cell cultures, resolved on denaturing agarose gel, transfered by blotting procedure to a nitrocellulose or nylon membrane and immobilized by cross linking or baking to the membrane. Detection of  hybridization signals is carried out by immunofluorescence or radioactivity measurements using photographic films or digital imaging devices such as Phosphor Imager" []
+name: northern blot assay
+def: "An assay that determines the presence of gene transcripts by hybridizing labeled RNA or DNA probes against messenger RNAs isolated from tissue or cell cultures, resolved on denaturing gel, transfered by a blotting procedure to a solid support. Detection of hybridization signals is carried out by immunofluorescence or radioactivity measurements using photographic films or digital imaging devices such as Phosphor Imager." []
 is_a: OBI:0000443 ! analyte assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
-
-[Term]
-id: OBI:0000869
-name: polyA RNA extract
-def: "A RNA extract that is the output of an extraction process in which RNA molecules with poly A tail at its 3' end are purified." []
-is_a: OBI:0000880 ! RNA extract
-relationship: OBI:0000312 OBI:0000848 ! is_specified_output_of polyA RNA extraction
-
-[Term]
-id: OBI:0000870
-name: single-nucleotide-resolution nucleic acid structure mapping assay
-def: "is an assay which aims to provide information about the secondary structure of nucleic acids using chemical or enzymatic probing to establish the extent of base-pairing or solvent accessiblity." []
-is_a: OBI:0000070 ! assay
+relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
 
 [Term]
 id: OBI:0000873
@@ -24162,12 +24135,6 @@ def: "A cell killing assay that measures if and how many target cells are killed
 is_a: OBI:0000882 ! cell-cell killing assay
 
 [Term]
-id: OBI:0000885
-name: secondary structure of sequence macromolecule
-def: "A quality inhering in a molecule that refers to general three-dimensional form of local segments of biopolymers such as proteins and nucleic acids (DNA/RNA). It does not, however, describe specific atomic positions in three-dimensional space, which are considered to be tertiary structure.\nSecondary structure was introduced by Kaj Ulrik Linderstrøm-Lang in the 1952 Lane medical lectures at Stanford." []
-is_a: PATO:0001237 ! quality of a single physical entity
-
-[Term]
 id: OBI:0000891
 name: cell proliferation assay
 def: "A cytometry assay which measures the degreee to which input cells are replicating." []
@@ -24175,15 +24142,17 @@ is_a: OBI:0001977 ! cytometry assay
 
 [Term]
 id: OBI:0000892
-name: Southern blot analysis
-def: "Southern blot analysis is a an assay used in molecular biology to assert the presence/absence status  of a specific DNA sequence in DNA samples. DNA samples to be assayed are first digested by restriction enzymes, fragments are then resolved by gel electrophoresis following by a blotting ensuring transfer to  nitrocellulose or nylon membrane. Immobilization of DNA fragments to the membrane is achieved by UV crosslinking and/or baking. Probes raised against the specific sequences are then hybridized to the membrane.  Detection of  hybridization signals is carried out by immunofluorescence or radioactivity measurements using photographic films or digital imaging devices such as Phosphor Imager." []
+name: Southern blot assay
+def: "An analyte assay that detects the presence of a specific sequence in a DNA sample, which has been digested by restriction enzymes, resolved by gel electrophoresis, and blotted to a solid support, followed by hybridization of a probe raised against a specific sequence and detected with fluorescence or radioactivity." []
 is_a: OBI:0000443 ! analyte assay
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+relationship: BFO:0000051 OBI:0000874 ! has_part detection of specific nucleic acid polymers with complementary probes
+relationship: BFO:0000051 OBI:0302903 ! has_part nucleic acid hybridization
+relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
 
 [Term]
 id: OBI:0000893
 name: real time polymerase chain reaction assay
-def: "A laboratory technique based on the PCR, which is used to\namplify and simultaneously quantify a specific DNA\nmolecule based on the use of complementary probes/primers. It enables\nboth detection and quantification (as absolute number of copies or relative\namount when normalized to DNA input or additional normalizing genes) of one\nor more specific sequences in a DNA sample." []
+def: "An assay, based on the PCR, that amplifies and simultaneously quantifies a specific DNA molecule based on the use of complementary probes/primers. It enables both detection and quantification (as absolute number of copies or relative amount when normalized to DNA input or additional normalizing genes) of one or more specific sequences in a DNA sample." []
 is_a: OBI:0000070 ! assay
 relationship: BFO:0000051 OBI:0000415 ! has_part polymerase chain reaction
 
@@ -24200,18 +24169,6 @@ def: "A cell killing assay that measures if and how many target cells are active
 is_a: OBI:0000882 ! cell-cell killing assay
 
 [Term]
-id: OBI:0000905
-name: sequence feature annotation
-def: "Information about a sequence region" []
-is_a: IAO:0000030 ! information content entity
-
-[Term]
-id: OBI:0000911
-name: real time reverse-transcription polymerase chain reaction  assay
-def: "Is_a PCR real time preceded by a reverse transcription step (reverse transcription step = an RNA strand is reverse transcribed into its DNA complement using the enzyme reverse transcriptase)" []
-is_a: OBI:0000070 ! assay
-
-[Term]
 id: OBI:0000912
 name: X-ray crystallography assay
 def: "A 3D structure determination assay in which the diffraction of pattern of X-ray beams in a crystal of purified material entities is used to resolve the 3-dimensional structure of the material entity of interest." []
@@ -24221,7 +24178,7 @@ is_a: OBI:0600045 ! 3D structure determination assay
 id: OBI:0000913
 name: promoter activity detection by reporter gene assay
 def: "An assay in which the activity of a promoter in a cell is monitored by using a reporter gene that was inserted in a genomic location under control of the promoter and whose expression can be easily detected based on qualities or functions of the gene." []
-is_a: OBI:0001146 ! binding assay
+is_a: OBI:0000070 ! assay
 relationship: OBI:0000293 CL:0000000 ! has_specified_input cell
 
 [Term]
@@ -24276,12 +24233,6 @@ id: OBI:0000932
 name: material separation device
 def: "A device with a separation function realized in a planed process" []
 is_a: OBI:0000968 ! device
-
-[Term]
-id: OBI:0000944
-name: handedness assay
-def: "A handedness assay measures the unequal distribution of fine motor skill between the left and right hands typically in human subjects by means of some questionnaire and scoring procedure." []
-is_a: OBI:0000070 ! assay
 
 [Term]
 id: OBI:0000947
@@ -24341,13 +24292,12 @@ is_a: IAO:0000109 ! measurement datum
 id: OBI:0000975
 name: cell-cell binding detection by flow cytometry assay
 def: "A binding assay which uses a flow cytometer to detect pairs of cells that are bound to each other by staining them with different fluorescent labels." []
-is_a: OBI:0001499 ! fluorescence detection binding assay
 is_a: OBI:0001977 ! cytometry assay
 
 [Term]
 id: OBI:0000978
 name: in container assay
-def: "an assay in which a measurement is made by observing entities located in a container." []
+def: "An assay in which a measurement is made by observing entities located in a container." []
 is_a: OBI:0000070 ! assay
 
 [Term]
@@ -24397,26 +24347,6 @@ is_a: OBI:0000953 ! processed specimen
 relationship: OBI:0000312 OBI:0666667 ! is_specified_output_of nucleic acid extraction
 relationship: OBI:0000643 CHEBI:33696 ! has grain nucleic acid
 relationship: RO:0000087 OBI:0000112 ! has role specimen role
-
-[Term]
-id: OBI:0001014
-name: single-nucleotide-resolution nucleic acid structure mapping assay using enzymatic probing
-def: "a single-nucleotide-resolution nucleic acid structure mapping assay which relies on proteins acting as enzymatic probes  in order to produce measurement information which one interpreted provide structural information about the RNA species under study." []
-is_a: OBI:0000870 ! single-nucleotide-resolution nucleic acid structure mapping assay
-
-[Term]
-id: OBI:0001017
-name: single-nucleotide-resolution nucleic acid structure mapping assay using chemical probing
-def: "a single-nucleotide-resolution nucleic acid structure mapping assay which relies on small chemical compounds acting as chemical probes  in order to produce measurement information which one interpreted provide structural information about the RNA species under study." []
-is_a: OBI:0000870 ! single-nucleotide-resolution nucleic acid structure mapping assay
-
-[Term]
-id: OBI:0001025
-name: binding constant determination assay
-def: "A binding assay where the specified output is a binding constant" []
-is_a: OBI:0001146 ! binding assay
-intersection_of: OBI:0001146 ! binding assay
-intersection_of: OBI:0000299 OBI:0001144 ! has_specified_output binding constant
 
 [Term]
 id: OBI:0001032
@@ -24472,6 +24402,13 @@ is_a: OBI:0000832 ! measurement device
 relationship: RO:0000085 OBI:0000453 ! has function measure function
 
 [Term]
+id: OBI:0001108
+name: nucleic acid sequencer
+def: "An device that is used to determine the order of nucleotides in nucleic acid sequences." []
+is_a: OBI:0000832 ! measurement device
+relationship: RO:0000085 OBI:0000453 ! has function measure function
+
+[Term]
 id: OBI:0001121
 name: gel electrophoresis system
 def: "A device that moves charged particles through a medium by using an electric field induced by electrodes." []
@@ -24481,6 +24418,13 @@ is_a: OBI:0001053 ! electrophoresis system
 id: OBI:0001129
 name: voltage clamp device
 def: "A device that is used to measure the ion currents across the membrane of excitable cells, such as neurons, while holding the membrane voltage at a set level." []
+is_a: OBI:0000832 ! measurement device
+relationship: RO:0000085 OBI:0000453 ! has function measure function
+
+[Term]
+id: OBI:0001137
+name: protein sequencer
+def: "An device that is used to determine the order of amino acids in protein sequences." []
 is_a: OBI:0000832 ! measurement device
 relationship: RO:0000085 OBI:0000453 ! has function measure function
 
@@ -24505,23 +24449,9 @@ is_a: OBI:0000924 ! labeled specimen
 relationship: OBI:0000643 CHEBI:33696 ! has grain nucleic acid
 
 [Term]
-id: OBI:0001144
-name: binding constant
-def: "A binding datum about the disposition of two or more material entities to form complexes which comes in the form of a scalar and unit that are utilized in equations that model the binding process" []
-is_a: OBI:0001181 ! binding datum
-union_of: OBI:0001536 ! equilibrium dissociation constant (KD)
-union_of: OBI:0001548 ! equilibrium association constant (KA)
-union_of: OBI:0001571 ! equilibrium dissociation constant (KD) approximated by IC50
-union_of: OBI:0001581 ! equilibrium dissociation constant (KD) approximated by EC50
-union_of: OBI:0001583 ! half life of binding datum
-union_of: OBI:0001603 ! binding off rate measurement datum (koff)
-union_of: OBI:0001605 ! binding on rate measurement datum (kon)
-
-[Term]
 id: OBI:0001145
 name: 3D structure determination of bound complex assay
 def: "A 3D structure determination assay in which a complex of 2 or more material enties is characterized which provides information on their binding configuration." []
-is_a: OBI:0001146 ! binding assay
 is_a: OBI:0600045 ! 3D structure determination assay
 
 [Term]
@@ -24529,6 +24459,7 @@ id: OBI:0001146
 name: binding assay
 def: "An assay with the objective to characterize the disposition of two or more material entities to form a complex." []
 is_a: OBI:0000070 ! assay
+relationship: OBI:0000299 OBI:0001181 ! has_specified_output binding datum
 
 [Term]
 id: OBI:0001147
@@ -24583,31 +24514,10 @@ def: "A measurement datum that describes the structural orientation of a materia
 is_a: IAO:0000109 ! measurement datum
 
 [Term]
-id: OBI:0001171
-name: half life datum (t 1/2)
-def: "The time it takes for 50% of a class of stochastic processes to occur. " []
-is_a: IAO:0000416 ! time measurement datum
-relationship: IAO:0000039 UO:0000003 ! has measurement unit label time unit
-
-[Term]
-id: OBI:0001172
-name: dose response curve
-def: "A data item of paired values, one indicating the dose of a material, the other quantitating a measured effect at that dose. The dosing intervals are chosen so that effect values be interpolated by a plotting a curve. " []
-is_a: IAO:0000573 ! line graph
-
-[Term]
 id: OBI:0001177
-name: RNA sequencing
-def: "RNA sequencing is a sequencing process which uses ribonucleic acid as input and results in a the creation of RNA sequence information artifact " []
+name: RNA sequencing assay
+def: "An assay that determines the sequence of an RNA molecule." []
 is_a: OBI:0600047 ! sequencing assay
-
-[Term]
-id: OBI:0001180
-name: half maximal effective concentration (EC50)
-def: "half maximal effective concentration (EC50) is a scalar measurement datum corresponding to the concentration of a compound which induces a response halfway between the baseline and maximum after some specified exposure time. \n" []
-is_a: IAO:0000032 ! scalar measurement datum
-relationship: IAO:0000039 UO:0000051 ! has measurement unit label concentration unit
-relationship: IAO:0000136 OBI:0001172 ! is about dose response curve
 
 [Term]
 id: OBI:0001181
@@ -24616,14 +24526,6 @@ def: "A data item that states if two or more material entities have the disposit
 is_a: IAO:0000027 ! data item
 intersection_of: IAO:0000027 ! data item
 intersection_of: IAO:0000136 OBI:0001588 ! is about binding
-
-[Term]
-id: OBI:0001191
-name: half maximal inhibitory concentration (IC50)
-def: "Half maximal inhibitory concentration (IC50) is a scalar measurement datum that measures the effectiveness of a compound to competitively inhibit a given process, and corresponds to the concentration of the compound at which it reaches half of its maximum inhibitory effect." []
-is_a: IAO:0000032 ! scalar measurement datum
-relationship: IAO:0000039 UO:0000051 ! has measurement unit label concentration unit
-relationship: IAO:0000136 OBI:0001172 ! is about dose response curve
 
 [Term]
 id: OBI:0001199
@@ -24660,24 +24562,23 @@ is_a: OBI:0000131 ! molecular feature identification objective
 id: OBI:0001239
 name: transcription profiling by high throughput sequencing design
 def: "A study design in which sequencing technology (e.g. Solexa/454) is used to generate RNA sequence, analyse the transcibed regions of the genome, and/or to quantitate transcript abundance" []
-is_a: OBI:0001430 ! transcription profiling design
+is_a: OBI:0500000 ! study design
 relationship: BFO:0000051 OBI:0001331 ! has_part transcription profiling identification objective
 
 [Term]
 id: OBI:0001247
 name: genotyping by high throughput sequencing assay
-def: "An assay in which high througput sequencer is used to detect polymorphisms in DNA samples" []
+def: "A genotyping assay that uses a high througput sequencer" []
 is_a: OBI:0000435 ! genotyping assay
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
 
 [Term]
 id: OBI:0001248
 name: ChIP-chip assay
-def: "an assay that aims to investigate the interactions between protein and DNA relying on chromatin immunoprecipitation ('ChIP') combined with microarray technology ('chip'). Specially, it allows the identification of protein binding sites on a genome-wide basis." []
-is_a: OBI:0001956 ! assay using chromatin immunoprecipitation
-relationship: BFO:0000051 OBI:0000690 ! has_part immunoprecipitation
-relationship: OBI:0000417 OBI:0001398 ! achieves_planned_objective protein and DNA interaction identification objective
-relationship: RO:0000057 OBI:0400148 ! has participant DNA microarray
+def: "An assay in which chromatin is immunoprecipitated and subsequently analyzed using a DNA microarray to identify which parts of DNA are part of the isolated chromatin" []
+is_a: OBI:0001954 ! ChIP assay
+intersection_of: OBI:0001954 ! ChIP assay
+intersection_of: BFO:0000051 OBI:0001985 ! has_part microarray assay
+intersection_of: OBI:0000293 OBI:0400148 {all_some="true"} ! has_specified_input DNA microarray
 
 [Term]
 id: OBI:0001258
@@ -24690,20 +24591,17 @@ relationship: BFO:0000051 OBI:0001398 ! has_part protein and DNA interaction ide
 [Term]
 id: OBI:0001266
 name: DNA methylation profiling by high throughput sequencing assay
-def: "An assay in which the methylation state of DNA is determined and is compared between samples using sequencing based technology" []
+def: "A DNA methylation profiling assay in which the methylation state of DNA is determined and can be compared between samples using sequencing based technology" []
 is_a: OBI:0000634 ! DNA methylation profiling assay
-intersection_of: OBI:0000634 ! DNA methylation profiling assay
-intersection_of: RO:0000057 OBI:0400103 ! has participant DNA sequencer
 
 [Term]
 id: OBI:0001271
 name: RNA-seq assay
-def: "An assay in which sequencing technology (e.g. Solexa/454) is used to generate RNA sequence, analyse the transcibed regions of the genome, and or to quantitate transcript abundance" []
+def: "An transcription profiling assay that determines an RNA sequence by analyzing the transcibed regions of the genome and or to quantitate transcript abundance." []
 is_a: OBI:0000424 ! transcription profiling assay
 is_a: OBI:0600047 ! sequencing assay
-relationship: BFO:0000051 OBI:0000848 ! has_part polyA RNA extraction
+relationship: OBI:0000299 OBI:0000973 ! has_specified_output sequence data
 relationship: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
 
 [Term]
 id: OBI:0001278
@@ -24722,7 +24620,7 @@ is_a: OBI:0500000 ! study design
 id: OBI:0001290
 name: transcription profiling by array design
 def: "A study design that identifies forms and abundance of transcripts in the genome using microarray technology." []
-is_a: OBI:0001430 ! transcription profiling design
+is_a: OBI:0500000 ! study design
 relationship: BFO:0000051 OBI:0001331 ! has_part transcription profiling identification objective
 
 [Term]
@@ -24737,30 +24635,21 @@ relationship: BFO:0000051 OBI:0001364 ! has_part genetic alteration information
 id: OBI:0001313
 name: transcription profiling by RT-PCR design
 def: "A study design which aims to examine the transcriptome of a biological sample by reverse transcription PCR (RT-PCR)." []
-is_a: OBI:0001430 ! transcription profiling design
+is_a: OBI:0500000 ! study design
 relationship: BFO:0000051 OBI:0001331 ! has_part transcription profiling identification objective
 
 [Term]
 id: OBI:0001318
 name: proteomic profiling by array assay
-def: "An assay that proteins in a sample are detected, quantified or otherwise analysed, e.g. antibody profiling using an array based technology" []
-is_a: OBI:0000443 ! analyte assay
+def: "An assay that detects proteins in a sample (quantified or otherwise analyzed), e.g. antibody profiling using an array based technology." []
+is_a: OBI:0001985 ! microarray assay
 relationship: OBI:0000417 OBI:0000131 ! achieves_planned_objective molecular feature identification objective
-relationship: RO:0000057 OBI:0400149 ! has participant protein microarray
 
 [Term]
 id: OBI:0001331
 name: transcription profiling identification objective
 def: "A molecular feature identification objective that aims to characterize the abundance of transcripts" []
 is_a: OBI:0000131 ! molecular feature identification objective
-
-[Term]
-id: OBI:0001332
-name: DNA methylation profiling by array assay
-def: "An assay in which the methylation state of DNA is determined and is compared between samples using array technology" []
-is_a: OBI:0000634 ! DNA methylation profiling assay
-intersection_of: OBI:0000634 ! DNA methylation profiling assay
-intersection_of: RO:0000057 OBI:0400148 ! has participant DNA microarray
 
 [Term]
 id: OBI:0001358
@@ -24772,11 +24661,9 @@ relationship: BFO:0000051 OBI:0000015 ! has_part biological feature identificati
 [Term]
 id: OBI:0001361
 name: transcription profiling by RT-PCR assay
-def: "An assay in which the transcriptome of a biological sample is analysed by reverse transcription PCR (RT-PCR)" []
+def: "A transcription profiling assay that uses reverse transcription PCR (RT-PCR)." []
 is_a: OBI:0000424 ! transcription profiling assay
 relationship: BFO:0000051 OBI:0000552 ! has_part reverse transcribed polymerase chain reaction
-relationship: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
-relationship: RO:0000057 OBI:0000989 ! has participant PCR instrument
 
 [Term]
 id: OBI:0001364
@@ -24851,32 +24738,14 @@ relationship: BFO:0000051 OBI:0000015 ! has_part biological feature identificati
 [Term]
 id: OBI:0001463
 name: transcription profiling by array assay
-def: "An assay in which  the transcriptome of a biological sample is analysed using array technology." []
+def: "A transcription profiling assay that uses array technology." []
 is_a: OBI:0000424 ! transcription profiling assay
-relationship: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
-relationship: RO:0000057 OBI:0400148 ! has participant DNA microarray
 
 [Term]
 id: OBI:0001479
 name: specimen from organism
 def: "A specimen that derives from an anatomical part or substance arising from an organism. Examples of tissue specimen include tissue, organ, physiological system, blood, or body location (arm)." []
 is_a: OBI:0100051 ! specimen
-
-[Term]
-id: OBI:0001491
-name: radioactivity detection binding assay
-def: "binding assay that uses radioactivity detection as an indicator of binding" []
-is_a: OBI:0001146 ! binding assay
-intersection_of: OBI:0001146 ! binding assay
-intersection_of: BFO:0000051 OBI:0000201 ! has_part radioactivity detection
-
-[Term]
-id: OBI:0001499
-name: fluorescence detection binding assay
-def: "binding assay that uses fluorescence detection as an indicator of binding" []
-is_a: OBI:0001146 ! binding assay
-intersection_of: OBI:0001146 ! binding assay
-intersection_of: BFO:0000051 OBI:0001501 ! has_part fluorescence detection assay
 
 [Term]
 id: OBI:0001501
@@ -24897,32 +24766,6 @@ def: "A specimen that has been established to be taken from a live (pre-mortem) 
 is_a: OBI:0100051 ! specimen
 
 [Term]
-id: OBI:0001536
-name: equilibrium dissociation constant (KD)
-def: "A binding constant defined as the ratio of kon over koff (on-rate of binding divided by off-rate)" []
-is_a: OBI:0001144 ! binding constant
-relationship: IAO:0000039 UO:0000051 ! has measurement unit label concentration unit
-
-[Term]
-id: OBI:0001548
-name: equilibrium association constant (KA)
-def: "A binding constant defined as the ratio of koff over kon (off-rate of binding divided by on-rate)" []
-is_a: OBI:0001144 ! binding constant
-
-[Term]
-id: OBI:0001554
-name: rate measurement datum
-def: "A scalar measurement datum that represents the number of events occuring over a time interval" []
-is_a: IAO:0000032 ! scalar measurement datum
-
-[Term]
-id: OBI:0001571
-name: equilibrium dissociation constant (KD) approximated by IC50
-def: "A measurement of an IC50 value under specific assay conditions approximates KD, namely the binding reaction is at an equilibrium, there is a single population of sites on the receptor that competitor and ligand are binding to, and the concentration of the receptor must be much less than the KD for the competitor and the ligand.  In this case, according to Cheng and Prussoff, KD = IC50 / (1 + Lstot / KDs), in which Lstot is the total concentration of the labeled competitor and KDs is the KD value of that competitor. " []
-is_a: OBI:0001144 ! binding constant
-is_a: OBI:0001191 ! half maximal inhibitory concentration (IC50)
-
-[Term]
 id: OBI:0001573
 name: DNA sequence data
 def: "A sequence data item that is about the primary structure of DNA" []
@@ -24930,38 +24773,10 @@ is_a: OBI:0000973 ! sequence data
 relationship: IAO:0000136 OBI:0000811 ! is about primary structure of DNA macromolecule
 
 [Term]
-id: OBI:0001581
-name: equilibrium dissociation constant (KD) approximated by EC50
-def: "A measurement of an EC50 value under specific assay conditions approximates KD, namely the binding reaction is at an equilibrium,  and the concentration of the receptor must be much less than the KD for the ligand.  " []
-is_a: OBI:0001144 ! binding constant
-is_a: OBI:0001180 ! half maximal effective concentration (EC50)
-
-[Term]
-id: OBI:0001583
-name: half life of binding datum
-def: "A half life datum of the time it takes for 50% of bound complexes in an ensemble to disassociate in absence of re-association. " []
-is_a: OBI:0001144 ! binding constant
-is_a: OBI:0001171 ! half life datum (t 1/2)
-
-[Term]
 id: OBI:0001588
 name: binding
 def: "The process of material entities forming complexes. " []
 is_a: GO:0008150 ! biological_process
-
-[Term]
-id: OBI:0001603
-name: binding off rate measurement datum (koff)
-def: "A rate measurement datum of how quickly bound complexes disassociate" []
-is_a: OBI:0001144 ! binding constant
-is_a: OBI:0001554 ! rate measurement datum
-
-[Term]
-id: OBI:0001605
-name: binding on rate measurement datum (kon)
-def: "A rate measurement datum of how quickly bound complexes form" []
-is_a: OBI:0001144 ! binding constant
-is_a: OBI:0001554 ! rate measurement datum
 
 [Term]
 id: OBI:0001630
@@ -24983,8 +24798,8 @@ intersection_of: OBI:0000293 OBI:0000990 {all_some="true"} ! has_specified_input
 [Term]
 id: OBI:0001632
 name: immuno staining assay
-def: "A detection of molecular label assay in which the label is attached to an antibody so that substances are marked based on the antibody's binding specificity." []
-is_a: OBI:0600017 ! detection of molecular label
+def: "A assay detecting a molecular label assay in which the label is attached to an antibody so that substances are marked based on the antibody's binding specificity." []
+is_a: OBI:0600017 ! assay detecting a molecular label
 
 [Term]
 id: OBI:0001633
@@ -25012,80 +24827,82 @@ relationship: BFO:0000051 OBI:0001501 ! has_part fluorescence detection assay
 [Term]
 id: OBI:0001670
 name: RNA protection assay
-def: "RPA is a technique to assess the presence and estimate abundance of transcript species by first creating an homo or heteroduplex by adding a specific, complementary sequence to the sequence of interest and then exposing the mixture of ribonuclease, which will degrade only single stranded molecules. A detection step will reveal if the sample contained a sequence of interest." []
+def: "An assay that determines the presence and estimates abundance of transcript species by first creating an homo or heteroduplex by adding a specific, complementary sequence to the sequence of interest and then exposing the mixture of ribonuclease, which will degrade only single stranded molecules. A detection step will reveal if the sample contained a sequence of interest." []
 is_a: OBI:0000070 ! assay
-
-[Term]
-id: OBI:0001671
-name: electrophoretic mobility shift assay 
-def: "is an assay which aims to provide information about Protein-DNA or Protein-RNA interaction and which used gel electrophoresis and relies on the fact the molecular interactions will cause the heterodimer to be retarded on the gel when compared to controls corresponding to protein extract alone and protein extract + neutral nucleic acid." []
-is_a: OBI:0001146 ! binding assay
+relationship: OBI:0000293 OBI:0000880 ! has_specified_input RNA extract
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
 
 [Term]
 id: OBI:0001672
 name: gene knock-down assay
-def: "is an assay which transiently disrupts gene transcripts by expressing antisense RNA constructs or delivering RNA interfering molecules in cells." []
+def: "An assay which transiently disrupts gene transcripts by expressing antisense RNA constructs or delivering RNA interfering molecules in cells." []
 is_a: OBI:0000070 ! assay
+relationship: BFO:0000051 OBI:0001152 ! has_part transfection
+relationship: OBI:0000293 OBI:0100060 ! has_specified_input cultured cell population
 
 [Term]
 id: OBI:0001673
-name: nano-cap analysis of gene expression 
-def: "nano-CAGE is a type of CAGE developed to work from very low amount (nanogram scale) of mRNA samples" []
+name: nano-cap analysis of gene expression assay
+def: "A transcription profiling assay that is performed using a very low amount (nanogram scale) of mRNA samples using Cap analysis gene expression (CAGE)." []
 is_a: OBI:0000424 ! transcription profiling assay
+relationship: OBI:0000293 OBI:0000880 ! has_specified_input RNA extract
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
+relationship: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
 
 [Term]
 id: OBI:0001674
-name: cap analysis of gene expression 
-def: "An assay which aims at monitoring RNA transcript abundances in biological samples by extracting 5' ends of capped transcripts, RTPCR and sequence those. Copy numbers of CAGE tags provide  a way of quantification and provide a measure of expression of the transcriptome " []
+name: cap analysis of gene expression assay
+def: "A transcription profiling assay which measures RNA transcript abundances in biological samples by extracting 5' ends of capped transcripts, RTPCR and sequence those. Copy numbers of CAGE tags provide a way of quantification and provide a measure of expression of the transcriptome" []
 is_a: OBI:0000424 ! transcription profiling assay
 is_a: OBI:0600047 ! sequencing assay
 relationship: BFO:0000051 OBI:0000552 ! has_part reverse transcribed polymerase chain reaction
-relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing
 relationship: OBI:0000293 OBI:0000880 ! has_specified_input RNA extract
+relationship: OBI:0000299 OBI:0000973 ! has_specified_output sequence data
 relationship: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
-
-[Term]
-id: OBI:0001681
-name: yeast one-hybrid 
-def: "The one-hybrid variation of this technique is designed to investigate protein–DNA interactions and uses a single fusion protein in which the AD is linked directly to the binding domain. " []
-is_a: OBI:0001146 ! binding assay
-
-[Term]
-id: OBI:0001682
-name: bacterial one-hybrid 
-def: " is a method for identifying the sequence-specific target site of a DNA-binding domain. In this system, a given transcription factor (TF) is expressed as a fusion to a subunit of RNA polymerase. In parallel, a library of randomized oligonucleotides representing potential TF target sequences, is cloned into a separate vector containing the selectable genes HIS3 and URA3. If the DNA-binding domain (bait) binds a potential DNA target site (prey) in vivo, it will recruit RNA polymerase to the promoter and activate transcription of the reporter genes in that clone. The two reporter genes, HIS3 and URA3, allow for positive and negative selections, respectively. At the end of the process, positive clones are sequenced and examined with motif-finding tools in order to resolve the favoured DNA target sequence" []
-is_a: OBI:0001681 ! yeast one-hybrid
 
 [Term]
 id: OBI:0001683
-name: chromosome organization assay by fluorescence in situ hybridization
-def: "is an in situ hybridization assay that uses fluorescence as means of detection chromosomal integrity" []
-is_a: OBI:0001686 ! in situ hybridization
+name: chromosome organization assay by fluorescence in-situ hybridization
+def: "An in-situ hybridization assay that uses fluorescence to detect chromosomal integrity" []
+is_a: OBI:0001686 ! in-situ hybridization assay
+relationship: OBI:0000293 REO:0000280 ! has_specified_input molecular label
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
+relationship: OBI:0000417 OBI:0000015 ! achieves_planned_objective biological feature identification objective
 
 [Term]
 id: OBI:0001684
-name: methylation-specific polymerase chain reaction 
-def: "is an assay which uses initial modification of DNA by sodium bisulfite, converting all unmethylated, but not methylated, cytosines to uracil, and subsequent amplification with primers specific for methylated versus unmethylated DNA." []
+name: methylation-specific polymerase chain reaction assay
+def: "An assay that uses initial modification of DNA by sodium bisulfite, converting all unmethylated, but not methylated, cytosines to uracil, and subsequent amplification with primers specific for methylated versus unmethylated DNA." []
 is_a: OBI:0000070 ! assay
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
 
 [Term]
 id: OBI:0001685
-name: amplification of intermethylated sites (AIMS) assay 
-def: " amplification of intermethylated sites (AIMS) is an assay appropriate for genome-wide estimates of DNA methylation and the discovery of specific methylated sequences. AIMS is based on the differential enzymatic digestion of genomic DNA with methylation-sensitive and methylation-insensitive isoschizomers followed by restrained PCR amplification of methylated sequences." []
+name: amplification of intermethylated sites assay
+def: "An assay that estimates genome-wide DNA methylation and measures methylation of DNA sequences. AIMS is based on the differential enzymatic digestion of genomic DNA with methylation-sensitive and methylation-insensitive isoschizomers followed by restrained PCR amplification of methylated sequences." []
 is_a: OBI:0000634 ! DNA methylation profiling assay
+relationship: OBI:0000293 OBI:0000834 ! has_specified_input high molecular weight DNA extract
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
+relationship: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
 
 [Term]
 id: OBI:0001686
-name: in situ hybridization
-def: "is an assay using artificially induced nucleic hybridization to localize a specific DNA or RNA sequence in a portion or section of tissue " []
+name: in-situ hybridization assay
+def: "An assay that localizes a specific DNA or RNA sequence within a portion or section of tissue using artificially induced nucleic hybridization." []
 is_a: OBI:0000070 ! assay
+relationship: BFO:0000051 OBI:0302903 ! has_part nucleic acid hybridization
+relationship: OBI:0000293 OBI:0001143 ! has_specified_input labeled nucleic acid extract
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
+relationship: OBI:0000417 OBI:0000015 ! achieves_planned_objective biological feature identification objective
 
 [Term]
 id: OBI:0001689
 name: cytochalasin-induced inhibition of actin polymerization assay
-def: "is an assay which uses compound cytochalasin (CHEBI: 23528)  to block actin polymerization-dependent cell motility (GO:0070358) and actin filament polymerization (GO:0030041)." []
+def: "An assay which uses compound cytochalasin (CHEBI: 23528) to block actin polymerization-dependent cell motility (GO:0070358) and actin filament polymerization (GO:0030041)." []
 is_a: OBI:0000070 ! assay
+relationship: OBI:0000293 CHEBI:23528 ! has_specified_input cytochalasin
+relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
+relationship: OBI:0000417 OBI:0000015 ! achieves_planned_objective biological feature identification objective
 
 [Term]
 id: OBI:0001691
@@ -25113,14 +24930,14 @@ intersection_of: OBI:0000299 OBI:0000722 ! has_specified_output paired-end libra
 [Term]
 id: OBI:0001861
 name: methylation-sensitive restriction enzyme sequencing assay
-def: "An assay that identifies unmethylated CpGs by  use of methylation sensitive restriction enzymes to fragment DNA." []
-is_a: OBI:0000626 ! DNA sequencing
+def: "An assay that identifies unmethylated CpGs using methylation sensitive restriction enzymes to fragment DNA." []
+is_a: OBI:0000626 ! DNA sequencing assay
 is_a: OBI:0001266 ! DNA methylation profiling by high throughput sequencing assay
-relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing
+relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing assay
 relationship: BFO:0000051 OBI:0000711 ! has_part library preparation
 relationship: BFO:0000051 OBI:0600050 ! has_part specific enzymatic cleavage
+relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
 relationship: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
 
 [Term]
 id: OBI:0001865
@@ -25160,26 +24977,24 @@ is_a: OBI:0000131 ! molecular feature identification objective
 [Term]
 id: OBI:0001919
 name: Carbon-copy chromosome conformation capture assay
-def: "An assay that is used to analyze the organization of chromosomes at the genome-wide scale." []
-is_a: OBI:0600047 ! sequencing assay
-relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing
+def: "An assay that measures the organization of chromosomes at the genome-wide scale." []
+is_a: OBI:0000626 ! DNA sequencing assay
+relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing assay
+relationship: BFO:0000051 OBI:0000690 ! has_part immunoprecipitation
 relationship: BFO:0000051 OBI:0000711 ! has_part library preparation
-relationship: BFO:0000051 OBI:0000800 ! has_part cross linking
 relationship: BFO:0000051 OBI:0001914 ! has_part multiplex ligation-mediated amplification
 relationship: BFO:0000051 OBI:0600050 ! has_part specific enzymatic cleavage
 relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
 relationship: OBI:0000417 OBI:0001917 ! achieves_planned_objective chromosome conformation identification objective
-relationship: RO:0000057 OBI:0400103 ! has participant DNA sequencer
 
 [Term]
 id: OBI:0001925
 name: chromatin immunoprecipitation with exonuclease sequencing assay
-def: "A ChIP-seq assay to identify protein binding sites using an exonuclease  to provide greater binding resolution of immunoprecipitation assay by genome wide sequencing." []
+def: "A ChIP-seq assay which uses immunoprecipitation to isolate protein bound DNA followed by an exonuclease step to degrade DNA that is not protein bound to provide greater resolution of the DNA binding site" []
 is_a: OBI:0000716 ! ChIP-seq assay
 relationship: BFO:0000051 OBI:0000800 ! has_part cross linking
 relationship: BFO:0000051 OBI:0600050 ! has_part specific enzymatic cleavage
 relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
-relationship: RO:0000057 OBI:0400114 ! has participant sonicator
 
 [Term]
 id: OBI:0001930
@@ -25211,18 +25026,15 @@ intersection_of: OBI:0000312 OBI:0600038 ! is_specified_output_of addition of mo
 [Term]
 id: OBI:0001954
 name: ChIP assay
-def: "An assay in which protein-DNA complexes are extracted from short regions of chromatin and are reversibly cross linked, immunoprecipitated with antibodies or tags, purified, and amplified with the aim of analysis gene- and promoter-specific known targets" []
-is_a: OBI:0001956 ! assay using chromatin immunoprecipitation
-is_a: OBI:0002020 ! epigenetic modification assay
-relationship: BFO:0000051 OBI:0000690 ! has_part immunoprecipitation
-relationship: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
-relationship: OBI:0000417 OBI:0001398 ! achieves_planned_objective protein and DNA interaction identification objective
+def: "An assay in which portions of chromatin, the ordered and organized complex of DNA and its interaction partners that make up a chormosome, is extracted and purified by immunoprecipitation with antibodies or tags, and subsequently analyzed" []
+is_a: OBI:0000070 ! assay
 
 [Term]
 id: OBI:0001956
 name: assay using chromatin immunoprecipitation
-def: "an assay which uses immunoprecipitation and which produces data about protein-DNA interaction or DNA epigenetic modification" []
+def: "An assay that produces data about protein-DNA interaction or DNA epigenetic modification using immunoprecipitation" []
 is_a: OBI:0001700 ! immunoprecipitation assay
+relationship: BFO:0000051 OBI:00001975 ! has_part chromatin immunoprecipitation
 
 [Term]
 id: OBI:0001977
@@ -25234,7 +25046,7 @@ is_a: OBI:0000070 ! assay
 id: OBI:0001979
 name: fluorescence quenching binding assay
 def: "A binding assay in which the proximity of two entities is monitored by measuring a fluorescent signal of one of the entities that gets reduced if the two entities are cliose to each other." []
-is_a: OBI:0001499 ! fluorescence detection binding assay
+is_a: OBI:0001146 ! binding assay
 relationship: BFO:0000051 OBI:0001501 ! has_part fluorescence detection assay
 
 [Term]
@@ -25254,15 +25066,15 @@ is_a: OBI:0001632 ! immuno staining assay
 [Term]
 id: OBI:0002020
 name: epigenetic modification assay
-def: "An assay that identifies epigenetic modification including histone modifications, open chromatin, and DNA methylation." []
+def: "An assay that identifies epigenetic modifications including histone modifications, open chromatin, and DNA methylation." []
 is_a: OBI:0000070 ! assay
 intersection_of: OBI:0000070 ! assay
 intersection_of: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
 
 [Term]
 id: OBI:0002035
-name: peptide mass fingerprinting
-def: "A mass spectrometry assay in which an unknown protein of interest is cleaved into smaller peptides, whose absolute masses can be accurately measured with a mass spectrometer.  These masses are then compared to values in a database containing known protein sequences." []
+name: peptide mass fingerprinting assay
+def: "A mass spectrometry assay that measures the absolute mass of the cleaved peptides derived from an unknown protein of interest. These masses are then compared to values for known protein sequences to identify the unknown protein." []
 is_a: OBI:0000470 ! mass spectrometry assay
 
 [Term]
@@ -25276,7 +25088,7 @@ intersection_of: RO:0002351 OBI:0100051 {all_only="true"} ! has member specimen
 [Term]
 id: OBI:0002082
 name: reporter gene assay
-def: "An assay in which expression of a reporter gene is detected that was inserted under the control of a regulatory sequence of interest." []
+def: "An assay that detects expression of a reporter gene that was inserted under the control of a regulatory sequence of interest." []
 is_a: OBI:0000070 ! assay
 
 [Term]
@@ -25317,7 +25129,7 @@ is_a: OBI:0000070 ! assay
 [Term]
 id: OBI:0002167
 name: subcellular protein localization assay
-def: "A protein localization assay that determines the specific subcellular location of a protein. The location is visualized through electron microscopy. " []
+def: "A protein localization assay that determines the specific subcellular location of a protein. The location is visualized through electron microscopy." []
 is_a: OBI:0002165 ! protein localization assay
 
 [Term]
@@ -25349,7 +25161,7 @@ is_a: OBI:0000070 ! assay
 id: OBI:0002177
 name: patch clamp assay
 def: "An intracellular electrophysiology assay where a glass micropipette is sealed to the surface of the cell membrane as a recording electrode to study ion channel activity. The key distinction of this technique is the electrical resistance of the seal between the cell membrane and the pipette is of the order 10-100 gigaohms, permitting high-resolution current measurements over the cell membrane in several different standard configurations." []
-is_a: OBI:0000447 ! intra cellular electrophysiology recording
+is_a: OBI:0000447 ! intra cellular electrophysiology recording assay
 
 [Term]
 id: OBI:0002178
@@ -25379,20 +25191,20 @@ is_a: OBI:0002177 ! patch clamp assay
 id: OBI:0002186
 name: electroencephalography
 def: "An extracellular electrophysiology assay where electrodes are mounted outside the brain (either on the surface of the scalp on onto the brain surface itself during surgery) to measure the electrical field over the external surface." []
-is_a: OBI:0000454 ! extracellular electrophysiology recording
+is_a: OBI:0000454 ! extracellular electrophysiology recording assay
 
 [Term]
 id: OBI:0002187
 name: single-unit recording
 def: "An extracellular electrophysiology assay where a single microelectrode is placed in close proximity to a single neuron to measure voltage and current changes over time. This is the technicque used by Hubel and Wiesel to measure firing properties of primary visual cortex neurons in the 1950s in their original Nobel-prize winning study. A classic, old technique." []
-is_a: OBI:0000454 ! extracellular electrophysiology recording
+is_a: OBI:0000454 ! extracellular electrophysiology recording assay
 is_a: OBI:0001977 ! cytometry assay
 
 [Term]
 id: OBI:0002189
 name: local field potential recording
 def: "An extracellular electrophysiology assay where a microelectrode is placed in the extracellular space of brain tissue to measure action potential and compared to an electrode either outside or inside that tissue." []
-is_a: OBI:0000454 ! extracellular electrophysiology recording
+is_a: OBI:0000454 ! extracellular electrophysiology recording assay
 
 [Term]
 id: OBI:0002205
@@ -25773,13 +25585,11 @@ relationship: RO:0000052 CHEBI:23367 ! inheres in molecular entity
 [Term]
 id: OBI:0302736
 name: comet assay
-def: "a comet assay is an assay which utilizes gel electrophoresis on cell exposed to a challenge with the objective to assess DNA damage (DNA breakage) by determining the size and shape of DNA migration in cell placed in an electric field in specific conditions." []
-is_a: OBI:0000070 ! assay
-relationship: OBI:0000293 CL:0000000 ! has_specified_input cell
+def: "An assay that measures DNA damage (DNA breakage) in eucaryotic cells exposed to a challenge by determining the size and shape of DNA migration by detecting fluorescently labeled DNA from a cell placed in an electric field using gel electrophoresis" []
+is_a: OBI:0001977 ! cytometry assay
+relationship: BFO:0000051 CHMO:0000087 ! has_part fluorescence microscopy
 relationship: OBI:0000293 OBI:0000439 ! has_specified_input agarose gel
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
-relationship: RO:0000057 OBI:0400140 ! has participant gel tank
-relationship: RO:0000057 OBI:0400142 ! has participant power supply
+relationship: OBI:0000299 IAO:0000030 ! has_specified_output information content entity
 
 [Term]
 id: OBI:0302859
@@ -26075,23 +25885,19 @@ relationship: OBI:0000299 BFO:0000040 ! has_specified_output material entity
 
 [Term]
 id: OBI:0600017
-name: detection of molecular label
-def: "an assay that detects the presence or a quality of a molecular label which is a proxy for the detection of the molecular target to which the label is attached" []
+name: assay detecting a molecular label
+def: "An assay that detects the presence or a quality of a molecular label which is a proxy for the detection of the molecular target to which the label is attached" []
 is_a: OBI:0000070 ! assay
-relationship: BFO:0000055 REO:0000171 ! realizes molecular label role
 relationship: OBI:0000293 OBI:0001936 ! has_specified_input molecular-labeled material
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
+relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
 
 [Term]
 id: OBI:0600020
-name: histology assay
-def: "the visual examination of cells or tissue (or images of them) with an assessment regarding a quality of the cells or tissue. Parts are: staining, imaging, judgement" []
+name: histological assay
+def: "An assay that uses visual examination of cells or tissue (or images of them) to make an assessment regarding a quality of the cells or tissue. This assay can include steps of staining, imaging, and judgement." []
 is_a: OBI:0000070 ! assay
 relationship: BFO:0000051 OBI:0000185 ! has_part imaging assay
 relationship: BFO:0000051 OBI:0000341 ! has_part histological sample preparation
-relationship: BFO:0000051 OBI:0302887 ! has_part staining
-relationship: BFO:0000051 OBI:0600005 ! has_part collecting specimen from organism
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0600024
@@ -26104,12 +25910,10 @@ relationship: OBI:0000417 OBI:0000806 ! achieves_planned_objective material main
 
 [Term]
 id: OBI:0600025
-name: substance detection
-def: "any protocol which results in the detection of a specified substance" []
+name: substance detection assay
+def: "An assay that detects a specified substance" []
 is_a: OBI:0000070 ! assay
-relationship: OBI:0000293 BFO:0000040 ! has_specified_input material entity
 relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
-relationship: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0600028
@@ -26179,10 +25983,8 @@ relationship: RO:0000057 OBI:0000048 ! has participant chromatography device
 [Term]
 id: OBI:0600047
 name: sequencing assay
-def: "the use of a chemical or biochemical means to infer the sequence of a biomaterial" []
+def: "An assay the uses chemical or biochemical means to infer the sequence of a biomaterial" []
 is_a: OBI:0000070 ! assay
-intersection_of: OBI:0000299 OBI:0000973 ! has_specified_output sequence data
-intersection_of: OBI:0000417 OBI:0000441 ! achieves_planned_objective assay objective
 
 [Term]
 id: OBI:0600050
@@ -26339,6 +26141,12 @@ id: PATO:0000018
 name: fluorescence
 def: "A luminous flux quality inhering in a bearer by virtue of the bearer's emitting longer wavelength light following the absorption of shorter wavelength radiation; fluorescence is common with aromatic compounds with several rings joined together." []
 is_a: BFO:0000016 ! disposition
+
+[Term]
+id: PATO:0000125
+name: mass
+def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." []
+is_a: BFO:0000019 ! quality
 
 [Term]
 id: PATO:0000186
@@ -26602,12 +26410,18 @@ def: "denotes is a primitive, instance-level, relation obtaining between an info
 is_a: IAO:0000136 ! is about
 
 [Typedef]
-id: IAO:0000413
-name: is duration of
-def: "relates a process to a time-measurement-datum that represents the duration of the process" []
-domain: IAO:0000416 ! time measurement datum
-range: BFO:0000015 ! process
+id: IAO:0000221
+name: is quality measurement of
+def: "m is a quality measurement of q at t when\nq is a quality \nthere is a measurement process p that has specified output m, a measurement datum, that is about q" []
+domain: IAO:0000109 ! measurement datum
+range: BFO:0000019 ! quality
 is_a: IAO:0000136 ! is about
+inverse_of: IAO:0000417 ! is quality measured as
+
+[Typedef]
+id: IAO:0000417
+name: is quality measured as
+def: "inverse of the relation of is quality measurement of" []
 
 [Typedef]
 id: OBI:0000293
@@ -26772,6 +26586,20 @@ def: "a relation between an independent continuant (the bearer) and a role, in w
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000023 ! role
 is_a: RO:0000053 ! bearer of
+
+[Typedef]
+id: RO:0000091
+name: has disposition
+def: "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" []
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000016 ! disposition
+is_a: RO:0000053 ! bearer of
+inverse_of: RO:0000092 ! disposition of
+
+[Typedef]
+id: RO:0000092
+name: disposition of
+is_a: RO:0000052 ! inheres in
 
 [Typedef]
 id: RO:0001000
