@@ -1564,6 +1564,18 @@ Declaration(Class(obo:ECO_0007632))
 Declaration(Class(obo:ECO_0007633))
 Declaration(Class(obo:ECO_0007634))
 Declaration(Class(obo:ECO_0007635))
+Declaration(Class(obo:ECO_0007636))
+Declaration(Class(obo:ECO_0007637))
+Declaration(Class(obo:ECO_0007638))
+Declaration(Class(obo:ECO_0007639))
+Declaration(Class(obo:ECO_0007640))
+Declaration(Class(obo:ECO_0007641))
+Declaration(Class(obo:ECO_0007642))
+Declaration(Class(obo:ECO_0007643))
+Declaration(Class(obo:ECO_0007644))
+Declaration(Class(obo:ECO_0007645))
+Declaration(Class(obo:ECO_0007646))
+Declaration(Class(obo:ECO_0007647))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000112))
@@ -19194,6 +19206,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007634 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007634 "2018-06-20T02:12:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007634 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007634 "ECO:0007634"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007634 "experimental phenotypic evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007634 ObjectIntersectionOf(obo:ECO_0000059 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 
@@ -19203,8 +19216,105 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007635 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007635 "2018-06-20T02:12:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007635 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007635 "ECO:0007635"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007635 "experimental phenotypic evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007635 ObjectIntersectionOf(obo:ECO_0000059 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+
+# Class: obo:ECO_0007636 (curator inference from database)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007636 "A type of curator inference from authoritative resource based on information located in a queryable database and is optimized for computers."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007636 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007636 "ECO:0007636"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007636 "curator inference from database"^^xsd:string)
+SubClassOf(obo:ECO_0007636 obo:ECO_0007647)
+
+# Class: obo:ECO_0007637 (curator inference from encyclopedia)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://en.wikipedia.org/wiki/Encyclopedia"^^xsd:string) obo:IAO_0000115 obo:ECO_0007637 "A type of curator inference from published work where the reference is to an entry in a compendium that provides summarized information on a subject."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007637 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007637 "ECO:0007637"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007637 "curator inference from encyclopedia"^^xsd:string)
+SubClassOf(obo:ECO_0007637 obo:ECO_0007647)
+
+# Class: obo:ECO_0007638 (curator inference from Wikipedia)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007638 "A type of curator inference from encyclopedia where the reference is to a Wikipedia article."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007638 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007638 "ECO:0007638"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007638 "curator inference from Wikipedia"^^xsd:string)
+SubClassOf(obo:ECO_0007638 obo:ECO_0007637)
+
+# Class: obo:ECO_0007639 (curator inference from Brittanica)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007639 "A type of curator inference from encyclopedia where the reference is to an Encyclopedia Britannica article."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007639 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007639 "ECO:0007639"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007639 "curator inference from Brittanica"^^xsd:string)
+SubClassOf(obo:ECO_0007639 obo:ECO_0007637)
+
+# Class: obo:ECO_0007640 (curator inference from MedlinePlus encyclopedia)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007640 "A type of curator inference from encyclopedia in which the reference is to an article in the National Library of Medicine's MedLinePlus encyclopedia."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007640 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007640 "ECO:0007640"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007640 "curator inference from MedlinePlus encyclopedia"^^xsd:string)
+SubClassOf(obo:ECO_0007640 obo:ECO_0007637)
+
+# Class: obo:ECO_0007641 (curator inference from dictionary)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://en.wikipedia.org/wiki/Dictionary"^^xsd:string) obo:IAO_0000115 obo:ECO_0007641 "A type of curator inference from published work in which the entry comes from a collection of words with definitions, usages, pronounciations, and more."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007641 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007641 "ECO:0007641"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007641 "curator inference from dictionary"^^xsd:string)
+SubClassOf(obo:ECO_0007641 obo:ECO_0007647)
+
+# Class: obo:ECO_0007642 (curator inference from Oxford Dictionary)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007642 "A type of curator inference from dictionary in which the reference is to an entry in the Oxford Dictionaries."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007642 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007642 "ECO:0007642"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007642 "curator inference from Oxford Dictionary"^^xsd:string)
+SubClassOf(obo:ECO_0007642 obo:ECO_0007641)
+
+# Class: obo:ECO_0007643 (curator inference from Merriam-Webster Dictionary)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007643 "A type of curator inference from dictionary in which the reference is to an entry in the Merriam-Webster Dictionary."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007643 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007643 "ECO:0007643"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007643 "curator inference from Merriam-Webster Dictionary"^^xsd:string)
+SubClassOf(obo:ECO_0007643 obo:ECO_0007641)
+
+# Class: obo:ECO_0007644 (curator inference from MedlinePlus dictionary)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007644 "A type of curator inference from dictionary in which the reference is to an entry in the National Library of Medicine's MedLinePlus dictionary."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007644 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007644 "ECO:0007644"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007644 "curator inference from MedlinePlus dictionary"^^xsd:string)
+SubClassOf(obo:ECO_0007644 obo:ECO_0007641)
+
+# Class: obo:ECO_0007645 (curator inference from journal publication)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://en.wikipedia.org/wiki/Scientific_journal"^^xsd:string) obo:IAO_0000115 obo:ECO_0007645 "A type of curator inference from published work reporting on research findings."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007645 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007645 "ECO:0007645"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007645 "curator inference from journal publication"^^xsd:string)
+SubClassOf(obo:ECO_0007645 obo:ECO_0007647)
+
+# Class: obo:ECO_0007646 (curator inference from book)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007646 "A type of curator inference from published work based on a book, which may be a reference to a URL (for ebooks) or a DOI."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007646 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007646 "ECO:0007646"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007646 "curator inference from book"^^xsd:string)
+SubClassOf(obo:ECO_0007646 obo:ECO_0007647)
+
+# Class: obo:ECO_0007647 (curator inference from authoritative source)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007647 "A type of curator inference that is from what is generally considered an authoritative source on the topic, including model organism databases, newspaper articles, books, journal publications, etc."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007647 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007647 "ECO:0007647"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007647 "curator inference from authoritative source"^^xsd:string)
+SubClassOf(obo:ECO_0007647 obo:ECO_0000205)
 
 
 )
