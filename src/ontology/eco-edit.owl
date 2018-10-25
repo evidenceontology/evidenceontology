@@ -9142,7 +9142,8 @@ SubClassOf(obo:ECO_0001818 obo:ECO_0000136)
 
 # Class: obo:ECO_0001819 (primer extension assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:23378648"^^xsd:string) obo:IAO_0000115 obo:ECO_0001819 "A type of transcript expression evidence used to determine expression levels of mRNA where a radiolabeled synthetic oligonucleotide primer is annealed to mRNA at the transcription start site of a gene and the mRNA is extended with reverse transcriptase producing cDNA which is electrophoresed on a polyacrylamide gel and autoradiographed, and the band size is proportional to the initial RNA."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:23378648"^^xsd:string) obo:IAO_0000115 obo:ECO_0001819 "A type of transcript expression evidence used to determine expression
+levels of mRNA where a labeled synthetic oligonucleotide primer is annealed to mRNA downstream of the presumed transcription start site of a gene. The mRNA is extended with reverse transcriptase, producing cDNA which is electrophoresed, and the band size is enables determination of the 5' end of the mRNA (i.e. the transcription start site)."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001819 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001819 "swolfish"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001819 "2015-11-04T09:33:18Z"^^xsd:string)
