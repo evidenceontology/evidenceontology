@@ -40,17 +40,17 @@ ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. An
 
 **Please cite**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
-Selected publications:
+Selected bibliography:
 
 [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
-[Tauber R & Chibucos MC. (2017) **Logical axiomatization of the Evidence & Conclusion Ontology (ECO) by integrating external ontology classes**, in Proc. of the 8th International Conference on Biomedical Ontology (ICBO 2017), September 13-15, 2017, Newcastle-upon-Tyne, United Kingdom. Edited by: Matthew Horridge, Phillip Lord, Jennifer D. Warrender.](http://ceur-ws.org/Vol-2137/paper_25.pdf)
+[Tauber R & Chibucos MC. (2017) **Logical axiomatization of the Evidence & Conclusion Ontology (ECO) by integrating external ontology classes**, in _Proceedings of the 8th International Conference on Biomedical Ontology (ICBO 2017)_, September 13-15, 2017, Newcastle-upon-Tyne, United Kingdom. Edited by: Matthew Horridge, Phillip Lord, Jennifer D. Warrender.](http://ceur-ws.org/Vol-2137/paper_25.pdf)
 
 [Tauber R & Chibucos MC. (2017) **Refactoring the evidence and conclusion ontology by harmonizing with the ontology for biomedical investigations**. _Poster_ presented at the 10th International Biocuration Conference, March 26-29, 2017. Stanford University, CA.](https://f1000research.com/posters/6-395)
 
-[Chibucos MC, Hu JC, Siegele DA, Giglio M. (2016) **The Evidence and Conclusion Ontology (ECO): Supporting GO Annotations**. In Christophe Dessimoz & Nives Škunca (eds.), The Gene Ontology Handbook, Methods in Molecular Biology, vol. 1446, pp. 245-259. New York City: Humana Press (Springer). ISBN:978-1-4939-3743-1.](https://link.springer.com/protocol/10.1007%2F978-1-4939-3743-1_18)
+[Chibucos MC, Hu JC, Siegele DA, Giglio M. (2016) **The Evidence and Conclusion Ontology (ECO): Supporting GO Annotations**. In Christophe Dessimoz & Nives Škunca (eds.), _The Gene Ontology Handbook, Methods in Molecular Biology_, vol. 1446, pp. 245-259. New York City: Humana Press (Springer). ISBN:978-1-4939-3743-1.](https://link.springer.com/protocol/10.1007%2F978-1-4939-3743-1_18)
 
-[Chibucos MC, Nadendla S, Munro JB, Mitraka E, Olley D, Vasilevsky NA, Brush MH, Giglio M. (2016) **Supporting database annotations and beyond with the Evidence & Conclusion Ontology (ECO)**, in Proc. of the Joint International Conference on Biological Ontology and BioCreative, August 1-4, 2016, Corvalis, OR, USA. Edited by: Pankaj Jaiswal, Robert Hoehndorf, Cecilia Arighi, Austin Meier.](http://ceur-ws.org/Vol-1747/IP30_ICBO2016.pdf)
+[Chibucos MC, Nadendla S, Munro JB, Mitraka E, Olley D, Vasilevsky NA, Brush MH, Giglio M. (2016) **Supporting database annotations and beyond with the Evidence & Conclusion Ontology (ECO)**, in _Proceedings of the Joint International Conference on Biological Ontology and BioCreative_, August 1-4, 2016, Corvalis, OR, USA. Edited by: Pankaj Jaiswal, Robert Hoehndorf, Cecilia Arighi, Austin Meier.](http://ceur-ws.org/Vol-1747/IP30_ICBO2016.pdf)
 
 [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
 
