@@ -2,7 +2,7 @@
 
 If you use ECO in your work, **please consider citing ECO**. We appreciate the attribution. 
 
-**Please cite**: [Chibucos MC, Mungall CJ, Balakrishnan R, Christie KR, Huntley RP, White O, Blake JA, Lewis SE, and Giglio M. (2014) **Standardized description of scientific evidence using the Evidence Ontology (ECO)**. _Database_. Vol. **2014**: article ID bau066. PMID:25052702.](http://database.oxfordjournals.org/content/2014/bau075.long)
+**Please cite**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
 Follow **[@ecoontology on Twitter](https://twitter.com/ecoontology)** and check out the **[ECO website evidenceontology.org](http://www.evidenceontology.org)**.
 
@@ -38,9 +38,11 @@ ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. An
 
 **PUBLICATIONS ABOUT ECO**
 
-**[Please cite PMID:25052702](http://database.oxfordjournals.org/content/2014/bau075.long)**.
+**Please cite**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
 Selected publications:
+
+[Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
 [Tauber R & Chibucos MC. (2017) **Logical axiomatization of the Evidence & Conclusion Ontology (ECO) by integrating external ontology classes**, in Proc. of the 8th International Conference on Biomedical Ontology (ICBO 2017), September 13-15, 2017, Newcastle-upon-Tyne, United Kingdom. Edited by: Matthew Horridge, Phillip Lord, Jennifer D. Warrender.](http://ceur-ws.org/Vol-2137/paper_25.pdf)
 
