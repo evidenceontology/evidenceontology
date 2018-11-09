@@ -593,6 +593,7 @@ Declaration(Class(obo:ECO_0001270))
 Declaration(Class(obo:ECO_0001271))
 Declaration(Class(obo:ECO_0001272))
 Declaration(Class(obo:ECO_0001273))
+Declaration(Class(obo:ECO_0001522))
 Declaration(Class(obo:ECO_0001533))
 Declaration(Class(obo:ECO_0001534))
 Declaration(Class(obo:ECO_0001546))
@@ -8614,6 +8615,18 @@ AnnotationAssertion(rdfs:label obo:ECO_0001273 "ectopic expression evidence used
 EquivalentClasses(obo:ECO_0001273 ObjectIntersectionOf(obo:ECO_0000017 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001273 obo:ECO_0000017)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001273 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+
+# Class: obo:ECO_0001522 (small molecule detection assay evidence)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001522 "A type of molecule detection assay evidence resulting from the detection and quantification of a small molecule (a low molecular weight (typically < 900 daltons) organic compound), such as lipids, sugars, animo acids, drugs, etc."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001522 "CollecTF"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001522 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:date obo:ECO_0001522 "2018-11-09T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:ECO_0001522 "metabolite detection assay evidence"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001522 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001522 "ECO:0001522"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001522 "small molecule detection assay evidence"^^xsd:string)
+SubClassOf(obo:ECO_0001522 obo:ECO_0005516)
 
 # Class: obo:ECO_0001533 (localization evidence)
 
