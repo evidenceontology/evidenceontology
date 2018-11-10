@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2018-09-14/eco-basic.owl
-date: 09:02:2019 10:54
+data-version: eco/releases/2018-11-10/../../eco-basic.owl
+date: 11:10:2018 07:26
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -13,7 +13,7 @@ subsetdef: valid_with_protein_complex "Protein complex IDs should be used in the
 subsetdef: valid_with_transcript "Transcript IDs should be used in the GO with/from field"
 default-namespace: eco
 remark: ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.
-ontology: eco/eco-basic
+ontology: eco/../../eco-basic
 property_value: http://purl.org/dc/elements/1.1/description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Evidence & Conclusion Ontology (ECO)" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
@@ -6089,6 +6089,15 @@ created_by: mchibucos
 creation_date: 2014-03-17T22:34:56Z
 
 [Term]
+id: ECO:0001522
+name: small molecule detection assay evidence
+def: "A type of molecule detection assay evidence resulting from the detection and quantification of a small molecule (a low molecular weight (typically < 900 daltons) organic compound), such as lipids, sugars, animo acids, drugs, etc." []
+synonym: "metabolite detection assay evidence" NARROW []
+is_a: ECO:0005516 ! molecule detection assay evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+
+[Term]
 id: ECO:0001533
 name: localization evidence
 def: "A type of direct assay evidence in which the sub-cellular location of a protein or nucleic acid sequence is determined." []
@@ -6538,7 +6547,7 @@ creation_date: 2015-11-04T09:20:26Z
 [Term]
 id: ECO:0001819
 name: primer extension assay evidence
-def: "A type of transcript expression evidence used to determine expression levels of mRNA where a radiolabeled synthetic oligonucleotide primer is annealed to mRNA at the transcription start site of a gene and the mRNA is extended with reverse transcriptase producing cDNA which is electrophoresed on a polyacrylamide gel and autoradiographed, and the band size is proportional to the initial RNA." [ECO:SW, PMID:23378648]
+def: "A type of transcript expression evidence used to determine expression\nlevels of mRNA where a labeled synthetic oligonucleotide primer is annealed to mRNA downstream of the presumed transcription start site of a gene. The mRNA is extended with reverse transcriptase, producing cDNA which is electrophoresed, and the band size is enables determination of the 5' end of the mRNA (i.e. the transcription start site)." [ECO:SW, PMID:23378648]
 comment: The most commonly used radiolabel is 32P.
 is_a: ECO:0000009 ! transcript expression evidence
 property_value: IAO:0000234 "CollecTF" xsd:string
@@ -10943,6 +10952,8 @@ name: ribosome profiling evidence
 def: "A type of expression pattern evidence in which translation is measured by the positions of ribosomes active in a cell, identified through deep sequencing of ribosome-protected mRNA fragments." [PMID:27015305]
 synonym: "ribo-seq evidence" EXACT []
 synonym: "ribosome footprinting evidence" EXACT []
+synonym: "translation profiling" NARROW []
+synonym: "translatome profiling" NARROW []
 is_a: ECO:0000008 ! expression pattern evidence
 property_value: IAO:0000234 GOC:VW xsd:string
 created_by: rctauber
@@ -16875,6 +16886,78 @@ intersection_of: ECO:0000059 ! experimental phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-06-20T02:12:00Z
+
+[Term]
+id: ECO:0007636
+name: curator inference from database
+def: "A type of curator inference from authoritative resource based on information located in a queryable database and is optimized for computers." [ECO:RCT]
+is_a: ECO:0007647 ! curator inference from authoritative source
+
+[Term]
+id: ECO:0007637
+name: curator inference from encyclopedia
+def: "A type of curator inference from published work where the reference is to an entry in a compendium that provides summarized information on a subject." [url:https\://en.wikipedia.org/wiki/Encyclopedia]
+is_a: ECO:0007647 ! curator inference from authoritative source
+
+[Term]
+id: ECO:0007638
+name: curator inference from Wikipedia
+def: "A type of curator inference from encyclopedia where the reference is to a Wikipedia article." [ECO:RCT]
+is_a: ECO:0007637 ! curator inference from encyclopedia
+
+[Term]
+id: ECO:0007639
+name: curator inference from Brittanica
+def: "A type of curator inference from encyclopedia where the reference is to an Encyclopedia Britannica article." [ECO:RCT]
+is_a: ECO:0007637 ! curator inference from encyclopedia
+
+[Term]
+id: ECO:0007640
+name: curator inference from MedlinePlus encyclopedia
+def: "A type of curator inference from encyclopedia in which the reference is to an article in the National Library of Medicine's MedLinePlus encyclopedia." [ECO:RCT]
+is_a: ECO:0007637 ! curator inference from encyclopedia
+
+[Term]
+id: ECO:0007641
+name: curator inference from dictionary
+def: "A type of curator inference from published work in which the entry comes from a collection of words with definitions, usages, pronounciations, and more." [url:https\://en.wikipedia.org/wiki/Dictionary]
+is_a: ECO:0007647 ! curator inference from authoritative source
+
+[Term]
+id: ECO:0007642
+name: curator inference from Oxford Dictionary
+def: "A type of curator inference from dictionary in which the reference is to an entry in the Oxford Dictionaries." [ECO:RCT]
+is_a: ECO:0007641 ! curator inference from dictionary
+
+[Term]
+id: ECO:0007643
+name: curator inference from Merriam-Webster Dictionary
+def: "A type of curator inference from dictionary in which the reference is to an entry in the Merriam-Webster Dictionary." [ECO:RCT]
+is_a: ECO:0007641 ! curator inference from dictionary
+
+[Term]
+id: ECO:0007644
+name: curator inference from MedlinePlus dictionary
+def: "A type of curator inference from dictionary in which the reference is to an entry in the National Library of Medicine's MedLinePlus dictionary." [ECO:RCT]
+is_a: ECO:0007641 ! curator inference from dictionary
+
+[Term]
+id: ECO:0007645
+name: curator inference from journal publication
+def: "A type of curator inference from published work reporting on research findings." [url:https\://en.wikipedia.org/wiki/Scientific_journal]
+is_a: ECO:0007647 ! curator inference from authoritative source
+
+[Term]
+id: ECO:0007646
+name: curator inference from book
+def: "A type of curator inference from published work based on a book, which may be a reference to a URL (for ebooks) or a DOI." [ECO:RCT]
+is_a: ECO:0007647 ! curator inference from authoritative source
+
+[Term]
+id: ECO:0007647
+name: curator inference from authoritative source
+def: "A type of curator inference that is from what is generally considered an authoritative source on the topic, including model organism databases, newspaper articles, books, journal publications, etc." [ECO:RCT]
+is_a: ECO:0000205 ! curator inference
 
 [Typedef]
 id: used_in
