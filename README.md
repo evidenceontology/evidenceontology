@@ -2,7 +2,7 @@
 
 If you use ECO in your work, **please consider citing ECO**. We appreciate the attribution. 
 
-**Please cite our most recent paper**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
+**Please cite our most recent paper, PMID 30407590**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
 Follow **[@ecoontology on Twitter](https://twitter.com/ecoontology)** and check out the **[ECO website evidenceontology.org](http://www.evidenceontology.org)**.
 
@@ -38,7 +38,7 @@ ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. An
 
 **PUBLICATIONS ABOUT ECO**
 
-**Please cite**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
+**Please cite PMID 30407590**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
 Selected bibliography:
 
