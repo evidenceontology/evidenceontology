@@ -12992,7 +12992,9 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007011 "combinatorial evid
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007011 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007011 "ECO:0007011"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007011 "combinatorial experimental and author inference evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0007011 ObjectIntersectionOf(obo:ECO_0000212 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006) ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0007010)))
+SubClassOf(obo:ECO_0007011 obo:ECO_0000212)
+SubClassOf(obo:ECO_0007011 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006))
+SubClassOf(obo:ECO_0007011 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0007010))
 
 # Class: obo:ECO_0007012 (combinatorial experimental and curator inference evidence)
 
@@ -13004,7 +13006,9 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007012 "combinatorial evid
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007012 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007012 "ECO:0007012"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007012 "combinatorial experimental and curator inference evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0007012 ObjectIntersectionOf(obo:ECO_0000212 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006) ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000205)))
+SubClassOf(obo:ECO_0007012 obo:ECO_0000212)
+SubClassOf(obo:ECO_0007012 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006))
+SubClassOf(obo:ECO_0007012 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000205))
 
 # Class: obo:ECO_0007013 (combinatorial experimental and author inference evidence used in manual assertion)
 
@@ -19438,7 +19442,8 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007654 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007654 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007654 "ECO:0007654"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007654 "combinatorial experimental evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0007654 ObjectIntersectionOf(obo:ECO_0000212 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0000006)))
+SubClassOf(obo:ECO_0007654 obo:ECO_0000212)
+SubClassOf(obo:ECO_0007654 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0000006))
 
 # Class: obo:ECO_0007655 (manually integrated combinatorial experimental evidence)
 
@@ -19510,7 +19515,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007661 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007661 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007661 "ECO:0007661"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007661 "combinatorial computational and experimental evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0007661 ObjectIntersectionOf(obo:ECO_0000212 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006) ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0007672)))
+SubClassOf(obo:ECO_0007661 obo:ECO_0000212)
+SubClassOf(obo:ECO_0007661 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006))
+SubClassOf(obo:ECO_0007661 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0007672))
 
 # Class: obo:ECO_0007662 (manually integrated combinatorial computational and experimental evidence)
 
@@ -19649,7 +19656,8 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007677 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007677 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007677 "ECO:0007677"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007677 "combinatorial computational evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0007677 ObjectIntersectionOf(obo:ECO_0000212 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0007672)))
+SubClassOf(obo:ECO_0007677 obo:ECO_0000212)
+SubClassOf(obo:ECO_0007677 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0007672))
 
 # Class: obo:ECO_0007678 (combinatorial computational evidence used in manual assertion)
 
