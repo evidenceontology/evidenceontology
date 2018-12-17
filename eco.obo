@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2018-11-10
-date: 11:10:2018 07:25
+data-version: releases/2018-12-17
+date: 12:17:2018 08:44
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -625,11 +625,15 @@ is_a: ECO:0000011 ! genetic interaction evidence
 
 [Term]
 id: ECO:0000053
-name: computational combinatorial evidence
-def: "A type of combinatorial analysis where data are combined and evaluated by an algorithm." [ECO:go, ECO:MCC]
+name: automatically integrated combinatorial evidence used in automatic assertion
+alt_id: ECO:0000246
+def: "A type of automatically integrated combinatorial evidence that is used in an automatic assertion." [ECO:MCC, ECO:RCT]
 comment: Combinatorial analyses could include experimental or computational results. Examples include: (i) large-scale experiment such as a genome-wide two-hybrid or genome-wide synthetic interactions; (ii) integration of large-scale data sets of various types; and (iii) text-based-computation, e.g. text-mining. For simple sequence comparisons, one should use the sequence similarity analysis evidence type. For microarray results alone, expression pattern analysis is appropriate; whereas, large-scale computational analysis should be used when microarray results are combined with the results of other types of large-scale experiments.
 xref: TAIR:TED
-is_a: ECO:0000212 ! combinatorial evidence
+is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
+is_a: ECO:0007673 {is_inferred="true"} ! automatically integrated combinatorial evidence
+intersection_of: ECO:0007673 ! automatically integrated combinatorial evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
 
 [Term]
 id: ECO:0000054
@@ -1524,10 +1528,12 @@ id: ECO:0000212
 name: combinatorial evidence
 alt_id: ECO:0000036
 alt_id: ECO:0000043
-def: "A type of evidence that arises out of the integration of more than one line of evidence." [ECO:MCC]
+def: "A type of evidence in which at least two distinct types of evidence have been integrated." [ECO:MCC, ECO:RCT]
 comment: A key aspect of this type of evidence is that two or more pieces of information are combined to generate an emergent type of evidence not possible with the constituent pieces of evidence alone. A combinatorial analysis typically involves incorporation of different types of evidence.
 synonym: "inferred from in-silico analysis" RELATED []
 is_a: ECO:0000000 ! evidence
+intersection_of: ECO:0000000 ! evidence
+intersection_of: BFO:0000051 ECO:0000000 {minCardinality="2"} ! has part evidence
 created_by: mchibucos
 creation_date: 2010-08-06T05:24:57Z
 
@@ -1890,17 +1896,18 @@ creation_date: 2010-12-09T02:02:12Z
 
 [Term]
 id: ECO:0000245
-name: computational combinatorial evidence used in manual assertion
-def: "A type of computational combinatorial analysis that is used in a manual assertion." [ECO:MCC]
+name: automatically integrated combinatorial evidence used in manual assertion
+def: "A type of automatically integrated combinatorial evidence that is used in a manual assertion." [ECO:RCT]
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
+synonym: "computational combinatorial evidence used in manual assertion" RELATED []
 synonym: "inferred from reviewed computational analysis" EXACT [GOECO:RCA]
 synonym: "RCA" EXACT [GOECO:RCA]
 xref: GOECO:RCA "inferred from reviewed computational analysis"
-is_a: ECO:0000053 ! computational combinatorial evidence
+is_a: ECO:0000053 ! automatically integrated combinatorial evidence used in automatic assertion
 is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
-intersection_of: ECO:0000053 ! computational combinatorial evidence
+intersection_of: ECO:0007673 ! automatically integrated combinatorial evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: seeAlso http://geneontology.org/page/rca-inferred-reviewed-computational-analysis xsd:string
@@ -1911,11 +1918,8 @@ creation_date: 2010-12-09T02:37:54Z
 id: ECO:0000246
 name: computational combinatorial evidence used in automatic assertion
 def: "A type of computational combinatorial analysis that is used in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000053 ! computational combinatorial evidence
-is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
-intersection_of: ECO:0000053 ! computational combinatorial evidence
-intersection_of: used_in ECO:0000203 ! automatic assertion
-relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
+comment: Merged with ECO:0000053.
+is_obsolete: true
 created_by: mchibucos
 creation_date: 2010-12-09T02:37:54Z
 
@@ -10550,38 +10554,36 @@ creation_date: 2018-02-08T09:11:07Z
 
 [Term]
 id: ECO:0007011
-name: combinatorial evidence from author knowledge and experimental evidence
+name: combinatorial experimental and author inference evidence
 def: "A type of combinatorial evidence in which the author draws a conclusion based on a combination of prior scientific background knowledge and evidence from one or more experiments." [ECO:RCT]
-is_a: ECO:0000006 {is_inferred="true"} ! experimental evidence
+synonym: "combinatorial evidence from author knowledge and experimental evidence" EXACT []
 is_a: ECO:0000212 ! combinatorial evidence
-is_a: ECO:0007010 {is_inferred="true"} ! author inference
-intersection_of: ECO:0000006 ! experimental evidence
-intersection_of: ECO:0007010 ! author inference
+relationship: BFO:0000051 ECO:0000006 {minCardinality="1"} ! has part experimental evidence
+relationship: BFO:0000051 ECO:0007010 {minCardinality="1"} ! has part author inference
 property_value: IAO:0000234 "sbello" xsd:string
 created_by: rctauber
 creation_date: 2018-02-15T11:17:11Z
 
 [Term]
 id: ECO:0007012
-name: combinatorial evidence from curator knowledge and experimental evidence
+name: combinatorial experimental and curator inference evidence
 def: "A type of combinatorial evidence in which the curator draws a conclusion based on a combination of prior scientific background knowledge and evidence from one or more experiments." [ECO:RCT]
-is_a: ECO:0000006 {is_inferred="true"} ! experimental evidence
-is_a: ECO:0000205 {is_inferred="true"} ! curator inference
+synonym: "combinatorial evidence from curator knowledge and experimental evidence" EXACT []
 is_a: ECO:0000212 ! combinatorial evidence
-intersection_of: ECO:0000006 ! experimental evidence
-intersection_of: ECO:0000205 ! curator inference
+relationship: BFO:0000051 ECO:0000006 {minCardinality="1"} ! has part experimental evidence
+relationship: BFO:0000051 ECO:0000205 {minCardinality="1"} ! has part curator inference
 property_value: IAO:0000234 "ZFIN" xsd:string
 created_by: rctauber
 creation_date: 2018-02-15T11:17:11Z
 
 [Term]
 id: ECO:0007013
-name: combinatorial evidence from author knowledge and experimental evidence used in manual assertion
+name: combinatorial experimental and author inference evidence used in manual assertion
 def: "A type of combinatorial evidence from author knowledge and experimental evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "combinatorial evidence from author knowledge and experimental evidence used in manual assertion" EXACT []
 is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
-is_a: ECO:0007011 ! combinatorial evidence from author knowledge and experimental evidence
-intersection_of: ECO:0007011 ! combinatorial evidence from author knowledge and experimental evidence
+is_a: ECO:0007011 ! combinatorial experimental and author inference evidence
+intersection_of: ECO:0007011 ! combinatorial experimental and author inference evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -10589,13 +10591,12 @@ creation_date: 2018-02-15T11:22:10Z
 
 [Term]
 id: ECO:0007014
-name: combinatorial evidence from curator knowledge and experimental evidence used in manual assertion
+name: combinatorial experimental and curator inference evidence used in manual assertion
 def: "A type of combinatorial evidence from curator knowledge and experimental evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "combinatorial evidence from curator knowledge and experimental evidence used in manual assertion" EXACT []
 is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
-is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assertion
-is_a: ECO:0007012 ! combinatorial evidence from curator knowledge and experimental evidence
-intersection_of: ECO:0007012 ! combinatorial evidence from curator knowledge and experimental evidence
+is_a: ECO:0007012 ! combinatorial experimental and curator inference evidence
+intersection_of: ECO:0007012 ! combinatorial experimental and curator inference evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -16904,25 +16905,24 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007592
-name: combinatorial evidence from author knowledge and experimental evidence used in automatic assertion
+name: combinatorial experimental and author inference evidence used in automatic assertion
 def: "A type of combinatorial evidence from author knowledge and experimental evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "combinatorial evidence from author knowledge and experimental evidence used in automatic assertion" EXACT []
 is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
-is_a: ECO:0007011 {is_inferred="true"} ! combinatorial evidence from author knowledge and experimental evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
-intersection_of: ECO:0007011 ! combinatorial evidence from author knowledge and experimental evidence
+is_a: ECO:0007011 {is_inferred="true"} ! combinatorial experimental and author inference evidence
+intersection_of: ECO:0007011 ! combinatorial experimental and author inference evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007593
-name: combinatorial evidence from curator knowledge and experimental evidence used in automatic assertion
+name: combinatorial experimental and curator inference evidence used in automatic assertion
 def: "A type of combinatorial evidence from curator knowledge and experimental evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "combinatorial evidence from curator knowledge and experimental evidence used in automatic assertion" EXACT []
 is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
-is_a: ECO:0007012 {is_inferred="true"} ! combinatorial evidence from curator knowledge and experimental evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
-is_a: ECO:0007322 {is_inferred="true"} ! curator inference used in automatic assertion
-intersection_of: ECO:0007012 ! combinatorial evidence from curator knowledge and experimental evidence
+is_a: ECO:0007012 {is_inferred="true"} ! combinatorial experimental and curator inference evidence
+intersection_of: ECO:0007012 ! combinatorial experimental and curator inference evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -17462,12 +17462,316 @@ def: "A type of curator inference that is from what is generally considered an a
 is_a: ECO:0000205 ! curator inference
 
 [Term]
+id: ECO:0007648
+name: manually integrated combinatorial computational evidence
+def: "A type of manually integrated combinatorial evidence in which two or more distinct types of computational evidence are integrated manually." [ECO:RCT]
+is_a: ECO:0007674 ! manually integrated combinatorial evidence
+is_a: ECO:0007677 ! combinatorial computational evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007649
+name: manually integrated combinatorial computational evidence used in manual assertion
+def: "A type of manually integrated combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0007648 {is_inferred="true"} ! manually integrated combinatorial computational evidence
+is_a: ECO:0007675 {is_inferred="true"} ! manually integrated combinatorial evidence used in manual assertion
+is_a: ECO:0007678 {is_inferred="true"} ! combinatorial computational evidence used in manual assertion
+intersection_of: ECO:0007648 ! manually integrated combinatorial computational evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007650
+name: manually integrated combinatorial computational evidence used in automatic assertion
+def: "A type of manually integrated combinatorial computational evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0007648 {is_inferred="true"} ! manually integrated combinatorial computational evidence
+is_a: ECO:0007676 {is_inferred="true"} ! manually integrated combinatorial evidence used in automatic assertion
+is_a: ECO:0007679 {is_inferred="true"} ! combinatorial computational evidence used in automatic assertion
+intersection_of: ECO:0007648 ! manually integrated combinatorial computational evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007651
+name: automatically integrated combinatorial computational evidence
+def: "A type of automatically integrated combinatorial evidence in which two or more distinct types of computational evidence are integrated automatically." [ECO:RCT]
+is_a: ECO:0007673 ! automatically integrated combinatorial evidence
+is_a: ECO:0007677 ! combinatorial computational evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007652
+name: automatically integrated combinatorial computational evidence used in manual assertion
+def: "A type of automatically integrated combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000245 {is_inferred="true"} ! automatically integrated combinatorial evidence used in manual assertion
+is_a: ECO:0007653 {is_inferred="true"} ! automatically integrated combinatorial computational evidence used in automatic assertion
+is_a: ECO:0007678 {is_inferred="true"} ! combinatorial computational evidence used in manual assertion
+intersection_of: ECO:0007651 ! automatically integrated combinatorial computational evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007653
+name: automatically integrated combinatorial computational evidence used in automatic assertion
+def: "A type of automatically integrated combinatorial computational evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000053 {is_inferred="true"} ! automatically integrated combinatorial evidence used in automatic assertion
+is_a: ECO:0007651 {is_inferred="true"} ! automatically integrated combinatorial computational evidence
+is_a: ECO:0007679 {is_inferred="true"} ! combinatorial computational evidence used in automatic assertion
+intersection_of: ECO:0007651 ! automatically integrated combinatorial computational evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007654
+name: combinatorial experimental evidence
+def: "A type of combinatorial evidence in which two or more distinct types of experimental evidence are integrated." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
+relationship: BFO:0000051 ECO:0000006 {minCardinality="2"} ! has part experimental evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007655
+name: manually integrated combinatorial experimental evidence
+def: "A type of manually integrated combinatorial evidence in which two or more distinct types of experimental evidence are integrated manually." [ECO:RCT]
+is_a: ECO:0007654 ! combinatorial experimental evidence
+is_a: ECO:0007674 ! manually integrated combinatorial evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007656
+name: manually integrated combinatorial experimental evidence used in manual assertion
+def: "A type of manually integrated combinatorial experimental evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0007655 {is_inferred="true"} ! manually integrated combinatorial experimental evidence
+is_a: ECO:0007675 {is_inferred="true"} ! manually integrated combinatorial evidence used in manual assertion
+intersection_of: ECO:0007655 ! manually integrated combinatorial experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007657
+name: manually integrated combinatorial experimental evidence used in automatic assertion
+def: "A type of manually integrated combinatorial experimental evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0007655 {is_inferred="true"} ! manually integrated combinatorial experimental evidence
+is_a: ECO:0007676 {is_inferred="true"} ! manually integrated combinatorial evidence used in automatic assertion
+intersection_of: ECO:0007655 ! manually integrated combinatorial experimental evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007658
+name: automatically integrated combinatorial experimental evidence
+def: "A type of automatically integrated combinatorial evidence in which two or more distinct types of experimental evidence are integrated automatically." [ECO:RCT]
+is_a: ECO:0007654 ! combinatorial experimental evidence
+is_a: ECO:0007673 ! automatically integrated combinatorial evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007659
+name: automatically integrated combinatorial experimental evidence used in manual assertion
+def: "A type of automatically integrated combinatorial experimental evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000245 {is_inferred="true"} ! automatically integrated combinatorial evidence used in manual assertion
+is_a: ECO:0007660 {is_inferred="true"} ! automatically integrated combinatorial experimental evidence used in automatic assertion
+intersection_of: ECO:0007658 ! automatically integrated combinatorial experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007660
+name: automatically integrated combinatorial experimental evidence used in automatic assertion
+def: "A type of automatically integrated combinatorial experimental evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000053 {is_inferred="true"} ! automatically integrated combinatorial evidence used in automatic assertion
+is_a: ECO:0007658 {is_inferred="true"} ! automatically integrated combinatorial experimental evidence
+intersection_of: ECO:0007658 ! automatically integrated combinatorial experimental evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007661
+name: combinatorial computational and experimental evidence
+def: "A type of combinatorial evidence in which at least one line of experimental evidence and at least one line of computational evidence have been integrated." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
+relationship: BFO:0000051 ECO:0000006 {minCardinality="1"} ! has part experimental evidence
+relationship: BFO:0000051 ECO:0007672 {minCardinality="1"} ! has part computational evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007662
+name: manually integrated combinatorial computational and experimental evidence
+def: "A type of manually integrated combinatorial evidence in which at least one line of experimental evidence and at least one line of computational evidence have been integrated manually." [ECO:RCT]
+is_a: ECO:0007661 ! combinatorial computational and experimental evidence
+is_a: ECO:0007674 ! manually integrated combinatorial evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007663
+name: manually integrated combinatorial computational and experimental evidence used in manual assertion
+def: "A type of manually integrated combinatorial computational and experimental evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0007662 {is_inferred="true"} ! manually integrated combinatorial computational and experimental evidence
+is_a: ECO:0007675 {is_inferred="true"} ! manually integrated combinatorial evidence used in manual assertion
+intersection_of: ECO:0007662 ! manually integrated combinatorial computational and experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007664
+name: manually integrated combinatorial computational and experimental evidence used in automatic assertion
+def: "A type of manually integrated combinatorial computational and experimental evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0007662 {is_inferred="true"} ! manually integrated combinatorial computational and experimental evidence
+is_a: ECO:0007676 {is_inferred="true"} ! manually integrated combinatorial evidence used in automatic assertion
+intersection_of: ECO:0007662 ! manually integrated combinatorial computational and experimental evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007665
+name: automatically integrated combinatorial computational and experimental evidence
+def: "A type of automatically integrated combinatorial evidence in which at least one line of experimental evidence and at least one line of computational evidence have been integrated automatically." [ECO:RCT]
+is_a: ECO:0007661 ! combinatorial computational and experimental evidence
+is_a: ECO:0007673 ! automatically integrated combinatorial evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007666
+name: automatically integrated combinatorial computational and experimental evidence used in manual assertion
+def: "A type of automatically integrated combinatorial computational and experimental evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000245 {is_inferred="true"} ! automatically integrated combinatorial evidence used in manual assertion
+is_a: ECO:0007667 {is_inferred="true"} ! automatically integrated combinatorial computational and experimental evidence used in automatic assertion
+intersection_of: ECO:0007665 ! automatically integrated combinatorial computational and experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007667
+name: automatically integrated combinatorial computational and experimental evidence used in automatic assertion
+def: "A type of automatically integrated combinatorial computational and experimental evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000053 {is_inferred="true"} ! automatically integrated combinatorial evidence used in automatic assertion
+is_a: ECO:0007665 {is_inferred="true"} ! automatically integrated combinatorial computational and experimental evidence
+intersection_of: ECO:0007665 ! automatically integrated combinatorial computational and experimental evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007668
+name: computational evidence used in manual assertion
+def: "A type of computational evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0007672 {is_inferred="true"} ! computational evidence
+intersection_of: ECO:0007672 ! computational evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007669
+name: computational evidence used in automatic assertion
+def: "A type of computational evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
+is_a: ECO:0007672 {is_inferred="true"} ! computational evidence
+intersection_of: ECO:0007672 ! computational evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007672
+name: computational evidence
+def: "A type of evidence in which data are generated by a computer." [ECO:RCT]
+is_a: ECO:0000000 ! evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007673
+name: automatically integrated combinatorial evidence
+def: "A type of combinatorial evidence in which at least two distinct types of evidence have been integrated automatically." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007674
+name: manually integrated combinatorial evidence
+def: "A type of combinatorial evidence in which at least two distinct types of evidence have been integrated manually." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007675
+name: manually integrated combinatorial evidence used in manual assertion
+def: "A type of manually integrated combinatorial evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
+is_a: ECO:0007674 {is_inferred="true"} ! manually integrated combinatorial evidence
+intersection_of: ECO:0007674 ! manually integrated combinatorial evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007676
+name: manually integrated combinatorial evidence used in automatic assertion
+def: "A type of manually integrated combinatorial evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
+is_a: ECO:0007674 {is_inferred="true"} ! manually integrated combinatorial evidence
+intersection_of: ECO:0007674 ! manually integrated combinatorial evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007677
+name: combinatorial computational evidence
+def: "A type of combinatorial evidence in which at least two distinct types of computational evidence have been integrated." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
+relationship: BFO:0000051 ECO:0007672 {minCardinality="2"} ! has part computational evidence
+created_by: rctauber
+creation_date: 2018-12-04T19:31:00Z
+
+[Term]
+id: ECO:0007678
+name: combinatorial computational evidence used in manual assertion
+def: "A type of combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
+is_a: ECO:0007677 {is_inferred="true"} ! combinatorial computational evidence
+intersection_of: ECO:0007677 ! combinatorial computational evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+
+[Term]
+id: ECO:0007679
+name: combinatorial computational evidence used in automatic assertion
+def: "A type of combinatorial computational evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
+is_a: ECO:0007677 {is_inferred="true"} ! combinatorial computational evidence
+intersection_of: ECO:0007677 ! combinatorial computational evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+
+[Term]
 id: GO:0000737
 name: DNA catabolic process, endonucleolytic
 def: "The chemical reactions and pathways resulting in the breakdown of DNA, involving the hydrolysis of internal 3',5'-phosphodiester bonds in one or two strands of deoxyribonucleotides." [GOC:elh, GOC:mah]
 is_a: GO:0006308 ! DNA catabolic process
 is_a: GO:0090305 ! nucleic acid phosphodiester bond hydrolysis
-relationship: BFO:0000051 GO:0004520 ! has_part endodeoxyribonuclease activity
+relationship: BFO:0000051 GO:0004520 ! has part endodeoxyribonuclease activity
 
 [Term]
 id: GO:0000785
@@ -17503,13 +17807,6 @@ is_a: GO:0051128 ! regulation of cellular component organization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0016049 ! regulates cell growth
 relationship: RO:0002211 GO:0016049 ! regulates cell growth
-
-[Term]
-id: GO:0001677
-name: formation of translation initiation ternary complex
-def: "Formation of a complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2 (either eIF2 in eukaryotes, or IF2 in prokaryotes). In prokaryotes, fMet-tRNA (initiator) is used rather than Met-tRNA (initiator)." [GOC:hjd]
-is_a: GO:0022618 ! ribonucleoprotein complex assembly
-relationship: BFO:0000050 GO:0006413 ! part of translational initiation
 
 [Term]
 id: GO:0001816
@@ -17752,7 +18049,7 @@ name: DNA replication
 def: "The cellular metabolic process in which a cell duplicates one or more molecules of DNA. DNA replication begins when specific sequences, known as origins of replication, are recognized and bound by initiation proteins, and ends when the original DNA molecule has been completely duplicated and the copies topologically separated. The unit of replication usually corresponds to the genome of the cell, an organelle, or a virus. The template for replication can either be an existing DNA molecule or RNA." [GOC:mah]
 is_a: GO:0006259 ! DNA metabolic process
 is_a: GO:0034645 ! cellular macromolecule biosynthetic process
-relationship: BFO:0000051 GO:0071897 ! has_part DNA biosynthetic process
+relationship: BFO:0000051 GO:0071897 ! has part DNA biosynthetic process
 
 [Term]
 id: GO:0006275
@@ -17798,7 +18095,7 @@ def: "The cellular DNA metabolic process resulting in the breakdown of DNA, deox
 is_a: GO:0006259 ! DNA metabolic process
 is_a: GO:0034655 ! nucleobase-containing compound catabolic process
 is_a: GO:0044265 ! cellular macromolecule catabolic process
-relationship: BFO:0000051 GO:0004536 ! has_part deoxyribonuclease activity
+relationship: BFO:0000051 GO:0004536 ! has part deoxyribonuclease activity
 
 [Term]
 id: GO:0006309
@@ -17836,30 +18133,13 @@ is_a: GO:0034645 ! cellular macromolecule biosynthetic process
 is_a: GO:0043043 ! peptide biosynthetic process
 is_a: GO:0044267 ! cellular protein metabolic process
 relationship: BFO:0000050 GO:0010467 ! part of gene expression
-relationship: BFO:0000051 GO:0006413 ! has_part translational initiation
-relationship: BFO:0000051 GO:0006414 ! has_part translational elongation
-relationship: BFO:0000051 GO:0006415 ! has_part translational termination
-
-[Term]
-id: GO:0006413
-name: translational initiation
-def: "The process preceding formation of the peptide bond between the first two amino acids of a protein. This includes the formation of a complex of the ribosome, mRNA or circRNA, and an initiation complex that contains the first aminoacyl-tRNA." [ISBN:019879276X]
-is_a: GO:0044237 ! cellular metabolic process
-relationship: BFO:0000050 GO:0006412 ! part of translation
-relationship: BFO:0000051 GO:0001677 ! has_part formation of translation initiation ternary complex
+relationship: BFO:0000051 GO:0006414 ! has part translational elongation
 
 [Term]
 id: GO:0006414
 name: translational elongation
 def: "The successive addition of amino acid residues to a nascent polypeptide chain during protein biosynthesis." [GOC:ems]
 is_a: GO:0034645 ! cellular macromolecule biosynthetic process
-relationship: BFO:0000050 GO:0006412 ! part of translation
-
-[Term]
-id: GO:0006415
-name: translational termination
-def: "The process resulting in the release of a polypeptide chain from the ribosome, usually in response to a termination codon (UAA, UAG, or UGA in the universal genetic code)." [GOC:hjd, ISBN:019879276X]
-is_a: GO:0043624 ! cellular protein complex disassembly
 relationship: BFO:0000050 GO:0006412 ! part of translation
 
 [Term]
@@ -17875,15 +18155,6 @@ intersection_of: RO:0002211 GO:0006412 ! regulates translation
 relationship: RO:0002211 GO:0006412 ! regulates translation
 
 [Term]
-id: GO:0006446
-name: regulation of translational initiation
-def: "Any process that modulates the frequency, rate or extent of translational initiation." [GOC:go_curators]
-is_a: GO:0006417 ! regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0006413 ! regulates translational initiation
-relationship: RO:0002211 GO:0006413 ! regulates translational initiation
-
-[Term]
 id: GO:0006448
 name: regulation of translational elongation
 def: "Any process that modulates the frequency, rate, extent or accuracy of translational elongation." [GOC:go_curators]
@@ -17891,16 +18162,6 @@ is_a: GO:0006417 ! regulation of translation
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0006414 ! regulates translational elongation
 relationship: RO:0002211 GO:0006414 ! regulates translational elongation
-
-[Term]
-id: GO:0006449
-name: regulation of translational termination
-def: "Any process that modulates the frequency, rate or extent of translational termination." [GOC:go_curators]
-is_a: GO:0006417 ! regulation of translation
-is_a: GO:0043244 ! regulation of protein complex disassembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0006415 ! regulates translational termination
-relationship: RO:0002211 GO:0006415 ! regulates translational termination
 
 [Term]
 id: GO:0006518
@@ -17951,8 +18212,6 @@ id: GO:0006915
 name: apoptotic process
 def: "A programmed cell death process which begins when a cell receives an internal (e.g. DNA damage) or external signal (e.g. an extracellular death ligand), and proceeds through a series of biochemical events (signaling pathway phase) which trigger an execution phase. The execution phase is the last step of an apoptotic process, and is typically characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies. When the execution phase is completed, the cell has died." [GOC:cjm, GOC:dhl, GOC:ecd, GOC:go_curators, GOC:mtg_apoptosis, GOC:tb, ISBN:0198506732, PMID:18846107, PMID:21494263]
 is_a: GO:0012501 ! programmed cell death
-relationship: BFO:0000051 GO:0097190 ! has_part apoptotic signaling pathway
-relationship: BFO:0000051 GO:0097194 ! has_part execution phase of apoptosis
 
 [Term]
 id: GO:0006921
@@ -18005,22 +18264,6 @@ id: GO:0007000
 name: nucleolus organization
 def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of the nucleolus." [GOC:dph, GOC:jid, GOC:jl, GOC:mah]
 is_a: GO:0006997 ! nucleus organization
-
-[Term]
-id: GO:0007154
-name: cell communication
-def: "Any process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:mah]
-is_a: GO:0009987 ! cellular process
-
-[Term]
-id: GO:0007165
-name: signal transduction
-def: "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell." [GOC:go_curators, GOC:mtg_signaling_feb11]
-is_a: GO:0009987 ! cellular process
-is_a: GO:0050794 ! regulation of cellular process
-relationship: BFO:0000050 GO:0007154 ! part of cell communication
-relationship: BFO:0000050 GO:0023052 ! part of signaling
-relationship: BFO:0000050 GO:0051716 ! part of cellular response to stimulus
 
 [Term]
 id: GO:0007568
@@ -18080,15 +18323,16 @@ is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0008283
+name: cell population proliferation
 name: cell proliferation
 def: "The multiplication or reproduction of cells, resulting in the expansion of a cell population." [GOC:mah, GOC:mb]
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0008284
-name: positive regulation of cell proliferation
+name: positive regulation of cell population proliferation
 def: "Any process that activates or increases the rate or extent of cell proliferation." [GOC:go_curators]
-is_a: GO:0042127 ! regulation of cell proliferation
+is_a: GO:0042127 ! regulation of cell population proliferation
 is_a: GO:0048522 ! positive regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002213 GO:0008283 ! positively regulates cell proliferation
@@ -18096,9 +18340,9 @@ relationship: RO:0002213 GO:0008283 ! positively regulates cell proliferation
 
 [Term]
 id: GO:0008285
-name: negative regulation of cell proliferation
+name: negative regulation of cell population proliferation
 def: "Any process that stops, prevents or reduces the rate or extent of cell proliferation." [GOC:go_curators]
-is_a: GO:0042127 ! regulation of cell proliferation
+is_a: GO:0042127 ! regulation of cell population proliferation
 is_a: GO:0048523 ! negative regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002212 GO:0008283 ! negatively regulates cell proliferation
@@ -18261,41 +18505,6 @@ intersection_of: RO:0002213 GO:0009056 ! positively regulates catabolic process
 relationship: RO:0002213 GO:0009056 ! positively regulates catabolic process
 
 [Term]
-id: GO:0009966
-name: regulation of signal transduction
-def: "Any process that modulates the frequency, rate or extent of signal transduction." [GOC:sm]
-is_a: GO:0010646 ! regulation of cell communication
-is_a: GO:0023051 ! regulation of signaling
-is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0007165 ! regulates signal transduction
-relationship: RO:0002211 GO:0007165 ! regulates signal transduction
-
-[Term]
-id: GO:0009967
-name: positive regulation of signal transduction
-def: "Any process that activates or increases the frequency, rate or extent of signal transduction." [GOC:sm]
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0010647 ! positive regulation of cell communication
-is_a: GO:0023056 ! positive regulation of signaling
-is_a: GO:0048584 ! positive regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0007165 ! positively regulates signal transduction
-relationship: RO:0002213 GO:0007165 ! positively regulates signal transduction
-
-[Term]
-id: GO:0009968
-name: negative regulation of signal transduction
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of signal transduction." [GOC:sm]
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0010648 ! negative regulation of cell communication
-is_a: GO:0023057 ! negative regulation of signaling
-is_a: GO:0048585 ! negative regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0007165 ! negatively regulates signal transduction
-relationship: RO:0002212 GO:0007165 ! negatively regulates signal transduction
-
-[Term]
 id: GO:0009987
 name: cellular process
 def: "Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators, GOC:isa_complete]
@@ -18434,35 +18643,6 @@ intersection_of: RO:0002212 GO:0006996 ! negatively regulates organelle organiza
 relationship: RO:0002212 GO:0006996 ! negatively regulates organelle organization
 
 [Term]
-id: GO:0010646
-name: regulation of cell communication
-def: "Any process that modulates the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
-is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0007154 ! regulates cell communication
-relationship: RO:0002211 GO:0007154 ! regulates cell communication
-
-[Term]
-id: GO:0010647
-name: positive regulation of cell communication
-def: "Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
-is_a: GO:0010646 ! regulation of cell communication
-is_a: GO:0048522 ! positive regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0007154 ! positively regulates cell communication
-relationship: RO:0002213 GO:0007154 ! positively regulates cell communication
-
-[Term]
-id: GO:0010648
-name: negative regulation of cell communication
-def: "Any process that decreases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
-is_a: GO:0010646 ! regulation of cell communication
-is_a: GO:0048523 ! negative regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0007154 ! negatively regulates cell communication
-relationship: RO:0002212 GO:0007154 ! negatively regulates cell communication
-
-[Term]
 id: GO:0010876
 name: lipid localization
 def: "Any process in which a lipid is transported to, or maintained in, a specific location." [GOC:BHF, GOC:dph, GOC:tb]
@@ -18502,7 +18682,6 @@ id: GO:0012501
 name: programmed cell death
 def: "A process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell." [GOC:lr, GOC:mtg_apoptosis]
 is_a: GO:0008219 ! cell death
-relationship: BFO:0000051 GO:0007165 ! has_part signal transduction
 
 [Term]
 id: GO:0014070
@@ -18731,20 +18910,6 @@ is_a: GO:0016043 ! cellular component organization
 relationship: BFO:0000050 GO:0044085 ! part of cellular component biogenesis
 
 [Term]
-id: GO:0022613
-name: ribonucleoprotein complex biogenesis
-def: "A cellular process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a complex containing RNA and proteins. Includes the biosynthesis of the constituent RNA and protein molecules, and those macromolecular modifications that are involved in synthesis or assembly of the ribonucleoprotein complex." [GOC:isa_complete, GOC:mah]
-is_a: GO:0044085 ! cellular component biogenesis
-
-[Term]
-id: GO:0022618
-name: ribonucleoprotein complex assembly
-def: "The aggregation, arrangement and bonding together of proteins and RNA molecules to form a ribonucleoprotein complex." [GOC:jl]
-is_a: GO:0034622 ! cellular protein-containing complex assembly
-is_a: GO:0071826 ! ribonucleoprotein complex subunit organization
-relationship: BFO:0000050 GO:0022613 ! part of ribonucleoprotein complex biogenesis
-
-[Term]
 id: GO:0022803
 name: passive transmembrane transporter activity
 def: "Enables the transfer of a single solute from one side of a membrane to the other by a mechanism involving conformational change, either by facilitated diffusion or in a membrane potential dependent process if the solute is charged." [GOC:mtg_transport, ISBN:0815340729]
@@ -18772,50 +18937,6 @@ is_a: GO:0034762 ! regulation of transmembrane transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0022857 ! regulates transmembrane transporter activity
 relationship: RO:0002211 GO:0022857 ! regulates transmembrane transporter activity
-
-[Term]
-id: GO:0023019
-name: signal transduction involved in regulation of gene expression
-def: "Any process that modulates the frequency, rate or extent of gene expression as a consequence of a process in which a signal is released and/or conveyed from one location to another." [GOC:mtg_signal]
-is_a: GO:0007165 ! signal transduction
-intersection_of: GO:0007165 ! signal transduction
-intersection_of: BFO:0000050 GO:0010468 ! part of regulation of gene expression
-relationship: BFO:0000050 GO:0010468 ! part of regulation of gene expression
-
-[Term]
-id: GO:0023051
-name: regulation of signaling
-def: "Any process that modulates the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
-is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0023052 ! regulates signaling
-relationship: RO:0002211 GO:0023052 ! regulates signaling
-
-[Term]
-id: GO:0023052
-name: signaling
-def: "The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered." [GOC:mtg_signal, GOC:mtg_signaling_feb11, GOC:signaling]
-is_a: GO:0008150 ! biological_process
-
-[Term]
-id: GO:0023056
-name: positive regulation of signaling
-def: "Any process that activates, maintains or increases the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
-is_a: GO:0023051 ! regulation of signaling
-is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0023052 ! positively regulates signaling
-relationship: RO:0002213 GO:0023052 ! positively regulates signaling
-
-[Term]
-id: GO:0023057
-name: negative regulation of signaling
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
-is_a: GO:0023051 ! regulation of signaling
-is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0023052 ! negatively regulates signaling
-relationship: RO:0002212 GO:0023052 ! negatively regulates signaling
 
 [Term]
 id: GO:0030030
@@ -19000,27 +19121,6 @@ is_a: GO:0031329 ! regulation of cellular catabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002213 GO:0044248 ! positively regulates cellular catabolic process
 relationship: RO:0002213 GO:0044248 ! positively regulates cellular catabolic process
-
-[Term]
-id: GO:0031333
-name: negative regulation of protein complex assembly
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of protein complex assembly." [GOC:mah]
-is_a: GO:0043254 ! regulation of protein complex assembly
-is_a: GO:0051129 ! negative regulation of cellular component organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0065003 ! negatively regulates protein-containing complex assembly
-relationship: RO:0002212 GO:0065003 ! negatively regulates protein-containing complex assembly
-
-[Term]
-id: GO:0031334
-name: positive regulation of protein complex assembly
-def: "Any process that activates or increases the frequency, rate or extent of protein complex assembly." [GOC:mah]
-is_a: GO:0043254 ! regulation of protein complex assembly
-is_a: GO:0044089 ! positive regulation of cellular component biogenesis
-is_a: GO:0051130 ! positive regulation of cellular component organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0065003 ! positively regulates protein-containing complex assembly
-relationship: RO:0002213 GO:0065003 ! positively regulates protein-containing complex assembly
 
 [Term]
 id: GO:0031341
@@ -19493,13 +19593,6 @@ is_a: GO:0009987 ! cellular process
 is_a: GO:0046903 ! secretion
 
 [Term]
-id: GO:0032984
-name: protein-containing complex disassembly
-def: "The disaggregation of a protein-containing macromolecular complex into its constituent components." [GOC:mah]
-is_a: GO:0022411 ! cellular component disassembly
-is_a: GO:0043933 ! protein-containing complex subunit organization
-
-[Term]
 id: GO:0032989
 name: cellular component morphogenesis
 def: "The process in which cellular structures, including whole cells or cell parts, are generated and organized." [GOC:dph, GOC:mah, GOC:tb]
@@ -19595,12 +19688,6 @@ name: cellular protein localization
 def: "Any process in which a protein is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell." [GOC:mah]
 is_a: GO:0008104 ! protein localization
 is_a: GO:0070727 ! cellular macromolecule localization
-
-[Term]
-id: GO:0034622
-name: cellular protein-containing complex assembly
-def: "The aggregation, arrangement and bonding together of a set of components to form a protein complex, occurring at the level of an individual cell." [GOC:jl]
-is_a: GO:0065003 ! protein-containing complex assembly
 
 [Term]
 id: GO:0034641
@@ -19815,7 +19902,7 @@ is_a: OBI:1110022 ! adaptive immune receptor
 
 [Term]
 id: GO:0042127
-name: regulation of cell proliferation
+name: regulation of cell population proliferation
 def: "Any process that modulates the frequency, rate or extent of cell proliferation." [GOC:jl]
 is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
@@ -19986,46 +20073,7 @@ id: GO:0043234
 name: protein complex
 def: "A stable macromolecular complex composed (only) of two or more polypeptide subunits along with any covalently attached molecules (such as lipid anchors or oligosaccharide) or non-protein prosthetic groups (such as nucleotides or metal ions). Prosthetic group in this context refers to a tightly bound cofactor. The component polypeptide subunits may be identical." []
 is_a: BFO:0000040 ! material entity
-relationship: BFO:0000051 PR:000000001 ! has_part protein
-
-[Term]
-id: GO:0043242
-name: negative regulation of protein complex disassembly
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components." [GOC:jl]
-is_a: GO:0043244 ! regulation of protein complex disassembly
-is_a: GO:0051129 ! negative regulation of cellular component organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0032984 ! negatively regulates protein-containing complex disassembly
-relationship: RO:0002212 GO:0032984 ! negatively regulates protein-containing complex disassembly
-
-[Term]
-id: GO:0043243
-name: positive regulation of protein complex disassembly
-def: "Any process that activates or increases the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components." [GOC:jl]
-is_a: GO:0043244 ! regulation of protein complex disassembly
-is_a: GO:0051130 ! positive regulation of cellular component organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0032984 ! positively regulates protein-containing complex disassembly
-relationship: RO:0002213 GO:0032984 ! positively regulates protein-containing complex disassembly
-
-[Term]
-id: GO:0043244
-name: regulation of protein complex disassembly
-def: "Any process that modulates the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components." [GOC:jl]
-is_a: GO:0051128 ! regulation of cellular component organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0032984 ! regulates protein-containing complex disassembly
-relationship: RO:0002211 GO:0032984 ! regulates protein-containing complex disassembly
-
-[Term]
-id: GO:0043254
-name: regulation of protein complex assembly
-def: "Any process that modulates the frequency, rate or extent of protein complex assembly." [GOC:jl]
-is_a: GO:0044087 ! regulation of cellular component biogenesis
-is_a: GO:0051128 ! regulation of cellular component organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0065003 ! regulates protein-containing complex assembly
-relationship: RO:0002211 GO:0065003 ! regulates protein-containing complex assembly
+relationship: BFO:0000051 PR:000000001 ! has part protein
 
 [Term]
 id: GO:0043269
@@ -20110,12 +20158,6 @@ is_a: GO:0043603 ! cellular amide metabolic process
 is_a: GO:0044271 ! cellular nitrogen compound biosynthetic process
 
 [Term]
-id: GO:0043624
-name: cellular protein complex disassembly
-def: "The disaggregation of a protein complex into its constituent components, occurring at the level of an individual cell. Protein complexes may have other associated non-protein prosthetic groups, such as nucleic acids, metal ions or carbohydrate groups." [GOC:jl]
-is_a: GO:0032984 ! protein-containing complex disassembly
-
-[Term]
 id: GO:0043900
 name: regulation of multi-organism process
 def: "Any process that modulates the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
@@ -20143,12 +20185,6 @@ is_a: GO:0048518 ! positive regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002213 GO:0051704 ! positively regulates multi-organism process
 relationship: RO:0002213 GO:0051704 ! positively regulates multi-organism process
-
-[Term]
-id: GO:0043933
-name: protein-containing complex subunit organization
-def: "Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a protein complex." [GOC:mah]
-is_a: GO:0016043 ! cellular component organization
 
 [Term]
 id: GO:0044030
@@ -20419,28 +20455,6 @@ intersection_of: RO:0002213 GO:0006414 ! positively regulates translational elon
 relationship: RO:0002213 GO:0006414 ! positively regulates translational elongation
 
 [Term]
-id: GO:0045904
-name: negative regulation of translational termination
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of translational termination." [GOC:go_curators]
-is_a: GO:0006449 ! regulation of translational termination
-is_a: GO:0017148 ! negative regulation of translation
-is_a: GO:0043242 ! negative regulation of protein complex disassembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0006415 ! negatively regulates translational termination
-relationship: RO:0002212 GO:0006415 ! negatively regulates translational termination
-
-[Term]
-id: GO:0045905
-name: positive regulation of translational termination
-def: "Any process that activates or increases the frequency, rate or extent of translational termination." [GOC:go_curators]
-is_a: GO:0006449 ! regulation of translational termination
-is_a: GO:0043243 ! positive regulation of protein complex disassembly
-is_a: GO:0045727 ! positive regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0006415 ! positively regulates translational termination
-relationship: RO:0002213 GO:0006415 ! positively regulates translational termination
-
-[Term]
 id: GO:0045926
 name: negative regulation of growth
 def: "Any process that stops, prevents or reduces the rate or extent of growth, the increase in size or mass of all or part of an organism." [GOC:go_curators]
@@ -20481,26 +20495,6 @@ is_a: GO:0051173 ! positive regulation of nitrogen compound metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002213 GO:0006139 ! positively regulates nucleobase-containing compound metabolic process
 relationship: RO:0002213 GO:0006139 ! positively regulates nucleobase-containing compound metabolic process
-
-[Term]
-id: GO:0045947
-name: negative regulation of translational initiation
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of translational initiation." [GOC:go_curators]
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0017148 ! negative regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0006413 ! negatively regulates translational initiation
-relationship: RO:0002212 GO:0006413 ! negatively regulates translational initiation
-
-[Term]
-id: GO:0045948
-name: positive regulation of translational initiation
-def: "Any process that activates or increases the frequency, rate or extent of translational initiation." [GOC:go_curators]
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0045727 ! positive regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0006413 ! positively regulates translational initiation
-relationship: RO:0002213 GO:0006413 ! positively regulates translational initiation
 
 [Term]
 id: GO:0045974
@@ -21423,13 +21417,6 @@ def: "Any process that results in a change in state or activity of a cell or an 
 is_a: GO:0042493 ! response to drug
 
 [Term]
-id: GO:0065003
-name: protein-containing complex assembly
-def: "The aggregation, arrangement and bonding together of a set of macromolecules to form a protein-containing complex." [GOC:jl]
-is_a: GO:0022607 ! cellular component assembly
-is_a: GO:0043933 ! protein-containing complex subunit organization
-
-[Term]
 id: GO:0065007
 name: biological regulation
 def: "Any process that modulates a measurable attribute of any biological process, quality or function." [GOC:dph, GOC:isa_complete, GOC:mah, GOC:pr, GOC:vw]
@@ -21541,12 +21528,6 @@ name: icosanoid transport
 def: "The directed movement of icosanoids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Icosanoids are unsaturated C20 fatty acids and skeletally related compounds." [CHEBI:23899, GOC:mah]
 is_a: GO:0046942 ! carboxylic acid transport
 is_a: GO:1901571 ! fatty acid derivative transport
-
-[Term]
-id: GO:0071826
-name: ribonucleoprotein complex subunit organization
-def: "Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a ribonucleoprotein complex." [GOC:mah]
-is_a: GO:0043933 ! protein-containing complex subunit organization
 
 [Term]
 id: GO:0071840
@@ -21700,19 +21681,12 @@ def: "Interacting selectively and non-covalently with an organic cyclic compound
 is_a: GO:0005488 ! binding
 
 [Term]
-id: GO:0097190
-name: apoptotic signaling pathway
-def: "A series of molecular signals which triggers the apoptotic death of a cell. The pathway starts with reception of a signal, and ends when the execution phase of apoptosis is triggered." [GOC:mtg_apoptosis]
-is_a: GO:0007165 ! signal transduction
-relationship: BFO:0000050 GO:0006915 ! part of apoptotic process
-
-[Term]
 id: GO:0097194
 name: execution phase of apoptosis
 def: "A stage of the apoptotic process that starts with the controlled breakdown of the cell through the action of effector caspases or other effector molecules (e.g. cathepsins, calpains etc.). Key steps of the execution phase are rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies. When the execution phase is completed, the cell has died." [GOC:mtg_apoptosis, PMID:21760595]
 is_a: GO:0009987 ! cellular process
 relationship: BFO:0000050 GO:0006915 ! part of apoptotic process
-relationship: BFO:0000051 GO:0032060 ! has_part bleb assembly
+relationship: BFO:0000051 GO:0032060 ! has part bleb assembly
 
 [Term]
 id: GO:0097237
@@ -21871,38 +21845,6 @@ is_a: GO:1900368 ! regulation of RNA interference
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002213 GO:0016246 ! positively regulates RNA interference
 relationship: RO:0002213 GO:0016246 ! positively regulates RNA interference
-
-[Term]
-id: GO:1901190
-name: regulation of formation of translation initiation ternary complex
-def: "Any process that modulates the frequency, rate or extent of formation of translation initiation ternary complex." [GOC:TermGenie]
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0043254 ! regulation of protein complex assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0001677 ! regulates formation of translation initiation ternary complex
-relationship: RO:0002211 GO:0001677 ! regulates formation of translation initiation ternary complex
-
-[Term]
-id: GO:1901191
-name: negative regulation of formation of translation initiation ternary complex
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of formation of translation initiation ternary complex." [GOC:TermGenie]
-is_a: GO:0031333 ! negative regulation of protein complex assembly
-is_a: GO:0045947 ! negative regulation of translational initiation
-is_a: GO:1901190 ! regulation of formation of translation initiation ternary complex
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0001677 ! negatively regulates formation of translation initiation ternary complex
-relationship: RO:0002212 GO:0001677 ! negatively regulates formation of translation initiation ternary complex
-
-[Term]
-id: GO:1901192
-name: positive regulation of formation of translation initiation ternary complex
-def: "Any process that activates or increases the frequency, rate or extent of formation of translation initiation ternary complex." [GOC:TermGenie]
-is_a: GO:0031334 ! positive regulation of protein complex assembly
-is_a: GO:0045948 ! positive regulation of translational initiation
-is_a: GO:1901190 ! regulation of formation of translation initiation ternary complex
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0001677 ! positively regulates formation of translation initiation ternary complex
-relationship: RO:0002213 GO:0001677 ! positively regulates formation of translation initiation ternary complex
 
 [Term]
 id: GO:1901328
@@ -22782,38 +22724,6 @@ intersection_of: RO:0002211 GO:0032774 ! regulates RNA biosynthetic process
 relationship: RO:0002211 GO:0032774 ! regulates RNA biosynthetic process
 
 [Term]
-id: GO:2001233
-name: regulation of apoptotic signaling pathway
-def: "Any process that modulates the frequency, rate or extent of apoptotic signaling pathway." [GOC:mtg_apoptosis]
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0042981 ! regulation of apoptotic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0097190 ! regulates apoptotic signaling pathway
-relationship: RO:0002211 GO:0097190 ! regulates apoptotic signaling pathway
-
-[Term]
-id: GO:2001234
-name: negative regulation of apoptotic signaling pathway
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of apoptotic signaling pathway." [GOC:mtg_apoptosis]
-is_a: GO:0009968 ! negative regulation of signal transduction
-is_a: GO:0043066 ! negative regulation of apoptotic process
-is_a: GO:2001233 ! regulation of apoptotic signaling pathway
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0097190 ! negatively regulates apoptotic signaling pathway
-relationship: RO:0002212 GO:0097190 ! negatively regulates apoptotic signaling pathway
-
-[Term]
-id: GO:2001235
-name: positive regulation of apoptotic signaling pathway
-def: "Any process that activates or increases the frequency, rate or extent of apoptotic signaling pathway." [GOC:mtg_apoptosis]
-is_a: GO:0009967 ! positive regulation of signal transduction
-is_a: GO:0043065 ! positive regulation of apoptotic process
-is_a: GO:2001233 ! regulation of apoptotic signaling pathway
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0097190 ! positively regulates apoptotic signaling pathway
-relationship: RO:0002213 GO:0097190 ! positively regulates apoptotic signaling pathway
-
-[Term]
 id: GO:2001251
 name: negative regulation of chromosome organization
 def: "Any process that stops, prevents or reduces the frequency, rate or extent of chromosome organization." [GOC:obol]
@@ -22951,8 +22861,8 @@ id: IAO:0000104
 name: plan specification
 def: "A directive information entity with action specifications and objective specifications as parts that, when concretized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified." []
 is_a: IAO:0000033 ! directive information entity
-relationship: BFO:0000051 IAO:0000005 ! has_part objective specification
-relationship: BFO:0000051 IAO:0000007 ! has_part action specification
+relationship: BFO:0000051 IAO:0000005 ! has part objective specification
+relationship: BFO:0000051 IAO:0000007 ! has part action specification
 
 [Term]
 id: IAO:0000109
@@ -23148,7 +23058,7 @@ id: OBI:0000038
 name: chromatography column
 def: "Chromatography column in chemistry is a tube and contents (typically glass) used to purify individual chemical compounds from mixtures of compounds. It is often used for preparative applications on scales from micrograms up to kilograms." []
 is_a: OBI:0000932 ! material separation device
-relationship: BFO:0000051 OBI:0000967 ! has_part container
+relationship: BFO:0000051 OBI:0000967 ! has part container
 
 [Term]
 id: OBI:0000043
@@ -23181,9 +23091,9 @@ id: OBI:0000049
 name: mass spectrometer
 def: "A mass spectrometer is an instrument which is used to measure the mass to charge ratio of ions. All mass spectrometers consist of three basic parts: an ion source, a mass analyzer, and a detector system. The stages within the mass spectrometer are: 1. Production of ions from the sample 2. Separation of ions with different masses 3. Detection of the number of ions of each mass produced 4.Collection of data to generate the mass spectrum" []
 is_a: OBI:0000832 ! measurement device
-relationship: BFO:0000051 OBI:0000345 ! has_part mass analyzer
-relationship: BFO:0000051 OBI:0000361 ! has_part ion source
-relationship: BFO:0000051 OBI:0000364 ! has_part ion detector
+relationship: BFO:0000051 OBI:0000345 ! has part mass analyzer
+relationship: BFO:0000051 OBI:0000361 ! has part ion source
+relationship: BFO:0000051 OBI:0000364 ! has part ion detector
 relationship: RO:0000053 OBI:0000654 ! bearer of device setting
 relationship: RO:0000085 OBI:0000453 ! has function measure function
 
@@ -23633,7 +23543,7 @@ id: OBI:0000432
 name: polyacrylamide gel
 def: "a material entity resulting from the polymerization of acrylamide with TEMED in some buffer solution" []
 is_a: OBI:0000047 ! processed material
-relationship: BFO:0000051 CHEBI:28619 ! has_part acrylamide
+relationship: BFO:0000051 CHEBI:28619 ! has part acrylamide
 relationship: OBI:0000312 OBI:0302890 ! is_specified_output_of polymerization
 
 [Term]
@@ -23890,7 +23800,7 @@ id: OBI:0000669
 name: tritiated thymidine incorporation assay
 def: "A cell proliferation assay in which cells are cultured in the presence of tritiated thymidine which is incorporated into newly synthesized DNA of replicating cells (during the S phase of the cell cycle). The radioactivity of tritiated thymidine in a cell is a proxy for cells that were actively replicating." []
 is_a: OBI:0000891 ! cell proliferation assay
-relationship: BFO:0000051 OBI:0000201 ! has_part radioactivity detection
+relationship: BFO:0000051 OBI:0000201 ! has part radioactivity detection
 
 [Term]
 id: OBI:0000671
@@ -23991,7 +23901,7 @@ name: ChIP-seq assay
 def: "An assay in which chromatin is immunoprecipitated and subsequently analyzed using a DNA sequencing step to identify which parts of DNA are part of the isolated chromatin" []
 is_a: OBI:0001954 ! ChIP assay
 intersection_of: OBI:0001954 ! ChIP assay
-intersection_of: BFO:0000051 OBI:0000626 ! has_part DNA sequencing assay
+intersection_of: BFO:0000051 OBI:0000626 ! has part DNA sequencing assay
 intersection_of: OBI:0000293 OBI:0400103 {all_some="true"} ! has_specified_input DNA sequencer
 
 [Term]
@@ -24228,8 +24138,8 @@ id: OBI:0000892
 name: Southern blot assay
 def: "An analyte assay that detects the presence of a specific sequence in a DNA sample, which has been digested by restriction enzymes, resolved by gel electrophoresis, and blotted to a solid support, followed by hybridization of a probe raised against a specific sequence and detected with fluorescence or radioactivity." []
 is_a: OBI:0000443 ! analyte assay
-relationship: BFO:0000051 OBI:0000874 ! has_part detection of specific nucleic acid polymers with complementary probes
-relationship: BFO:0000051 OBI:0302903 ! has_part nucleic acid hybridization
+relationship: BFO:0000051 OBI:0000874 ! has part detection of specific nucleic acid polymers with complementary probes
+relationship: BFO:0000051 OBI:0302903 ! has part nucleic acid hybridization
 relationship: OBI:0000299 IAO:0000109 ! has_specified_output measurement datum
 
 [Term]
@@ -24237,7 +24147,7 @@ id: OBI:0000893
 name: real time polymerase chain reaction assay
 def: "An assay, based on the PCR, that amplifies and simultaneously quantifies a specific DNA molecule based on the use of complementary probes/primers. It enables both detection and quantification (as absolute number of copies or relative amount when normalized to DNA input or additional normalizing genes) of one or more specific sequences in a DNA sample." []
 is_a: OBI:0000070 ! assay
-relationship: BFO:0000051 OBI:0000415 ! has_part polymerase chain reaction
+relationship: BFO:0000051 OBI:0000415 ! has part polymerase chain reaction
 
 [Term]
 id: OBI:0000902
@@ -24270,7 +24180,7 @@ name: flow cytometry assay
 def: "A cytometry assay in which an input cell population is put in solution, is passed by a laser, and optical sensors are used to detect scattering of the laser light and/or fluorescence of specific markers to count and characterize the particles in solution." []
 is_a: OBI:0001977 ! cytometry assay
 intersection_of: OBI:0001977 ! cytometry assay
-intersection_of: BFO:0000051 OBI:0001501 ! has_part fluorescence detection assay
+intersection_of: BFO:0000051 OBI:0001501 ! has part fluorescence detection assay
 intersection_of: OBI:0000293 OBI:0400044 {all_some="true"} ! has_specified_input flow cytometer
 
 [Term]
@@ -24287,7 +24197,7 @@ def: "A specimen  that has been modified in order to be able to detect it in fut
 is_a: OBI:0000953 ! processed specimen
 is_a: OBI:0001936 ! molecular-labeled material
 intersection_of: OBI:0100051 ! specimen
-intersection_of: BFO:0000051 REO:0000280 ! has_part molecular label
+intersection_of: BFO:0000051 REO:0000280 ! has part molecular label
 intersection_of: OBI:0000312 OBI:0600038 ! is_specified_output_of addition of molecular label
 
 [Term]
@@ -24576,7 +24486,7 @@ id: OBI:0001152
 name: transfection
 def: "a genetic transformation which relies on the use of physical, electrical and chemical phenomena to introduce DNA or RNA into a cell" []
 is_a: OBI:0600043 ! genetic transformation
-relationship: BFO:0000051 OBI:0600033 ! has_part cell permeabilization
+relationship: BFO:0000051 OBI:0600033 ! has part cell permeabilization
 
 [Term]
 id: OBI:0001153
@@ -24646,7 +24556,7 @@ id: OBI:0001239
 name: transcription profiling by high throughput sequencing design
 def: "A study design in which sequencing technology (e.g. Solexa/454) is used to generate RNA sequence, analyse the transcibed regions of the genome, and/or to quantitate transcript abundance" []
 is_a: OBI:0500000 ! study design
-relationship: BFO:0000051 OBI:0001331 ! has_part transcription profiling identification objective
+relationship: BFO:0000051 OBI:0001331 ! has part transcription profiling identification objective
 
 [Term]
 id: OBI:0001247
@@ -24660,7 +24570,7 @@ name: ChIP-chip assay
 def: "An assay in which chromatin is immunoprecipitated and subsequently analyzed using a DNA microarray to identify which parts of DNA are part of the isolated chromatin" []
 is_a: OBI:0001954 ! ChIP assay
 intersection_of: OBI:0001954 ! ChIP assay
-intersection_of: BFO:0000051 OBI:0001985 ! has_part microarray assay
+intersection_of: BFO:0000051 OBI:0001985 ! has part microarray assay
 intersection_of: OBI:0000293 OBI:0400148 {all_some="true"} ! has_specified_input DNA microarray
 
 [Term]
@@ -24668,8 +24578,8 @@ id: OBI:0001258
 name: ChIP-seq design
 def: "A study design which aims to identify protein and DNA interactions using a combination of chromatin immunoprecipitation and high throughput sequencing. Massively parallel sequence analyses are used in conjunction with whole-genome sequence databases to analyze the interaction pattern of any protein with DNA, or the pattern of any epigenetic chromatin modifications." []
 is_a: OBI:0001425 ! protein binding site identification design
-relationship: BFO:0000051 OBI:0001234 ! has_part epigenetic modification identification objective
-relationship: BFO:0000051 OBI:0001398 ! has_part protein and DNA interaction identification objective
+relationship: BFO:0000051 OBI:0001234 ! has part epigenetic modification identification objective
+relationship: BFO:0000051 OBI:0001398 ! has part protein and DNA interaction identification objective
 
 [Term]
 id: OBI:0001266
@@ -24691,7 +24601,7 @@ id: OBI:0001278
 name: DNA methylation profiling by array design
 def: "A study design in which the methylation state of DNA is determined and is compared between samples using array technology." []
 is_a: OBI:0500000 ! study design
-relationship: BFO:0000051 OBI:0001234 ! has_part epigenetic modification identification objective
+relationship: BFO:0000051 OBI:0001234 ! has part epigenetic modification identification objective
 
 [Term]
 id: OBI:0001285
@@ -24704,22 +24614,22 @@ id: OBI:0001290
 name: transcription profiling by array design
 def: "A study design that identifies forms and abundance of transcripts in the genome using microarray technology." []
 is_a: OBI:0500000 ! study design
-relationship: BFO:0000051 OBI:0001331 ! has_part transcription profiling identification objective
+relationship: BFO:0000051 OBI:0001331 ! has part transcription profiling identification objective
 
 [Term]
 id: OBI:0001305
 name: genotype information
 def: "a genetic characteristics information that is about the genetic material of an organism and minimally includes information about the genetic background and can in addition contain information about specific alleles, genetic modifications, etc." []
 is_a: OBI:0001404 ! genetic characteristics information
-relationship: BFO:0000051 OBI:0001225 ! has_part genetic population background information
-relationship: BFO:0000051 OBI:0001364 ! has_part genetic alteration information
+relationship: BFO:0000051 OBI:0001225 ! has part genetic population background information
+relationship: BFO:0000051 OBI:0001364 ! has part genetic alteration information
 
 [Term]
 id: OBI:0001313
 name: transcription profiling by RT-PCR design
 def: "A study design which aims to examine the transcriptome of a biological sample by reverse transcription PCR (RT-PCR)." []
 is_a: OBI:0500000 ! study design
-relationship: BFO:0000051 OBI:0001331 ! has_part transcription profiling identification objective
+relationship: BFO:0000051 OBI:0001331 ! has part transcription profiling identification objective
 
 [Term]
 id: OBI:0001318
@@ -24739,14 +24649,14 @@ id: OBI:0001358
 name: post-transcriptional modification design
 def: "A study design in which a modification of the transcriptome, proteome (not genome) is made, for example RNAi, antibody targeting." []
 is_a: OBI:0000115 ! intervention design
-relationship: BFO:0000051 OBI:0000015 ! has_part biological feature identification objective
+relationship: BFO:0000051 OBI:0000015 ! has part biological feature identification objective
 
 [Term]
 id: OBI:0001361
 name: transcription profiling by RT-PCR assay
 def: "A transcription profiling assay that uses reverse transcription PCR (RT-PCR)." []
 is_a: OBI:0000424 ! transcription profiling assay
-relationship: BFO:0000051 OBI:0000552 ! has_part reverse transcribed polymerase chain reaction
+relationship: BFO:0000051 OBI:0000552 ! has part reverse transcribed polymerase chain reaction
 
 [Term]
 id: OBI:0001364
@@ -24777,7 +24687,7 @@ id: OBI:0001403
 name: ChIP-chip design
 def: "A study design which aims to identify protein binding sites in genomic DNA by a combination of chromatin immunoprecipitation and DNA microarray (chip) assays." []
 is_a: OBI:0001425 ! protein binding site identification design
-relationship: BFO:0000051 OBI:0001398 ! has_part protein and DNA interaction identification objective
+relationship: BFO:0000051 OBI:0001398 ! has part protein and DNA interaction identification objective
 
 [Term]
 id: OBI:0001404
@@ -24802,21 +24712,21 @@ id: OBI:0001441
 name: proteomic profiling by array design
 def: "A study design in which proteins in a sample are detected, quantified or otherwise analysed, through an array-based technology." []
 is_a: OBI:0500000 ! study design
-relationship: BFO:0000051 OBI:0000131 ! has_part molecular feature identification objective
+relationship: BFO:0000051 OBI:0000131 ! has part molecular feature identification objective
 
 [Term]
 id: OBI:0001444
 name: genotyping design
 def: "A study design that classifies an individual or group of individuals on the basis of alleles, haplotypes, SNPs." []
 is_a: OBI:0500000 ! study design
-relationship: BFO:0000051 OBI:0000113 ! has_part sequence feature identification objective
+relationship: BFO:0000051 OBI:0000113 ! has part sequence feature identification objective
 
 [Term]
 id: OBI:0001460
 name: genetic modification design
 def: "A study design in which an organism(s) is studied that has had genetic material removed, rearranged, mutagenized or added, such as in a knock out." []
 is_a: OBI:0000115 ! intervention design
-relationship: BFO:0000051 OBI:0000015 ! has_part biological feature identification objective
+relationship: BFO:0000051 OBI:0000015 ! has part biological feature identification objective
 
 [Term]
 id: OBI:0001463
@@ -24905,7 +24815,7 @@ id: OBI:0001635
 name: antibody binding detection by fluorescence quenching
 def: "A binding assay in which affinity is measured by detecting a change in fluorescence (usually quenching) that occurs upon binding of the antibody to the ligand. The fluorescent signal that is affected by binding is either from an exogenous fluorophore attached to the ligand, or is the intrisic fluorescence of aromatic (tryptophan) residues on the binding site of the antibody (no conjugated fluorophore necessary) or, less commonly, on the ligand binding region (epitope)." []
 is_a: OBI:0001979 ! fluorescence quenching binding assay
-relationship: BFO:0000051 OBI:0001501 ! has_part fluorescence detection assay
+relationship: BFO:0000051 OBI:0001501 ! has part fluorescence detection assay
 
 [Term]
 id: OBI:0001670
@@ -24920,7 +24830,7 @@ id: OBI:0001672
 name: gene knock-down assay
 def: "An assay which transiently disrupts gene transcripts by expressing antisense RNA constructs or delivering RNA interfering molecules in cells." []
 is_a: OBI:0000070 ! assay
-relationship: BFO:0000051 OBI:0001152 ! has_part transfection
+relationship: BFO:0000051 OBI:0001152 ! has part transfection
 relationship: OBI:0000293 OBI:0100060 ! has_specified_input cultured cell population
 
 [Term]
@@ -24938,7 +24848,7 @@ name: cap analysis of gene expression assay
 def: "A transcription profiling assay which measures RNA transcript abundances in biological samples by extracting 5' ends of capped transcripts, RTPCR and sequence those. Copy numbers of CAGE tags provide a way of quantification and provide a measure of expression of the transcriptome" []
 is_a: OBI:0000424 ! transcription profiling assay
 is_a: OBI:0600047 ! sequencing assay
-relationship: BFO:0000051 OBI:0000552 ! has_part reverse transcribed polymerase chain reaction
+relationship: BFO:0000051 OBI:0000552 ! has part reverse transcribed polymerase chain reaction
 relationship: OBI:0000293 OBI:0000880 ! has_specified_input RNA extract
 relationship: OBI:0000299 OBI:0000973 ! has_specified_output sequence data
 relationship: OBI:0000417 OBI:0001331 ! achieves_planned_objective transcription profiling identification objective
@@ -24973,7 +24883,7 @@ id: OBI:0001686
 name: in-situ hybridization assay
 def: "An assay that localizes a specific DNA or RNA sequence within a portion or section of tissue using artificially induced nucleic hybridization." []
 is_a: OBI:0000070 ! assay
-relationship: BFO:0000051 OBI:0302903 ! has_part nucleic acid hybridization
+relationship: BFO:0000051 OBI:0302903 ! has part nucleic acid hybridization
 relationship: OBI:0000293 OBI:0001143 ! has_specified_input labeled nucleic acid extract
 relationship: OBI:0000299 IAO:0000027 ! has_specified_output data item
 relationship: OBI:0000417 OBI:0000015 ! achieves_planned_objective biological feature identification objective
@@ -24999,7 +24909,7 @@ name: immunoprecipitation assay
 def: "An analyte assay in which an input material is mixed with antibodies and bound antigen:antibody complexes are separated out using immunoprecipitation. Either the antibody has known specificy, and the antigen mixture is tested for the presence of a specific antigen, or the antigen solution is well defined and the antibody solution is tested for the presence of antigen specific antibodies." []
 is_a: OBI:0000443 ! analyte assay
 intersection_of: OBI:0000443 ! analyte assay
-intersection_of: BFO:0000051 OBI:0000690 ! has_part immunoprecipitation
+intersection_of: BFO:0000051 OBI:0000690 ! has part immunoprecipitation
 intersection_of: OBI:0000293 GO:0042571 {all_some="true"} ! has_specified_input immunoglobulin complex, circulating
 
 [Term]
@@ -25016,9 +24926,9 @@ name: methylation-sensitive restriction enzyme sequencing assay
 def: "An assay that identifies unmethylated CpGs using methylation sensitive restriction enzymes to fragment DNA." []
 is_a: OBI:0000626 ! DNA sequencing assay
 is_a: OBI:0001266 ! DNA methylation profiling by high throughput sequencing assay
-relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing assay
-relationship: BFO:0000051 OBI:0000711 ! has_part library preparation
-relationship: BFO:0000051 OBI:0600050 ! has_part specific enzymatic cleavage
+relationship: BFO:0000051 OBI:0000626 ! has part DNA sequencing assay
+relationship: BFO:0000051 OBI:0000711 ! has part library preparation
+relationship: BFO:0000051 OBI:0600050 ! has part specific enzymatic cleavage
 relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
 relationship: OBI:0000417 OBI:0001234 ! achieves_planned_objective epigenetic modification identification objective
 
@@ -25049,7 +24959,7 @@ id: OBI:0001914
 name: multiplex ligation-mediated amplification
 def: "A polymerase chain reaction that amplifies multiple targets with a single primer pair mediated by hybridization of a primer with its target sequence using ligation." []
 is_a: OBI:0000415 ! polymerase chain reaction
-relationship: BFO:0000051 OBI:0302892 ! has_part enzymatic ligation
+relationship: BFO:0000051 OBI:0302892 ! has part enzymatic ligation
 
 [Term]
 id: OBI:0001917
@@ -25062,11 +24972,11 @@ id: OBI:0001919
 name: Carbon-copy chromosome conformation capture assay
 def: "An assay that measures the organization of chromosomes at the genome-wide scale." []
 is_a: OBI:0000626 ! DNA sequencing assay
-relationship: BFO:0000051 OBI:0000626 ! has_part DNA sequencing assay
-relationship: BFO:0000051 OBI:0000690 ! has_part immunoprecipitation
-relationship: BFO:0000051 OBI:0000711 ! has_part library preparation
-relationship: BFO:0000051 OBI:0001914 ! has_part multiplex ligation-mediated amplification
-relationship: BFO:0000051 OBI:0600050 ! has_part specific enzymatic cleavage
+relationship: BFO:0000051 OBI:0000626 ! has part DNA sequencing assay
+relationship: BFO:0000051 OBI:0000690 ! has part immunoprecipitation
+relationship: BFO:0000051 OBI:0000711 ! has part library preparation
+relationship: BFO:0000051 OBI:0001914 ! has part multiplex ligation-mediated amplification
+relationship: BFO:0000051 OBI:0600050 ! has part specific enzymatic cleavage
 relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
 relationship: OBI:0000417 OBI:0001917 ! achieves_planned_objective chromosome conformation identification objective
 
@@ -25075,8 +24985,8 @@ id: OBI:0001925
 name: chromatin immunoprecipitation with exonuclease sequencing assay
 def: "A ChIP-seq assay which uses immunoprecipitation to isolate protein bound DNA followed by an exonuclease step to degrade DNA that is not protein bound to provide greater resolution of the DNA binding site" []
 is_a: OBI:0000716 ! ChIP-seq assay
-relationship: BFO:0000051 OBI:0000800 ! has_part cross linking
-relationship: BFO:0000051 OBI:0600050 ! has_part specific enzymatic cleavage
+relationship: BFO:0000051 OBI:0000800 ! has part cross linking
+relationship: BFO:0000051 OBI:0600050 ! has part specific enzymatic cleavage
 relationship: OBI:0000299 OBI:0001573 ! has_specified_output DNA sequence data
 
 [Term]
@@ -25103,7 +25013,7 @@ name: molecular-labeled material
 def: "a material entity that is the specified output of an addition of molecular label process that aims to label some molecular target to allow for its detection in a detection of molecular label assay" []
 is_a: OBI:0000047 ! processed material
 intersection_of: BFO:0000040 ! material entity
-intersection_of: BFO:0000051 REO:0000280 ! has_part molecular label
+intersection_of: BFO:0000051 REO:0000280 ! has part molecular label
 intersection_of: OBI:0000312 OBI:0600038 ! is_specified_output_of addition of molecular label
 
 [Term]
@@ -25117,7 +25027,7 @@ id: OBI:0001956
 name: assay using chromatin immunoprecipitation
 def: "An assay that produces data about protein-DNA interaction or DNA epigenetic modification using immunoprecipitation" []
 is_a: OBI:0001700 ! immunoprecipitation assay
-relationship: BFO:0000051 OBI:00001975 ! has_part chromatin immunoprecipitation
+relationship: BFO:0000051 OBI:00001975 ! has part chromatin immunoprecipitation
 
 [Term]
 id: OBI:0001977
@@ -25130,7 +25040,7 @@ id: OBI:0001979
 name: fluorescence quenching binding assay
 def: "A binding assay in which the proximity of two entities is monitored by measuring a fluorescent signal of one of the entities that gets reduced if the two entities are cliose to each other." []
 is_a: OBI:0001146 ! binding assay
-relationship: BFO:0000051 OBI:0001501 ! has_part fluorescence detection assay
+relationship: BFO:0000051 OBI:0001501 ! has part fluorescence detection assay
 
 [Term]
 id: OBI:0001985
@@ -25220,7 +25130,7 @@ id: OBI:0002169
 name: ChIP-qPCR assay
 def: "A ChIP assay that uses quantitative PCR to determine levels of specific DNA in immunoprecipitated samples." []
 is_a: OBI:0001954 ! ChIP assay
-relationship: BFO:0000051 OBI:0000893 ! has_part real time polymerase chain reaction assay
+relationship: BFO:0000051 OBI:0000893 ! has part real time polymerase chain reaction assay
 
 [Term]
 id: OBI:0002171
@@ -25670,7 +25580,7 @@ id: OBI:0302736
 name: comet assay
 def: "An assay that measures DNA damage (DNA breakage) in eucaryotic cells exposed to a challenge by determining the size and shape of DNA migration by detecting fluorescently labeled DNA from a cell placed in an electric field using gel electrophoresis" []
 is_a: OBI:0001977 ! cytometry assay
-relationship: BFO:0000051 CHMO:0000087 ! has_part fluorescence microscopy
+relationship: BFO:0000051 CHMO:0000087 ! has part fluorescence microscopy
 relationship: OBI:0000293 OBI:0000439 ! has_specified_input agarose gel
 relationship: OBI:0000299 IAO:0000030 ! has_specified_output information content entity
 
@@ -25739,10 +25649,10 @@ id: OBI:0400008
 name: flow cytometer analyzer
 def: "An analyser is a flow_cytometer that is used to measure properties of particles (whole cells, nuclei, chromosomes, diatoms, plankton, bacteria, viruses) by moving these particles through a detection chamber. An analyser is used to collect data for analysis." []
 is_a: OBI:0400044 ! flow cytometer
-relationship: BFO:0000051 OBI:0400043 ! has_part flow cell
-relationship: BFO:0000051 OBI:0400065 ! has_part light source
-relationship: BFO:0000051 OBI:0400079 ! has_part optical filter
-relationship: BFO:0000051 OBI:0400082 ! has_part photodetector
+relationship: BFO:0000051 OBI:0400043 ! has part flow cell
+relationship: BFO:0000051 OBI:0400065 ! has part light source
+relationship: BFO:0000051 OBI:0400079 ! has part optical filter
+relationship: BFO:0000051 OBI:0400082 ! has part photodetector
 relationship: RO:0000085 OBI:0000453 ! has function measure function
 
 [Term]
@@ -25757,12 +25667,12 @@ id: OBI:0400044
 name: flow cytometer
 def: "A flow_cytometer is an instrument for counting, examining and sorting microscopic particles in suspension. It allows simultaneous multiparametric analysis of the physical and/or chemical characteristics of single cells flowing through an optical and/or electronic detection apparatus. A flow cytometer is an instrument that can be used to quantitatively measure the properties of individual cells in a flowing medium." []
 is_a: OBI:0400137 ! cytometer
-relationship: BFO:0000051 OBI:0400043 ! has_part flow cell
-relationship: BFO:0000051 OBI:0400065 ! has_part light source
-relationship: BFO:0000051 OBI:0400078 ! has_part obscuration bar
-relationship: BFO:0000051 OBI:0400079 ! has_part optical filter
-relationship: BFO:0000051 OBI:0400082 ! has_part photodetector
-relationship: BFO:0000051 OBI:0400153 ! has_part droplet sorter
+relationship: BFO:0000051 OBI:0400043 ! has part flow cell
+relationship: BFO:0000051 OBI:0400065 ! has part light source
+relationship: BFO:0000051 OBI:0400078 ! has part obscuration bar
+relationship: BFO:0000051 OBI:0400079 ! has part optical filter
+relationship: BFO:0000051 OBI:0400082 ! has part photodetector
+relationship: BFO:0000051 OBI:0400153 ! has part droplet sorter
 
 [Term]
 id: OBI:0400065
@@ -25821,7 +25731,7 @@ name: hybridization station
 def: "A device which is used to maintain the temperature of one or more hybridization_chamber(s) at a defined, constant temperature." []
 is_a: OBI:0002089 ! physical store
 intersection_of: OBI:0000968 ! device
-intersection_of: BFO:0000051 OBI:0400110 ! has_part hybridization chamber
+intersection_of: BFO:0000051 OBI:0400110 ! has part hybridization chamber
 intersection_of: RO:0000085 OBI:0000401 ! has function environment control function
 
 [Term]
@@ -25851,9 +25761,9 @@ id: OBI:0400137
 name: cytometer
 def: "A cytometer is an instrument for counting and measuring cells." []
 is_a: OBI:0000832 ! measurement device
-relationship: BFO:0000051 OBI:0400065 ! has_part light source
-relationship: BFO:0000051 OBI:0400079 ! has_part optical filter
-relationship: BFO:0000051 OBI:0400082 ! has_part photodetector
+relationship: BFO:0000051 OBI:0400065 ! has part light source
+relationship: BFO:0000051 OBI:0400079 ! has part optical filter
+relationship: BFO:0000051 OBI:0400082 ! has part photodetector
 relationship: RO:0000085 OBI:0000453 ! has function measure function
 
 [Term]
@@ -25917,7 +25827,7 @@ id: OBI:0500000
 name: study design
 def: "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution." []
 is_a: IAO:0000104 ! plan specification
-relationship: BFO:0000051 OBI:0000272 ! has_part protocol
+relationship: BFO:0000051 OBI:0000272 ! has part protocol
 
 [Term]
 id: OBI:0500001
@@ -25979,8 +25889,8 @@ id: OBI:0600020
 name: histological assay
 def: "An assay that uses visual examination of cells or tissue (or images of them) to make an assessment regarding a quality of the cells or tissue. This assay can include steps of staining, imaging, and judgement." []
 is_a: OBI:0000070 ! assay
-relationship: BFO:0000051 OBI:0000185 ! has_part imaging assay
-relationship: BFO:0000051 OBI:0000341 ! has_part histological sample preparation
+relationship: BFO:0000051 OBI:0000185 ! has part imaging assay
+relationship: BFO:0000051 OBI:0000341 ! has part histological sample preparation
 
 [Term]
 id: OBI:0600024
@@ -26217,7 +26127,7 @@ id: OBI:9999994
 name: chromium release assay
 def: "An in vitro cell killing assay in which radioactive chromium is absorbed by cells and released into supernatant when the cells die. The amount of radioactivity measured in the supernatant is a proxy for the number of cells that have died." []
 is_a: OBI:0000903 ! in vitro cell killing assay
-relationship: BFO:0000051 OBI:0000201 ! has_part radioactivity detection
+relationship: BFO:0000051 OBI:0000201 ! has part radioactivity detection
 
 [Term]
 id: PATO:0000018
@@ -26435,12 +26345,11 @@ id: BFO:0000050
 name: part of
 def: "a core relation that holds between a part and its whole" []
 is_transitive: true
-inverse_of: BFO:0000051 ! has_part
+inverse_of: BFO:0000051 ! has part
 
 [Typedef]
 id: BFO:0000051
 name: has part
-name: has_part
 def: "a core relation that holds between a whole and its part" []
 is_transitive: true
 
@@ -26478,7 +26387,7 @@ id: IAO:0000039
 name: has measurement unit label
 range: IAO:0000003 ! measurement unit label
 is_functional: true
-is_a: BFO:0000051 ! has_part
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: IAO:0000136
@@ -26554,7 +26463,7 @@ inverse_of: OBI:0000833 ! objective_achieved_by
 id: OBI:0000643
 name: has grain
 def: "the relation of the cells in the finger of the skin to the finger, in which an indeterminate number of grains are parts of the whole by virtue of being grains in a collective that is part of the whole, and in which removing one granular part does not nec- essarily damage or diminish the whole. Ontological Whether there is a fixed, or nearly fixed number of parts - e.g. fingers of the hand, chambers of the heart, or wheels of a car - such that there can be a notion of a single one being missing, or whether, by contrast, the number of parts is indeterminate - e.g., cells in the skin of the hand, red cells in blood, or rubber molecules in the tread of the tire of the wheel of the car." []
-is_a: BFO:0000051 ! has_part
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: OBI:0000646
@@ -26581,7 +26490,7 @@ name: has value specification
 def: "A relation between an information content entity and a value specification that specifies its value." []
 domain: IAO:0000030 ! information content entity
 range: OBI:0001933 ! value specification
-is_a: BFO:0000051 ! has_part
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: RO:0000052
@@ -26756,7 +26665,7 @@ inverse_of: RO:0002351 ! has member
 id: RO:0002351
 name: has member
 def: "has member is a mereological relation between a collection and an item." []
-is_a: BFO:0000051 ! has_part
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: used_in

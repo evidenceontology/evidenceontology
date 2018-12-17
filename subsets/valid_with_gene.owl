@@ -12,7 +12,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/subsets/valid_with_gene.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/2018-11-10/subsets/valid_with_gene.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/2018-12-17/subsets/valid_with_gene.owl"/>
     </owl:Ontology>
     
 
@@ -388,25 +388,26 @@
     <!-- http://purl.obolibrary.org/obo/ECO_0000245 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000245">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of computational combinatorial analysis that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of automatically integrated combinatorial evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-12-09T02:37:54Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOECO:RCA</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCA</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inferred from reviewed computational analysis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computational combinatorial evidence used in manual assertion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000245</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computational combinatorial evidence used in manual assertion</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automatically integrated combinatorial evidence used in manual assertion</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://geneontology.org/page/rca-inferred-reviewed-computational-analysis</rdfs:seeAlso>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of computational combinatorial analysis that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of automatically integrated combinatorial evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:RCT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000245"/>

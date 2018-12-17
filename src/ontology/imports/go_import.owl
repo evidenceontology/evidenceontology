@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/eco/imports/go_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/eco/imports/go_import.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:obo="http://purl.obolibrary.org/obo/">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/imports/go_import.owl"/>
     
 
@@ -68,7 +68,7 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_part</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_part</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -240,29 +240,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate, extent or direction of cell growth.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0001677 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0001677">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022618"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of a complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2 (either eIF2 in eukaryotes, or IF2 in prokaryotes). In prokaryotes, fMet-tRNA (initiator) is used rather than Met-tRNA (initiator).</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0001677</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formation of translation initiation ternary complex</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of a complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2 (either eIF2 in eukaryotes, or IF2 in prokaryotes). In prokaryotes, fMet-tRNA (initiator) is used rather than Met-tRNA (initiator).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hjd</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1236,19 +1213,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006414"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cellular metabolic process in which a protein is formed, using the sequence of a mature mRNA or circRNA molecule to specify the sequence of amino acids in a polypeptide chain. Translation is mediated by the ribosome, and begins with the formation of a ternary complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2, which subsequently associates with the small subunit of the ribosome and an mRNA or circRNA. Translation ends with the release of a polypeptide chain from the ribosome.</obo:IAO_0000115>
@@ -1260,35 +1225,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cellular metabolic process in which a protein is formed, using the sequence of a mature mRNA or circRNA molecule to specify the sequence of amino acids in a polypeptide chain. Translation is mediated by the ribosome, and begins with the formation of a ternary complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2, which subsequently associates with the small subunit of the ribosome and an mRNA or circRNA. Translation ends with the release of a polypeptide chain from the ribosome.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0006413 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006413">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006412"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process preceding formation of the peptide bond between the first two amino acids of a protein. This includes the formation of a complex of the ribosome, mRNA or circRNA, and an initiation complex that contains the first aminoacyl-tRNA.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0006413</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translational initiation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process preceding formation of the peptide bond between the first two amino acids of a protein. This includes the formation of a complex of the ribosome, mRNA or circRNA, and an initiation complex that contains the first aminoacyl-tRNA.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:019879276X</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1312,30 +1248,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The successive addition of amino acid residues to a nascent polypeptide chain during protein biosynthesis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0006415 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006415">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043624"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006412"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process resulting in the release of a polypeptide chain from the ribosome, usually in response to a termination codon (UAA, UAG, or UGA in the universal genetic code).</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0006415</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translational termination</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process resulting in the release of a polypeptide chain from the ribosome, usually in response to a termination codon (UAA, UAG, or UGA in the universal genetic code).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hjd</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:019879276X</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1377,40 +1289,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0006446 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006446">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006417"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of translational initiation.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0006446</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of translational initiation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006446"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of translational initiation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0006448 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006448">
@@ -1440,41 +1318,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006448"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate, extent or accuracy of translational elongation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0006449 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006449">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006417"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043244"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of translational termination.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0006449</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of translational termination</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006449"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of translational termination.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1618,18 +1461,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006915">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0012501"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097194"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A programmed cell death process which begins when a cell receives an internal (e.g. DNA damage) or external signal (e.g. an extracellular death ligand), and proceeds through a series of biochemical events (signaling pathway phase) which trigger an execution phase. The execution phase is the last step of an apoptotic process, and is typically characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies. When the execution phase is completed, the cell has died.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0006915</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apoptotic process</rdfs:label>
@@ -1822,60 +1653,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0007154 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007154">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0007154</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell communication</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0007165 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007165">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051716"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0007165</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal transduction</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0007568 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007568">
@@ -2047,7 +1824,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The multiplication or reproduction of cells, resulting in the expansion of a cell population.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0008283</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell proliferation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell population proliferation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008283"/>
@@ -2083,7 +1860,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the rate or extent of cell proliferation.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0008284</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of cell proliferation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of cell population proliferation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008284"/>
@@ -2118,7 +1895,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents or reduces the rate or extent of cell proliferation.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0008285</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of cell proliferation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of cell population proliferation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008285"/>
@@ -2626,116 +2403,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0009966 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009966">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048583"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of signal transduction.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0009966</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of signal transduction</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of signal transduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0009967 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009967">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010647"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048584"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of signal transduction.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0009967</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of signal transduction</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009967"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of signal transduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0009968 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009968">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010648"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048585"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of signal transduction.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0009968</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of signal transduction</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009968"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of signal transduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0009987 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009987">
@@ -3204,113 +2871,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0010646 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010646">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0010646</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of cell communication</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0010647 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010647">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0010647</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of cell communication</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0010647"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0010648 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010648">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007154"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that decreases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0010648</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of cell communication</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0010648"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that decreases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0010876 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010876">
@@ -3441,12 +3001,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0012501">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008219"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0012501</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programmed cell death</rdfs:label>
@@ -4092,48 +3646,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0022613 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022613">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044085"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cellular process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a complex containing RNA and proteins. Includes the biosynthesis of the constituent RNA and protein molecules, and those macromolecular modifications that are involved in synthesis or assembly of the ribonucleoprotein complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0022613</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ribonucleoprotein complex biogenesis</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0022613"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cellular process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a complex containing RNA and proteins. Includes the biosynthesis of the constituent RNA and protein molecules, and those macromolecular modifications that are involved in synthesis or assembly of the ribonucleoprotein complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0022618 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022618">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0034622"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071826"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0022613"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aggregation, arrangement and bonding together of proteins and RNA molecules to form a ribonucleoprotein complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0022618</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ribonucleoprotein complex assembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0022618"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aggregation, arrangement and bonding together of proteins and RNA molecules to form a ribonucleoprotein complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0022803 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022803">
@@ -4227,163 +3739,6 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cardio</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_transport</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0023019 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023019">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007165"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010468"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010468"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of gene expression as a consequence of a process in which a signal is released and/or conveyed from one location to another.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0023019</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal transduction involved in regulation of gene expression</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023019"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of gene expression as a consequence of a process in which a signal is released and/or conveyed from one location to another.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0023051 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023051">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050789"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of a signaling process.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0023051</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of signaling</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of a signaling process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0023052 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023052">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0023052</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:signaling</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0023056 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023056">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048518"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates, maintains or increases the frequency, rate or extent of a signaling process.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0023056</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of signaling</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates, maintains or increases the frequency, rate or extent of a signaling process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0023057 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023057">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048519"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of a signaling process.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0023057</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of signaling</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of a signaling process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4957,77 +4312,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031331"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances, carried out by individual cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0031333 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031333">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043254"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051129"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of protein complex assembly.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0031333</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of protein complex assembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031333"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of protein complex assembly.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0031334 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031334">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043254"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044089"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051130"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of protein complex assembly.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0031334</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of protein complex assembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031334"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of protein complex assembly.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6629,24 +5913,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0032984 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032984">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022411"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043933"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The disaggregation of a protein-containing macromolecular complex into its constituent components.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0032984</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein-containing complex disassembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The disaggregation of a protein-containing macromolecular complex into its constituent components.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0032989 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032989">
@@ -6928,23 +6194,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process in which a protein is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0034622 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0034622">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aggregation, arrangement and bonding together of a set of components to form a protein complex, occurring at the level of an individual cell.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0034622</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular protein-containing complex assembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0034622"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aggregation, arrangement and bonding together of a set of components to form a protein complex, occurring at the level of an individual cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7586,7 +6835,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of cell proliferation.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0042127</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of cell proliferation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of cell population proliferation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0042127"/>
@@ -8089,145 +7338,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0043242 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043242">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043244"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051129"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043242</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of protein complex disassembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043242"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0043243 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043243">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043244"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051130"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043243</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of protein complex disassembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043243"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0043244 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043244">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051128"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043244</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of protein complex disassembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043244"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of protein complex disassembly, the disaggregation of a protein complex into its constituent components.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0043254 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043254">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044087"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051128"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of protein complex assembly.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043254</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of protein complex assembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043254"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of protein complex assembly.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0043269 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043269">
@@ -8494,23 +7604,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0043624 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043624">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032984"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The disaggregation of a protein complex into its constituent components, occurring at the level of an individual cell. Protein complexes may have other associated non-protein prosthetic groups, such as nucleic acids, metal ions or carbohydrate groups.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043624</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular protein complex disassembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043624"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The disaggregation of a protein complex into its constituent components, occurring at the level of an individual cell. Protein complexes may have other associated non-protein prosthetic groups, such as nucleic acids, metal ions or carbohydrate groups.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0043900 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043900">
@@ -8611,23 +7704,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0043933 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043933">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016043"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a protein complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043933</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein-containing complex subunit organization</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043933"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a protein complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9490,78 +8566,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0045904 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045904">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006449"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0017148"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043242"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of translational termination.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0045904</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of translational termination</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045904"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of translational termination.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0045905 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045905">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006449"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043243"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045727"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006415"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of translational termination.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0045905</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of translational termination</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045905"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of translational termination.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0045926 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045926">
@@ -9699,76 +8703,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045935"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any cellular process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving nucleobases, nucleosides, nucleotides and nucleic acids.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0045947 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045947">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006446"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0017148"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of translational initiation.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0045947</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of translational initiation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045947"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents, or reduces the frequency, rate or extent of translational initiation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0045948 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045948">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006446"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045727"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006413"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of translational initiation.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0045948</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of translational initiation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045948"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of translational initiation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12950,24 +11884,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0065003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0065003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022607"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043933"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aggregation, arrangement and bonding together of a set of macromolecules to form a protein-containing complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0065003</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein-containing complex assembly</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0065003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aggregation, arrangement and bonding together of a set of macromolecules to form a protein-containing complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0065007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0065007">
@@ -13309,23 +12225,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The directed movement of icosanoids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Icosanoids are unsaturated C20 fatty acids and skeletally related compounds.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:23899</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0071826 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071826">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043933"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a ribonucleoprotein complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0071826</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ribonucleoprotein complex subunit organization</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071826"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process in which macromolecules aggregate, disaggregate, or are modified, resulting in the formation, disassembly, or alteration of a ribonucleoprotein complex.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -13833,29 +12732,6 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:33832</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sjw</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:7583672</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0097190 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097190">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006915"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A series of molecular signals which triggers the apoptotic death of a cell. The pathway starts with reception of a signal, and ends when the execution phase of apoptosis is triggered.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0097190</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apoptotic signaling pathway</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A series of molecular signals which triggers the apoptotic death of a cell. The pathway starts with reception of a signal, and ends when the execution phase of apoptosis is triggered.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_apoptosis</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14408,113 +13284,6 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22412382</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_1901190 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901190">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006446"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043254"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of formation of translation initiation ternary complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:1901190</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of formation of translation initiation ternary complex</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901190"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of formation of translation initiation ternary complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_1901191 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901191">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031333"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045947"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901190"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents or reduces the frequency, rate or extent of formation of translation initiation ternary complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:1901191</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of formation of translation initiation ternary complex</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901191"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents or reduces the frequency, rate or extent of formation of translation initiation ternary complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_1901192 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901192">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031334"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045948"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901190"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001677"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of formation of translation initiation ternary complex.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:1901192</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of formation of translation initiation ternary complex</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901192"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of formation of translation initiation ternary complex.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17564,113 +16333,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_2001233 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_2001233">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042981"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of apoptotic signaling pathway.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:2001233</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of apoptotic signaling pathway</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_2001233"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of apoptotic signaling pathway.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_apoptosis</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_2001234 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_2001234">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009968"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043066"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001233"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents or reduces the frequency, rate or extent of apoptotic signaling pathway.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:2001234</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of apoptotic signaling pathway</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_2001234"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that stops, prevents or reduces the frequency, rate or extent of apoptotic signaling pathway.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_apoptosis</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_2001235 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_2001235">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009967"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043065"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001233"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097190"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of apoptotic signaling pathway.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:2001235</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of apoptotic signaling pathway</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_2001235"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of apoptotic signaling pathway.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_apoptosis</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_2001251 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_2001251">
@@ -17742,5 +16404,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
