@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2018-12-17/eco-basic.owl
-date: 12:17:2018 08:44
+data-version: eco/releases/2019-01-04/eco-basic.owl
+date: 01:04:2019 08:44
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -318,8 +318,9 @@ is_a: ECO:0000000 ! evidence
 
 [Term]
 id: ECO:0000042
-name: gain-of-function mutant phenotype evidence
-def: "A type of mutant phenotype evidence resulting from a phenotype that is associated with the altered gene product which possesses a new molecular function or a new pattern of gene expression." [SO:0002053, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614608/]
+name: gain-of-function mutant phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from an altered gene product which possesses a new molecular function or a new pattern of gene expression." [SO:0002053, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614608/]
+synonym: "gain-of-function mutant phenotype evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
@@ -372,9 +373,10 @@ is_a: ECO:0000041 ! similarity evidence
 
 [Term]
 id: ECO:0000052
-name: suppressor/enhancer interaction evidence
+name: suppressor/enhancer interaction phenotypic evidence
 def: "A type of genetic interaction evidence resulting from a second mutation that either suppresses or enhances the phenotype expressed from an original mutation." [url:http\://biorxiv.org/content/early/2015/10/03/021592, url:http\://www.wormbook.org/chapters/www\:geneticsuppression/geneticsuppression.html]
 synonym: "IGI: 'traditional' genetic interactions (e.g. suppressors, synthetic lethals)" RELATED []
+synonym: "suppressor/enhancer interaction evidence" EXACT []
 xref: TAIR:TED
 is_a: ECO:0000011 ! genetic interaction evidence
 
@@ -392,10 +394,11 @@ intersection_of: used_in ECO:0000203 ! automatic assertion
 
 [Term]
 id: ECO:0000054
-name: double mutant phenotype evidence
-def: "A type of genetic interaction evidence that is based on the phenotypic outcome of two mutations in unrelated genetic loci." [ECO:RCT]
+name: double mutant phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from two mutations in unrelated genetic loci." [ECO:RCT]
+synonym: "double mutant phenotype evidence" EXACT []
 synonym: "IGI: double mutant analysis" RELATED []
-is_a: ECO:0000011 ! genetic interaction evidence
+is_a: ECO:0000015 ! mutant phenotype evidence
 
 [Term]
 id: ECO:0000055
@@ -405,9 +408,10 @@ is_obsolete: true
 
 [Term]
 id: ECO:0000056
-name: epistatic interaction evidence
-def: "A type of genetic interaction evidence that is based on the suppression of one allelic effect by an allele at another genetic locus." [PMID:18852697]
+name: epistatic interaction phenotypic evidence
+def: "A type of genetic interaction evidence resulting from the suppression of one allelic effect by an allele at another genetic locus." [PMID:18852697]
 comment: Epistasis' can be used in different contexts in different areas of genetics. It is sometimes used to mean 'genetic interaction', whereas other times it may be specific to mutations that block the effects of other mutations.
+synonym: "epistatic interaction evidence" EXACT []
 synonym: "IGI: epistatic interactions" RELATED []
 is_a: ECO:0000011 ! genetic interaction evidence
 
@@ -434,7 +438,8 @@ id: ECO:0000059
 name: experimental phenotypic evidence
 alt_id: ECO:0000014
 alt_id: ECO:0005017
-def: "A type of experimental evidence that is based on the expression of a genotype in an environment." [ECO:SN]
+def: "A type of experimental evidence that is based on an observable characteristic trait, which is the result of the expression of an organisms genotype in an environment." [ECO:SN]
+comment: Observable characteristic traits can be morphology, development, behavior, biochemical or physiological properties, etc.
 synonym: "inferred from phenotype" RELATED []
 is_a: ECO:0000006 ! experimental evidence
 
@@ -1533,17 +1538,19 @@ creation_date: 2010-11-30T03:22:25Z
 
 [Term]
 id: ECO:0000240
-name: anatomical perturbation evidence
-def: "A type of experimental phenotypic evidence in which the phenotype of an organism is observed after the disruption of a structural feature." [ECO:MCC]
+name: anatomical perturbation phenotypic evidence
+def: "A type of experimental phenotypic evidence resulting from the disruption of a structural feature." [ECO:MCC]
+synonym: "anatomical perturbation evidence" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
 creation_date: 2010-12-06T12:24:16Z
 
 [Term]
 id: ECO:0000241
-name: environmental perturbation evidence
-def: "A type of experimental phenotypic evidence in which the phenotype of an organism is observed after modification of the extra-organismal context." [ECO:MCC]
+name: environmental perturbation phenotypic evidence
+def: "A type of experimental phenotypic evidence resulting from modification to the surroundings or conditions in which an organism lives or operates." [ECO:MCC]
 comment: Many environmental factors are subject to modification, such as temperature, pressure, humidity, radiation, and so forth.
+synonym: "environmental perturbation evidence" EXACT []
 synonym: "mechanical constraint evidence" RELATED []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 created_by: mchibucos
@@ -1551,19 +1558,21 @@ creation_date: 2010-12-06T12:33:58Z
 
 [Term]
 id: ECO:0000242
-name: tissue ablation evidence
+name: tissue ablation phenotypic evidence
 def: "A type of anatomical perturbation that is based on disruption of tissue." [ECO:MCC]
-comment: A tissue ablation experiment involves observing the phenotype of an entity whose tissues have been disrupted through genetic or biochemical manipulation, physical destruction, or some other means.
+comment: A type of anatomical perturbation phenotypic evidence resulting from the surgical removal of tissue or subcellular components.
 synonym: "ablated tissue evidence" EXACT []
-is_a: ECO:0000240 ! anatomical perturbation evidence
+synonym: "tissue ablation evidence" EXACT []
+is_a: ECO:0000240 ! anatomical perturbation phenotypic evidence
 created_by: mchibucos
 creation_date: 2010-12-06T12:33:58Z
 
 [Term]
 id: ECO:0000243
-name: tissue grafting evidence
-def: "A type of anatomical perturbation that is based on adding tissue to an organism through a graft procedure." [ECO:MCC]
-is_a: ECO:0000240 ! anatomical perturbation evidence
+name: tissue grafting phenotypic evidence
+def: "A type of anatomical perturbation phenotypic evidence resulting from the addition of tissue to an organism through a graft procedure." [ECO:MCC]
+synonym: "tissue grafting evidence" EXACT []
+is_a: ECO:0000240 ! anatomical perturbation phenotypic evidence
 created_by: mchibucos
 creation_date: 2010-12-06T12:33:58Z
 
@@ -2256,12 +2265,13 @@ creation_date: 2011-01-10T06:16:20Z
 
 [Term]
 id: ECO:0000295
-name: RNA-seq evidence
+name: RNA-sequencing evidence
 alt_id: ECO:0000357
 def: "A type of transcript evidence based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
 comment: Total RNA is isolated from cells and mRNA is purified by targeting the 3' polyadenylated (poly(A)) tail with poly(T) oligos covalently attached to a substrate. Next, cDNA fragments are generated either by hydrolysis of RNA into 200-300 base oligonucleotides, preceded by reverse transcription, or by reverse transcription initiated by random primers. The cDNA second strand is synthesized, fragments are adapter ligated and high-throughput sequencing is performed by Roche 454, Illumina, ABI-SOLiD, or another HT sequencing technology. Resulting sort reads are aligned against a reference genome, and downstream analysis is performed.
 synonym: "differential gene expression evidence from RNA-seq experiment" NARROW []
 synonym: "RNA sequencing" RELATED []
+synonym: "RNA-seq evidence" EXACT []
 synonym: "whole transcriptome shotgun sequencing" EXACT [PMID:18611170]
 synonym: "WTSS" EXACT []
 is_a: ECO:0000009 ! transcript expression evidence
@@ -2811,28 +2821,31 @@ creation_date: 2012-08-24T01:48:24Z
 
 [Term]
 id: ECO:0000342
-name: Support of intron position by RNA-seq alignment evidence
+name: Support of intron position by RNA-sequencing alignment evidence
 def: "A type of RNA-seq evidence where intron locations in predicted transcripts are compared to intron locations supported by RNA-seq evidence." [ECO:MCC]
 comment: RNA-seq alignment intron location evidence is used by NCBI RefSeq (http://www.ncbi.nlm.nih.gov/refseq). Exon-exon boundaries (or intron locations) of a RefSeq transcript, as determined by aligning the transcript to a reference chromosome, are compared to intron locations supported by RNAseq data.
-is_a: ECO:0000295 ! RNA-seq evidence
+synonym: "Support of intron position by RNA-seq alignment evidence" EXACT []
+is_a: ECO:0000295 ! RNA-sequencing evidence
 created_by: mchibucos
 creation_date: 2013-04-03T04:22:05Z
 
 [Term]
 id: ECO:0000343
-name: Full support of intron position by RNA-seq alignment evidence
+name: Full support of intron position by RNA-sequencing alignment evidence
 def: "A type of support of intron position by RNA-seq alignment evidence where RNA-seq alignment from a single sample supports all of the intron positions (exon pairs) predicted for a transcript." [ECO:MCC]
 comment: Full support entails that all exon pairs represented in the transcript are supported. For example, for a transcript containing five exons, if liver RNA-seq reads support all four introns but brain RNA-seq supports only three introns, then the liver data fully support the transcript exons whereas the brain data do not.
-is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+synonym: "Full support of intron position by RNA-seq alignment evidence" EXACT []
+is_a: ECO:0000342 ! Support of intron position by RNA-sequencing alignment evidence
 created_by: mchibucos
 creation_date: 2013-04-03T04:41:48Z
 
 [Term]
 id: ECO:0000344
-name: Partial support of intron position by RNA-seq alignment evidence
+name: Partial support of intron position by RNA-sequencing alignment evidence
 def: "A type of support of intron position by RNA-seq alignment evidence where RNA-seq alignment to a genome supports only some of the intron positions (exon pairs) predicted for a transcript." [ECO:MCC]
 comment: Partial support can occur in two ways. First, one or more exon-exon pair (intron) is not supported by any RNA-seq sample included in the analysis. Second, no single RNA-seq sample provides support for all exon-exon pairs (introns) represented in a transcript, but all represented exons are supported by at least one sample.
-is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+synonym: "Partial support of intron position by RNA-seq alignment evidence" EXACT []
+is_a: ECO:0000342 ! Support of intron position by RNA-sequencing alignment evidence
 created_by: mchibucos
 creation_date: 2013-04-03T04:50:46Z
 
@@ -2846,11 +2859,12 @@ creation_date: 2013-04-03T05:10:34Z
 
 [Term]
 id: ECO:0000346
-name: Support of intron position by RNA-seq alignment evidence used in manual assertion
+name: Support of intron position by RNA-sequencing alignment evidence used in manual assertion
 def: "A type of support of intron position by RNA-seq alignment evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
-is_a: ECO:0006068 ! RNA-seq evidence used in manual assertion
-intersection_of: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+synonym: "Support of intron position by RNA-seq alignment evidence used in manual assertion" EXACT []
+is_a: ECO:0000342 ! Support of intron position by RNA-sequencing alignment evidence
+is_a: ECO:0006068 ! RNA-sequencing evidence used in manual assertion
+intersection_of: ECO:0000342 ! Support of intron position by RNA-sequencing alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 created_by: mchibucos
@@ -2858,11 +2872,12 @@ creation_date: 2013-04-04T04:37:35Z
 
 [Term]
 id: ECO:0000347
-name: Support of intron position by RNA-seq alignment evidence used in automatic assertion
+name: Support of intron position by RNA-sequencing alignment evidence used in automatic assertion
 def: "A type of support of intron position by RNA-seq alignment evidence that is used in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
-is_a: ECO:0006069 ! RNA-seq evidence used in automatic assertion
-intersection_of: ECO:0000342 ! Support of intron position by RNA-seq alignment evidence
+synonym: "Support of intron position by RNA-seq alignment evidence used in automatic assertion" EXACT []
+is_a: ECO:0000342 ! Support of intron position by RNA-sequencing alignment evidence
+is_a: ECO:0006069 ! RNA-sequencing evidence used in automatic assertion
+intersection_of: ECO:0000342 ! Support of intron position by RNA-sequencing alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
 created_by: mchibucos
@@ -2870,11 +2885,12 @@ creation_date: 2013-04-04T04:38:45Z
 
 [Term]
 id: ECO:0000348
-name: Full support of intron position by RNA-seq alignment evidence used in automatic assertion
+name: Full support of intron position by RNA-sequencing alignment evidence used in automatic assertion
 def: "A type of full support of intron position by RNA-seq alignment evidence that is used in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
-is_a: ECO:0000347 ! Support of intron position by RNA-seq alignment evidence used in automatic assertion
-intersection_of: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
+synonym: "Full support of intron position by RNA-seq alignment evidence used in automatic assertion" EXACT []
+is_a: ECO:0000343 ! Full support of intron position by RNA-sequencing alignment evidence
+is_a: ECO:0000347 ! Support of intron position by RNA-sequencing alignment evidence used in automatic assertion
+intersection_of: ECO:0000343 ! Full support of intron position by RNA-sequencing alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
 created_by: mchibucos
@@ -2882,11 +2898,12 @@ creation_date: 2013-04-04T04:40:19Z
 
 [Term]
 id: ECO:0000349
-name: Full support of intron position by RNA-seq alignment evidence used in manual assertion
+name: Full support of intron position by RNA-sequencing alignment evidence used in manual assertion
 def: "A type of full support of intron position by RNA-seq alignment evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
-is_a: ECO:0000346 ! Support of intron position by RNA-seq alignment evidence used in manual assertion
-intersection_of: ECO:0000343 ! Full support of intron position by RNA-seq alignment evidence
+synonym: "Full support of intron position by RNA-seq alignment evidence used in manual assertion" EXACT []
+is_a: ECO:0000343 ! Full support of intron position by RNA-sequencing alignment evidence
+is_a: ECO:0000346 ! Support of intron position by RNA-sequencing alignment evidence used in manual assertion
+intersection_of: ECO:0000343 ! Full support of intron position by RNA-sequencing alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 created_by: mchibucos
@@ -2894,11 +2911,12 @@ creation_date: 2013-04-04T04:41:34Z
 
 [Term]
 id: ECO:0000350
-name: Partial support of intron position by RNA-seq alignment evidence used in automatic assertion
+name: Partial support of intron position by RNA-sequencing alignment evidence used in automatic assertion
 def: "A type of partial support of intron position by RNA-seq alignment evidence that is used in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
-is_a: ECO:0000347 ! Support of intron position by RNA-seq alignment evidence used in automatic assertion
-intersection_of: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
+synonym: "Partial support of intron position by RNA-seq alignment evidence used in automatic assertion" EXACT []
+is_a: ECO:0000344 ! Partial support of intron position by RNA-sequencing alignment evidence
+is_a: ECO:0000347 ! Support of intron position by RNA-sequencing alignment evidence used in automatic assertion
+intersection_of: ECO:0000344 ! Partial support of intron position by RNA-sequencing alignment evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
 created_by: mchibucos
@@ -2906,11 +2924,12 @@ creation_date: 2013-04-04T04:42:53Z
 
 [Term]
 id: ECO:0000351
-name: Partial support of intron position by RNA-seq alignment evidence used in manual assertion
+name: Partial support of intron position by RNA-sequencing alignment evidence used in manual assertion
 def: "A type of partial support of intron position by RNA-seq alignment evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
-is_a: ECO:0000346 ! Support of intron position by RNA-seq alignment evidence used in manual assertion
-intersection_of: ECO:0000344 ! Partial support of intron position by RNA-seq alignment evidence
+synonym: "Partial support of intron position by RNA-seq alignment evidence used in manual assertion" EXACT []
+is_a: ECO:0000346 ! Support of intron position by RNA-sequencing alignment evidence used in manual assertion
+is_a: ECO:0000350 ! Partial support of intron position by RNA-sequencing alignment evidence used in automatic assertion
+intersection_of: ECO:0000344 ! Partial support of intron position by RNA-sequencing alignment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 created_by: mchibucos
@@ -3138,12 +3157,13 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001009
-name: allograft transplantation experiment evidence
-def: "A type of anatomical perturbation evidence where an organ or tissue is transplanted from one individual to another of the same species with a different genotype." [ECO:SN, url:http\://www.nature.com/subjects/allograft, url:http\://www.organdonor.gov/about/terms_and_topics/]
+name: allograft transplantation phenotypic evidence
+def: "A type of anatomical perturbation phenotypic evidence resulting from the transplantation of an organ or tissue from one individual of the same species with a different genotype." [ECO:SN, url:http\://www.nature.com/subjects/allograft, url:http\://www.organdonor.gov/about/terms_and_topics/]
+synonym: "allograft transplantation experiment evidence" EXACT []
 synonym: "allografting" EXACT []
 synonym: "Allotransplantation" EXACT []
 synonym: "tissue grafting" NARROW []
-is_a: ECO:0000240 ! anatomical perturbation evidence
+is_a: ECO:0000240 ! anatomical perturbation phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3168,8 +3188,9 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001012
-name: behavioral assay evidence
+name: cognitive assay phenotypic evidence
 def: "A type of experimental phenotypic evidence resulting from behavioral phenotyping and analysis to assess cognitive functioning." [PMID:24462904]
+synonym: "behavioral assay evidence" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3285,8 +3306,9 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001024
-name: chimeric protein evidence
+name: chimeric protein phenotypic evidence
 def: "A type of mutant phenotype evidence resulting from the fusion of two or more different genes to create one protein product." [PMID:22588898, PMID:25832756]
+synonym: "chimeric protein evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -3413,10 +3435,11 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001038
-name: deletion mutation evidence
+name: deletion mutation phenotypic evidence
 alt_id: ECO:0005510
 def: "A type of experimental phenotypic evidence resulting from a mutation in which there is a removal of one or more contiguous nucleotides." [SO:0000159]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+synonym: "deletion mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3443,9 +3466,10 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001042
-name: dominant-negative mutant evidence
-def: "A type of experimental phenotypic evidence resulting from the analysis of a mutated gene producing mutant polypeptides that disrupt the activity of the wild-type genes." [PMC:2217636, PMID:8018332]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: dominant-negative mutant phenotypic evidence
+def: "A type of experimental phenotypic evidence resulting from a mutated gene producing mutant polypeptides that disrupt the activity of the wild-type genes." [PMC:2217636, PMID:8018332]
+synonym: "dominant-negative mutant evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4096,9 +4120,10 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001113
-name: point mutation evidence
-def: "A type of experimental phenotypic evidence resulting from the change in a single nucleotide." [SO:1000008]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: point mutation phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from the change in a single nucleotide." [SO:1000008]
+synonym: "point mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4295,13 +4320,14 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001137
-name: xenotransplantation experiment evidence
-def: "A type of anatomical perturbation evidence where live cells, tissues, or organs from a non-human animal source are transplanted, implanted or infused into a human recipient." [ECO:SN, url:http\://ilarjournal.oxfordjournals.org/content/37/1/16.full.pdf+html, url:http\://www.fda.gov/BiologicsBloodVaccines/Xenotransplantation/]
+name: xenotransplantation phenotypic evidence
+def: "A type of anatomical perturbation phenotypic evidence resulting from the transplantation, implantation, or infusion of live cells, tissues, or organs between individuals of different species." [ECO:SN, url:http\://ilarjournal.oxfordjournals.org/content/37/1/16.full.pdf+html, url:http\://www.fda.gov/BiologicsBloodVaccines/Xenotransplantation/]
 synonym: "tissue grafting" NARROW []
 synonym: "Xenograft transplantation" EXACT []
 synonym: "Xenografting" EXACT []
 synonym: "Xenotransplantation" EXACT []
-is_a: ECO:0000240 ! anatomical perturbation evidence
+synonym: "xenotransplantation experiment evidence" EXACT []
+is_a: ECO:0000240 ! anatomical perturbation phenotypic evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4416,14 +4442,15 @@ creation_date: 2014-03-17T15:37:21Z
 
 [Term]
 id: ECO:0001146
-name: allograft transplantation experiment evidence used in manual assertion
-def: "A type of allograft transplantation experiment evidence that is used in a manual assertion." [ECO:MCC]
+name: allograft transplantation phenotypic evidence used in manual assertion
+def: "A type of allograft transplantation phenotypic evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "allograft transplantation evidence used in manual assertion" EXACT []
 synonym: "allografting" BROAD []
 synonym: "Allotransplantation" BROAD []
 synonym: "tissue grafting" RELATED []
-is_a: ECO:0001009 ! allograft transplantation experiment evidence
+is_a: ECO:0001009 ! allograft transplantation phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0001009 ! allograft transplantation experiment evidence
+intersection_of: ECO:0001009 ! allograft transplantation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4458,11 +4485,12 @@ creation_date: 2014-03-17T15:52:01Z
 
 [Term]
 id: ECO:0001149
-name: behavioral assay evidence used in manual assertion
-def: "A type of behavioral assay evidence used that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001012 ! behavioral assay evidence
+name: cognitive assay phenotypic evidence used in manual assertion
+def: "A type of cognitive assay phenotypic evidence used that is used in a manual assertion." [ECO:MCC]
+synonym: "behavioral assay evidence used in manual assertion" EXACT []
+is_a: ECO:0001012 ! cognitive assay phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0001012 ! behavioral assay evidence
+intersection_of: ECO:0001012 ! cognitive assay phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4621,11 +4649,12 @@ creation_date: 2014-03-17T16:09:55Z
 
 [Term]
 id: ECO:0001161
-name: chimeric protein evidence used in manual assertion
-def: "A type of chimeric protein evidence that is used in a manual assertion." [ECO:MCC]
+name: chimeric protein phenotypic evidence used in manual assertion
+def: "A type of chimeric protein phenotypic evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "chimeric protein evidence used in manual assertion" EXACT []
 is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
-is_a: ECO:0001024 ! chimeric protein evidence
-intersection_of: ECO:0001024 ! chimeric protein evidence
+is_a: ECO:0001024 ! chimeric protein phenotypic evidence
+intersection_of: ECO:0001024 ! chimeric protein phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4804,11 +4833,12 @@ creation_date: 2014-03-17T16:25:03Z
 
 [Term]
 id: ECO:0001175
-name: deletion mutation evidence used in manual assertion
-def: "A type of deletion evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001038 ! deletion mutation evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0001038 ! deletion mutation evidence
+name: deletion mutation phenotypic evidence used in manual assertion
+def: "A type of deletion mutation phenotypic evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "deletion mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0001038 ! deletion mutation phenotypic evidence
+intersection_of: ECO:0001038 ! deletion mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4844,11 +4874,12 @@ creation_date: 2014-03-17T16:45:52Z
 
 [Term]
 id: ECO:0001179
-name: dominant-negative mutant evidence used in manual assertion
-def: "A type of dominant-negative mutant evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001042 ! dominant-negative mutant evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0001042 ! dominant-negative mutant evidence
+name: dominant-negative mutant phenotypic evidence used in manual assertion
+def: "A type of dominant-negative mutant phenotypic evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "dominant-negative mutant evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0001042 ! dominant-negative mutant phenotypic evidence
+intersection_of: ECO:0001042 ! dominant-negative mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -5738,11 +5769,12 @@ creation_date: 2014-03-17T20:17:27Z
 
 [Term]
 id: ECO:0001247
-name: point mutation evidence used in manual assertion
-def: "A type of point mutation evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001113 ! point mutation evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0001113 ! point mutation evidence
+name: point mutation phenotypic evidence used in manual assertion
+def: "A type of point mutation phenotypic evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "point mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0001113 ! point mutation phenotypic evidence
+intersection_of: ECO:0001113 ! point mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -5910,15 +5942,16 @@ creation_date: 2014-03-17T20:29:13Z
 
 [Term]
 id: ECO:0001260
-name: xenotransplantation experiment evidence used in manual assertion
-def: "A type of xenotransplantation experiment evidence that is used in a manual assertion." [ECO:MCC]
+name: xenotransplantation phenotypic evidence used in manual assertion
+def: "A type of xenotransplantation phenotypic evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "tissue grafting" RELATED []
 synonym: "xenograft transplantation evidence" BROAD []
 synonym: "xenografting evidence" BROAD []
 synonym: "xenotransplantation evidence" BROAD []
-is_a: ECO:0001137 ! xenotransplantation experiment evidence
+synonym: "xenotransplantation experiment evidence used in manual assertion" EXACT []
+is_a: ECO:0001137 ! xenotransplantation phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0001137 ! xenotransplantation experiment evidence
+intersection_of: ECO:0001137 ! xenotransplantation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -6244,6 +6277,24 @@ created_by: jbmunro
 creation_date: 2017-11-30T14:00:00Z
 
 [Term]
+id: ECO:000156
+name: single-cell RNA-sequencing evidence used in automatic assertion
+def: "A type of single cell RNA-sequencing evidence that is used in automatic assertion." []
+is_a: ECO:0001560 ! single-cell RNA-sequencing evidence
+created_by: jbmunro
+creation_date: 2019-01-02T12:00:00Z
+
+[Term]
+id: ECO:0001560
+name: single-cell RNA-sequencing evidence
+def: "A type of RNA-sequencing evidence that uses a single cell as the source of the RNA." []
+synonym: "scRNA-seq evidence" EXACT []
+is_a: ECO:0000295 ! RNA-sequencing evidence
+property_value: IAO:0000234 "Bgee" xsd:string
+created_by: jbmunro
+creation_date: 2019-01-02T12:00:00Z
+
+[Term]
 id: ECO:0001561
 name: translation assay evidence
 def: "A type of direct assay evidence where de novo protein synthesis is detected." [PMID:18230759, PMID:24901308, SIB:PG]
@@ -6318,6 +6369,39 @@ intersection_of: ECO:0001566 ! quantitative reverse transcription polymerase cha
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: jbmunro
 creation_date: 2018-07-07T12:00:00Z
+
+[Term]
+id: ECO:000157
+name: colony diameter phenotype evidence used in manual assertion
+def: "A type of colony diameter phenotype evidence that is used in manual assertion." []
+is_a: ECO:0001571 ! colony diameter phenotype evidence
+created_by: jbmunro
+creation_date: 2019-01-03T12:00:00Z
+
+[Term]
+id: ECO:0001570
+name: single-cell RNA-sequencing evidence used in manual assertion
+def: "A type of single cell RNA-sequencing evidence that is used in manual assertion." []
+is_a: ECO:0001560 ! single-cell RNA-sequencing evidence
+created_by: jbmunro
+creation_date: 2019-01-02T12:00:00Z
+
+[Term]
+id: ECO:0001571
+name: colony diameter phenotype evidence
+def: "A type of colony size phenotypic evidence resulting from measurement of a microbial colony's diameter." []
+is_a: ECO:0007081 ! colony size phenotypic evidence
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-01-03T12:00:00Z
+
+[Term]
+id: ECO:0001572
+name: colony diameter phenotype evidence used in automatic assertion
+def: "A type of colony diameter phenotype evidence that is used in automatic assertion" []
+is_a: ECO:0001571 ! colony diameter phenotype evidence
+created_by: jbmunro
+creation_date: 2019-01-03T12:00:00Z
 
 [Term]
 id: ECO:0001601
@@ -6817,33 +6901,36 @@ creation_date: 2015-10-09T13:51:52Z
 
 [Term]
 id: ECO:0005506
-name: missense mutation evidence
-def: "A type of point mutation evidence resulting from a change in a base (or bases) causing the substitution of one amino acid for another." [SO:0001583]
-is_a: ECO:0001113 ! point mutation evidence
+name: missense mutation phenotypic evidence
+def: "A type of point mutation phenotypic evidence resulting from a change in a base (or bases) causing the substitution of one amino acid for another." [SO:0001583]
+synonym: "missense mutation evidence" EXACT []
+is_a: ECO:0001113 ! point mutation phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T16:52:34Z
 
 [Term]
 id: ECO:0005507
-name: nonsense mutation evidence
-def: "A type of point mutation evidence resulting in an incomplete and usually nonfunctional protein product because of a premature stop codon." [url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
-is_a: ECO:0001113 ! point mutation evidence
+name: nonsense mutation phenotypic evidence
+def: "A type of point mutation phenotypic evidence resulting in an incomplete and usually nonfunctional protein product because of a premature stop codon." [url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
+synonym: "nonsense mutation evidence" EXACT []
+is_a: ECO:0001113 ! point mutation phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T16:55:32Z
 
 [Term]
 id: ECO:0005508
 name: silent mutation evidence
-def: "A type of point mutation evidence resulting from the change of a DNA nucleotide that does not cause any changes in the amino acid sequence." [url:http\://www.sciencemag.org/news/2006/12/sound-silent-mutation]
-is_a: ECO:0001113 ! point mutation evidence
+def: "A type of point mutation phenotypic evidence resulting from the change of a DNA nucleotide that does not cause any changes in the amino acid sequence." [url:http\://www.sciencemag.org/news/2006/12/sound-silent-mutation]
+is_a: ECO:0001113 ! point mutation phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:01:12Z
 
 [Term]
 id: ECO:0005509
-name: insertion mutation evidence
-def: "A type of experimental phenotypic evidence resulting from a mutation in which there is an insertion of an additional nucleotide, or nucleotides." [GO:0070705]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: insertion mutation phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from a mutation in which there is an insertion of one or more contiguous nucleotides." [GO:0070705]
+synonym: "insertion mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:02:03Z
 
@@ -6857,9 +6944,10 @@ creation_date: 2015-09-18T17:03:25Z
 
 [Term]
 id: ECO:0005512
-name: frameshift mutation evidence
-def: "A type of experimental phenotypic evidence resulting from any mutation that causes a shift in bases and therefore changes the code for the amino acids." [url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: frameshift mutation phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from any mutation that causes an insertion or deletion of nucleotides in a DNA sequence that is not divisible by three and therefore changes the codon reading frame and the translated amino acids." [url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
+synonym: "frameshift mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:05:49Z
 
@@ -9479,14 +9567,15 @@ creation_date: 2017-05-16T10:55:40Z
 
 [Term]
 id: ECO:0006068
-name: RNA-seq evidence used in manual assertion
+name: RNA-sequencing evidence used in manual assertion
 def: "A type of high throughput nucleotide sequencing assay evidence used in a manual assertion based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
 synonym: "RNA sequencing|differential gene expression evidence from RNA-seq experiment" RELATED []
+synonym: "RNA-seq evidence used in manual assertion" EXACT []
 synonym: "whole transcriptome shotgun sequencing" BROAD []
 synonym: "WTSS evidence" BROAD []
 is_a: ECO:0000291 ! transcript expression evidence used in manual assertion
-is_a: ECO:0000295 ! RNA-seq evidence
-intersection_of: ECO:0000295 ! RNA-seq evidence
+is_a: ECO:0000295 ! RNA-sequencing evidence
+intersection_of: ECO:0000295 ! RNA-sequencing evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -9494,14 +9583,15 @@ creation_date: 2017-06-28T10:37:02Z
 
 [Term]
 id: ECO:0006069
-name: RNA-seq evidence used in automatic assertion
+name: RNA-sequencing evidence used in automatic assertion
 def: "A type of high throughput nucleotide sequencing assay evidence used in an automatic assertion based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
 synonym: "RNA sequencing|differential gene expression evidence from RNA-seq experiment" RELATED []
+synonym: "RNA-seq evidence used in automatic assertion" EXACT []
 synonym: "whole transcriptome shotgun sequencing" BROAD []
 synonym: "WTSS evidence" BROAD []
-is_a: ECO:0000295 ! RNA-seq evidence
+is_a: ECO:0000295 ! RNA-sequencing evidence
 is_a: ECO:0007303 ! transcript expression evidence used in automatic assertion
-intersection_of: ECO:0000295 ! RNA-seq evidence
+intersection_of: ECO:0000295 ! RNA-sequencing evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -9813,12 +9903,13 @@ creation_date: 2017-09-14T09:19:38
 
 [Term]
 id: ECO:0006094
-name: suppressor/enhancer interaction evidence used in manual assertion
-def: "A type of genetic interaction evidence that is used in a manual assertion resulting from a second mutation that either suppresses or enhances the phenotype expressed from an original mutation." [url:http\://www.wormbook.org/chapters/www\:geneticsuppression/geneticsuppression.html]
+name: suppressor/enhancer interaction phenotypic evidence used in manual assertion
+def: "A type of suppressor/enhancer interaction phenotypic evidence that is used in a manual assertion." [url:http\://www.wormbook.org/chapters/www\:geneticsuppression/geneticsuppression.html]
 synonym: "IGI: 'traditional' genetic interactions (e.g. suppressors, synthetic lethals)" BROAD []
-is_a: ECO:0000052 ! suppressor/enhancer interaction evidence
+synonym: "suppressor/enhancer interaction evidence used in manual assertion" EXACT []
+is_a: ECO:0000052 ! suppressor/enhancer interaction phenotypic evidence
 is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
-intersection_of: ECO:0000052 ! suppressor/enhancer interaction evidence
+intersection_of: ECO:0000052 ! suppressor/enhancer interaction phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -9826,12 +9917,13 @@ creation_date: 2017-09-14T09:19:39
 
 [Term]
 id: ECO:0006095
-name: double mutant phenotype evidence used in manual assertion
-def: "A type of genetic interaction evidence that is used in a manual assertion that is based on the phenotypic outcome of two mutations in unrelated genetic loci." [ECO:RCT]
+name: double mutant phenotypic evidence used in manual assertion
+def: "A type of double mutant phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "double mutant phenotype evidence used in manual assertion" EXACT []
 synonym: "IGI: double mutant analysis" BROAD []
-is_a: ECO:0000054 ! double mutant phenotype evidence
-is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
-intersection_of: ECO:0000054 ! double mutant phenotype evidence
+is_a: ECO:0000054 ! double mutant phenotypic evidence
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+intersection_of: ECO:0000054 ! double mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -9839,12 +9931,13 @@ creation_date: 2017-09-14T09:19:40
 
 [Term]
 id: ECO:0006096
-name: epistatic interaction evidence used in manual assertion
-def: "A type of genetic interaction evidence that is used in a manual assertion that is based on the suppression of one allelic effect by an allele at another genetic locus." [PMID:18852697]
+name: epistatic interaction phenotypic evidence used in manual assertion
+def: "A type of epistatic interaction phenotypic evidence that is used in a manual assertion." [PMID:18852697]
+synonym: "epistatic interaction evidence used in manual assertion" EXACT []
 synonym: "IGI: epistatic interactions" BROAD []
-is_a: ECO:0000056 ! epistatic interaction evidence
+is_a: ECO:0000056 ! epistatic interaction phenotypic evidence
 is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
-intersection_of: ECO:0000056 ! epistatic interaction evidence
+intersection_of: ECO:0000056 ! epistatic interaction phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -9865,8 +9958,9 @@ creation_date: 2017-09-14T09:19:42
 
 [Term]
 id: ECO:0006098
-name: temperature-sensitive mutant phenotype evidence
-def: "A type of mutant phenotype evidence based on the analysis of a mutation that allows normal function of the organism at low temperatures, but altered function at higher temperatures." [GOC:PG, PMID:19596904]
+name: temperature-sensitive mutant phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from altered gene function at higher temperatures." [GOC:PG, PMID:19596904]
+synonym: "temperature-sensitive mutant phenotype evidence" EXACT []
 synonym: "Ts mutation evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 "pgaudet" xsd:string
@@ -9875,12 +9969,13 @@ creation_date: 2017-09-18T07:58:28
 
 [Term]
 id: ECO:0006099
-name: temperature-sensitive mutant phenotype evidence used in manual assertion
-def: "A type of mutant phenotype evidence that is used in a manual assertion based on the analysis of a mutation that allows normal function of the organism at low temperatures, but altered function at higher temperatures." [GOC:PG, PMID:19596904]
+name: temperature-sensitive mutant phenotypic evidence used in manual assertion
+def: "A type of temperature-sensitive mutant phenotypic evidence that is used in a manual assertion." [GOC:PG, PMID:19596904]
+synonym: "temperature-sensitive mutant phenotype evidence used in manual assertion" EXACT []
 synonym: "Ts mutation evidence" BROAD []
 is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
-is_a: ECO:0006098 ! temperature-sensitive mutant phenotype evidence
-intersection_of: ECO:0006098 ! temperature-sensitive mutant phenotype evidence
+is_a: ECO:0006098 ! temperature-sensitive mutant phenotypic evidence
+intersection_of: ECO:0006098 ! temperature-sensitive mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "pgaudet" xsd:string
@@ -9911,8 +10006,9 @@ creation_date: 2017-09-18T07:58:28
 
 [Term]
 id: ECO:0007000
-name: high throughput mutant phenotype evidence
+name: high throughput mutant phenotypic evidence
 def: "A type of high throughput evidence derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
+synonym: "high throughput mutant phenotype evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 is_a: ECO:0006055 ! high throughput evidence
 property_value: IAO:0000234 "GOC" xsd:string
@@ -9921,16 +10017,17 @@ creation_date: 2017-10–05T07:39:47Z
 
 [Term]
 id: ECO:0007001
-name: high throughput mutant phenotype evidence used in manual assertion
-def: "A type of high throughput evidence that is used in a manual assertion derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
+name: high throughput mutant phenotypic evidence used in manual assertion
+def: "A type of high throughput mutant phenotypic evidence that is used in a manual assertion." [GO:IMP]
 comment: When using the HMP evidence code, the guidelines for IMP should be adhered to (http://geneontology.org/page/imp-inferred-mutant-phenotype)
+synonym: "high throughput mutant phenotype evidence used in manual assertion" EXACT []
 synonym: "HMP" EXACT [GOECO:HMP]
 synonym: "inferred from high throughput mutant phenotype" EXACT [GOECO:HMP]
 xref: GOECO:HMP "inferred from high throughput mutant phenotype"
 is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
 is_a: ECO:0006056 ! high throughput evidence used in manual assertion
-is_a: ECO:0007000 ! high throughput mutant phenotype evidence
-intersection_of: ECO:0007000 ! high throughput mutant phenotype evidence
+is_a: ECO:0007000 ! high throughput mutant phenotypic evidence
+intersection_of: ECO:0007000 ! high throughput mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
@@ -9939,8 +10036,9 @@ creation_date: 2017-10–05T07:39:47Z
 
 [Term]
 id: ECO:0007002
-name: high throughput genetic interaction evidence
-def: "A type of high throughput evidence derived from the high throughput analysis of the effect that a given gene has on another gene or genes, and products." [PMID:11822023]
+name: high throughput genetic interaction phenotypic evidence
+def: "A type of high throughput evidence resulting from the high throughput analysis of the effect that a given gene has on another gene or genes, and products." [PMID:11822023]
+synonym: "high throughput genetic interaction evidence" EXACT []
 is_a: ECO:0000011 ! genetic interaction evidence
 is_a: ECO:0006055 ! high throughput evidence
 property_value: IAO:0000234 "GOC" xsd:string
@@ -9949,16 +10047,17 @@ creation_date: 2017-10–05T07:39:47Z
 
 [Term]
 id: ECO:0007003
-name: high throughput genetic interaction evidence used in manual assertion
-def: "A type of high throughput evidence that is used in a manual assertion derived from the high throughput analysis of the effect that a given gene has on another gene or genes, and products." [PMID:11822023]
+name: high throughput genetic interaction phenotypic evidence used in manual assertion
+def: "A type of high throughput genetic interaction phenotypic evidence that is used in a manual assertion." [PMID:11822023]
 comment: When using the HGI evidence code, the guidelines for IGI should be adhered to (http://geneontology.org/page/igi-inferred-genetic-interaction)
 synonym: "HGI" EXACT [GOECO:HGI]
+synonym: "high throughput genetic interaction evidence used in manual assertion" EXACT []
 synonym: "inferred from high throughput genetic interaction" EXACT [GOECO:HGI]
 xref: GOECO:HGI "inferred from high throughput genetic interaction"
 is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
 is_a: ECO:0006056 ! high throughput evidence used in manual assertion
-is_a: ECO:0007002 ! high throughput genetic interaction evidence
-intersection_of: ECO:0007002 ! high throughput genetic interaction evidence
+is_a: ECO:0007002 ! high throughput genetic interaction phenotypic evidence
+intersection_of: ECO:0007002 ! high throughput genetic interaction phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
@@ -10713,20 +10812,22 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007067
-name: colony papillation assay evidence
-def: "A type of mutant phenotype evidence derived from formation of papillae that protrude outwards from the main colony by mutant cells." [PMID:27447898]
-is_a: ECO:0000015 ! mutant phenotype evidence
+name: colony papillation assay phenotypic evidence
+def: "A type of colony morphology phenotypic evidence resulting from the formation of papillae (microcolonies) that protrude outwards from the main colony by mutant cells." [PMID:27447898, PMID:27447898]
+synonym: "colony papillation assay evidence" EXACT []
+is_a: ECO:0007077 ! colony morphology phenotypic evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
 creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007068
-name: colony papillation assay evidence used in manual assertion
-def: "A type of colony papillation assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
-is_a: ECO:0007067 ! colony papillation assay evidence
-intersection_of: ECO:0007067 ! colony papillation assay evidence
+name: colony papillation assay phenotypic evidence used in manual assertion
+def: "A type of colony papillation assay phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "colony papillation assay evidence used in manual assertion" EXACT []
+is_a: ECO:0007067 ! colony papillation assay phenotypic evidence
+is_a: ECO:0007078 ! colony morphology phenotypic evidence used in manual assertion
+intersection_of: ECO:0007067 ! colony papillation assay phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "OMP" xsd:string
@@ -10808,7 +10909,9 @@ creation_date: 2018-03-14T12:44:11Z
 [Term]
 id: ECO:0007075
 name: phenomic profiling assay evidence
-def: "A type of experimental phenotypic evidence that results from the study of the change in phenotype (the physical and biochemical traits of organisms) in response to genetic and environmental factors." [EDAM:topic\:3298]
+def: "A type of experimental phenotypic evidence that results from the comparison of phenotype profiles (the physical and biochemical traits of organisms in particular environments) across multiple strains; that is, a meta-analysis of a set of phenotypic patterns from many tests in response to a series of changing genetic and/or environmental factors." [EDAM:topic\:3298, PMID:2118507]
+comment: A phenome is defined as the SET of physical and biochemical traits, or, as the SET of all phenotypes expressed, i.e. a phenome is defined as the sum total of all phenotypic traits.
+comment: D.S. notes: I think this term is meant to be used for high throughput experiments where a large number of mutants is screened for their ability to grow in a large number of conditions. The individual mutants can then clustered based on the similarity of their phenotypic profiles-whether they grew or didn't grow across all the conditions. The goal being to try to identify genes whose products function in the same biological pathways based on their having similar phenotypes across multiple conditions.
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
@@ -10829,8 +10932,9 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007077
-name: colony morphology evidence
-def: "A type of experimental phenotypic evidence that results from studying the physical characteristics of an assemblage of microorganisms growing on a solid surface such as the surface of an agar culture medium." [OMP:0000100]
+name: colony morphology phenotypic evidence
+def: "A type of experimental phenotypic evidence resulting from studying the physical characteristics of an assemblage of microorganisms growing on a solid surface such as the surface of an agar culture medium." [OMP:0000100]
+synonym: "colony morphology evidence" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
@@ -10838,11 +10942,12 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007078
-name: colony morphology evidence used in manual assertion
-def: "A type of colony morphology evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0007077 ! colony morphology evidence
+name: colony morphology phenotypic evidence used in manual assertion
+def: "A type of colony morphology phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "colony morphology evidence used in manual assertion" EXACT []
+is_a: ECO:0007077 ! colony morphology phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0007077 ! colony morphology evidence
+intersection_of: ECO:0007077 ! colony morphology phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "OMP" xsd:string
@@ -10851,22 +10956,24 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007079
-name: colony color evidence
-def: "A type of colony morphology evidence that results from studying the colony pigmentation." [URL:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4671912/]
+name: colony color phenotypic evidence
+def: "A type of colony morphology evidence resulting from studying the colony pigmentation." [URL:https\://www.ncbi.nlm.nih.gov/pmc/articles/PMC4671912/]
+synonym: "colony color evidence" EXACT []
 synonym: "colony pigmentation" EXACT []
-is_a: ECO:0007077 ! colony morphology evidence
+is_a: ECO:0007077 ! colony morphology phenotypic evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
 creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007080
-name: colony color evidence used in manual assertion
-def: "A type of colony color evidence that is used in a manual assertion." [ECO:RCT]
+name: colony color phenotypic evidence used in manual assertion
+def: "A type of colony color phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "colony color evidence used in manual assertion" EXACT []
 synonym: "colony pigmentation" BROAD []
-is_a: ECO:0007078 ! colony morphology evidence used in manual assertion
-is_a: ECO:0007079 ! colony color evidence
-intersection_of: ECO:0007079 ! colony color evidence
+is_a: ECO:0007078 ! colony morphology phenotypic evidence used in manual assertion
+is_a: ECO:0007079 ! colony color phenotypic evidence
+intersection_of: ECO:0007079 ! colony color phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "OMP" xsd:string
@@ -10875,20 +10982,24 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007081
-name: colony size evidence
-def: "A type of colony morphology evidence that results from studying the size of the colony." [URL:http\://www.nature.com/nrmicro/journal/v4/n4/full/nrmicro1384.html]
-is_a: ECO:0007077 ! colony morphology evidence
+name: colony size phenotypic evidence
+def: "A type of colony morphology phenotypic evidence resulting from measuring the area or diameter of the colony." [URL:http\://www.nature.com/nrmicro/journal/v4/n4/full/nrmicro1384.html]
+synonym: "colony size evidence" EXACT []
+is_a: ECO:0007077 ! colony morphology phenotypic evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
 creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007082
-name: colony size evidence used in manual assertion
-def: "A type of colony size evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0007078 ! colony morphology evidence used in manual assertion
-is_a: ECO:0007081 ! colony size evidence
-intersection_of: ECO:0007081 ! colony size evidence
+name: colony size phenotypic evidence used in manual assertion
+def: "A type of colony size phenotypic evidence that is used in an manual assertion." [ECO:RCT]
+synonym: "colony area phenotype evidence" NARROW []
+synonym: "colony diameter phenotype evidence" NARROW []
+synonym: "colony size evidence used in manual assertion" EXACT []
+is_a: ECO:0007078 ! colony morphology phenotypic evidence used in manual assertion
+is_a: ECO:0007081 ! colony size phenotypic evidence
+intersection_of: ECO:0007081 ! colony size phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "OMP" xsd:string
@@ -10992,11 +11103,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007092
-name: gain-of-function mutant phenotype evidence used in manual assertion
-def: "A type of gain-of-function mutant phenotype evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000042 ! gain-of-function mutant phenotype evidence
+name: gain-of-function mutant phenotypic evidence used in manual assertion
+def: "A type of gain-of-function mutant phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "gain-of-function mutant phenotype evidence used in manual assertion" EXACT []
+is_a: ECO:0000042 ! gain-of-function mutant phenotypic evidence
 is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
-intersection_of: ECO:0000042 ! gain-of-function mutant phenotype evidence
+intersection_of: ECO:0000042 ! gain-of-function mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -11447,33 +11559,36 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007136
-name: environmental perturbation evidence used in manual assertion
-def: "A type of environmental perturbation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000241 ! environmental perturbation evidence
+name: environmental perturbation phenotypic evidence used in manual assertion
+def: "A type of environmental perturbation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "environmental perturbation evidence used in manual assertion" EXACT []
+is_a: ECO:0000241 ! environmental perturbation phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0000241 ! environmental perturbation evidence
+intersection_of: ECO:0000241 ! environmental perturbation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007137
-name: tissue ablation evidence used in manual assertion
-def: "A type of tissue ablation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000242 ! tissue ablation evidence
+name: tissue ablation phenotypic evidence used in manual assertion
+def: "A type of tissue ablation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "tissue ablation evidence used in manual assertion" EXACT []
+is_a: ECO:0000242 ! tissue ablation phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0000242 ! tissue ablation evidence
+intersection_of: ECO:0000242 ! tissue ablation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007138
-name: tissue grafting evidence used in manual assertion
-def: "A type of tissue grafting evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000243 ! tissue grafting evidence
+name: tissue grafting phenotypic evidence used in manual assertion
+def: "A type of tissue grafting phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "tissue grafting evidence used in manual assertion" EXACT []
+is_a: ECO:0000243 ! tissue grafting phenotypic evidence
 is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0000243 ! tissue grafting evidence
+intersection_of: ECO:0000243 ! tissue grafting phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -11686,22 +11801,24 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007160
-name: missense mutation evidence used in manual assertion
-def: "A type of missense mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0001247 ! point mutation evidence used in manual assertion
-is_a: ECO:0005506 ! missense mutation evidence
-intersection_of: ECO:0005506 ! missense mutation evidence
+name: missense mutation pohenotypic evidence used in manual assertion
+def: "A type of missense mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "missense mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0001247 ! point mutation phenotypic evidence used in manual assertion
+is_a: ECO:0005506 ! missense mutation phenotypic evidence
+intersection_of: ECO:0005506 ! missense mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007161
-name: nonsense mutation evidence used in manual assertion
-def: "A type of nonsense mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0001247 ! point mutation evidence used in manual assertion
-is_a: ECO:0005507 ! nonsense mutation evidence
-intersection_of: ECO:0005507 ! nonsense mutation evidence
+name: nonsense mutation phenotypic evidence used in manual assertion
+def: "A type of nonsense mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "nonsense mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0001247 ! point mutation phenotypic evidence used in manual assertion
+is_a: ECO:0005507 ! nonsense mutation phenotypic evidence
+intersection_of: ECO:0005507 ! nonsense mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -11710,7 +11827,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007162
 name: silent mutation evidence used in manual assertion
 def: "A type of silent mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0001247 ! point mutation evidence used in manual assertion
+is_a: ECO:0001247 ! point mutation phenotypic evidence used in manual assertion
 is_a: ECO:0005508 ! silent mutation evidence
 intersection_of: ECO:0005508 ! silent mutation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -11719,11 +11836,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007163
-name: insertion mutation evidence used in manual assertion
-def: "A type of insertion mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0005509 ! insertion mutation evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0005509 ! insertion mutation evidence
+name: insertion mutation phenotypic evidence used in manual assertion
+def: "A type of insertion mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "insertion mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005509 ! insertion mutation phenotypic evidence
+intersection_of: ECO:0005509 ! insertion mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -11741,11 +11859,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007165
-name: frameshift mutation evidence used in manual assertion
-def: "A type of frameshift mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0005512 ! frameshift mutation evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0005512 ! frameshift mutation evidence
+name: frameshift mutation phenotypic evidence used in manual assertion
+def: "A type of frameshift mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "frameshift mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005512 ! frameshift mutation phenotypic evidence
+intersection_of: ECO:0005512 ! frameshift mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12070,11 +12189,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007196
-name: gain-of-function mutant phenotype evidence used in automatic assertion
-def: "A type of gain-of-function mutant phenotype evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000042 ! gain-of-function mutant phenotype evidence
+name: gain-of-function mutant phenotypic evidence used in automatic assertion
+def: "A type of gain-of-function mutant phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "gain-of-function mutant phenotype evidence used in automatic assertion" EXACT []
+is_a: ECO:0000042 ! gain-of-function mutant phenotypic evidence
 is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
-intersection_of: ECO:0000042 ! gain-of-function mutant phenotype evidence
+intersection_of: ECO:0000042 ! gain-of-function mutant phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12525,33 +12645,36 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007240
-name: environmental perturbation evidence used in automatic assertion
-def: "A type of environmental perturbation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000241 ! environmental perturbation evidence
+name: environmental perturbation phenotypic evidence used in automatic assertion
+def: "A type of environmental perturbation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "environmental perturbation evidence used in automatic assertion" EXACT []
+is_a: ECO:0000241 ! environmental perturbation phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0000241 ! environmental perturbation evidence
+intersection_of: ECO:0000241 ! environmental perturbation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007241
-name: tissue ablation evidence used in automatic assertion
-def: "A type of tissue ablation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000242 ! tissue ablation evidence
+name: tissue ablation phenotypic evidence used in automatic assertion
+def: "A type of tissue ablation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "tissue ablation evidence used in automatic assertion" EXACT []
+is_a: ECO:0000242 ! tissue ablation phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0000242 ! tissue ablation evidence
+intersection_of: ECO:0000242 ! tissue ablation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007242
-name: tissue grafting evidence used in automatic assertion
-def: "A type of tissue grafting evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000243 ! tissue grafting evidence
+name: tissue grafting phenotypic evidence used in automatic assertion
+def: "A type of tissue grafting phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "tissue grafting evidence used in automatic assertion" EXACT []
+is_a: ECO:0000243 ! tissue grafting phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0000243 ! tissue grafting evidence
+intersection_of: ECO:0000243 ! tissue grafting phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12764,22 +12887,24 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007264
-name: missense mutation evidence used in automatic assertion
-def: "A type of missense mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005506 ! missense mutation evidence
-is_a: ECO:0007448 ! point mutation evidence used in automatic assertion
-intersection_of: ECO:0005506 ! missense mutation evidence
+name: missense mutation phenotypic evidence used in automatic assertion
+def: "A type of missense mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "missense mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005506 ! missense mutation phenotypic evidence
+is_a: ECO:0007448 ! point mutation phenotypic evidence used in automatic assertion
+intersection_of: ECO:0005506 ! missense mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007265
-name: nonsense mutation evidence used in automatic assertion
-def: "A type of nonsense mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005507 ! nonsense mutation evidence
-is_a: ECO:0007448 ! point mutation evidence used in automatic assertion
-intersection_of: ECO:0005507 ! nonsense mutation evidence
+name: nonsense mutation phenotypic evidence used in automatic assertion
+def: "A type of nonsense mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "nonsense mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005507 ! nonsense mutation phenotypic evidence
+is_a: ECO:0007448 ! point mutation phenotypic evidence used in automatic assertion
+intersection_of: ECO:0005507 ! nonsense mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12789,7 +12914,7 @@ id: ECO:0007266
 name: silent mutation evidence used in automatic assertion
 def: "A type of silent mutation evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0005508 ! silent mutation evidence
-is_a: ECO:0007448 ! point mutation evidence used in automatic assertion
+is_a: ECO:0007448 ! point mutation phenotypic evidence used in automatic assertion
 intersection_of: ECO:0005508 ! silent mutation evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -12797,11 +12922,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007267
-name: insertion mutation evidence used in automatic assertion
-def: "A type of insertion mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005509 ! insertion mutation evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0005509 ! insertion mutation evidence
+name: insertion mutation phenotypic evidence used in automatic assertion
+def: "A type of insertion mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "insertion mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005509 ! insertion mutation phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0005509 ! insertion mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12819,11 +12945,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007269
-name: frameshift mutation evidence used in automatic assertion
-def: "A type of frameshift mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005512 ! frameshift mutation evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0005512 ! frameshift mutation evidence
+name: frameshift mutation phenotypic evidence used in automatic assertion
+def: "A type of frameshift mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "frameshift mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005512 ! frameshift mutation phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0005512 ! frameshift mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -13641,11 +13768,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007343
-name: allograft transplantation experiment evidence used in automatic assertion
-def: "A type of allograft transplantation experiment evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001009 ! allograft transplantation experiment evidence
+name: allograft transplantation phenotypic evidence used in automatic assertion
+def: "A type of allograft transplantation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "allograft transplantation evidence used in automatic assertion" EXACT []
+is_a: ECO:0001009 ! allograft transplantation phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0001009 ! allograft transplantation experiment evidence
+intersection_of: ECO:0001009 ! allograft transplantation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -13674,11 +13802,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007346
-name: behavioral assay evidence used in automatic assertion
-def: "A type of behavioral assay evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001012 ! behavioral assay evidence
+name: cognitive assay phenotypic evidence used in automatic assertion
+def: "A type of cognitive assay phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "behavioral assay evidence used in automatic assertion" EXACT []
+is_a: ECO:0001012 ! cognitive assay phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0001012 ! behavioral assay evidence
+intersection_of: ECO:0001012 ! cognitive assay phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -13828,11 +13957,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007360
-name: chimeric protein evidence used in automatic assertion
-def: "A type of chimeric protein evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001024 ! chimeric protein evidence
+name: chimeric protein phenotypic evidence used in automatic assertion
+def: "A type of chimeric protein phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "chimeric protein evidence used in automatic assertion" EXACT []
+is_a: ECO:0001024 ! chimeric protein phenotypic evidence
 is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
-intersection_of: ECO:0001024 ! chimeric protein evidence
+intersection_of: ECO:0001024 ! chimeric protein phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -14038,11 +14168,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007379
-name: deletion mutation evidence used in automatic assertion
-def: "A type of deletion mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001038 ! deletion mutation evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0001038 ! deletion mutation evidence
+name: deletion mutation phenotypic evidence used in automatic assertion
+def: "A type of deletion mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "deletion mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0001038 ! deletion mutation phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0001038 ! deletion mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -14071,11 +14202,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007382
-name: dominant-negative mutant evidence used in automatic assertion
-def: "A type of dominant-negative mutant evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001042 ! dominant-negative mutant evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0001042 ! dominant-negative mutant evidence
+name: dominant-negative mutant phenotypic evidence used in automatic assertion
+def: "A type of dominant-negative mutant phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "dominant-negative mutant evidence used in automatic assertion" EXACT []
+is_a: ECO:0001042 ! dominant-negative mutant phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0001042 ! dominant-negative mutant phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -14798,11 +14930,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007448
-name: point mutation evidence used in automatic assertion
-def: "A type of point mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001113 ! point mutation evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0001113 ! point mutation evidence
+name: point mutation phenotypic evidence used in automatic assertion
+def: "A type of point mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "point mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0001113 ! point mutation phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0001113 ! point mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -14930,11 +15063,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007460
-name: xenotransplantation experiment evidence used in automatic assertion
-def: "A type of xenotransplantation experiment evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001137 ! xenotransplantation experiment evidence
+name: xenotransplantation phenotypic evidence used in automatic assertion
+def: "A type of xenotransplantation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "xenotransplantation experiment evidence used in automatic assertion" EXACT []
+is_a: ECO:0001137 ! xenotransplantation phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0001137 ! xenotransplantation experiment evidence
+intersection_of: ECO:0001137 ! xenotransplantation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -16272,33 +16406,36 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007581
-name: suppressor/enhancer interaction evidence used in automatic assertion
-def: "A type of suppressor/enhancer interaction evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000052 ! suppressor/enhancer interaction evidence
+name: suppressor/enhancer interaction phenotypic evidence used in automatic assertion
+def: "A type of suppressor/enhancer interaction phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "suppressor/enhancer interaction evidence used in automatic assertion" EXACT []
+is_a: ECO:0000052 ! suppressor/enhancer interaction phenotypic evidence
 is_a: ECO:0007326 ! genetic interaction evidence used in automatic assertion
-intersection_of: ECO:0000052 ! suppressor/enhancer interaction evidence
+intersection_of: ECO:0000052 ! suppressor/enhancer interaction phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007582
-name: double mutant phenotype evidence used in automatic assertion
-def: "A type of double mutant phenotype evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000054 ! double mutant phenotype evidence
-is_a: ECO:0007326 ! genetic interaction evidence used in automatic assertion
-intersection_of: ECO:0000054 ! double mutant phenotype evidence
+name: double mutant phenotypic evidence used in automatic assertion
+def: "A type of double mutant phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "double mutant phenotype evidence used in automatic assertion" EXACT []
+is_a: ECO:0000054 ! double mutant phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0000054 ! double mutant phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007583
-name: epistatic interaction evidence used in automatic assertion
-def: "A type of epistatic interaction evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000056 ! epistatic interaction evidence
+name: epistatic interaction phenotypic evidence used in automatic assertion
+def: "A type of epistatic interaction phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "epistatic interaction evidence used in automatic assertion" EXACT []
+is_a: ECO:0000056 ! epistatic interaction phenotypic evidence
 is_a: ECO:0007326 ! genetic interaction evidence used in automatic assertion
-intersection_of: ECO:0000056 ! epistatic interaction evidence
+intersection_of: ECO:0000056 ! epistatic interaction phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -16316,11 +16453,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007585
-name: temperature-sensitive mutant phenotype evidence used in automatic assertion
-def: "A type of temperature-sensitive mutant phenotype evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0006098 ! temperature-sensitive mutant phenotype evidence
+name: temperature-sensitive mutant phenotypic evidence used in automatic assertion
+def: "A type of temperature-sensitive mutant phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "temperature-sensitive mutant phenotype evidence used in automatic assertion" EXACT []
+is_a: ECO:0006098 ! temperature-sensitive mutant phenotypic evidence
 is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
-intersection_of: ECO:0006098 ! temperature-sensitive mutant phenotype evidence
+intersection_of: ECO:0006098 ! temperature-sensitive mutant phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -16338,24 +16476,26 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007587
-name: high throughput mutant phenotype evidence used in automatic assertion
-def: "A type of high throughput mutant phenotype evidence that is used in an automatic assertion." [ECO:RCT]
+name: high throughput mutant phenotypic evidence used in automatic assertion
+def: "A type of high throughput mutant phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "high throughput mutant phenotype evidence used in automatic assertion" EXACT []
 is_a: ECO:0006057 ! high throughput evidence used in automatic assertion
-is_a: ECO:0007000 ! high throughput mutant phenotype evidence
+is_a: ECO:0007000 ! high throughput mutant phenotypic evidence
 is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
-intersection_of: ECO:0007000 ! high throughput mutant phenotype evidence
+intersection_of: ECO:0007000 ! high throughput mutant phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007588
-name: high throughput genetic interaction evidence used in automatic assertion
-def: "A type of high throughput genetic interaction evidence that is used in an automatic assertion." [ECO:RCT]
+name: high throughput genetic interaction phenotypic evidence used in automatic assertion
+def: "A type of high throughput genetic interaction phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "high throughput genetic interaction evidence used in automatic assertion" EXACT []
 is_a: ECO:0006057 ! high throughput evidence used in automatic assertion
-is_a: ECO:0007002 ! high throughput genetic interaction evidence
+is_a: ECO:0007002 ! high throughput genetic interaction phenotypic evidence
 is_a: ECO:0007326 ! genetic interaction evidence used in automatic assertion
-intersection_of: ECO:0007002 ! high throughput genetic interaction evidence
+intersection_of: ECO:0007002 ! high throughput genetic interaction phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -16707,11 +16847,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007620
-name: colony papillation assay evidence used in automatic assertion
-def: "A type of colony papillation assay evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0007067 ! colony papillation assay evidence
-is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
-intersection_of: ECO:0007067 ! colony papillation assay evidence
+name: colony papillation assay phenotypic evidence used in automatic assertion
+def: "A type of colony papillation assay phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "colony papillation assay evidence used in automatic assertion" EXACT []
+is_a: ECO:0007067 ! colony papillation assay phenotypic evidence
+is_a: ECO:0007625 ! colony morphology phenotypic evidence used in automatic assertion
+intersection_of: ECO:0007067 ! colony papillation assay phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -16762,33 +16903,36 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007625
-name: colony morphology evidence used in automatic assertion
-def: "A type of colony morphology evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0007077 ! colony morphology evidence
+name: colony morphology phenotypic evidence used in automatic assertion
+def: "A type of colony morphology phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "colony morphology evidence used in automatic assertion" EXACT []
+is_a: ECO:0007077 ! colony morphology phenotypic evidence
 is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0007077 ! colony morphology evidence
+intersection_of: ECO:0007077 ! colony morphology phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007626
-name: colony color evidence used in automatic assertion
-def: "A type of colony color evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0007079 ! colony color evidence
-is_a: ECO:0007625 ! colony morphology evidence used in automatic assertion
-intersection_of: ECO:0007079 ! colony color evidence
+name: colony color phenotypic evidence used in automatic assertion
+def: "A type of colony color phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "colony color evidence used in automatic assertion" EXACT []
+is_a: ECO:0007079 ! colony color phenotypic evidence
+is_a: ECO:0007625 ! colony morphology phenotypic evidence used in automatic assertion
+intersection_of: ECO:0007079 ! colony color phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007627
-name: colony size evidence used in automatic assertion
-def: "A type of colony size evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0007081 ! colony size evidence
-is_a: ECO:0007625 ! colony morphology evidence used in automatic assertion
-intersection_of: ECO:0007081 ! colony size evidence
+name: colony size phenotypic evidence used in automatic assertion
+def: "A type of colony size phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "colony size evidence used in automatic assertion" EXACT []
+is_a: ECO:0007081 ! colony size phenotypic evidence
+is_a: ECO:0007625 ! colony morphology phenotypic evidence used in automatic assertion
+intersection_of: ECO:0007081 ! colony size phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
