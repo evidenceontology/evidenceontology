@@ -1613,6 +1613,8 @@ Declaration(Class(obo:ECO_0007676))
 Declaration(Class(obo:ECO_0007677))
 Declaration(Class(obo:ECO_0007678))
 Declaration(Class(obo:ECO_0007679))
+Declaration(Class(obo:ECO_0007680))
+Declaration(Class(obo:ECO_0007681))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
 Declaration(AnnotationProperty(obo:IAO_0000112))
@@ -19848,6 +19850,26 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:id obo:ECO_0007679 "ECO:0007679"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007679 "combinatorial computational evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007679 ObjectIntersectionOf(obo:ECO_0007677 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+
+# Class: obo:ECO_0007680 (chromatography evidence used in manual assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007680 "A type of chromatography evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0007680 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007680 "2019-01-21T06:28:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007680 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007680 "ECO:00007680"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007680 "chromatography evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007680 ObjectIntersectionOf(obo:ECO_0000325 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+
+# Class: obo:ECO_0007681 (chromatography evidence used in automatic assertion)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007681 "A type of chromatography evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0007681 "rctauber"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007681 "2019-01-21T06:28:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007681 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0007681 "ECO:0007681"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007681 "chromatography evidence used in automatic assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007681 ObjectIntersectionOf(obo:ECO_0000325 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 
 
 )
