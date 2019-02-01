@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2019-01-04
-date: 01:04:2019 08:44
+data-version: releases/2019-02-01
+date: 02:01:2019 15:19
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -589,17 +589,19 @@ is_a: ECO:0000009 ! transcript expression evidence
 [Term]
 id: ECO:0000049
 name: reporter gene assay evidence
-def: "A type of experimental phenotypic evidence that is based on the expression pattern of a reporter gene." [TAIR:TED]
+def: "A type of expression pattern evidence that is based on the expression pattern of a reporter gene." [TAIR:TED]
 synonym: "IEP: expression of a reporter gene" RELATED []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0000008 ! expression pattern evidence
+is_a: IAO:0000030 {is_inferred="true"} ! information content entity
 relationship: IAO:0000136 GO:0010467 ! is about gene expression
 relationship: OBI:0000312 OBI:0002082 ! is_specified_output_of reporter gene assay
 
 [Term]
 id: ECO:0000050
-name: voucher specimen analysis evidence
-def: "A type of phenotypic evidence based on an author's phenotypic description of a species or higher level group explicitly referencing an observation of a voucher specimen, a specimen with a permanent museum catalog." [TAIR:TED]
+name: voucher specimen phenotypic analysis evidence
+def: "A type of experimental phenotypic evidence based on an authors phenotypic description of a species (or higher-level group), which explicitly references an observation made of a voucher specimen (a specimen with a permanent museum catalog)." [TAIR:TED]
 synonym: "IVS" EXACT []
+synonym: "voucher specimen analysis evidence" EXACT []
 is_a: ECO:0000059 ! experimental phenotypic evidence
 
 [Term]
@@ -1865,8 +1867,7 @@ creation_date: 2010-12-06T12:33:58Z
 [Term]
 id: ECO:0000242
 name: tissue ablation phenotypic evidence
-def: "A type of anatomical perturbation that is based on disruption of tissue." [ECO:MCC]
-comment: A type of anatomical perturbation phenotypic evidence resulting from the surgical removal of tissue or subcellular components.
+def: "A type of anatomical perturbation phenotypic evidence resulting from the surgical removal of tissue or subcellular components." [ECO:MCC]
 synonym: "ablated tissue evidence" EXACT []
 synonym: "tissue ablation evidence" EXACT []
 is_a: ECO:0000240 ! anatomical perturbation phenotypic evidence
@@ -3796,7 +3797,7 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001038
 name: deletion mutation phenotypic evidence
 alt_id: ECO:0005510
-def: "A type of experimental phenotypic evidence resulting from a mutation in which there is a removal of one or more contiguous nucleotides." [SO:0000159]
+def: "A type of mutant phenotype evidence resulting from a mutation in which there is a removal of one or more contiguous nucleotides." [SO:0000159]
 synonym: "deletion mutation evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -3827,7 +3828,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001042
 name: dominant-negative mutant phenotypic evidence
-def: "A type of experimental phenotypic evidence resulting from a mutated gene producing mutant polypeptides that disrupt the activity of the wild-type genes." [PMC:2217636, PMID:8018332]
+def: "A type of mutant phenotype evidence resulting from a mutated gene producing mutant polypeptides that disrupt the activity of the wild-type genes." [PMC:2217636, PMID:8018332]
 synonym: "dominant-negative mutant evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -4859,8 +4860,8 @@ creation_date: 2014-03-17T15:38:22Z
 id: ECO:0001147
 name: anion-exchange chromatography evidence used in manual assertion
 def: "A type of anion-exchange chromatography evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001010 ! anion-exchange chromatography evidence
+is_a: ECO:0007680 {is_inferred="true"} ! chromatography evidence used in manual assertion
 intersection_of: ECO:0001010 ! anion-exchange chromatography evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -5342,8 +5343,8 @@ creation_date: 2014-03-17T17:05:22Z
 id: ECO:0001184
 name: gel-filtration evidence used in manual assertion
 def: "A type of gel-filtration evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001049 ! gel-filtration evidence
+is_a: ECO:0007680 {is_inferred="true"} ! chromatography evidence used in manual assertion
 intersection_of: ECO:0001049 ! gel-filtration evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -6499,8 +6500,8 @@ id: ECO:0001272
 name: high-performance liquid chromatography evidence used in manual assertion
 def: "A type of high-performance liquid chromatography evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "HPLC evidence" BROAD []
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001052 ! high-performance liquid chromatography evidence
+is_a: ECO:0007680 {is_inferred="true"} ! chromatography evidence used in manual assertion
 intersection_of: ECO:0001052 ! high-performance liquid chromatography evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -7382,25 +7383,28 @@ creation_date: 2015-09-18T17:05:49Z
 
 [Term]
 id: ECO:0005513
-name: repeat expansion mutation evidence
-def: "A type of experimental phenotypic evidence resulting from a mutation that increases the number of times that a DNA sequence is repeated." [PMID:9397685, url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: repeat expansion mutation phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from a mutation that increases the number of times that a DNA sequence is repeated." [PMID:9397685, url:https\://ghr.nlm.nih.gov/primer/mutationsanddisorders/possiblemutations]
+synonym: "repeat expansion mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:06:34Z
 
 [Term]
 id: ECO:0005514
-name: splice site mutation evidence
-def: "A type of experimental phenotypic evidence resulting from a mutation in which there is a change in nucleotides at a splice site" [ECO:RCT]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: splice site mutation phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from a mutation in which there is a change in nucleotides at a splice site." [ECO:RCT]
+synonym: "splice site mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:07:29Z
 
 [Term]
 id: ECO:0005515
-name: translocation mutation evidence
-def: "A type of experimental phenotypic evidence resulting from a mutation in which a region of a chromosome is transferred to a nonhomologous chromosome" [ECO:RCT]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: translocation mutation phenotypic evidence
+def: "A type of mutant phenotype evidence resulting from a mutation in which a region of a chromosome is transferred to a nonhomologous chromosome." [ECO:RCT]
+synonym: "translocation mutation evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 created_by: snadendla
 creation_date: 2015-09-18T17:08:01Z
 
@@ -7510,11 +7514,12 @@ creation_date: 2015-09-30T10:58:51Z
 
 [Term]
 id: ECO:0005528
-name: site-directed mutagenesis evidence
-def: "A type of experimental phenotypic evidence based on target-specified mutagenesis for the characterization of various gene and protein interactions, structures, and functions where oligonucleotide primers are used to alter a nucleotide sequence." [ECO:SW, PMID:21204030, PMID:24011050, PMID:3541892]
+name: site-directed mutagenesis phenotypic evidence
+def: "A type of mutant phenotype phenotype evidence based on target-specified mutagenesis for the characterization of various gene and protein interactions, structures, and functions where oligonucleotide primers are used to alter a nucleotide sequence." [ECO:SW, PMID:21204030, PMID:24011050, PMID:3541892]
 comment: Site-directed mutagenesis is often performed in tandem with EMSA. It is often implemented only in conserved motif positions or serially through all positions of a site.
 synonym: "site directed mutagenesis" EXACT []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+synonym: "site-directed mutagenesis evidence" EXACT []
+is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: snadendla
 creation_date: 2015-09-30T11:34:41Z
@@ -8408,8 +8413,8 @@ name: alkaline phosphatase reporter gene assay evidence used in manual assertion
 def: "A type of alkaline phosphatase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
 synonym: "SEAP reporter assay" RELATED []
 synonym: "secreted embryonic alkaline phosphatase reporter assay" RELATED []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001801 ! alkaline phosphatase reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001801 ! alkaline phosphatase reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8423,8 +8428,8 @@ def: "A type of beta-galactosidase reporter gene assay evidence that is used in 
 synonym: "beta-gal reporter gene assay evidence" BROAD []
 synonym: "lacZ reporter gene assay" RELATED []
 synonym: "LacZ transcript localization evidence used in manual assertion" EXACT []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001802 ! beta-galactosidase reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001802 ! beta-galactosidase reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8436,8 +8441,8 @@ id: ECO:0005617
 name: chloramphenicol acetyltransferase reporter gene assay evidence used in manual assertion
 def: "A type of chloramphenicol acetyltransferase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
 synonym: "CAT reporter gene assay evidence" BROAD []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001803 ! chloramphenicol acetyltransferase reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001803 ! chloramphenicol acetyltransferase reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8591,8 +8596,8 @@ id: ECO:0005629
 name: DNA affinity chromatography evidence used in manual assertion
 def: "A type of DNA affinity chromatography evidence that is used in a manual assertion." [ECO:SN]
 synonym: "DNA affinity purification evidence" BROAD []
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001809 ! DNA affinity chromatography evidence
+is_a: ECO:0007680 {is_inferred="true"} ! chromatography evidence used in manual assertion
 intersection_of: ECO:0001809 ! DNA affinity chromatography evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8646,8 +8651,8 @@ id: ECO:0005633
 name: ferric uptake regulator titration assay evidence used in manual assertion
 def: "A type of ferric uptake regulator titration assay evidence that is used in a manual assertion." [ECO:SN]
 synonym: "FURTA evidence" BROAD []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001829 ! ferric uptake regulator titration assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001829 ! ferric uptake regulator titration assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8688,8 +8693,8 @@ synonym: "GFP promoter fusion" RELATED []
 synonym: "GFP reporter gene assay evidence" BROAD []
 synonym: "green fluorescent protein promoter fusion" RELATED []
 synonym: "green fluorescent protein transcript localization evidence used in manual assertion" EXACT []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8705,7 +8710,7 @@ synonym: "GFP reporter gene assay evidence" BROAD []
 synonym: "green fluorescent protein promoter fusion" RELATED []
 synonym: "green fluorescent protein transcript localization evidence used in automatic assertion" EXACT []
 is_a: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001816 ! green fluorescent protein reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 relationship: used_in ECO:0000203 {is_inferred="true"} ! automatic assertion
@@ -8756,8 +8761,8 @@ id: ECO:0005641
 name: beta-glucuronidase reporter gene assay evidence used in manual assertion
 def: "A type of beta-glucuronidase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
 synonym: "GUS reporter gene assay evidence" BROAD []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001804 ! beta-glucuronidase reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001804 ! beta-glucuronidase reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -8849,8 +8854,8 @@ creation_date: 2016-05-06T23:36:26Z
 id: ECO:0005648
 name: luciferase reporter gene assay evidence used in manual assertion
 def: "A type of luciferase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001805 ! luciferase reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0001805 ! luciferase reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -9079,12 +9084,13 @@ creation_date: 2016-05-09T16:22:58Z
 
 [Term]
 id: ECO:0005667
-name: site-directed mutagenesis evidence used in manual assertion
-def: "A type of site-directed mutagenesis evidence that is used in a manual assertion." [ECO:SN]
+name: site-directed mutagenesis phenotypic evidence used in manual assertion
+def: "A type of site-directed phenotypic mutagenesis evidence that is used in a manual assertion." [ECO:SN]
 synonym: "site directed mutagenesis evidence" BROAD []
-is_a: ECO:0005528 ! site-directed mutagenesis evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0005528 ! site-directed mutagenesis evidence
+synonym: "site-directed mutagenesis evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005528 ! site-directed mutagenesis phenotypic evidence
+intersection_of: ECO:0005528 ! site-directed mutagenesis phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
 created_by: snadendla
@@ -9143,8 +9149,8 @@ creation_date: 2016-05-10T11:54:03Z
 id: ECO:0005672
 name: xylE reporter gene assay evidence used in manual assertion
 def: "A type of xylE reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0005537 ! xylE reporter gene assay evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
 intersection_of: ECO:0005537 ! xylE reporter gene assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 relationship: used_in ECO:0000218 {is_inferred="true"} ! manual assertion
@@ -9264,6 +9270,7 @@ creation_date: 2016-06-15T08:42:16Z
 id: ECO:0006002
 name: Cya fusion reporter assay evidence used in manual assertion
 def: "A type of Cya fusion reporter assay evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0001273 {is_inferred="true"} ! ectopic expression evidence used in manual assertion
 is_a: ECO:0006001 ! Cya fusion reporter assay evidence
 intersection_of: ECO:0006001 ! Cya fusion reporter assay evidence
@@ -11311,7 +11318,7 @@ creation_date: 2018-03-14T12:44:11Z
 [Term]
 id: ECO:0007067
 name: colony papillation assay phenotypic evidence
-def: "A type of colony morphology phenotypic evidence resulting from the formation of papillae (microcolonies) that protrude outwards from the main colony by mutant cells." [PMID:27447898, PMID:27447898]
+def: "A type of colony morphology phenotypic evidence resulting from the formation of papillae (microcolonies) that protrude outwards from the main colony by mutant cells." [PMID:27447898]
 synonym: "colony papillation assay evidence" EXACT []
 is_a: ECO:0007077 ! colony morphology phenotypic evidence
 property_value: IAO:0000234 "OMP" xsd:string
@@ -11618,11 +11625,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007093
-name: voucher specimen analysis evidence used in manual assertion
-def: "A type of voucher specimen analysis evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000050 {is_inferred="true"} ! voucher specimen analysis evidence
+name: voucher specimen phenotypic analysis evidence used in manual assertion
+def: "A type of voucher specimen phenotypic analysis evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "voucher specimen analysis evidence used in manual assertion" EXACT []
+is_a: ECO:0000050 {is_inferred="true"} ! voucher specimen phenotypic analysis evidence
 is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0000050 ! voucher specimen analysis evidence
+intersection_of: ECO:0000050 ! voucher specimen phenotypic analysis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -11797,7 +11805,7 @@ id: ECO:0007110
 name: thin layer chromatography evidence used in manual assertion
 def: "A type of thin layer chromatography evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000140 {is_inferred="true"} ! thin layer chromatography evidence
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0007680 {is_inferred="true"} ! chromatography evidence used in manual assertion
 intersection_of: ECO:0000140 ! thin layer chromatography evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -12374,33 +12382,36 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007166
-name: repeat expansion mutation evidence used in manual assertion
-def: "A type of repeat expansion mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0005513 {is_inferred="true"} ! repeat expansion mutation evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0005513 ! repeat expansion mutation evidence
+name: repeat expansion mutation phenotypic evidence used in manual assertion
+def: "A type of repeat expansion mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "repeat expansion mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005513 {is_inferred="true"} ! repeat expansion mutation phenotypic evidence
+intersection_of: ECO:0005513 ! repeat expansion mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007167
-name: splice site mutation evidence used in manual assertion
-def: "A type of splice site mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0005514 {is_inferred="true"} ! splice site mutation evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0005514 ! splice site mutation evidence
+name: splice site mutation phenotypic evidence used in manual assertion
+def: "A type of splice site mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "splice site mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005514 {is_inferred="true"} ! splice site mutation phenotypic evidence
+intersection_of: ECO:0005514 ! splice site mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007168
-name: translocation mutation evidence used in manual assertion
-def: "A type of translocation mutation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0005515 {is_inferred="true"} ! translocation mutation evidence
-is_a: ECO:0007634 {is_inferred="true"} ! experimental phenotypic evidence used in manual assertion
-intersection_of: ECO:0005515 ! translocation mutation evidence
+name: translocation mutation phenotypic evidence used in manual assertion
+def: "A type of translocation mutation phenotypic evidence that is used in a manual assertion." [ECO:RCT]
+synonym: "translocation mutation evidence used in manual assertion" EXACT []
+is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005515 {is_inferred="true"} ! translocation mutation phenotypic evidence
+intersection_of: ECO:0005515 ! translocation mutation phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12704,11 +12715,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007197
-name: voucher specimen analysis evidence used in automatic assertion
-def: "A type of voucher specimen analysis evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000050 {is_inferred="true"} ! voucher specimen analysis evidence
+name: voucher specimen phenotypic analysis evidence used in automatic assertion
+def: "A type of voucher specimen phenotypic analysis evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "voucher specimen analysis evidence used in automatic assertion" EXACT []
+is_a: ECO:0000050 {is_inferred="true"} ! voucher specimen phenotypic analysis evidence
 is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0000050 ! voucher specimen analysis evidence
+intersection_of: ECO:0000050 ! voucher specimen phenotypic analysis evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -12883,7 +12895,7 @@ id: ECO:0007214
 name: thin layer chromatography evidence used in automatic assertion
 def: "A type of thin layer chromatography evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000140 {is_inferred="true"} ! thin layer chromatography evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+is_a: ECO:0007681 {is_inferred="true"} ! chromatography evidence used in automatic assertion
 intersection_of: ECO:0000140 ! thin layer chromatography evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -13460,33 +13472,36 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007270
-name: repeat expansion mutation evidence used in automatic assertion
-def: "A type of repeat expansion mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005513 {is_inferred="true"} ! repeat expansion mutation evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0005513 ! repeat expansion mutation evidence
+name: repeat expansion mutation phenotypic evidence used in automatic assertion
+def: "A type of repeat expansion mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "repeat expansion mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005513 {is_inferred="true"} ! repeat expansion mutation phenotypic evidence
+is_a: ECO:0007325 {is_inferred="true"} ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0005513 ! repeat expansion mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007271
-name: splice site mutation evidence used in automatic assertion
-def: "A type of splice site mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005514 {is_inferred="true"} ! splice site mutation evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0005514 ! splice site mutation evidence
+name: splice site mutation phenotypic evidence used in automatic assertion
+def: "A type of splice site mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "splice site mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005514 {is_inferred="true"} ! splice site mutation phenotypic evidence
+is_a: ECO:0007325 {is_inferred="true"} ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0005514 ! splice site mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007272
-name: translocation mutation evidence used in automatic assertion
-def: "A type of translocation mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005515 {is_inferred="true"} ! translocation mutation evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0005515 ! translocation mutation evidence
+name: translocation mutation phenotypic evidence used in automatic assertion
+def: "A type of translocation mutation phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "translocation mutation evidence used in automatic assertion" EXACT []
+is_a: ECO:0005515 {is_inferred="true"} ! translocation mutation phenotypic evidence
+is_a: ECO:0007325 {is_inferred="true"} ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0005515 ! translocation mutation phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -14286,7 +14301,7 @@ id: ECO:0007344
 name: anion-exchange chromatography evidence used in automatic assertion
 def: "A type of anion-exchange chromatography evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001010 {is_inferred="true"} ! anion-exchange chromatography evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+is_a: ECO:0007681 {is_inferred="true"} ! chromatography evidence used in automatic assertion
 intersection_of: ECO:0001010 ! anion-exchange chromatography evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -14776,7 +14791,7 @@ id: ECO:0007388
 name: gel-filtration evidence used in automatic assertion
 def: "A type of gel-filtration evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001049 {is_inferred="true"} ! gel-filtration evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+is_a: ECO:0007681 {is_inferred="true"} ! chromatography evidence used in automatic assertion
 intersection_of: ECO:0001049 ! gel-filtration evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -15702,7 +15717,7 @@ id: ECO:0007472
 name: high-performance liquid chromatography evidence used in automatic assertion
 def: "A type of high-performance liquid chromatography evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001052 {is_inferred="true"} ! high-performance liquid chromatography evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+is_a: ECO:0007681 {is_inferred="true"} ! chromatography evidence used in automatic assertion
 intersection_of: ECO:0001052 ! high-performance liquid chromatography evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16003,7 +16018,7 @@ id: ECO:0007499
 name: alkaline phosphatase reporter gene assay evidence used in automatic assertion
 def: "A type of alkaline phosphatase reporter gene assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001801 {is_inferred="true"} ! alkaline phosphatase reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001801 ! alkaline phosphatase reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16015,7 +16030,7 @@ name: beta-galactosidase reporter gene assay evidence used in automatic assertio
 def: "A type of beta-galactosidase reporter gene assay evidence that is used in an automatic assertion." [ECO:RCT]
 synonym: "LacZ transcript localization evidence used in automatic assertion" EXACT []
 is_a: ECO:0001802 {is_inferred="true"} ! beta-galactosidase reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001802 ! beta-galactosidase reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16026,7 +16041,7 @@ id: ECO:0007501
 name: chloramphenicol acetyltransferase reporter gene assay evidence used in automatic assertion
 def: "A type of chloramphenicol acetyltransferase reporter gene assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001803 {is_inferred="true"} ! chloramphenicol acetyltransferase reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001803 ! chloramphenicol acetyltransferase reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16081,7 +16096,7 @@ id: ECO:0007506
 name: DNA affinity chromatography evidence used in automatic assertion
 def: "A type of DNA affinity chromatography evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001809 {is_inferred="true"} ! DNA affinity chromatography evidence
-is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+is_a: ECO:0007681 {is_inferred="true"} ! chromatography evidence used in automatic assertion
 intersection_of: ECO:0001809 ! DNA affinity chromatography evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16114,7 +16129,7 @@ id: ECO:0007509
 name: ferric uptake regulator titration assay evidence used in automatic assertion
 def: "A type of ferric uptake regulator titration assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001829 {is_inferred="true"} ! ferric uptake regulator titration assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001829 ! ferric uptake regulator titration assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16147,7 +16162,7 @@ id: ECO:0007512
 name: beta-glucuronidase reporter gene assay evidence used in automatic assertion
 def: "A type of beta-glucuronidase reporter gene assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001804 {is_inferred="true"} ! beta-glucuronidase reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001804 ! beta-glucuronidase reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16191,7 +16206,7 @@ id: ECO:0007516
 name: luciferase reporter gene assay evidence used in automatic assertion
 def: "A type of luciferase reporter gene assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001805 {is_inferred="true"} ! luciferase reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0001805 ! luciferase reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16277,11 +16292,12 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007524
-name: site-directed mutagenesis evidence used in automatic assertion
-def: "A type of site-directed mutagenesis evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005528 {is_inferred="true"} ! site-directed mutagenesis evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
-intersection_of: ECO:0005528 ! site-directed mutagenesis evidence
+name: site-directed mutagenesis phenotypic evidence used in automatic assertion
+def: "A type of site-directed mutagenesis phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "site-directed mutagenesis evidence used in automatic assertion" EXACT []
+is_a: ECO:0005528 {is_inferred="true"} ! site-directed mutagenesis phenotypic evidence
+is_a: ECO:0007325 {is_inferred="true"} ! mutant phenotype evidence used in automatic assertion
+intersection_of: ECO:0005528 ! site-directed mutagenesis phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -16313,7 +16329,7 @@ id: ECO:0007527
 name: xylE reporter gene assay evidence used in automatic assertion
 def: "A type of xylE reporter gene assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0005537 {is_inferred="true"} ! xylE reporter gene assay evidence
-is_a: ECO:0007635 {is_inferred="true"} ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0005537 ! xylE reporter gene assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -16368,6 +16384,7 @@ id: ECO:0007532
 name: Cya fusion reporter assay evidence used in automatic assertion
 def: "A type of Cya fusion reporter assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0006001 {is_inferred="true"} ! Cya fusion reporter assay evidence
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 is_a: ECO:0007473 {is_inferred="true"} ! ectopic expression evidence used in automatic assertion
 intersection_of: ECO:0006001 ! Cya fusion reporter assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -17903,6 +17920,28 @@ is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automati
 is_a: ECO:0007677 {is_inferred="true"} ! combinatorial computational evidence
 intersection_of: ECO:0007677 ! combinatorial computational evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
+
+[Term]
+id: ECO:0007680
+name: chromatography evidence used in manual assertion
+def: "A type of chromatography evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0000325 {is_inferred="true"} ! chromatography evidence
+intersection_of: ECO:0000325 ! chromatography evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: rctauber
+creation_date: 2019-01-21T06:28:00Z
+
+[Term]
+id: ECO:0007681
+name: chromatography evidence used in automatic assertion
+def: "A type of chromatography evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000325 {is_inferred="true"} ! chromatography evidence
+is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+intersection_of: ECO:0000325 ! chromatography evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: rctauber
+creation_date: 2019-01-21T06:28:00Z
 
 [Term]
 id: GO:0000737
