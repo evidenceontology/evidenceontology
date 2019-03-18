@@ -64,10 +64,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002211">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002211"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        </owl:propertyChainAxiom>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulates</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulates</rdfs:label>
     </owl:ObjectProperty>
@@ -78,10 +74,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002212">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002212"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        </owl:propertyChainAxiom>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negatively_regulates</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negatively regulates</rdfs:label>
     </owl:ObjectProperty>
@@ -95,10 +87,6 @@
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002212"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002212"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002213"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
         </owl:propertyChainAxiom>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positively_regulates</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positively regulates</rdfs:label>
@@ -591,8 +579,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005216">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015075"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015267"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015318"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022838"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0005216</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ion channel activity</rdfs:label>
     </owl:Class>
@@ -666,7 +654,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0006260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006259"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0034645"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -694,7 +681,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051052"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2000112"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1210,7 +1196,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006275"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051053"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2000113"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2504,16 +2489,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022857"/>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0022803</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">passive transmembrane transporter activity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0022838 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022838">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015267"/>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0022838</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substrate-specific channel activity</rdfs:label>
     </owl:Class>
     
 
@@ -5977,7 +5952,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006275"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010557"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031328"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051054"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
