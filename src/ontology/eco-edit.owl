@@ -2077,16 +2077,17 @@ AnnotationAssertion(rdfs:comment obo:ECO_0000004 "If using this term for Gene On
 AnnotationAssertion(rdfs:label obo:ECO_0000004 "cell fractionation evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000004 obo:ECO_0000100)
 
-# Class: obo:ECO_0000005 (enzyme assay evidence)
+# Class: obo:ECO_0000005 (enzymatic activity assay evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.sciencedirect.com/science/article/pii/S2213020914000068"^^xsd:string) obo:IAO_0000115 obo:ECO_0000005 "A type of protein assay evidence where the catalytic activity of an enzyme is determined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000005 "ECO:0005001"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "enzymatic study"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000005 "MI:0415"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000005 "enzyme assay evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000005 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000005 "IDA: enzyme assays"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000005 "ECO:0000005"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0000005 "enzyme assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000005 obo:ECO_0000039)
+AnnotationAssertion(rdfs:label obo:ECO_0000005 "enzymatic activity assay evidence"^^xsd:string)
+SubClassOf(obo:ECO_0000005 obo:ECO_0000002)
 
 # Class: obo:ECO_0000006 (experimental evidence)
 
@@ -2133,7 +2134,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000010 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000010 "ECO:0000010"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000010 "protein expression evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000010 obo:ECO_0000008)
-SubClassOf(obo:ECO_0000010 obo:ECO_0000039)
 
 # Class: obo:ECO_0000011 (genetic interaction evidence)
 
@@ -2204,13 +2204,14 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0000019 "ECO:0000019"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000019 "RNAi evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000019 obo:ECO_0000015)
 
-# Class: obo:ECO_0000020 (specific protein inhibition evidence)
+# Class: obo:ECO_0000020 (protein inhibition evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000020 "A type of protein assay evidence based on the inhibition of the molecular function of a protein."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000020 "A type of direct assay evidence based on the inhibition of the molecular function of a protein."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:ECO_0000020 "specific protein inhibition evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000020 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000020 "ECO:0000020"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0000020 "specific protein inhibition evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000020 obo:ECO_0000039)
+AnnotationAssertion(rdfs:label obo:ECO_0000020 "protein inhibition evidence"^^xsd:string)
+SubClassOf(obo:ECO_0000020 obo:ECO_0000002)
 
 # Class: obo:ECO_0000021 (physical interaction evidence)
 
@@ -2250,7 +2251,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000024 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000024 "ECO:0000024"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000024 "protein binding evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000024 obo:ECO_0000023)
-SubClassOf(obo:ECO_0000024 obo:ECO_0000039)
 
 # Class: obo:ECO_0000025 (hybrid interaction evidence)
 
@@ -2383,7 +2383,7 @@ AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000039 "ECO:0005022"^^xsd
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000039 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000039 "ECO:0000039"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000039 "protein assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000039 obo:ECO_0000002)
+AnnotationAssertion(owl:deprecated obo:ECO_0000039 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000040 (immunological assay evidence)
 
@@ -2803,14 +2803,14 @@ SubClassOf(obo:ECO_0000084 obo:ECO_0000177)
 
 # Class: obo:ECO_0000085 (immunoprecipitation evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000085 "A type of protein assay evidence that involves precipitation of a multivalent antigen by a bivalent antibody for protein isolation."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000085 "A type of protein binding evidence that involves precipitation of a multivalent antigen by a bivalent antibody for protein isolation."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000085 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000085 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000085 "IDA: immunoprecipitation"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000085 "ECO:0000085"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000085 "Transcription factors isolated in this way can be incubated with a radiolabeled probe to demonstrate binding."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000085 "immunoprecipitation evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000085 obo:ECO_0000039)
+SubClassOf(obo:ECO_0000085 obo:ECO_0000024)
 
 # Class: obo:ECO_0000086 (amplification of intermethylated sites evidence)
 
@@ -3395,7 +3395,7 @@ SubClassOf(obo:ECO_0000183 obo:ECO_0000002)
 
 # Class: obo:ECO_0000184 (enzyme inhibition evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000184 "A type of specific protein inhibition evidence where the protein under study is an enzyme."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000184 "A type of protein inhibition evidence and enzymatic acitivty evidence where the protein under study is an enzyme."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000184 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000184 "ECO:0000184"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000184 "enzyme inhibition evidence"^^xsd:string)
@@ -6762,14 +6762,14 @@ SubClassOf(obo:ECO_0001108 obo:ECO_0000024)
 
 # Class: obo:ECO_0001109 (phosphoamino acid analysis evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11680867"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:18429115"^^xsd:string) obo:IAO_0000115 obo:ECO_0001109 "A type of protein assay evidence resulting from the identification of the phosphorylated residue in a protein by amino acid analysis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:11680867"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:18429115"^^xsd:string) obo:IAO_0000115 obo:ECO_0001109 "A type of direct assay evidence resulting from the identification of the phosphorylated residue in a protein by amino acid analysis."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001109 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001109 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001109 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001109 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001109 "ECO:0001109"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001109 "phosphoamino acid analysis evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001109 obo:ECO_0000039)
+SubClassOf(obo:ECO_0001109 obo:ECO_0000002)
 
 # Class: obo:ECO_0001110 (peptide affinity enrichment evidence)
 
@@ -6796,7 +6796,7 @@ SubClassOf(obo:ECO_0001111 obo:ECO_0000002)
 
 # Class: obo:ECO_0001112 (peptide array evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21243154"^^xsd:string) obo:IAO_0000115 obo:ECO_0001112 "A type of protein assay evidence resulting from protein-bound peptides detected from a collection of peptides arranged as an array and incubated with the partner protein in order to map protein-protein interaction sites."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21243154"^^xsd:string) obo:IAO_0000115 obo:ECO_0001112 "A type of protein binding evidence resulting from protein-bound peptides detected from a collection of peptides arranged as an array and incubated with the partner protein in order to map protein-protein interaction sites."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001112 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001112 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001112 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -6804,7 +6804,7 @@ AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:ECO_0001112 "phosphopeptide ar
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001112 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001112 "ECO:0001112"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001112 "peptide array evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001112 obo:ECO_0000039)
+SubClassOf(obo:ECO_0001112 obo:ECO_0000024)
 
 # Class: obo:ECO_0001113 (point mutation phenotypic evidence)
 
@@ -6967,7 +6967,7 @@ SubClassOf(obo:ECO_0001128 obo:ECO_0000059)
 
 # Class: obo:ECO_0001129 (TACE activity assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:1808921"^^xsd:string) obo:IAO_0000115 obo:ECO_0001129 "A type of enzyme assay evidence resulting from the analysis of tumor necrosis factor (TNF)-a converting enzyme (TACE), which releases a soluble TNF-a from the membrane-bound precursor protein."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMC:1808921"^^xsd:string) obo:IAO_0000115 obo:ECO_0001129 "A type of enzymatic activity assay evidence resulting from the analysis of tumor necrosis factor (TNF)-a converting enzyme (TACE), which releases a soluble TNF-a from the membrane-bound precursor protein."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001129 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001129 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001129 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -9022,14 +9022,15 @@ SubClassOf(obo:ECO_0001557 obo:ECO_0000002)
 
 # Class: obo:ECO_0001558 (protein kinase assay evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SIB:PG"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://en.wikipedia.org/wiki/Protein_kinase"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://en.wikipedia.org/wiki/Protein_phosphorylation"^^xsd:string) obo:IAO_0000115 obo:ECO_0001558 "A type of direct assay evidence where phosphorylated residues in proteins are detected."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.ncbi.nlm.nih.gov/books/NBK91991/"^^xsd:string) obo:IAO_0000115 obo:ECO_0001558 "A type of enzymatic activity assay evidence that measures transfer of a phosphate to a peptide or protein substrate by a protein kinase."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001558 "ECO_AssayCleanup"^^xsd:string)
-AnnotationAssertion(oboInOwl:created_by obo:ECO_0001558 "mchibucos / jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001558 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001558 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001558 "2017-11-30T14:00:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001558 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001558 "ECO:0001558"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001558 "protein kinase assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001558 obo:ECO_0000002)
+SubClassOf(obo:ECO_0001558 obo:ECO_0000005)
 
 # Class: obo:ECO_0001559 (sumoylation assay evidence)
 
@@ -10853,7 +10854,6 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005603 "2016-03-18T13:11:37Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005603 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005603 "ECO:0005603"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005603 "protein mass spectrometry evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005603 obo:ECO_0000039)
 SubClassOf(obo:ECO_0005603 obo:ECO_0001096)
 
 # Class: obo:ECO_0005604 (cross-streak test evidence)
@@ -11792,13 +11792,13 @@ AnnotationAssertion(rdfs:comment obo:ECO_0005800 "For chemicals, bacteriocins, o
 AnnotationAssertion(rdfs:label obo:ECO_0005800 "dilution assay evidence"@en)
 SubClassOf(obo:ECO_0005800 obo:ECO_0000002)
 
-# Class: obo:ECO_0005801 (enzyme assay evidence used in manual assertion)
+# Class: obo:ECO_0005801 (enzymatic activity assay evidence used in manual assertion)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005801 "A type of enzyme assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:ECO_0005801 "IDA: enzyme assays"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005801 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005801 "ECO:0005801"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0005801 "enzyme assay evidence used in manual assertion"@en)
+AnnotationAssertion(rdfs:label obo:ECO_0005801 "enzymatic activity assay evidence used in manual assertion"@en)
 EquivalentClasses(obo:ECO_0005801 ObjectIntersectionOf(obo:ECO_0000005 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0005801 obo:ECO_0000005)
 SubClassOf(obo:ECO_0005801 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
@@ -17926,14 +17926,14 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0007467 "ECO:0007467"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007467 "TACE activity assay evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007467 ObjectIntersectionOf(obo:ECO_0001129 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 
-# Class: obo:ECO_0007468 (enzyme assay evidence used in automatic assertion)
+# Class: obo:ECO_0007468 (enzymatic activity assay evidence used in automatic assertion)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007468 "A type of enzyme assay evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007468 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007468 "2018-05-14T09:47:55Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007468 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007468 "ECO:0007468"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0007468 "enzyme assay evidence used in automatic assertion"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007468 "enzymatic activity assay evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007468 ObjectIntersectionOf(obo:ECO_0000005 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 
 # Class: obo:ECO_0007469 (surface plasmon resonance evidence used in automatic assertion)
@@ -20290,8 +20290,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007705 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007705 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007705 "ECO:0007705"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007705 "protein assay evidence used in manual assertion"^^xsd:string)
-SubClassOf(obo:ECO_0007705 obo:ECO_0000039)
-SubClassOf(obo:ECO_0007705 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+AnnotationAssertion(owl:deprecated obo:ECO_0007705 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0007706 (chromatin immunoprecipitation evidence used in manual assertion)
 
@@ -20304,16 +20303,15 @@ AnnotationAssertion(rdfs:label obo:ECO_0007706 "chromatin immunoprecipitation ev
 SubClassOf(obo:ECO_0007706 obo:ECO_0000226)
 SubClassOf(obo:ECO_0007706 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
-# Class: obo:ECO_0007707 (specific protein inhibition evidence used in manual assertion)
+# Class: obo:ECO_0007707 (protein inhibition evidence used in manual assertion)
 
-AnnotationAssertion(obo:IAO_0000115 obo:ECO_0007707 "A type of specific protein inhibition evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0007707 "A type of protein inhibition evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007707 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007707 "2019-03-20T12:27:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007707 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007707 "ECO:0007707"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0007707 "specific protein inhibition evidence used in manual assertion"^^xsd:string)
-SubClassOf(obo:ECO_0007707 obo:ECO_0000020)
-SubClassOf(obo:ECO_0007707 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+AnnotationAssertion(rdfs:label obo:ECO_0007707 "protein inhibition evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007707 ObjectIntersectionOf(obo:ECO_0000020 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 
 # Class: obo:ECO_0007708 (sumoylation assay evidence used in manual assertion)
 
@@ -21118,16 +21116,16 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007784 "2019-03-20T13:02:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007784 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007784 "ECO:0007784"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007784 "protein assay evidence used in automatic assertion"^^xsd:string)
-EquivalentClasses(obo:ECO_0007784 ObjectIntersectionOf(obo:ECO_0000039 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+AnnotationAssertion(owl:deprecated obo:ECO_0007784 "true"^^xsd:boolean)
 
-# Class: obo:ECO_0007785 (specific protein inhibition evidence used in automatic assertion)
+# Class: obo:ECO_0007785 (protein inhibition evidence used in automatic assertion)
 
-AnnotationAssertion(obo:IAO_0000115 obo:ECO_0007785 "A type of specific protein inhibition evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0007785 "A type of protein inhibition evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007785 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007785 "2019-03-20T13:02:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007785 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007785 "ECO:0007785"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0007785 "specific protein inhibition evidence used in automatic assertion"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0007785 "protein inhibition evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007785 ObjectIntersectionOf(obo:ECO_0000020 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 
 # Class: obo:ECO_0007786 (chromatin immunoprecipitation evidence used in automatic assertion)
