@@ -99,6 +99,7 @@ verify: init
 # eco-base.owl is an import-removed, *non-reasoned* release
 BASE = $(ECO)-base
 # eco-basic.owl is an import-removed, *reasoned* release
+# with no equivalents and no anonymous parents
 BASIC = $(ECO)-basic
 
 build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASIC).owl $(BASIC).obo
@@ -115,7 +116,8 @@ $(ECO).owl: $(EDIT)
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
 $(ECO).obo: $(ECO).owl
-	$(ROBOT) convert --input $< --format obo --check false --output $(basename $@)-temp.obo && \
+	$(ROBOT) convert --input $< --format obo --check false\
+	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
@@ -127,14 +129,15 @@ $(BASE).owl: $(EDIT)
 
 $(BASIC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
-	reason --reasoner elk --annotate-inferred-axioms false \
+	reason --reasoner elk --annotate-inferred-axioms false reduce \
 	remove --select "equivalents parents" --select "anonymous" \
 	annotate --ontology-iri "$(OBO)eco/$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
 $(BASIC).obo: $(BASIC).owl
-	$(ROBOT) convert --input $< --format obo --check false --output $(basename $@)-temp.obo && \
+	$(ROBOT) convert --input $< --format obo --check false\
+	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
