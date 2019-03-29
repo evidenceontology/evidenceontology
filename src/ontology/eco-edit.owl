@@ -9217,7 +9217,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001575 "2019-03-01T12:00:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001575 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001575 "ECO:0001575"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001575 "membrane fusion assay evidence used in automatic assertion"^^xsd:string)
-SubClassOf(obo:ECO_0001575 obo:ECO_0001574)
+EquivalentClasses(obo:ECO_0001575 ObjectIntersectionOf(obo:ECO_0001574 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 
 # Class: obo:ECO_0001576 (membrane fusion assay evidence used in manual assertion)
 
@@ -9227,7 +9227,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001576 "2019-03-01T12:00:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001576 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001576 "ECO:0001576"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001576 "membrane fusion assay evidence used in manual assertion"^^xsd:string)
-SubClassOf(obo:ECO_0001576 obo:ECO_0001574)
+EquivalentClasses(obo:ECO_0001576 ObjectIntersectionOf(obo:ECO_0001574 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 
 # Class: obo:ECO_0001577 (spheroplast fusion assay evidence)
 
