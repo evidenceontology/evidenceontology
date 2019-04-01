@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2019-03-29/eco-basic.owl
-date: 03:05:2021 07:21
+data-version: eco/releases/2019-04-01/eco-basic.owl
+date: 04:01:2019 13:30
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -1592,8 +1592,8 @@ synonym: "computational combinatorial evidence used in manual assertion" RELATED
 synonym: "inferred from reviewed computational analysis" EXACT [GOECO:RCA]
 synonym: "RCA" EXACT [GOECO:RCA]
 xref: GOECO:RCA "inferred from reviewed computational analysis"
-is_a: ECO:0000053 ! automatically integrated combinatorial evidence used in automatic assertion
 is_a: ECO:0000244 ! combinatorial evidence used in manual assertion
+is_a: ECO:0007673 ! automatically integrated combinatorial evidence
 intersection_of: ECO:0007673 ! automatically integrated combinatorial evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: seeAlso http://geneontology.org/page/rca-inferred-reviewed-computational-analysis xsd:string
@@ -9111,7 +9111,7 @@ is_a: ECO:0005027 ! genetic transformation evidence
 intersection_of: ECO:0005027 ! genetic transformation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 02-21-2017T18:98:58Z
+creation_date: 2017-02-21T18:08:58Z
 
 [Term]
 id: ECO:0006050
@@ -9123,7 +9123,7 @@ is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
 intersection_of: ECO:0000018 ! anti-sense experiment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 02-21-2017T18:98:58Z
+creation_date: 2017-02-21T18:08:58Z
 
 [Term]
 id: ECO:0006051
@@ -9135,7 +9135,7 @@ is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
 intersection_of: ECO:0000292 ! morpholino experiment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 02-21-2017T18:98:58Z
+creation_date: 2017-02-21T18:08:58Z
 
 [Term]
 id: ECO:0006052
@@ -9147,7 +9147,7 @@ is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
 intersection_of: ECO:0000019 ! RNAi evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 02-21-2017T18:98:58Z
+creation_date: 2017-02-21T18:08:58Z
 
 [Term]
 id: ECO:0006053
@@ -16841,7 +16841,7 @@ id: ECO:0007652
 name: automatically integrated combinatorial computational evidence used in manual assertion
 def: "A type of automatically integrated combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000245 ! automatically integrated combinatorial evidence used in manual assertion
-is_a: ECO:0007653 ! automatically integrated combinatorial computational evidence used in automatic assertion
+is_a: ECO:0007651 ! automatically integrated combinatorial computational evidence
 is_a: ECO:0007678 ! combinatorial computational evidence used in manual assertion
 intersection_of: ECO:0007651 ! automatically integrated combinatorial computational evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -16914,7 +16914,7 @@ id: ECO:0007659
 name: automatically integrated combinatorial experimental evidence used in manual assertion
 def: "A type of automatically integrated combinatorial experimental evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000245 ! automatically integrated combinatorial evidence used in manual assertion
-is_a: ECO:0007660 ! automatically integrated combinatorial experimental evidence used in automatic assertion
+is_a: ECO:0007658 ! automatically integrated combinatorial experimental evidence
 intersection_of: ECO:0007658 ! automatically integrated combinatorial experimental evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -16986,7 +16986,7 @@ id: ECO:0007666
 name: automatically integrated combinatorial computational and experimental evidence used in manual assertion
 def: "A type of automatically integrated combinatorial computational and experimental evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000245 ! automatically integrated combinatorial evidence used in manual assertion
-is_a: ECO:0007667 ! automatically integrated combinatorial computational and experimental evidence used in automatic assertion
+is_a: ECO:0007665 ! automatically integrated combinatorial computational and experimental evidence
 intersection_of: ECO:0007665 ! automatically integrated combinatorial computational and experimental evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
