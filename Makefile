@@ -18,7 +18,7 @@ SPARQL = src/sparql/
 #update: build/robot.jar | modules imports
 .PHONY: update
 update: modules imports
-all: update report build mapping subsets
+all: report build mapping subsets
 release: all
 
 # test is used for Travis integration

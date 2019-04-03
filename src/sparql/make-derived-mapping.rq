@@ -139,16 +139,25 @@ SELECT ?eco ?go ?def WHERE { { ?s oboInOwl:id "ECO:0000269" .    # Search for EX
                 }
                 FILTER NOT EXISTS {
                   ?c oboInOwl:id "ECO:0000315" .        # Filter IMP for Default
+                }
+                FILTER NOT EXISTS {
+                  ?c oboInOwl:id "ECO:0006095" .
                 } 
-      } UNION
-              { ?s oboInOwl:id "ECO:0000315" .        # Set Default for IMP
+
+      } UNION 
+      { ?s oboInOwl:id "ECO:0000315" .        # Set Default for IMP
                 ?s oboInOwl:id ?eco .
                 ?s rdfs:label ?label .
                 BIND("Default" AS ?def) .
                 BIND("IMP" AS ?go)
-               } 
 
-      UNION 
+      } UNION 
+      { ?s oboInOwl:id "ECO:0006095" .        # Set fix for ECO:0006095 -> IGI
+                ?s oboInOwl:id ?eco .
+                ?s rdfs:label ?label .
+                BIND("IGI" AS ?go)
+                
+      } UNION 
       { ?s oboInOwl:id "ECO:0000316" .                 # Search for IGI
               ?c rdfs:subClassOf* ?s .
               ?c oboInOwl:id ?eco .
