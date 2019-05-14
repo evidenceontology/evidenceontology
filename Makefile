@@ -112,7 +112,7 @@ $(ECO).owl: $(EDIT)
 	$(ROBOT) merge --input $< --collapse-import-closure true \
 	 reason --reasoner elk --create-new-ontology false \
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
-	 annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
+	 reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
 $(ECO).obo: $(ECO).owl
@@ -131,7 +131,7 @@ $(BASIC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
 	reason --reasoner elk --annotate-inferred-axioms false reduce \
 	remove --select "equivalents parents" --select "anonymous" \
-	annotate --ontology-iri "$(OBO)eco/$@"\
+	reduce annotate --ontology-iri "$(OBO)eco/$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
