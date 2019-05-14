@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2019-04-01/eco-basic.owl
-date: 04:01:2019 13:30
+data-version: eco/releases/2019-05-14/eco-basic.owl
+date: 05:02:2020 08:13
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -585,7 +585,7 @@ is_a: ECO:0005519 ! DNA detection assay evidence
 [Term]
 id: ECO:0000079
 name: affinity chromatography evidence
-def: "A type of affinity evidence that results from separation of biochemical mixtures by selective binding of a compound to an immobilized compound on a polymeric matrix, subsequent removal of unattached components, and then displacement of the bond compound." [ECO:MCC, TAIR:TED]
+def: "A type of affinity evidence that results from separation of biochemical mixtures by selective binding of a compound to an immobilized compound on a polymeric matrix, subsequent removal of unattached components, and then displacement of the bound compound." [ECO:MCC, TAIR:TED]
 comment: "Used when an annotation is made based on affinity chromatography, which is a selective separation technique by which a compound (e.g., an antibody) is immobilized on a polymeric matrix and used to bind selectively other compounds. Following removal of the unattached components, the bound compound is displaced by changing the concentration of protons, salts, or cofactors in the eluent" (from original definition by TAIR:TED). Types of highly specific interaction might include those of antigen and antibody, enzyme and substrate, or receptor and ligand.
 synonym: "IDA: affinity chromatography" RELATED []
 xref: MI:0004 "affinity chromatography technology"
@@ -859,7 +859,7 @@ id: ECO:0000120
 name: over expression analysis evidence
 def: "A type of experimental phenotypic evidence in which a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product." [PMID:22419077]
 synonym: "IMP: analysis of overexpression/ectopic expression phenotype" RELATED []
-is_a: ECO:0000059 ! experimental phenotypic evidence
+is_a: ECO:0005027 ! genetic transformation evidence
 
 [Term]
 id: ECO:0000122
@@ -3897,7 +3897,8 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001098
 name: microscopy evidence
-def: "A type of direct assay evidence where a microscope was used to view a sample." [ECO:MCC]
+def: "A type of direct assay evidence resulting from the use of a microscope." [ECO:MCC]
+comment: Microscopy may include any of the following: optical, electron, scanning probe, or X-ray.
 is_a: ECO:0000324 ! imaging assay evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -6296,6 +6297,176 @@ created_by: jbmunro
 creation_date: 2019-03-26T12:00:00Z
 
 [Term]
+id: ECO:0001583
+name: small interfering RNA knockdown evidence
+def: "A type of anti-sense experiment evidence where gene expression is disrupted through the introduction of double-stranded RNA molecules, 20-25 base pairs in length, which operate within the RNA interference pathway." []
+synonym: "short interfering RNA" EXACT []
+synonym: "silencing RNA" EXACT []
+synonym: "siRNA" EXACT []
+is_a: ECO:0000018 ! anti-sense experiment evidence
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-03T12:00:00Z
+
+[Term]
+id: ECO:0001584
+name: small interfering RNA knockdown evidence used in automatic assertion
+def: "A type of small interfering RNA knockdown evidence that is used in an automatic assertion." []
+is_a: ECO:0001583 ! small interfering RNA knockdown evidence
+is_a: ECO:0007556 ! anti-sense experiment evidence used in automatic assertion
+intersection_of: ECO:0001583 ! small interfering RNA knockdown evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-03T12:00:00Z
+
+[Term]
+id: ECO:0001585
+name: small interfering RNA knockdown evidence used in manual assertion
+def: "A type of small interfering RNA knockdown evidence that is used in a manual assertion." []
+is_a: ECO:0001583 ! small interfering RNA knockdown evidence
+is_a: ECO:0006050 ! anti-sense experiment evidence used in manual assertion
+intersection_of: ECO:0001583 ! small interfering RNA knockdown evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-03T12:00:00Z
+
+[Term]
+id: ECO:0001586
+name: ion trap mass spectrometry evidence
+def: "A type of mass spectrometry evidence where a combination of magnetic and/or electric fields are utilized to capture charged particles in tandem with mass spectrometry." [PMID:1561330]
+is_a: ECO:0001096 ! mass spectrometry evidence
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001587
+name: ion trap mass spectrometry evidence used in automatic assertion
+def: "A type of ion trap mass spectrometry evidence that is used in an automatic assertion." []
+is_a: ECO:0001586 ! ion trap mass spectrometry evidence
+is_a: ECO:0007433 ! mass spectrometry evidence used in automatic assertion
+intersection_of: ECO:0001586 ! ion trap mass spectrometry evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001588
+name: ion trap mass spectrometry evidence used in manual assertion
+def: "A type of ion trap mass spectrometry evidence that is used in a manual assertion." []
+is_a: ECO:0001230 ! mass spectrometry evidence used in manual assertion
+is_a: ECO:0001586 ! ion trap mass spectrometry evidence
+intersection_of: ECO:0001586 ! ion trap mass spectrometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001589
+name: atomic force microscopy evidence
+def: "A type of microscopy evidence where a mechanical probe is applied to a sample (i.e. a type of scanning probe microscopy) which can result in production of an image (with resolution in the order of fractions of a nanometer), force measurement, or sample manipulation." []
+comment: Atomic force microscopy can be used for force measurement (force spectroscopy), imaging (rendering a three-dimensional shape (topography)), and manipulation of the sample.
+comment: Example sentence provided by CollecTF from PMID:22479184: "AFM revealed loop structures stabilized by multiple EspR dimer of dimers suggesting the presence of several distant EspR binding sites in the espACD upstream region."
+synonym: "AFM" EXACT []
+synonym: "scanning force microscopy" EXACT []
+synonym: "SFM" EXACT []
+is_a: ECO:0001098 ! microscopy evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001590
+name: atomic force microscopy evidence used in automatic assertion
+def: "A type of atomic force microscopy evidence that is used in an automatic assertion." []
+is_a: ECO:0001589 ! atomic force microscopy evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001591
+name: atomic force microscopy evidence used in manual assertion
+def: "A type of atomic force microscopy evidence that is used in a manual assertion." []
+is_a: ECO:0001589 ! atomic force microscopy evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001592
+name: polysome profiling evidence
+def: "A type of experimental evidence employed to study the associations between multiple ribosomes and mRNA that utilizes density gradient centrifugation to separate out the lysate of cells of interest with the objective of isolating polysomes/polyribosomes which are complexes of an mRNA molecule and two or more ribosomes that act to translate mRNA.  The optical density of the fractions is then determined." [PMID:30545912]
+comment: Once isolated, gel electrophoresis, immunoblot, and other protein profiling techniques can be applied to garner more information.
+is_a: ECO:0000006 ! experimental evidence
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001593
+name: polysome profiling evidence used in automatic assertion
+def: "A type of polysome profiling evidence that is used in an automatic assertion." []
+is_a: ECO:0001592 ! polysome profiling evidence
+is_a: ECO:0007297 ! experimental evidence used in automatic assertion
+intersection_of: ECO:0001592 ! polysome profiling evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001594
+name: polysome profiling evidence used in manual assertion
+def: "A type of polysome profiling evidence that is used in a manual assertion." []
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0001592 ! polysome profiling evidence
+intersection_of: ECO:0001592 ! polysome profiling evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "OMP" xsd:string
+created_by: jbmunro
+creation_date: 2019-04-15T12:00:00Z
+
+[Term]
+id: ECO:0001598
+name: multilocus sequence typing evidence
+def: "A type of nucleotide sequencing assay evidence in which DNA sequence variations within a specific set of genes (typically housekeeping genes) are used to characterizes strains by their unique allelic profiles." [PMID:9501229]
+comment: See PMID:24713082 for use example.
+synonym: "MLST" EXACT []
+is_a: ECO:0000219 ! nucleotide sequencing assay evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001599
+name: multilocus sequence typing evidence used in automatic assertion
+def: "A type of multilocus sequence typing evidence that is used in an automatic assertion." []
+is_a: ECO:0001598 ! multilocus sequence typing evidence
+is_a: ECO:0007813 ! nucleotide sequencing assay evidence used in automatic assertion
+intersection_of: ECO:0001598 ! multilocus sequence typing evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001600
+name: multilocus sequence typing evidence used in manual assertion
+def: "A type of multilocus sequence typing evidence that is used in a manual assertion" []
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0001598 ! multilocus sequence typing evidence
+intersection_of: ECO:0001598 ! multilocus sequence typing evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
 id: ECO:0001601
 name: protein-binding microarray evidence
 def: "A type of protein-binding evidence that detects binding of a tagged protein to an array of oligonucleotide probes representing potential binding sites." [PMID:22146299]
@@ -6633,6 +6804,75 @@ is_a: ECO:0000049 ! reporter gene assay evidence
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-10T14:55:36Z
+
+[Term]
+id: ECO:0001830
+name: host colonization assay evidence
+def: "A type of experimental evidence in which the colonization or adhesion capacity is measured." []
+comment: Has to do with the ability of the bacterium or virus to bind to a host.
+synonym: "adhesion assay evidence" EXACT []
+is_a: ECO:0000006 ! experimental evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001831
+name: host colonization assay evidence used in automatic assertion
+def: "A type of host colonization assay evidence that is used in an automatic assertion." []
+is_a: ECO:0001830 ! host colonization assay evidence
+is_a: ECO:0007297 ! experimental evidence used in automatic assertion
+intersection_of: ECO:0001830 ! host colonization assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001832
+name: host colonization assay evidence used in manual assertion
+def: "A type of host colonization assay evidence that is used in a manual assertion." []
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0001830 ! host colonization assay evidence
+intersection_of: ECO:0001830 ! host colonization assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001833
+name: infection assay evidence
+def: "A type of host colonization assay evidence in which the infection capacity is measured by assessing changes in the host." []
+comment: Has to do with the outcome of a bacterial or viral / host interaction, be it a measure of cell death, cytotoxicity, invasion, etc.
+is_a: ECO:0001830 ! host colonization assay evidence
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001834
+name: infection assay evidence used in automatic assertion
+def: "A type of infection assay evidence that is used in an automatic assertion." []
+is_a: ECO:0001831 ! host colonization assay evidence used in automatic assertion
+is_a: ECO:0001833 ! infection assay evidence
+intersection_of: ECO:0001833 ! infection assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
+
+[Term]
+id: ECO:0001835
+name: infection assay evidence used in manual assertion
+def: "A type of infection assay evidence that is used in a manual assertion." []
+is_a: ECO:0001832 ! host colonization assay evidence used in manual assertion
+is_a: ECO:0001833 ! infection assay evidence
+intersection_of: ECO:0001833 ! infection assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "CollecTF" xsd:string
+created_by: jbmunro
+creation_date: 2019-05-06T12:00:00Z
 
 [Term]
 id: ECO:0005004
@@ -9278,7 +9518,7 @@ name: over expression analysis evidence used in manual assertion
 def: "A type of experimental phenotypic evidence that is used in a manual assertion where a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product." [PMID:22419077]
 synonym: "IMP: analysis of overexpression/ectopic expression phenotype" RELATED []
 is_a: ECO:0000120 ! over expression analysis evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
+is_a: ECO:0006049 ! genetic transformation evidence used in manual assertion
 intersection_of: ECO:0000120 ! over expression analysis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -9412,7 +9652,7 @@ is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000022 ! co-purification evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:19
+creation_date: 2017-09-14T09:19:19Z
 
 [Term]
 id: ECO:0006075
@@ -9424,7 +9664,7 @@ is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000023 ! affinity evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:20
+creation_date: 2017-09-14T09:19:20Z
 
 [Term]
 id: ECO:0006076
@@ -9435,7 +9675,7 @@ is_a: ECO:0006075 ! affinity evidence used in manual assertion
 intersection_of: ECO:0000024 ! protein binding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:21
+creation_date: 2017-09-14T09:19:21Z
 
 [Term]
 id: ECO:0006077
@@ -9446,7 +9686,7 @@ is_a: ECO:0006075 ! affinity evidence used in manual assertion
 intersection_of: ECO:0000025 ! hybrid interaction evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:22
+creation_date: 2017-09-14T09:19:22Z
 
 [Term]
 id: ECO:0006078
@@ -9457,7 +9697,7 @@ is_a: ECO:0006075 ! affinity evidence used in manual assertion
 intersection_of: ECO:0000040 ! immunological assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:23
+creation_date: 2017-09-14T09:19:23Z
 
 [Term]
 id: ECO:0006079
@@ -9469,7 +9709,7 @@ is_a: ECO:0006077 ! hybrid interaction evidence used in manual assertion
 intersection_of: ECO:0000066 ! yeast one-hybrid evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:24
+creation_date: 2017-09-14T09:19:24Z
 
 [Term]
 id: ECO:0006080
@@ -9481,7 +9721,7 @@ is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000074 ! split-ubiquitin assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:25
+creation_date: 2017-09-14T09:19:25Z
 
 [Term]
 id: ECO:0006081
@@ -9493,7 +9733,7 @@ is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000076 ! far-Western blotting evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:26
+creation_date: 2017-09-14T09:19:26Z
 
 [Term]
 id: ECO:0006082
@@ -9505,7 +9745,7 @@ is_a: ECO:0006075 ! affinity evidence used in manual assertion
 intersection_of: ECO:0000079 ! affinity chromatography evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:27
+creation_date: 2017-09-14T09:19:27Z
 
 [Term]
 id: ECO:0006083
@@ -9516,7 +9756,7 @@ is_a: ECO:0006075 ! affinity evidence used in manual assertion
 intersection_of: ECO:0000136 ! nucleic acid binding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:28
+creation_date: 2017-09-14T09:19:28Z
 
 [Term]
 id: ECO:0006084
@@ -9528,7 +9768,7 @@ is_a: ECO:0006083 ! nucleic acid binding evidence used in manual assertion
 intersection_of: ECO:0000138 ! ribohomopolymer binding assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:29
+creation_date: 2017-09-14T09:19:29Z
 
 [Term]
 id: ECO:0006085
@@ -9539,7 +9779,7 @@ is_a: ECO:0006076 ! protein binding evidence used in manual assertion
 intersection_of: ECO:0000142 ! protein:ion binding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:30
+creation_date: 2017-09-14T09:19:30Z
 
 [Term]
 id: ECO:0006086
@@ -9551,7 +9791,7 @@ is_a: ECO:0006083 ! nucleic acid binding evidence used in manual assertion
 intersection_of: ECO:0000144 ! Southwestern blot evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:31
+creation_date: 2017-09-14T09:19:31Z
 
 [Term]
 id: ECO:0006087
@@ -9563,7 +9803,7 @@ is_a: ECO:0006083 ! nucleic acid binding evidence used in manual assertion
 intersection_of: ECO:0000146 ! Northwestern blot evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:32
+creation_date: 2017-09-14T09:19:32Z
 
 [Term]
 id: ECO:0006088
@@ -9577,7 +9817,7 @@ is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 intersection_of: ECO:0000293 ! systematic evolution of ligands by exponential amplification evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:33
+creation_date: 2017-09-14T09:19:33Z
 
 [Term]
 id: ECO:0006089
@@ -9589,7 +9829,7 @@ is_a: ECO:0006077 ! hybrid interaction evidence used in manual assertion
 intersection_of: ECO:0000294 ! bacterial one-hybrid evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:34
+creation_date: 2017-09-14T09:19:34Z
 
 [Term]
 id: ECO:0006090
@@ -9602,7 +9842,7 @@ is_a: ECO:0006083 ! nucleic acid binding evidence used in manual assertion
 intersection_of: ECO:0001601 ! protein-binding microarray evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:35
+creation_date: 2017-09-14T09:19:35Z
 
 [Term]
 id: ECO:0006091
@@ -9614,7 +9854,7 @@ is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
 intersection_of: ECO:0000012 ! functional complementation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:36
+creation_date: 2017-09-14T09:19:36Z
 
 [Term]
 id: ECO:0006092
@@ -9625,7 +9865,7 @@ is_a: ECO:0006091 ! functional complementation evidence used in manual assertion
 intersection_of: ECO:0000013 ! transgenic rescue experiment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:37
+creation_date: 2017-09-14T09:19:37Z
 
 [Term]
 id: ECO:0006093
@@ -9636,7 +9876,7 @@ is_a: ECO:0006091 ! functional complementation evidence used in manual assertion
 intersection_of: ECO:0000038 ! transient rescue experiment evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:38
+creation_date: 2017-09-14T09:19:38Z
 
 [Term]
 id: ECO:0006094
@@ -9649,7 +9889,7 @@ is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
 intersection_of: ECO:0000052 ! suppressor/enhancer interaction phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:39
+creation_date: 2017-09-14T09:19:39Z
 
 [Term]
 id: ECO:0006095
@@ -9662,7 +9902,7 @@ is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
 intersection_of: ECO:0000054 ! double mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:40
+creation_date: 2017-09-14T09:19:40Z
 
 [Term]
 id: ECO:0006096
@@ -9675,7 +9915,7 @@ is_a: ECO:0000316 ! genetic interaction evidence used in manual assertion
 intersection_of: ECO:0000056 ! epistatic interaction phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:41
+creation_date: 2017-09-14T09:19:41Z
 
 [Term]
 id: ECO:0006097
@@ -9687,7 +9927,7 @@ is_a: ECO:0006091 ! functional complementation evidence used in manual assertion
 intersection_of: ECO:0000064 ! functional complementation in heterologous system evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
-creation_date: 2017-09-14T09:19:42
+creation_date: 2017-09-14T09:19:42Z
 
 [Term]
 id: ECO:0006098
@@ -9698,7 +9938,7 @@ synonym: "Ts mutation evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 "pgaudet" xsd:string
 created_by: rctauber
-creation_date: 2017-09-18T07:58:28
+creation_date: 2017-09-18T07:58:28Z
 
 [Term]
 id: ECO:0006099
@@ -9712,7 +9952,7 @@ intersection_of: ECO:0006098 ! temperature-sensitive mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "pgaudet" xsd:string
 created_by: rctauber
-creation_date: 2017-09-18T07:58:28
+creation_date: 2017-09-18T07:58:28Z
 
 [Term]
 id: ECO:0006100
@@ -9721,7 +9961,7 @@ def: "A type of mutant phenotype evidence based on the analysis of a mutation wh
 is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 "pgaudet" xsd:string
 created_by: rctauber
-creation_date: 2017-09-18T07:58:28
+creation_date: 2017-09-18T07:58:28Z
 
 [Term]
 id: ECO:0006101
@@ -9733,7 +9973,7 @@ intersection_of: ECO:0006100 ! recessive mutant phenotype evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "pgaudet" xsd:string
 created_by: rctauber
-creation_date: 2017-09-18T07:58:28
+creation_date: 2017-09-18T07:58:28Z
 
 [Term]
 id: ECO:0007000
@@ -15896,7 +16136,7 @@ id: ECO:0007562
 name: over expression analysis evidence used in automatic assertion
 def: "A type of over expression analysis evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000120 ! over expression analysis evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
+is_a: ECO:0007427 ! genetic transformation evidence used in automatic assertion
 intersection_of: ECO:0000120 ! over expression analysis evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
