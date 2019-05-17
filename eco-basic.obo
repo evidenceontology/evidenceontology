@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2019-05-14/eco-basic.owl
-date: 05:02:2020 08:13
+data-version: eco/releases/2019-05-16/eco-basic.owl
+date: 05:04:2020 13:50
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -8002,7 +8002,7 @@ name: inference from experimental data evidence
 def: "A type of direct assay evidence used in manual assertion where phenotype or disease association is made with the gene because of involvement in the molecular mechanism of disease or involvement in a pathway known to contribute to a disease." [ECO:SN]
 synonym: "IED" EXACT []
 synonym: "inferred from experimental data" EXACT []
-is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2016-04-12T16:55:16Z
 
@@ -8013,7 +8013,7 @@ def: "A type of mutant phenotype evidence used in manual assertion where variati
 comment: Changes can include any gene mutation/knockout, over-expression or ectopic expression of wild-type or mutant genes, anti-sense experiments, RNAi experiments, specific protein inhibitors.
 synonym: "inferred from phenotype manipulation" EXACT []
 synonym: "IPM" EXACT []
-is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_obsolete: true
 created_by: snadendla
 creation_date: 2016-04-12T17:09:43Z
 
@@ -9984,7 +9984,7 @@ is_a: ECO:0000015 ! mutant phenotype evidence
 is_a: ECO:0006055 ! high throughput evidence
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007001
@@ -10002,7 +10002,7 @@ intersection_of: ECO:0007000 ! high throughput mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007002
@@ -10013,7 +10013,7 @@ is_a: ECO:0000011 ! genetic interaction evidence
 is_a: ECO:0006055 ! high throughput evidence
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007003
@@ -10031,7 +10031,7 @@ intersection_of: ECO:0007002 ! high throughput genetic interaction phenotypic ev
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007004
@@ -10041,7 +10041,7 @@ is_a: ECO:0000002 ! direct assay evidence
 is_a: ECO:0006055 ! high throughput evidence
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007005
@@ -10058,7 +10058,7 @@ intersection_of: ECO:0007004 ! high throughput direct assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007006
@@ -10068,7 +10068,7 @@ is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0006055 ! high throughput evidence
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007007
@@ -10085,7 +10085,7 @@ intersection_of: ECO:0007006 ! high throughput expression pattern evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "GOC" xsd:string
 created_by: rctauber
-creation_date: 2017-10–05T07:39:47Z
+creation_date: 2017-10-05T07:39:47Z
 
 [Term]
 id: ECO:0007008
@@ -12059,9 +12059,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007189
 name: inference from experimental data evidence used in manual assertion
 def: "A type of inference from experimental data evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 ! direct assay evidence used in manual assertion
-intersection_of: ECO:0005611 ! inference from experimental data evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
+is_obsolete: true
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -12069,9 +12067,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007190
 name: inference from phenotype manipulation evidence used in manual assertion
 def: "A type of inference from phenotype manipulation evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
-intersection_of: ECO:0005612 ! inference from phenotype manipulation evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
+is_obsolete: true
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -13149,11 +13145,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007293
 name: inference from experimental data evidence used in automatic assertion
 def: "A type of inference from experimental data evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005611 ! inference from experimental data evidence
-is_a: ECO:0007189 ! inference from experimental data evidence used in manual assertion
-is_a: ECO:0007307 ! direct assay evidence used in automatic assertion
-intersection_of: ECO:0005611 ! inference from experimental data evidence
-intersection_of: used_in ECO:0000203 ! automatic assertion
+is_obsolete: true
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -13161,11 +13153,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007294
 name: inference from phenotype manipulation evidence used in automatic assertion
 def: "A type of inference from phenotype manipulation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005612 ! inference from phenotype manipulation evidence
-is_a: ECO:0007190 ! inference from phenotype manipulation evidence used in manual assertion
-is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
-intersection_of: ECO:0005612 ! inference from phenotype manipulation evidence
-intersection_of: used_in ECO:0000203 ! automatic assertion
+is_obsolete: true
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
