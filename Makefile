@@ -32,10 +32,9 @@ init: $(BUILD)
 $(BUILD):
 	mkdir -p $@
 
-#.PHONY: build/robot.jar
-#build/robot.jar: | init
-	#curl -L -o $(BUILD)robot.jar\
-	 #https://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar
+build/robot.jar: | init
+	curl -Lk -o $(BUILD)robot.jar\
+	 https://github.com/ontodev/robot/releases/download/v1.4.0/robot.jar
 
 ROBOT := java -jar build/robot.jar
 
@@ -48,7 +47,7 @@ MOD = src/ontology/modules/
 
 modules: $(MOD)obi_logic.owl
 
-$(MOD)obi_logic.owl: $(TEMP)obi_logic.csv
+$(MOD)obi_logic.owl: $(TEMP)obi_logic.csv | build/robot.jar
 	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
 	 --input-iri http://purl.obolibrary.org/obo/go.owl\
 	 template --template $<\
@@ -63,7 +62,7 @@ IMPS = go obi
 
 imports: $(IMPS)
 
-$(IMPS): $(MOD)obi_logic.owl
+$(IMPS): $(MOD)obi_logic.owl | build/robot.jar
 	python $(IMP)get_terms.py $@ &&\
 	 robot extract --input-iri "$(OBO)$@.owl"\
 	 --method bot --term-file $(IMP)$@_terms.txt --term-file $(IMP)etc_terms.txt\
@@ -80,7 +79,7 @@ $(IMPS): $(MOD)obi_logic.owl
 
 report: $(BUILD)report.tsv
 .PHONY: $(BUILD)report.tsv
-$(BUILD)report.tsv: $(EDIT) # init
+$(BUILD)report.tsv: $(EDIT) | build/robot.jar
 	$(ROBOT) report --input $<\
 	 --output $@ --format tsv
 
@@ -88,7 +87,7 @@ $(BUILD)report.tsv: $(EDIT) # init
 
 V_QUERIES := $(wildcard $(SPARQL)verify-*.rq)
 .PHONY: verify
-verify: init
+verify: build/robot.jar
 	$(ROBOT) verify --input $(EDIT)\
 	 --queries $(V_QUERIES) --output-dir $(BUILD)
 
@@ -108,14 +107,14 @@ build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASIC).owl $(BASIC).obo
 TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
-$(ECO).owl: $(EDIT)
+$(ECO).owl: $(EDIT) | build/robot.jar
 	$(ROBOT) merge --input $< --collapse-import-closure true \
 	 reason --reasoner elk --create-new-ontology false \
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	 reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(ECO).obo: $(EDIT)
+$(ECO).obo: $(EDIT) | build/robot.jar
 	$(ROBOT) reason --input $< --reasoner elk --create-new-ontology false\
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	remove --select imports \
@@ -125,13 +124,13 @@ $(ECO).obo: $(EDIT)
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
-$(BASE).owl: $(EDIT)
+$(BASE).owl: $(EDIT) | build/robot.jar
 	$(ROBOT) remove --input $< --select imports \
 	annotate --ontology-iri "$(OBO)eco/$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(BASIC).owl: $(EDIT)
+$(BASIC).owl: $(EDIT) | build/robot.jar
 	$(ROBOT) remove --input $< --select imports --trim true \
 	reason --reasoner elk --annotate-inferred-axioms false reduce \
 	remove --select "equivalents parents" --select "anonymous" \
@@ -139,7 +138,7 @@ $(BASIC).owl: $(EDIT)
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(BASIC).obo: $(BASIC).owl
+$(BASIC).obo: $(BASIC).owl | build/robot.jar
 	$(ROBOT) convert --input $< --format obo --check false\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
@@ -152,7 +151,7 @@ $(BASIC).obo: $(BASIC).owl
 mapping: gaf-eco-mapping-derived.txt
 
 # create derived GO mapping file
-gaf-eco-mapping-derived.txt: $(ECO).owl
+gaf-eco-mapping-derived.txt: $(ECO).owl | build/robot.jar
 	$(ROBOT) query --input $(ECO).owl --format tsv\
 	 --select $(SPARQL)make-derived-mapping.rq build/$@ \
 	&& sed 's/\"//g' build/$@\
@@ -174,7 +173,7 @@ valid_with_protein_complex
 
 subsets: $(SUBS)
 
-$(SUBS): $(ECO).owl
+$(SUBS): $(ECO).owl | build/robot.jar
 	$(ROBOT) filter --input $< \
 	 --select "oboInOwl:inSubset=<http://purl.obolibrary.org/obo/eco#$@> annotations" \
 	 annotate --version-iri "http://purl.obolibrary.org/obo/eco/$(DATE)/subsets/$@.owl"\
