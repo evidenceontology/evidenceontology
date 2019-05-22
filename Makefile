@@ -115,9 +115,13 @@ $(ECO).owl: $(EDIT)
 	 reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(ECO).obo: $(ECO).owl
-	$(ROBOT) convert --input $< --format obo --check false\
-	 --output $(basename $@)-temp.obo && \
+$(ECO).obo: $(EDIT)
+	$(ROBOT) reason --input $< --reasoner elk --create-new-ontology false\
+	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
+	remove --select imports \
+	reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
+	 --annotation oboInOwl:date "$(TS)" \
+	convert --format obo --check false --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
