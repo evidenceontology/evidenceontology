@@ -107,14 +107,14 @@ build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASIC).owl $(BASIC).obo
 TS = $(shell date +'%m:%d:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
-$(ECO).owl: $(EDIT) | build/robot.jar
+$(ECO).owl: $(EDIT)
 	$(ROBOT) merge --input $< --collapse-import-closure true \
 	 reason --reasoner elk --create-new-ontology false \
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	 reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(ECO).obo: $(EDIT) | build/robot.jar
+$(ECO).obo: $(EDIT)
 	$(ROBOT) reason --input $< --reasoner elk --create-new-ontology false\
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	remove --select imports \
@@ -124,13 +124,13 @@ $(ECO).obo: $(EDIT) | build/robot.jar
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
 	rm $(basename $@)-temp.obo
 
-$(BASE).owl: $(EDIT) | build/robot.jar
+$(BASE).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports \
 	annotate --ontology-iri "$(OBO)eco/$@"\
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(BASIC).owl: $(EDIT) | build/robot.jar
+$(BASIC).owl: $(EDIT)
 	$(ROBOT) remove --input $< --select imports --trim true \
 	reason --reasoner elk --annotate-inferred-axioms false reduce \
 	remove --select "equivalents parents" --select "anonymous" \
@@ -138,7 +138,7 @@ $(BASIC).owl: $(EDIT) | build/robot.jar
 	 --version-iri "$(OBO)eco/releases/$(DATE)/$@"\
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
-$(BASIC).obo: $(BASIC).owl | build/robot.jar
+$(BASIC).obo: $(BASIC).owl
 	$(ROBOT) convert --input $< --format obo --check false\
 	 --output $(basename $@)-temp.obo && \
 	grep -v ^owl-axioms $(basename $@)-temp.obo > $@ && \
