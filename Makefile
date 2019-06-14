@@ -33,7 +33,7 @@ init:
 $(BUILD)robot.jar: init
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.0/robot.jar
 
-ROBOT := java -jar build/robot.jar
+ROBOT := java -jar $(BUILD)robot.jar
 
 # ----------------------------------------
 # MODULES
@@ -44,7 +44,7 @@ MOD = src/ontology/modules/
 
 modules: $(MOD)obi_logic.owl
 
-$(MOD)obi_logic.owl: $(TEMP)obi_logic.csv | build/robot.jar
+$(MOD)obi_logic.owl: $(TEMP)obi_logic.csv | $(BUILD)robot.jar
 	$(ROBOT) merge --input-iri http://purl.obolibrary.org/obo/obi.owl\
 	 --input-iri http://purl.obolibrary.org/obo/go.owl\
 	 template --template $<\
@@ -84,7 +84,7 @@ $(BUILD)report.tsv: $(EDIT) | $(BUILD)robot.jar
 
 V_QUERIES := $(wildcard $(SPARQL)verify-*.rq)
 .PHONY: verify
-verify: | build/robot.jar
+verify: | $(BUILD)robot.jar
 	$(ROBOT) verify --input $(EDIT)\
 	 --queries $(V_QUERIES) --output-dir $(BUILD)
 
@@ -150,8 +150,8 @@ mapping: gaf-eco-mapping-derived.txt
 # create derived GO mapping file
 gaf-eco-mapping-derived.txt: $(ECO).owl | $(BUILD)robot.jar
 	$(ROBOT) query --input $(ECO).owl --format tsv\
-	 --select $(SPARQL)make-derived-mapping.rq build/$@ \
-	&& sed 's/\"//g' build/$@\
+	 --select $(SPARQL)make-derived-mapping.rq $(BUILD)$@ \
+	&& sed 's/\"//g' $(BUILD)$@\
 	 | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g'\
 	 | tail -n +2 > $@
 
