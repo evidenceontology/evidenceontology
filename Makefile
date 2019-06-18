@@ -101,7 +101,7 @@ BASIC = $(ECO)-basic
 build: $(ECO).owl $(ECO).obo $(BASE).owl $(BASIC).owl $(BASIC).obo
 
 # release vars
-TS = $(shell date +'%m:%d:%Y %H:%M')
+TS = $(shell date +'%d:%m:%Y %H:%M')
 DATE = $(shell date +'%Y-%m-%d')
 
 $(ECO).owl: $(EDIT) | $(BUILD)robot.jar
