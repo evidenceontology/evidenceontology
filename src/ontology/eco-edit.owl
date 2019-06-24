@@ -3377,12 +3377,12 @@ SubClassOf(obo:ECO_0000176 obo:ECO_0000015)
 
 # Class: obo:ECO_0000177 (genomic context evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21609955"^^xsd:string) obo:IAO_0000115 obo:ECO_0000177 "A type of evidence in which the location of the gene within the genome provides insight into its function, or provides evolutionary insight."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:10958625"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:21609955"^^xsd:string) obo:IAO_0000115 obo:ECO_0000177 "A type of similarity evidence in which the location of the gene within the genome provides insight into the gene's function or evolutionary insight."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000177 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000177 "ECO:0000177"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000177 "This type of evidence might include identity of neighboring genes, operon structure, synteny, phylogenetic analysis, or other whole-genome analysis."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000177 "genomic context evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000177 obo:ECO_0000000)
+SubClassOf(obo:ECO_0000177 obo:ECO_0000041)
 
 # Class: obo:ECO_0000178 (in vivo assay evidence)
 
