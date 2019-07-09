@@ -2204,9 +2204,11 @@ SubClassOf(obo:ECO_0000013 obo:ECO_0000012)
 
 # Class: obo:ECO_0000015 (mutant phenotype evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:IMP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000015 "A type of experimental phenotypic evidence derived from the difference in two alleles of a corresponding gene that result from one or more changes in the genome."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:IMP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000015 "A type of experimental phenotypic evidence in which an observable phenotypic difference results from a change or mutation in DNA, reflecting a different form of an allele."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000015 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000015 "ECO:0000015"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000015 "Note that mutations need not be negative.  Changes to DNA sequence (mutations) may be detrimental, have no impact, or be beneficial."^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0000015 "The allele that encodes the phenotype most common in a particular natural population is referred to as the wild type allele, while any other form of that allele is known as the mutant form."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000015 "mutant phenotype evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000015 obo:ECO_0000059)
 
@@ -2541,7 +2543,7 @@ EquivalentClasses(obo:ECO_0000053 ObjectIntersectionOf(obo:ECO_0007673 ObjectSom
 
 # Class: obo:ECO_0000054 (double mutant phenotypic evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0000054 "A type of mutant phenotype evidence resulting from two mutations in unrelated genetic loci."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:18305163"^^xsd:string) obo:IAO_0000115 obo:ECO_0000054 "A type of mutant phenotype evidence resulting from an experiment typically constructed to determine if two different genes have an observable genetic interaction (functional connection) as the result of a mutation occurring in the alleles of the two genes of interest."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000054 "double mutant phenotype evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000054 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000054 "IGI: double mutant analysis"^^xsd:string)
