@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -2157,6 +2157,7 @@ SubClassOf(obo:ECO_0000007 obo:ECO_0005517)
 
 # Class: obo:ECO_0000008 (expression pattern evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23642041"^^xsd:string) obo:IAO_0000112 obo:ECO_0000008 "The 10 previously identified GlnR-regulated genes were all confirmed to be under GlnR control during nitrogen stress (i.e. differential expression in the wild type compared to the DeltaglnR mutant), but in addition a total of 392 genes were significantly up-regulated and 291 significantly down regulated (Additional file 1: Table S1). This indicates that GlnR mediates (directly or indirectly) the expression of over 680 genes."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GO:IEP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000008 "A type of experimental evidence that is based on characterization of gene expression."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000008 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000008 "ECO:0000008"^^xsd:string)
@@ -2193,6 +2194,8 @@ SubClassOf(obo:ECO_0000011 obo:ECO_0000059)
 
 # Class: obo:ECO_0000012 (functional complementation evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20830609"^^xsd:string) obo:IAO_0000112 obo:ECO_0000012 "In addition, complementation of the ompR mutation in strain AR6 with plasmid pBR3 resulted in an increase in beta-galactosidase activity (1303 +- 80 Miller units), indicating that the His-tagged OmpR protein, expressed from the gene introduced in trans, was able to positively regulate flhDC expression."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23823757"^^xsd:string) obo:IAO_0000112 obo:ECO_0000012 "Trans-complementation of fimR on pDL276 (pHR6) in strain DeltafimR harboring pfim(445 b)-cat restored wild-type pfim expression (Figure S1). Taken together, pfim is negatively regulated by FimR."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:27403640"^^xsd:string) obo:IAO_0000115 obo:ECO_0000012 "A type of genetic interaction evidence where a wild-type copy of the gene in question is inserted into a mutant cell to see if it restores the wild-type phenotype in the mutant background."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000012 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000012 "IGI: functional complementation"^^xsd:string)
@@ -2210,6 +2213,7 @@ SubClassOf(obo:ECO_0000013 obo:ECO_0000012)
 
 # Class: obo:ECO_0000015 (mutant phenotype evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:17129387"^^xsd:string) obo:IAO_0000112 obo:ECO_0000015 "Indeed, the GroEL protein appears to be more abundant in the LM3 wild type strain compared to the LM3-2 mutant strain, suggesting the involvement of the CcpA protein in the positive regulation of its expression."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:IMP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000015 "A type of experimental phenotypic evidence in which an observable phenotypic difference results from a change or mutation in DNA, reflecting a different form of an allele."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000015 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000015 "ECO:0000015"^^xsd:string)
@@ -2322,6 +2326,7 @@ AnnotationAssertion(owl:deprecated obo:ECO_0000026 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000027 (structural similarity evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24260461"^^xsd:string) obo:IAO_0000112 obo:ECO_0000027 "The secondary structure of VapC10 (Figure S2), predicted with the 3DJIGSAW prediction tool [36] and the DALI server [37], exhibited homology with several well studied VapC toxins, such as the first PIN domain structure for the protein PAE2754 from the archae bacterium Pyrobaculum aerophilum (30)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000027 "A type of similarity evidence based on structural similarity of an annotated gene or gene product to another gene or group of genes."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000027 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000027 "ECO:0000027"^^xsd:string)
@@ -2331,6 +2336,8 @@ SubClassOf(obo:ECO_0000027 obo:ECO_0000057)
 
 # Class: obo:ECO_0000028 (motif similarity evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19703315"^^xsd:string) obo:IAO_0000112 obo:ECO_0000028 "A CRP box-like sequence was found in the promoter-proximate region of sycO-ypkA-yopJ [4], indicating the direct association of CRP with the sycO-ypkA-yopJ promoter region."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21799779"^^xsd:string) obo:IAO_0000112 obo:ECO_0000028 "To identify further CopR target genes, the binding motif TGAAGATTTnnTGAAGATTT was used to search for similar sequences in the whole C. glutamicum genome using the ERGO (TM) bioinformatics suite (Integrated Genomics, Illinois, USA) allowing four mutations, no deletions and no insertions. 46 hits were found, but only in six cases the putative CopR binding site was located in intergenic regions up to 200 bp upstream of the start codon of the neighbouring gene (cg1336, cg2976, cg3187, cg3337, cg3357 and cg0414)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0000028 "A type of match to sequence model evidence that is based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000028 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000028 "ISS: recognized domains"^^xsd:string)
@@ -2481,6 +2488,7 @@ SubClassOf(obo:ECO_0000045 obo:ECO_0000010)
 
 # Class: obo:ECO_0000046 (protein expression level evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24260461"^^xsd:string) obo:IAO_0000112 obo:ECO_0000046 "In the BL21(DE3)(pJS429) cells, the levels of ClpP2s and VapC10 remained unchanged over a 2-hour period of translation arrest, but the VapB10 level showed to be decreased with a half-life (Figure 7C) similar to that observed in the strain BL21(DE3)(pJS883) (Figure 7B). These indicate that ClpXP2s could degrade VapB10 regardless of the presence or absence of VapC10."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:22011"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.informatics.jax.org/glossary/gain-of-function"^^xsd:string) obo:IAO_0000115 obo:ECO_0000046 "A type of protein expression evidence resulting from the quantification of protein production in a sample."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000046 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000046 "ECO:0000046"^^xsd:string)
@@ -2549,6 +2557,7 @@ EquivalentClasses(obo:ECO_0000053 ObjectIntersectionOf(obo:ECO_0007673 ObjectSom
 
 # Class: obo:ECO_0000054 (double mutant phenotypic evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:17892462"^^xsd:string) obo:IAO_0000112 obo:ECO_0000054 "In the hns slyA double mutant, hlyE expression was twofold greater than in the parent, and slightly higher than the hns single mutant, suggesting that slyA has a small negative effect on hlyE expressionin the absence of H-NS."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:18305163"^^xsd:string) obo:IAO_0000115 obo:ECO_0000054 "A type of mutant phenotype evidence resulting from an experiment typically constructed to determine if two different genes have an observable genetic interaction (functional connection) as the result of a mutation occurring in the alleles of the two genes of interest."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000054 "double mutant phenotype evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000054 "eco"^^xsd:string)
@@ -2590,6 +2599,8 @@ SubClassOf(obo:ECO_0000057 obo:ECO_0000041)
 
 # Class: obo:ECO_0000058 (expression microarray evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24694298"^^xsd:string) obo:IAO_0000112 obo:ECO_0000058 "S. lividans AdpA directly regulates at least the six AdpA-dependent genes listed above and identified by microarrays and qRT-PCR analysis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21799779"^^xsd:string) obo:IAO_0000112 obo:ECO_0000058 "To identify the regulon of the response regulator CopR, the transcriptome of the DeltacopRS deletion mutant was compared to that of the wild type using DNA microarrays. For cells grown in standard CGXII medium (1.25 microM CuSO4), no significant gene expression differences were observed, indicating that the CopRS two-component system is not active under this condition (data not shown)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:http://www.illumina.com/techniques/microarrays/gene-expression-arrays.html"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/"^^xsd:string) obo:IAO_0000115 obo:ECO_0000058 "A type of transcript expression evidence resulting from simultaneous profiling of the expression levels of thousands of genes in a single experiment allowing analysis of genes and their networks."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000058 "ECO:0000356"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:ECO_0000058 "differential gene expression evidence from microarray experiment"^^xsd:string)
@@ -2801,6 +2812,7 @@ SubClassOf(obo:ECO_0000079 obo:ECO_0000023)
 
 # Class: obo:ECO_0000080 (phylogenetic evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24713082"^^xsd:string) obo:IAO_0000112 obo:ECO_0000080 "Comparative phylogenomics along with MLST (multilocus sequence typing) and whole genome sequecing has shown that ribotype 078 lineage is different than other C. difficile lineages [22]."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "PhenoScape:IP"^^xsd:string) obo:IAO_0000115 obo:ECO_0000080 "A type of similarity that indicates common ancestry."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PhenoScape:IP"^^xsd:string) oboInOwl:hasExactSynonym obo:ECO_0000080 "IP"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000080 "eco"^^xsd:string)
@@ -2958,6 +2970,7 @@ SubClassOf(obo:ECO_0000095 obo:ECO_0001563)
 
 # Class: obo:ECO_0000096 (electrophoretic mobility shift assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22506036"^^xsd:string) obo:IAO_0000112 obo:ECO_0000096 "Each of the promoter-proximal regions of qrr2 - 4 was subjected to EMSA with the purified His-OpaR protein (Fig. 6b). The results showed that His-OpaR was able to bind to each of the three DNA fragments tested in a dose-dependent manner in vitro."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:KIM"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17703195"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000096 "A type of direct assay evidence based on an electrophoretic mobility shift of macromolecules, compounds, and proteins where solutions of protein and nucleic acid are combined and the resulting mixtures are electrophoresed under native conditions through polyacrylamide or agarose gel to detect protein-nucleic acid interactions."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000096 "CollecTF"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "electrophoretic mobility shift assay"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000096 "MI:0413"^^xsd:string)
@@ -3042,6 +3055,7 @@ SubClassOf(obo:ECO_0000105 obo:ECO_0000097)
 
 # Class: obo:ECO_0000106 (northern blot evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21124877"^^xsd:string) obo:IAO_0000112 obo:ECO_0000106 "Northern blot analysis indicated that there was one major band of 1.5-kb (which was used for the stability determination) and two other minor bands of approximately 3.0- and 6.0-kb, which constituted less than 5% of the total signal (Fig. 1C), suggesting that other genes may be cotranscribed along with SMU.1882."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000106 "A type of transcript expression evidence based on electrophoresis and probing to determine levels of RNA expression using a complementary hybridization probe on the separated RNA samples."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000106 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000106 "RNA blot evidence"^^xsd:string)
@@ -3054,6 +3068,9 @@ SubClassOf(obo:ECO_0000106 obo:ECO_0000009)
 
 # Class: obo:ECO_0000109 (reverse transcription polymerase chain reaction evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21124877"^^xsd:string) obo:IAO_0000112 obo:ECO_0000109 "Taken together, the results of the RT-PCR analyses and the reporter fusion assays indicate that expression of SMU.1882 is up regulated in the presence of CovR."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19703315"^^xsd:string) obo:IAO_0000112 obo:ECO_0000109 "The RT-PCR assay indicated that the sycO, ypkA and yopJ genes (designated as pCD12, pCD13 and pCD14 in Y. pestis 91001 [19], respectively) were transcribed as a single primary RNA (Fig. 1), and thereby these three genes constituted a single operon in Y. pestis Microtus strain 201."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24086521"^^xsd:string) obo:IAO_0000112 obo:ECO_0000109 "Using reverse transcription-PCR, we found that primers designed to span the intergenic regions between zur and the znuC homolog, as well as znuC and znuB homolog each generated a PCR product (Figure 2A). This indicated that these genes were transcribed on the same mRNA."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:11013345"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:12901609"^^xsd:string) obo:IAO_0000115 obo:ECO_0000109 "A type of RNA detection assay evidence where an RNA transcript is reverse transcribed into cDNA and amplified to qualitatively detect gene expression."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000109 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasAlternativeId obo:ECO_0000109 "ECO:0000108"^^xsd:string)
@@ -3068,6 +3085,7 @@ SubClassOf(obo:ECO_0000109 obo:ECO_0005518)
 
 # Class: obo:ECO_0000110 (RNA protection assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19399190"^^xsd:string) obo:IAO_0000112 obo:ECO_0000110 "fur RPAs were performed on RNA isolated from each strain, and an increase in fur expression was seen for G27, 26695, and the Fur swap strain under iron-depletion shock conditions while little to no increase was seen under iron-limited growth conditions (Fig. 4D and data not shown). This data shows that Fur autoregulation is consistent in each strain and further supports the notion that the AA difference in Fur is not responsible for the difference in sodB regulation between G27 and 26695."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:23457339"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000110 "A type of nuclease protection assay evidence where mRNA is hybridized with radiolabeled RNA probes after which RNAse is added to digest the unbound, nonresistant single-stranded overhang regions, later the remaining probe target hybrids are purified and resolved on denaturing polyacrylamide gel, and quantified by autoradiography."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000110 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000110 "ribonuclease protection assay"^^xsd:string)
@@ -3081,6 +3099,7 @@ SubClassOf(obo:ECO_0000110 obo:ECO_0001106)
 
 # Class: obo:ECO_0000112 (western blot evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24260461"^^xsd:string) obo:IAO_0000112 obo:ECO_0000112 "When we determined the proteolysis role of Lons in VapBC10 proteins by Western blot analysis using the strains BL21(DE3)(pJS882) and BL21(DE3)(pJS427), the levels of VapB10 and VapC10 remained stable over the course of translation inhibition (Figure 7D and E). Thus, Lon could not degrade VapBC10 proteins, consistent with our drop growth evidence (Figure 6B)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:23050259"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000112 "A type of gel electrophoresis evidence where proteins are separated using gel electrophoresis and then they are blotted on a nitrocellulose or polyvinylidene difluoride (PVDF) membrane, later an antibody with a dye or an enzyme is added to the solution which is able to bind to its specific protein and this product is detected either by chemiluminescent detection technique or fluorescence imaging technique."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000112 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000112 "eco"^^xsd:string)
@@ -3124,6 +3143,7 @@ SubClassOf(obo:ECO_0000118 obo:ECO_0000009)
 
 # Class: obo:ECO_0000120 (over expression analysis evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22233679"^^xsd:string) obo:IAO_0000112 obo:ECO_0000120 "In contrast, when RpoQ was overexpressed in either the wild type or the DeltalitR mutant, both were essentially nonmotile (Fig. 7), suggesting that quorum signaling regulates motility, at least in part, through an RpoQ mechanism downstream of LitR."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22419077"^^xsd:string) obo:IAO_0000115 obo:ECO_0000120 "A type of experimental phenotypic evidence in which a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000120 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000120 "IMP: analysis of overexpression/ectopic expression phenotype"^^xsd:string)
@@ -3258,6 +3278,7 @@ AnnotationAssertion(owl:deprecated obo:ECO_0000148 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000150 (in vitro transcription reconstitution assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21124877"^^xsd:string) obo:IAO_0000112 obo:ECO_0000150 "As shown in Fig. 5, addition of reconstituted RNA polymerase holoenzyme, but not the core enzyme, generated expected size bands of 193-nt and 158-nt when P1882 and Pami, respectively, were used as template (lanes 2 and 7). However, the addition of CovR did not lead to any observable increase in transcription from P1882."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:9237163"^^xsd:string) obo:IAO_0000115 obo:ECO_0000150 "A type of reconstitution assay evidence resulting from the use of reconstituted polymerase transcription systems to investigate RNA synthesis."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000150 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000150 "IDA: in vitro reconstitution assay with recombinant protein"^^xsd:string)
@@ -3478,6 +3499,7 @@ SubClassOf(obo:ECO_0000201 obo:ECO_0000044)
 
 # Class: obo:ECO_0000202 (match to sequence model evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21124877"^^xsd:string) obo:IAO_0000112 obo:ECO_0000202 "A putative rho-independent terminator sequence (GCCTGACTACATAGATGTCAGGC) was identified at position 402-bp downstream of SMU.1882 by TransTerm (transterm.dev.java.net) program."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(rdfs:comment "url:http://www.geneontology.org/GO.evidence.shtml") obo:IAO_0000115 obo:ECO_0000202 "A type of sequence similarity evidence in which the function of a gene product is predicted based on a sequence-based statistical model."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000202 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000202 "2010-03-18T12:32:30Z"^^xsd:string)
@@ -3544,6 +3566,7 @@ SubClassOf(obo:ECO_0000207 obo:ECO_0000206)
 
 # Class: obo:ECO_0000208 (protein BLAST evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21569462"^^xsd:string) obo:IAO_0000112 obo:ECO_0000208 "Blast search of S. meliloti genome for homologues of X. campestris Ohr protein revealed two paralogues, SMa2389 and SMc00040, showing 52 and 57% identity respectively with Ohr of X. campestris."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000208 "A type of BLAST evidence in which amino acid or translated nucleotide sequences are aligned."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000208 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000208 "2010-08-06T04:50:45Z"^^xsd:string)
@@ -3786,6 +3809,7 @@ SubClassOf(obo:ECO_0000227 obo:ECO_0000226)
 
 # Class: obo:ECO_0000228 (chromatin immunoprecipitation-qPCR evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23823757"^^xsd:string) obo:IAO_0000112 obo:ECO_0000228 "To confirm the in vivo binding of FimR to pfim, and to determine the impact of Mn2+ and Fe2+ on the binding activity of FimR, chromatin immunoprecipitation (ChIP) assay-quantitative real time PCR (qPCR) with anti-FimR antibody was employed as detailed in the materials and methods. The strongest binding of FimR to pfim was detected in cells grown in the presence of 50 microM MnCl2 and 50 microM FeSO4 (Figure 5, lane IV), whereas minimal amounts of MnCl2 (0.01 microM) and FeSO4 (0.1 microM) led to the weakest binding (Figure 5, lane I)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.diagenode.com/applications/chip-qpcr"^^xsd:string) obo:IAO_0000115 obo:ECO_0000228 "A type of chromatin immunoprecipitation evidence in which protein-DNA interactions are investigated at known genomic binding sites through a process of ChIP, DNA purification, and finally quantitative polymerase chain reaction (qPCR) for DNA detection."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000228 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000228 "2010-11-16T05:26:47Z"^^xsd:string)
@@ -4676,6 +4700,7 @@ SubClassOf(obo:ECO_0000292 obo:ECO_0000015)
 
 # Class: obo:ECO_0000293 (systematic evolution of ligands by exponential amplification evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21673794"^^xsd:string) obo:IAO_0000112 obo:ECO_0000293 "A total of 160 SELEX fragments were cloned and sequenced, which were classified into 29 CRP-binding sequences, including 13 previously identified loci and 16 newly identified sites (Table S2). When the CRP-binding sequences are located upstream or near promoters of the flanking genes, these genes are predicted to be under the control of CRP."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://en.wikipedia.org/wiki/Systematic_Evolution_of_Ligands_by_Exponential_Enrichment"^^xsd:string) obo:IAO_0000115 obo:ECO_0000293 "A type of evidence arising from a physical interaction analysis where a combinatorial chemistry technique is used to identify oligonucleotides that bind to a target ligand."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000293 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000293 "2011-01-10T04:23:50Z"^^xsd:string)
@@ -4691,6 +4716,7 @@ SubClassOf(obo:ECO_0000293 obo:ECO_0000021)
 
 # Class: obo:ECO_0000294 (bacterial one-hybrid evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20843371"^^xsd:string) obo:IAO_0000112 obo:ECO_0000294 "Bacterial one-hybrid assays confirmed the interaction between MtrA and the regulatory sequence of the dnaA initiator gene."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000294 "A type of hybrid interaction evidence that uses bacterial transformation with two plasmids to assess in vivo binding of a DNA-binding domain (bait) and DNA target site (prey)."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000294 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000294 "2011-01-10T06:16:20Z"^^xsd:string)
@@ -5098,6 +5124,7 @@ SubClassOf(obo:ECO_0000323 obo:ECO_0000313)
 
 # Class: obo:ECO_0000324 (imaging assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18346968"^^xsd:string) obo:IAO_0000112 obo:ECO_0000324 "In the images shown in Figure 9, the MelR focus is 15 x 33 nm across the shortest and longest axes of the oval in the complex with the shortened arm (right hand panel), compared to 9 x 12 nm in the other complex (centre panel). The simplest explanation for these observations, that is consistent with the location of sites in the DNA fragment (Figure 9), is that one type of complex contains 3 MelR molecules bound at sites 2, 1 and 1' (centre panel), whilst the other contains 4 MelR molecules bound at sites 2, 1, 1' and R (right panel)."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000115 obo:ECO_0000324 "A type of direct assay evidence in which an image is created and analyzed."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000324 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000324 "2012-02-23T12:01:43Z"^^xsd:string)
@@ -5252,6 +5279,7 @@ SubClassOf(obo:ECO_0000336 obo:ECO_0005007)
 
 # Class: obo:ECO_0000337 (gel electrophoresis evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:17129387"^^xsd:string) obo:IAO_0000112 obo:ECO_0000337 "We analyzed the electrophoretic pattern of cytosolic proteins extracted from LM3 and LM3-2 cells, grown under standard conditions up to mid-exponential phase (Fig. 1). The presence of differentially expressed proteins in the two strains, together with results of previous studies [28,29] demonstrated the role of CcpA as global regulator in L. plantarum."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "wikipedia:Gel_electrophoresis"^^xsd:string) obo:IAO_0000115 obo:ECO_0000337 "A type of direct assay evidence where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000337 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000337 "2012-08-24T12:11:51Z"^^xsd:string)
@@ -5967,6 +5995,7 @@ SubClassOf(obo:ECO_0001032 obo:ECO_0000059)
 
 # Class: obo:ECO_0001033 (cross-linking evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22870392"^^xsd:string) obo:IAO_0000112 obo:ECO_0001033 "To confirm this intriguing observation, we cross-linked AdpA and DNA in the presence of increasing amounts of ATP (figure 2b(iii)). In this assay, ATP prevented the formation of AdpA - DNA complexes in a concentration-dependent manner, an outcome consistent with the results obtained by SPR analysis."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:15530987"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:19241040"^^xsd:string) obo:IAO_0000115 obo:ECO_0001033 "A type of protein binding evidence resulting from the identification of two interacting proteins (that exist in close proximity) by linking through covalent bonds followed by identification"^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001033 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001033 "mchibucos"^^xsd:string)
@@ -5978,6 +6007,7 @@ SubClassOf(obo:ECO_0001033 obo:ECO_0000024)
 
 # Class: obo:ECO_0001034 (crystallography evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:17892462"^^xsd:string) obo:IAO_0000112 obo:ECO_0001034 "The crystal structures of E. coli MarR and Enterococcus faecalis SlyA-like proteins show their cross-sections are ~70 angstroms, suggesting they would protect ~20 bp of DNA (Alekshun et al., 2001; Wu et al., 2003). This suggests the presence of two SlyA dimers at the SlyA I site and at least three dimers at the SlyA II site."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "MI:0114"^^xsd:string) obo:IAO_0000115 obo:ECO_0001034 "A type of structure determination evidence resulting from the use of a narrow beam of x-rays to identify molecular structures by creating a diffraction pattern."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001034 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001034 "mchibucos"^^xsd:string)
@@ -6024,6 +6054,7 @@ SubClassOf(obo:ECO_0001037 obo:ECO_0005019)
 
 # Class: obo:ECO_0001038 (deletion mutation phenotypic evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18346968"^^xsd:string) obo:IAO_0000112 obo:ECO_0001038 "In contrast, and in full agreement with the previous results of Wade et al. (17), the longer deletion in the TB23 fragment, that removes MelR binding site 2, results in a sharp reduction in the repression of the melR promoter by MelR."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "SO:0000159"^^xsd:string) obo:IAO_0000115 obo:ECO_0001038 "A type of mutant phenotype evidence resulting from a mutation in which there is the removal of one or more contiguous nucleotides that may result in altered function or other measurable properties."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001038 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001038 "mchibucos"^^xsd:string)
@@ -6179,6 +6210,7 @@ SubClassOf(obo:ECO_0001051 obo:ECO_0000324)
 
 # Class: obo:ECO_0001052 (high-performance liquid chromatography evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21450087"^^xsd:string) obo:IAO_0000112 obo:ECO_0001052 "No OD increases with the mutant and the wild type were measured with DMSO provided as electron acceptor at 2 and 10 mM; however, HPLC analyses of cultures with 2 mM DMSO revealed that DMSO was completely consumed in wild type cultures, whereas no DMSO consumption was evident in the mutant cultures (Figure 3)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:16376355"^^xsd:string) obo:IAO_0000115 obo:ECO_0001052 "A type of chromatography evidence resulting from the separation of molecules in a solute by forcing the solvent containing the sample through a column packed with nonporous particles at high pressure."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001052 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001052 "2014-03-16T11:30:54Z"^^xsd:string)
@@ -6669,6 +6701,7 @@ SubClassOf(obo:ECO_0001095 obo:ECO_0000025)
 
 # Class: obo:ECO_0001096 (mass spectrometry evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24260461"^^xsd:string) obo:IAO_0000112 obo:ECO_0001096 "The MS analyses showed that two VapB10 peaks (836.437, 1584.789 m/z) and three VapC10-His6 peaks (1049.526, 1299.733 and 1455.853 m/z) were detected in MS-DIGEST program, indicating that both VapB10 and VapC10-His6 had the expected peptide masses (Figure S3). These results suggest that VapB10 binds to VapC10-His6 forming the TA complex VapBC10 in vivo, which may cause the counteraction of the VapC10-induced growth arrest (Figure 2)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "OBI:0000470"^^xsd:string) obo:IAO_0000115 obo:ECO_0001096 "A type of spectrometry evidence resulting from identifying the amount and type of material entities present in a sample by fragmenting it and measuring the mass-to-charge ratio of the resulting particles."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001096 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001096 "mchibucos"^^xsd:string)
@@ -6999,6 +7032,9 @@ SubClassOf(obo:ECO_0001126 obo:ECO_0005504)
 
 # Class: obo:ECO_0001127 (surface plasmon resonance evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22870392"^^xsd:string) obo:IAO_0000112 obo:ECO_0001127 "Electrophoretic mobility shift assay (EMSA) and surface plasmon resonance (SPR) demonstrated that AdpAHis6 specifically bound the oriC fragment (283-bp) containing the in silico-predicted A-boxes in a concentration-dependent manner (figures 1b and 2a), but not the remaining part of oriC (data not shown)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20843371"^^xsd:string) obo:IAO_0000112 obo:ECO_0001127 "Further confirmation of the specific interaction was obtained by conducting the competing surface plasmon resonance (SPR) assay with the unlabeled DNA fragments. As shown in Additional file 3, a significantly lower response was observed when either the unlabeled S2 or S5 was added together with MtrA, which indicated that they could compete the binding of MtrA with the promoter DNA on the chip."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24713082"^^xsd:string) obo:IAO_0000112 obo:ECO_0001127 "Our SPR analysis revealed that also housekeeping genes required for ribosome function (rplR) and beta subunit RNA polymerase (rpoB) belong to the LexA regulon, a feature of the SOS network not yet observed in bacteria."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:11578932"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:19151937"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:8574707"^^xsd:string) obo:IAO_0000115 obo:ECO_0001127 "A type of physical interaction evidence based on real-time, rapid plasmon generation on the interface between a planar surface and vacuum that measures changes in refractive index close to the sensor surface when an analyte and its immobilized ligand bind to observe and characterize molecular interaction."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001127 "SIB:PG"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001127 "mchibucos"^^xsd:string)
@@ -9146,6 +9182,8 @@ SubClassOf(obo:ECO_0001562 obo:ECO_0000002)
 
 # Class: obo:ECO_0001563 (cell growth assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20843371"^^xsd:string) obo:IAO_0000112 obo:ECO_0001563 "However, as shown in Fig. 5A, the recombinant mycobacterial cells became sensitive to the anti-TB drugs isoniazid and streptomycin, as evidenced by their inhibited growth in the presence of 25 mug/mL of isoniazid or 0.5 mug/mL of streptomycin in the medium."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24260461"^^xsd:string) obo:IAO_0000112 obo:ECO_0001563 "Similar growth profiles of these strains were observed in liquid media with the corresponding inducers (data not shown). These indicate that the expression of vapC10 alone led to growth arrest of E. coli, and the simultaneous expression of vapB10 could neutralize this growth-inhibition effect, suggesting that vapC10 encodes a TA toxin and vapB10 encodes the cognate antitoxin."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GO:0016049"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:11057898"^^xsd:string) obo:IAO_0000115 obo:ECO_0001563 "A type of direct assay evidence where biological cell development, i.e. an increase in cell mass and size are measured."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001563 "ECO_AssayCleanup"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001563 "mchibucos / jbmunro"^^xsd:string)
@@ -9167,6 +9205,7 @@ SubClassOf(obo:ECO_0001565 obo:ECO_0000002)
 
 # Class: obo:ECO_0001566 (quantitative reverse transcription polymerase chain reaction evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19552825"^^xsd:string) obo:IAO_0000112 obo:ECO_0001566 "The real-time RT-PCR validated that Zur repressed the first gene of each of the three operons, znuA, znuCB and ykgM-rpmJ2 (Additional file 5)."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001566 "A type of reverse transcription polymerase chain reaction evidence that combines reverse transcription polymerase chain reaction and real time polymerase chain reaction to quantitatively assay for the detection of RNA levels."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001566 "jbmunro"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001566 "2018-07-07T12:00:00Z"^^xsd:string)
@@ -9569,6 +9608,7 @@ SubClassOf(obo:ECO_0001801 obo:ECO_0000049)
 
 # Class: obo:ECO_0001802 (beta-galactosidase reporter gene assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19552825"^^xsd:string) obo:IAO_0000112 obo:ECO_0001802 "For each of the three genes, there was a significant increase of beta-galactosidase activity in Deltazur compared to WT when they grew in TMH with the addition of zinc. Thus, Zur repressed the promoter activities of znuC, znuA and ykgM."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20439410"^^xsd:string) obo:IAO_0000115 obo:ECO_0001802 "A type of reporter gene assay evidence based on the fusion of the lacZ gene to a specific promoter for the expression of beta-galactosidase which will appear blue when grown on a X-gal medium."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001802 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001802 "swolfish"^^xsd:string)
@@ -9674,6 +9714,10 @@ SubClassOf(obo:ECO_0001809 obo:ECO_0000325)
 
 # Class: obo:ECO_0001810 (DNAse footprinting evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21966533"^^xsd:string) obo:IAO_0000112 obo:ECO_0001810 "Subsequent DNase I footprinting experiments (Fig. 5d) indicated that His-PhoP protected a single region located from 102 to 47 bp upstream of rovA. This footprint was considered the PhoP site."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21345178"^^xsd:string) obo:IAO_0000112 obo:ECO_0001810 "The subsequent DNase I footprinting experiments (Figure 3a) showed that His-OmpR-P protected a single region within the ompR promoter. Therefore, OmpR stimulated its own gene at the transcriptional level, which was mediated through the binding of OmpR-P to its own promoter."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:18366809"^^xsd:string) obo:IAO_0000112 obo:ECO_0001810 "To precisely determine the PhoP-binding sites of target genes, DNase I footprinting assay was performed on 17 PhoP-dependent promoter DNA regions (both coding and noncoding strands) (Additional file 6). DNase I footprinting results confirmed the direct binding of His-PhoP to these promoter regions in vitro."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23232715"^^xsd:string) obo:IAO_0000112 obo:ECO_0001810 "We therefore pursued DNase I footprinting assays on several of the Crp-associated sequences that gave an unusual downshift in our initial EMSA trials, in an effort to identify a consensus binding sequence (see Fig. S2 in the supplemental material). We mapped sites upstream of crp itself, SCO4561 and SCO2977, and identified a consensus binding sequence [GTG(N)6GNCAC]; derivatives of this motif could be found in all of the secondary metabolism-associated target sequences, although notably, one-half of the palindrome seemed to be better conserved than the other [GTG(N)6GNGAN] (Fig. 2C; Table 1)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:212715"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:22194258"^^xsd:string) obo:IAO_0000115 obo:ECO_0001810 "A type of nucleic acid binding evidence where proteins that have been bound to DNA protect a binding site from enzymatic cleavage with DNAse, thereby detecting protein-DNA interactions."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001810 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001810 "swolfish"^^xsd:string)
@@ -9687,6 +9731,7 @@ SubClassOf(obo:ECO_0001810 obo:ECO_0000136)
 
 # Class: obo:ECO_0001811 (fluorescence anisotropy evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:19129220"^^xsd:string) obo:IAO_0000112 obo:ECO_0001811 "Since these FA analyses are conducted with 300 nM scOhrR, this suggests that oxidation leads to at least a 100-fold reduction in DNA-binding affinity."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:20232898"^^xsd:string) obo:IAO_0000115 obo:ECO_0001811 "A type of fluorescence evidence based on rapid and quantitative analysis of diverse molecular interactions, enzyme activities, and nucleic acid hybridization which uses a fluorophore to measure the binding constants and kinetics of reactions that cause a change in the rotational time of the molecules."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001811 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001811 "swolfish"^^xsd:string)
@@ -9795,6 +9840,8 @@ SubClassOf(obo:ECO_0001818 obo:ECO_0000136)
 
 # Class: obo:ECO_0001819 (primer extension assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22506036"^^xsd:string) obo:IAO_0000112 obo:ECO_0001819 "The primer extension assay (Fig. 6a) defined the transcription start sites the three sRNA genes qrr2 - 4, and this assay also indicated that the promoter activity of all the thee qrr genes was under the positive control of OpaR."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21966533"^^xsd:string) obo:IAO_0000112 obo:ECO_0001819 "The primer extension assay detected two transcriptional start sites located at 343 and 78 bp upstream of rovA (Fig. 2); therefore, two promoters (named P2 and P1, respectively) were transcribed for rovA."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:23378648"^^xsd:string) obo:IAO_0000115 obo:ECO_0001819 "A type of transcript expression evidence used to determine expression
 levels of mRNA where a labeled synthetic oligonucleotide primer is annealed to mRNA downstream of the presumed transcription start site of a gene. The mRNA is extended with reverse transcriptase, producing cDNA which is electrophoresed, and the band size is enables determination of the 5' end of the mRNA (i.e. the transcription start site)."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001819 "CollecTF"^^xsd:string)
@@ -9808,6 +9855,9 @@ SubClassOf(obo:ECO_0001819 obo:ECO_0000009)
 
 # Class: obo:ECO_0001820 (rapid amplification of cDNA ends polymerase chain reaction evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184"^^xsd:string) obo:IAO_0000112 obo:ECO_0001820 "5' RACE analysis was employed to localize the espR promoter using RNA extracted from Mtb H37Rv grown to mid-log phase. The espR transcript starts with a poly-G (7) sequence 144 bp upstream of the translational start codon."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184"^^xsd:string) obo:IAO_0000112 obo:ECO_0001820 "The 5'-end of the espA mRNA was located 66 bp upstream of the translation start codon using 5' RACE (Fig. S3)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22233679"^^xsd:string) obo:IAO_0000112 obo:ECO_0001820 "Using 5' rapid amplification of cDNA ends (RACE), we mapped the transcriptional start sites of rpoQ and VF_A1016 (Fig. 4A). Neither start site was detected in the DeltarpoQ mutant, supporting the idea that transcription of rpoQ and VF_A1016 requires RpoQ (data not shown)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17498297"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:7685466") obo:IAO_0000115 obo:ECO_0001820 "A type of nucleotide sequencing assay evidence in which RT-PCR (cDNA synthesis) is first used to produce a cDNA copy of a region of the RNA transcript being investigated followed by PCR to capture either the unknown 5' or 3' end of the transcript for sequencing, depending on whether 5' RACE-PCR or 3' RACE-PCR are being undertaken."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001820 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001820 "swolfish"^^xsd:string)
@@ -10161,6 +10211,7 @@ SubClassOf(obo:ECO_0005027 obo:ECO_0000015)
 
 # Class: obo:ECO_0005031 (structure determination evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24260461"^^xsd:string) obo:IAO_0000112 obo:ECO_0005031 "The secondary structure of VapC10 (Figure S2), predicted with the 3DJIGSAW prediction tool [36] and the DALI server [37], exhibited homology with several well studied VapC toxins, such as the first PIN domain structure for the protein PAE2754 from the archae bacterium Pyrobaculum aerophilum (30)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0005031 "A type of experimental evidence resulting from the visualization and examination of chemical and/or molecular structures."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005031 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005031 "2015-03-20T12:16:17Z"^^xsd:string)
@@ -10171,6 +10222,7 @@ SubClassOf(obo:ECO_0005031 obo:ECO_0000006)
 
 # Class: obo:ECO_0005033 (electron microscopy evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20830609"^^xsd:string) obo:IAO_0000112 obo:ECO_0005033 "Electron micrographs showed that all the cells are rod-shaped and those of the parent strain Ye9 and the envZ mutant strain EZ10 are flagellated, but the ompR mutant cells lack flagella."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0005033 "A type of microscopy evidence and structure determination evidence resulting from an electron beam utilized to create an image."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005033 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005033 "2015-03-20T12:21:48Z"^^xsd:string)
@@ -10473,6 +10525,9 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005527 O
 
 # Class: obo:ECO_0005528 (site-directed mutagenesis phenotypic evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21087492"^^xsd:string) obo:IAO_0000112 obo:ECO_0005528 "If the AGAA sequence is mutated CTCC (Pxyn2aM, see Table 1), no DNA-protein complex is formed under either repressing or inducing conditions (Figure 1). This result indicates that this part of the xyn2 promoter is essential for binding a transcription factor under repressing conditions."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23642041"^^xsd:string) obo:IAO_0000112 obo:ECO_0005528 "To identify key residues required for specific GlnR binding we mutated the highly conserved AC-n9-AC and AT-n9-AC DNA binding motifs. Figure 4 shows that the highly conserved adenosine residues in the motif are critical as GlnR binding is abolished when these residues are mutated."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24694298"^^xsd:string) obo:IAO_0000112 obo:ECO_0005528 "We also tested a hyaS promoter in which one (highest score) of the three putative AdpA-binding sites was mutated (at position -134 to -129, see Additional file 3: Figure S1a): the affinity of AdpA for this promoter region was reduced and one protein-DNA complex disappeared (Additional file 3: Figure S1b). These results suggest that one dimer of AdpA binds the adjacent sites -129 and -123 of S. lividans hyaS promoter and another dimer binds the -100 site resulting in the formation of the two DNA-AdpA complexes depicted in Figure 2."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:21204030"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:24011050"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:3541892"^^xsd:string) obo:IAO_0000115 obo:ECO_0005528 "A type of mutant phenotype phenotype evidence based on target-specified mutagenesis for the characterization of various gene and protein interactions, structures, and functions where oligonucleotide primers are used to alter a nucleotide sequence."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0005528 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005528 "snadendla"^^xsd:string)
@@ -10511,6 +10566,8 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005530 O
 
 # Class: obo:ECO_0005531 (motif discovery evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20167624"^^xsd:string) obo:IAO_0000112 obo:ECO_0005531 "In order to identify a potential regulatory motif for KstR2, we used the promoter regions of the kstR2 orthologues as a training set for the motif identification program MEME (Bailey & Elkan, 1994). This identified a potential regulatory sequence that contains a 14 bp inverted palindromic motif AnCAAGnnCTTGnT (Fig. 2)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23232715"^^xsd:string) obo:IAO_0000112 obo:ECO_0005531 "We mapped sites upstream of crp itself, SCO4561 and SCO2977, and identified a consensus binding sequence [GTG(N)6GNCAC]; derivatives of this motif could be found in all of the secondary metabolism-associated target sequences, although notably, one-half of the palindrome seemed to be better conserved than the other [GTG(N)6GNGAN] (Fig. 2C; Table 1)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:10812473"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:16845028"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:8211139"^^xsd:string) obo:IAO_0000115 obo:ECO_0005531 "A type of multiple sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0005531 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005531 "snadendla"^^xsd:string)
@@ -11286,6 +11343,7 @@ SubClassOf(obo:ECO_0005599 obo:ECO_0005598)
 
 # Class: obo:ECO_0005600 (immunofluorescence confocal microscopy evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:24490131"^^xsd:string) obo:IAO_0000112 obo:ECO_0005600 "The endogenous protein expression and localization for WalR and WalK was also checked using confocal immunofluorescence microscopy. WalR could be localized to the cytoplasm of B. anthracis but WalK could not be detected once again (data not shown)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.physics.emory.edu/faculty/weeks/confocal/"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:https://www.hycultbiotech.com/media/wysiwyg/protocol_Immunofluorescence.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0005600 "A type of confocal microscopy evidence where light passes through immunofluorescent-stained tissue sections or cells and then the emitted light passes through the dichroic mirror and is focused onto the pinhole for subsequent detection."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005600 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005600 "2016-03-18T12:48:42Z"^^xsd:string)
@@ -11341,6 +11399,7 @@ SubClassOf(obo:ECO_0005604 obo:ECO_0005007)
 
 # Class: obo:ECO_0005605 (disk diffusion test evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:21569462"^^xsd:string) obo:IAO_0000112 obo:ECO_0005605 "Disk diffusion assays were used to determine if ohr and ohrR mutations affected resistance to ROS. The ohr mutant was less resistant than its parental strain when challenged with organic peroxides as shown by the zones of growth inhibition: 4.1 +- 0.2 cm for CuOOH and 3.1 +- 0.1 cm for tBOOH versus to 2.3 +- 0.2 and 2.5 +- 0.3 cm for wild type strain."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "url:http://www.cdc.gov/nczved/resources/cholera/ch9.pdf"^^xsd:string) obo:IAO_0000115 obo:ECO_0005605 "A type of zone of inhibition evidence where sensitivity/resistance to an antimicrobial agent is tested by impregnating small filter disks with a known concentration of antimicrobial agent which is then placed on a Mueller-Hinton agar plate inoculated with the test organism."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005605 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005605 "2016-03-29T16:02:22Z"^^xsd:string)
@@ -12288,6 +12347,7 @@ SubClassOf(obo:ECO_0005802 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0005803 (motility assay evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20830609"^^xsd:string) obo:IAO_0000112 obo:ECO_0005803 "A motility assay at 37 degrees C revealed a non-motile phenotype for all strains, as expected (data not shown)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005803 "A type of direct assay evidence where the motility of a cell or cells is determined."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005803 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005803 "ECO:0005803"^^xsd:string)
