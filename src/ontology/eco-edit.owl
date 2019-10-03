@@ -9460,6 +9460,7 @@ SubClassOf(obo:ECO_0001588 obo:ECO_0001586)
 
 # Class: obo:ECO_0001589 (atomic force microscopy evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184") obo:IAO_0000112 obo:ECO_0001589 "AFM revealed loop structures stabilized by multiple EspR dimer of dimers suggesting the presence of several distant EspR binding sites in the espACD upstream region.")
 AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001589 "A type of microscopy evidence where a mechanical probe is applied to a sample (i.e. a type of scanning probe microscopy) which can result in production of an image (with resolution in the order of fractions of a nanometer), force measurement, or sample manipulation."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001589 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0001589 "jbmunro"^^xsd:string)
@@ -9469,8 +9470,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0001589 "SFM"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0001589 "scanning force microscopy"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001589 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001589 "ECO:0001589"^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0001589 "Atomic force microscopy can be used for force measurement (force spectroscopy), imaging (rendering a three-dimensional shape (topography)), and manipulation of the sample."^^xsd:string)
-AnnotationAssertion(rdfs:comment obo:ECO_0001589 "Example sentence provided by CollecTF from PMID:22479184: \"AFM revealed loop structures stabilized by multiple EspR dimer of dimers suggesting the presence of several distant EspR binding sites in the espACD upstream region.\""^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0001589 "Atomic force microscopy can be used for force measurement (force spectroscopy), imaging (rendering a three-dimensional shape (topography), and manipulation of the sample."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001589 "atomic force microscopy evidence"^^xsd:string)
 SubClassOf(obo:ECO_0001589 obo:ECO_0001098)
 
@@ -10229,6 +10229,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005033 "2015-03-20T12:21:48Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005033 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005033 "ECO:0005033"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0005033 "electron microscopy evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0005033 obo:ECO_0007045)
 SubClassOf(obo:ECO_0005033 obo:ECO_0001098)
 SubClassOf(obo:ECO_0005033 obo:ECO_0005031)
 
@@ -10566,6 +10567,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005530 O
 
 # Class: obo:ECO_0005531 (motif discovery evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23209661") obo:IAO_0000112 obo:ECO_0005531 "A sequence alignment of the phlA gene promoter region from strain 2P24 with other well-studied 2,4-DAPG producing Pseudomonas strains revealed a very well conserved palindromic sequence GAAACN5GTTTC (Fig. S1).")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20167624"^^xsd:string) obo:IAO_0000112 obo:ECO_0005531 "In order to identify a potential regulatory motif for KstR2, we used the promoter regions of the kstR2 orthologues as a training set for the motif identification program MEME (Bailey & Elkan, 1994). This identified a potential regulatory sequence that contains a 14 bp inverted palindromic motif AnCAAGnnCTTGnT (Fig. 2)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:23232715"^^xsd:string) obo:IAO_0000112 obo:ECO_0005531 "We mapped sites upstream of crp itself, SCO4561 and SCO2977, and identified a consensus binding sequence [GTG(N)6GNCAC]; derivatives of this motif could be found in all of the secondary metabolism-associated target sequences, although notably, one-half of the palindrome seemed to be better conserved than the other [GTG(N)6GNGAN] (Fig. 2C; Table 1)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:10812473"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:16845028"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:8211139"^^xsd:string) obo:IAO_0000115 obo:ECO_0005531 "A type of multiple sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs."^^xsd:string)
@@ -14322,13 +14324,13 @@ SubClassOf(obo:ECO_0007044 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0007045 (scanning electron microscopy evidence)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20843371") obo:IAO_0000112 obo:ECO_0007045 "With a general growth of the recombinant mycobacterial strains resulting in minimal change, the cell morphology was further examined using the scanning electron microscopy (SEM) technique. As shown in Fig. 5B, the cell lengthened when 20 ng/mL tetracycline was added to the medium to induce expression of the antisense mtrA mRNA (right panel).")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "URL:https://serc.carleton.edu/research_education/geochemsheets/techniques/SEM.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0007045 "A type of electron microscopy evidence where a focused beam of high-energy electrons is used to generate a variety of signals at the surface of solid specimens."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0007045 "OMP"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007045 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007045 "2018-03-14T12:44:11Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007045 "ECO:0007045"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007045 "scanning electron microscopy evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007045 obo:ECO_0005033)
 
 # Class: obo:ECO_0007046 (scanning electron microscopy evidence used in manual assertion)
 
