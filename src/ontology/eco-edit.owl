@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -2996,14 +2996,14 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0000097 "ECO:0000097"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000097 "cDNA to DNA expression microarray evidence"^^xsd:string)
 SubClassOf(obo:ECO_0000097 obo:ECO_0000058)
 
-# Class: obo:ECO_0000098 (in situ hybridization evidence)
+# Class: obo:ECO_0000098 (obsolete in situ hybridization evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://www.ncbi.nlm.nih.gov/probe/docs/techish/"^^xsd:string) obo:IAO_0000115 obo:ECO_0000098 "A type of nucleic acid hybridization evidence based on localization of a specific segment of DNA or RNA by the application of a complementary strand of nucleic acid to which a reporter molecule is attached."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000098 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000098 "IDA: in situ hybridization"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0000098 "ECO:0000098"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000098 "This term has been made obsolete with the clean up of experimental genomic evidence branch."^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0000098 "in situ hybridization evidence"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0000098 "obsolete in situ hybridization evidence"^^xsd:string)
 AnnotationAssertion(owl:deprecated obo:ECO_0000098 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0000100 (fractionation evidence)
