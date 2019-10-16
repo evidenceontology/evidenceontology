@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2019-09-07
-date: 07:09:2019 07:50
+data-version: releases/2019-10-16
+date: 16:10:2019 08:50
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -84,6 +84,7 @@ name: expression pattern evidence
 def: "A type of experimental evidence that is based on characterization of gene expression." [ECO:MCC, GO:IEP]
 comment: Use this evidence type when the annotation is inferred from the timing or location of expression of a gene. It may be difficult to determine whether the expression pattern truly indicates that a gene plays a role in a given process.
 is_a: ECO:0000006 ! experimental evidence
+property_value: IAO:0000112 "The 10 previously identified GlnR-regulated genes were all confirmed to be under GlnR control during nitrogen stress (i.e. differential expression in the wild type compared to the DeltaglnR mutant), but in addition a total of 392 genes were significantly up-regulated and 291 significantly down regulated (Additional file 1: Table S1). This indicates that GlnR mediates (directly or indirectly) the expression of over 680 genes." xsd:string {xref="PMID:23642041"}
 
 [Term]
 id: ECO:0000009
@@ -112,6 +113,8 @@ name: functional complementation evidence
 def: "A type of genetic interaction evidence where a wild-type copy of the gene in question is inserted into a mutant cell to see if it restores the wild-type phenotype in the mutant background." [PMID:27403640]
 synonym: "IGI: functional complementation" RELATED []
 is_a: ECO:0000011 ! genetic interaction evidence
+property_value: IAO:0000112 "In addition, complementation of the ompR mutation in strain AR6 with plasmid pBR3 resulted in an increase in beta-galactosidase activity (1303 +- 80 Miller units), indicating that the His-tagged OmpR protein, expressed from the gene introduced in trans, was able to positively regulate flhDC expression." xsd:string {xref="PMID:20830609"}
+property_value: IAO:0000112 "Trans-complementation of fimR on pDL276 (pHR6) in strain DeltafimR harboring pfim(445 b)-cat restored wild-type pfim expression (Figure S1). Taken together, pfim is negatively regulated by FimR." xsd:string {xref="PMID:23823757"}
 
 [Term]
 id: ECO:0000013
@@ -126,6 +129,7 @@ def: "A type of experimental phenotypic evidence in which an observable phenotyp
 comment: Note that mutations need not be negative.  Changes to DNA sequence (mutations) may be detrimental, have no impact, or be beneficial.
 comment: The allele that encodes the phenotype most common in a particular natural population is referred to as the wild type allele, while any other form of that allele is known as the mutant form.
 is_a: ECO:0000059 ! experimental phenotypic evidence
+property_value: IAO:0000112 "Indeed, the GroEL protein appears to be more abundant in the LM3 wild type strain compared to the LM3-2 mutant strain, suggesting the involvement of the CcpA protein in the positive regulation of its expression." xsd:string {xref="PMID:17129387"}
 
 [Term]
 id: ECO:0000016
@@ -213,6 +217,7 @@ name: structural similarity evidence
 def: "A type of similarity evidence based on structural similarity of an annotated gene or gene product to another gene or group of genes." [ECO:MCC, TAIR:TED]
 comment: For GO annotation, in the case of a single gene, an accession for the related gene's sequence is entered in the evidence_with field.
 is_a: ECO:0000057 ! phenotypic similarity evidence
+property_value: IAO:0000112 "The secondary structure of VapC10 (Figure S2), predicted with the 3DJIGSAW prediction tool [36] and the DALI server [37], exhibited homology with several well studied VapC toxins, such as the first PIN domain structure for the protein PAE2754 from the archae bacterium Pyrobaculum aerophilum (30)." xsd:string {xref="PMID:24260461"}
 
 [Term]
 id: ECO:0000028
@@ -220,6 +225,8 @@ name: motif similarity evidence
 def: "A type of match to sequence model evidence that is based on the presence of a recognized domain or motif in a gene product's (usually protein) primary sequence." [ECO:SN]
 synonym: "ISS: recognized domains" RELATED []
 is_a: ECO:0000202 ! match to sequence model evidence
+property_value: IAO:0000112 "A CRP box-like sequence was found in the promoter-proximate region of sycO-ypkA-yopJ [4], indicating the direct association of CRP with the sycO-ypkA-yopJ promoter region." xsd:string {xref="PMID:19703315"}
+property_value: IAO:0000112 "To identify further CopR target genes, the binding motif TGAAGATTTnnTGAAGATTT was used to search for similar sequences in the whole C. glutamicum genome using the ERGO (TM) bioinformatics suite (Integrated Genomics, Illinois, USA) allowing four mutations, no deletions and no insertions. 46 hits were found, but only in six cases the putative CopR binding site was located in intergenic regions up to 200 bp upstream of the start codon of the neighbouring gene (cg1336, cg2976, cg3187, cg3337, cg3357 and cg0414)." xsd:string {xref="PMID:21799779"}
 
 [Term]
 id: ECO:0000029
@@ -340,6 +347,7 @@ id: ECO:0000046
 name: protein expression level evidence
 def: "A type of protein expression evidence resulting from the quantification of protein production in a sample." [NBK:22011, url:http\://www.informatics.jax.org/glossary/gain-of-function]
 is_a: ECO:0000010 ! protein expression evidence
+property_value: IAO:0000112 "In the BL21(DE3)(pJS429) cells, the levels of ClpP2s and VapC10 remained unchanged over a 2-hour period of translation arrest, but the VapB10 level showed to be decreased with a half-life (Figure 7C) similar to that observed in the strain BL21(DE3)(pJS883) (Figure 7B). These indicate that ClpXP2s could degrade VapB10 regardless of the presence or absence of VapC10." xsd:string {xref="PMID:24260461"}
 
 [Term]
 id: ECO:0000047
@@ -399,6 +407,7 @@ def: "A type of mutant phenotype evidence resulting from an experiment typically
 synonym: "double mutant phenotype evidence" EXACT []
 synonym: "IGI: double mutant analysis" RELATED []
 is_a: ECO:0000015 ! mutant phenotype evidence
+property_value: IAO:0000112 "In the hns slyA double mutant, hlyE expression was twofold greater than in the parent, and slightly higher than the hns single mutant, suggesting that slyA has a small negative effect on hlyE expressionin the absence of H-NS." xsd:string {xref="PMID:17892462"}
 
 [Term]
 id: ECO:0000055
@@ -432,6 +441,8 @@ alt_id: ECO:0000356
 def: "A type of transcript expression evidence resulting from simultaneous profiling of the expression levels of thousands of genes in a single experiment allowing analysis of genes and their networks." [url:http\://www.illumina.com/techniques/microarrays/gene-expression-arrays.html, url:http\://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/]
 synonym: "differential gene expression evidence from microarray experiment" NARROW []
 is_a: ECO:0000009 ! transcript expression evidence
+property_value: IAO:0000112 "S. lividans AdpA directly regulates at least the six AdpA-dependent genes listed above and identified by microarrays and qRT-PCR analysis." xsd:string {xref="PMID:24694298"}
+property_value: IAO:0000112 "To identify the regulon of the response regulator CopR, the transcriptome of the DeltacopRS deletion mutant was compared to that of the wild type using DNA microarrays. For cells grown in standard CGXII medium (1.25 microM CuSO4), no significant gene expression differences were observed, indicating that the CopRS two-component system is not active under this condition (data not shown)." xsd:string {xref="PMID:21799779"}
 
 [Term]
 id: ECO:0000059
@@ -599,6 +610,7 @@ name: phylogenetic evidence
 def: "A type of similarity that indicates common ancestry." [ECO:MCC, PhenoScape:IP]
 synonym: "IP" EXACT [PhenoScape:IP]
 is_a: ECO:0000041 ! similarity evidence
+property_value: IAO:0000112 "Comparative phylogenomics along with MLST (multilocus sequence typing) and whole genome sequecing has shown that ribotype 078 lineage is different than other C. difficile lineages [22]." xsd:string {xref="PMID:24713082"}
 
 [Term]
 id: ECO:0000081
@@ -730,6 +742,7 @@ synonym: "Gel retardation assay" RELATED [PMID:17703195]
 synonym: "IDA: electrophoretic mobility shift assay" RELATED []
 xref: MI:0413 "electrophoretic mobility shift assay"
 is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "Each of the promoter-proximal regions of qrr2 - 4 was subjected to EMSA with the purified His-OpaR protein (Fig. 6b). The results showed that His-OpaR was able to bind to each of the three DNA fragments tested in a dose-dependent manner in vitro." xsd:string {xref="PMID:22506036"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
@@ -745,7 +758,7 @@ property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
 id: ECO:0000098
-name: in situ hybridization evidence
+name: obsolete in situ hybridization evidence
 def: "A type of nucleic acid hybridization evidence based on localization of a specific segment of DNA or RNA by the application of a complementary strand of nucleic acid to which a reporter molecule is attached." [url:https\://www.ncbi.nlm.nih.gov/probe/docs/techish/]
 comment: This term has been made obsolete with the clean up of experimental genomic evidence branch.
 synonym: "IDA: in situ hybridization" RELATED []
@@ -796,6 +809,7 @@ synonym: "IEP: transcript levels (e.g. Northerns)" RELATED []
 synonym: "northern assay evidence" EXACT []
 synonym: "RNA blot evidence" EXACT []
 is_a: ECO:0000009 ! transcript expression evidence
+property_value: IAO:0000112 "Northern blot analysis indicated that there was one major band of 1.5-kb (which was used for the stability determination) and two other minor bands of approximately 3.0- and 6.0-kb, which constituted less than 5% of the total signal (Fig. 1C), suggesting that other genes may be cotranscribed along with SMU.1882." xsd:string {xref="PMID:21124877"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
@@ -808,6 +822,9 @@ synonym: "IEP: transcript levels (e.g. RT-PCR)" RELATED []
 synonym: "reverse transcription polymerase chain reaction transcription evidence" BROAD []
 synonym: "RT-PCR" EXACT []
 is_a: ECO:0005518 ! RNA detection assay evidence
+property_value: IAO:0000112 "Taken together, the results of the RT-PCR analyses and the reporter fusion assays indicate that expression of SMU.1882 is up regulated in the presence of CovR." xsd:string {xref="PMID:21124877"}
+property_value: IAO:0000112 "The RT-PCR assay indicated that the sycO, ypkA and yopJ genes (designated as pCD12, pCD13 and pCD14 in Y. pestis 91001 [19], respectively) were transcribed as a single primary RNA (Fig. 1), and thereby these three genes constituted a single operon in Y. pestis Microtus strain 201." xsd:string {xref="PMID:19703315"}
+property_value: IAO:0000112 "Using reverse transcription-PCR, we found that primers designed to span the intergenic regions between zur and the znuC homolog, as well as znuC and znuB homolog each generated a PCR product (Figure 2A). This indicated that these genes were transcribed on the same mRNA." xsd:string {xref="PMID:24086521"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
@@ -819,6 +836,7 @@ synonym: "ribonuclease protection assay" EXACT []
 synonym: "RNAse protection assay" RELATED []
 synonym: "RPA" NARROW []
 is_a: ECO:0001106 ! nuclease protection assay evidence
+property_value: IAO:0000112 "fur RPAs were performed on RNA isolated from each strain, and an increase in fur expression was seen for G27, 26695, and the Fur swap strain under iron-depletion shock conditions while little to no increase was seen under iron-limited growth conditions (Fig. 4D and data not shown). This data shows that Fur autoregulation is consistent in each strain and further supports the notion that the AA difference in Fur is not responsible for the difference in sodB regulation between G27 and 26695." xsd:string {xref="PMID:19399190"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
@@ -831,6 +849,7 @@ synonym: "protein immunoblot" RELATED []
 synonym: "Western blot expression analysis" RELATED []
 is_a: ECO:0000333 ! sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
 is_a: ECO:0005593 ! immunodetection assay evidence
+property_value: IAO:0000112 "When we determined the proteolysis role of Lons in VapBC10 proteins by Western blot analysis using the strains BL21(DE3)(pJS882) and BL21(DE3)(pJS427), the levels of VapB10 and VapC10 remained stable over the course of translation inhibition (Figure 7D and E). Thus, Lon could not degrade VapBC10 proteins, consistent with our drop growth evidence (Figure 6B)." xsd:string {xref="PMID:24260461"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
@@ -862,6 +881,7 @@ name: over expression analysis evidence
 def: "A type of experimental phenotypic evidence in which a gene and/or gene product is investigated in a transgenic organism that has been engineered to overexpress that gene product." [PMID:22419077]
 synonym: "IMP: analysis of overexpression/ectopic expression phenotype" RELATED []
 is_a: ECO:0005027 ! genetic transformation evidence
+property_value: IAO:0000112 "In contrast, when RpoQ was overexpressed in either the wild type or the DeltalitR mutant, both were essentially nonmotile (Fig. 7), suggesting that quorum signaling regulates motility, at least in part, through an RpoQ mechanism downstream of LitR." xsd:string {xref="PMID:22233679"}
 
 [Term]
 id: ECO:0000122
@@ -966,6 +986,7 @@ name: in vitro transcription reconstitution assay evidence
 def: "A type of reconstitution assay evidence resulting from the use of reconstituted polymerase transcription systems to investigate RNA synthesis." [PMID:9237163]
 synonym: "IDA: in vitro reconstitution assay with recombinant protein" RELATED []
 is_a: ECO:0000003 ! reconstitution assay evidence
+property_value: IAO:0000112 "As shown in Fig. 5, addition of reconstituted RNA polymerase holoenzyme, but not the core enzyme, generated expected size bands of 193-nt and 158-nt when P1882 and Pami, respectively, were used as template (lanes 2 and 7). However, the addition of CovR did not lead to any observable increase in transcription from P1882." xsd:string {xref="PMID:21124877"}
 
 [Term]
 id: ECO:0000152
@@ -1139,6 +1160,7 @@ alt_id: ECO:00000063
 def: "A type of sequence similarity evidence in which the function of a gene product is predicted based on a sequence-based statistical model." [ECO:MCC] {comment="url:http://www.geneontology.org/GO.evidence.shtml"}
 comment: Used when evidence from any kind of statistical model of a sequence or group of sequences is used to make a prediction about the function of a protein or RNA. Examples of relevant evidence are: Hidden Markov Models, PROSITE motifs, and tools such as tRNASCAN.
 is_a: ECO:0000044 ! sequence similarity evidence
+property_value: IAO:0000112 "A putative rho-independent terminator sequence (GCCTGACTACATAGATGTCAGGC) was identified at position 402-bp downstream of SMU.1882 by TransTerm (transterm.dev.java.net) program." xsd:string {xref="PMID:21124877"}
 created_by: mchibucos
 creation_date: 2010-03-18T12:32:30Z
 
@@ -1192,6 +1214,7 @@ id: ECO:0000208
 name: protein BLAST evidence
 def: "A type of BLAST evidence in which amino acid or translated nucleotide sequences are aligned." [ECO:MCC]
 is_a: ECO:0000206 ! BLAST evidence
+property_value: IAO:0000112 "Blast search of S. meliloti genome for homologues of X. campestris Ohr protein revealed two paralogues, SMa2389 and SMc00040, showing 52 and 57% identity respectively with Ohr of X. campestris." xsd:string {xref="PMID:21569462"}
 created_by: mchibucos
 creation_date: 2010-08-06T04:50:45Z
 
@@ -1393,6 +1416,7 @@ name: chromatin immunoprecipitation-qPCR evidence
 def: "A type of chromatin immunoprecipitation evidence in which protein-DNA interactions are investigated at known genomic binding sites through a process of ChIP, DNA purification, and finally quantitative polymerase chain reaction (qPCR) for DNA detection." [url:https\://www.diagenode.com/applications/chip-qpcr]
 synonym: "ChIP-qPCR evidence" EXACT []
 is_a: ECO:0000226 ! chromatin immunoprecipitation evidence
+property_value: IAO:0000112 "To confirm the in vivo binding of FimR to pfim, and to determine the impact of Mn2+ and Fe2+ on the binding activity of FimR, chromatin immunoprecipitation (ChIP) assay-quantitative real time PCR (qPCR) with anti-FimR antibody was employed as detailed in the materials and methods. The strongest binding of FimR to pfim was detected in cells grown in the presence of 50 microM MnCl2 and 50 microM FeSO4 (Figure 5, lane IV), whereas minimal amounts of MnCl2 (0.01 microM) and FeSO4 (0.1 microM) led to the weakest binding (Figure 5, lane I)." xsd:string {xref="PMID:23823757"}
 created_by: mchibucos
 creation_date: 2010-11-16T05:26:47Z
 
@@ -2200,6 +2224,7 @@ synonym: "in vitro selection evidence" EXACT []
 synonym: "SELEX evidence" EXACT []
 xref: MI:0657 "systematic evolution of ligands by exponential enrichment"
 is_a: ECO:0000021 ! physical interaction evidence
+property_value: IAO:0000112 "A total of 160 SELEX fragments were cloned and sequenced, which were classified into 29 CRP-binding sequences, including 13 previously identified loci and 16 newly identified sites (Table S2). When the CRP-binding sequences are located upstream or near promoters of the flanking genes, these genes are predicted to be under the control of CRP." xsd:string {xref="PMID:21673794"}
 created_by: mchibucos
 creation_date: 2011-01-10T04:23:50Z
 
@@ -2210,6 +2235,7 @@ def: "A type of hybrid interaction evidence that uses bacterial transformation w
 comment: Bacterial one-hybrid assay is a method for screening a library of candidate proteins (prey plasmid) for the ability to bind to a target, cis-regulatory element or any other short, DNA binding sequence placed 5' to reporter genes (bait plasmid). Transformation of a bacterial host with two different plasmids is required: One is designed to express the "bait". The other plasmid contains a "prey" which, if bound to by the chimeric fusion product, drives expression of downstream reporter genes.
 synonym: "B1H evidence" EXACT []
 is_a: ECO:0000025 ! hybrid interaction evidence
+property_value: IAO:0000112 "Bacterial one-hybrid assays confirmed the interaction between MtrA and the regulatory sequence of the dnaA initiator gene." xsd:string {xref="PMID:20843371"}
 created_by: mchibucos
 creation_date: 2011-01-10T06:16:20Z
 
@@ -2579,6 +2605,7 @@ def: "A type of direct assay evidence in which an image is created and analyzed.
 synonym: "radiologic test evidence" NARROW []
 xref: ECO:MCC
 is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "In the images shown in Figure 9, the MelR focus is 15 x 33 nm across the shortest and longest axes of the oval in the complex with the shortened arm (right hand panel), compared to 9 x 12 nm in the other complex (centre panel). The simplest explanation for these observations, that is consistent with the location of sites in the DNA fragment (Figure 9), is that one type of complex contains 3 MelR molecules bound at sites 2, 1 and 1' (centre panel), whilst the other contains 4 MelR molecules bound at sites 2, 1, 1' and R (right panel)." xsd:string {xref="PMID:18346968"}
 created_by: mchibucos
 creation_date: 2012-02-23T12:01:43Z
 
@@ -2709,6 +2736,7 @@ alt_id: ECO:0005026
 def: "A type of direct assay evidence where molecules have been sorted according to their size and charge by moving through a gel in the presence of an electric field." [ECO:MCC, wikipedia:Gel_electrophoresis]
 comment: Molecules typically separated include DNA, RNA, or protein. The gel is typically made of agarose, polyacrylamide, or starch.
 is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "We analyzed the electrophoretic pattern of cytosolic proteins extracted from LM3 and LM3-2 cells, grown under standard conditions up to mid-exponential phase (Fig. 1). The presence of differentially expressed proteins in the two strains, together with results of previous studies [28,29] demonstrated the role of CcpA as global regulator in L. plantarum." xsd:string {xref="PMID:17129387"}
 created_by: mchibucos
 creation_date: 2012-08-24T12:11:51Z
 
@@ -3312,6 +3340,7 @@ id: ECO:0001033
 name: cross-linking evidence
 def: "A type of protein binding evidence resulting from the identification of two interacting proteins (that exist in close proximity) by linking through covalent bonds followed by identification" [PMID:15530987, PMID:19241040]
 is_a: ECO:0000024 ! protein binding evidence
+property_value: IAO:0000112 "To confirm this intriguing observation, we cross-linked AdpA and DNA in the presence of increasing amounts of ATP (figure 2b(iii)). In this assay, ATP prevented the formation of AdpA - DNA complexes in a concentration-dependent manner, an outcome consistent with the results obtained by SPR analysis." xsd:string {xref="PMID:22870392"}
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3321,6 +3350,7 @@ id: ECO:0001034
 name: crystallography evidence
 def: "A type of structure determination evidence resulting from the use of a narrow beam of x-rays to identify molecular structures by creating a diffraction pattern." [MI:0114]
 is_a: ECO:0005031 ! structure determination evidence
+property_value: IAO:0000112 "The crystal structures of E. coli MarR and Enterococcus faecalis SlyA-like proteins show their cross-sections are ~70 angstroms, suggesting they would protect ~20 bp of DNA (Alekshun et al., 2001; Wu et al., 2003). This suggests the presence of two SlyA dimers at the SlyA I site and at least three dimers at the SlyA II site." xsd:string {xref="PMID:17892462"}
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3364,6 +3394,7 @@ comment: Contrast with knockout phenotypic evidence in which any number of chang
 comment: The length of the DNA deleted can range from a single nucleotide to enough material that could include multiple genes.
 synonym: "deletion mutation evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
+property_value: IAO:0000112 "In contrast, and in full agreement with the previous results of Wade et al. (17), the longer deletion in the TB23 fragment, that removes MelR binding site 2, results in a sharp reduction in the repression of the melR promoter by MelR." xsd:string {xref="PMID:18346968"}
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3441,8 +3472,8 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001047
 name: fluorescence in situ hybridization evidence
 def: "A type of nucleic acid localization evidence and in situ hybridization evidence resulting from the use of fluorescent probes to detect complementary sequences of nucleic acids." [PMC:346675, PMID:6812046]
-is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0001534 ! nucleic acid localization evidence
+is_a: ECO:0001836 ! in situ hybridization evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3490,6 +3521,7 @@ name: high-performance liquid chromatography evidence
 def: "A type of chromatography evidence resulting from the separation of molecules in a solute by forcing the solvent containing the sample through a column packed with nonporous particles at high pressure." [PMID:16376355]
 synonym: "HPLC evidence" EXACT []
 is_a: ECO:0000325 ! chromatography evidence
+property_value: IAO:0000112 "No OD increases with the mutant and the wild type were measured with DMSO provided as electron acceptor at 2 and 10 mM; however, HPLC analyses of cultures with 2 mM DMSO revealed that DMSO was completely consumed in wild type cultures, whereas no DMSO consumption was evident in the mutant cultures (Figure 3)." xsd:string {xref="PMID:21450087"}
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -3891,6 +3923,7 @@ id: ECO:0001096
 name: mass spectrometry evidence
 def: "A type of spectrometry evidence resulting from identifying the amount and type of material entities present in a sample by fragmenting it and measuring the mass-to-charge ratio of the resulting particles." [OBI:0000470]
 is_a: ECO:0005504 ! spectrometry evidence
+property_value: IAO:0000112 "The MS analyses showed that two VapB10 peaks (836.437, 1584.789 m/z) and three VapC10-His6 peaks (1049.526, 1299.733 and 1455.853 m/z) were detected in MS-DIGEST program, indicating that both VapB10 and VapC10-His6 had the expected peptide masses (Figure S3). These results suggest that VapB10 binds to VapC10-His6 forming the TA complex VapBC10 in vivo, which may cause the counteraction of the VapC10-induced growth arrest (Figure 2)." xsd:string {xref="PMID:24260461"}
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4165,6 +4198,9 @@ def: "A type of physical interaction evidence based on real-time, rapid plasmon 
 comment: Plasmons are generated by an incident light beam.
 synonym: "SPR evidence" EXACT [PMID:11578932]
 is_a: ECO:0000021 ! physical interaction evidence
+property_value: IAO:0000112 "Electrophoretic mobility shift assay (EMSA) and surface plasmon resonance (SPR) demonstrated that AdpAHis6 specifically bound the oriC fragment (283-bp) containing the in silico-predicted A-boxes in a concentration-dependent manner (figures 1b and 2a), but not the remaining part of oriC (data not shown)." xsd:string {xref="PMID:22870392"}
+property_value: IAO:0000112 "Further confirmation of the specific interaction was obtained by conducting the competing surface plasmon resonance (SPR) assay with the unlabeled DNA fragments. As shown in Additional file 3, a significantly lower response was observed when either the unlabeled S2 or S5 was added together with MtrA, which indicated that they could compete the binding of MtrA with the promoter DNA on the chip." xsd:string {xref="PMID:20843371"}
+property_value: IAO:0000112 "Our SPR analysis revealed that also housekeeping genes required for ribosome function (rplR) and beta subunit RNA polymerase (rpoB) belong to the LexA regulon, a feature of the SOS network not yet observed in bacteria." xsd:string {xref="PMID:24713082"}
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4802,9 +4838,9 @@ creation_date: 2014-03-17T17:03:28Z
 id: ECO:0001182
 name: fluorescence in situ hybridization evidence used in manual assertion
 def: "A type of fluorescence in situ hybridization evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001047 ! fluorescence in situ hybridization evidence
+is_a: ECO:0001838 {is_inferred="true"} ! in situ hybridization evidence used in manual assertion
 intersection_of: ECO:0001047 ! fluorescence in situ hybridization evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
@@ -6116,6 +6152,8 @@ id: ECO:0001563
 name: cell growth assay evidence
 def: "A type of direct assay evidence where biological cell development, i.e. an increase in cell mass and size are measured." [GO:0016049, PMID:11057898]
 is_a: ECO:0001565 ! cell-based assay evidence
+property_value: IAO:0000112 "However, as shown in Fig. 5A, the recombinant mycobacterial cells became sensitive to the anti-TB drugs isoniazid and streptomycin, as evidenced by their inhibited growth in the presence of 25 mug/mL of isoniazid or 0.5 mug/mL of streptomycin in the medium." xsd:string {xref="PMID:20843371"}
+property_value: IAO:0000112 "Similar growth profiles of these strains were observed in liquid media with the corresponding inducers (data not shown). These indicate that the expression of vapC10 alone led to growth arrest of E. coli, and the simultaneous expression of vapB10 could neutralize this growth-inhibition effect, suggesting that vapC10 encodes a TA toxin and vapB10 encodes the cognate antitoxin." xsd:string {xref="PMID:24260461"}
 property_value: IAO:0000234 "ECO_AssayCleanup" xsd:string
 created_by: mchibucos / jbmunro
 creation_date: 2017-11-30T14:00:00Z
@@ -6143,6 +6181,7 @@ synonym: "RRT-PCR evidence" EXACT []
 synonym: "rRT-PCR evidence" EXACT []
 synonym: "RT-qPCR evidence" EXACT []
 is_a: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
+property_value: IAO:0000112 "The real-time RT-PCR validated that Zur repressed the first gene of each of the three operons, znuA, znuCB and ykgM-rpmJ2 (Additional file 5)." xsd:string {xref="PMID:19552825"}
 created_by: jbmunro
 creation_date: 2018-07-07T12:00:00Z
 
@@ -6379,12 +6418,12 @@ creation_date: 2019-04-15T12:00:00Z
 id: ECO:0001589
 name: atomic force microscopy evidence
 def: "A type of microscopy evidence where a mechanical probe is applied to a sample (i.e. a type of scanning probe microscopy) which can result in production of an image (with resolution in the order of fractions of a nanometer), force measurement, or sample manipulation." []
-comment: Atomic force microscopy can be used for force measurement (force spectroscopy), imaging (rendering a three-dimensional shape (topography)), and manipulation of the sample.
-comment: Example sentence provided by CollecTF from PMID:22479184: "AFM revealed loop structures stabilized by multiple EspR dimer of dimers suggesting the presence of several distant EspR binding sites in the espACD upstream region."
+comment: Atomic force microscopy can be used for force measurement (force spectroscopy), imaging (rendering a three-dimensional shape (topography), and manipulation of the sample.
 synonym: "AFM" EXACT []
 synonym: "scanning force microscopy" EXACT []
 synonym: "SFM" EXACT []
 is_a: ECO:0001098 ! microscopy evidence
+property_value: IAO:0000112 "AFM revealed loop structures stabilized by multiple EspR dimer of dimers suggesting the presence of several distant EspR binding sites in the espACD upstream region." xsd:string {xref="PMID:22479184"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: jbmunro
 creation_date: 2019-04-15T12:00:00Z
@@ -6518,6 +6557,7 @@ synonym: "beta-galactosidase assay evidence" EXACT []
 synonym: "lacZ reporter gene assay" RELATED []
 synonym: "LacZ transcript localization evidence" EXACT []
 is_a: ECO:0000049 ! reporter gene assay evidence
+property_value: IAO:0000112 "For each of the three genes, there was a significant increase of beta-galactosidase activity in Deltazur compared to WT when they grew in TMH with the addition of zinc. Thus, Zur repressed the promoter activities of znuC, znuA and ykgM." xsd:string {xref="PMID:19552825"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-10-29T15:57:10Z
@@ -6605,6 +6645,10 @@ def: "A type of nucleic acid binding evidence where proteins that have been boun
 comment: In DNAse footingprinting amplified DNA combined with TF and DNAse is electrophoresed for fragment comparison with a non-TF control sample. TF-bound fragments do not appear in the gel. Such fragments can be isolated, purified, and sequenced. This technique is often used to identify the binding motif of a TF resolving the protected region to 50-100 bp which can be further examined for TF-binding sites.
 synonym: "DNase protection" RELATED []
 is_a: ECO:0000136 ! nucleic acid binding evidence
+property_value: IAO:0000112 "Subsequent DNase I footprinting experiments (Fig. 5d) indicated that His-PhoP protected a single region located from 102 to 47 bp upstream of rovA. This footprint was considered the PhoP site." xsd:string {xref="PMID:21966533"}
+property_value: IAO:0000112 "The subsequent DNase I footprinting experiments (Figure 3a) showed that His-OmpR-P protected a single region within the ompR promoter. Therefore, OmpR stimulated its own gene at the transcriptional level, which was mediated through the binding of OmpR-P to its own promoter." xsd:string {xref="PMID:21345178"}
+property_value: IAO:0000112 "To precisely determine the PhoP-binding sites of target genes, DNase I footprinting assay was performed on 17 PhoP-dependent promoter DNA regions (both coding and noncoding strands) (Additional file 6). DNase I footprinting results confirmed the direct binding of His-PhoP to these promoter regions in vitro." xsd:string {xref="PMID:18366809"}
+property_value: IAO:0000112 "We therefore pursued DNase I footprinting assays on several of the Crp-associated sequences that gave an unusual downshift in our initial EMSA trials, in an effort to identify a consensus binding sequence (see Fig. S2 in the supplemental material). We mapped sites upstream of crp itself, SCO4561 and SCO2977, and identified a consensus binding sequence [GTG(N)6GNCAC]; derivatives of this motif could be found in all of the secondary metabolism-associated target sequences, although notably, one-half of the palindrome seemed to be better conserved than the other [GTG(N)6GNGAN] (Fig. 2C; Table 1)." xsd:string {xref="PMID:23232715"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-03T13:55:15Z
@@ -6618,6 +6662,7 @@ synonym: "FA" EXACT []
 synonym: "Fluorescence polarization" RELATED [PMCID:3277431, PMID:20232898]
 synonym: "FP" RELATED [PMCID:3277431, PMID:20232898]
 is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000112 "Since these FA analyses are conducted with 300 nM scOhrR, this suggests that oxidation leads to at least a 100-fold reduction in DNA-binding affinity." xsd:string {xref="PMID:19129220"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-03T14:01:36Z
@@ -6707,6 +6752,8 @@ name: primer extension assay evidence
 def: "A type of transcript expression evidence used to determine expression\nlevels of mRNA where a labeled synthetic oligonucleotide primer is annealed to mRNA downstream of the presumed transcription start site of a gene. The mRNA is extended with reverse transcriptase, producing cDNA which is electrophoresed, and the band size is enables determination of the 5' end of the mRNA (i.e. the transcription start site)." [ECO:SW, PMID:23378648]
 comment: The most commonly used radiolabel is 32P.
 is_a: ECO:0000009 ! transcript expression evidence
+property_value: IAO:0000112 "The primer extension assay (Fig. 6a) defined the transcription start sites the three sRNA genes qrr2 - 4, and this assay also indicated that the promoter activity of all the thee qrr genes was under the positive control of OpaR." xsd:string {xref="PMID:22506036"}
+property_value: IAO:0000112 "The primer extension assay detected two transcriptional start sites located at 343 and 78 bp upstream of rovA (Fig. 2); therefore, two promoters (named P2 and P1, respectively) were transcribed for rovA." xsd:string {xref="PMID:21966533"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-04T09:33:18Z
@@ -6721,6 +6768,9 @@ synonym: "3’ RACE-PCR" EXACT []
 synonym: "5’ RACE-PCR" EXACT []
 synonym: "RACE PCR" EXACT [PMI:17498297]
 is_a: ECO:0000219 ! nucleotide sequencing assay evidence
+property_value: IAO:0000112 "5' RACE analysis was employed to localize the espR promoter using RNA extracted from Mtb H37Rv grown to mid-log phase. The espR transcript starts with a poly-G (7) sequence 144 bp upstream of the translational start codon." xsd:string {xref="PMID:22479184"}
+property_value: IAO:0000112 "The 5'-end of the espA mRNA was located 66 bp upstream of the translation start codon using 5' RACE (Fig. S3)." xsd:string {xref="PMID:22479184"}
+property_value: IAO:0000112 "Using 5' rapid amplification of cDNA ends (RACE), we mapped the transcriptional start sites of rpoQ and VF_A1016 (Fig. 4A). Neither start site was detected in the DeltarpoQ mutant, supporting the idea that transcription of rpoQ and VF_A1016 requires RpoQ (data not shown)." xsd:string {xref="PMID:22233679"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-04T09:48:38Z
@@ -6885,6 +6935,68 @@ created_by: jbmunro
 creation_date: 2019-05-06T12:00:00Z
 
 [Term]
+id: ECO:0001836
+name: in situ hybridization evidence
+def: "A type of expression pattern evidence in which single-stranded DNA or RNA (probe) are annealed to complementary DNA or RNA in a portion or section of tissue." []
+is_a: ECO:0000008 ! expression pattern evidence
+property_value: IAO:0000234 "planarian anatomy ontology (PLANA)" xsd:string
+created_by: jbmunro
+creation_date: 2019-09-26T12:00:00Z
+
+[Term]
+id: ECO:0001837
+name: in situ hybridization evidence used in automatic assertion
+def: "A type of in situ hybridization evidence that is used in an automatic assertion." []
+is_a: ECO:0001836 ! in situ hybridization evidence
+is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
+intersection_of: ECO:0001836 ! in situ hybridization evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: jbmunro
+creation_date: 2019-09-26T12:00:00Z
+
+[Term]
+id: ECO:0001838
+name: in situ hybridization evidence used in manual assertion
+def: "A type of in situ hybridization evidence that is used in a manual assertion." []
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
+is_a: ECO:0001836 ! in situ hybridization evidence
+intersection_of: ECO:0001836 ! in situ hybridization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: jbmunro
+creation_date: 2019-09-26T12:00:00Z
+
+[Term]
+id: ECO:0001839
+name: colorimetric in situ hybridization evidence
+def: "A type of nucleic acid localization evidence and in situ hybridization evidence resulting from the use of colorimetric probes to detect complementary sequences of nucleic acids." [PMID:23497040]
+is_a: ECO:0001836 ! in situ hybridization evidence
+property_value: IAO:0000234 "planarian anatomy ontology (PLANA)" xsd:string
+created_by: jbmunro
+creation_date: 2019-09-26T12:00:00Z
+
+[Term]
+id: ECO:0001840
+name: colorimetric in situ hybridization evidence used in automatic assertion
+def: "A type of colorimetric in situ hybridization evidence that is used in an automatic assertion." []
+is_a: ECO:0001837 {is_inferred="true"} ! in situ hybridization evidence used in automatic assertion
+is_a: ECO:0001839 ! colorimetric in situ hybridization evidence
+intersection_of: ECO:0001839 ! colorimetric in situ hybridization evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: jbmunro
+creation_date: 2019-09-26T12:00:00Z
+
+[Term]
+id: ECO:0001841
+name: colorimetric in situ hybridization evidence used in manual assertion
+def: "A type of colorimetric in situ hybridization evidence that is used in a manual assertion." []
+is_a: ECO:0001838 {is_inferred="true"} ! in situ hybridization evidence used in manual assertion
+is_a: ECO:0001839 ! colorimetric in situ hybridization evidence
+intersection_of: ECO:0001839 ! colorimetric in situ hybridization evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: jbmunro
+creation_date: 2019-09-26T12:00:00Z
+
+[Term]
 id: ECO:0005004
 name: cell viability assay evidence
 def: "A type of cell-based assay evidence resulting from analyzing the ability of cells to survive or live successfully." [NBK:144065]
@@ -6961,6 +7073,7 @@ id: ECO:0005031
 name: structure determination evidence
 def: "A type of experimental evidence resulting from the visualization and examination of chemical and/or molecular structures." [ECO:RCT]
 is_a: ECO:0000006 ! experimental evidence
+property_value: IAO:0000112 "The secondary structure of VapC10 (Figure S2), predicted with the 3DJIGSAW prediction tool [36] and the DALI server [37], exhibited homology with several well studied VapC toxins, such as the first PIN domain structure for the protein PAE2754 from the archae bacterium Pyrobaculum aerophilum (30)." xsd:string {xref="PMID:24260461"}
 created_by: snadendla
 creation_date: 2015-03-20T12:16:17Z
 
@@ -6970,6 +7083,7 @@ name: electron microscopy evidence
 def: "A type of microscopy evidence and structure determination evidence resulting from an electron beam utilized to create an image." [ECO:RCT]
 is_a: ECO:0001098 ! microscopy evidence
 is_a: ECO:0005031 ! structure determination evidence
+property_value: IAO:0000112 "Electron micrographs showed that all the cells are rod-shaped and those of the parent strain Ye9 and the envZ mutant strain EZ10 are flagellated, but the ompR mutant cells lack flagella." xsd:string {xref="PMID:20830609"}
 created_by: snadendla
 creation_date: 2015-03-20T12:21:48Z
 
@@ -7223,6 +7337,9 @@ comment: Site-directed mutagenesis is often performed in tandem with EMSA. It is
 synonym: "site directed mutagenesis" EXACT []
 synonym: "site-directed mutagenesis evidence" EXACT []
 is_a: ECO:0000015 ! mutant phenotype evidence
+property_value: IAO:0000112 "If the AGAA sequence is mutated CTCC (Pxyn2aM, see Table 1), no DNA-protein complex is formed under either repressing or inducing conditions (Figure 1). This result indicates that this part of the xyn2 promoter is essential for binding a transcription factor under repressing conditions." xsd:string {xref="PMID:21087492"}
+property_value: IAO:0000112 "To identify key residues required for specific GlnR binding we mutated the highly conserved AC-n9-AC and AT-n9-AC DNA binding motifs. Figure 4 shows that the highly conserved adenosine residues in the motif are critical as GlnR binding is abolished when these residues are mutated." xsd:string {xref="PMID:23642041"}
+property_value: IAO:0000112 "We also tested a hyaS promoter in which one (highest score) of the three putative AdpA-binding sites was mutated (at position -134 to -129, see Additional file 3: Figure S1a): the affinity of AdpA for this promoter region was reduced and one protein-DNA complex disappeared (Additional file 3: Figure S1b). These results suggest that one dimer of AdpA binds the adjacent sites -129 and -123 of S. lividans hyaS promoter and another dimer binds the -100 site resulting in the formation of the two DNA-AdpA complexes depicted in Figure 2." xsd:string {xref="PMID:24694298"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: snadendla
 creation_date: 2015-09-30T11:34:41Z
@@ -7254,6 +7371,9 @@ name: motif discovery evidence
 def: "A type of multiple sequence alignment evidence based on a set of algorithms that infer over-represented motifs from a set of biological sequences returning one or more local multiple sequence alignment defining the inferred motifs." [ECO:SW, PMID:10812473, PMID:16845028, PMID:8211139]
 comment: Relationship type between sequences (e.g. orthologs from multiple genomes or co-expressed genes in the same genome) is not necessarily assumed. The local multiple sequence alignment is typically ungapped. A common application of motif discovery is to infer the binding motif of a given transcription factor (TF). This can be based on the results of a whole-genome expression analysis, assuming that co-expressed genes are co-regulated by the same TF, from peaks in ChIP-seq experiments with the TF, or from the comparative genomics analysis of the promoter regions of orthologs. {xref="PMID:19892760", xref="PMID:23032607"}
 is_a: ECO:0005555 ! multiple sequence alignment evidence
+property_value: IAO:0000112 "A sequence alignment of the phlA gene promoter region from strain 2P24 with other well-studied 2,4-DAPG producing Pseudomonas strains revealed a very well conserved palindromic sequence GAAACN5GTTTC (Fig. S1)." xsd:string {xref="PMID:23209661"}
+property_value: IAO:0000112 "In order to identify a potential regulatory motif for KstR2, we used the promoter regions of the kstR2 orthologues as a training set for the motif identification program MEME (Bailey & Elkan, 1994). This identified a potential regulatory sequence that contains a 14 bp inverted palindromic motif AnCAAGnnCTTGnT (Fig. 2)." xsd:string {xref="PMID:20167624"}
+property_value: IAO:0000112 "We mapped sites upstream of crp itself, SCO4561 and SCO2977, and identified a consensus binding sequence [GTG(N)6GNCAC]; derivatives of this motif could be found in all of the secondary metabolism-associated target sequences, although notably, one-half of the palindrome seemed to be better conserved than the other [GTG(N)6GNGAN] (Fig. 2C; Table 1)." xsd:string {xref="PMID:23232715"}
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: snadendla
 creation_date: 2015-09-30T15:04:45Z
@@ -7911,6 +8031,7 @@ def: "A type of confocal microscopy evidence where light passes through immunofl
 comment: This allows visualization of sub cellular distribution of biomolecules of interest.
 is_a: ECO:0000007 ! immunofluorescence evidence
 is_a: ECO:0005587 ! confocal microscopy evidence
+property_value: IAO:0000112 "The endogenous protein expression and localization for WalR and WalK was also checked using confocal immunofluorescence microscopy. WalR could be localized to the cytoplasm of B. anthracis but WalK could not be detected once again (data not shown)." xsd:string {xref="PMID:24490131"}
 created_by: snadendla
 creation_date: 2016-03-18T12:48:42Z
 
@@ -7956,6 +8077,7 @@ id: ECO:0005605
 name: disk diffusion test evidence
 def: "A type of zone of inhibition evidence where sensitivity/resistance to an antimicrobial agent is tested by impregnating small filter disks with a known concentration of antimicrobial agent which is then placed on a Mueller-Hinton agar plate inoculated with the test organism." [ECO:SN, url:http\://www.cdc.gov/nczved/resources/cholera/ch9.pdf]
 is_a: ECO:0007083 ! zone of inhibition evidence
+property_value: IAO:0000112 "Disk diffusion assays were used to determine if ohr and ohrR mutations affected resistance to ROS. The ohr mutant was less resistant than its parental strain when challenged with organic peroxides as shown by the zones of growth inhibition: 4.1 +- 0.2 cm for CuOOH and 3.1 +- 0.1 cm for tBOOH versus to 2.3 +- 0.2 and 2.5 +- 0.3 cm for wild type strain." xsd:string {xref="PMID:21569462"}
 created_by: snadendla
 creation_date: 2016-03-29T16:02:22Z
 
@@ -8817,6 +8939,7 @@ id: ECO:0005803
 name: motility assay evidence
 def: "A type of direct assay evidence where the motility of a cell or cells is determined." [ECO:SN]
 is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "A motility assay at 37 degrees C revealed a non-motile phenotype for all strains, as expected (data not shown)." xsd:string {xref="PMID:20830609"}
 
 [Term]
 id: ECO:0005804
@@ -10594,6 +10717,7 @@ id: ECO:0007045
 name: scanning electron microscopy evidence
 def: "A type of electron microscopy evidence where a focused beam of high-energy electrons is used to generate a variety of signals at the surface of solid specimens." [URL:https\://serc.carleton.edu/research_education/geochemsheets/techniques/SEM.html]
 is_a: ECO:0005033 ! electron microscopy evidence
+property_value: IAO:0000112 "With a general growth of the recombinant mycobacterial strains resulting in minimal change, the cell morphology was further examined using the scanning electron microscopy (SEM) technique. As shown in Fig. 5B, the cell lengthened when 20 ng/mL tetracycline was added to the medium to induce expression of the antisense mtrA mRNA (right panel)." xsd:string {xref="PMID:20843371"}
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
 creation_date: 2018-03-14T12:44:11Z
@@ -14272,7 +14396,7 @@ id: ECO:0007386
 name: fluorescence in situ hybridization evidence used in automatic assertion
 def: "A type of fluorescence in situ hybridization evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001047 {is_inferred="true"} ! fluorescence in situ hybridization evidence
-is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
+is_a: ECO:0001837 {is_inferred="true"} ! in situ hybridization evidence used in automatic assertion
 is_a: ECO:0007809 {is_inferred="true"} ! nucleic acid localization evidence used in automatic assertion
 intersection_of: ECO:0001047 ! fluorescence in situ hybridization evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
