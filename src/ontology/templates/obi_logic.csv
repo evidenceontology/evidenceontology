@@ -94,7 +94,7 @@ ECO:0001102,multiplex bead-based immunoassay evidence,proteomic profiling by arr
 ECO:0000243,tissue grafting evidence,in vivo design,transplantation,biological_process,in live organism assay
 ECO:0001129,TACE activity assay evidence,cellular process design,,tumor necrosis factor secretion,analyte assay
 ECO:0001096,mass spectrometry evidence,,mass spectrometry analysis,,mass spectrometry assay
-ECO:0000022,co-purification evidence,,,,purification
+ECO:0000022,co-purification evidence,,,,(assay and ('has part' some purification))
 ECO:0001026,co-localization evidence,,,macromolecule localization,imaging assay
 ECO:0005033,electron microscopy evidence,,,,electron microscopy imaging assay
 ECO:0001132,tryptic phosphopeptide mapping assay evidence,,,,peptide mass fingerprinting assay
@@ -119,7 +119,7 @@ ECO:0005606,cell transfection experiment evidence,genetic modification design,tr
 ECO:0000019,RNAi evidence,post-transcriptional modification design,,negative regulation of translation involved in RNA interference ,gene knock-down assay
 ECO:0000018,anti-sense experiment evidence,post-transcriptional modification design,,antisense RNA transcription,gene knock-down assay
 ECO:0001029,comet assay evidence,,,cellular response to DNA damage stimulus,comet assay
-ECO:0000174,mutant physiological response evidence,stimulus or stress design,presentation of stimulus,('response to stimulus' and ('has participant' some (organism and ('has quality' some 'induced mutation')))),in live organism assay
+ECO:0000174,mutant physiological response evidence,stimulus or stress design,presentation of stimulus,('response to stimulus' and ('has participant' some (organism and (is_specified_output_of some 'induced mutation')))),in live organism assay
 ECO:0000049,reporter gene assay evidence,('study design' and ('has part' some 'biological feature identification objective')),,gene expression,reporter gene assay
 ECO:0000110,RNA protection assay evidence,transcription profiling design,('nucleic acid hybridization' and ('has participant' some 'labeled RNA extract')),gene expression,RNA protection assay
 ECO:0001128,syngeneic transplantation experiment evidence,in vivo design,transplantation,,in live organism assay
@@ -158,7 +158,7 @@ ECO:0000325,chromotography evidence,,preparative chromatography,,analytical chro
 ECO:0000005,enzyme assay evidence,cellular process design,,catalytic activity,(assay and ('has participant' some enzyme))
 ECO:0005502,ex vivo assay evidence,ex vivo design,,,in live cell assay
 ECO:0001088,in vivo translation assay evidence,in vivo design,,translation,in live organism assay
-ECO:0001045,eTag assay evidence,,,gene expression,('analyte assay' and ('has part' some 'addition of molecular label' and ('has participant' some (protein and ('has quality' some fluorescence)))))
+ECO:0001045,eTag assay evidence,,,gene expression,('analyte assay' and ('has part' some 'addition of molecular label' and ('has participant' some (protein and ('has disposition' some fluorescence)))))
 ECO:0001031,conditional knockin evidence,genetic modification design,gene knock in,gene expression,in live organism assay
 ECO:0001030,conditional knockout evidence,genetic modification design,gene knock out,gene expression,in live organism assay
 ECO:0000134,transport assay evidence,cellular process design,,protein transport,in live cell assay
