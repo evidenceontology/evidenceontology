@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -3623,7 +3623,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000212 "inferred from in
 AnnotationAssertion(oboInOwl:id obo:ECO_0000212 "ECO:0000212"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000212 "A key aspect of this type of evidence is that two or more pieces of information are combined to generate an emergent type of evidence not possible with the constituent pieces of evidence alone. A combinatorial analysis typically involves incorporation of different types of evidence."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000212 "combinatorial evidence"^^xsd:string)
-EquivalentClasses(obo:ECO_0000212 ObjectIntersectionOf(obo:ECO_0000000 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0000000)))
+EquivalentClasses(obo:ECO_0000212 ObjectIntersectionOf(obo:ECO_0000000 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000000)))
 SubClassOf(obo:ECO_0000212 obo:ECO_0000000)
 
 # Class: obo:ECO_0000213 (combinatorial evidence used in automatic assertion)
@@ -9855,8 +9855,8 @@ SubClassOf(obo:ECO_0001819 obo:ECO_0000009)
 
 # Class: obo:ECO_0001820 (rapid amplification of cDNA ends polymerase chain reaction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184"^^xsd:string) obo:IAO_0000112 obo:ECO_0001820 "5' RACE analysis was employed to localize the espR promoter using RNA extracted from Mtb H37Rv grown to mid-log phase. The espR transcript starts with a poly-G (7) sequence 144 bp upstream of the translational start codon."^^xsd:string)
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184"^^xsd:string) obo:IAO_0000112 obo:ECO_0001820 "The 5'-end of the espA mRNA was located 66 bp upstream of the translation start codon using 5' RACE (Fig. S3)."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184") obo:IAO_0000112 obo:ECO_0001820 "5' RACE analysis was employed to localize the espR promoter using RNA extracted from Mtb H37Rv grown to mid-log phase. The espR transcript starts with a poly-G (7) sequence 144 bp upstream of the translational start codon."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22479184") obo:IAO_0000112 obo:ECO_0001820 "The 5'-end of the espA mRNA was located 66 bp upstream of the translation start codon using 5' RACE (Fig. S3)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22233679"^^xsd:string) obo:IAO_0000112 obo:ECO_0001820 "Using 5' rapid amplification of cDNA ends (RACE), we mapped the transcriptional start sites of rpoQ and VF_A1016 (Fig. 4A). Neither start site was detected in the DeltarpoQ mutant, supporting the idea that transcription of rpoQ and VF_A1016 requires RpoQ (data not shown)."^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17498297"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:7685466") obo:IAO_0000115 obo:ECO_0001820 "A type of nucleotide sequencing assay evidence in which RT-PCR (cDNA synthesis) is first used to produce a cDNA copy of a region of the RNA transcript being investigated followed by PCR to capture either the unknown 5' or 3' end of the transcript for sequencing, depending on whether 5' RACE-PCR or 3' RACE-PCR are being undertaken."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001820 "CollecTF"^^xsd:string)
@@ -13933,9 +13933,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007011 "combinatorial evid
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007011 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007011 "ECO:0007011"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007011 "combinatorial experimental and author inference evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007011 obo:ECO_0000212)
-SubClassOf(obo:ECO_0007011 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006))
-SubClassOf(obo:ECO_0007011 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0007010))
+EquivalentClasses(obo:ECO_0007011 ObjectIntersectionOf(obo:ECO_0000212 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000006) ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0007010)))
 
 # Class: obo:ECO_0007012 (combinatorial experimental and curator inference evidence)
 
@@ -13947,9 +13945,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007012 "combinatorial evid
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007012 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007012 "ECO:0007012"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007012 "combinatorial experimental and curator inference evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007012 obo:ECO_0000212)
-SubClassOf(obo:ECO_0007012 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006))
-SubClassOf(obo:ECO_0007012 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000205))
+EquivalentClasses(obo:ECO_0007012 ObjectIntersectionOf(obo:ECO_0000212 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000006) ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000205)))
 
 # Class: obo:ECO_0007013 (combinatorial experimental and author inference evidence used in manual assertion)
 
@@ -14323,7 +14319,7 @@ SubClassOf(obo:ECO_0007044 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0007045 (scanning electron microscopy evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20843371") obo:IAO_0000112 obo:ECO_0007045 "With a general growth of the recombinant mycobacterial strains resulting in minimal change, the cell morphology was further examined using the scanning electron microscopy (SEM) technique. As shown in Fig. 5B, the cell lengthened when 20 ng/mL tetracycline was added to the medium to induce expression of the antisense mtrA mRNA (right panel).")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:20843371"^^xsd:string) obo:IAO_0000112 obo:ECO_0007045 "With a general growth of the recombinant mycobacterial strains resulting in minimal change, the cell morphology was further examined using the scanning electron microscopy (SEM) technique. As shown in Fig. 5B, the cell lengthened when 20 ng/mL tetracycline was added to the medium to induce expression of the antisense mtrA mRNA (right panel).")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "URL:https://serc.carleton.edu/research_education/geochemsheets/techniques/SEM.html"^^xsd:string) obo:IAO_0000115 obo:ECO_0007045 "A type of electron microscopy evidence where a focused beam of high-energy electrons is used to generate a variety of signals at the surface of solid specimens."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0007045 "OMP"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007045 "snadendla"^^xsd:string)
@@ -20376,8 +20372,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007648 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007648 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007648 "ECO:0007648"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007648 "manually integrated combinatorial computational evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007648 obo:ECO_0007674)
-SubClassOf(obo:ECO_0007648 obo:ECO_0007677)
+EquivalentClasses(obo:ECO_0007648 ObjectIntersectionOf(obo:ECO_0007674 ObjectAllValuesFrom(obo:BFO_0000051 obo:ECO_0007672)))
 
 # Class: obo:ECO_0007649 (manually integrated combinatorial computational evidence used in manual assertion)
 
@@ -20407,8 +20402,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007651 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007651 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007651 "ECO:0007651"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007651 "automatically integrated combinatorial computational evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007651 obo:ECO_0007673)
-SubClassOf(obo:ECO_0007651 obo:ECO_0007677)
+EquivalentClasses(obo:ECO_0007651 ObjectIntersectionOf(obo:ECO_0007673 ObjectAllValuesFrom(obo:BFO_0000051 obo:ECO_0007672)))
 
 # Class: obo:ECO_0007652 (automatically integrated combinatorial computational evidence used in manual assertion)
 
@@ -20438,8 +20432,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007654 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007654 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007654 "ECO:0007654"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007654 "combinatorial experimental evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007654 obo:ECO_0000212)
-SubClassOf(obo:ECO_0007654 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0000006))
+EquivalentClasses(obo:ECO_0007654 ObjectIntersectionOf(obo:ECO_0000212 ObjectAllValuesFrom(obo:BFO_0000051 obo:ECO_0000006)))
 
 # Class: obo:ECO_0007655 (manually integrated combinatorial experimental evidence)
 
@@ -20449,8 +20442,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007655 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007655 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007655 "ECO:0007655"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007655 "manually integrated combinatorial experimental evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007655 obo:ECO_0007654)
-SubClassOf(obo:ECO_0007655 obo:ECO_0007674)
+EquivalentClasses(obo:ECO_0007655 ObjectIntersectionOf(obo:ECO_0007674 ObjectAllValuesFrom(obo:BFO_0000051 obo:ECO_0000006)))
 
 # Class: obo:ECO_0007656 (manually integrated combinatorial experimental evidence used in manual assertion)
 
@@ -20480,8 +20472,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007658 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007658 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007658 "ECO:0007658"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007658 "automatically integrated combinatorial experimental evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007658 obo:ECO_0007654)
-SubClassOf(obo:ECO_0007658 obo:ECO_0007673)
+EquivalentClasses(obo:ECO_0007658 ObjectIntersectionOf(obo:ECO_0007673 ObjectAllValuesFrom(obo:BFO_0000051 obo:ECO_0000006)))
 
 # Class: obo:ECO_0007659 (automatically integrated combinatorial experimental evidence used in manual assertion)
 
@@ -20511,9 +20502,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007661 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007661 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007661 "ECO:0007661"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007661 "combinatorial computational and experimental evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007661 obo:ECO_0000212)
-SubClassOf(obo:ECO_0007661 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0000006))
-SubClassOf(obo:ECO_0007661 ObjectMinCardinality(1 obo:BFO_0000051 obo:ECO_0007672))
+EquivalentClasses(obo:ECO_0007661 ObjectIntersectionOf(obo:ECO_0000212 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000006) ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0007672)))
 
 # Class: obo:ECO_0007662 (manually integrated combinatorial computational and experimental evidence)
 
@@ -20523,8 +20512,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007662 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007662 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007662 "ECO:0007662"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007662 "manually integrated combinatorial computational and experimental evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007662 obo:ECO_0007661)
-SubClassOf(obo:ECO_0007662 obo:ECO_0007674)
+EquivalentClasses(obo:ECO_0007662 ObjectIntersectionOf(obo:ECO_0007674 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000006) ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0007672)))
 
 # Class: obo:ECO_0007663 (manually integrated combinatorial computational and experimental evidence used in manual assertion)
 
@@ -20554,8 +20542,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007665 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007665 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007665 "ECO:0007665"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007665 "automatically integrated combinatorial computational and experimental evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007665 obo:ECO_0007661)
-SubClassOf(obo:ECO_0007665 obo:ECO_0007673)
+EquivalentClasses(obo:ECO_0007665 ObjectIntersectionOf(obo:ECO_0007673 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000006) ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0007672)))
 
 # Class: obo:ECO_0007666 (automatically integrated combinatorial computational and experimental evidence used in manual assertion)
 
@@ -20653,8 +20640,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007677 "2018-12-04T19:31:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007677 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007677 "ECO:0007677"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007677 "combinatorial computational evidence"^^xsd:string)
-SubClassOf(obo:ECO_0007677 obo:ECO_0000212)
-SubClassOf(obo:ECO_0007677 ObjectMinCardinality(2 obo:BFO_0000051 obo:ECO_0007672))
+EquivalentClasses(obo:ECO_0007677 ObjectIntersectionOf(obo:ECO_0000212 ObjectAllValuesFrom(obo:BFO_0000051 obo:ECO_0007672)))
 
 # Class: obo:ECO_0007678 (combinatorial computational evidence used in manual assertion)
 
@@ -22379,7 +22365,6 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007847 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007847 "ECO:0007847"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007847 "fluorescence quantification assay evidence"^^xsd:string)
 SubClassOf(obo:ECO_0007847 obo:ECO_0001115)
-SubClassOf(obo:ECO_0007847 ObjectExactCardinality(1 obo:RO_0000059 obo:ECO_0000000))
 
 # Class: obo:ECO_0007848 (fluorescence quantification assay evidence used in automatic assertion)
 
