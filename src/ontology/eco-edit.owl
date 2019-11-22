@@ -13930,6 +13930,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0007011 "combinatorial evid
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007011 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007011 "ECO:0007011"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007011 "combinatorial experimental and author inference evidence"^^xsd:string)
+EquivalentClasses(obo:ECO_0007011 ObjectIntersectionOf(obo:ECO_0000212 ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000006) ObjectSomeValuesFrom(obo:BFO_0000051 obo:ECO_0000204)))
 
 # Class: obo:ECO_0007012 (combinatorial experimental and curator inference evidence)
 
@@ -22376,7 +22377,7 @@ SubClassOf(obo:ECO_0007849 obo:ECO_0007847)
 
 # Class: obo:ECO_0007850 (inference of sequence features from visual inspection)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCJ") obo:IAO_0000115 obo:ECO_0007850 "A type of inferential evidence in which sequence features are inferred based on visual inspection of the sequence.")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCJ"^^xsd:string) obo:IAO_0000115 obo:ECO_0007850 "A type of inferential evidence in which sequence features are inferred based on visual inspection of the sequence.")
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007850 "beckyjackson")
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007850 "2019-11-22T06:51:00Z")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007850 "eco")

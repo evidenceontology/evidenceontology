@@ -22,6 +22,7 @@ release: all
 
 # test is used for Travis integration
 test: report verify
+full-test: reason test
 
 # ----------------------------------------
 # ROBOT
@@ -69,7 +70,7 @@ $(IMPS): $(MOD)obi_logic.owl | $(BUILD)robot.jar
 	 --output $(IMP)$@_import.owl
 
 # ----------------------------------------
-# REPORT
+# TESTS
 # ----------------------------------------
 
 # A report is written to build/reports/report.tsv
@@ -87,6 +88,12 @@ V_QUERIES := $(wildcard $(SPARQL)verify-*.rq)
 verify: | $(BUILD)robot.jar
 	$(ROBOT) verify --input $(EDIT)\
 	 --queries $(V_QUERIES) --output-dir $(BUILD)
+
+reason: $(EDIT) | $(BUILD)robot.jar
+	$(ROBOT) merge --input $< \
+	reason \
+	 --reasoner hermit \
+	 --dump-unsatisfiable $(BUILD)unsatisfiable.owl
 
 # ----------------------------------------
 # MAIN
@@ -106,7 +113,7 @@ DATE = $(shell date +'%Y-%m-%d')
 
 $(ECO).owl: $(EDIT) | $(BUILD)robot.jar
 	$(ROBOT) merge --input $< --collapse-import-closure true \
-	 reason --reasoner elk --create-new-ontology false \
+	 reason --reasoner hermit --create-new-ontology false \
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	 reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
 	 --annotation oboInOwl:date "$(TS)" --output $@

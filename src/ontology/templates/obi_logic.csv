@@ -1,188 +1,224 @@
 ID,Label,OBI Study Design,OBI Independent Variable,OBI Dependent Variable,OBI Assay
 ID,,C is_specified_output_of some (assay and (realizes some (concretizes some %))),C is_specified_output_of some (assay and ('has part' some %)),C 'is about' some %,C is_specified_output_of some %
-ECO:0000093,array-based sequence capture evidence,,,,('microarray assay' and (has_specified_output some 'sequence data'))
-ECO:0000232,chromosome conformation-based evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,nuclear ligation assay
-ECO:0000235,5C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,Carbon-copy chromosome conformation capture assay
-ECO:0000233,3C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,chromosome conformation capture assay
-ECO:0000237,3C-qPCR evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,('chromosome conformation capture assay' and 'real time polymerase chain reaction assay')
-ECO:0000239,3C-seq evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,
-ECO:0000234,4C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,
-ECO:0000238,Hi-C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,Hi-C assay
-ECO:0000086,amplification of intermethylated sites evidence,('study design' and ('has part' some 'epigenetic modification identification objective')),,DNA methylation,OBI:0001685
-ECO:0000069,differential methylation hybridization evidence,DNA methylation profiling by array design,,regulation of DNA methylation,methylation-sensitive restriction enzyme sequencing assay
-ECO:0001047,fluorescence in situ hybridization evidence,('study design' and ('has part' some 'sequence feature identification objective')),,chromosome organization,chromosome organization assay by fluorescence in-situ hybridization
-ECO:0000077,methylation-specific polymerase chain reaction evidence,('study design' and ('has part' some 'epigenetic modification identification objective')),,DNA methylation,methylation-specific polymerase chain reaction assay
-ECO:0000231,quantitative polymerase chain reaction evidence,,,,real time polymerase chain reaction assay
-ECO:0001820,rapid amplification of cDNA ends polymerase chain reaction evidence,('study design' and ('has part' some 'sequence feature identification objective')),rapid amplification of cDNA ends,,
-ECO:0000109,reverse transcription polymerase chain reaction evidence,transcription profiling by RT-PCR design,,gene expression,transcription profiling by RT-PCR assay
+ECO:0000002,direct assay evidence,study design,,biological_process,assay
+ECO:0000005,enzyme assay evidence,cellular process design,,catalytic activity,(assay and ('has participant' some enzyme))
+ECO:0000006,experimental evidence,study design,,process,assay
 ECO:0000009,transcript expression evidence,transcription profiling design,,gene expression,transcription profiling assay
-ECO:0000309,cap analysis of gene expression evidence,transcription profiling design,,gene expression,cap analysis of gene expression assay
-ECO:0000116,differential hybridization evidence,('transcription profiling design' and ('has part' some 'differential expression analysis objective')),differential screening hybridization,gene expression,transcription profiling assay
+ECO:0000017,ectopic expression evidence,in vivo design,genetic transformation,gene expression,in live organism assay
+ECO:0000018,anti-sense experiment evidence,post-transcriptional modification design,,antisense RNA transcription,gene knock-down assay
+ECO:0000019,RNAi evidence,post-transcriptional modification design,,negative regulation of translation involved in RNA interference ,gene knock-down assay
+ECO:0000020,specific protein inhibition evidence,molecular interaction identification design,,negative regulation of biological process,
+ECO:0000021,physical interaction evidence,molecular interaction identification design,,binding,binding assay
+ECO:0000022,co-purification evidence,,,,(assay and ('has part' some purification))
+ECO:0000023,affinity evidence,molecular interaction identification design,,binding,binding assay
+ECO:0000024,protein binding evidence,molecular interaction identification design,,binding,binding assay
+ECO:0000025,hybrid interaction evidence,molecular interaction identification design,,binding,binding assay
+ECO:0000040,immunological assay evidence,molecular interaction identification design,,antigen binding,analyte assay
+ECO:0000049,reporter gene assay evidence,('study design' and ('has part' some 'biological feature identification objective')),,gene expression,reporter gene assay
+ECO:0000050,voucher specimen analysis evidence,reference design,,,
 ECO:0000058,expression microarray evidence,transcription profiling by array design,,gene expression,transcription profiling by array assay
-ECO:0000097,cDNA to DNA expression microarray evidence,transcription profiling by array design,,gene expression,('transcription profiling by array assay' and (has_specified_input some 'cDNA library'))
+ECO:0000059,experimental phenotypic evidence,in vivo design,,gene expression,in live organism assay
 ECO:0000062,cRNA to DNA expression microarray evidence,transcription profiling by array design,,gene expression,('transcription profiling by array assay' and (has_specified_input some 'RNA extract'))
-ECO:0000104,DNA to cDNA expression microarray evidence,transcription profiling by array design,,gene expression,('transcription profiling by array assay' and (has_specified_input some 'cDNA library'))
-ECO:0000310,nano-cap analysis of gene expression evidence,transcription profiling design,,gene expression,nano-cap analysis of gene expression assay
-ECO:0000106,northern blot evidence,transcription profiling design,,gene expression,northern blot assay
-ECO:0000295,RNA-seq evidence,transcription profiling by high throughput sequencing design,,gene expression,RNA-seq assay
-ECO:0000118,subtractive hybridization evidence,('transcription profiling design' and ('has part' some 'differential expression analysis objective')),suppression subtractive hybridization,gene expression,transcription profiling assay
-ECO:0001002,[3H]arachiodonic acid release assay evidence,cellular process design,,arachidonic acid secretion,metabolite profiling assay
-ECO:0005034,apoptotic assay evidence,cellular process design,,apoptotic process,cytometry assay
-ECO:0001011,annexin-V staining evidence,cellular process design,,apoptotic process,cytometry assay
-ECO:0001019,caspase assay evidence,cellular process design,,apoptotic process,cytometry assay
-ECO:0001039,DNA laddering assay evidence,cellular process design,,apoptotic DNA fragmentation,
-ECO:0001100,MTS assay evidence,cellular process design,adding substance to cell culture,cell proliferation,analyte assay
-ECO:0001101,MTT assay evidence,cellular process design,adding substance to cell culture,cell proliferation,analyte assay
-ECO:0001104,nuclear fragmentation evidence,cellular process design,,nucleolar fragmentation,
-ECO:0001020,cell counting evidence,in vitro design,,cell proliferation,in container assay
-ECO:0001563,cell growth assay evidence,('in vitro design' or 'in vivo design'),,cell growth,('in live cell assay' or 'in container assay')
-ECO:0000095,cell growth regulation assay evidence,('in vitro design' or 'in vivo design'),,cell growth,in live cell assay
-ECO:0007039,plaque assay evidence,in vitro design,experimental infection of cell culture,response to biotic stimulus,in container assay
-ECO:0007083,zone of inhibition evidence,in vitro design,adding substance to cell culture,response to chemical,in container assay
-ECO:0005605,disk diffusion test evidence,in vitro design,adding substance to cell culture,response to antibiotic,in container assay
-ECO:0007085,Etest evidence,in vitro design,adding substance to cell culture,response to antibiotic,in container assay
-ECO:0001021,cell permeability assay evidence,cellular process design,,cellular process,cytometry assay
-ECO:0005007,cell proliferation assay evidence,cellular process design,,cell proliferation,cell proliferation assay
-ECO:0001001,3D cell culture evidence,in vitro design,cell culture expansion,cell proliferation,cell proliferation assay
-ECO:0006020,biofilm formation assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
-ECO:0006024,air-liquid interface assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
-ECO:0006026,colony biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
-ECO:0007071,flow cell biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,('in container assay' and ('has participant' some 'flow cell'))
-ECO:0006028,Kadouri drip-fed biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
-ECO:0006022,microtiter plate biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,('in container assay' and ('has participant' some 'microtiter plate'))
-ECO:0000336,competitive growth assay evidence,in vitro design,cell co-culturing,,in container assay
-ECO:0005604,cross-streak test evidence,in vitro design,cell co-culturing,response to biotic stimulus,in container assay
-ECO:0005008,DNA synthesis cell proliferation assay evidence,cellular process design,,DNA synthesis involved in DNA replication,cell proliferation assay
-ECO:0001136,WST-1 assay evidence,cellular process design,adding substance to cell culture,cell proliferation,('analyte assay' and 'cell proliferation assay')
-ECO:0005004,cell viability assay evidence,cellular process design,survival assessment assay,cellular process,cytometry assay
-ECO:0005021,chemotaxis assay evidence,stimulus or stress design,presentation of stimulus,chemotaxis,in container assay
-ECO:0005012,cytotoxicity assay evidence,cellular process design,,response to toxic substance,cytometry assay
-ECO:0001017,Boyden chamber assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
-ECO:0005609,capillary assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
-ECO:0005607,tethered cell assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
-ECO:0005608,tumble frequency assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
-ECO:0001004,51Cr release assay evidence,cellular process design,,cell killing,chromium release assay
-ECO:0001099,motility wound healing assay evidence,in vitro design,,wound healing,in container assay
-ECO:0005011,ATP bioluminescence assay evidence,cellular process design,,,ATP bioluminescence assay
-ECO:0001008,alamarBlue assay evidence,cellular process design,adding substance to cell culture,,analyte assay
-ECO:0001003,[3H]-thymidine incorporation assay evidence,cellular process design,,cell proliferation,tritiated thymidine incorporation assay
-ECO:0001107,nucleotide analog incorporation assay evidence,cellular process design,,DNA synthesis involved in DNA replication,cell proliferation assay
-ECO:0000181,in vitro assay evidence,in vitro design,,,in container assay
-ECO:0000178,in vivo assay evidence,in vivo design,,,in live cell assay
+ECO:0000066,yeast one-hybrid evidence,molecular interaction identification design,,sequence-specific DNA binding,yeast one-hybrid assay
+ECO:0000068,yeast 2-hybrid evidence,molecular interaction identification design,,protein domain specific binding,yeast 2-hybrid assay
+ECO:0000069,differential methylation hybridization evidence,DNA methylation profiling by array design,,regulation of DNA methylation,methylation-sensitive restriction enzyme sequencing assay
+ECO:0000074,split-ubiquitin assay evidence,molecular interaction identification design,,protein domain specific binding,split-ubiquitin assay
+ECO:0000076,far-Western blotting evidence,molecular interaction identification design,,binding,far-Western blot assay
+ECO:0000077,methylation-specific polymerase chain reaction evidence,('study design' and ('has part' some 'epigenetic modification identification objective')),,DNA methylation,methylation-specific polymerase chain reaction assay
+ECO:0000078,southern hybridization evidence,genotyping design,nucleic acid hybridization,,Southern blot assay
+ECO:0000079,affinity chromotography evidence,,('preparative chromatography' and ('has participant' some 'affinity column')),,analytical chromatography
+ECO:0000085,immunoprecipitation evidence,molecular interaction identification design,immunoprecipitation,antigen binding,immunoprecipitation assay
+ECO:0000086,amplification of intermethylated sites evidence,('study design' and ('has part' some 'epigenetic modification identification objective')),,DNA methylation,OBI:0001685
 ECO:0000087,immunolocalization evidence,('study design' and ('has part' some 'molecular feature identification objective')),,macromolecule localization,('immuno staining assay' and 'imaging assay')
-ECO:0000179,animal model system study evidence,in vivo design,,biological_process,in live organism assay
-ECO:0001824,DNA adenine methyltransferase identification evidence,protein binding site identification design,,protein localization,('binding assay' and ('has part' some ('material combination' and ('has participant' some 'methyltransferase complex'))))
-ECO:0001032,constitutively active mutant evidence,cellular process design,,('gene expression' and 'biosynthetic process'),in live organism assay
-ECO:0005591,immunogold labeling electron microscopy evidence,,,macromolecule localization,('electron microscopy imaging assay' and (('has part' some 'addition of molecular label') and ('has part' some 'antigen binding')))
+ECO:0000093,array-based sequence capture evidence,,,,('microarray assay' and (has_specified_output some 'sequence data'))
+ECO:0000095,cell growth regulation assay evidence,('in vitro design' or 'in vivo design'),,cell growth,in live cell assay
+ECO:0000096,electrophoretic mobility shift assay evidence,molecular interaction identification design,,,electrophoretic mobility shift assay
+ECO:0000097,cDNA to DNA expression microarray evidence,transcription profiling by array design,,gene expression,('transcription profiling by array assay' and (has_specified_input some 'cDNA library'))
+ECO:0000104,DNA to cDNA expression microarray evidence,transcription profiling by array design,,gene expression,('transcription profiling by array assay' and (has_specified_input some 'cDNA library'))
+ECO:0000106,northern blot evidence,transcription profiling design,,gene expression,northern blot assay
+ECO:0000109,reverse transcription polymerase chain reaction evidence,transcription profiling by RT-PCR design,,gene expression,transcription profiling by RT-PCR assay
+ECO:0000110,RNA protection assay evidence,transcription profiling design,('nucleic acid hybridization' and ('has participant' some 'labeled RNA extract')),gene expression,RNA protection assay
+ECO:0000116,differential hybridization evidence,('transcription profiling design' and ('has part' some 'differential expression analysis objective')),differential screening hybridization,gene expression,transcription profiling assay
+ECO:0000118,subtractive hybridization evidence,('transcription profiling design' and ('has part' some 'differential expression analysis objective')),suppression subtractive hybridization,gene expression,transcription profiling assay
+ECO:0000124,fusion protein localization evidence,cellular process design,,macromolecule localization,subcellular protein localization assay
+ECO:0000134,transport assay evidence,cellular process design,,protein transport,in live cell assay
+ECO:0000136,nucleic acid binding evidence,molecular interaction identification design,,(binding and ('has participant' some 'nucleic acid')),direct binding assay
+ECO:0000138,ribohomopolymer binding assay evidence,molecular interaction identification design,,ribonucleoside binding,binding assay
+ECO:0000142,protein:ion binding evidence,molecular interaction identification design,,(binding and ('has participant' some protein)),direct binding assay
+ECO:0000150,in vitro transcription reconstitution assay evidence,in vitro design,,cellular macromolecule biosynthetic process,in vitro transcription reconstitution assay
+ECO:0000152,in vitro recombinant protein transcription reconstitution assay evidence,in vitro design,,cellular macromolecule biosynthetic process,(assay and ('has part' some 'in vitro transcription reconstitution assay'))
 ECO:0000164,electrophysiology assay evidence,cellular process design,,,electrophysiology assay
-ECO:0005600,immunofluorescence confocal microscopy evidence,,,,('antibody binding detection by fluorescence quenching' and ('imaging assay' and ('has participant' some 'confocal microscope')))
-ECO:0005503,two-dimensional polyacrylamide gel electrophoresis evidence,,,,(assay and ('has participant' some ('gel electrophoresis system' and ('has part' some 'polyacrylamide gel'))))
-ECO:0001049,gel-filtration evidence,,,,('analytical chromatography' and ('has participant' some 'gel filtration column'))
-ECO:0005596,immunoperoxidase immunolocalization electron microscopy evidence,,,macromolecule localization,('immuno staining assay' and 'electron microscopy imaging assay')
-ECO:0001027,colony counting evidence,in vitro design,,,('in container assay' and ('has participant' some 'cultured cell population'))
 ECO:0000170,transcriptional activation assay,transcription profiling design,,core promoter binding,('transcription profiling assay' and 'promoter activity detection by reporter gene assay')
+ECO:0000172,biochemical trait analysis evidence,,,gene expression,metabolite profiling assay
+ECO:0000174,mutant physiological response evidence,stimulus or stress design,presentation of stimulus,('response to stimulus' and ('has participant' some (organism and (is_specified_output_of some 'induced mutation')))),in live organism assay
+ECO:0000178,in vivo assay evidence,in vivo design,,,in live cell assay
+ECO:0000179,animal model system study evidence,in vivo design,,biological_process,in live organism assay
+ECO:0000180,clinical study evidence,clinical study design,,,
+ECO:0000181,in vitro assay evidence,in vitro design,,,in container assay
+ECO:0000183,cell-free assay evidence,in vitro design,,metabolic process,in container assay
+ECO:0000221,high throughput nucleotide sequencing assay evidence,genotyping by high throughput sequencing design,,,genotyping by high throughput sequencing assay
+ECO:0000226,chromatin immunoprecipitation evidence,protein binding site identification design,,sequence-specific DNA binding,assay using chromatin immunoprecipitation
+ECO:0000228,chromatin immunoprecipitation-qPCR evidence,protein binding site identification design,,,ChIP-qPCR assay
+ECO:0000229,chromatin immunoprecipitation-seq evidence,ChIP-seq design,,sequence-specific DNA binding,ChIP-seq assay
+ECO:0000230,chromatin immunoprecipitation-chip evidence,ChIP-chip design,,sequence-specific DNA binding,ChIP-chip assay
+ECO:0000231,quantitative polymerase chain reaction evidence,,,,real time polymerase chain reaction assay
+ECO:0000232,chromosome conformation-based evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,nuclear ligation assay
+ECO:0000233,3C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,chromosome conformation capture assay
+ECO:0000234,4C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,
+ECO:0000235,5C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,Carbon-copy chromosome conformation capture assay
+ECO:0000237,3C-qPCR evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,('chromosome conformation capture assay' and 'real time polymerase chain reaction assay')
+ECO:0000238,Hi-C evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,Hi-C assay
+ECO:0000239,3C-seq evidence,('study design' and ('has part' some 'chromosome conformation identification objective')),,,
+ECO:0000243,tissue grafting evidence,in vivo design,transplantation,biological_process,in live organism assay
+ECO:0000268,flow cytometry evidence,('study design' and ('has part' some 'biological feature identification objective')),,,flow cytometry assay
+ECO:0000294,bacterial one-hybrid evidence,molecular interaction identification design,,sequence-specific DNA binding,bacterial one-hybrid assay
+ECO:0000295,RNA-seq evidence,transcription profiling by high throughput sequencing design,,gene expression,RNA-seq assay
+ECO:0000299,cytochalasin experiment evidence,growth condition intervention design,presentation of stimulus,cellular response to cytochalasin B,cytochalasin-induced inhibition of actin polymerization assay
+ECO:0000309,cap analysis of gene expression evidence,transcription profiling design,,gene expression,cap analysis of gene expression assay
+ECO:0000310,nano-cap analysis of gene expression evidence,transcription profiling design,,gene expression,nano-cap analysis of gene expression assay
+ECO:0000324,imaging assay evidence,,,,imaging assay
+ECO:0000325,chromotography evidence,,preparative chromatography,,analytical chromatography
+ECO:0000336,competitive growth assay evidence,in vitro design,cell co-culturing,,in container assay
+ECO:0000337,gel electrophoresis evidence,,electrophoresis,gradient separation,(assay and ('has participant' some 'gel electrophoresis system'))
+ECO:0000340,plasmid maintenance assay evidence,cellular process design,adding substance to cell culture,plasmid maintenance,in live cell assay
+ECO:0001001,3D cell culture evidence,in vitro design,cell culture expansion,cell population proliferation,cell proliferation assay
+ECO:0001002,[3H]arachiodonic acid release assay evidence,cellular process design,,arachidonic acid secretion,metabolite profiling assay
+ECO:0001003,[3H]-thymidine incorporation assay evidence,cellular process design,,cell population proliferation,tritiated thymidine incorporation assay
+ECO:0001004,51Cr release assay evidence,cellular process design,,cell killing,chromium release assay
+ECO:0001006,adhesion assay evidence,molecular interaction identification design,,cell adhesion molecule production,in live cell assay
+ECO:0001007,adoptive cell transfer evidence,ex vivo design,transplantation,(biological_process and ('has participant' some lymphocyte)),in container assay
+ECO:0001008,alamarBlue assay evidence,cellular process design,adding substance to cell culture,,analyte assay
+ECO:0001009,allograft transplantation experiment evidence,in vivo design,allotransplantation,biological_process,in live organism assay
+ECO:0001011,annexin-V staining evidence,cellular process design,,apoptotic process,cytometry assay
+ECO:0001013,blocking monoclonal antibody evidence,molecular interaction identification design,,immunoglobulin binding to epitope,competitive inhibition of binding assay
+ECO:0001014,blocking peptide evidence,molecular interaction identification design,,peptide antigen binding,competitive inhibition of binding assay
+ECO:0001016,blood test evidence,,('material processing' and ('has participant' some blood)),,('hematology assay' and 'analyte assay')
+ECO:0001017,Boyden chamber assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
+ECO:0001018,bromodeoxyuridine incorporation assay evidence,cellular process design,"('addition of molecular label' and ('has participant' some ""5-bromo-2'-deoxyuridine""))",cell population proliferation,BrdU incorporation assay
+ECO:0001019,caspase assay evidence,cellular process design,,apoptotic process,cytometry assay
+ECO:0001020,cell counting evidence,in vitro design,,cell population proliferation,in container assay
+ECO:0001021,cell permeability assay evidence,cellular process design,,cellular process,cytometry assay
+ECO:0001025,co-electrophoresis evidence,,(electrophoresis and 'gradient separation'),binding,('binding assay' and ('has participant' some 'gel electrophoresis system'))
+ECO:0001026,co-localization evidence,,,macromolecule localization,imaging assay
+ECO:0001027,colony counting evidence,in vitro design,,,('in container assay' and ('has participant' some 'cultured cell population'))
+ECO:0001028,co-sedimentation assay evidence,molecular interaction identification design,,,protein-protein interaction detection assay
+ECO:0001029,comet assay evidence,,,cellular response to DNA damage stimulus,comet assay
+ECO:0001030,conditional knockout evidence,genetic modification design,gene knock out,gene expression,in live organism assay
+ECO:0001031,conditional knockin evidence,genetic modification design,gene knock in,gene expression,in live organism assay
+ECO:0001032,constitutively active mutant evidence,cellular process design,,('gene expression' and 'biosynthetic process'),in live organism assay
+ECO:0001033,cross-linking evidence,molecular interaction identification design,cross linking,protein binding,direct binding assay
+ECO:0001036,cytochrome C release assay evidence,cellular process design,,apoptotic process,('cytometry assay' and 'analyte assay')
+ECO:0001039,DNA laddering assay evidence,cellular process design,,apoptotic DNA fragmentation,
+ECO:0001040,RNA dot blot assay evidence,transcription profiling design,nucleic acid hybridization,,('dot blot assay' and ('has participant' some 'RNA extract'))
+ECO:0001045,eTag assay evidence,,,gene expression,('analyte assay' and ('has part' some 'addition of molecular label' and ('has participant' some (protein and ('has disposition' some fluorescence)))))
+ECO:0001046,filter binding assay evidence,molecular interaction identification design,,binding,('direct binding assay' and ('has participant' some 'filter paper'))
+ECO:0001047,fluorescence in situ hybridization evidence,('study design' and ('has part' some 'sequence feature identification objective')),,chromosome organization,chromosome organization assay by fluorescence in-situ hybridization
+ECO:0001049,gel-filtration evidence,,,,('analytical chromatography' and ('has participant' some 'gel filtration column'))
+ECO:0001050,histochemistry evidence,ex vivo design,,,histological assay
+ECO:0001051,histology evidence,,,anatomical structure arrangement,histological assay
+ECO:0001052,high-performance liquid chromotography evidence,,preparative chromatography,,high performance liquid chromotography assay
+ECO:0001056,induced mutation evidence,genetic modification design,induced mutation,gene expression,
+ECO:0001088,in vivo translation assay evidence,in vivo design,,translation,in live organism assay
+ECO:0001090,knockin evidence,genetic modification design,gene knock in,gene expression,in live organism assay
+ECO:0001091,knockout evidence,genetic modification design,gene knock out,gene expression,in live organism assay
+ECO:0001092,lipid binding assay evidence,molecular interaction identification design,,('lipid binding' and ('has participant' some protein)),direct binding assay
+ECO:0001093,luminescence-based mammalian interactome mapping assay evidence,molecular interaction identification design,,protein binding,protein-protein interaction detection assay
+ECO:0001096,mass spectrometry evidence,,mass spectrometry analysis,,mass spectrometry assay
+ECO:0001098,microscopy evidence,,,,('imaging assay' and ('has participant' some microscope))
+ECO:0001099,motility wound healing assay evidence,in vitro design,,wound healing,in container assay
+ECO:0001100,MTS assay evidence,cellular process design,adding substance to cell culture,cell population proliferation,analyte assay
+ECO:0001101,MTT assay evidence,cellular process design,adding substance to cell culture,cell population proliferation,analyte assay
+ECO:0001102,multiplex bead-based immunoassay evidence,proteomic profiling by array design,,,analyte assay
+ECO:0001104,nuclear fragmentation evidence,cellular process design,,nucleolar fragmentation,
+ECO:0001105,nuclear magnetic resonance spectroscopy evidence,,,,NMR spectroscopy assay
+ECO:0001106,nuclease protection assay evidence,transcription profiling design,,gene expression,('transcription profiling assay' and 'RNA protection assay')
+ECO:0001107,nucleotide analog incorporation assay evidence,cellular process design,,DNA synthesis involved in DNA replication,cell proliferation assay
+ECO:0001108,phage display evidence,molecular interaction identification design,phage display library panning,protein binding,phage display binding assay
+ECO:0001110,peptide affinity enrichment evidence,molecular interaction identification design,,(binding and ('has participant' some protein)),direct binding assay
+ECO:0001112,peptide array evidence,proteomic profiling by array design,,,protein-protein interaction detection assay
+ECO:0001115,fluorescence evidence,,,,('fluorescence detection assay' and ('has part' some 'addition of molecular label'))
+ECO:0001120,radioisotope assay evidence,cellular process design,,biological_process,('radioactivity detection' and ('has part' some 'addition of molecular label'))
+ECO:0001124,restriction fragment detection evidence,genotyping design,,,('genotyping assay' and ('has part' some OBI:0600055))
+ECO:0001126,spectrophotometry evidence,,,,(assay and ('has participant' some 'spectrophotometer'))
+ECO:0001127,surface plasmon resonance evidence,molecular interaction identification design,('material processing' and ('has participant' some 'surface plasmon resonance instrument')),binding,surface plasmon resonance binding assay
+ECO:0001128,syngeneic transplantation experiment evidence,in vivo design,transplantation,,in live organism assay
+ECO:0001129,TACE activity assay evidence,cellular process design,,tumor necrosis factor secretion,analyte assay
 ECO:0001130,tissue microarray evidence,,,,('microarray assay' and ('has participant' some (specimen and ('has part' some tissue))))
 ECO:0001131,transgenic organism evidence,genetic modification design,genetic transformation,gene expression,('in live organism assay' and ('has participant' some 'transgenic organism'))
-ECO:0001098,microscopy evidence,,,,('imaging assay' and ('has participant' some microscope))
-ECO:0005578,super-resolution microscopy evidence,,,,light microscopy
-ECO:0005519,DNA detection assay evidence,,,,('substance detection assay' and ('has participant' some ('deoxyribonucleic acid' and ('has role' some 'evaluant role'))))
-ECO:0000002,direct assay evidence,study design,,biological_process,assay
-ECO:0001124,restriction fragment detection evidence,genotyping design,,,('genotyping assay' and ('has part' some OBI:0600055))
-ECO:0001825,isothermal titration calorimetry evidence,cellular process design,,binding,calorimetric binding assay
-ECO:0000059,experimental phenotypic evidence,in vivo design,,gene expression,in live organism assay
-ECO:0001102,multiplex bead-based immunoassay evidence,proteomic profiling by array design,,,analyte assay
-ECO:0000243,tissue grafting evidence,in vivo design,transplantation,biological_process,in live organism assay
-ECO:0001129,TACE activity assay evidence,cellular process design,,tumor necrosis factor secretion,analyte assay
-ECO:0001096,mass spectrometry evidence,,mass spectrometry analysis,,mass spectrometry assay
-ECO:0000022,co-purification evidence,,,,(assay and ('has part' some purification))
-ECO:0001026,co-localization evidence,,,macromolecule localization,imaging assay
-ECO:0005033,electron microscopy evidence,,,,electron microscopy imaging assay
 ECO:0001132,tryptic phosphopeptide mapping assay evidence,,,,peptide mass fingerprinting assay
-ECO:0000006,experimental evidence,study design,,process,assay
-ECO:0001120,radioisotope assay evidence,cellular process design,,biological_process,('radioactivity detection' and ('has part' some 'addition of molecular label'))
+ECO:0001134,urine test evidence,,('material processing' and ('has participant' some 'urine specimen')),,analyte assay
+ECO:0001136,WST-1 assay evidence,cellular process design,adding substance to cell culture,cell population proliferation,('analyte assay' and 'cell proliferation assay')
+ECO:0001137,xenotransplantation experiment evidence,in vivo design,xenotransplantation,biological_process,in live organism assay
+ECO:0001563,cell growth assay evidence,('in vitro design' or 'in vivo design'),,cell growth,('in live cell assay' or 'in container assay')
 ECO:0001601,protein-binding microarray evidence,protein binding site identification design,,('nucleic acid binding' and ('has participant' some protein)),proteomic profiling by array assay
-ECO:0005572,whole-cell voltage clamp recording evidence,cellular process design,,ion channel activity,('intra cellular electrophysiology recording assay' and ('has participant' some 'voltage clamp device'))
-ECO:0005584,macropatch voltage clamp recording evidence,cellular process design,,ion channel activity,('intra cellular electrophysiology recording assay' and ('has participant' some 'voltage clamp device'))
-ECO:0005575,reconstituted bilayer single-channel patch recording evidence,cellular process design,,ion channel activity,intra cellular electrophysiology recording assay
-ECO:0001091,knockout evidence,genetic modification design,gene knock out,gene expression,in live organism assay
-ECO:0001090,knockin evidence,genetic modification design,gene knock in,gene expression,in live organism assay
+ECO:0001806,chromatin immunoprecipitation- exonuclease evidence,protein binding site identification design,,sequence-specific DNA binding,chromatin immunoprecipitation with exonuclease sequencing assay
+ECO:0001809,DNA affinity chromotography evidence,,('preparative chromatography' and (('has participant' some 'affinity column') and ('has participant' some 'deoxyribonucleic acid'))),,analytical chromatography
+ECO:0001811,fluorescence anisotropy evidence,molecular interaction identification design,,,binding constant determination assay
+ECO:0001817,glutathione S-transferase pull-down assay evidence,molecular interaction identification design,gene knock in,,immunoprecipitation assay
+ECO:0001820,rapid amplification of cDNA ends polymerase chain reaction evidence,('study design' and ('has part' some 'sequence feature identification objective')),rapid amplification of cDNA ends,,
+ECO:0001820,rapid amplification of cDNA ends polymerase chain reaction evidence,in vitro design,,,(assay and ('has part' some 'rapid amplification of cDNA ends'))
+ECO:0001822,survival rate analysis evidence,genetic modification design,gene knock out,selection by survival,survival assessment assay
+ECO:0001823,x-ray crystallography evidence,,,,X-ray crystallography assay
+ECO:0001824,DNA adenine methyltransferase identification evidence,protein binding site identification design,,protein localization,('binding assay' and ('has part' some ('material combination' and ('has participant' some 'methyltransferase complex'))))
+ECO:0001825,isothermal titration calorimetry evidence,cellular process design,,binding,calorimetric binding assay
+ECO:0001829,ferric uptake regulator titration assay evidence,cellular process design,,,promoter activity detection by reporter gene assay
+ECO:0005004,cell viability assay evidence,cellular process design,survival assessment assay,cellular process,cytometry assay
+ECO:0005007,cell proliferation assay evidence,cellular process design,,cell population proliferation,cell proliferation assay
+ECO:0005008,DNA synthesis cell proliferation assay evidence,cellular process design,,DNA synthesis involved in DNA replication,cell proliferation assay
+ECO:0005011,ATP bioluminescence assay evidence,cellular process design,,,ATP bioluminescence assay
+ECO:0005012,cytotoxicity assay evidence,cellular process design,,response to toxic substance,cytometry assay
+ECO:0005019,staining evidence,,,,('imaging assay' and ('has part' some staining))
+ECO:0005021,chemotaxis assay evidence,stimulus or stress design,presentation of stimulus,chemotaxis,in container assay
+ECO:0005027,genetic transformation evidence,genetic modification design,genetic transformation,gene expression,in live organism assay
+ECO:0005031,structure determination evidence,('study design' and ('has part' some ('cellular structure feature identification objective' or 'molecular feature identification objective'))),,,
+ECO:0005033,electron microscopy evidence,,,,electron microscopy imaging assay
+ECO:0005034,apoptotic assay evidence,cellular process design,,apoptotic process,cytometry assay
+ECO:0005502,ex vivo assay evidence,ex vivo design,,,in live cell assay
+ECO:0005503,two-dimensional polyacrylamide gel electrophoresis evidence,,,,(assay and ('has participant' some ('gel electrophoresis system' and ('has part' some 'polyacrylamide gel'))))
+ECO:0005516,molecule detection assay evidence,,,,assay detecting a molecular label
+ECO:0005518,RNA detection assay evidence,transcription profiling design,,gene expression,('substance detection assay' and 'transcription profiling assay')
+ECO:0005519,DNA detection assay evidence,,,,('substance detection assay' and ('has participant' some ('deoxyribonucleic acid' and ('has role' some 'evaluant role'))))
+ECO:0005521,S1 nuclease protection assay evidence,transcription profiling design,,gene expression,('RNA protection assay' and ('has participant' some 'nuclease S1'))
+ECO:0005522,DNA dot blot assay evidence,transcription profiling design,nucleic acid hybridization,,('dot blot assay' and ('has participant' some 'DNA extract'))
+ECO:0005528,site-directed mutagenesis evidence,genetic modification design,site-directed mutagenesis,gene expression,
+ECO:0005529,random mutagenesis evidence,genetic modification design,random mutagenesis,gene expression,
 ECO:0005563,macroscopic current trace evidence,cellular process design,,ion channel activity,intra cellular electrophysiology recording assay
 ECO:0005564,current density evidence,cellular process design,,ion channel activity,intra cellular electrophysiology recording assay
 ECO:0005566,sustained current evidence,cellular process design,,ion channel activity,intra cellular electrophysiology recording assay
-ECO:0000324,imaging assay evidence,,,,imaging assay
-ECO:0001105,nuclear magnetic resonance spectroscopy evidence,,,,NMR spectroscopy assay
-ECO:0005027,genetic transformation evidence,genetic modification design,genetic transformation,gene expression,in live organism assay
-ECO:0001829,ferric uptake regulator titration assay evidence,cellular process design,,,promoter activity detection by reporter gene assay
-ECO:0001007,adoptive cell transfer evidence,ex vivo design,transplantation,(biological_process and ('has participant' some lymphocyte)),in container assay
-ECO:0001822,survival rate analysis evidence,genetic modification design,gene knock out,selection by survival,survival assessment assay
-ECO:0005606,cell transfection experiment evidence,genetic modification design,transfection,regulation of biological process,('in live cell assay' and ('has participant' some 'genetically modified material'))
-ECO:0000019,RNAi evidence,post-transcriptional modification design,,negative regulation of translation involved in RNA interference ,gene knock-down assay
-ECO:0000018,anti-sense experiment evidence,post-transcriptional modification design,,antisense RNA transcription,gene knock-down assay
-ECO:0001029,comet assay evidence,,,cellular response to DNA damage stimulus,comet assay
-ECO:0000174,mutant physiological response evidence,stimulus or stress design,presentation of stimulus,('response to stimulus' and ('has participant' some (organism and (is_specified_output_of some 'induced mutation')))),in live organism assay
-ECO:0000049,reporter gene assay evidence,('study design' and ('has part' some 'biological feature identification objective')),,gene expression,reporter gene assay
-ECO:0000110,RNA protection assay evidence,transcription profiling design,('nucleic acid hybridization' and ('has participant' some 'labeled RNA extract')),gene expression,RNA protection assay
-ECO:0001128,syngeneic transplantation experiment evidence,in vivo design,transplantation,,in live organism assay
-ECO:0000078,southern hybridization evidence,genotyping design,nucleic acid hybridization,,Southern blot assay
-ECO:0001018,bromodeoxyuridine incorporation assay evidence,cellular process design,"('addition of molecular label' and ('has participant' some ""5-bromo-2'-deoxyuridine""))",cell proliferation,BrdU incorporation assay
-ECO:0000183,cell-free assay evidence,in vitro design,,metabolic process,in container assay
-ECO:0001106,nuclease protection assay evidence,transcription profiling design,,gene expression,('transcription profiling assay' and 'RNA protection assay')
-ECO:0001134,urine test evidence,,('material processing' and ('has participant' some 'urine specimen')),,analyte assay
-ECO:0000230,chromatin immunoprecipitation-chip evidence,ChIP-chip design,,sequence-specific DNA binding,ChIP-chip assay
-ECO:0000229,chromatin immunoprecipitation-seq evidence,ChIP-seq design,,sequence-specific DNA binding,ChIP-seq assay
-ECO:0001050,histochemistry evidence,ex vivo design,,,histological assay
-ECO:0000050,voucher specimen analysis evidence,reference design,,,
-ECO:0000268,flow cytometry evidence,('study design' and ('has part' some 'biological feature identification objective')),,,flow cytometry assay
-ECO:0005031,structure determination evidence,('study design' and ('has part' some ('cellular structure feature identification objective' or 'molecular feature identification objective'))),,,
-ECO:0005521,S1 nuclease protection assay evidence,transcription profiling design,,gene expression,('RNA protection assay' and ('has participant' some 'nuclease S1'))
-ECO:0005518,RNA detection assay evidence,transcription profiling design,,gene expression,('substance detection assay' and 'transcription profiling assay')
-ECO:0001009,allograft transplantation experiment evidence,in vivo design,allotransplantation,biological_process,in live organism assay
-ECO:0001025,co-electrophoresis evidence,,(electrophoresis and 'gradient separation'),binding,('binding assay' and ('has participant' some 'gel electrophoresis system'))
-ECO:0000337,gel electrophoresis evidence,,electrophoresis,gradient separation,(assay and ('has participant' some 'gel electrophoresis system'))
-ECO:0005593,immunodetection assay evidence,,('addition of molecular label' and ('has participant' some antigen)),antigen binding,substance detection assay
-ECO:0000079,affinity chromotography evidence,,('preparative chromatography' and ('has participant' some 'affinity column')),,analytical chromatography
-ECO:0001137,xenotransplantation experiment evidence,in vivo design,xenotransplantation,biological_process,in live organism assay
-ECO:0005516,molecule detection assay evidence,,,,assay detecting a molecular label
-ECO:0001016,blood test evidence,,('material processing' and ('has participant' some blood)),,('hematology assay' and 'analyte assay')
-ECO:0001052,high-performance liquid chromotography evidence,,preparative chromatography,,high performance liquid chromotography assay
-ECO:0001809,DNA affinity chromotography evidence,,('preparative chromatography' and (('has participant' some 'affinity column') and ('has participant' some 'deoxyribonucleic acid'))),,analytical chromatography
-ECO:0000172,biochemical trait analysis evidence,,,gene expression,metabolite profiling assay
-ECO:0001126,spectrophotometry evidence,,,,(assay and ('has participant' some 'spectrophotometer'))
-ECO:0001051,histology evidence,,,anatomical structure arrangement,histological assay
+ECO:0005572,whole-cell voltage clamp recording evidence,cellular process design,,ion channel activity,('intra cellular electrophysiology recording assay' and ('has participant' some 'voltage clamp device'))
+ECO:0005573,cell-attached single-channel recording evidence,cellular process design,,ion channel activity,cell-attached patch clamp assay
+ECO:0005574,cell-detached inside-out single-channel recording evidence,cellular process design,,ion channel activity,inside-out patch clamp assay
+ECO:0005575,reconstituted bilayer single-channel patch recording evidence,cellular process design,,ion channel activity,intra cellular electrophysiology recording assay
+ECO:0005577,electroencephalography recording evidence,('cellular process design' and 'in vivo design'),,ion channel activity,electroencephalography
+ECO:0005578,super-resolution microscopy evidence,,,,light microscopy
+ECO:0005582,cell-detached outside-out single-channel recording evidence,cellular process design,,ion channel activity,outside-out patch clamp assay
+ECO:0005584,macropatch voltage clamp recording evidence,cellular process design,,ion channel activity,('intra cellular electrophysiology recording assay' and ('has participant' some 'voltage clamp device'))
 ECO:0005587,confocal microscopy evidence,,,,('imaging assay' and ('has participant' some 'confocal microscope'))
-ECO:0001823,x-ray crystallography evidence,,,,X-ray crystallography assay
-ECO:0005019,staining evidence,,,,('imaging assay' and ('has part' some staining))
-ECO:0001115,fluorescence evidence,,,,('fluorescence detection assay' and ('has part' some 'addition of molecular label'))
-ECO:0000340,plasmid maintenance assay evidence,cellular process design,adding substance to cell culture,plasmid maintenance,in live cell assay
-ECO:0000325,chromotography evidence,,preparative chromatography,,analytical chromatography
-ECO:0000005,enzyme assay evidence,cellular process design,,catalytic activity,(assay and ('has participant' some enzyme))
-ECO:0005502,ex vivo assay evidence,ex vivo design,,,in live cell assay
-ECO:0001088,in vivo translation assay evidence,in vivo design,,translation,in live organism assay
-ECO:0001045,eTag assay evidence,,,gene expression,('analyte assay' and ('has part' some 'addition of molecular label' and ('has participant' some (protein and ('has disposition' some fluorescence)))))
-ECO:0001031,conditional knockin evidence,genetic modification design,gene knock in,gene expression,in live organism assay
-ECO:0001030,conditional knockout evidence,genetic modification design,gene knock out,gene expression,in live organism assay
-ECO:0000134,transport assay evidence,cellular process design,,protein transport,in live cell assay
-ECO:0000017,ectopic expression evidence,in vivo design,genetic transformation,gene expression,in live organism assay
-ECO:0000221,high throughput nucleotide sequencing assay evidence,genotyping by high throughput sequencing design,,,genotyping by high throughput sequencing assay
-ECO:0001036,cytochrome C release assay evidence,cellular process design,,apoptotic process,('cytometry assay' and 'analyte assay')
-ECO:0000226,chromatin immunoprecipitation evidence,protein binding site identification design,,sequence-specific DNA binding,assay using chromatin immunoprecipitation
-ECO:0001806,chromatin immunoprecipitation- exonuclease evidence,protein binding site identification design,,sequence-specific DNA binding,chromatin immunoprecipitation with exonuclease sequencing assay
-ECO:0000299,cytochalasin experiment evidence,growth condition intervention design,presentation of stimulus,cellular response to cytochalasin B,cytochalasin-induced inhibition of actin polymerization assay
-ECO:0001112,peptide array evidence,proteomic profiling by array design,,,protein-protein interaction detection assay
-ECO:0000180,clinical study evidence,clinical study design,,,
+ECO:0005591,immunogold labeling electron microscopy evidence,,,macromolecule localization,('electron microscopy imaging assay' and (('has part' some 'addition of molecular label') and ('has part' some 'antigen binding')))
+ECO:0005593,immunodetection assay evidence,,('addition of molecular label' and ('has participant' some antigen)),antigen binding,substance detection assay
+ECO:0005596,immunoperoxidase immunolocalization electron microscopy evidence,,,macromolecule localization,('immuno staining assay' and 'electron microscopy imaging assay')
+ECO:0005600,immunofluorescence confocal microscopy evidence,,,,('antibody binding detection by fluorescence quenching' and ('imaging assay' and ('has participant' some 'confocal microscope')))
+ECO:0005604,cross-streak test evidence,in vitro design,cell co-culturing,response to biotic stimulus,in container assay
+ECO:0005605,disk diffusion test evidence,in vitro design,adding substance to cell culture,response to antibiotic,in container assay
+ECO:0005606,cell transfection experiment evidence,genetic modification design,transfection,regulation of biological process,('in live cell assay' and ('has participant' some 'genetically modified material'))
+ECO:0005607,tethered cell assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
+ECO:0005608,tumble frequency assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
+ECO:0005609,capillary assay evidence,stimulus or stress design,presentation of stimulus,cell chemotaxis,in container assay
+ECO:0006010,mRNA interactome capture evidence,molecular interaction identification design,,,RNA interactome capture
+ECO:0006012,patch-clamp recording evidence,cellular process design,,ion channel activity,patch clamp assay
+ECO:0006014,whole-cell patch-clamp recording evidence,cellular process design,,ion channel activity,whole-cell patch clamp assay
+ECO:0006020,biofilm formation assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
+ECO:0006022,microtiter plate biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,('in container assay' and ('has participant' some 'microtiter plate'))
+ECO:0006024,air-liquid interface assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
+ECO:0006026,colony biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
+ECO:0006028,Kadouri drip-fed biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,in container assay
 ECO:0006043,extracellular recording evidence,cellular process design,,action potential,extracellular electrophysiology recording assay
+ECO:0006045,single-unit extracellular recording evidence,cellular process design,,action potential,single-unit recording
+ECO:0006047,field potential recording evidence,cellular process design,,action potential,local field potential recording
 ECO:0006053,pharmacological assay evidence,in vivo design,administering substance in vivo,response to chemical,in live organism assay
 ECO:0006066,fluorescence recovery after photobleaching evidence,('study design' and ('has part' some 'molecular feature identification objective')),,macromolecule localization,fluorescence microscopy
 ECO:0006070,immuno-labelling electron microscopy evidence,('study design' and ('has part' some 'molecular feature identification objective')),,macromolecule localization,('electron microscopy imaging assay' and ('has part' some 'immuno staining assay'))
-ECO:0000124,fusion protein localization evidence,cellular process design,,macromolecule localization,subcellular protein localization assay
-ECO:0000228,chromatin immunoprecipitation-qPCR evidence,protein binding site identification design,,,ChIP-qPCR assay
-ECO:0001040,RNA dot blot assay evidence,transcription profiling design,nucleic acid hybridization,,('dot blot assay' and ('has participant' some 'RNA extract'))
-ECO:0005522,DNA dot blot assay evidence,transcription profiling design,nucleic acid hybridization,,('dot blot assay' and ('has participant' some 'DNA extract'))
-ECO:0006014,whole-cell patch-clamp recording evidence,cellular process design,,ion channel activity,whole-cell patch clamp assay
-ECO:0005573,cell-attached single-channel recording evidence,cellular process design,,ion channel activity,cell-attached patch clamp assay
-ECO:0005574,cell-detached inside-out single-channel recording evidence,cellular process design,,ion channel activity,inside-out patch clamp assay
-ECO:0005582,cell-detached outside-out single-channel recording evidence,cellular process design,,ion channel activity,outside-out patch clamp assay
-ECO:0006012,patch-clamp recording evidence,cellular process design,,ion channel activity,patch clamp assay
-ECO:0006047,field potential recording evidence,cellular process design,,action potential,local field potential recording
-ECO:0006045,single-unit extracellular recording evidence,cellular process design,,action potential,single-unit recording
-ECO:0005577,electroencephalography recording evidence,('cellular process design' and 'in vivo design'),,ion channel activity,electroencephalography
+ECO:0007039,plaque assay evidence,in vitro design,experimental infection of cell culture,response to biotic stimulus,in container assay
+ECO:0007071,flow cell biofilm assay evidence,in vitro design,cell culture expansion,biofilm formation,('in container assay' and ('has participant' some 'flow cell'))
+ECO:0007083,zone of inhibition evidence,in vitro design,adding substance to cell culture,response to chemical,in container assay
+ECO:0007085,Etest evidence,in vitro design,adding substance to cell culture,response to antibiotic,in container assay
