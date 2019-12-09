@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -6267,8 +6267,9 @@ AnnotationAssertion(oboInOwl:created_by obo:ECO_0001056 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001056 "2014-03-16T11:30:54Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001056 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001056 "ECO:0001056"^^xsd:string)
+AnnotationAssertion(rdfs:comment obo:ECO_0001056 "This term was made obsolete for a couple of reasons: the def. doesn’t make sense as the suggested means of mutagenesis fail to introduce exogenous DNA (it is a child of genetic transformation evidence) and the def. is too much like random mutagenesis evidence."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001056 "induced mutation evidence"^^xsd:string)
-SubClassOf(obo:ECO_0001056 obo:ECO_0005027)
+AnnotationAssertion(owl:deprecated obo:ECO_0001056 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0001057 (in vitro acetylation assay evidence)
 
@@ -8285,9 +8286,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001223 "2014-03-17T18:45:56Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001223 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001223 "ECO:0001223"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001223 "induced mutation evidence used in manual assertion"^^xsd:string)
-EquivalentClasses(obo:ECO_0001223 ObjectIntersectionOf(obo:ECO_0001056 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
-SubClassOf(obo:ECO_0001223 obo:ECO_0001056)
-SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0001223 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
+AnnotationAssertion(owl:deprecated obo:ECO_0001223 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0001224 (knockin evidence used in manual assertion)
 
@@ -18154,7 +18153,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007426 "2018-05-14T09:47:55Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007426 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007426 "ECO:0007426"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007426 "induced mutation evidence used in automatic assertion"^^xsd:string)
-EquivalentClasses(obo:ECO_0007426 ObjectIntersectionOf(obo:ECO_0001056 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+AnnotationAssertion(owl:deprecated obo:ECO_0007426 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0007427 (genetic transformation evidence used in automatic assertion)
 
