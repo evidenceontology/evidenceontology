@@ -690,6 +690,9 @@ Declaration(Class(obo:ECO_0001838))
 Declaration(Class(obo:ECO_0001839))
 Declaration(Class(obo:ECO_0001840))
 Declaration(Class(obo:ECO_0001841))
+Declaration(Class(obo:ECO_0001842))
+Declaration(Class(obo:ECO_0001843))
+Declaration(Class(obo:ECO_0001844))
 Declaration(Class(obo:ECO_0005004))
 Declaration(Class(obo:ECO_0005007))
 Declaration(Class(obo:ECO_0005008))
@@ -10125,6 +10128,41 @@ AnnotationAssertion(rdfs:label obo:ECO_0001841 "colorimetric in situ hybridizati
 EquivalentClasses(obo:ECO_0001841 ObjectIntersectionOf(obo:ECO_0001839 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001841 obo:ECO_0001839)
 
+# Class: obo:ECO_0001842 (random mutagenesis of specific target DNA evidence)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001842 "A type of random mutagenesis phenotypic evidence resulting from the random mutation of a specifically targeted region of DNA."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001842 "ECO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001842 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001842 "2019-12-09T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001842 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001842 "ECO:0001842"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001842 "random mutagenesis of specific target DNA evidence"^^xsd:string)
+SubClassOf(obo:ECO_0001842 obo:ECO_0005529)
+
+# Class: obo:ECO_0001843 (random mutagenesis of specific target DNA evidence used in automatic assertion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001843 "A type of random mutagenesis of specific target DNA evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001843 "ECO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001843 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001843 "2019-12-09T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001843 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001843 "ECO:0001843"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001843 "random mutagenesis of specific target DNA evidence used in automatic assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0001843 ObjectIntersectionOf(obo:ECO_0001842 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0001843 obo:ECO_0001842)
+
+# Class: obo:ECO_0001844 (random mutagenesis of specific target DNA evidence used in manual assertion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001844 "A type of random mutagenesis of specific target DNA evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001844 "ECO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001844 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001844 "2019-12-09T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001844 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001844 "ECO:0001844"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001844 "random mutagenesis of specific target DNA evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0001844 ObjectIntersectionOf(obo:ECO_0001842 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0001844 obo:ECO_0001842)
+
 # Class: obo:ECO_0005004 (cell viability assay evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "NBK:144065"^^xsd:string) obo:IAO_0000115 obo:ECO_0005004 "A type of cell-based assay evidence resulting from analyzing the ability of cells to survive or live successfully."^^xsd:string)
@@ -10561,7 +10599,7 @@ SubClassOf(obo:ECO_0005529 obo:ECO_0000015)
 
 # Class: obo:ECO_0005530 (random mutagenesis evidence used in manual assertion)
 
-AnnotationAssertion(obo:IAO_0000115 obo:ECO_0005530 "A type of random mutagenesis evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0005530 "A type of random mutagenesis phenotypic evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005530 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005530 "2015-09-30T11:57:00Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005530 "eco"^^xsd:string)
@@ -18671,7 +18709,7 @@ EquivalentClasses(obo:ECO_0007477 ObjectIntersectionOf(obo:ECO_0005522 ObjectSom
 
 # Class: obo:ECO_0007478 (random mutagenesis evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007478 "A type of random mutagenesis evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007478 "A type of random mutagenesis phenotypic evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007478 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007478 "2018-05-14T09:47:55Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007478 "eco"^^xsd:string)
