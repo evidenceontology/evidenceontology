@@ -10546,17 +10546,18 @@ AnnotationAssertion(rdfs:comment obo:ECO_0005528 "Site-directed mutagenesis is o
 AnnotationAssertion(rdfs:label obo:ECO_0005528 "site-directed mutagenesis phenotypic evidence"^^xsd:string)
 SubClassOf(obo:ECO_0005528 obo:ECO_0000015)
 
-# Class: obo:ECO_0005529 (random mutagenesis evidence)
+# Class: obo:ECO_0005529 (random mutagenesis phenotypic evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:15153637"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:18265275"^^xsd:string) obo:IAO_0000115 obo:ECO_0005529 "A type of experimental phenotypic evidence where radiation or a DNA-damaging agent in vivo, or PCR with degenerate primers in vitro are used for non-targeted mutagenesis."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:15153637"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:18265275"^^xsd:string) obo:IAO_0000115 obo:ECO_0005529 "A type of mutant phenotype evidence where a mutagenic product or process is used to alter the nucleotide sequence and thus induce genetic mutation.  Examples include, but are not limited to mutagenic compounds, irradiation, PCR w/ degenerate primers, etc."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0005529 "CollecTF"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005529 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005529 "2015-09-30T11:55:03Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasNarrowSynonym obo:ECO_0005529 "random mutagenesis evidence"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005529 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005529 "ECO:0005529"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0005529 "Random mutagenesis is not often used in TF-binding site determination; however, it is sometimes used to investigate the effect of mutations in TF binding domains in conjunction with expression assays. Random mutations can also be introduced via chemicals, error-prone PCR (EP-PCR), degenerate oligonucleotides-Pfu(DOP), UV irradiation, mutator strains, nucleotide analogs, or DNA recombination."^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0005529 "random mutagenesis evidence"^^xsd:string)
-SubClassOf(obo:ECO_0005529 obo:ECO_0000059)
+AnnotationAssertion(rdfs:label obo:ECO_0005529 "random mutagenesis phenotypic evidence"^^xsd:string)
+SubClassOf(obo:ECO_0005529 obo:ECO_0000015)
 
 # Class: obo:ECO_0005530 (random mutagenesis evidence used in manual assertion)
 
