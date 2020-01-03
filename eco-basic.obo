@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2019-10-16/eco-basic.owl
-date: 16:10:2019 08:50
+data-version: eco/releases/2020-01-03/eco-basic.owl
+date: 03:01:2020 15:36
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -1170,7 +1170,9 @@ creation_date: 2010-03-18T12:36:04Z
 [Term]
 id: ECO:0000204
 name: author statement
+alt_id: ECO:0007010
 def: "An evidence type that is based on an assertion by the author of a paper, which is read by a curator." [ECO:MCC]
+synonym: "author inference" EXACT []
 is_a: ECO:0000000 ! evidence
 created_by: mchibucos
 creation_date: 2010-06-21T11:17:21Z
@@ -2189,7 +2191,9 @@ creation_date: 2011-01-11T04:06:40Z
 [Term]
 id: ECO:0000302
 name: author statement used in manual assertion
+alt_id: ECO:0007764
 def: "A type of author statement that is used in a manual assertion." [ECO:MCC]
+synonym: "author inference used in manual assertion" EXACT []
 is_a: ECO:0000204 ! author statement
 is_a: ECO:0000352 ! evidence used in manual assertion
 created_by: mchibucos
@@ -2809,18 +2813,22 @@ creation_date: 2015-07-14T11:19:37Z
 
 [Term]
 id: ECO:0000362
-name: evidence based on computational logical inference
+name: computational inference
 def: "A type of inferential evidence based on a computationally derived unary inference or an inference chain in which at least one step is \ncomputationally derived." [ECO:MCC, GOC:MC]
+synonym: "evidence based on computational logical inference" EXACT []
 is_a: ECO:0000361 ! inferential evidence
+is_a: ECO:0007672 ! computational evidence
 created_by: mchibucos
 creation_date: 2015-07-14T11:24:27Z
 
 [Term]
 id: ECO:0000363
-name: evidence based on computational logical inference used in automatic assertion
+name: computational inference used in automatic assertion
 def: "A type of evidence based on computational logical inference that is used in automatic assertion." [ECO:MCC]
+synonym: "evidence based on computational logical inference used in automatic assertion" EXACT []
 xref: GO_REF:0000108 "Automatic assignment of GO terms using logical inference, based on on inter-ontology links"
-is_a: ECO:0000362 ! evidence based on computational logical inference
+is_a: ECO:0000362 ! computational inference
+is_a: ECO:0007669 ! computational evidence used in automatic assertion
 is_a: ECO:0007832 ! inferential evidence used in automatic assertion
 created_by: mchibucos
 creation_date: 2015-07-14T11:35:08Z
@@ -2829,7 +2837,7 @@ creation_date: 2015-07-14T11:35:08Z
 id: ECO:0000364
 name: evidence based on logical inference from manual annotation used in automatic assertion
 def: "A type of evidence based on logical inference from a manually curated annotation that is used in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000363 ! evidence based on computational logical inference used in automatic assertion
+is_a: ECO:0000363 ! computational inference used in automatic assertion
 created_by: mchibucos
 creation_date: 2015-07-14T11:44:19Z
 
@@ -2837,7 +2845,7 @@ creation_date: 2015-07-14T11:44:19Z
 id: ECO:0000366
 name: evidence based on logical inference from automatic annotation used in automatic assertion
 def: "A type of evidence based on logical inference from an automatically curated annotation that is used in an automatic assertion." [ECO:MCC]
-is_a: ECO:0000363 ! evidence based on computational logical inference used in automatic assertion
+is_a: ECO:0000363 ! computational inference used in automatic assertion
 created_by: mchibucos
 creation_date: 2015-07-14T11:45:25Z
 
@@ -3384,8 +3392,9 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001056
 name: induced mutation evidence
 def: "A type of genetic transformation evidence resulting from a mutation induced by a mutagenic compounds or irradiation." [OBI:0001154]
-is_a: ECO:0005027 ! genetic transformation evidence
+comment: This term was made obsolete for a couple of reasons: the def. doesn’t make sense as the suggested means of mutagenesis fail to introduce exogenous DNA (it is a child of genetic transformation evidence) and the def. is too much like random mutagenesis evidence.
 property_value: IAO:0000234 SIB:PG xsd:string
+is_obsolete: true
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
 
@@ -4992,9 +5001,8 @@ creation_date: 2014-03-17T18:44:11Z
 id: ECO:0001223
 name: induced mutation evidence used in manual assertion
 def: "A type of induced mutation evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0001056 ! induced mutation evidence
-is_a: ECO:0006049 ! genetic transformation evidence used in manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
+is_obsolete: true
 created_by: mchibucos
 creation_date: 2014-03-17T18:45:56Z
 
@@ -6364,9 +6372,11 @@ creation_date: 2015-11-05T16:16:27Z
 
 [Term]
 id: ECO:0001828
-name: visual sequence inspection evidence
-def: "A type of inference from background scientific knowledge used in manual assertion where a visual inspection of promoter region is made to identify putative binding sites." [ECO:SW]
-is_a: ECO:0000306 ! inference from background scientific knowledge used in manual assertion
+name: inference of sequence features from visual inspection used in manual assertion
+def: "A type of inference of sequence features from visual inspection that is used in a manual assertion." [ECO:RCJ]
+synonym: "visual sequence inspection evidence" BROAD []
+is_a: ECO:0000352 ! evidence used in manual assertion
+is_a: ECO:0007850 ! inference of sequence features from visual inspection
 created_by: swolfish
 creation_date: 2015-11-10T14:40:16Z
 
@@ -6495,6 +6505,35 @@ is_a: ECO:0001838 ! in situ hybridization evidence used in manual assertion
 is_a: ECO:0001839 ! colorimetric in situ hybridization evidence
 created_by: jbmunro
 creation_date: 2019-09-26T12:00:00Z
+
+[Term]
+id: ECO:0001842
+name: random mutagenesis of specific target DNA evidence
+def: "A type of random mutagenesis phenotypic evidence resulting from the random mutation of a specifically targeted region of DNA." []
+is_a: ECO:0005529 ! random mutagenesis phenotypic evidence
+property_value: IAO:0000234 "ECO" xsd:string
+created_by: jbmunro
+creation_date: 2019-12-09T12:00:00Z
+
+[Term]
+id: ECO:0001843
+name: random mutagenesis of specific target DNA evidence used in automatic assertion
+def: "A type of random mutagenesis of specific target DNA evidence that is used in an automatic assertion." []
+is_a: ECO:0001842 ! random mutagenesis of specific target DNA evidence
+is_a: ECO:0007478 ! random mutagenesis evidence used in automatic assertion
+property_value: IAO:0000234 "ECO" xsd:string
+created_by: jbmunro
+creation_date: 2019-12-09T12:00:00Z
+
+[Term]
+id: ECO:0001844
+name: random mutagenesis of specific target DNA evidence used in manual assertion
+def: "A type of random mutagenesis of specific target DNA evidence that is used in a manual assertion." []
+is_a: ECO:0001842 ! random mutagenesis of specific target DNA evidence
+is_a: ECO:0005530 ! random mutagenesis evidence used in manual assertion
+property_value: IAO:0000234 "ECO" xsd:string
+created_by: jbmunro
+creation_date: 2019-12-09T12:00:00Z
 
 [Term]
 id: ECO:0005004
@@ -6840,10 +6879,11 @@ creation_date: 2015-09-30T11:34:41Z
 
 [Term]
 id: ECO:0005529
-name: random mutagenesis evidence
-def: "A type of experimental phenotypic evidence where radiation or a DNA-damaging agent in vivo, or PCR with degenerate primers in vitro are used for non-targeted mutagenesis." [ECO:SW, PMID:15153637, PMID:18265275]
+name: random mutagenesis phenotypic evidence
+def: "A type of mutant phenotype evidence where a mutagenic product or process is used to alter the nucleotide sequence and thus induce genetic mutation.  Examples include, but are not limited to mutagenic compounds, irradiation, PCR w/ degenerate primers, etc." [ECO:SW, PMID:15153637, PMID:18265275]
 comment: Random mutagenesis is not often used in TF-binding site determination; however, it is sometimes used to investigate the effect of mutations in TF binding domains in conjunction with expression assays. Random mutations can also be introduced via chemicals, error-prone PCR (EP-PCR), degenerate oligonucleotides-Pfu(DOP), UV irradiation, mutator strains, nucleotide analogs, or DNA recombination.
-is_a: ECO:0000059 ! experimental phenotypic evidence
+synonym: "random mutagenesis evidence" NARROW []
+is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: snadendla
 creation_date: 2015-09-30T11:55:03Z
@@ -6851,9 +6891,9 @@ creation_date: 2015-09-30T11:55:03Z
 [Term]
 id: ECO:0005530
 name: random mutagenesis evidence used in manual assertion
-def: "A type of random mutagenesis evidence that is used in a manual assertion." []
-is_a: ECO:0005529 ! random mutagenesis evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
+def: "A type of random mutagenesis phenotypic evidence that is used in a manual assertion." []
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0005529 ! random mutagenesis phenotypic evidence
 created_by: snadendla
 creation_date: 2015-09-30T11:57:00Z
 
@@ -8430,7 +8470,7 @@ name: author statement from published clinical study
 def: "A type of traceable author statement that is based on a publication about a clinical study." []
 synonym: "published clinical study evidence" EXACT []
 synonym: "traceable author statement from published clinical study" RELATED []
-is_a: ECO:0000204 ! author statement
+is_a: ECO:0000033 ! author statement supported by traceable reference
 created_by: rctauber
 creation_date: 2016-11-30T09:44:47Z
 
@@ -8441,7 +8481,7 @@ def: "A type of author statement from published clinical study that is used in a
 comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature.
 synonym: "PCS" EXACT [HPO:PCS]
 synonym: "published clinical study evidence" BROAD []
-is_a: ECO:0000302 ! author statement used in manual assertion
+is_a: ECO:0000304 ! author statement supported by traceable reference used in manual assertion
 is_a: ECO:0006016 ! author statement from published clinical study
 property_value: seeAlso http://human-phenotype-ontology.github.io/documentation.html#annot xsd:string
 created_by: rctauber
@@ -9500,14 +9540,6 @@ is_a: ECO:0006076 ! protein binding evidence used in manual assertion
 is_a: ECO:0007008 ! radioligand binding assay evidence
 created_by: rctauber
 creation_date: 2017-12-15T10:48:44Z
-
-[Term]
-id: ECO:0007010
-name: author inference
-def: "A type of inferential evidence resulting from a conclusion drawn by the author of the publication." [ECO:RCT]
-is_a: ECO:0000361 ! inferential evidence
-created_by: rctauber
-creation_date: 2018-02-08T09:11:07Z
 
 [Term]
 id: ECO:0007011
@@ -13286,8 +13318,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007426
 name: induced mutation evidence used in automatic assertion
 def: "A type of induced mutation evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001056 ! induced mutation evidence
-is_a: ECO:0007427 ! genetic transformation evidence used in automatic assertion
+is_obsolete: true
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -13756,9 +13787,9 @@ creation_date: 2018-05-14T09:47:55Z
 [Term]
 id: ECO:0007478
 name: random mutagenesis evidence used in automatic assertion
-def: "A type of random mutagenesis evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005529 ! random mutagenesis evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
+def: "A type of random mutagenesis phenotypic evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0005529 ! random mutagenesis phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -14317,7 +14348,7 @@ name: author statement from published clinical study used in automatic assertion
 def: "A type of author statement from published clinical study that is used in an automatic assertion." [ECO:RCT]
 synonym: "traceable author statement from published clinical study used in automatic assertion" RELATED []
 is_a: ECO:0006016 ! author statement from published clinical study
-is_a: ECO:0007319 ! author statement used in automatic assertion
+is_a: ECO:0007321 ! author statement supported by traceable reference used in automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -15161,10 +15192,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007631
-name: evidence based on computational logical inference used in manual assertion
+name: computational inference used in manual assertion
 def: "A type of evidence based on computational logical inference that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000352 ! evidence used in manual assertion
-is_a: ECO:0000362 ! evidence based on computational logical inference
+synonym: "evidence based on computational logical inference used in manual assertion" EXACT []
+is_a: ECO:0000362 ! computational inference
+is_a: ECO:0007668 ! computational evidence used in manual assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -15224,7 +15256,7 @@ is_a: ECO:0007637 ! curator inference from encyclopedia
 
 [Term]
 id: ECO:0007639
-name: curator inference from Brittanica
+name: curator inference from Britannica
 def: "A type of curator inference from encyclopedia where the reference is to an Encyclopedia Britannica article." [ECO:RCT]
 is_a: ECO:0007637 ! curator inference from encyclopedia
 
@@ -15280,8 +15312,6 @@ is_a: ECO:0000205 ! curator inference
 id: ECO:0007648
 name: manually integrated combinatorial computational evidence
 def: "A type of manually integrated combinatorial evidence in which two or more distinct types of computational evidence are integrated manually." [ECO:RCT]
-is_a: ECO:0007674 ! manually integrated combinatorial evidence
-is_a: ECO:0007677 ! combinatorial computational evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15289,9 +15319,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007649
 name: manually integrated combinatorial computational evidence used in manual assertion
 def: "A type of manually integrated combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000352 ! evidence used in manual assertion
 is_a: ECO:0007648 ! manually integrated combinatorial computational evidence
-is_a: ECO:0007675 ! manually integrated combinatorial evidence used in manual assertion
-is_a: ECO:0007678 ! combinatorial computational evidence used in manual assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15299,9 +15328,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007650
 name: manually integrated combinatorial computational evidence used in automatic assertion
 def: "A type of manually integrated combinatorial computational evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007648 ! manually integrated combinatorial computational evidence
-is_a: ECO:0007676 ! manually integrated combinatorial evidence used in automatic assertion
-is_a: ECO:0007679 ! combinatorial computational evidence used in automatic assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15309,8 +15337,6 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007651
 name: automatically integrated combinatorial computational evidence
 def: "A type of automatically integrated combinatorial evidence in which two or more distinct types of computational evidence are integrated automatically." [ECO:RCT]
-is_a: ECO:0007673 ! automatically integrated combinatorial evidence
-is_a: ECO:0007677 ! combinatorial computational evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15318,9 +15344,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007652
 name: automatically integrated combinatorial computational evidence used in manual assertion
 def: "A type of automatically integrated combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000245 ! automatically integrated combinatorial evidence used in manual assertion
+is_a: ECO:0000352 ! evidence used in manual assertion
 is_a: ECO:0007651 ! automatically integrated combinatorial computational evidence
-is_a: ECO:0007678 ! combinatorial computational evidence used in manual assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15328,9 +15353,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007653
 name: automatically integrated combinatorial computational evidence used in automatic assertion
 def: "A type of automatically integrated combinatorial computational evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000053 ! automatically integrated combinatorial evidence used in automatic assertion
+is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007651 ! automatically integrated combinatorial computational evidence
-is_a: ECO:0007679 ! combinatorial computational evidence used in automatic assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15338,7 +15362,6 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007654
 name: combinatorial experimental evidence
 def: "A type of combinatorial evidence in which two or more distinct types of experimental evidence are integrated." [ECO:RCT]
-is_a: ECO:0000212 ! combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15346,8 +15369,6 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007655
 name: manually integrated combinatorial experimental evidence
 def: "A type of manually integrated combinatorial evidence in which two or more distinct types of experimental evidence are integrated manually." [ECO:RCT]
-is_a: ECO:0007654 ! combinatorial experimental evidence
-is_a: ECO:0007674 ! manually integrated combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15355,8 +15376,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007656
 name: manually integrated combinatorial experimental evidence used in manual assertion
 def: "A type of manually integrated combinatorial experimental evidence that is used in a manual assertion." [ECO:RCT]
+is_a: ECO:0000352 ! evidence used in manual assertion
 is_a: ECO:0007655 ! manually integrated combinatorial experimental evidence
-is_a: ECO:0007675 ! manually integrated combinatorial evidence used in manual assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15364,9 +15385,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007657
 name: manually integrated combinatorial experimental evidence used in automatic assertion
 def: "A type of manually integrated combinatorial experimental evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007655 ! manually integrated combinatorial experimental evidence
-is_a: ECO:0007676 ! manually integrated combinatorial evidence used in automatic assertion
-is_a: ECO:0007830 ! combinatorial experimental evidence used in automatic assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15374,8 +15394,6 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007658
 name: automatically integrated combinatorial experimental evidence
 def: "A type of automatically integrated combinatorial evidence in which two or more distinct types of experimental evidence are integrated automatically." [ECO:RCT]
-is_a: ECO:0007654 ! combinatorial experimental evidence
-is_a: ECO:0007673 ! automatically integrated combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15383,7 +15401,7 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007659
 name: automatically integrated combinatorial experimental evidence used in manual assertion
 def: "A type of automatically integrated combinatorial experimental evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000245 ! automatically integrated combinatorial evidence used in manual assertion
+is_a: ECO:0000352 ! evidence used in manual assertion
 is_a: ECO:0007658 ! automatically integrated combinatorial experimental evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
@@ -15392,9 +15410,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007660
 name: automatically integrated combinatorial experimental evidence used in automatic assertion
 def: "A type of automatically integrated combinatorial experimental evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000053 ! automatically integrated combinatorial evidence used in automatic assertion
+is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007658 ! automatically integrated combinatorial experimental evidence
-is_a: ECO:0007830 ! combinatorial experimental evidence used in automatic assertion
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15527,7 +15544,6 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007677
 name: combinatorial computational evidence
 def: "A type of combinatorial evidence in which at least two distinct types of computational evidence have been integrated." [ECO:RCT]
-is_a: ECO:0000212 ! combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15535,14 +15551,14 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007678
 name: combinatorial computational evidence used in manual assertion
 def: "A type of combinatorial computational evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000244 ! combinatorial evidence used in manual assertion
+is_a: ECO:0000352 ! evidence used in manual assertion
 is_a: ECO:0007677 ! combinatorial computational evidence
 
 [Term]
 id: ECO:0007679
 name: combinatorial computational evidence used in automatic assertion
 def: "A type of combinatorial computational evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000213 ! combinatorial evidence used in automatic assertion
+is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007677 ! combinatorial computational evidence
 
 [Term]
@@ -16106,7 +16122,7 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007745
 name: combinatorial experimental evidence used in manual assertion
 def: "A type of combinatorial experimental evidence that is used in a manual assertion." []
-is_a: ECO:0000244 ! combinatorial evidence used in manual assertion
+is_a: ECO:0000352 ! evidence used in manual assertion
 is_a: ECO:0007654 ! combinatorial experimental evidence
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -16203,9 +16219,9 @@ creation_date: 2019-03-20T12:27:00Z
 
 [Term]
 id: ECO:0007756
-name: curator inference from Brittanica used in manual assertion
-def: "A type of curator inference from Brittanica that is used in a manual assertion." []
-is_a: ECO:0007639 ! curator inference from Brittanica
+name: curator inference from Britannica used in manual assertion
+def: "A type of curator inference from Britannica that is used in a manual assertion." []
+is_a: ECO:0007639 ! curator inference from Britannica
 is_a: ECO:0007753 ! curator inference from encyclopedia used in manual assertion
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -16270,15 +16286,6 @@ name: curator inference from Merriam-Webster Dictionary used in manual assertion
 def: "A type of curator inference from Merriam-Webster Dictionary that is used in a manual assertion." []
 is_a: ECO:0007643 ! curator inference from Merriam-Webster Dictionary
 is_a: ECO:0007760 ! curator inference from dictionary used in manual assertion
-created_by: rctauber
-creation_date: 2019-03-20T12:27:00Z
-
-[Term]
-id: ECO:0007764
-name: author inference used in manual assertion
-def: "A type of author inference that is used in a manual assertion." []
-is_a: ECO:0000352 ! evidence used in manual assertion
-is_a: ECO:0007010 ! author inference
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
 
@@ -16870,7 +16877,7 @@ creation_date: 2019-03-20T13:02:00Z
 id: ECO:0007830
 name: combinatorial experimental evidence used in automatic assertion
 def: "A type of combinatorial experimental evidence that is used in an automatic assertion." []
-is_a: ECO:0000213 ! combinatorial evidence used in automatic assertion
+is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007654 ! combinatorial experimental evidence
 created_by: rctauber
 creation_date: 2019-03-20T13:02:00Z
@@ -16913,9 +16920,9 @@ creation_date: 2019-03-20T13:02:00Z
 
 [Term]
 id: ECO:0007836
-name: curator inference from Brittanica used in automatic assertion
-def: "A type of curator inference from Brittanica that is used in an automatic assertion." []
-is_a: ECO:0007639 ! curator inference from Brittanica
+name: curator inference from Britannica used in automatic assertion
+def: "A type of curator inference from Britannica that is used in an automatic assertion." []
+is_a: ECO:0007639 ! curator inference from Britannica
 is_a: ECO:0007834 ! curator inference from encyclopedia used in automatic assertion
 created_by: rctauber
 creation_date: 2019-03-20T13:02:00Z
@@ -17035,6 +17042,15 @@ is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
 is_a: ECO:0007847 ! fluorescence quantification assay evidence
 created_by: rcjackson
 creation_date: 2019-06-12T10:46:00Z
+
+[Term]
+id: ECO:0007850
+name: inference of sequence features from visual inspection
+def: "A type of inferential evidence in which sequence features are inferred based on visual inspection of the sequence." [ECO:RCJ]
+comment: This type of inference may be made by either a curator or an author.
+is_a: ECO:0000361 ! inferential evidence
+created_by: beckyjackson
+creation_date: 2019-11-22T06:51:00Z
 
 [Typedef]
 id: used_in
