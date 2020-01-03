@@ -18,7 +18,7 @@ SPARQL = src/sparql/
 .PHONY: update
 update: modules imports
 all: report build mapping subsets
-release: update all
+release: all
 
 # test is used for Travis integration
 test: report verify
@@ -55,6 +55,7 @@ $(MOD)obi_logic.owl: $(TEMP)obi_logic.csv | $(BUILD)robot.jar
 # IMPORTS
 # ----------------------------------------
 
+# Both GO and OBI are used in the OBI logic template
 IMP = src/ontology/imports/
 IMPS = go obi
 
