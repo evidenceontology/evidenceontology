@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -22425,4 +22425,7 @@ AnnotationAssertion(rdfs:label obo:ECO_0007850 "inference of sequence features f
 SubClassOf(obo:ECO_0007850 obo:ECO_0000361)
 
 
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000091 "A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence")
+AnnotationAssertion(rdfs:isDefinedBy obo:RO_0000091 obo:ro.owl)
+AnnotationAssertion(rdfs:label obo:RO_0000091 "has disposition")
 )

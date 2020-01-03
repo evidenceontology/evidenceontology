@@ -18,7 +18,7 @@ SPARQL = src/sparql/
 .PHONY: update
 update: modules imports
 all: report build mapping subsets
-release: all
+release: update all
 
 # test is used for Travis integration
 test: report verify
@@ -32,7 +32,7 @@ init:
 	mkdir -p $(BUILD)
 
 $(BUILD)robot.jar: init
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.0/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.5.0/robot.jar
 
 ROBOT := java -jar $(BUILD)robot.jar
 
@@ -61,12 +61,13 @@ IMPS = go obi
 imports: $(IMPS)
 
 $(IMPS): $(MOD)obi_logic.owl | $(BUILD)robot.jar
-	python $(IMP)get_terms.py $@ &&\
-	 robot extract --input-iri "$(OBO)$@.owl"\
-	 --method bot --term-file $(IMP)$@_terms.txt --term-file $(IMP)etc_terms.txt\
-	 remove --select "complement" --select "annotation-properties" --trim true \
-	 --term-file $(IMP)annotations.txt\
-	 annotate --ontology-iri "$(OBO)eco/imports/$@_import.owl"\
+	python $(IMP)get_terms.py $@
+	robot extract --input-iri "$(OBO)$@.owl" \
+	 --method bot --term-file $(IMP)$@_terms.txt \
+	 --term-file $(IMP)etc_terms.txt --individuals exclude \
+	remove --select "complement" --select "annotation-properties" \
+	 --term-file $(IMP)annotations.txt \
+	annotate --ontology-iri "$(OBO)eco/imports/$@_import.owl" \
 	 --output $(IMP)$@_import.owl
 
 # ----------------------------------------
