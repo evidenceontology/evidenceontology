@@ -121,8 +121,8 @@ $(ECO).owl: $(EDIT) | $(BUILD)robot.jar
 	 --annotation oboInOwl:date "$(TS)" --output $@
 
 $(ECO).obo: $(EDIT) | $(BUILD)robot.jar
-	$(ROBOT) remove --select imports \
-	reason --input $< --reasoner elk --create-new-ontology false\
+	$(ROBOT) remove --input $< --select imports \
+	reason --reasoner elk --create-new-ontology false\
 	 --annotate-inferred-axioms true --exclude-duplicate-axioms true \
 	reduce annotate --version-iri "$(OBO)eco/releases/$(DATE)/eco.owl" \
 	 --annotation oboInOwl:date "$(TS)" \
