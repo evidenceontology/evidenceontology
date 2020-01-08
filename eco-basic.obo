@@ -15312,6 +15312,8 @@ is_a: ECO:0000205 ! curator inference
 id: ECO:0007648
 name: manually integrated combinatorial computational evidence
 def: "A type of manually integrated combinatorial evidence in which two or more distinct types of computational evidence are integrated manually." [ECO:RCT]
+is_a: ECO:0007674 ! manually integrated combinatorial evidence
+is_a: ECO:0007677 ! combinatorial computational evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15337,6 +15339,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007651
 name: automatically integrated combinatorial computational evidence
 def: "A type of automatically integrated combinatorial evidence in which two or more distinct types of computational evidence are integrated automatically." [ECO:RCT]
+is_a: ECO:0007673 ! automatically integrated combinatorial evidence
+is_a: ECO:0007677 ! combinatorial computational evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15362,6 +15366,7 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007654
 name: combinatorial experimental evidence
 def: "A type of combinatorial evidence in which two or more distinct types of experimental evidence are integrated." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15369,6 +15374,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007655
 name: manually integrated combinatorial experimental evidence
 def: "A type of manually integrated combinatorial evidence in which two or more distinct types of experimental evidence are integrated manually." [ECO:RCT]
+is_a: ECO:0007654 ! combinatorial experimental evidence
+is_a: ECO:0007674 ! manually integrated combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15394,6 +15401,8 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007658
 name: automatically integrated combinatorial experimental evidence
 def: "A type of automatically integrated combinatorial evidence in which two or more distinct types of experimental evidence are integrated automatically." [ECO:RCT]
+is_a: ECO:0007654 ! combinatorial experimental evidence
+is_a: ECO:0007673 ! automatically integrated combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
@@ -15544,6 +15553,7 @@ creation_date: 2018-12-04T19:31:00Z
 id: ECO:0007677
 name: combinatorial computational evidence
 def: "A type of combinatorial evidence in which at least two distinct types of computational evidence have been integrated." [ECO:RCT]
+is_a: ECO:0000212 ! combinatorial evidence
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 
