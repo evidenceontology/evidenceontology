@@ -2976,7 +2976,7 @@ SubClassOf(obo:ECO_0000095 obo:ECO_0001563)
 # Class: obo:ECO_0000096 (electrophoretic mobility shift assay evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22506036"^^xsd:string) obo:IAO_0000112 obo:ECO_0000096 "Each of the promoter-proximal regions of qrr2 - 4 was subjected to EMSA with the purified His-OpaR protein (Fig. 6b). The results showed that His-OpaR was able to bind to each of the three DNA fragments tested in a dose-dependent manner in vitro."^^xsd:string)
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:KIM"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17703195"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000096 "A type of direct assay evidence based on an electrophoretic mobility shift of macromolecules, compounds, and proteins where solutions of protein and nucleic acid are combined and the resulting mixtures are electrophoresed under native conditions through polyacrylamide or agarose gel to detect protein-nucleic acid interactions."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:KIM"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17703195"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000096 "A type of affinity evidence based on an electrophoretic mobility shift of macromolecules, where proteins, nucleic acids, or both, are combined and the resulting mixtures are electrophoresed under native conditions through polyacrylamide or agarose gel to detect interactions/complexes between proteins and/or nucleic acid."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000096 "CollecTF"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "electrophoretic mobility shift assay"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000096 "MI:0413"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000096 "EMSA: electrophoretic mobility shift assay"^^xsd:string)
@@ -2986,7 +2986,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000096 "IDA: electrophor
 AnnotationAssertion(oboInOwl:id obo:ECO_0000096 "ECO:0000096"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000096 "EMSA is often used for assessing TF-binding with fluorophore labelling. Protein-nucleic acid complexes generally migrate at a slower rate than the corresponding non-bonded nucleic acid."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000096 "electrophoretic mobility shift assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000096 obo:ECO_0000002)
+SubClassOf(obo:ECO_0000096 obo:ECO_0000021)
 
 # Class: obo:ECO_0000097 (cDNA to DNA expression microarray evidence)
 
