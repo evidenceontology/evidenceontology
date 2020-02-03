@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -693,6 +693,9 @@ Declaration(Class(obo:ECO_0001841))
 Declaration(Class(obo:ECO_0001842))
 Declaration(Class(obo:ECO_0001843))
 Declaration(Class(obo:ECO_0001844))
+Declaration(Class(obo:ECO_0001845))
+Declaration(Class(obo:ECO_0001846))
+Declaration(Class(obo:ECO_0001847))
 Declaration(Class(obo:ECO_0005004))
 Declaration(Class(obo:ECO_0005007))
 Declaration(Class(obo:ECO_0005008))
@@ -2973,7 +2976,7 @@ SubClassOf(obo:ECO_0000095 obo:ECO_0001563)
 # Class: obo:ECO_0000096 (electrophoretic mobility shift assay evidence)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:22506036"^^xsd:string) obo:IAO_0000112 obo:ECO_0000096 "Each of the promoter-proximal regions of qrr2 - 4 was subjected to EMSA with the purified His-OpaR protein (Fig. 6b). The results showed that His-OpaR was able to bind to each of the three DNA fragments tested in a dose-dependent manner in vitro."^^xsd:string)
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:KIM"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17703195"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000096 "A type of direct assay evidence based on an electrophoretic mobility shift of macromolecules, compounds, and proteins where solutions of protein and nucleic acid are combined and the resulting mixtures are electrophoresed under native conditions through polyacrylamide or agarose gel to detect protein-nucleic acid interactions."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:KIM"^^xsd:string) Annotation(oboInOwl:hasDbXref "ECO:SW"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17703195"^^xsd:string) Annotation(oboInOwl:hasDbXref "TAIR:TED"^^xsd:string) obo:IAO_0000115 obo:ECO_0000096 "A type of affinity evidence based on an electrophoretic mobility shift of macromolecules, where proteins, nucleic acids, or both, are combined and the resulting mixtures are electrophoresed under native conditions through polyacrylamide or agarose gel to detect interactions/complexes between proteins and/or nucleic acid."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0000096 "CollecTF"^^xsd:string)
 AnnotationAssertion(Annotation(rdfs:label "electrophoretic mobility shift assay"^^xsd:string) oboInOwl:hasDbXref obo:ECO_0000096 "MI:0413"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECO_0000096 "EMSA: electrophoretic mobility shift assay"^^xsd:string)
@@ -2983,7 +2986,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000096 "electrophoretic 
 AnnotationAssertion(oboInOwl:id obo:ECO_0000096 "ECO:0000096"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000096 "EMSA is often used for assessing TF-binding with fluorophore labelling. Protein-nucleic acid complexes generally migrate at a slower rate than the corresponding non-bonded nucleic acid."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000096 "electrophoretic mobility shift assay evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000096 obo:ECO_0000002)
+SubClassOf(obo:ECO_0000096 obo:ECO_0000021)
 
 # Class: obo:ECO_0000097 (cDNA to DNA expression microarray evidence)
 
@@ -10162,6 +10165,39 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0001844 "ECO:0001844"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001844 "random mutagenesis of specific target DNA evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0001844 ObjectIntersectionOf(obo:ECO_0001842 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001844 obo:ECO_0001842)
+
+# Class: obo:ECO_0001845 (cell population optical density evidence)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001845 "A type of cell-based assay evidence in which optical density is used to measure some aspect of a population of cells. Examples of aspects that can affect optical density measurements include, but are not limited to, cell number and cell shape."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001845 "CACAO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001845 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001845 "2020-01-28T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001845 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001845 "ECO:0001845"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001845 "cell population optical density evidence"^^xsd:string)
+SubClassOf(obo:ECO_0001845 obo:ECO_0001565)
+
+# Class: obo:ECO_0001846 (cell population optical density evidence used in automatic assertion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001846 "A type of cell population optical density evidence that is used in an automatic assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001846 "CACAO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001846 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001846 "2020-01-28T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001846 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001846 "ECO:0001846"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001846 "cell population optical density evidence used in automatic assertion"^^xsd:string)
+SubClassOf(obo:ECO_0001846 obo:ECO_0001845)
+
+# Class: obo:ECO_0001847 (cell population optical density evidence used in manual assertion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_0001847 "A type of cell population optical density evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000234 obo:ECO_0001847 "CACAO"^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:ECO_0001847 "jbmunro"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001847 "2020-01-28T12:00:00Z"^^xsd:string)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001847 "eco"^^xsd:string)
+AnnotationAssertion(oboInOwl:id obo:ECO_0001847 "ECO:0001847"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0001847 "cell population optical density evidence used in manual assertion"^^xsd:string)
+SubClassOf(obo:ECO_0001847 obo:ECO_0001845)
 
 # Class: obo:ECO_0005004 (cell viability assay evidence)
 
