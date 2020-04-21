@@ -157,12 +157,15 @@ $(BASIC).obo: $(BASIC).owl | $(BUILD)robot.jar
 mapping: gaf-eco-mapping-derived.txt
 
 # create derived GO mapping file
-gaf-eco-mapping-derived.txt: $(ECO).owl | $(BUILD)robot.jar
+$(BUILD)gaf-eco-mapping-derived.txt: $(ECO).owl | $(BUILD)robot.jar
 	$(ROBOT) query --input $(ECO).owl --format tsv\
-	 --select $(SPARQL)make-derived-mapping.rq $(BUILD)$@ \
-	&& sed 's/\"//g' $(BUILD)$@\
-	 | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g'\
-	 | tail -n +2 > $@
+	 --select $(SPARQL)make-derived-mapping.rq $@
+	sed 's/\"//g' $@ | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g' | tail -n +2 > $@.tmp 
+	mv $@.tmp $@
+
+# append mappings to header
+gaf-eco-mapping-derived.txt: src/util/derived-header.txt build/gaf-eco-mapping-derived.txt
+	cat $^ > $@
 
 # ----------------------------------------
 # SUBSETS
