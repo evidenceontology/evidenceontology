@@ -1,3 +1,29 @@
+# Permanent URL of this document:
+#  http://purl.obolibrary.org/obo/eco/gaf-eco-mapping-derived.txt
+#
+# Always use this URL
+#
+# About:
+# This mapping translates specific ECO codes to GAF evidence codes. This is automatically generated
+# based on `http://purl.obolibrary.org/obo/eco/gaf-eco-mapping.txt`, which maps the GAF evidence
+# code to its equivalent ECO term, and the hiearachy of ECO. The lines that contain "Default" in the
+# third column are these equivalent mappings. All other ECO IDs are descendants of the "Default".
+#
+# Each mapping line contains:
+#  1. GAF evidence code (e.g. IEA)
+#  2. ECO ID
+#  3. Default (optional), if the ECO ID is equivalent to the GAF evidence code
+#
+# This document consists of these comments (after #s) followed by a set of mappings,
+# each represented as the above 3 columns separated by tabs.
+#
+# For example ECO:0006075 'affinity evidence used in manual assertion' maps up to IPI because it is
+# a child of ECO:0000353 'physical interaction evidence used in manual assertion', which is
+# equivalent to IPI
+#
+# To request changes or report an issue with the mappings, submit an item to
+#  https://github.com/evidenceontology/evidenceontology/issues
+#
 ECO:0000278	EXP	
 ECO:0000288	EXP	
 ECO:0001043	EXP	
