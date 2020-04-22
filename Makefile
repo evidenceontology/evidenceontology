@@ -163,9 +163,13 @@ $(BUILD)gaf-eco-mapping-derived.txt: $(ECO).owl | $(BUILD)robot.jar
 	sed 's/\"//g' $@ | sed 's/\^\^<http:\/\/www\.w3\.org\/2001\/XMLSchema#string>//g' | tail -n +2 > $@.tmp 
 	mv $@.tmp $@
 
+# Wait on resolution of issue #252
 # append mappings to header
-gaf-eco-mapping-derived.txt: src/util/derived-header.txt build/gaf-eco-mapping-derived.txt
-	cat $^ > $@
+# gaf-eco-mapping-derived.txt: src/util/derived-header.txt build/gaf-eco-mapping-derived.txt
+#	cat $^ > $@
+
+gaf-eco-mapping-derived.txt: $(BUILD)gaf-eco-mapping-derived.txt
+	cp $< $@
 
 # ----------------------------------------
 # SUBSETS
