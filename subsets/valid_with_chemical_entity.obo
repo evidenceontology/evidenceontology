@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: eco/2020-05-01/subsets/valid_with_chemical_entity.owl
+data-version: eco/2020-05-15/subsets/valid_with_chemical_entity.owl
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -17,7 +17,7 @@ name: direct assay evidence used in manual assertion
 namespace: eco
 def: "A type of direct assay evidence that is used in a manual assertion." [ECO:MCC]
 subset: valid_with_chemical_entity
-synonym: "IDA" RELATED [GOECO:IDA]
+synonym: "IDA" EXACT [GOECO:IDA]
 synonym: "inferred from direct assay" EXACT [GOECO:IDA]
 xref: GOECO:IDA "inferred from direct assay"
 property_value: seeAlso http://geneontology.org/page/ida-inferred-direct-assay xsd:string
@@ -33,8 +33,8 @@ subset: valid_with_chemical_entity
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
-synonym: "IMP" RELATED [GOECO:IMP]
-synonym: "inferred from mutant phenotype" RELATED [GOECO:IMP]
+synonym: "IMP" EXACT [GOECO:IMP]
+synonym: "inferred from mutant phenotype" EXACT [GOECO:IMP]
 xref: GOECO:IMP "inferred from mutant phenotype"
 property_value: seeAlso http://geneontology.org/page/imp-inferred-mutant-phenotype xsd:string
 created_by: mchibucos
