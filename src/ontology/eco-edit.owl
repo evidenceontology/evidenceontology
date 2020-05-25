@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -1834,6 +1834,7 @@ Declaration(Class(obo:ECO_0007849))
 Declaration(Class(obo:ECO_0007850))
 Declaration(ObjectProperty(obo:ECO_9000000))
 Declaration(ObjectProperty(obo:ECO_9000001))
+Declaration(AnnotationProperty(obo:ECO_9000002))
 Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:IAO_0000117))
@@ -1877,6 +1878,10 @@ Declaration(AnnotationProperty(owl:deprecated))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: obo:ECO_9000002 (has GO evidence code)
+
+AnnotationAssertion(rdfs:label obo:ECO_9000002 "has GO evidence code")
 
 # Annotation Property: obo:IAO_0000112 (example of usage)
 
@@ -13641,6 +13646,7 @@ SubClassOf(obo:ECO_0006094 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0006095 (double mutant phenotypic evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006095 "IGI")
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0006095 "A type of double mutant phenotypic evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006095 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0006095 "2017-09-14T09:19:40Z"^^xsd:string)
