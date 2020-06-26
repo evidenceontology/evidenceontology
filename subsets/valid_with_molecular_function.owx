@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_molecular_function.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2020-05-15/subsets/valid_with_molecular_function.owl">
+     versionIRI="http://purl.obolibrary.org/obo/eco/2020-06-26/subsets/valid_with_molecular_function.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -14,6 +14,9 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/ECO_0000305"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/ECO_9000002"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
@@ -215,6 +218,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>http://purl.obolibrary.org/obo/ECO_0000305</IRI>
         <Literal>http://geneontology.org/page/ic-inferred-curator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_9000002</IRI>
+        <Literal>has GO evidence code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2020-05-15
-date: 15:05:2020 16:21
+data-version: releases/2020-06-26
+date: 26:06:2020 15:39
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -1179,9 +1179,9 @@ creation_date: 2010-03-18T12:36:04Z
 id: ECO:0000204
 name: author statement
 alt_id: ECO:0007010
-def: "An evidence type that is based on an assertion by the author of a paper, which is read by a curator." [ECO:MCC]
+def: "A documented statement evidence that is based on an assertion by the author of a paper, which is read by a curator." [ECO:MCC]
 synonym: "author inference" EXACT []
-is_a: ECO:0000000 ! evidence
+is_a: ECO:0006151 ! documented statement evidence
 union_of: ECO:0000033 ! author statement supported by traceable reference
 union_of: ECO:0000034 ! author statement without traceable support
 created_by: mchibucos
@@ -2303,7 +2303,7 @@ alt_id: ECO:0007764
 def: "A type of author statement that is used in a manual assertion." [ECO:MCC]
 synonym: "author inference used in manual assertion" EXACT []
 is_a: ECO:0000204 ! author statement
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0006155 {is_inferred="true"} ! documented statement evidence used in manual assertion
 intersection_of: ECO:0000204 ! author statement
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
@@ -10107,6 +10107,7 @@ is_a: ECO:0000054 ! double mutant phenotypic evidence
 is_a: ECO:0000315 {is_inferred="true"} ! mutant phenotype evidence used in manual assertion
 intersection_of: ECO:0000054 ! double mutant phenotypic evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IGI" xsd:string
 created_by: rctauber
 creation_date: 2017-09-14T09:19:40Z
 
@@ -10269,6 +10270,115 @@ id: ECO:0006146
 name: density functional theory simulation evidence used in automatic assertion
 def: "A type of density functional theory simulation evidence that is used in an automatic assertion." [ECO:SN]
 is_a: ECO:0006144 ! density functional theory simulation evidence
+created_by: snadendla
+
+[Term]
+id: ECO:0006151
+name: documented statement evidence
+def: "A type of evidence in which information is recorded in some documentation system, for example, but not limited to a publication, survey, or medical record." [ECO:SN]
+is_a: ECO:0000000 ! evidence
+created_by: snadendla
+
+[Term]
+id: ECO:0006152
+name: medical practitioner statement evidence
+def: "A type of documented statement evidence in which information is stated by a health care professional, for example, but not limited to a doctor, nurse, or psychologist." [ECO:SN]
+is_a: ECO:0006151 ! documented statement evidence
+created_by: snadendla
+
+[Term]
+id: ECO:0006153
+name: self-reported individual's statement evidence
+def: "A type of documented statement evidence in which information is provided by an individual through means including, but not limited to, paper form, electronic form, or verbal communication, and is captured in a documented record." [ECO:SN]
+is_a: ECO:0006151 ! documented statement evidence
+created_by: snadendla
+
+[Term]
+id: ECO:0006154
+name: self-reported patient statement evidence
+def: "A type of self-reported individual's statement evidence in which information is provided by a patient in a clinical setting." [ECO:SN]
+is_a: ECO:0006153 ! self-reported individual's statement evidence
+property_value: IAO:0000234 "Pablo Botas for Foundation 29, Dx29 project" xsd:string
+creation_date: snadendla
+
+[Term]
+id: ECO:0006155
+name: documented statement evidence used in manual assertion
+def: "A type of documented statement evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0006151 ! documented statement evidence
+intersection_of: ECO:0006151 ! documented statement evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006156
+name: documented statement evidence used in automatic assertion
+def: "A type of documented statement evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
+is_a: ECO:0006151 ! documented statement evidence
+intersection_of: ECO:0006151 ! documented statement evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006157
+name: self-reported individual's statement evidence used in manual assertion
+def: "A type of self-reported individual's statement evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006153 ! self-reported individual's statement evidence
+is_a: ECO:0006155 {is_inferred="true"} ! documented statement evidence used in manual assertion
+intersection_of: ECO:0006153 ! self-reported individual's statement evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006158
+name: self-reported individual's statement evidence used in automatic assertion
+def: "A type of self-reported individual's statement evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006153 ! self-reported individual's statement evidence
+is_a: ECO:0006156 {is_inferred="true"} ! documented statement evidence used in automatic assertion
+intersection_of: ECO:0006153 ! self-reported individual's statement evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006159
+name: self-reported patient statement evidence used in manual assertion
+def: "A type of self-reported patient statement evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006154 ! self-reported patient statement evidence
+is_a: ECO:0006157 {is_inferred="true"} ! self-reported individual's statement evidence used in manual assertion
+intersection_of: ECO:0006154 ! self-reported patient statement evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006160
+name: self-reported patient statement evidence used in automatic assertion
+def: "A type of self-reported patient statement evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006154 ! self-reported patient statement evidence
+is_a: ECO:0006158 {is_inferred="true"} ! self-reported individual's statement evidence used in automatic assertion
+intersection_of: ECO:0006154 ! self-reported patient statement evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006161
+name: medical practitioner statement evidence used in manual assertion
+def: "A type of medical practitioner statement evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006152 ! medical practitioner statement evidence
+is_a: ECO:0006155 {is_inferred="true"} ! documented statement evidence used in manual assertion
+intersection_of: ECO:0006152 ! medical practitioner statement evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006162
+name: medical practitioner statement evidence used in automatic assertion
+def: "A type of medical practitioner statement evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006152 ! medical practitioner statement evidence
+is_a: ECO:0006156 {is_inferred="true"} ! documented statement evidence used in automatic assertion
+intersection_of: ECO:0006152 ! medical practitioner statement evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: snadendla
 
 [Term]
@@ -13723,7 +13833,7 @@ id: ECO:0007319
 name: author statement used in automatic assertion
 def: "A type of author statement that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000204 {is_inferred="true"} ! author statement
-is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
+is_a: ECO:0006156 {is_inferred="true"} ! documented statement evidence used in automatic assertion
 intersection_of: ECO:0000204 ! author statement
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
