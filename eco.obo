@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2020-09-11
-date: 29:06:2020 07:48
+data-version: releases/2020-11-08
+date: 08:11:2020 16:55
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -97,8 +97,11 @@ is_a: ECO:0000008 ! expression pattern evidence
 [Term]
 id: ECO:0000010
 name: protein expression evidence
-def: "A type of expression pattern evidence resulting from protein abundance quantification techniques." [PMC:4029002, url:https\://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-protein-expression-systems.html]
+alt_id: ECO:0000046
+def: "A type of expression pattern evidence resulting from protein abundance quantification techniques." [NBK:22011, PMC:4029002, url:http\://www.informatics.jax.org/glossary/gain-of-function, url:https\://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-protein-expression-systems.html]
+synonym: "protein expression level evidence" EXACT []
 is_a: ECO:0000008 ! expression pattern evidence
+property_value: IAO:0000112 "In the BL21(DE3)(pJS429) cells, the levels of ClpP2s and VapC10 remained unchanged over a 2-hour period of translation arrest, but the VapB10 level showed to be decreased with a half-life (Figure 7C) similar to that observed in the strain BL21(DE3)(pJS883) (Figure 7B). These indicate that ClpXP2s could degrade VapB10 regardless of the presence or absence of VapC10." xsd:string {xref="PMID:24260461"}
 
 [Term]
 id: ECO:0000011
@@ -283,9 +286,9 @@ is_a: ECO:0000204 ! author statement
 
 [Term]
 id: ECO:0000035
-name: no biological data found
-def: "A curator inference that results from research where no information about a biological feature was found in the scientific literature, at biological databases, or within other resources." [ECO:SN]
-comment: An assertion of "no biological data found" carries the assumption that a more-or-less exhaustive search has been conducted.
+name: no evidence data found
+def: "An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources." [ECO:SN]
+comment: An assertion of "no evidence data found" carries the assumption that a more-or-less exhaustive search has been conducted.
 is_a: ECO:0000205 ! curator inference
 
 [Term]
@@ -341,13 +344,6 @@ id: ECO:0000045
 name: spatial pattern of protein expression evidence
 def: "A type of protein expression evidence that accounts for the position of RNA translation to a protein product ranging in scale from differing tissues to regions of an anatomical structure." []
 is_a: ECO:0000010 ! protein expression evidence
-
-[Term]
-id: ECO:0000046
-name: protein expression level evidence
-def: "A type of protein expression evidence resulting from the quantification of protein production in a sample." [NBK:22011, url:http\://www.informatics.jax.org/glossary/gain-of-function]
-is_a: ECO:0000010 ! protein expression evidence
-property_value: IAO:0000112 "In the BL21(DE3)(pJS429) cells, the levels of ClpP2s and VapC10 remained unchanged over a 2-hour period of translation arrest, but the VapB10 level showed to be decreased with a half-life (Figure 7C) similar to that observed in the strain BL21(DE3)(pJS883) (Figure 7B). These indicate that ClpXP2s could degrade VapB10 regardless of the presence or absence of VapC10." xsd:string {xref="PMID:24260461"}
 
 [Term]
 id: ECO:0000047
@@ -841,12 +837,15 @@ property_value: IAO:0000234 "CollecTF" xsd:string
 
 [Term]
 id: ECO:0000112
-name: western blot evidence
-def: "A type of gel electrophoresis evidence where proteins are separated using gel electrophoresis and then they are blotted on a nitrocellulose or polyvinylidene difluoride (PVDF) membrane, later an antibody with a dye or an enzyme is added to the solution which is able to bind to its specific protein and this product is detected either by chemiluminescent detection technique or fluorescence imaging technique." [ECO:SW, PMID:23050259, TAIR:TED]
+name: qualitative western immunoblotting evidence
+alt_id: ECO:0005602
+def: "A type of protein expression evidence where proteins are separated using gel electrophoresis, blotted onto a membrane, and probed with an antibody that can be detected via light or radioactive emission." [ECO:SW, PMID:23050259, TAIR:TED]
 comment: Western blot is used for protein detection and analysis. A mixed protein sample is separated through polyacrylamide gel electrophoresis then transferred to a membrane, such as polyvinylidene fluoride (PVDF), and labeled with protein-specific antibodies.
+synonym: "protein expression level evidence based on western blot" EXACT []
 synonym: "protein immunoblot" RELATED []
 synonym: "protein levels (e.g. Western blots)" RELATED []
 synonym: "Western blot expression analysis" RELATED []
+is_a: ECO:0000010 ! protein expression evidence
 is_a: ECO:0000333 ! sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence
 is_a: ECO:0005593 ! immunodetection assay evidence
 property_value: IAO:0000112 "When we determined the proteolysis role of Lons in VapBC10 proteins by Western blot analysis using the strains BL21(DE3)(pJS882) and BL21(DE3)(pJS427), the levels of VapB10 and VapC10 remained stable over the course of translation inhibition (Figure 7D and E). Thus, Lon could not degrade VapBC10 proteins, consistent with our drop growth evidence (Figure 6B)." xsd:string {xref="PMID:24260461"}
@@ -2062,28 +2061,20 @@ creation_date: 2010-12-20T06:09:45Z
 
 [Term]
 id: ECO:0000279
-name: western blot evidence used in manual assertion
-def: "A type of Western blot assay that is used in a manual assertion." [ECO:MCC]
+name: qualitative western immunoblotting evidence used in manual assertion
+alt_id: ECO:0007183
+def: "A type of qualitative western immunoblotting evidence that is used in a manual assertion." [ECO:MCC]
+synonym: "protein expression level evidence based on western blot used in manual assertion" EXACT []
 synonym: "protein immunoblot" RELATED []
 synonym: "protein levels (e.g. Western blots)" RELATED []
 synonym: "Western blot expression analysis" RELATED []
-is_a: ECO:0000112 ! western blot evidence
+is_a: ECO:0000112 ! qualitative western immunoblotting evidence
+is_a: ECO:0000284 {is_inferred="true"} ! protein expression evidence used in manual assertion
 is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-intersection_of: ECO:0000112 ! western blot evidence
+intersection_of: ECO:0000112 ! qualitative western immunoblotting evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: mchibucos
 creation_date: 2010-12-20T06:20:01Z
-
-[Term]
-id: ECO:0000280
-name: protein expression level evidence used in manual assertion
-def: "A type of protein expression level analysis that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000046 ! protein expression level evidence
-is_a: ECO:0000284 {is_inferred="true"} ! protein expression evidence used in manual assertion
-intersection_of: ECO:0000046 ! protein expression level evidence
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: mchibucos
-creation_date: 2010-12-20T06:21:54Z
 
 [Term]
 id: ECO:0000281
@@ -2123,7 +2114,9 @@ creation_date: 2010-12-20T06:31:44Z
 [Term]
 id: ECO:0000284
 name: protein expression evidence used in manual assertion
+alt_id: ECO:0000280
 def: "A type of protein expression analysis that is used in a manual assertion." [ECO:MCC]
+synonym: "protein expression level evidence used in manual assertion" EXACT []
 is_a: ECO:0000010 ! protein expression evidence
 is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
 intersection_of: ECO:0000010 ! protein expression evidence
@@ -2370,14 +2363,14 @@ creation_date: 2011-01-20T02:35:11Z
 
 [Term]
 id: ECO:0000307
-name: no biological data found used in manual assertion
-def: "A type of no biological data found that is used in a manual assertion." [ECO:MCC]
+name: no evidence data found used in manual assertion
+def: "An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an manual assertion." [ECO:MCC]
 synonym: "ND" EXACT [GOECO:ND]
 synonym: "no biological data available" EXACT [GOECO:ND]
 xref: GOECO:ND "no biological data available"
-is_a: ECO:0000035 ! no biological data found
+is_a: ECO:0000035 ! no evidence data found
 is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assertion
-intersection_of: ECO:0000035 ! no biological data found
+intersection_of: ECO:0000035 ! no evidence data found
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: seeAlso http://geneontology.org/page/nd-no-biological-data-available xsd:string
 created_by: mchibucos
@@ -4018,10 +4011,9 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001105
-name: nuclear magnetic resonance spectroscopy evidence
-def: "A type of structure determination evidence resulting from the use of an MRI to provide chemical information about tissue metabolites." [PMID:16428685]
-synonym: "NMR spectroscopy" EXACT []
-is_a: ECO:0005031 ! structure determination evidence
+name: nuclear magnetic resonance evidence
+def: "A type of experimental evidence in which atomic nuclei in a strong constant magnetic field are perturbed by a weak oscillating magnetic field and the resulting electromagnetic signal is captured." [url:https\://en.wikipedia.org/wiki/Nuclear_magnetic_resonance]
+is_a: ECO:0000006 ! experimental evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -5523,12 +5515,11 @@ creation_date: 2014-03-17T19:15:48Z
 
 [Term]
 id: ECO:0001238
-name: nuclear magnetic resonance spectroscopy evidence used in manual assertion
-def: "A type of nuclear magnetic resonance spectroscopy evidence that is used in a manual assertion." [ECO:MCC]
-synonym: "NMR spectroscopy evidence" BROAD []
+name: nuclear magnetic resonance evidence used in manual assertion
+def: "A type of nuclear magnetic resonance evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
-is_a: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
-intersection_of: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
+is_a: ECO:0001105 ! nuclear magnetic resonance evidence
+intersection_of: ECO:0001105 ! nuclear magnetic resonance evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -6692,7 +6683,7 @@ name: heteronuclear single quantum coherence spectroscopy evidence
 def: "A type of nuclear magnetic resonance spectroscopy evidence based on two-dimensional NMR for elucidation of the chemical structure of an isolated or synthesized chemical compound where the characteristic transfer magnetization of a proton to a nitrogen or carbon isotope is monitored by NMR, generating a specific peak in the spectrum." [ECO:SW, PMID:19856946]
 comment: Chemical shifts in the spectrum indicating binding can be detected from analysis of a protein spectrum in the presence or absence of its cognate DNA binding site.
 synonym: "HSQC" EXACT [PMID:19856946]
-is_a: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
+is_a: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: swolfish
 creation_date: 2015-11-03T14:11:06Z
@@ -8121,15 +8112,6 @@ created_by: snadendla
 creation_date: 2016-03-18T12:52:04Z
 
 [Term]
-id: ECO:0005602
-name: protein expression level evidence based on western blot
-def: "A type of protein expression level evidence where the level of expression of a protein is determined in a cell or tissue extract by western blot technique." [ECO:SN]
-is_a: ECO:0000046 ! protein expression level evidence
-is_a: ECO:0000112 ! western blot evidence
-created_by: snadendla
-creation_date: 2016-03-18T13:02:29Z
-
-[Term]
 id: ECO:0005603
 name: protein mass spectrometry evidence
 def: "A type of mass spectrometry evidence where one or more protein analyses are performed." [ECO:SN]
@@ -8585,8 +8567,8 @@ id: ECO:0005642
 name: heteronuclear single quantum coherence spectroscopy evidence used in manual assertion
 def: "A type of heteronuclear single quantum coherence spectroscopy evidence that is used in a manual assertion." [ECO:SN]
 synonym: "HSQC evidence" BROAD []
-is_a: ECO:0001238 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in manual assertion
 is_a: ECO:0001813 ! heteronuclear single quantum coherence spectroscopy evidence
+is_a: ECO:0006165 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in manual assertion
 intersection_of: ECO:0001813 ! heteronuclear single quantum coherence spectroscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: snadendla
@@ -10378,6 +10360,97 @@ def: "A type of medical practitioner statement evidence that is used in an autom
 is_a: ECO:0006152 ! medical practitioner statement evidence
 is_a: ECO:0006156 {is_inferred="true"} ! documented statement evidence used in automatic assertion
 intersection_of: ECO:0006152 ! medical practitioner statement evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006163
+name: nuclear magnetic resonance spectroscopy evidence
+def: "A type of nuclear magnetic resonance evidence used for quantification of metabolites or for the determination of chemical structure or composition." [ECO:SN, PMID: 16428685, PMID: 23036848]
+synonym: "NMR Spectroscopy" EXACT []
+is_a: ECO:0001105 ! nuclear magnetic resonance evidence
+relationship: OBI:0000312 OBI:0000623
+property_value: IAO:0000234 SIB:PG xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006164
+name: nuclear magnetic resonance spectroscopy evidence used in automatic assertion
+def: "A type of nuclear magnetic resonance spectroscopy evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
+is_a: ECO:0007441 {is_inferred="true"} ! nuclear magnetic resonance evidence used in automatic assertion
+intersection_of: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 SIB:PG xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006165
+name: nuclear magnetic resonance spectroscopy evidence used in manual assertion
+def: "A type of nuclear magnetic resonance spectroscopy evidence that is used in a manual assertion." [ECO:SN]
+synonym: "NMR spectroscopy evidence" BROAD []
+is_a: ECO:0001238 {is_inferred="true"} ! nuclear magnetic resonance evidence used in manual assertion
+is_a: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
+intersection_of: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 SIB:PG xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006166
+name: magnetic resonance imaging evidence
+def: "A type of nuclear magnetic resonance evidence used to image anatomy and physiological processes." [url:https\://en.wikipedia.org/wiki/Magnetic_resonance_imaging]
+is_a: ECO:0001105 ! nuclear magnetic resonance evidence
+property_value: IAO:0000234 "bjonnh" xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006167
+name: magnetic resonance imaging evidence used in automatic assertion
+def: "A type of magnetic resonance imaging evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006166 ! magnetic resonance imaging evidence
+is_a: ECO:0007441 {is_inferred="true"} ! nuclear magnetic resonance evidence used in automatic assertion
+intersection_of: ECO:0006166 ! magnetic resonance imaging evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 "bjonnh" xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006168
+name: magnetic resonance imaging evidence used in manual assertion
+def: "A type of magnetic resonance imaging evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001238 {is_inferred="true"} ! nuclear magnetic resonance evidence used in manual assertion
+is_a: ECO:0006166 ! magnetic resonance imaging evidence
+intersection_of: ECO:0006166 ! magnetic resonance imaging evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "bjonnh" xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006169
+name: quantitative western immunoblotting evidence
+def: "A type of qualitative western immunoblotting evidence where detection of the signal is carried out through digital imaging and the signal is normalized with methods such as standard curves built from reference housekeeping proteins or total transferred protein measurements." [ECO:SN, PMID:25852189]
+is_a: ECO:0000112 ! qualitative western immunoblotting evidence
+property_value: IAO:0000234 GO:Val xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006170
+name: quantitative western immunoblotting evidence used in manual evidence
+def: "A type of quantitative western immunoblotting evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000279 {is_inferred="true"} ! qualitative western immunoblotting evidence used in manual assertion
+is_a: ECO:0006169 ! quantitative western immunoblotting evidence
+intersection_of: ECO:0006169 ! quantitative western immunoblotting evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+created_by: snadendla
+
+[Term]
+id: ECO:0006171
+name: quantitative western immunoblotting evidence used in automatic assertion
+def: "A type of quantitatative western immunoblotting evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006169 ! quantitative western immunoblotting evidence
+is_a: ECO:0007306 {is_inferred="true"} ! qualitative western immunoblotting evidence used in automatic assertion
+intersection_of: ECO:0006169 ! quantitative western immunoblotting evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: snadendla
 
@@ -12394,18 +12467,6 @@ created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
-id: ECO:0007183
-name: protein expression level evidence based on western blot used in manual assertion
-def: "A type of protein expression level evidence based on western blot that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000279 {is_inferred="true"} ! western blot evidence used in manual assertion
-is_a: ECO:0000280 {is_inferred="true"} ! protein expression level evidence used in manual assertion
-is_a: ECO:0005602 {is_inferred="true"} ! protein expression level evidence based on western blot
-intersection_of: ECO:0005602 ! protein expression level evidence based on western blot
-intersection_of: used_in ECO:0000218 ! manual assertion
-created_by: rctauber
-creation_date: 2018-05-14T09:47:55Z
-
-[Term]
 id: ECO:0007184
 name: protein mass spectrometry evidence used in manual assertion
 def: "A type of protein mass spectrometry evidence that is used in a manual assertion." [ECO:RCT]
@@ -13480,18 +13541,6 @@ created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
-id: ECO:0007287
-name: protein expression level evidence based on western blot used in automatic assertion
-def: "A type of protein expression level evidence based on western blot that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0005602 {is_inferred="true"} ! protein expression level evidence based on western blot
-is_a: ECO:0007306 {is_inferred="true"} ! western blot evidence used in automatic assertion
-is_a: ECO:0007308 {is_inferred="true"} ! protein expression level evidence used in automatic assertion
-intersection_of: ECO:0005602 ! protein expression level evidence based on western blot
-intersection_of: used_in ECO:0000203 ! automatic assertion
-created_by: rctauber
-creation_date: 2018-05-14T09:47:55Z
-
-[Term]
 id: ECO:0007288
 name: protein mass spectrometry evidence used in automatic assertion
 def: "A type of protein mass spectrometry evidence that is used in an automatic assertion." [ECO:RCT]
@@ -13686,12 +13735,15 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007306
-name: western blot evidence used in automatic assertion
-def: "A type of western blot evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000112 {is_inferred="true"} ! western blot evidence
+name: qualitative western immunoblotting evidence used in automatic assertion
+alt_id: ECO:0007287
+def: "A type of qualitative western immunoblotting evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "protein expression level evidence based on western blot used in automatic assertion" EXACT []
+is_a: ECO:0000112 {is_inferred="true"} ! qualitative western immunoblotting evidence
+is_a: ECO:0007309 {is_inferred="true"} ! protein expression evidence used in automatic assertion
 is_a: ECO:0007770 {is_inferred="true"} ! sodium dodecyl sulfate polyacrylamide gel electrophoresis evidence used in automatic assertion
 is_a: ECO:0007796 {is_inferred="true"} ! immunodetection assay evidence used in automatic assertion
-intersection_of: ECO:0000112 ! western blot evidence
+intersection_of: ECO:0000112 ! qualitative western immunoblotting evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -13708,20 +13760,11 @@ created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
 [Term]
-id: ECO:0007308
-name: protein expression level evidence used in automatic assertion
-def: "A type of protein expression level evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000046 {is_inferred="true"} ! protein expression level evidence
-is_a: ECO:0007309 {is_inferred="true"} ! protein expression evidence used in automatic assertion
-intersection_of: ECO:0000046 ! protein expression level evidence
-intersection_of: used_in ECO:0000203 ! automatic assertion
-created_by: rctauber
-creation_date: 2018-05-14T09:47:55Z
-
-[Term]
 id: ECO:0007309
 name: protein expression evidence used in automatic assertion
+alt_id: ECO:0007308
 def: "A type of protein expression evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "protein expression level evidence used in automatic assertion" EXACT []
 is_a: ECO:0000010 {is_inferred="true"} ! protein expression evidence
 is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0000010 ! protein expression evidence
@@ -13887,11 +13930,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007324
-name: no biological data found used in automatic assertion
-def: "A type of no biological data found that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000035 {is_inferred="true"} ! no biological data found
+name: no evidence data found used in automatic assertion
+def: "An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0000035 {is_inferred="true"} ! no evidence data found
 is_a: ECO:0007322 {is_inferred="true"} ! curator inference used in automatic assertion
-intersection_of: ECO:0000035 ! no biological data found
+intersection_of: ECO:0000035 ! no evidence data found
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -15177,11 +15220,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007441
-name: nuclear magnetic resonance spectroscopy evidence used in automatic assertion
-def: "A type of nuclear magnetic resonance spectroscopy evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001105 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence
-is_a: ECO:0007815 {is_inferred="true"} ! structure determination evidence used in automatic assertion
-intersection_of: ECO:0001105 ! nuclear magnetic resonance spectroscopy evidence
+name: nuclear magnetic resonance evidence used in automatic assertion
+def: "A type of nuclear magnetic resonance evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0001105 {is_inferred="true"} ! nuclear magnetic resonance evidence
+is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
+intersection_of: ECO:0001105 ! nuclear magnetic resonance evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -15981,7 +16024,7 @@ id: ECO:0007513
 name: heteronuclear single quantum coherence spectroscopy evidence used in automatic assertion
 def: "A type of heteronuclear single quantum coherence spectroscopy evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0001813 {is_inferred="true"} ! heteronuclear single quantum coherence spectroscopy evidence
-is_a: ECO:0007441 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in automatic assertion
+is_a: ECO:0006164 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in automatic assertion
 intersection_of: ECO:0001813 ! heteronuclear single quantum coherence spectroscopy evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
