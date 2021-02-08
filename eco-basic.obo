@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2021-02-05/eco-basic.owl
-date: 05:02:2021 19:42
+data-version: eco/releases/2021-02-08/eco-basic.owl
+date: 08:02:2021 15:07
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -2091,6 +2091,7 @@ name: transcript expression evidence used in manual assertion
 alt_id: ECO:0000286
 def: "A type of transcript expression evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "transcript expression level evidence" BROAD []
+synonym: "transcriptomics evidence used in manual assertion" EXACT []
 is_a: ECO:0000009 ! transcript expression evidence
 is_a: ECO:0000270 ! expression pattern evidence used in manual assertion
 created_by: mchibucos
@@ -8995,6 +8996,7 @@ name: RNA-sequencing evidence used in manual assertion
 def: "A type of high throughput nucleotide sequencing assay evidence used in a manual assertion based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
 synonym: "RNA sequencing|differential gene expression evidence from RNA-seq experiment" RELATED []
 synonym: "RNA-seq evidence used in manual assertion" EXACT []
+synonym: "RNAseq evidence used in manual assertion" EXACT []
 synonym: "whole transcriptome shotgun sequencing" BROAD []
 synonym: "WTSS evidence" BROAD []
 is_a: ECO:0000291 ! transcript expression evidence used in manual assertion
@@ -9008,6 +9010,7 @@ name: RNA-sequencing evidence used in automatic assertion
 def: "A type of high throughput nucleotide sequencing assay evidence used in an automatic assertion based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
 synonym: "RNA sequencing|differential gene expression evidence from RNA-seq experiment" RELATED []
 synonym: "RNA-seq evidence used in automatic assertion" EXACT []
+synonym: "RNAseq evidence used in automatic assertion" EXACT []
 synonym: "whole transcriptome shotgun sequencing" BROAD []
 synonym: "WTSS evidence" BROAD []
 is_a: ECO:0000295 ! RNA-sequencing evidence
@@ -12397,6 +12400,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007303
 name: transcript expression evidence used in automatic assertion
 def: "A type of transcript expression evidence that is used in an automatic assertion." [ECO:RCT]
+synonym: "transcriptomics evidence used in automatic assertion" EXACT []
 is_a: ECO:0000009 ! transcript expression evidence
 is_a: ECO:0007298 ! expression pattern evidence used in automatic assertion
 created_by: rctauber
