@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2021-03-05
-date: 08:02:2021 15:07
+data-version: releases/2021-05-07
+date: 07:05:2021 15:42
 saved-by: rctauber
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
@@ -129,7 +129,7 @@ is_a: ECO:0000012 ! functional complementation evidence
 [Term]
 id: ECO:0000015
 name: mutant phenotype evidence
-def: "A type of experimental phenotypic evidence in which an observable phenotypic difference results from a change or mutation in DNA, reflecting a different form of an allele." [GO:IMP]
+def: "A type of experimental phenotypic evidence in which an observable phenotypic difference results from a change or mutation in DNA." [GO:IMP]
 comment: Note that mutations need not be negative.  Changes to DNA sequence (mutations) may be detrimental, have no impact, or be beneficial.
 comment: The allele that encodes the phenotype most common in a particular natural population is referred to as the wild type allele, while any other form of that allele is known as the mutant form.
 is_a: ECO:0000059 ! experimental phenotypic evidence
@@ -1180,7 +1180,6 @@ id: ECO:0000204
 name: author statement
 alt_id: ECO:0007010
 def: "A documented statement evidence that is based on an assertion by the author of a paper, which is read by a curator." [ECO:MCC]
-synonym: "author inference" EXACT []
 is_a: ECO:0006151 ! documented statement evidence
 union_of: ECO:0000033 ! author statement supported by traceable reference
 union_of: ECO:0000034 ! author statement without traceable support
@@ -4191,7 +4190,7 @@ creation_date: 2014-03-16T11:30:54Z
 [Term]
 id: ECO:0001126
 name: spectrophotometry evidence
-def: "A type of spectrometry evidence resulting from the evaluation of a molecule in a fluid by its ability to alter the transmission of light at specific wavelengths." [MMO:0000173]
+def: "A type of spectrometry evidence resulting from the evaluation of a molecule in a fluid or solid by its ability to alter the transmission of light at specific wavelengths." [MMO:0000173]
 is_a: ECO:0005504 ! spectrometry evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
@@ -10494,6 +10493,784 @@ property_value: IAO:0000234 "NCBI-RefSeq" xsd:string
 created_by: snadendla
 
 [Term]
+id: ECO:0006175
+name: nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence
+def: "A type of nuclear magnetic resonance spectroscopy evidence resulting from measuring the change in a certain type of NMR spectrum as a result of the spontenaous exchange of hydrogen and deuterium nuclei between the sample and the solvent." [PMID:20960033, PMID:28538145, url:https\://en.wikipedia.org/wiki/Hydrogen%E2%80%93deuterium_exchange#NMR_spectroscopy]
+synonym: "NMR HDX" EXACT []
+is_a: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006176
+name: proton-based nuclear magnetic resonance evidence
+def: "A type of nuclear magnetic resonance spectroscopy evidence in which the electromagnetic singal being measured comes from the perturbation of hydrogen nuclei resulting in a one dimensional spectrum." [url:https\://en.wikipedia.org/wiki/Proton_nuclear_magnetic_resonance]
+synonym: "1D NMR" BROAD []
+synonym: "proton NMR" EXACT []
+is_a: ECO:0006163 ! nuclear magnetic resonance spectroscopy evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006177
+name: circular dichroism evidence
+def: "A type of spectrometry evidence derived from irradiating a sample with light (either visible, infrared or ultraviolet wavelengths) and observing the difference of absorption of left-handed and right-handed light by the sample by comparing the extent of circular polarization in the incident and the emitted light." [PMID:17464384, url:https\://en.wikipedia.org/wiki/Circular_dichroism]
+synonym: "CD" EXACT []
+is_a: ECO:0005031 ! structure determination evidence
+is_a: ECO:0005504 ! spectrometry evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006178
+name: synchrotron radiation circular dichroism evidence
+def: "A type of circular dichroism evidence where the source of radiation is radially accelerated particles, most often moving on a circular path in a synchrotron, typically providing lower wavelengths and therefore higher signal-to-noise ratio compared to regular circular dichroism measurements." [PMID:20658968]
+synonym: "SRCD" EXACT []
+is_a: ECO:0006177 ! circular dichroism evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006179
+name: far-UV circular dichroism evidence
+def: "A type of circular dichroism evidence whose spectrum is in the range of 190-230 nm, providing information mainly about amide bonds and through which the relative proportion of secondary structure elements of a protein can be estimated." [PMID:17464384]
+synonym: "far-UV CD" EXACT []
+is_a: ECO:0006177 ! circular dichroism evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006180
+name: near-UV circular dichroism evidence
+def: "A type of circular dichroism evidence whose spectrum is in the range of 250-350 nm , providing information mainly about aromatic residues, i.e. phenylalanine, tyrosine and tryptophan, through which it provides information on the tertiary structure of a protein." [PMID:17464384]
+synonym: "near-UV CD" EXACT []
+is_a: ECO:0006177 ! circular dichroism evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006181
+name: cryogenic electron microscopy evidence
+def: "A type of electron microscopy evidence where the sample being studied has been cooled to cryogenic temperatures (typically below -153 degrees Celsius) prior to the experiment." [PMID:31078399, url:https\://en.wikipedia.org/wiki/Cryogenic_electron_microscopy]
+synonym: "cryo-EM" EXACT []
+is_a: ECO:0005033 ! electron microscopy evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006182
+name: small-angle X-ray scattering evidence
+def: "A type of light scattering evidence derived from determining the properties of particles in a solution such as size, shape, structure, molecular weight and structural transitions by irradiating the sample with an X-ray beam and the scattered intensity is probed at small angles (typically in the range of 0.1-10 degrees) by a detector." [PMID:26320411, url:https\://en.wikipedia.org/wiki/Small-angle_X-ray_scattering]
+synonym: "SAXS" EXACT []
+is_a: ECO:0007061 ! light scattering evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006183
+name: particle scattering evidence
+def: "A type of structure determination evidence derived from determining the properties of particles in a solution such as size, shape, structure, molecular weight, diffusion and interaction strength by irradiating the sample with a particle beam and the scattered intensity is probed at a certain angle by a detector." [DisProt:BalintMeszaros]
+is_a: ECO:0005031 ! structure determination evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006184
+name: small-angle neutron scattering evidence
+def: "A type of particle scattering evidence derived from determining the properties of particles in a solution such as size, shape, structure, molecular weight and structural transitions by irradiating the sample with a beam of thermal neutrons and the scattered intensity is probed at small angles (typically in the range of 0.1-10 degrees) by a detector." [PMID:17714935, url:https\://en.wikipedia.org/wiki/Small-angle_neutron_scattering]
+synonym: "SANS" EXACT []
+is_a: ECO:0006183 ! particle scattering evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006185
+name: author inference
+def: "A type of inferential evidence where an assertion is derived by the authors of a scientific publication from another assertion and/or primary data via logical inference or other rational means." [DisProt:BalintMeszaros]
+is_a: ECO:0000204 ! author statement
+is_a: ECO:0000361 ! inferential evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006186
+name: combinatorial experimental and author inference evidence contained in single publication
+def: "A type of combinatorial experimental and author inference evidence where the experimental results and author inference are contained in a single publication. " [ECO:MG]
+is_a: ECO:0007011 ! combinatorial experimental and author inference evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006187
+name: X-ray crystollagraphy-based structural model with missing residue coordinates
+def: "A type of X-ray cystallography evidence in which a structural model is built lacking coordinates for some residues indicating high flexibility or structural disorder in that area of the molecule." [DisProt:BalintMeszaros]
+is_a: ECO:0001823 ! x-ray crystallography evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006188
+name: X-ray crystollagraphy-based structural model with high relative B-factor values
+def: "A type of X-ray cystallography evidence in which a structural model is built that contains high relative B-factor values indicating flexibility in that area of the molecule." [DisProt:BalintMeszaros]
+is_a: ECO:0001823 ! x-ray crystallography evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006189
+name: cryogenic electron microscopy-based structural model with missing residue coordinates
+def: "A type of cryogenic electron microscopy evidence in which a structural model is built lacking coordinates for some residues indicating high flexibility or structural disorder in that area of the molecule." [DisProt:BalintMeszaros]
+is_a: ECO:0006181 ! cryogenic electron microscopy evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006190
+name: cryogenic electron microscopy-based structural model with high relative B-factor values
+def: "A type of cryogenic electron microscopy evidence in which a structural model is built that contains high relative B-factor values indicating flexibility in that area of the molecule." [DisProt:BalintMeszaros]
+is_a: ECO:0006181 ! cryogenic electron microscopy evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006191
+name: Fourier-transform infrared spectroscopy evidence
+def: "A type of spectrophotometry evidence resulting from the evaluation of a molecule in a fluid or solid state by its ability to alter the transmission of infrared light, where the raw data collected is transformed into the specturm by Fourier transform." [url:https\://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy]
+synonym: "FT-IR" EXACT []
+synonym: "FTIR" EXACT []
+is_a: ECO:0001126 ! spectrophotometry evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006192
+name: heat capacity-based evidence
+def: "A type of direct assay evidence derived from measuring the amount of heat absorbed or released by a sample to monitor chemical reactions, phase transitions or other processes affecting the physical state or chemical composition." [url:https\://en.wikipedia.org/wiki/Calorimetry]
+synonym: "calorimetry evidence" BROAD []
+is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006193
+name: differential scanning calorimetry evidence
+def: "A type of heat capacity-based evidence where the heat required to increase the temperature of the sample is continuously monitored and compared to the heat required to increase the temperature of a reference (having a largely identical composition compared to the sample, such as the empty buffer compared to a protein solution) over a range of temperatures." [url:https\://en.wikipedia.org/wiki/Differential_scanning_calorimetry]
+synonym: "DSC" EXACT []
+is_a: ECO:0006192 ! heat capacity-based evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006194
+name: selective antibody-based structural conformation evidence
+def: "A type of immunodetection assay evidence that involves the use of antibodies that are selective to conformations of the epitope to which they bind in order to provide information on conformations present in a target molecule." [DisProt:BalintMeszaros]
+is_a: ECO:0005031 ! structure determination evidence
+is_a: ECO:0005593 ! immunodetection assay evidence
+property_value: IAO:0000112 "Here, we describe the generation, characterisation, and utility of a monoclonal antibody that selectively binds with high affinity to the asymmetric TNF trimer–small molecule complex. The antibody helps to define the molecular dynamics of the apo TNF trimer, reveals the mode of action and specificity of the small molecule inhibitors, acts as a chaperone in solving the human TNF–TNFR1 complex crystal structure, and facilitates the measurement of small molecule target occupancy in complex biological samples." xsd:string {xref="PMID:33495445"}
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006195
+name: protein hydrogen-deuterium exchange mass spectrometry evidence
+def: "A type of mass spectrometry evidence derived from measuring changes in mass associated with the isotopic exchange between amide hydrogens of the protein backbone and its surrounding solvent, providing information on the structural state, the dynamics and the intrinsic chemical properties of the underlying amino acid sequence." [PMID:31249422, url:https\://en.wikipedia.org/wiki/Hydrogen%E2%80%93deuterium_exchange#Mass_spectrometry]
+synonym: "HDX-MS" EXACT []
+is_a: ECO:0001096 ! mass spectrometry evidence
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006196
+name: nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence used in manual assertion
+def: "A type of nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence that is used in a manual assertion." [ECO:SN]
+synonym: "NMR HDX" EXACT []
+is_a: ECO:0006165 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in manual assertion
+is_a: ECO:0006175 ! nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence
+intersection_of: ECO:0006175 ! nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006197
+name: nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence used in automatic assertion
+def: "A type of nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "NMR HDX" EXACT []
+is_a: ECO:0006164 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in automatic assertion
+is_a: ECO:0006175 ! nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence
+intersection_of: ECO:0006175 ! nuclear magnetic resonance spectroscopy-based hydrogen-deuterium exchange evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006198
+name: proton-based nuclear magnetic resonance evidence used in manual assertion
+def: "A type of proton-based nuclear magnetic resonance evidence that is used in a manual assertion." [ECO:SN]
+synonym: "1D NMR" BROAD []
+synonym: "proton NMR" EXACT []
+is_a: ECO:0006165 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in manual assertion
+is_a: ECO:0006176 ! proton-based nuclear magnetic resonance evidence
+intersection_of: ECO:0006176 ! proton-based nuclear magnetic resonance evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006199
+name: proton-based nuclear magnetic resonance evidence used in automatic assertion
+def: "A type of proton-based nuclear magnetic resonance evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "1D NMR" BROAD []
+synonym: "proton NMR" EXACT []
+is_a: ECO:0006164 {is_inferred="true"} ! nuclear magnetic resonance spectroscopy evidence used in automatic assertion
+is_a: ECO:0006176 ! proton-based nuclear magnetic resonance evidence
+intersection_of: ECO:0006176 ! proton-based nuclear magnetic resonance evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006200
+name: circular dichroism evidence used in manual assertion
+def: "A type of circular dichroism evidence that is used in a manual assertion." [ECO:SN]
+synonym: "CD" EXACT []
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0006177 ! circular dichroism evidence
+intersection_of: ECO:0006177 ! circular dichroism evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006201
+name: circular dichroism evidence used in automatic assertion
+def: "A type of circular dichroism evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "CD" EXACT []
+is_a: ECO:0006177 ! circular dichroism evidence
+is_a: ECO:0007815 {is_inferred="true"} ! structure determination evidence used in automatic assertion
+is_a: ECO:0007821 {is_inferred="true"} ! spectrometry evidence used in automatic assertion
+intersection_of: ECO:0006177 ! circular dichroism evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006202
+name: synchrotron radiation circular dichroism evidence used in manual assertion
+def: "A type of synchrotron radiation circular dichroism evidence that is used in a manual assertion." [ECO:SN]
+synonym: "SRCD" EXACT []
+is_a: ECO:0006178 ! synchrotron radiation circular dichroism evidence
+is_a: ECO:0006200 {is_inferred="true"} ! circular dichroism evidence used in manual assertion
+intersection_of: ECO:0006178 ! synchrotron radiation circular dichroism evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006203
+name: synchrotron radiation circular dichroism evidence used in automatic assertion
+def: "A type of synchrotron radiation circular dichroism evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "SRCD" EXACT []
+is_a: ECO:0006178 ! synchrotron radiation circular dichroism evidence
+is_a: ECO:0006201 {is_inferred="true"} ! circular dichroism evidence used in automatic assertion
+intersection_of: ECO:0006178 ! synchrotron radiation circular dichroism evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006204
+name: far-UV circular dichroism evidence used in manual assertion
+def: "A type of far-UV circular dichroism evidence that is used in a manual assertion." [ECO:SN]
+synonym: "far-UV CD" EXACT []
+is_a: ECO:0006179 ! far-UV circular dichroism evidence
+is_a: ECO:0006200 {is_inferred="true"} ! circular dichroism evidence used in manual assertion
+intersection_of: ECO:0006179 ! far-UV circular dichroism evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006205
+name: far-UV circular dichroism evidence used in automatic assertion
+def: "A type of far-UV circular dichroism evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "far-UV CD" EXACT []
+is_a: ECO:0006179 ! far-UV circular dichroism evidence
+is_a: ECO:0006201 {is_inferred="true"} ! circular dichroism evidence used in automatic assertion
+intersection_of: ECO:0006179 ! far-UV circular dichroism evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006206
+name: near-UV circular dichroism evidence used in manual assertion
+def: "A type of near-UV circular dichroism evidence that is used in a manual assertion." [ECO:SN]
+synonym: "near-UV CD" EXACT []
+is_a: ECO:0006180 ! near-UV circular dichroism evidence
+is_a: ECO:0006200 {is_inferred="true"} ! circular dichroism evidence used in manual assertion
+intersection_of: ECO:0006180 ! near-UV circular dichroism evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006207
+name: near-UV circular dichroism evidence used in automatic assertion
+def: "A type of near-UV circular dichroism evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "near-UV CD" EXACT []
+is_a: ECO:0006180 ! near-UV circular dichroism evidence
+is_a: ECO:0006201 {is_inferred="true"} ! circular dichroism evidence used in automatic assertion
+intersection_of: ECO:0006180 ! near-UV circular dichroism evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006208
+name: cryogenic electron microscopy evidence used in manual assertion
+def: "A type of cryogenic electron microscopy evidence that is used in a manual assertion." [ECO:SN]
+synonym: "cryo-EM" EXACT []
+is_a: ECO:0006003 {is_inferred="true"} ! electron microscopy evidence used in manual assertion
+is_a: ECO:0006181 ! cryogenic electron microscopy evidence
+intersection_of: ECO:0006181 ! cryogenic electron microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006209
+name: cryogenic electron microscopy evidence used in automatic assertion
+def: "A type of cryogenic electron microscopy evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "cryo-EM" EXACT []
+is_a: ECO:0006181 ! cryogenic electron microscopy evidence
+is_a: ECO:0007493 {is_inferred="true"} ! electron microscopy evidence used in automatic assertion
+intersection_of: ECO:0006181 ! cryogenic electron microscopy evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006210
+name: small-angle X-ray scattering evidence used in manual assertion
+def: "A type of small-angle X-ray scattering evidence that is used in a manual assertion." [ECO:SN]
+synonym: "SAXS" EXACT []
+is_a: ECO:0006182 ! small-angle X-ray scattering evidence
+is_a: ECO:0007062 {is_inferred="true"} ! light scattering evidence used in manual assertion
+intersection_of: ECO:0006182 ! small-angle X-ray scattering evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006211
+name: small-angle X-ray scattering evidence used in automatic assertion
+def: "A type of small-angle X-ray scattering evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "SAXS" EXACT []
+is_a: ECO:0006182 ! small-angle X-ray scattering evidence
+is_a: ECO:0007617 {is_inferred="true"} ! light scattering evidence used in automatic assertion
+intersection_of: ECO:0006182 ! small-angle X-ray scattering evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006212
+name: particle scattering evidence used in manual assertion
+def: "A type of particle scattering evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0006183 ! particle scattering evidence
+intersection_of: ECO:0006183 ! particle scattering evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006213
+name: particle scattering evidence used in automatic assertion
+def: "A type of particle scattering evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006183 ! particle scattering evidence
+is_a: ECO:0007815 {is_inferred="true"} ! structure determination evidence used in automatic assertion
+intersection_of: ECO:0006183 ! particle scattering evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006214
+name: small-angle neutron scattering evidence used in manual assertion
+def: "A type of small-angle neutron scattering evidence that is used in a manual assertion." [ECO:SN]
+synonym: "SANS" EXACT []
+is_a: ECO:0006184 ! small-angle neutron scattering evidence
+is_a: ECO:0006212 {is_inferred="true"} ! particle scattering evidence used in manual assertion
+intersection_of: ECO:0006184 ! small-angle neutron scattering evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006215
+name: small-angle neutron scattering evidence used in automatic assertion
+def: "A type of small-angle neutron scattering evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "SANS" EXACT []
+is_a: ECO:0006184 ! small-angle neutron scattering evidence
+is_a: ECO:0006213 {is_inferred="true"} ! particle scattering evidence used in automatic assertion
+intersection_of: ECO:0006184 ! small-angle neutron scattering evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006216
+name: author inference used in manual assertion
+def: "A type of author inference that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000302 {is_inferred="true"} ! author statement used in manual assertion
+is_a: ECO:0006185 ! author inference
+intersection_of: ECO:0006185 ! author inference
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006217
+name: author inference used in automatic assertion
+def: "A type of author inference that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006185 ! author inference
+is_a: ECO:0007319 {is_inferred="true"} ! author statement used in automatic assertion
+is_a: ECO:0007832 {is_inferred="true"} ! inferential evidence used in automatic assertion
+intersection_of: ECO:0006185 ! author inference
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006218
+name: combinatorial experimental and author inference evidence contained in single publication used in manual assertion
+def: "A type of combinatorial experimental and author inference evidence contained in single publication that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006186 ! combinatorial experimental and author inference evidence contained in single publication
+is_a: ECO:0007013 {is_inferred="true"} ! combinatorial experimental and author inference evidence used in manual assertion
+intersection_of: ECO:0006186 ! combinatorial experimental and author inference evidence contained in single publication
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006219
+name: combinatorial experimental and author inference evidence contained in single publication used in automatic assertion
+def: "A type of combinatorial experimental and author inference evidence contained in single publication that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006186 ! combinatorial experimental and author inference evidence contained in single publication
+is_a: ECO:0007592 {is_inferred="true"} ! combinatorial experimental and author inference evidence used in automatic assertion
+intersection_of: ECO:0006186 ! combinatorial experimental and author inference evidence contained in single publication
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006220
+name: X-ray crystollagraphy-based structural model with missing residue coordinates used in manual assertion
+def: "A type of X-ray crystollagraphy-based structural model with missing residue coordinates that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005670 {is_inferred="true"} ! x-ray crystallography evidence used in manual assertion
+is_a: ECO:0006187 ! X-ray crystollagraphy-based structural model with missing residue coordinates
+intersection_of: ECO:0006187 ! X-ray crystollagraphy-based structural model with missing residue coordinates
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006221
+name: X-ray crystollagraphy-based structural model with missing residue coordinates used in automatic assertion
+def: "A type of X-ray crystollagraphy-based structural model with missing residue coordinates that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005671 {is_inferred="true"} ! x-ray crystallography evidence used in automatic assertion
+is_a: ECO:0006187 ! X-ray crystollagraphy-based structural model with missing residue coordinates
+intersection_of: ECO:0006187 ! X-ray crystollagraphy-based structural model with missing residue coordinates
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006222
+name: X-ray crystollagraphy-based structural model with high relative B-factor values used in manual assertion
+def: "A type of X-ray crystollagraphy-based structural model with high relative B-factor values that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0005670 {is_inferred="true"} ! x-ray crystallography evidence used in manual assertion
+is_a: ECO:0006188 ! X-ray crystollagraphy-based structural model with high relative B-factor values
+intersection_of: ECO:0006188 ! X-ray crystollagraphy-based structural model with high relative B-factor values
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006223
+name: X-ray crystollagraphy-based structural model with high relative B-factor values used in automatic assertion
+def: "A type of X-ray crystollagraphy-based structural model with high relative B-factor values that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0005671 {is_inferred="true"} ! x-ray crystallography evidence used in automatic assertion
+is_a: ECO:0006188 ! X-ray crystollagraphy-based structural model with high relative B-factor values
+intersection_of: ECO:0006188 ! X-ray crystollagraphy-based structural model with high relative B-factor values
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006224
+name: cryogenic electron microscopy-based structural model with missing residue coordinates used in manual assertion
+def: "A type of cryogenic electron microscopy-based structural model with missing residue coordinates that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006189 ! cryogenic electron microscopy-based structural model with missing residue coordinates
+is_a: ECO:0006208 {is_inferred="true"} ! cryogenic electron microscopy evidence used in manual assertion
+intersection_of: ECO:0006189 ! cryogenic electron microscopy-based structural model with missing residue coordinates
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006225
+name: cryogenic electron microscopy-based structural model with missing residue coordinates used in automatic assertion
+def: "A type of cryogenic electron microscopy-based structural model with missing residue coordinates that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006189 ! cryogenic electron microscopy-based structural model with missing residue coordinates
+is_a: ECO:0006209 {is_inferred="true"} ! cryogenic electron microscopy evidence used in automatic assertion
+intersection_of: ECO:0006189 ! cryogenic electron microscopy-based structural model with missing residue coordinates
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006226
+name: cryogenic electron microscopy-based structural model with high relative B-factor values used in manual assertion
+def: "A type of cryogenic electron microscopy-based structural model with high relative B-factor values that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006190 ! cryogenic electron microscopy-based structural model with high relative B-factor values
+is_a: ECO:0006208 {is_inferred="true"} ! cryogenic electron microscopy evidence used in manual assertion
+intersection_of: ECO:0006190 ! cryogenic electron microscopy-based structural model with high relative B-factor values
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006227
+name: cryogenic electron microscopy-based structural model with high relative B-factor values used in automatic assertion
+def: "A type of cryogenic electron microscopy-based structural model with high relative B-factor values that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006190 ! cryogenic electron microscopy-based structural model with high relative B-factor values
+is_a: ECO:0006209 {is_inferred="true"} ! cryogenic electron microscopy evidence used in automatic assertion
+intersection_of: ECO:0006190 ! cryogenic electron microscopy-based structural model with high relative B-factor values
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006228
+name: Fourier-transform infrared spectroscopy evidence used in manual assertion
+def: "A type of Fourier-transform infrared spectroscopy evidence that is used in a manual assertion." [ECO:SN]
+synonym: "FT-IR" EXACT []
+synonym: "FTIR" EXACT []
+is_a: ECO:0001258 {is_inferred="true"} ! spectrophotometry evidence used in manual assertion
+is_a: ECO:0006191 ! Fourier-transform infrared spectroscopy evidence
+intersection_of: ECO:0006191 ! Fourier-transform infrared spectroscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006229
+name: Fourier-transform infrared spectroscopy evidence used in automatic assertion
+def: "A type of Fourier-transform infrared spectroscopy evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "FT-IR" EXACT []
+synonym: "FTIR" EXACT []
+is_a: ECO:0006191 ! Fourier-transform infrared spectroscopy evidence
+is_a: ECO:0007458 {is_inferred="true"} ! spectrophotometry evidence used in automatic assertion
+intersection_of: ECO:0006191 ! Fourier-transform infrared spectroscopy evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006230
+name: heat capacity-based evidence used in manual assertion
+def: "A type of heat capacity-based evidence that is used in a manual assertion." [ECO:SN]
+synonym: "calorimetry evidence" BROAD []
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0006192 ! heat capacity-based evidence
+intersection_of: ECO:0006192 ! heat capacity-based evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006231
+name: heat capacity-based evidence used in automatic assertion
+def: "A type of heat capacity-based evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "calorimetry evidence" BROAD []
+is_a: ECO:0006192 ! heat capacity-based evidence
+is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
+intersection_of: ECO:0006192 ! heat capacity-based evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006232
+name: differential scanning calorimetry evidence used in manual assertion
+def: "A type of differential scanning calorimetry evidence that is used in a manual assertion." [ECO:SN]
+synonym: "DSC" EXACT []
+is_a: ECO:0006193 ! differential scanning calorimetry evidence
+is_a: ECO:0006230 {is_inferred="true"} ! heat capacity-based evidence used in manual assertion
+intersection_of: ECO:0006193 ! differential scanning calorimetry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006233
+name: differential scanning calorimetry evidence used in automatic assertion
+def: "A type of differential scanning calorimetry evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "DSC" EXACT []
+is_a: ECO:0006193 ! differential scanning calorimetry evidence
+is_a: ECO:0006231 {is_inferred="true"} ! heat capacity-based evidence used in automatic assertion
+intersection_of: ECO:0006193 ! differential scanning calorimetry evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006234
+name: selective antibody-based structural conformation evidence used in manual assertion
+def: "A type of selective antibody-based structural conformation evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0006194 ! selective antibody-based structural conformation evidence
+intersection_of: ECO:0006194 ! selective antibody-based structural conformation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006235
+name: selective antibody-based structural conformation evidence used in automatic assertion
+def: "A type of selective antibody-based structural conformation evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006194 ! selective antibody-based structural conformation evidence
+is_a: ECO:0007796 {is_inferred="true"} ! immunodetection assay evidence used in automatic assertion
+is_a: ECO:0007815 {is_inferred="true"} ! structure determination evidence used in automatic assertion
+intersection_of: ECO:0006194 ! selective antibody-based structural conformation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006236
+name: protein hydrogen-deuterium exchange mass spectrometry evidence used in manual assertion
+def: "A type of protein hydrogen-deuterium exchange mass spectrometry evidence that is used in a manual assertion." [ECO:SN]
+synonym: "HDX-MS" EXACT []
+is_a: ECO:0001230 {is_inferred="true"} ! mass spectrometry evidence used in manual assertion
+is_a: ECO:0006195 ! protein hydrogen-deuterium exchange mass spectrometry evidence
+intersection_of: ECO:0006195 ! protein hydrogen-deuterium exchange mass spectrometry evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006237
+name: protein hydrogen-deuterium exchange mass spectrometry evidence used in automatic assertion
+def: "A type of protein hydrogen-deuterium exchange mass spectrometry evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "HDX-MS" EXACT []
+is_a: ECO:0006195 ! protein hydrogen-deuterium exchange mass spectrometry evidence
+is_a: ECO:0007433 {is_inferred="true"} ! mass spectrometry evidence used in automatic assertion
+intersection_of: ECO:0006195 ! protein hydrogen-deuterium exchange mass spectrometry evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006238
+name: galactokinase reporter gene assay evidence
+def: "A type of reporter gene assay evidence based on the fusion of the galK gene to a specific promoter for the expression of the enzyme galactokinase." [url:https\://www.sciencedirect.com/science/article/pii/007668796608039X]
+is_a: ECO:0000049 ! reporter gene assay evidence
+property_value: IAO:0000234 OMP:DebbySiegele xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006239
+name: polyadenylated transcript 3'-end-sequencing evidence
+def: "A type of RNA-sequencing evidence based on sequencing of the 3' ends of cDNA molecules that are selected by presence of a polyadenylated tail." [PMID:31617559]
+is_a: ECO:0000295 ! RNA-sequencing evidence
+property_value: IAO:0000234 NCBI-RefSeq:MurphyTerence xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006240
+name: colony boundary assay evidence
+def: "A type of colony morphology phenotypic evidence based on the presence or absence of a visually apparent boundary formed between colonies of multiple isolates or strains of the same microbial species growing on a solid surface such as that of an agar culture medium." [PMID:18621670]
+is_a: ECO:0007077 ! colony morphology phenotypic evidence
+property_value: IAO:0000234 OMP:DebbySiegele xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006241
+name: galactokinase reporter gene assay evidence used in manual assertion
+def: "A type of galactokinase reporter gene assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000270 {is_inferred="true"} ! expression pattern evidence used in manual assertion
+is_a: ECO:0006238 ! galactokinase reporter gene assay evidence
+intersection_of: ECO:0006238 ! galactokinase reporter gene assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 OMP:DebbySiegele xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006242
+name: galactokinase reporter gene assay evidence used in automatic assertion
+def: "A type of galactokinase reporter gene assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006238 ! galactokinase reporter gene assay evidence
+is_a: ECO:0007765 {is_inferred="true"} ! reporter gene assay evidence used in automatic assertion
+intersection_of: ECO:0006238 ! galactokinase reporter gene assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 OMP:DebbySiegele xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006243
+name: polyadenylated transcript 3'-end-sequencing evidence used in manual assertion
+def: "A type of polyadenylated transcript 3'-end-sequencing evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006068 {is_inferred="true"} ! RNA-sequencing evidence used in manual assertion
+is_a: ECO:0006239 ! polyadenylated transcript 3'-end-sequencing evidence
+intersection_of: ECO:0006239 ! polyadenylated transcript 3'-end-sequencing evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 NCBI-RefSeq:MurphyTerence xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006244
+name: polyadenylated transcript 3'-end-sequencing evidence used in automatic assertion
+def: "A type of polyadenylated transcript 3'-end-sequencing evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006069 {is_inferred="true"} ! RNA-sequencing evidence used in automatic assertion
+is_a: ECO:0006239 ! polyadenylated transcript 3'-end-sequencing evidence
+intersection_of: ECO:0006239 ! polyadenylated transcript 3'-end-sequencing evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 NCBI-RefSeq:MurphyTerence xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006245
+name: colony boundary assay evidence used in manual assertion
+def: "A type of colony boundary assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006240 ! colony boundary assay evidence
+is_a: ECO:0007078 {is_inferred="true"} ! colony morphology phenotypic evidence used in manual assertion
+intersection_of: ECO:0006240 ! colony boundary assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 OMP:DebbySiegele xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006246
+name: colony boundary assay evidence used in automatic assertion
+def: "A type of colony boundary assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006240 ! colony boundary assay evidence
+is_a: ECO:0007625 {is_inferred="true"} ! colony morphology phenotypic evidence used in automatic assertion
+intersection_of: ECO:0006240 ! colony boundary assay evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 OMP:DebbySiegele xsd:string
+created_by: snadendla
+
+[Term]
 id: ECO:0007000
 name: high throughput mutant phenotypic evidence
 def: "A type of high throughput evidence derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
@@ -10638,7 +11415,7 @@ synonym: "combinatorial evidence from author knowledge and experimental evidence
 is_a: ECO:0000212 {is_inferred="true"} ! combinatorial evidence
 intersection_of: ECO:0000212 ! combinatorial evidence
 intersection_of: BFO:0000051 ECO:0000006 ! experimental evidence
-intersection_of: BFO:0000051 ECO:0000204 ! author statement
+intersection_of: BFO:0000051 ECO:0006185 ! author inference
 property_value: IAO:0000234 "sbello" xsd:string
 created_by: rctauber
 creation_date: 2018-02-15T11:17:11Z
@@ -11198,8 +11975,8 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007061
-name: light scattering assay evidence
-def: "A type of direct assay evidence derived from determining the properties of particles in a solution such as size, shape, structure, molecular weight, diffusion and interaction strength by illuminating the sample with a laser beam and the scattered intensity is probed at a certain angle by a detector." [PMID:9013660, url:http\://www.lsinstruments.ch/technology/dynamic_light_scattering_dls/, url:http\://www.soft-matter.uni-tuebingen.de/index.html?dls.html]
+name: light scattering evidence
+def: "A type of structure determination evidence derived from determining the properties of particles in a solution such as size, shape, structure, molecular weight, diffusion and interaction strength by illuminating the sample with a laser beam and the scattered intensity is probed at a certain angle by a detector." [PMID:9013660, url:http\://www.lsinstruments.ch/technology/dynamic_light_scattering_dls/, url:http\://www.soft-matter.uni-tuebingen.de/index.html?dls.html]
 is_a: ECO:0005031 ! structure determination evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
@@ -11207,11 +11984,11 @@ creation_date: 2018-03-14T12:44:11Z
 
 [Term]
 id: ECO:0007062
-name: light scattering assay evidence used in manual assertion
-def: "A type of light scattering assay evidence that is used in a manual assertion." [ECO:RCT]
+name: light scattering evidence used in manual assertion
+def: "A type of light scattering evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
-is_a: ECO:0007061 ! light scattering assay evidence
-intersection_of: ECO:0007061 ! light scattering assay evidence
+is_a: ECO:0007061 ! light scattering evidence
+intersection_of: ECO:0007061 ! light scattering evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: rctauber
@@ -11220,10 +11997,10 @@ creation_date: 2018-03-14T12:44:11Z
 [Term]
 id: ECO:0007063
 name: dynamic light scattering assay evidence
-def: "A type of light scattering assay evidence derived by analyzing the fluctuations in the internsity of the scattered light by the particles in motion." [PMID:9013660, url:http\://www.soft-matter.uni-tuebingen.de/index.html?dls.html]
+def: "A type of light scattering evidence derived by analyzing the fluctuations in the internsity of the scattered light by the particles in motion." [PMID:9013660, url:http\://www.soft-matter.uni-tuebingen.de/index.html?dls.html]
 synonym: "Photon Correlation Spectroscopy" EXACT []
 synonym: "Quasi-Elastic Light Scattering" EXACT []
-is_a: ECO:0007061 ! light scattering assay evidence
+is_a: ECO:0007061 ! light scattering evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
 creation_date: 2018-03-14T12:44:11Z
@@ -11234,7 +12011,7 @@ name: dynamic light scattering assay evidence used in manual assertion
 def: "A type of dynamic light scattering assay evidence that is used in a manual assertion." [ECO:RCT]
 synonym: "Photon Correlation Spectroscopy" BROAD []
 synonym: "Quasi-Elastic Light Scattering" BROAD []
-is_a: ECO:0007062 {is_inferred="true"} ! light scattering assay evidence used in manual assertion
+is_a: ECO:0007062 {is_inferred="true"} ! light scattering evidence used in manual assertion
 is_a: ECO:0007063 ! dynamic light scattering assay evidence
 intersection_of: ECO:0007063 ! dynamic light scattering assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -11245,9 +12022,9 @@ creation_date: 2018-03-14T12:44:11Z
 [Term]
 id: ECO:0007065
 name: static light scattering assay evidence
-def: "A type of light scattering assay evidence derived by measuring the average intensity of scattered light by the particles at multiple angles." [PMID:9013660]
+def: "A type of light scattering evidence derived by measuring the average intensity of scattered light by the particles at multiple angles." [PMID:9013660]
 synonym: "Rayleigh scattering" EXACT []
-is_a: ECO:0007061 ! light scattering assay evidence
+is_a: ECO:0007061 ! light scattering evidence
 property_value: IAO:0000234 "OMP" xsd:string
 created_by: snadendla
 creation_date: 2018-03-14T12:44:11Z
@@ -11257,7 +12034,7 @@ id: ECO:0007066
 name: static light scattering assay evidence used in manual assertion
 def: "A type of static light scattering assay evidence that is used in a manual assertion." [ECO:RCT]
 synonym: "Rayleigh scattering" BROAD []
-is_a: ECO:0007062 {is_inferred="true"} ! light scattering assay evidence used in manual assertion
+is_a: ECO:0007062 {is_inferred="true"} ! light scattering evidence used in manual assertion
 is_a: ECO:0007065 ! static light scattering assay evidence
 intersection_of: ECO:0007065 ! static light scattering assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
@@ -17224,11 +18001,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007617
-name: light scattering assay evidence used in automatic assertion
-def: "A type of light scattering assay evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0007061 {is_inferred="true"} ! light scattering assay evidence
+name: light scattering evidence used in automatic assertion
+def: "A type of light scattering evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0007061 {is_inferred="true"} ! light scattering evidence
 is_a: ECO:0007815 {is_inferred="true"} ! structure determination evidence used in automatic assertion
-intersection_of: ECO:0007061 ! light scattering assay evidence
+intersection_of: ECO:0007061 ! light scattering evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -17238,7 +18015,7 @@ id: ECO:0007618
 name: dynamic light scattering assay evidence used in automatic assertion
 def: "A type of dynamic light scattering assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0007063 {is_inferred="true"} ! dynamic light scattering assay evidence
-is_a: ECO:0007617 {is_inferred="true"} ! light scattering assay evidence used in automatic assertion
+is_a: ECO:0007617 {is_inferred="true"} ! light scattering evidence used in automatic assertion
 intersection_of: ECO:0007063 ! dynamic light scattering assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
@@ -17249,7 +18026,7 @@ id: ECO:0007619
 name: static light scattering assay evidence used in automatic assertion
 def: "A type of static light scattering assay evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0007065 {is_inferred="true"} ! static light scattering assay evidence
-is_a: ECO:0007617 {is_inferred="true"} ! light scattering assay evidence used in automatic assertion
+is_a: ECO:0007617 {is_inferred="true"} ! light scattering evidence used in automatic assertion
 intersection_of: ECO:0007065 ! static light scattering assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 created_by: rctauber
