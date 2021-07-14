@@ -18,7 +18,7 @@ ECO was originally created around the year 2000 to support [Gene Ontology (GO)](
 
 **DEVELOPMENT INFORMATION**
 
-If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**. If you are new to ECO, please take a look at our **[Rules for New Term Requests](http://www.evidenceontology.org/userguide/#newtermrules)** on the ECO website or on the **[ECO GitHub wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**... and thanks! 
+If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**. If you are new to ECO, please take a look at our **[Rules for New Term Requests](https://evidenceontology.org/submit_term_request/)** on the ECO website or on the **[ECO GitHub wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**... and thanks! 
 
 *****When you contribute your knowledge to ECO, everyone benefits.*****
 
