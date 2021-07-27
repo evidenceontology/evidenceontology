@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/evidenceontology/evidenceontology/workflows/ECO%20Test/badge.svg)](https://github.com/evidenceontology/evidenceontology/actions)
+
 **_ECO is free for all to use without restriction: see **CC0** information below._**
 
 If you use ECO in your work, **please consider citing ECO**. We appreciate the attribution. 
