@@ -1,0 +1,10 @@
+# Ensure that the 'has GO evidence code' annotation is only used on assertion cross-products
+
+PREFIX ECO: <http://purl.obolibrary.org/obo/ECO_>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?s WHERE {
+	?s ECO:9000002 ?gocode .
+	FILTER NOT EXISTS { ?s rdfs:subClassOf* ECO:0000352 }
+	FILTER NOT EXISTS { ?s rdfs:subClassOf* ECO:0000501 }
+}

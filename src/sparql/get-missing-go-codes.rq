@@ -1,0 +1,11 @@
+PREFIX ECO: <http://purl.obolibrary.org/obo/ECO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?eco ?label WHERE {
+	?s rdfs:subClassOf* ECO:0000352 ;
+	   rdfs:label ?label ;
+	   oboInOwl:id ?eco .
+	FILTER NOT EXISTS { ?s ECO:9000002 ?go }
+}
+ORDER BY ?eco

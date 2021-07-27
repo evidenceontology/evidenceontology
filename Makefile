@@ -17,7 +17,7 @@ SPARQL = src/sparql/
 
 .PHONY: update
 update: modules imports
-all: report build mapping subsets
+all: report build mapping subsets build/missing-go-codes.tsv
 release: all
 
 # test is used for Travis integration
@@ -83,19 +83,28 @@ $(BUILD)report.tsv: $(EDIT) | $(BUILD)robot.jar
 	$(ROBOT) report --input $<\
 	 --output $@ --format tsv
 
+# run reasoner & dump unsat module on any problem
+
+build/eco-reasoned.owl: $(EDIT) | $(BUILD)robot.jar
+	$(ROBOT) merge --input $< \
+	reason \
+	 --reasoner hermit \
+	 --dump-unsatisfiable $(BUILD)unsatisfiable.owl \
+	 --output $@
+
 # verify is part of 'test' for Travis
 
 V_QUERIES := $(wildcard $(SPARQL)verify-*.rq)
 .PHONY: verify
-verify: | $(BUILD)robot.jar
-	$(ROBOT) verify --input $(EDIT)\
-	 --queries $(V_QUERIES) --output-dir $(BUILD)
+verify: build/eco-reasoned.owl | $(BUILD)robot.jar
+	$(ROBOT) verify --input $< \
+	 --queries $(V_QUERIES) \
+	 --output-dir $(BUILD)
 
-reason: $(EDIT) | $(BUILD)robot.jar
-	$(ROBOT) merge --input $< \
-	reason \
-	 --reasoner hermit \
-	 --dump-unsatisfiable $(BUILD)unsatisfiable.owl
+# a report of any "used in manual assertion" terms that do not have a GO evidence code
+
+build/missing-go-codes.tsv: build/eco-reasoned.owl $(SPARQL)get-missing-go-codes.rq | $(BUILD)robot.jar
+	$(ROBOT) query --input $< --query $(word 2,$^) $@
 
 # ----------------------------------------
 # MAIN
@@ -164,7 +173,7 @@ $(BUILD)gaf-eco-mapping-derived.txt: $(ECO).owl | $(BUILD)robot.jar
 	mv $@.tmp $@
 
 # append mappings to header
- gaf-eco-mapping-derived.txt: src/util/derived-header.txt build/gaf-eco-mapping-derived.txt
+gaf-eco-mapping-derived.txt: src/util/derived-header.txt build/gaf-eco-mapping-derived.txt
 	cat $^ > $@
 
 # ----------------------------------------

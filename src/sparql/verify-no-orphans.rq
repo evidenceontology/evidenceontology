@@ -6,6 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?s WHERE {
 	{?s a owl:Class .
+	 FILTER (?s != owl:Thing)
 	 FILTER NOT EXISTS {?s rdfs:subClassOf ?p}
 	 FILTER NOT EXISTS {?s owl:deprecated "true"^^xsd:boolean}
 	 FILTER NOT EXISTS {?s owl:equivalentClass ?e}
