@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: eco/2021-07-02/subsets/valid_with_biological_process.owl
+data-version: eco/2021-08-12/subsets/valid_with_biological_process.owl
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -22,6 +22,7 @@ subset: valid_with_molecular_function
 synonym: "IC" EXACT [GOECO:IC]
 synonym: "inferred by curator" EXACT [GOECO:IC]
 xref: GOECO:IC "inferred by curator"
+property_value: ECO:9000002 "IC" xsd:string {comment="Default"}
 property_value: seeAlso http://geneontology.org/page/ic-inferred-curator xsd:string
 created_by: mchibucos
 creation_date: 2011-01-20T02:33:32Z

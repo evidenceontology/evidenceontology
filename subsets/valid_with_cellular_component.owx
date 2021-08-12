@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.obolibrary.org/obo/eco/subsets/valid_with_cellular_component.owl"
-     versionIRI="http://purl.obolibrary.org/obo/eco/2021-07-02/subsets/valid_with_cellular_component.owl">
+     versionIRI="http://purl.obolibrary.org/obo/eco/2021-08-12/subsets/valid_with_cellular_component.owl">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -138,6 +138,15 @@
     <Declaration>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
     </Declaration>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Default</Literal>
+        </Annotation>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/ECO_9000002"/>
+        <IRI>http://purl.obolibrary.org/obo/ECO_0000305</IRI>
+        <Literal>IC</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
