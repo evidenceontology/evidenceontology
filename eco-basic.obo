@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2021-09-14/eco-basic.owl
-date: 14:09:2021 16:55
+data-version: eco/releases/2021-10-01/eco-basic.owl
+date: 01:10:2021 17:03
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -2483,7 +2483,6 @@ xref: GOECO:IMR "inferred from missing residues"
 is_a: ECO:0000216 ! phylogenetic determination of loss of key residues evidence
 is_a: ECO:0000252 ! similarity evidence used in manual assertion
 property_value: ECO:9000002 "IKR" xsd:string {comment="Default"}
-property_value: ECO:9000002 "IMR" xsd:string {comment="Default"}
 property_value: seeAlso http://geneontology.org/page/ikr-inferred-key-residues xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:25:48Z
@@ -10983,6 +10982,7 @@ def: "A type of analytical ultracentrifugation evidence that is used in a manual
 synonym: "AUC" EXACT []
 is_a: ECO:0000269 ! experimental evidence used in manual assertion
 is_a: ECO:0006247 ! analytical ultracentrifugation evidence
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -11003,6 +11003,7 @@ def: "A type of fluorescence polarization evidence that is used in a manual asse
 synonym: "FP" EXACT []
 is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 is_a: ECO:0006248 ! fluorescence polarization evidence
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -11039,6 +11040,7 @@ def: "A type of rotary shadowing electron microscopy evidence that is used in a 
 synonym: "RS-TEM" EXACT []
 is_a: ECO:0006003 ! electron microscopy evidence used in manual assertion
 is_a: ECO:0006250 ! rotary shadowing electron microscopy evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -11059,6 +11061,7 @@ def: "A type of electrospray ionization fourier transform ion cyclotron resonanc
 synonym: "ESI FT-ICR MS" EXACT []
 is_a: ECO:0001230 ! mass spectrometry evidence used in manual assertion
 is_a: ECO:0006251 ! electrospray ionization fourier transform ion cyclotron resonance mass spectrometry evidence
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -11099,6 +11102,7 @@ synonym: "EPR" EXACT []
 synonym: "ESR" EXACT []
 is_a: ECO:0006253 ! electron paramagnetic resonance evidence
 is_a: ECO:0006285 ! magnetic resonance evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11120,6 +11124,7 @@ def: "A type of site-directed spin-labelling electron paramagnetic resonance evi
 synonym: "SDSL" EXACT []
 is_a: ECO:0006254 ! site-directed spin-labelling electron paramagnetic resonance evidence
 is_a: ECO:0006287 ! electron paramagnetic resonance evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11139,6 +11144,7 @@ name: deglycosylation assay evidence used in manual assertion
 def: "A type of deglycosylation assay evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 is_a: ECO:0006255 ! deglycosylation assay evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11176,6 +11182,7 @@ name: beta galactosidase functional complementation evidence used in manual asse
 def: "A type of beta galactosidase functional complementation evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0006257 ! beta galactosidase functional complementation evidence
 is_a: ECO:0006293 ! protein fragment functional complementation evidence used in manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11194,6 +11201,7 @@ name: GAL4-VP16 functional complementation evidence used in manual assertion
 def: "A type of GAL4-VP16 functional complementation evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0006258 ! GAL4-VP16 functional complementation evidence
 is_a: ECO:0006293 ! protein fragment functional complementation evidence used in manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11214,6 +11222,7 @@ synonym: "Raman optical activity" EXACT []
 synonym: "ROA" EXACT []
 is_a: ECO:0001258 ! spectrophotometry evidence used in manual assertion
 is_a: ECO:0006259 ! Raman spectroscopy evidence
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11235,6 +11244,7 @@ name: protein thermal shift assay evidence used in manual assertion
 def: "A type of protein thermal shift assay evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0006230 ! heat capacity-based evidence used in manual assertion
 is_a: ECO:0006260 ! protein thermal shift assay evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11255,6 +11265,7 @@ synonym: "MST" EXACT []
 is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
 is_a: ECO:0006261 ! microscale thermophoresis evidence
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11280,6 +11291,7 @@ synonym: "native PAGE" NARROW []
 synonym: "QPNC-PAGE" NARROW []
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 is_a: ECO:0006262 ! native protein gel electrophoresis evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11303,6 +11315,7 @@ name: turbidity measurement evidence used in manual assertion
 def: "A type of turbidity measurement evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 is_a: ECO:0006263 ! turbidity measurement evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11322,6 +11335,7 @@ def: "A type of competitive binding evidence that is used in a manual assertion.
 synonym: "competition assay" EXACT []
 is_a: ECO:0006075 ! affinity evidence used in manual assertion
 is_a: ECO:0006264 ! competitive binding evidence
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11342,6 +11356,7 @@ def: "A type of protein unfolding evidence that is used in a manual assertion." 
 synonym: "protein denaturation assay" EXACT []
 is_a: ECO:0000269 ! experimental evidence used in manual assertion
 is_a: ECO:0006265 ! protein unfolding evidence
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11363,6 +11378,7 @@ synonym: "chemical denaturation" BROAD []
 synonym: "chemical unfolding" BROAD []
 is_a: ECO:0006266 ! urea-induced protein unfolding evidence
 is_a: ECO:0006311 ! protein unfolding evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11383,6 +11399,7 @@ name: pH-induced protein unfolding evidence used in manual assertion
 def: "A type of pH-induced protein unfolding evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0006267 ! pH-induced protein unfolding evidence
 is_a: ECO:0006311 ! protein unfolding evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11403,6 +11420,7 @@ synonym: "thermal dentauration" EXACT []
 synonym: "thermal unfolding" EXACT []
 is_a: ECO:0006268 ! temperature-induced protein unfolding evidence
 is_a: ECO:0006311 ! protein unfolding evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11423,6 +11441,7 @@ name: cell aggregation evidence used in manual assertion
 def: "A type of cell aggregation evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 is_a: ECO:0006269 ! cell aggregation evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11442,6 +11461,7 @@ def: "A type of RNA-protein binding evidence that is used in a manual assertion.
 is_a: ECO:0006076 ! protein binding evidence used in manual assertion
 is_a: ECO:0006083 ! nucleic acid binding evidence used in manual assertion
 is_a: ECO:0006270 ! RNA-protein binding evidence
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11462,6 +11482,7 @@ def: "A type of fluorescence microscopy evidence that is used in a manual assert
 is_a: ECO:0001232 ! microscopy evidence used in manual assertion
 is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
 is_a: ECO:0006271 ! fluorescence microscopy evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11482,6 +11503,7 @@ def: "A type of viscosity measurement evidence that is used in a manual assertio
 synonym: "viscometry" EXACT []
 is_a: ECO:0000314 ! direct assay evidence used in manual assertion
 is_a: ECO:0006272 ! viscosity measurement evidence
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11532,6 +11554,7 @@ synonym: "quenching" BROAD []
 is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
 is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
 is_a: ECO:0006274 ! static fluorescence quenching evidence
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -17058,6 +17081,7 @@ synonym: "high throughput mutant phenotype evidence used in automatic assertion"
 is_a: ECO:0006057 ! high throughput evidence used in automatic assertion
 is_a: ECO:0007000 ! high throughput mutant phenotypic evidence
 is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -17069,6 +17093,7 @@ synonym: "high throughput genetic interaction evidence used in automatic asserti
 is_a: ECO:0006057 ! high throughput evidence used in automatic assertion
 is_a: ECO:0007002 ! high throughput genetic interaction phenotypic evidence
 is_a: ECO:0007326 ! genetic interaction evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -17079,6 +17104,7 @@ def: "A type of high throughput direct assay evidence that is used in an automat
 is_a: ECO:0006057 ! high throughput evidence used in automatic assertion
 is_a: ECO:0007004 ! high throughput direct assay evidence
 is_a: ECO:0007307 ! direct assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -17089,6 +17115,7 @@ def: "A type of high throughput expression pattern evidence that is used in an a
 is_a: ECO:0006057 ! high throughput evidence used in automatic assertion
 is_a: ECO:0007006 ! high throughput expression pattern evidence
 is_a: ECO:0007298 ! expression pattern evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -17781,7 +17808,7 @@ xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mappi
 xref: GOECO:IEA "inferred from electronic annotation"
 is_a: ECO:0000501 ! evidence used in automatic assertion
 is_a: ECO:0007672 ! computational evidence
-property_value: ECO:9000002 "IEA" xsd:string {comment="default"}
+property_value: ECO:9000002 "IEA" xsd:string {comment="Default"}
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 

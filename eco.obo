@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2021-09-14
-date: 14:09:2021 16:55
+data-version: releases/2021-10-01
+date: 01:10:2021 17:03
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -2619,7 +2619,6 @@ is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual asse
 intersection_of: ECO:0000216 ! phylogenetic determination of loss of key residues evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IKR" xsd:string {comment="Default"}
-property_value: ECO:9000002 "IMR" xsd:string {comment="Default"}
 property_value: seeAlso http://geneontology.org/page/ikr-inferred-key-residues xsd:string
 created_by: mchibucos
 creation_date: 2011-10-28T05:25:48Z
@@ -11942,6 +11941,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 is_a: ECO:0006247 ! analytical ultracentrifugation evidence
 intersection_of: ECO:0006247 ! analytical ultracentrifugation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -11966,6 +11966,7 @@ is_a: ECO:0000353 {is_inferred="true"} ! physical interaction evidence used in m
 is_a: ECO:0006248 ! fluorescence polarization evidence
 intersection_of: ECO:0006248 ! fluorescence polarization evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -12006,6 +12007,7 @@ is_a: ECO:0006003 {is_inferred="true"} ! electron microscopy evidence used in ma
 is_a: ECO:0006250 ! rotary shadowing electron microscopy evidence
 intersection_of: ECO:0006250 ! rotary shadowing electron microscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -12030,6 +12032,7 @@ is_a: ECO:0001230 {is_inferred="true"} ! mass spectrometry evidence used in manu
 is_a: ECO:0006251 ! electrospray ionization fourier transform ion cyclotron resonance mass spectrometry evidence
 intersection_of: ECO:0006251 ! electrospray ionization fourier transform ion cyclotron resonance mass spectrometry evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 created_by: snadendla
 
@@ -12078,6 +12081,7 @@ is_a: ECO:0006253 ! electron paramagnetic resonance evidence
 is_a: ECO:0006285 {is_inferred="true"} ! magnetic resonance evidence used in manual assertion
 intersection_of: ECO:0006253 ! electron paramagnetic resonance evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12103,6 +12107,7 @@ is_a: ECO:0006254 ! site-directed spin-labelling electron paramagnetic resonance
 is_a: ECO:0006287 {is_inferred="true"} ! electron paramagnetic resonance evidence used in manual assertion
 intersection_of: ECO:0006254 ! site-directed spin-labelling electron paramagnetic resonance evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12126,6 +12131,7 @@ is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual as
 is_a: ECO:0006255 ! deglycosylation assay evidence
 intersection_of: ECO:0006255 ! deglycosylation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12171,6 +12177,7 @@ is_a: ECO:0006257 ! beta galactosidase functional complementation evidence
 is_a: ECO:0006293 {is_inferred="true"} ! protein fragment functional complementation evidence used in manual assertion
 intersection_of: ECO:0006257 ! beta galactosidase functional complementation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12193,6 +12200,7 @@ is_a: ECO:0006258 ! GAL4-VP16 functional complementation evidence
 is_a: ECO:0006293 {is_inferred="true"} ! protein fragment functional complementation evidence used in manual assertion
 intersection_of: ECO:0006258 ! GAL4-VP16 functional complementation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12217,6 +12225,7 @@ is_a: ECO:0001258 {is_inferred="true"} ! spectrophotometry evidence used in manu
 is_a: ECO:0006259 ! Raman spectroscopy evidence
 intersection_of: ECO:0006259 ! Raman spectroscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12242,6 +12251,7 @@ is_a: ECO:0006230 {is_inferred="true"} ! heat capacity-based evidence used in ma
 is_a: ECO:0006260 ! protein thermal shift assay evidence
 intersection_of: ECO:0006260 ! protein thermal shift assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12266,6 +12276,7 @@ is_a: ECO:0001249 {is_inferred="true"} ! fluorescence evidence used in manual as
 is_a: ECO:0006261 ! microscale thermophoresis evidence
 intersection_of: ECO:0006261 ! microscale thermophoresis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12295,6 +12306,7 @@ is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual as
 is_a: ECO:0006262 ! native protein gel electrophoresis evidence
 intersection_of: ECO:0006262 ! native protein gel electrophoresis evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12322,6 +12334,7 @@ is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual as
 is_a: ECO:0006263 ! turbidity measurement evidence
 intersection_of: ECO:0006263 ! turbidity measurement evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12345,6 +12358,7 @@ is_a: ECO:0006075 {is_inferred="true"} ! affinity evidence used in manual assert
 is_a: ECO:0006264 ! competitive binding evidence
 intersection_of: ECO:0006264 ! competitive binding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12369,6 +12383,7 @@ is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual as
 is_a: ECO:0006265 ! protein unfolding evidence
 intersection_of: ECO:0006265 ! protein unfolding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12394,6 +12409,7 @@ is_a: ECO:0006266 ! urea-induced protein unfolding evidence
 is_a: ECO:0006311 {is_inferred="true"} ! protein unfolding evidence used in manual assertion
 intersection_of: ECO:0006266 ! urea-induced protein unfolding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12418,6 +12434,7 @@ is_a: ECO:0006267 ! pH-induced protein unfolding evidence
 is_a: ECO:0006311 {is_inferred="true"} ! protein unfolding evidence used in manual assertion
 intersection_of: ECO:0006267 ! pH-induced protein unfolding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12442,6 +12459,7 @@ is_a: ECO:0006268 ! temperature-induced protein unfolding evidence
 is_a: ECO:0006311 {is_inferred="true"} ! protein unfolding evidence used in manual assertion
 intersection_of: ECO:0006268 ! temperature-induced protein unfolding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12466,6 +12484,7 @@ is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual as
 is_a: ECO:0006269 ! cell aggregation evidence
 intersection_of: ECO:0006269 ! cell aggregation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12489,6 +12508,7 @@ is_a: ECO:0006083 {is_inferred="true"} ! nucleic acid binding evidence used in m
 is_a: ECO:0006270 ! RNA-protein binding evidence
 intersection_of: ECO:0006270 ! RNA-protein binding evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12513,6 +12533,7 @@ is_a: ECO:0001249 {is_inferred="true"} ! fluorescence evidence used in manual as
 is_a: ECO:0006271 ! fluorescence microscopy evidence
 intersection_of: ECO:0006271 ! fluorescence microscopy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12537,6 +12558,7 @@ is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual as
 is_a: ECO:0006272 ! viscosity measurement evidence
 intersection_of: ECO:0006272 ! viscosity measurement evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -12595,6 +12617,7 @@ is_a: ECO:0001249 {is_inferred="true"} ! fluorescence evidence used in manual as
 is_a: ECO:0006274 ! static fluorescence quenching evidence
 intersection_of: ECO:0006274 ! static fluorescence quenching evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -19171,6 +19194,7 @@ is_a: ECO:0007000 {is_inferred="true"} ! high throughput mutant phenotypic evide
 is_a: ECO:0007325 {is_inferred="true"} ! mutant phenotype evidence used in automatic assertion
 intersection_of: ECO:0007000 ! high throughput mutant phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -19184,6 +19208,7 @@ is_a: ECO:0007002 {is_inferred="true"} ! high throughput genetic interaction phe
 is_a: ECO:0007326 {is_inferred="true"} ! genetic interaction evidence used in automatic assertion
 intersection_of: ECO:0007002 ! high throughput genetic interaction phenotypic evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -19196,6 +19221,7 @@ is_a: ECO:0007004 {is_inferred="true"} ! high throughput direct assay evidence
 is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
 intersection_of: ECO:0007004 ! high throughput direct assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -19208,6 +19234,7 @@ is_a: ECO:0007006 {is_inferred="true"} ! high throughput expression pattern evid
 is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0007006 ! high throughput expression pattern evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -20037,7 +20064,7 @@ is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 is_a: ECO:0007672 {is_inferred="true"} ! computational evidence
 intersection_of: ECO:0007672 ! computational evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
-property_value: ECO:9000002 "IEA" xsd:string {comment="default"}
+property_value: ECO:9000002 "IEA" xsd:string {comment="Default"}
 created_by: rctauber
 creation_date: 2018-12-04T19:31:00Z
 

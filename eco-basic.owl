@@ -12,11 +12,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/eco-basic.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2021-09-14/eco-basic.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2021-10-01/eco-basic.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:09:2021 16:55</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01:10:2021 17:03</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
     </owl:Ontology>
@@ -6802,7 +6802,6 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000216"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000252"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKR</obo:ECO_9000002>
-        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMR</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of phylogenetic determination of loss of key residues evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-28T05:25:48Z</oboInOwl:creation_date>
@@ -6821,12 +6820,6 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000320"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000002"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKR</owl:annotatedTarget>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000320"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000002"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMR</owl:annotatedTarget>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
@@ -25882,6 +25875,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006275">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006247"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of analytical ultracentrifugation evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:FedericaQuaglia</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -25926,6 +25920,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006277">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006248"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of fluorescence polarization evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:FedericaQuaglia</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26012,6 +26007,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006281">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006250"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of rotary shadowing electron microscopy evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:FedericaQuaglia</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26056,6 +26052,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006283">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001230"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006251"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electrospray ionization fourier transform ion cyclotron resonance mass spectrometry evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:FedericaQuaglia</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26143,6 +26140,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006287">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006253"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006285"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of electron paramagnetic resonance evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26189,6 +26187,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006289">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006254"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006287"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of site-directed spin-labelling electron paramagnetic resonance evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26233,6 +26232,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006291">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006255"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of deglycosylation assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26318,6 +26318,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006295">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006257"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006293"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of beta galactosidase functional complementation evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26360,6 +26361,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006297">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006258"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006293"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of GAL4-VP16 functional complementation evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26402,6 +26404,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006299">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001258"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006259"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of Raman spectroscopy evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26449,6 +26452,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006301">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006230"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006260"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein thermal shift assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26492,6 +26496,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001249"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006261"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of microscale thermophoresis evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26537,6 +26542,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006305">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006262"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of native protein gel electrophoresis evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26589,6 +26595,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006307">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006263"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of turbidity measurement evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26631,6 +26638,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006309">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006075"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006264"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of competitive binding evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26675,6 +26683,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006311">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006265"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein unfolding evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26719,6 +26728,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006313">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006266"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006311"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of urea-induced protein unfolding evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26765,6 +26775,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006315">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006267"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006311"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of pH-induced protein unfolding evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26807,6 +26818,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006317">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006268"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006311"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of temperature-induced protein unfolding evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26853,6 +26865,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006319">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006269"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of cell aggregation evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26896,6 +26909,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006076"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006083"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006270"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of RNA-protein binding evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26940,6 +26954,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001232"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001249"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006271"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of fluorescence microscopy evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -26983,6 +26998,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006325">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006272"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of viscosity measurement evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -27081,6 +27097,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001249"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006274"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPI</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of static fluorescence quenching evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisProt:BalintMeszaros</obo:IAO_0000234>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
@@ -39532,6 +39549,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007325"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of high throughput mutant phenotypic evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
@@ -39555,6 +39573,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007326"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of high throughput genetic interaction phenotypic evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
@@ -39578,6 +39597,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007307"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of high throughput direct assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
@@ -39600,6 +39620,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007006"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007298"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of high throughput expression pattern evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
@@ -41257,7 +41278,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007669"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000002"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</owl:annotatedTarget>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Default</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007669"/>
