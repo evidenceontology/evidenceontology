@@ -5303,7 +5303,6 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0000319 O
 # Class: obo:ECO_0000320 (phylogenetic determination of loss of key residues evidence used in manual assertion)
 
 AnnotationAssertion(Annotation(rdfs:comment "Default"^^xsd:string) obo:ECO_9000002 obo:ECO_0000320 "IKR"^^xsd:string)
-AnnotationAssertion(Annotation(rdfs:comment "Default"^^xsd:string) obo:ECO_9000002 obo:ECO_0000320 "IMR"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) obo:IAO_0000115 obo:ECO_0000320 "A type of phylogenetic determination of loss of key residues evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000320 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000320 "2011-10-28T05:25:48Z"^^xsd:string)
@@ -15849,6 +15848,7 @@ SubClassOf(obo:ECO_0006274 obo:ECO_0001115)
 
 # Class: obo:ECO_0006275 (analytical ultracentrifugation evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006275 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006275 "A type of analytical ultracentrifugation evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006275 "DisProt:FedericaQuaglia"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006275 "snadendla"^^xsd:string)
@@ -15875,6 +15875,7 @@ SubClassOf(obo:ECO_0006276 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006277 (fluorescence polarization evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006277 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006277 "A type of fluorescence polarization evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006277 "DisProt:FedericaQuaglia"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006277 "snadendla"^^xsd:string)
@@ -15921,6 +15922,7 @@ AnnotationAssertion(owl:deprecated obo:ECO_0006280 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0006281 (rotary shadowing electron microscopy evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006281 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006281 "A type of rotary shadowing electron microscopy evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006281 "DisProt:FedericaQuaglia"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006281 "snadendla"^^xsd:string)
@@ -15947,6 +15949,7 @@ SubClassOf(obo:ECO_0006282 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006283 (electrospray ionization fourier transform ion cyclotron resonance mass spectrometry evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006283 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006283 "A type of electrospray ionization fourier transform ion cyclotron resonance mass spectrometry evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006283 "DisProt:FedericaQuaglia"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006283 "snadendla"^^xsd:string)
@@ -15998,6 +16001,7 @@ SubClassOf(obo:ECO_0006286 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006287 (electron paramagnetic resonance evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006287 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006287 "A type of electron paramagnetic resonance evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006287 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006287 "snadendla"^^xsd:string)
@@ -16026,6 +16030,7 @@ SubClassOf(obo:ECO_0006288 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006289 (site-directed spin-labelling electron paramagnetic resonance evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006289 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006289 "A type of site-directed spin-labelling electron paramagnetic resonance evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006289 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006289 "snadendla"^^xsd:string)
@@ -16052,6 +16057,7 @@ SubClassOf(obo:ECO_0006290 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006291 (deglycosylation assay evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006291 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006291 "A type of deglycosylation assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006291 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006291 "snadendla"^^xsd:string)
@@ -16101,6 +16107,7 @@ SubClassOf(obo:ECO_0006294 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006295 (beta galactosidase functional complementation evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006295 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006295 "A type of beta galactosidase functional complementation evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006295 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006295 "snadendla"^^xsd:string)
@@ -16125,6 +16132,7 @@ SubClassOf(obo:ECO_0006296 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006297 (GAL4-VP16 functional complementation evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006297 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006297 "A type of GAL4-VP16 functional complementation evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006297 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006297 "snadendla"^^xsd:string)
@@ -16149,6 +16157,7 @@ SubClassOf(obo:ECO_0006298 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006299 (Raman spectroscopy evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006299 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006299 "A type of Raman spectroscopy evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006299 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006299 "snadendla"^^xsd:string)
@@ -16177,6 +16186,7 @@ SubClassOf(obo:ECO_0006300 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006301 (protein thermal shift assay evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006301 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006301 "A type of protein thermal shift assay evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006301 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006301 "snadendla"^^xsd:string)
@@ -16201,6 +16211,7 @@ SubClassOf(obo:ECO_0006302 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006303 (microscale thermophoresis evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006303 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006303 "A type of microscale thermophoresis evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006303 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006303 "snadendla"^^xsd:string)
@@ -16227,6 +16238,7 @@ SubClassOf(obo:ECO_0006304 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006305 (native protein gel electrophoresis evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006305 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006305 "A type of native protein gel electrophoresis evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006305 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006305 "snadendla"^^xsd:string)
@@ -16261,6 +16273,7 @@ SubClassOf(obo:ECO_0006306 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006307 (turbidity measurement evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006307 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006307 "A type of turbidity measurement evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006307 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006307 "snadendla"^^xsd:string)
@@ -16285,6 +16298,7 @@ SubClassOf(obo:ECO_0006308 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006309 (competitive binding evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006309 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006309 "A type of competitive binding evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006309 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006309 "snadendla"^^xsd:string)
@@ -16311,6 +16325,7 @@ SubClassOf(obo:ECO_0006310 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006311 (protein unfolding evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006311 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006311 "A type of protein unfolding evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006311 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006311 "snadendla"^^xsd:string)
@@ -16337,6 +16352,7 @@ SubClassOf(obo:ECO_0006312 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006313 (urea-induced protein unfolding evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006313 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006313 "A type of urea-induced protein unfolding evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006313 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006313 "snadendla"^^xsd:string)
@@ -16365,6 +16381,7 @@ SubClassOf(obo:ECO_0006314 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006315 (pH-induced protein unfolding evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006315 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006315 "A type of pH-induced protein unfolding evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006315 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006315 "snadendla"^^xsd:string)
@@ -16389,6 +16406,7 @@ SubClassOf(obo:ECO_0006316 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006317 (temperature-induced protein unfolding evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006317 "EXP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006317 "A type of temperature-induced protein unfolding evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006317 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006317 "snadendla"^^xsd:string)
@@ -16417,6 +16435,7 @@ SubClassOf(obo:ECO_0006318 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006319 (cell aggregation evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006319 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006319 "A type of cell aggregation evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006319 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006319 "snadendla"^^xsd:string)
@@ -16441,6 +16460,7 @@ SubClassOf(obo:ECO_0006320 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006321 (RNA-protein binding evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006321 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006321 "A type of RNA-protein binding evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006321 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006321 "snadendla"^^xsd:string)
@@ -16465,6 +16485,7 @@ SubClassOf(obo:ECO_0006322 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006323 (fluorescence microscopy evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006323 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006323 "A type of fluorescence microscopy evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006323 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006323 "snadendla"^^xsd:string)
@@ -16489,6 +16510,7 @@ SubClassOf(obo:ECO_0006324 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006325 (viscosity measurement evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006325 "IDA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006325 "A type of viscosity measurement evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006325 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006325 "snadendla"^^xsd:string)
@@ -16548,6 +16570,7 @@ SubClassOf(obo:ECO_0006328 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)
 
 # Class: obo:ECO_0006329 (static fluorescence quenching evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006329 "IPI"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006329 "A type of static fluorescence quenching evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006329 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006329 "snadendla"^^xsd:string)
@@ -22703,6 +22726,7 @@ EquivalentClasses(obo:ECO_0007586 ObjectIntersectionOf(obo:ECO_0006100 ObjectSom
 
 # Class: obo:ECO_0007587 (high throughput mutant phenotypic evidence used in automatic assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0007587 "IEA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007587 "A type of high throughput mutant phenotypic evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007587 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007587 "2018-05-14T09:47:55Z"^^xsd:string)
@@ -22714,6 +22738,7 @@ EquivalentClasses(obo:ECO_0007587 ObjectIntersectionOf(obo:ECO_0007000 ObjectSom
 
 # Class: obo:ECO_0007588 (high throughput genetic interaction phenotypic evidence used in automatic assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0007588 "IEA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007588 "A type of high throughput genetic interaction phenotypic evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007588 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007588 "2018-05-14T09:47:55Z"^^xsd:string)
@@ -22725,6 +22750,7 @@ EquivalentClasses(obo:ECO_0007588 ObjectIntersectionOf(obo:ECO_0007002 ObjectSom
 
 # Class: obo:ECO_0007589 (high throughput direct assay evidence used in automatic assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0007589 "IEA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007589 "A type of high throughput direct assay evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007589 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007589 "2018-05-14T09:47:55Z"^^xsd:string)
@@ -22735,6 +22761,7 @@ EquivalentClasses(obo:ECO_0007589 ObjectIntersectionOf(obo:ECO_0007004 ObjectSom
 
 # Class: obo:ECO_0007590 (high throughput expression pattern evidence used in automatic assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0007590 "IEA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007590 "A type of high throughput expression pattern evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007590 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007590 "2018-05-14T09:47:55Z"^^xsd:string)
@@ -23521,7 +23548,7 @@ EquivalentClasses(obo:ECO_0007668 ObjectIntersectionOf(obo:ECO_0007672 ObjectSom
 
 # Class: obo:ECO_0007669 (computational evidence used in automatic assertion)
 
-AnnotationAssertion(Annotation(rdfs:comment "default"^^xsd:string) obo:ECO_9000002 obo:ECO_0007669 "IEA"^^xsd:string)
+AnnotationAssertion(Annotation(rdfs:comment "Default"^^xsd:string) obo:ECO_9000002 obo:ECO_0007669 "IEA"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:RCT"^^xsd:string) obo:IAO_0000115 obo:ECO_0007669 "A type of computational evidence that is used in an automatic assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007669 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007669 "2018-12-04T19:31:00Z"^^xsd:string)
