@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2021-10-01
-date: 01:10:2021 17:03
+data-version: releases/2021-10-08
+date: 08:10:2021 13:56
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -1683,6 +1683,7 @@ creation_date: 2010-12-09T05:12:27Z
 id: ECO:0000249
 name: sequence similarity evidence used in automatic assertion
 def: "A type of sequence similarity evidence that is used in an automatic assertion." [ECO:RCT]
+xref: GO_REF:0000107 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl"
 is_a: ECO:0000044 ! sequence similarity evidence
 is_a: ECO:0000251 {is_inferred="true"} ! similarity evidence used in automatic assertion
 is_a: ECO:0007669 {is_inferred="true"} ! computational evidence used in automatic assertion
@@ -1789,7 +1790,6 @@ id: ECO:0000256
 name: match to sequence model evidence used in automatic assertion
 def: "A type of match to sequence model evidence that is used in an automatic assertion." [ECO:RCT]
 xref: GO_REF:0000002 "Gene Ontology annotation through association of InterPro records with GO terms."
-xref: GO_REF:0000107 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl"
 is_a: ECO:0000202 ! match to sequence model evidence
 is_a: ECO:0000249 {is_inferred="true"} ! sequence similarity evidence used in automatic assertion
 intersection_of: ECO:0000202 ! match to sequence model evidence
@@ -1906,10 +1906,7 @@ name: sequence orthology evidence used in automatic assertion
 def: "A type of sequence orthology evidence that is used in an automatic assertion." [ECO:RCT]
 synonym: "Ortholog evidence" RELATED []
 synonym: "ortholog evidence" RELATED []
-xref: GO_REF:0000019 "Automatic transfer of experimentally verified manual GO annotation data to orthologs using Ensembl Compara"
-xref: GO_REF:0000020 "Electronic Gene Ontology annotations created by transferring manual GO annotations between orthologous microbial proteins."
 xref: GO_REF:0000035 "Automatic transfer of experimentally verified manual GO annotation data to plant orthologs using Ensembl Compara"
-xref: GO_REF:0000049 "Automatic transfer of experimentally verified manual GO annotation data to fungal orthologs using Ensembl Compara"
 is_a: ECO:0000201 ! sequence orthology evidence
 is_a: ECO:0000249 {is_inferred="true"} ! sequence similarity evidence used in automatic assertion
 intersection_of: ECO:0000201 ! sequence orthology evidence
@@ -2645,9 +2642,6 @@ creation_date: 2011-10-28T05:26:42Z
 id: ECO:0000322
 name: imported manually asserted information used in automatic assertion
 def: "Evidence that was initially used in manual assertion by one person or group, which is imported by a second person or group and used in automatic assertion." [ECO:MCC]
-xref: GO_REF:0000037 "Gene Ontology annotation based on manual assignment of UniProtKB keywords in UniProtKB/Swiss-Prot entries."
-xref: GO_REF:0000039 "Gene Ontology annotation based on the manual assignment of UniProtKB Subcellular Location terms in UniProtKB/Swiss-Prot entries."
-xref: GO_REF:0000041 "IEA (UniProt UniPathway)"
 is_a: ECO:0000313 ! imported information used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: mchibucos
@@ -2657,8 +2651,6 @@ creation_date: 2011-12-13T12:04:48Z
 id: ECO:0000323
 name: imported automatically asserted information used in automatic assertion
 def: "A type of imported information used in automatic assertion that was initially used in automatic assertion by one person or group, which is imported by a second person or group and used in automatic assertion." [ECO:MCC]
-xref: GO_REF:0000038 "Gene Ontology annotation based on automatic assignment of UniProtKB keywords in UniProtKB/TrEMBL entries."
-xref: GO_REF:0000040 "Gene Ontology annotation based on the automatic assignment of UniProtKB Subcellular Location terms in UniProtKB/TrEMBL entries."
 is_a: ECO:0000313 ! imported information used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: mchibucos
@@ -20059,6 +20051,11 @@ synonym: "IEA" EXACT []
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
 xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
 xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
+xref: GO_REF:0000020 "Electronic Gene Ontology annotations created by transferring manual GO annotations between orthologous microbial proteins."
+xref: GO_REF:0000041 "IEA (UniProt UniPathway)"
+xref: GO_REF:0000043 "Gene Ontology annotation based on UniProtKB/Swiss-Prot keyword mapping."
+xref: GO_REF:0000044 "Gene Ontology annotation based on UniProtKB/Swiss-Prot Subcellular Location vocabulary mapping, accompanied by conservative changes to GO terms applied by UniProt."
+xref: GO_REF:0000116 "Automatic Gene Ontology annotation based on Rhea mapping."
 xref: GOECO:IEA "inferred from electronic annotation"
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 is_a: ECO:0007672 {is_inferred="true"} ! computational evidence
