@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: eco/2021-10-08/subsets/valid_with_protein.owl
+data-version: eco/2021-10-20/subsets/valid_with_protein.owl
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -197,7 +197,17 @@ def: "A type of evidence that is used in an automatic assertion." [ECO:cjm]
 subset: valid_with_gene
 subset: valid_with_protein
 subset: valid_with_protein_complex
-property_value: ECO:9000002 "IEA" xsd:string
+synonym: "IEA" EXACT [GOECO:IEA]
+synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
+xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
+xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
+xref: GO_REF:0000020 "Electronic Gene Ontology annotations created by transferring manual GO annotations between orthologous microbial proteins."
+xref: GO_REF:0000041 "IEA (UniProt UniPathway)"
+xref: GO_REF:0000043 "Gene Ontology annotation based on UniProtKB/Swiss-Prot keyword mapping."
+xref: GO_REF:0000044 "Gene Ontology annotation based on UniProtKB/Swiss-Prot Subcellular Location vocabulary mapping, accompanied by conservative changes to GO terms applied by UniProt."
+xref: GO_REF:0000116 "Automatic Gene Ontology annotation based on Rhea mapping."
+xref: GOECO:IEA "inferred from electronic annotation"
+property_value: ECO:9000002 "IEA" xsd:string {comment="Default"}
 property_value: seeAlso http://geneontology.org/page/automatically-assigned-evidence-codes xsd:string
 created_by: cjm
 
