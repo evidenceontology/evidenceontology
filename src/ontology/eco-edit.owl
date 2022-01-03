@@ -3080,7 +3080,7 @@ SubClassOf(obo:ECO_0000087 obo:ECO_0005593)
 
 # Class: obo:ECO_0000088 (biological system reconstruction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GOC:mg"^^xsd:string) obo:IAO_0000115 obo:ECO_0000088 "A type of evidence that is based on a combination of experimental evidences or existing models of that system in a related species used for the reconstruction of a biological system."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MCC"^^xsd:string) Annotation(oboInOwl:hasDbXref "GOC:mg"^^xsd:string) obo:IAO_0000115 obo:ECO_0000088 "A type of curator inference that is based on a combination of experimental evidences or existing models of that system in a related species used for the reconstruction of a biological system."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0000088 "mgiglio"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0000088 "2009-03-20T12:00:17Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0000088 "eco"^^xsd:string)
@@ -3089,7 +3089,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0000088 "inferred from sy
 AnnotationAssertion(oboInOwl:id obo:ECO_0000088 "ECO:0000088"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:ECO_0000088 "The biological system in question might be a multi-step process or pathway or a physical complex comprising several components. The components in the experimental evidence can come from the same species or a mix of species. The experimental evidences may be only partial or weak."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0000088 "biological system reconstruction evidence"^^xsd:string)
-SubClassOf(obo:ECO_0000088 obo:ECO_0000000)
+SubClassOf(obo:ECO_0000088 obo:ECO_0000205)
 
 # Class: obo:ECO_0000089 (restriction landmark genomic scanning evidence)
 
@@ -11185,6 +11185,7 @@ AnnotationAssertion(owl:deprecated obo:ECO_0005541 "true"^^xsd:boolean)
 
 # Class: obo:ECO_0005542 (biological system reconstruction evidence by experimental evidence from single species used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005542 "IC"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:19450514"^^xsd:string) obo:IAO_0000115 obo:ECO_0005542 "A type of biological system reconstruction evidence by experimental evidence from single species that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005542 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005542 "2015-12-16T15:32:41Z"^^xsd:string)
@@ -11198,6 +11199,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005542 O
 
 # Class: obo:ECO_0005543 (biological system reconstruction evidence by experimental evidence from mixed species used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005543 "IC"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:22232657"^^xsd:string) obo:IAO_0000115 obo:ECO_0005543 "A type of biological system reconstruction evidence by experimental evidence from mixed species that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005543 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005543 "2015-12-16T15:45:01Z"^^xsd:string)
@@ -11211,6 +11213,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005543 O
 
 # Class: obo:ECO_0005544 (biological system reconstruction evidence based on orthology evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005544 "IC"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005544 "A type of biological system reconstruction evidence based on orthology evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005544 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005544 "2015-12-18T16:20:49Z"^^xsd:string)
@@ -11236,6 +11239,7 @@ SubClassOf(obo:ECO_0005545 obo:ECO_0005549)
 
 # Class: obo:ECO_0005546 (biological system reconstruction evidence based on paralogy evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005546 "IC"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:15660128"^^xsd:string) obo:IAO_0000115 obo:ECO_0005546 "A type of  biological system reconstruction evidence based on paralogy evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005546 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005546 "2015-12-16T16:05:15Z"^^xsd:string)
@@ -11250,6 +11254,7 @@ SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005546 O
 
 # Class: obo:ECO_0005547 (biological system reconstruction evidence based on inference from background scientific knowledge used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005547 "IC"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) Annotation(oboInOwl:hasDbXref "PMID:17876790"^^xsd:string) obo:IAO_0000115 obo:ECO_0005547 "A type of biological system reconstruction evidence based on inference from background scientific knowledge that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005547 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005547 "2015-12-16T16:07:42Z"^^xsd:string)
@@ -11954,6 +11959,7 @@ SubClassOf(obo:ECO_0005609 obo:ECO_0005021)
 
 # Class: obo:ECO_0005610 (biological system reconstruction evidence based on homology evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005610 "IC"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005610 "A type of biological system reconstruction evidence based on homology evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005610 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005610 "2016-03-31T17:00:03Z"^^xsd:string)
@@ -20241,6 +20247,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007322 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007322 "ECO:0007322"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007322 "curator inference used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007322 ObjectIntersectionOf(obo:ECO_0000205 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007322 obo:ECO_0000205)
+SubClassOf(obo:ECO_0007322 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007323 (inference from background scientific knowledge used in automatic assertion)
 
@@ -24860,6 +24868,7 @@ SubClassOf(obo:ECO_0007745 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0007746 (biological system reconstruction evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0007746 "IC"^^xsd:string)
 AnnotationAssertion(obo:IAO_0000115 obo:ECO_0007746 "A type of biological system reconstruction evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007746 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007746 "2019-03-20T12:27:00Z"^^xsd:string)
@@ -24872,6 +24881,7 @@ SubClassOf(obo:ECO_0007746 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0007747 (biological system reconstruction evidence by experimental evidence used in manual assertion)
 
+AnnotationAssertion(obo:ECO_9000002 obo:ECO_0007747 "IC"^^xsd:string)
 AnnotationAssertion(obo:IAO_0000115 obo:ECO_0007747 "A type of biological system reconstruction evidence by experimental evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007747 "rctauber"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007747 "2019-03-20T12:27:00Z"^^xsd:string)
@@ -24925,6 +24935,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007751 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007751 "ECO:0007751"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007751 "inferential evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007751 ObjectIntersectionOf(obo:ECO_0000361 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007751 obo:ECO_0000361)
+SubClassOf(obo:ECO_0007751 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007752 (curator inference from authoritative source used in manual assertion)
 
@@ -25794,6 +25806,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007832 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007832 "ECO:0007832"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007832 "inferential evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007832 ObjectIntersectionOf(obo:ECO_0000361 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007832 obo:ECO_0000361)
+SubClassOf(obo:ECO_0007832 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007833 (curator inference from authoritative source used in automatic assertion)
 
