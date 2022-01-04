@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2021-12-03
-date: 20:10:2021 16:02
+data-version: releases/2022-01-04
+date: 04:01:2022 10:48
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -677,11 +677,11 @@ is_a: ECO:0005593 ! immunodetection assay evidence
 [Term]
 id: ECO:0000088
 name: biological system reconstruction evidence
-def: "A type of evidence that is based on a combination of experimental evidences or existing models of that system in a related species used for the reconstruction of a biological system." [ECO:MCC, GOC:mg]
+def: "A type of curator inference that is based on a combination of experimental evidences or existing models of that system in a related species used for the reconstruction of a biological system." [ECO:MCC, GOC:mg]
 comment: The biological system in question might be a multi-step process or pathway or a physical complex comprising several components. The components in the experimental evidence can come from the same species or a mix of species. The experimental evidences may be only partial or weak.
 synonym: "inferred from system reconstruction" RELATED []
 synonym: "ISR" RELATED []
-is_a: ECO:0000000 ! evidence
+is_a: ECO:0000205 ! curator inference
 created_by: mgiglio
 creation_date: 2009-03-20T12:00:17Z
 
@@ -7787,10 +7787,11 @@ id: ECO:0005542
 name: biological system reconstruction evidence by experimental evidence from single species used in manual assertion
 def: "A type of biological system reconstruction evidence by experimental evidence from single species that is used in a manual assertion." [ECO:SN, PMID:19450514]
 comment: Processes, pathways and complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
+is_a: ECO:0007747 {is_inferred="true"} ! biological system reconstruction evidence by experimental evidence used in manual assertion
 intersection_of: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T15:32:41Z
 
@@ -7799,10 +7800,11 @@ id: ECO:0005543
 name: biological system reconstruction evidence by experimental evidence from mixed species used in manual assertion
 def: "A type of biological system reconstruction evidence by experimental evidence from mixed species that is used in a manual assertion." [ECO:SN, PMID:22232657]
 comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. The evidence may originate from a combination of several experiments.
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005552 ! biological system reconstruction evidence by experimental evidence from mixed species
+is_a: ECO:0007747 {is_inferred="true"} ! biological system reconstruction evidence by experimental evidence used in manual assertion
 intersection_of: ECO:0005552 ! biological system reconstruction evidence by experimental evidence from mixed species
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T15:45:01Z
 
@@ -7815,6 +7817,7 @@ is_a: ECO:0005545 ! biological system reconstruction evidence based on orthology
 is_a: ECO:0005610 ! biological system reconstruction evidence based on homology evidence used in manual assertion
 intersection_of: ECO:0005545 ! biological system reconstruction evidence based on orthology evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: snadendla
 creation_date: 2015-12-18T16:20:49Z
 
@@ -7836,6 +7839,7 @@ is_a: ECO:0005550 ! biological system reconstruction evidence based on paralogy 
 is_a: ECO:0005610 ! biological system reconstruction evidence based on homology evidence used in manual assertion
 intersection_of: ECO:0005550 ! biological system reconstruction evidence based on paralogy evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T16:05:15Z
 
@@ -7844,10 +7848,11 @@ id: ECO:0005547
 name: biological system reconstruction evidence based on inference from background scientific knowledge used in manual assertion
 def: "A type of biological system reconstruction evidence based on inference from background scientific knowledge that is used in a manual assertion." [ECO:SN, PMID:17876790]
 comment: Functional studies or ligand binding evidence are often used for the reconstruction of biological systems. It does not provide physical interaction evidence but uses proxies such a ligand binding evidences to infer the presence or absence of the complex components.
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
+is_a: ECO:0007746 {is_inferred="true"} ! biological system reconstruction evidence used in manual assertion
 intersection_of: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T16:07:42Z
 
@@ -8443,10 +8448,11 @@ id: ECO:0005610
 name: biological system reconstruction evidence based on homology evidence used in manual assertion
 def: "A type of biological system reconstruction evidence based on homology evidence that is used in a manual assertion." [ECO:SN]
 comment: Inference may be based on paralogy and/or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
+is_a: ECO:0007746 {is_inferred="true"} ! biological system reconstruction evidence used in manual assertion
 intersection_of: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: snadendla
 creation_date: 2016-03-31T17:00:03Z
 
@@ -16423,7 +16429,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007322
 name: curator inference used in automatic assertion
 def: "A type of curator inference that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000205 {is_inferred="true"} ! curator inference
+is_a: ECO:0000205 ! curator inference
 is_a: ECO:0007832 {is_inferred="true"} ! inferential evidence used in automatic assertion
 intersection_of: ECO:0000205 ! curator inference
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -21254,7 +21260,10 @@ id: ECO:0007746
 name: biological system reconstruction evidence used in manual assertion
 def: "A type of biological system reconstruction evidence that is used in a manual assertion." []
 is_a: ECO:0000088 ! biological system reconstruction evidence
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
+is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assertion
+intersection_of: ECO:0000088 ! biological system reconstruction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
 
@@ -21262,8 +21271,11 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007747
 name: biological system reconstruction evidence by experimental evidence used in manual assertion
 def: "A type of biological system reconstruction evidence by experimental evidence that is used in a manual assertion." []
-is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
+is_a: ECO:0007746 {is_inferred="true"} ! biological system reconstruction evidence used in manual assertion
+intersection_of: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
 
@@ -21300,7 +21312,7 @@ id: ECO:0007751
 name: inferential evidence used in manual assertion
 def: "A type of inferential evidence that is used in a manual assertion." []
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
-is_a: ECO:0000361 {is_inferred="true"} ! inferential evidence
+is_a: ECO:0000361 ! inferential evidence
 intersection_of: ECO:0000361 ! inferential evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -22193,7 +22205,7 @@ id: ECO:0007827
 name: biological system reconstruction evidence used in automatic assertion
 def: "A type of biological system reconstruction evidence that is used in an automatic assertion." []
 is_a: ECO:0000088 {is_inferred="true"} ! biological system reconstruction evidence
-is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
+is_a: ECO:0007322 {is_inferred="true"} ! curator inference used in automatic assertion
 intersection_of: ECO:0000088 ! biological system reconstruction evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
@@ -22240,7 +22252,7 @@ creation_date: 2019-03-20T13:02:00Z
 id: ECO:0007832
 name: inferential evidence used in automatic assertion
 def: "A type of inferential evidence that is used in an automatic assertion." []
-is_a: ECO:0000361 {is_inferred="true"} ! inferential evidence
+is_a: ECO:0000361 ! inferential evidence
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 intersection_of: ECO:0000361 ! inferential evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
