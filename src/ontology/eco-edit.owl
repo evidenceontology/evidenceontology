@@ -9889,7 +9889,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001590 "2019-04-15T12:00:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001590 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001590 "ECO:0001590"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001590 "atomic force microscopy evidence used in automatic assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0001590 ObjectIntersectionOf(obo:ECO_0001589 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 SubClassOf(obo:ECO_0001590 obo:ECO_0001589)
+SubClassOf(obo:ECO_0001590 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0001591 (atomic force microscopy evidence used in manual assertion)
 
@@ -9900,7 +9902,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001591 "2019-04-15T12:00:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001591 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001591 "ECO:0001591"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001591 "atomic force microscopy evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0001591 ObjectIntersectionOf(obo:ECO_0001589 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001591 obo:ECO_0001589)
+SubClassOf(obo:ECO_0001591 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0001592 (polysome profiling evidence)
 
@@ -10596,7 +10600,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001846 "2020-01-28T12:00:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001846 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001846 "ECO:0001846"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001846 "cell population optical density evidence used in automatic assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0001846 ObjectIntersectionOf(obo:ECO_0001845 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
 SubClassOf(obo:ECO_0001846 obo:ECO_0001845)
+SubClassOf(obo:ECO_0001846 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0001847 (cell population optical density evidence used in manual assertion)
 
@@ -10607,7 +10613,9 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0001847 "2020-01-28T12:00:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0001847 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0001847 "ECO:0001847"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0001847 "cell population optical density evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0001847 ObjectIntersectionOf(obo:ECO_0001845 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0001847 obo:ECO_0001845)
+SubClassOf(obo:ECO_0001847 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0005004 (cell viability assay evidence)
 
@@ -12570,10 +12578,10 @@ EquivalentClasses(obo:ECO_0005652 ObjectIntersectionOf(obo:ECO_0001814 ObjectSom
 SubClassOf(obo:ECO_0005652 obo:ECO_0001814)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005652 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
-# Class: obo:ECO_0005653 (northern assay evidence used in manual assertion)
+# Class: obo:ECO_0005653 (northern blot evidence used in manual assertion)
 
 AnnotationAssertion(obo:ECO_9000002 obo:ECO_0005653 "IEP"^^xsd:string)
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005653 "A type of northern assay evidence that is used in a manual assertion."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0005653 "A type of northern blot evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0005653 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0005653 "2016-05-09T14:48:03Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:ECO_0005653 "RNA blot evidence"^^xsd:string)
@@ -12581,7 +12589,7 @@ AnnotationAssertion(oboInOwl:hasBroadSynonym obo:ECO_0005653 "northern assay evi
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0005653 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECO_0005653 "transcript levels (e.g. Northerns)"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0005653 "ECO:0005653"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0005653 "northern assay evidence used in manual assertion"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0005653 "northern blot evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0005653 ObjectIntersectionOf(obo:ECO_0000106 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0005653 obo:ECO_0000106)
 SubClassOf(Annotation(oboInOwl:is_inferred "true"^^xsd:string) obo:ECO_0005653 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
@@ -14615,14 +14623,14 @@ AnnotationAssertion(oboInOwl:id obo:ECO_0006169 "ECO:0006169"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0006169 "quantitative western immunoblotting evidence"^^xsd:string)
 SubClassOf(obo:ECO_0006169 obo:ECO_0000112)
 
-# Class: obo:ECO_0006170 (quantitative western immunoblotting evidence used in manual evidence)
+# Class: obo:ECO_0006170 (quantitative western immunoblotting evidence used in manual assertion)
 
 AnnotationAssertion(obo:ECO_9000002 obo:ECO_0006170 "IEP"^^xsd:string)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_0006170 "A type of quantitative western immunoblotting evidence that is used in a manual assertion."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006170 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006170 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0006170 "ECO:0006170"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:ECO_0006170 "quantitative western immunoblotting evidence used in manual evidence"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:ECO_0006170 "quantitative western immunoblotting evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0006170 ObjectIntersectionOf(obo:ECO_0006169 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0006170 obo:ECO_0006169)
 SubClassOf(obo:ECO_0006170 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
@@ -18397,6 +18405,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007147 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007147 "ECO:0007147"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007147 "competitive growth assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007147 ObjectIntersectionOf(obo:ECO_0000336 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007147 obo:ECO_0000336)
+SubClassOf(obo:ECO_0007147 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007148 (pulsed-field gel electrophoresis evidence used in manual assertion)
 
@@ -18506,6 +18516,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007157 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007157 "ECO:0007157"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007157 "cell staining evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007157 ObjectIntersectionOf(obo:ECO_0001603 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007157 obo:ECO_0001603)
+SubClassOf(obo:ECO_0007157 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007158 (visual sequence inspection evidence used in manual assertion)
 
@@ -18527,6 +18539,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007159 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007159 "ECO:0007159"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007159 "ATP bioluminescence assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007159 ObjectIntersectionOf(obo:ECO_0005011 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007159 obo:ECO_0005011)
+SubClassOf(obo:ECO_0007159 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007160 (missense mutation pohenotypic evidence used in manual assertion)
 
@@ -18809,6 +18823,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007185 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007185 "ECO:0007185"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007185 "cross-streak test evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007185 ObjectIntersectionOf(obo:ECO_0005604 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007185 obo:ECO_0005604)
+SubClassOf(obo:ECO_0007185 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007186 (tethered cell assay evidence used in manual assertion)
 
@@ -18820,6 +18836,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007186 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007186 "ECO:0007186"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007186 "tethered cell assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007186 ObjectIntersectionOf(obo:ECO_0005607 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007186 obo:ECO_0005607)
+SubClassOf(obo:ECO_0007186 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007187 (tumble frequency assay evidence used in manual assertion)
 
@@ -18831,6 +18849,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007187 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007187 "ECO:0007187"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007187 "tumble frequency assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007187 ObjectIntersectionOf(obo:ECO_0005608 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007187 obo:ECO_0005608)
+SubClassOf(obo:ECO_0007187 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007188 (capillary assay evidence used in manual assertion)
 
@@ -18842,6 +18862,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007188 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007188 "ECO:0007188"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007188 "capillary assay evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007188 ObjectIntersectionOf(obo:ECO_0005609 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007188 obo:ECO_0005609)
+SubClassOf(obo:ECO_0007188 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007189 (inference from experimental data evidence used in manual assertion)
 
@@ -19987,6 +20009,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007298 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007298 "ECO:0007298"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007298 "expression pattern evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007298 ObjectIntersectionOf(obo:ECO_0000008 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007298 obo:ECO_0000008)
+SubClassOf(obo:ECO_0007298 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007299 (Affymetrix GeneChip evidence used in automatic assertion)
 
@@ -20703,6 +20727,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007363 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007363 "ECO:0007363"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007363 "imaging assay evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007363 ObjectIntersectionOf(obo:ECO_0000324 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007363 obo:ECO_0000324)
+SubClassOf(obo:ECO_0007363 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007364 (co-sedimentation assay evidence used in automatic assertion)
 
@@ -23661,6 +23687,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007630 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007630 "ECO:0007630"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007630 "ribosome profiling evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007630 ObjectIntersectionOf(obo:ECO_0007087 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007630 obo:ECO_0007087)
+SubClassOf(obo:ECO_0007630 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007631 (computational inference used in manual assertion)
 
@@ -24292,6 +24320,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007695 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007695 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007695 "ECO:0007695"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007695 "cell-based assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007695 ObjectIntersectionOf(obo:ECO_0001565 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007695 obo:ECO_0001565)
 SubClassOf(obo:ECO_0007695 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24304,6 +24333,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007696 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007696 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007696 "ECO:0007696"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007696 "cell proliferation assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007696 ObjectIntersectionOf(obo:ECO_0005007 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007696 obo:ECO_0005007)
 SubClassOf(obo:ECO_0007696 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24316,6 +24346,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007697 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007697 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007697 "ECO:0007697"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007697 "DNA synthesis cell proliferation assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007697 ObjectIntersectionOf(obo:ECO_0005008 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007697 obo:ECO_0005008)
 SubClassOf(obo:ECO_0007697 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24328,6 +24359,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007698 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007698 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007698 "ECO:0007698"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007698 "apoptotic assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007698 ObjectIntersectionOf(obo:ECO_0005034 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007698 obo:ECO_0005034)
 SubClassOf(obo:ECO_0007698 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24340,6 +24372,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007699 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007699 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007699 "ECO:0007699"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007699 "cell growth assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007699 ObjectIntersectionOf(obo:ECO_0001563 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007699 obo:ECO_0001563)
 SubClassOf(obo:ECO_0007699 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24352,6 +24385,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007700 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007700 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007700 "ECO:0007700"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007700 "disk diffusion test evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007700 ObjectIntersectionOf(obo:ECO_0005605 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007700 obo:ECO_0005605)
 SubClassOf(obo:ECO_0007700 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24364,6 +24398,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007701 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007701 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007701 "ECO:0007701"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007701 "chemotaxis assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007701 ObjectIntersectionOf(obo:ECO_0005021 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007701 obo:ECO_0005021)
 SubClassOf(obo:ECO_0007701 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24376,6 +24411,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007702 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007702 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007702 "ECO:0007702"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007702 "cytotoxicity assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007702 ObjectIntersectionOf(obo:ECO_0005012 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007702 obo:ECO_0005012)
 SubClassOf(obo:ECO_0007702 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -24388,6 +24424,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007703 "2019-03-20T12:27:00Z
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007703 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007703 "ECO:0007703"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007703 "cell viability assay evidence used in manual assertion"^^xsd:string)
+EquivalentClasses(obo:ECO_0007703 ObjectIntersectionOf(obo:ECO_0005004 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
 SubClassOf(obo:ECO_0007703 obo:ECO_0005004)
 SubClassOf(obo:ECO_0007703 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
@@ -25169,6 +25206,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007773 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007773 "ECO:0007773"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007773 "cell-based assay evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007773 ObjectIntersectionOf(obo:ECO_0001565 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007773 obo:ECO_0001565)
+SubClassOf(obo:ECO_0007773 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007774 (cell viability assay evidence used in automatic assertion)
 
