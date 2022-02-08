@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2022-01-04
-date: 04:01:2022 10:48
+data-version: releases/2022-02-08
+date: 08:02:2022 16:36
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -4386,8 +4386,8 @@ creation_date: 2014-03-16T11:30:54Z
 id: ECO:0001138
 name: 3D cell culture evidence used in manual assertion
 def: "A type of 3D cell culture evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001001 ! 3D cell culture evidence
+is_a: ECO:0007696 {is_inferred="true"} ! cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0001001 ! 3D cell culture evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4399,8 +4399,8 @@ creation_date: 2014-03-17T15:18:35Z
 id: ECO:0001139
 name: 51Cr release assay evidence used in manual assertion
 def: "A type of 51Cr release assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001004 ! 51Cr release assay evidence
+is_a: ECO:0007702 {is_inferred="true"} ! cytotoxicity assay evidence used in manual assertion
 intersection_of: ECO:0001004 ! 51Cr release assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4427,8 +4427,8 @@ creation_date: 2014-03-17T15:22:01Z
 id: ECO:0001141
 name: [3H]-thymidine incorporation assay evidence used in manual assertion
 def: "A type of [3H]-thymidine incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001003 ! [3H]-thymidine incorporation assay evidence
+is_a: ECO:0007697 {is_inferred="true"} ! DNA synthesis cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0001003 ! [3H]-thymidine incorporation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4440,8 +4440,8 @@ creation_date: 2014-03-17T15:31:52Z
 id: ECO:0001142
 name: [3H]arachidonic acid release assay evidence used in manual assertion
 def: "A type of [3H]arachidonic acid release assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001002 ! [3H]arachidonic acid release assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0001002 ! [3H]arachidonic acid release assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4453,8 +4453,8 @@ creation_date: 2014-03-17T15:32:44Z
 id: ECO:0001143
 name: adhesion assay evidence used in manual assertion
 def: "A type of adhesion assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001006 ! adhesion assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0001006 ! adhesion assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4481,8 +4481,8 @@ creation_date: 2014-03-17T15:36:19Z
 id: ECO:0001145
 name: alamarBlue assay evidence used in manual assertion
 def: "A type of alamarBlue assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001008 ! alamarBlue assay evidence
+is_a: ECO:0007703 {is_inferred="true"} ! cell viability assay evidence used in manual assertion
 intersection_of: ECO:0001008 ! alamarBlue assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4524,8 +4524,8 @@ creation_date: 2014-03-17T15:44:30Z
 id: ECO:0001148
 name: annexin-V staining evidence used in manual assertion
 def: "A type of annexin-V staining evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001011 ! annexin-V staining evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001011 ! annexin-V staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4603,8 +4603,8 @@ creation_date: 2014-03-17T16:02:47Z
 id: ECO:0001154
 name: Boyden chamber assay evidence used in manual assertion
 def: "A type of Boyden chamber assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001017 ! Boyden chamber assay evidence
+is_a: ECO:0007701 {is_inferred="true"} ! chemotaxis assay evidence used in manual assertion
 intersection_of: ECO:0001017 ! Boyden chamber assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4633,8 +4633,8 @@ creation_date: 2014-03-17T16:04:49Z
 id: ECO:0001156
 name: caspase assay evidence used in manual assertion
 def: "A type of caspase assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001019 ! caspase assay evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001019 ! caspase assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4646,8 +4646,8 @@ creation_date: 2014-03-17T16:06:06Z
 id: ECO:0001157
 name: cell counting evidence used in manual assertion
 def: "A type of cell counting evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001020 ! cell counting evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0001020 ! cell counting evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4659,8 +4659,8 @@ creation_date: 2014-03-17T16:07:13Z
 id: ECO:0001158
 name: cell permeability assay evidence used in manual assertion
 def: "A type of cell permeability assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001021 ! cell permeability assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0001021 ! cell permeability assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4858,8 +4858,8 @@ creation_date: 2014-03-17T16:23:10Z
 id: ECO:0001173
 name: cytochrome C release assay evidence used in manual assertion
 def: "A type of cytochrome C release assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001036 ! cytochrome C release assay evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001036 ! cytochrome C release assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -4899,8 +4899,8 @@ creation_date: 2014-03-17T16:25:54Z
 id: ECO:0001176
 name: DNA laddering assay evidence used in manual assertion
 def: "A type of DNA laddering assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001039 ! DNA laddering assay evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001039 ! DNA laddering assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -5630,8 +5630,8 @@ name: motility wound healing assay evidence used in manual assertion
 alt_id: ECO:0001262
 def: "A type of motility wound healing assay evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "wound healing assay evidence used in manual assertion" BROAD []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001099 ! motility wound healing assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0001099 ! motility wound healing assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -5644,8 +5644,8 @@ id: ECO:0001234
 name: MTS assay evidence used in manual assertion
 def: "A type of MTS assay evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium" RELATED []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001100 ! MTS assay evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001100 ! MTS assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -5658,8 +5658,8 @@ id: ECO:0001235
 name: MTT assay evidence used in manual assertion
 def: "A type of MTT assay evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide" RELATED []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001101 ! MTT assay evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001101 ! MTT assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -5710,8 +5710,8 @@ creation_date: 2014-03-17T19:18:50Z
 id: ECO:0001239
 name: nuclear fragmentation evidence used in manual assertion
 def: "A type of nuclear fragmentation evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001104 ! nuclear fragmentation evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001104 ! nuclear fragmentation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -5736,8 +5736,8 @@ creation_date: 2014-03-17T19:23:41Z
 id: ECO:0001241
 name: nucleotide analog incorporation assay evidence used in manual assertion
 def: "A type of nucleotide analog incorporation assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001107 ! nucleotide analog incorporation assay evidence
+is_a: ECO:0007697 {is_inferred="true"} ! DNA synthesis cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0001107 ! nucleotide analog incorporation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -6008,8 +6008,8 @@ id: ECO:0001261
 name: WST-1 assay evidence used in manual assertion
 def: "A type of WST-1 assay evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "metabolic cell proliferation assay evidence" BROAD []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001136 ! WST-1 assay evidence
+is_a: ECO:0007696 {is_inferred="true"} ! cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0001136 ! WST-1 assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -6037,8 +6037,8 @@ def: "A type of terminal deoxynucleotidyl transferase dUTP nick end labeling ass
 synonym: "TdT-mediated dUTP-biotin nick end labeling assay evidence" BROAD []
 synonym: "terminal deoxynucleotidyl transferase-dUTP nick end labeling assay evidence" BROAD []
 synonym: "TUNEL assay evidence" BROAD []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001133 ! terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
+is_a: ECO:0007698 {is_inferred="true"} ! apoptotic assay evidence used in manual assertion
 intersection_of: ECO:0001133 ! terminal deoxynucleotidyl transferase dUTP nick end labeling assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -6663,6 +6663,10 @@ id: ECO:0001590
 name: atomic force microscopy evidence used in automatic assertion
 def: "A type of atomic force microscopy evidence that is used in an automatic assertion." []
 is_a: ECO:0001589 ! atomic force microscopy evidence
+is_a: ECO:0007435 {is_inferred="true"} ! microscopy evidence used in automatic assertion
+intersection_of: ECO:0001589 ! atomic force microscopy evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: jbmunro
 creation_date: 2019-04-15T12:00:00Z
@@ -6671,7 +6675,11 @@ creation_date: 2019-04-15T12:00:00Z
 id: ECO:0001591
 name: atomic force microscopy evidence used in manual assertion
 def: "A type of atomic force microscopy evidence that is used in a manual assertion." []
+is_a: ECO:0001232 {is_inferred="true"} ! microscopy evidence used in manual assertion
 is_a: ECO:0001589 ! atomic force microscopy evidence
+intersection_of: ECO:0001589 ! atomic force microscopy evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 "CollecTF" xsd:string
 created_by: jbmunro
 creation_date: 2019-04-15T12:00:00Z
@@ -7293,6 +7301,10 @@ id: ECO:0001846
 name: cell population optical density evidence used in automatic assertion
 def: "A type of cell population optical density evidence that is used in an automatic assertion." []
 is_a: ECO:0001845 ! cell population optical density evidence
+is_a: ECO:0007773 {is_inferred="true"} ! cell-based assay evidence used in automatic assertion
+intersection_of: ECO:0001845 ! cell population optical density evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 "CACAO" xsd:string
 created_by: jbmunro
 creation_date: 2020-01-28T12:00:00Z
@@ -7302,6 +7314,10 @@ id: ECO:0001847
 name: cell population optical density evidence used in manual assertion
 def: "A type of cell population optical density evidence that is used in a manual assertion." []
 is_a: ECO:0001845 ! cell population optical density evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0001845 ! cell population optical density evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 "CACAO" xsd:string
 created_by: jbmunro
 creation_date: 2020-01-28T12:00:00Z
@@ -8818,7 +8834,7 @@ name: cell growth regulation assay evidence used in manual assertion
 def: "A type of cell growth regulation assay evidence that is used in a manual assertion." [ECO:SN]
 synonym: "growth curve analysis" RELATED []
 is_a: ECO:0000095 ! cell growth regulation assay evidence
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0007699 {is_inferred="true"} ! cell growth assay evidence used in manual assertion
 intersection_of: ECO:0000095 ! cell growth regulation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -9012,8 +9028,8 @@ creation_date: 2016-05-09T14:42:28Z
 
 [Term]
 id: ECO:0005653
-name: northern assay evidence used in manual assertion
-def: "A type of northern assay evidence that is used in a manual assertion." [ECO:SN]
+name: northern blot evidence used in manual assertion
+def: "A type of northern blot evidence that is used in a manual assertion." [ECO:SN]
 synonym: "northern assay evidence" BROAD []
 synonym: "RNA blot evidence" BROAD []
 synonym: "transcript levels (e.g. Northerns)" RELATED []
@@ -9591,8 +9607,8 @@ creation_date: 2016-12-05T09:33:18Z
 id: ECO:0006021
 name: biofilm formation assay evidence used in manual assertion
 def: "A type of biofilm formation assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0006020 ! biofilm formation assay evidence
+is_a: ECO:0007696 {is_inferred="true"} ! cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0006020 ! biofilm formation assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -10856,7 +10872,7 @@ created_by: snadendla
 
 [Term]
 id: ECO:0006170
-name: quantitative western immunoblotting evidence used in manual evidence
+name: quantitative western immunoblotting evidence used in manual assertion
 def: "A type of quantitative western immunoblotting evidence that is used in a manual assertion." [ECO:SN]
 is_a: ECO:0000279 {is_inferred="true"} ! qualitative western immunoblotting evidence used in manual assertion
 is_a: ECO:0006169 ! quantitative western immunoblotting evidence
@@ -12564,8 +12580,8 @@ created_by: snadendla
 id: ECO:0006319
 name: cell aggregation evidence used in manual assertion
 def: "A type of cell aggregation evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0006269 ! cell aggregation evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0006269 ! cell aggregation evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -13199,8 +13215,8 @@ creation_date: 2018-03-14T12:44:11Z
 id: ECO:0007040
 name: plaque assay evidence used in manual assertion
 def: "A type of plaque assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0007039 ! plaque assay evidence
+is_a: ECO:0007699 {is_inferred="true"} ! cell growth assay evidence used in manual assertion
 intersection_of: ECO:0007039 ! plaque assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -13736,8 +13752,8 @@ creation_date: 2018-03-14T12:44:11Z
 id: ECO:0007084
 name: zone of inhibition evidence used in manual assertion
 def: "A type of zone of inhibition evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0007083 ! zone of inhibition evidence
+is_a: ECO:0007699 {is_inferred="true"} ! cell growth assay evidence used in manual assertion
 intersection_of: ECO:0007083 ! zone of inhibition evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14428,8 +14444,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007147
 name: competitive growth assay evidence used in manual assertion
 def: "A type of competitive growth assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0000336 {is_inferred="true"} ! competitive growth assay evidence
+is_a: ECO:0000336 ! competitive growth assay evidence
+is_a: ECO:0007696 {is_inferred="true"} ! cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0000336 ! competitive growth assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14547,8 +14563,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007157
 name: cell staining evidence used in manual assertion
 def: "A type of cell staining evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0001603 {is_inferred="true"} ! cell staining evidence
+is_a: ECO:0001603 ! cell staining evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
 intersection_of: ECO:0001603 ! cell staining evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14567,8 +14583,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007159
 name: ATP bioluminescence assay evidence used in manual assertion
 def: "A type of ATP bioluminescence assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0005011 {is_inferred="true"} ! ATP bioluminescence assay evidence
+is_a: ECO:0005011 ! ATP bioluminescence assay evidence
+is_a: ECO:0007703 {is_inferred="true"} ! cell viability assay evidence used in manual assertion
 intersection_of: ECO:0005011 ! ATP bioluminescence assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14874,8 +14890,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007185
 name: cross-streak test evidence used in manual assertion
 def: "A type of cross-streak test evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0005604 {is_inferred="true"} ! cross-streak test evidence
+is_a: ECO:0005604 ! cross-streak test evidence
+is_a: ECO:0007696 {is_inferred="true"} ! cell proliferation assay evidence used in manual assertion
 intersection_of: ECO:0005604 ! cross-streak test evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14886,8 +14902,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007186
 name: tethered cell assay evidence used in manual assertion
 def: "A type of tethered cell assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0005607 {is_inferred="true"} ! tethered cell assay evidence
+is_a: ECO:0005607 ! tethered cell assay evidence
+is_a: ECO:0007701 {is_inferred="true"} ! chemotaxis assay evidence used in manual assertion
 intersection_of: ECO:0005607 ! tethered cell assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14898,8 +14914,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007187
 name: tumble frequency assay evidence used in manual assertion
 def: "A type of tumble frequency assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0005608 {is_inferred="true"} ! tumble frequency assay evidence
+is_a: ECO:0005608 ! tumble frequency assay evidence
+is_a: ECO:0007701 {is_inferred="true"} ! chemotaxis assay evidence used in manual assertion
 intersection_of: ECO:0005608 ! tumble frequency assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -14910,8 +14926,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007188
 name: capillary assay evidence used in manual assertion
 def: "A type of capillary assay evidence that is used in a manual assertion." [ECO:RCT]
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0005609 {is_inferred="true"} ! capillary assay evidence
+is_a: ECO:0005609 ! capillary assay evidence
+is_a: ECO:0007701 {is_inferred="true"} ! chemotaxis assay evidence used in manual assertion
 intersection_of: ECO:0005609 ! capillary assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
@@ -16144,7 +16160,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007298
 name: expression pattern evidence used in automatic assertion
 def: "A type of expression pattern evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000008 {is_inferred="true"} ! expression pattern evidence
+is_a: ECO:0000008 ! expression pattern evidence
 is_a: ECO:0007297 {is_inferred="true"} ! experimental evidence used in automatic assertion
 intersection_of: ECO:0000008 ! expression pattern evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -16924,7 +16940,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007363
 name: imaging assay evidence used in automatic assertion
 def: "A type of imaging assay evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000324 {is_inferred="true"} ! imaging assay evidence
+is_a: ECO:0000324 ! imaging assay evidence
 is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
 intersection_of: ECO:0000324 ! imaging assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -20160,7 +20176,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007630
 name: ribosome profiling evidence used in automatic assertion
 def: "A type of ribosome profiling evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0007087 {is_inferred="true"} ! ribosome profiling evidence
+is_a: ECO:0007087 ! ribosome profiling evidence
 is_a: ECO:0007298 {is_inferred="true"} ! expression pattern evidence used in automatic assertion
 intersection_of: ECO:0007087 ! ribosome profiling evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -20773,6 +20789,8 @@ name: cell-based assay evidence used in manual assertion
 def: "A type of cell-based assay evidence that is used in a manual assertion." []
 is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001565 ! cell-based assay evidence
+intersection_of: ECO:0001565 ! cell-based assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20781,8 +20799,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007696
 name: cell proliferation assay evidence used in manual assertion
 def: "A type of cell proliferation assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0005007 ! cell proliferation assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0005007 ! cell proliferation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20791,8 +20811,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007697
 name: DNA synthesis cell proliferation assay evidence used in manual assertion
 def: "A type of DNA synthesis cell proliferation assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
+is_a: ECO:0007696 {is_inferred="true"} ! cell proliferation assay evidence used in manual assertion
+intersection_of: ECO:0005008 ! DNA synthesis cell proliferation assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20801,8 +20823,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007698
 name: apoptotic assay evidence used in manual assertion
 def: "A type of apoptotic assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0005034 ! apoptotic assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0005034 ! apoptotic assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20811,8 +20835,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007699
 name: cell growth assay evidence used in manual assertion
 def: "A type of cell growth assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0001563 ! cell growth assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0001563 ! cell growth assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20823,6 +20849,8 @@ name: disk diffusion test evidence used in manual assertion
 def: "A type of disk diffusion test evidence that is used in a manual assertion." []
 is_a: ECO:0005605 ! disk diffusion test evidence
 is_a: ECO:0007084 {is_inferred="true"} ! zone of inhibition evidence used in manual assertion
+intersection_of: ECO:0005605 ! disk diffusion test evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20831,8 +20859,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007701
 name: chemotaxis assay evidence used in manual assertion
 def: "A type of chemotaxis assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0005021 ! chemotaxis assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0005021 ! chemotaxis assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20841,8 +20871,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007702
 name: cytotoxicity assay evidence used in manual assertion
 def: "A type of cytotoxicity assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0005012 ! cytotoxicity assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0005012 ! cytotoxicity assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -20851,8 +20883,10 @@ creation_date: 2019-03-20T12:27:00Z
 id: ECO:0007703
 name: cell viability assay evidence used in manual assertion
 def: "A type of cell viability assay evidence that is used in a manual assertion." []
-is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
 is_a: ECO:0005004 ! cell viability assay evidence
+is_a: ECO:0007695 {is_inferred="true"} ! cell-based assay evidence used in manual assertion
+intersection_of: ECO:0005004 ! cell viability assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -21560,7 +21594,7 @@ creation_date: 2019-03-20T13:02:00Z
 id: ECO:0007773
 name: cell-based assay evidence used in automatic assertion
 def: "A type of cell-based assay evidence that is used in an automatic assertion." []
-is_a: ECO:0001565 {is_inferred="true"} ! cell-based assay evidence
+is_a: ECO:0001565 ! cell-based assay evidence
 is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
 intersection_of: ECO:0001565 ! cell-based assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
