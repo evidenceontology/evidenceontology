@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2022-02-09/eco-basic.owl
-date: 09:02:2022 10:16
+data-version: eco/releases/2022-04-11/eco-basic.owl
+date: 11:04:2022 11:30
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -66,7 +66,7 @@ is_a: ECO:0000002 ! direct assay evidence
 id: ECO:0000006
 name: experimental evidence
 alt_id: ECO:0005023
-def: "A type of evidence resulting from manipulation of variables in order to discover cause and effect." [url:http\://holah.co.uk/page/experimental/]
+def: "A type of evidence that is the output of a scientific procedure performed to make a discovery, test a hypothesis, or demonstrate a known fact." [OED:experiment]
 subset: go_groupings
 is_a: ECO:0000000 ! evidence
 

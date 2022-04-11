@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2022-02-09
-date: 09:02:2022 10:16
+data-version: releases/2022-04-11
+date: 11:04:2022 11:30
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -66,9 +66,11 @@ is_a: ECO:0000002 ! direct assay evidence
 id: ECO:0000006
 name: experimental evidence
 alt_id: ECO:0005023
-def: "A type of evidence resulting from manipulation of variables in order to discover cause and effect." [url:http\://holah.co.uk/page/experimental/]
+def: "A type of evidence that is the output of a scientific procedure performed to make a discovery, test a hypothesis, or demonstrate a known fact." [OED:experiment]
 subset: go_groupings
 is_a: ECO:0000000 ! evidence
+relationship: OBI:0000295 OBI:0000338
+relationship: OBI:0000312 OBI:0000070
 
 [Term]
 id: ECO:0000007
@@ -16148,7 +16150,7 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007297
 name: experimental evidence used in automatic assertion
 def: "A type of experimental evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0000006 {is_inferred="true"} ! experimental evidence
+is_a: ECO:0000006 ! experimental evidence
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
 intersection_of: ECO:0000006 ! experimental evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -20189,7 +20191,7 @@ id: ECO:0007631
 name: computational inference used in manual assertion
 def: "A type of evidence based on computational logical inference that is used in a manual assertion." [ECO:RCT]
 synonym: "evidence based on computational logical inference used in manual assertion" EXACT []
-is_a: ECO:0000362 {is_inferred="true"} ! computational inference
+is_a: ECO:0000362 ! computational inference
 is_a: ECO:0007668 {is_inferred="true"} ! computational evidence used in manual assertion
 is_a: ECO:0007751 {is_inferred="true"} ! inferential evidence used in manual assertion
 intersection_of: ECO:0000362 ! computational inference
@@ -20545,7 +20547,7 @@ id: ECO:0007668
 name: computational evidence used in manual assertion
 def: "A type of computational evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000352 {is_inferred="true"} ! evidence used in manual assertion
-is_a: ECO:0007672 {is_inferred="true"} ! computational evidence
+is_a: ECO:0007672 ! computational evidence
 intersection_of: ECO:0007672 ! computational evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -20556,7 +20558,7 @@ id: ECO:0007669
 name: computational evidence used in automatic assertion
 def: "A type of computational evidence that is used in an automatic assertion." [ECO:RCT]
 is_a: ECO:0000501 {is_inferred="true"} ! evidence used in automatic assertion
-is_a: ECO:0007672 {is_inferred="true"} ! computational evidence
+is_a: ECO:0007672 ! computational evidence
 intersection_of: ECO:0007672 ! computational evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
