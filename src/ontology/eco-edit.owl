@@ -12,8 +12,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/eco.owl>
-Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/imports/obi_import.owl>)
+Import(<http://purl.obolibrary.org/obo/eco/imports/go_import.owl>)
 Import(<http://purl.obolibrary.org/obo/eco/modules/obi_logic.owl>)
 Annotation(dc:description "The Evidence & Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means."^^xsd:string)
 Annotation(dc:title "Evidence & Conclusion Ontology (ECO)"^^xsd:string)
@@ -20009,6 +20009,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007297 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007297 "ECO:0007297"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007297 "experimental evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007297 ObjectIntersectionOf(obo:ECO_0000006 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007297 obo:ECO_0000006)
+SubClassOf(obo:ECO_0007297 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007298 (expression pattern evidence used in automatic assertion)
 
@@ -23711,6 +23713,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007631 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007631 "ECO:0007631"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007631 "computational inference used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007631 ObjectIntersectionOf(obo:ECO_0000362 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007631 obo:ECO_0000362)
+SubClassOf(obo:ECO_0007631 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007632 (transcriptional activation assay evidence used in manual assertion)
 
@@ -24070,6 +24074,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007668 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007668 "ECO:0007668"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007668 "computational evidence used in manual assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007668 ObjectIntersectionOf(obo:ECO_0007672 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)))
+SubClassOf(obo:ECO_0007668 obo:ECO_0007672)
+SubClassOf(obo:ECO_0007668 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218))
 
 # Class: obo:ECO_0007669 (computational evidence used in automatic assertion)
 
@@ -24081,6 +24087,8 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0007669 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_0007669 "ECO:0007669"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_0007669 "computational evidence used in automatic assertion"^^xsd:string)
 EquivalentClasses(obo:ECO_0007669 ObjectIntersectionOf(obo:ECO_0007672 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203)))
+SubClassOf(obo:ECO_0007669 obo:ECO_0007672)
+SubClassOf(obo:ECO_0007669 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000203))
 
 # Class: obo:ECO_0007672 (computational evidence)
 
