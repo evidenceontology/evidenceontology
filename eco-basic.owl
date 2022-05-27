@@ -12,11 +12,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/eco-basic.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2022-04-11/eco-basic.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2022-05-27/eco-basic.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11:04:2022 11:30</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27:05:2022 15:35</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
     </owl:Ontology>
@@ -700,7 +700,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of expression pattern evidence resulting from protein abundance quantification techniques.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NBK:22011</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:4029002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC4029002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.informatics.jax.org/glossary/gain-of-function</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-biology-learning-center/protein-biology-resource-library/pierce-protein-methods/overview-protein-expression-systems.html</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -970,7 +970,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of physical interaction evidence that depends on the strength of the interaction between two entities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSI-MI:MI:0400</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI:0400</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000023"/>
@@ -1018,7 +1018,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein binding evidence where proteins of interest (bait and prey) are covalently linked to incomplete fragments of a third protein (reporter) and expressed in vivo, at which time interaction between bait and prey proteins brings reporter fragments in close enough proximity to allow them to reform and become a functional reporter protein.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSI-MI:MI:0090</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI:0090</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000025"/>
@@ -1122,7 +1122,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000029"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of match to sequence model evidence resulting from a positive match of a protein, or set of proteins to a predictive model (signature) in the InterPro database.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:2686546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC2686546</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.ncbi.nlm.nih.gov/mesh?term=Nucleic+Acid+Hybridization</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1776,7 +1776,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of bait-prey hybrid interaction evidence that is based on a protein-DNA complementation assay where a single promoter acts as bait and is screened against a library of prey transcription factors.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSI-MI:MI:0432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI:0432</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAIR:TED</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -2010,7 +2010,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000077"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of in vitro methylation assay evidence resulting from initial modification of DNA by sodium bisulfite, converting all unmethylated cytosines to uracil, and subsequent amplification with primers specific for methylated versus unmethylated DNA.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:38513</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC38513</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:8790415</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2993,7 +2993,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000138"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nucleic acid binding evidence resulting from an enzyme displaying binding activity to specific ribohomopolymer.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:102612</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC102612</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7725,7 +7725,7 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-04-22T17:02:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000355</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of use: &quot;The presence of paired evaginated hemispheres and olfactory bulbs in both agnathan and gnathostome radiations suggests that such hemispheres were also present in the common ancestor.&quot; PMID: 7013637. Northcutt RG. (1981) Evolution of the telencephalon in nonmammals. Ann. Rev. Neurosci.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of use: &quot;The presence of paired evaginated hemispheres and olfactory bulbs in both agnathan and gnathostome radiations suggests that such hemispheres were also present in the common ancestor.&quot; PMID:7013637. Northcutt RG. (1981) Evolution of the telencephalon in nonmammals. Ann. Rev. Neurosci.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phylogenetic distribution evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7773,7 +7773,7 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000359"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of transcript expression evidence resulting from the use of the Gene Set Enrichment Analysis (GSEA) method or Fisher&apos;s-Exact (FE) method to assess an RNA-seq dataset for differential gene expression.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:2881125</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC2881125</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8105,7 +8105,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of cytotoxicity assay evidence resulting from the measurement of the amount of radioactive 51Cr released in the supernatant of a sample of 51Cr pre-labeled cells via cytolysis by effector cells (cytotoxic T-cells).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3929704</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3929704</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www4.mpbio.com/ecom/docs/proddata.nsf/5f64ffd4f38c2fda8525645d00769d68/53d2a75653615bab852568cb00572ff3?OpenDocument</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8197,7 +8197,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of cell viability assay evidence resulting from the continuous measurement of fluorescence intensity from the viable cells, where a cell permeable compound, resazurin (the active ingredient of alamarBlue), is reduced to fluorescent resorufin.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3478843</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3478843</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:https://www.thermofisher.com/us/en/home/references/protocols/cell-and-tissue-analysis/cell-profilteration-assay-protocols/cell-viability-with-alamarblue.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8270,7 +8270,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of apoptotic assay evidence resulting from the addition and subsequent binding of Annexin V to phosphatidylserine in cells to detect if they are viable, apoptotic, or necrotic.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3169266</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3169266</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8508,7 +8508,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001022"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of staining evidence resulting from monitoring division by the use of carboxyfluorescein diacetate succinimidyl ester (CFSE) to label intracellular molecules with carboxyfluorescein; when a labeled cell divides, the number of carboxyfluorescein-tagged molecules is split.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3185625</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3185625</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8595,7 +8595,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001026"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of imaging assay evidence resulting from the limited observation of the co-occurrence of molecules in a subcellular location.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3074624</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3074624</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8681,7 +8681,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001030"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of knockout evidence resulting from a temporally-restricted and/or tissue-specific targeted gene removal.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3572410</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3572410</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8901,7 +8901,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001039"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of apoptotic assay evidence resulting from the visualization via gel electrophoresis of the fragmented DNA (DNA ladder) which is the result of apoptotic DNA fragmentation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:4401164</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC4401164</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8947,7 +8947,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001042"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of mutant phenotype evidence resulting from a mutated gene producing mutant polypeptides that disrupt the activity of the wild-type genes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:2217636</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC2217636</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:8018332</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9057,7 +9057,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001047"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nucleic acid localization evidence and in situ hybridization evidence resulting from the use of fluorescent probes to detect complementary sequences of nucleic acids.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:346675</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC346675</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:6812046</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10068,7 +10068,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001091"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of genetic transformation evidence resulting from a change in the DNA that results in the elimination of the function of the gene, allowing for functional analysis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:2782548</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC2782548</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10305,7 +10305,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001102"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein detection assay evidence resulting from determination of analyte concentration by fluorescent bead sets attached to an antibody (to a specific analyte) with a fluorescent reporter dye label attached to a second antibody (to a specific analyte).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:1534009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC1534009</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10411,7 +10411,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001107"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of DNA synthesis cell proliferation assay evidence resulting from the analysis and measurement of the incorporation of fluorescently labeled nucleotide analog(s) into the DNA.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3149870</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3149870</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10620,7 +10620,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001117"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein detection assay evidence resulting from proteins immobilized to prepare protein chips, or microwells, that can be utilized to determine presence of proteins, monitor differential expression profiles, and/or study protein interactions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:1828913</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC1828913</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10866,7 +10866,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001129"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of enzymatic activity assay evidence resulting from the analysis of tumor necrosis factor (TNF)-a converting enzyme (TACE), which releases a soluble TNF-a from the membrane-bound precursor protein.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:1808921</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC1808921</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15577,14 +15577,14 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001811"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FP</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMCID:3277431</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3277431</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:20232898</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001811"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluorescence polarization</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMCID:3277431</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3277431</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:20232898</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16496,7 +16496,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of cell proliferation assay evidence resulting from the measure of DNA synthesis in the presece of a label.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3908118</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3908118</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16585,7 +16585,7 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005021"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of cell-based assay evidence resulting from the evaluation of chemotactic ability (i.e. the movement, or lack of movement, in response to a chemical stimulus) of prokaryotic or eukaryotic cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:3667641</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC3667641</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16806,7 +16806,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-09T13:51:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005505</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regular expression is a computational tool used for determining whether a given genome contains a DNA region resembling a transcription factor binding motif. For example A/T=W indicates A or T may be present in a column of the alignment. (PMID: 20708667).</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regular expression is a computational tool used for determining whether a given genome contains a DNA region resembling a transcription factor binding motif. For example A/T=W indicates A or T may be present in a column of the alignment. (PMID:20708667).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regular expression motif search evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17382,7 +17382,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-09T14:12:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005532</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This technique is used to identify transcription factor binding sites by searching a bacterial genome for DNA regions resembling a given TF-binding motif. PMID: 17085555.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This technique is used to identify transcription factor binding sites by searching a bacterial genome for DNA regions resembling a given TF-binding motif. PMID:17085555.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consensus search evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17405,7 +17405,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-09-30T16:23:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005533</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name derives to experimental footprinting techniques where transcription factor (TF)-binding sites are identified by sequencing the region of DNA protected from biochemical agents by the bound TF. This technique is used to identify or verify transcription factor-binding motifs, most commonly in the Eukaryota (PMID: 11997340).</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name derives to experimental footprinting techniques where transcription factor (TF)-binding sites are identified by sequencing the region of DNA protected from biochemical agents by the bound TF. This technique is used to identify or verify transcription factor-binding motifs, most commonly in the Eukaryota (PMID:11997340).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phylogenetic footprinting evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17429,7 +17429,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-09T14:30:38Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005534</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This technique is used to predict transcription factor binding sites in gene promoter regions by identifying conserved DNA regions across multiple genomes. PMID: 22305460. Orthology is a typical comparative criterion used.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This technique is used to predict transcription factor binding sites in gene promoter regions by identifying conserved DNA regions across multiple genomes. PMID:22305460. Orthology is a typical comparative criterion used.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comparative genomics motif search evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17452,7 +17452,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-01T11:58:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005535</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine learning algorithms include, but are not limited to artificial neural networks, random-forest, k-means clustering, hidden Markov models. This suite of methods can be used to identify or verify transcription factor-binding sites in genomic sequences (PMID: 15703297).</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine learning algorithms include, but are not limited to artificial neural networks, random-forest, k-means clustering, hidden Markov models. This suite of methods can be used to identify or verify transcription factor-binding sites in genomic sequences (PMID:15703297).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine learning prediction of motif instance evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17478,7 +17478,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSSM</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005536</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This technique is used to predict transcription factor binding sites in gene promoter regions by using a position weight matrix approach. (PMID: 15604457).</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This technique is used to predict transcription factor binding sites in gene promoter regions by using a position weight matrix approach. (PMID:15604457).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">position-specific scoring matrix motif search evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -21928,7 +21928,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high throughput screening evidence</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006055</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some relevant articles include: PMID: 23340846, doi:10.1038/nmeth0607-523</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some relevant articles include: PMID:23340846, doi:10.1038/nmeth0607-523</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high throughput evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -22632,7 +22632,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006084"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nucleic acid binding evidence that is used in a manual assertion resulting from an enzyme displaying binding activity to specific ribohomopolymer.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:102612</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMC:PMC102612</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23531,8 +23531,8 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nuclear magnetic resonance evidence used for quantification of metabolites or for the determination of chemical structure or composition.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID: 16428685</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID: 23036848</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:16428685</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:23036848</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -25629,7 +25629,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006258"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of protein fragment functional complementaion evidence where the interaction between bait and prey assemble a transcriptional activation complex consisting of the GAL4 DNA-binding domain and the transactivation domain from the herpes simplex virus protein VP16.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSI-MI:0728</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI:0728</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29053,7 +29053,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007075"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental phenotypic evidence that results from the comparison of phenotype profiles (the physical and biochemical traits of organisms in particular environments) across multiple strains; that is, a meta-analysis of a set of phenotypic patterns from many tests in response to a series of changing genetic and/or environmental factors.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM:topic:3298</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM:topic_3298</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:2118507</oboInOwl:hasDbXref>
     </owl:Axiom>
     
