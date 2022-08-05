@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2022-05-27/eco-basic.owl
-date: 27:05:2022 15:35
+data-version: eco/releases/2022-08-05/eco-basic.owl
+date: 05:08:2022 15:34
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -206,7 +206,7 @@ def: "A type of protein binding evidence where proteins of interest (bait and pr
 comment: Typically enzymes which confer resistance to antibiotics, such as Dihydrofolate reductase or Beta-lactamase, or proteins that give colorimetric or fluorescent signals are used. The Bait protein is generally the protein under study and the methods are readily adaptable to highthroughput mode.
 synonym: "bait-prey protein pull-down evidence" EXACT []
 xref: MI:0090 "protein complementation assay"
-is_a: ECO:0000024 ! protein binding evidence
+is_a: ECO:0006351 ! bait-prey interaction evidence
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
 
 [Term]
@@ -6629,7 +6629,7 @@ creation_date: 2015-11-10T14:55:36Z
 id: ECO:0001830
 name: host colonization assay evidence
 def: "A type of experimental evidence in which the colonization or adhesion capacity is measured." []
-comment: Has to do with the ability of the bacterium or virus to bind to a host.
+comment: Has to do with the ability of a symbiont (any organism living in close association with a host, including both beneficial and parasitic relationships) to bind to a host.
 synonym: "adhesion assay evidence" EXACT []
 is_a: ECO:0000006 ! experimental evidence
 property_value: IAO:0000234 "CollecTF" xsd:string
@@ -7285,7 +7285,7 @@ def: "A type of biological system reconstruction evidence by experimental eviden
 comment: Processes, pathways and complexes shown by a single experiment should not be annotated with this term but with ECO:0000353 or a child thereof.
 is_a: ECO:0005553 ! biological system reconstruction evidence by experimental evidence from single species
 is_a: ECO:0007747 ! biological system reconstruction evidence by experimental evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "EXP" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T15:32:41Z
 
@@ -7296,7 +7296,7 @@ def: "A type of biological system reconstruction evidence by experimental eviden
 comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. The evidence may originate from a combination of several experiments.
 is_a: ECO:0005552 ! biological system reconstruction evidence by experimental evidence from mixed species
 is_a: ECO:0007747 ! biological system reconstruction evidence by experimental evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "EXP" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T15:45:01Z
 
@@ -7307,7 +7307,7 @@ def: "A type of biological system reconstruction evidence based on orthology evi
 comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
 is_a: ECO:0005545 ! biological system reconstruction evidence based on orthology evidence
 is_a: ECO:0005610 ! biological system reconstruction evidence based on homology evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "ISO" xsd:string
 created_by: snadendla
 creation_date: 2015-12-18T16:20:49Z
 
@@ -7327,7 +7327,7 @@ def: "A type of  biological system reconstruction evidence based on paralogy evi
 comment: Inference is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments.
 is_a: ECO:0005550 ! biological system reconstruction evidence based on paralogy evidence
 is_a: ECO:0005610 ! biological system reconstruction evidence based on homology evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "ISS" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T16:05:15Z
 
@@ -7338,7 +7338,7 @@ def: "A type of biological system reconstruction evidence based on inference fro
 comment: Functional studies or ligand binding evidence are often used for the reconstruction of biological systems. It does not provide physical interaction evidence but uses proxies such a ligand binding evidences to infer the presence or absence of the complex components.
 is_a: ECO:0005548 ! biological system reconstruction evidence based on inference from background scientific knowledge
 is_a: ECO:0007746 ! biological system reconstruction evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "NAS" xsd:string
 created_by: snadendla
 creation_date: 2015-12-16T16:07:42Z
 
@@ -7904,7 +7904,7 @@ def: "A type of biological system reconstruction evidence based on homology evid
 comment: Inference may be based on paralogy and/or orthology of the genome-encoded components and is made primarily on functional conservation between the two systems. The sequences and number of genome-encoded components are fairly conserved but some divergence is observed. Evidence may originate from a combination of several experiments in the same or another species.
 is_a: ECO:0005549 ! biological system reconstruction evidence based on homology evidence
 is_a: ECO:0007746 ! biological system reconstruction evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "ISS" xsd:string
 created_by: snadendla
 creation_date: 2016-03-31T17:00:03Z
 
@@ -9486,7 +9486,7 @@ name: bait-prey hybrid interaction evidence used in manual assertion
 def: "A type of bait-prey hybrid interaction evidence that is used in manual assertion where proteins of interest (bait and prey) are covalently linked to incomplete fragments of a third protein (reporter) and expressed in vivo, at which time interaction between bait and prey proteins brings reporter fragments in close enough proximity to allow them to reform and become a functional reporter protein." [ECO:MCC]
 synonym: "bait-prey protein pull-down evidence" EXACT []
 is_a: ECO:0000025 ! bait-prey hybrid interaction evidence
-is_a: ECO:0006076 ! protein binding evidence used in manual assertion
+is_a: ECO:0006392 ! bait-prey interaction evidence used in manual assertion
 property_value: ECO:9000002 "IPI" xsd:string
 created_by: rctauber
 creation_date: 2017-09-14T09:19:22Z
@@ -10808,11 +10808,10 @@ created_by: snadendla
 
 [Term]
 id: ECO:0006249
-name: obsolete bait-prey protein pull-down evidence
-def: "OBSOLETE A type of protein binding evidence resulting from an affinity purification in-vitro technique used to detect physical interactions between two or more proteins, where a molecule of interest - a \"bait\" - is immobilized and incubated with a protein source containing putative \"prey\" proteins." [PMID:28667618]
-comment: This term has been obsoleted as this is same as the term bait-prey hybrid interaction evidence.
+name: bait-prey protein pull-down evidence
+def: "A type of bait-prey interaction evidence resulting from an affinity purification in-vitro technique used to detect physical interactions between two or more proteins, where a molecule of interest - a \"bait\" - is immobilized and incubated with a protein source containing putative \"prey\" proteins." [PMID:28667618]
+is_a: ECO:0006351 ! bait-prey interaction evidence
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
-is_obsolete: true
 created_by: snadendla
 
 [Term]
@@ -10906,8 +10905,9 @@ created_by: snadendla
 [Term]
 id: ECO:0006260
 name: protein thermal shift assay evidence
-def: "A type of heat capacity-based evidence in which the denaturation temperature of a protein sample is measured under varying conditions, such as pH, redox potential, concentration of other molecules or changes in the proteoform, to determine the effect of these factors on protein thermal stability." [url:https\://en.wikipedia.org/wiki/Thermal_shift_assay]
-is_a: ECO:0006192 ! heat capacity-based evidence
+def: "A type of temperature-induced protein unfolding evidence that assess thermal denaturation temperature and protein stability under different experimental conditions, e.g. buffer pH or ionic strength, redox potential, usually by means of intrinsic fluorescence or thermofluor." [url:https\://en.wikipedia.org/wiki/Thermal_shift_assay]
+synonym: "TSA" EXACT []
+is_a: ECO:0006268 ! temperature-induced protein unfolding evidence
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
 
@@ -11092,18 +11092,22 @@ created_by: snadendla
 
 [Term]
 id: ECO:0006279
-name: obsolete bait-prey protein pull-down evidence used in manual assertion
-def: "OBSOLETE A type of bait-prey protein pull-down evidence that is used in a manual assertion." [ECO:SN]
+name: bait-prey protein pull-down evidence used in manual assertion
+def: "A type of bait-prey protein pull-down evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006249 ! bait-prey protein pull-down evidence
+is_a: ECO:0006392 ! bait-prey interaction evidence used in manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
-is_obsolete: true
 created_by: snadendla
 
 [Term]
 id: ECO:0006280
-name: obsolete bait-prey protein pull-down evidence used in automatic assertion
-def: "OBSOLETE A type of bait-prey protein pull-down evidence that is used in an automatic assertion." [ECO:SN]
+name: bait-prey protein pull-down evidence used in automatic assertion
+def: "A type of bait-prey protein pull-down evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006249 ! bait-prey protein pull-down evidence
+is_a: ECO:0006393 ! bait-prey interaction evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
-is_obsolete: true
 created_by: snadendla
 
 [Term]
@@ -11325,8 +11329,9 @@ created_by: snadendla
 id: ECO:0006301
 name: protein thermal shift assay evidence used in manual assertion
 def: "A type of protein thermal shift assay evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0006230 ! heat capacity-based evidence used in manual assertion
+synonym: "TSA" EXACT []
 is_a: ECO:0006260 ! protein thermal shift assay evidence
+is_a: ECO:0006317 ! temperature-induced protein unfolding evidence used in manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
@@ -11335,8 +11340,9 @@ created_by: snadendla
 id: ECO:0006302
 name: protein thermal shift assay evidence used in automatic assertion
 def: "A type of protein thermal shift assay evidence that is used in an automatic assertion." [ECO:SN]
-is_a: ECO:0006231 ! heat capacity-based evidence used in automatic assertion
+synonym: "TSA" EXACT []
 is_a: ECO:0006260 ! protein thermal shift assay evidence
+is_a: ECO:0006318 ! temperature-induced protein unfolding evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
 created_by: snadendla
@@ -11665,6 +11671,632 @@ is_a: ECO:0007332 ! physical interaction evidence used in automatic assertion
 is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 DisProt:BalintMeszaros xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006331
+name: Congo red staining evidence
+def: "A type of staining evidence where Congo red is used to stain cellular structures including amyloid fibrils and aggregates, cell walls of plants and fungi, and for the outer membrane of Gram-negative bacteria." [url:https\://en.wikipedia.org/wiki/Congo_red, url:https\://pubmed.ncbi.nlm.nih.gov/34431623/]
+synonym: "Congo Red" EXACT []
+synonym: "CR" EXACT []
+is_a: ECO:0005019 ! staining evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006332
+name: Congo red birefringence evidence
+def: "A type of Congo red staining evidence where the Congo red dye produces an apple-green birefringence when it specifically binds to cross-β-sheets of amyloids which is detectable via cross-polarized light." [url:https\://pubmed.ncbi.nlm.nih.gov/34431623/]
+is_a: ECO:0006331 ! Congo red staining evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006333
+name: thioflavin T based fluorescence spectroscopy evidence
+def: "A type of fluorescence evidence used to assess the formation of amyloid fibrils indicated by an increase in Thioflavin T fluorescence intensity and a characteristic red shift in the emission spectrum upon binding to amyloids." [url:https\://pubmed.ncbi.nlm.nih.gov/34431623/]
+synonym: "ThT" EXACT []
+synonym: "ThT assay" EXACT []
+synonym: "ThT fluorescence assay" EXACT []
+is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006334
+name: differential scanning fluorimetry evidence
+def: "A type of protein thermal shift assay evidence where thermal unfolding is monitored by measuring the fluorescence intensity upon interaction with its environment." [url:https\://pubmed.ncbi.nlm.nih.gov/19225610/]
+synonym: "DSF" EXACT []
+is_a: ECO:0001115 ! fluorescence evidence
+is_a: ECO:0006260 ! protein thermal shift assay evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006335
+name: fluorescence correlation spectroscopy evidence
+def: "A type of fluorescence evidence that measures fluctuations in fluorescence intensity used to detect biophysical properties of single molecules such as diffusion coefficients and hydrodynamic radii." [url:https\://en.wikipedia.org/wiki/Fluorescence_correlation_spectroscopy, url:https\://pubmed.ncbi.nlm.nih.gov/17299036/]
+synonym: "FSC" EXACT []
+is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006336
+name: intrinsic fluorescence-based protein conformation evidence
+def: "A type of fluorescence evidence used to study protein conformation by measuring the emissions of aromatic amino acids, specifically tryptophan, tyrosine and, to a minor extent, phenylalanine residues. " [url:https\://en.wikipedia.org/wiki/Fluorescence_spectroscopy]
+is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006337
+name: stopped-flow fluorescence spectroscopy evidence
+def: "A type of fluorescence evidence used to study binding kinetics by rapidly mixing two interaction components and then \"stopping\" the reaction in the observation chamber." [url:https\://doi.org/10.1016/bs.mie.2018.09.026]
+is_a: ECO:0000021 ! physical interaction evidence
+is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006338
+name: temperature jump relaxation evidence
+def: "A type of fluorescence evidence where the rates of fast chemical reactions in a solution are measured by the intensity of light absorbed or fluoresced by allowing the reaction mixture to come to an equilibrium, and then perturbing the equilibrium by a rapid temperature rise followed by relaxation of the system to the new equilibrium." [url:https\://en.wikipedia.org/wiki/Temperature_jump, url:https\://iopscience.iop.org/article/10.1088/0022-3735/16/12/003]
+is_a: ECO:0001115 ! fluorescence evidence
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006339
+name: structural ensemble generation evidence
+def: "A type of computational structure modeling evidence used to build molecular models of intrinsically disordered proteins to capture the dynamic behaviour of their polypeptide chains. Such tools include EOM, ASTEROIDS and ENSEMBLE." [url:https\://doi.org/10.1007/978-3-319-20164-1_4]
+is_a: ECO:0006341 ! computational structure modeling evidence
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006340
+name: molecular dynamics evidence
+def: "A type of computational evidence used to study the physical movements of atoms and molecules with empirical molecular mechanics force fields." [url:https\://en.wikipedia.org/wiki/Molecular_dynamics]
+is_a: ECO:0007672 ! computational evidence
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006341
+name: computational structure modeling evidence
+def: "A type of structure determination evidence in which a computational tool is used to generate a model of structure(s) for a molecule." [ECO:MG]
+is_a: ECO:0005031 ! structure determination evidence
+is_a: ECO:0007672 ! computational evidence
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006342
+name: qualitative macroscopy evidence
+def: "A type of macroscopy evidence in which non-numerical observed characteristics or features are captured as text descriptions or categorical assignments." [url:https\://en.wikipedia.org/wiki/Qualitative_property]
+is_a: ECO:0001094 ! macroscopy evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006343
+name: quantitative macroscopy evidence
+def: "A type of macroscopy evidence in which measurement techniques result in numerical data." [url:https\://en.wikipedia.org/wiki/Quantitative_research]
+is_a: ECO:0001094 ! macroscopy evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006344
+name: sporulation assay evidence
+def: "A type of direct assay evidence that reflects the presence, absence, and/or amount of spore formation." [url:https\://www.merriam-webster.com/dictionary/sporulation]
+is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006345
+name: asexual sporulation assay evidence
+def: "A type of sporulation assay evidence that reflects the presence, absence, and/or amount of asexual spore formation." [ECO:MG]
+is_a: ECO:0006344 ! sporulation assay evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006346
+name: sexual sporulation assay evidence
+def: "A type of sporulation assay evidence that reflects the presence, absence, and/or amount of sexual spore formation." [ECO:MG]
+is_a: ECO:0006344 ! sporulation assay evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006347
+name: host-surrogate penetration assay evidence
+def: "A type of experimental evidence in which the extent of penetration into a host-surrogate material consisting of a synthetic or other non-living substance is measured." [PHI-base]
+is_a: ECO:0000006 ! experimental evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006348
+name: host penetration assay evidence
+def: "A type of host colonization assay evidence in which the extent of penetration into host tissue is measured." [PHI-base]
+is_a: ECO:0001830 ! host colonization assay evidence
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006349
+name: iodine-125-labeled ligand binding evidence
+def: "A type of radioligand binding assay evidence in which iodine-125 label is used to measure receptor-ligand interactions, such as in determining selectivity for a particular ligand." [PMID:22674160]
+is_a: ECO:0007008 ! radioligand binding assay evidence
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006350
+name: bio-layer interferometry evidence
+def: "A type of molecule detection assay evidence in which the detection of the interaction between molecules is done without the use of labels and is instead based on the phase shift-wavelength correlation created between interference patterns off of two unique surfaces on the tip of a biosensor, where the ligand is immobilized onto a bio compatible biosensor while the analyte is in solution." [url:https\://en.wikipedia.org/wiki/Bio-layer_interferometry]
+is_a: ECO:0005516 ! molecule detection assay evidence
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006351
+name: bait-prey interaction evidence
+def: "A type of protein binding evidence in which the use of \"bait\" molecules or proteins allows the purification or identification of a binding partner, the \"prey\". " [ECO:MG]
+is_a: ECO:0000024 ! protein binding evidence
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006352
+name: Congo red staining evidence used in manual assertion
+def: "A type of Congo red staining evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Congo Red" EXACT []
+synonym: "CR" EXACT []
+is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+is_a: ECO:0006331 ! Congo red staining evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006353
+name: Congo red staining evidence used in automatic assertion
+def: "A type of Congo red staining evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Congo Red" EXACT []
+synonym: "CR" EXACT []
+is_a: ECO:0006331 ! Congo red staining evidence
+is_a: ECO:0007798 ! staining evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006354
+name: Congo red birefringence evidence used in manual assertion
+def: "A type of Congo red birefringence evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006332 ! Congo red birefringence evidence
+is_a: ECO:0006352 ! Congo red staining evidence used in manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006355
+name: Congo red birefringence evidence used in automatic assertion
+def: "A type of Congo red birefringence evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006332 ! Congo red birefringence evidence
+is_a: ECO:0006353 ! Congo red staining evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006356
+name: thioflavin T based fluorescence spectroscopy evidence used in manual assertion
+def: "A type of thioflavin T based fluorescence spectroscopy evidence that is used in a manual assertion." [ECO:SN]
+synonym: "ThT" EXACT []
+synonym: "ThT assay" EXACT []
+synonym: "ThT fluorescence assay" EXACT []
+is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
+is_a: ECO:0006333 ! thioflavin T based fluorescence spectroscopy evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006357
+name: thioflavin T based fluorescence spectroscopy evidence used in automatic assertion
+def: "A type of thioflavin T based fluorescence spectroscopy evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "ThT" EXACT []
+synonym: "ThT assay" EXACT []
+synonym: "ThT fluorescence assay" EXACT []
+is_a: ECO:0006333 ! thioflavin T based fluorescence spectroscopy evidence
+is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006358
+name: differential scanning fluorimetry evidence used in manual assertion
+def: "A type of differential scanning fluorimetry evidence that is used in a manual assertion." [ECO:SN]
+synonym: "DSF" EXACT []
+is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
+is_a: ECO:0006301 ! protein thermal shift assay evidence used in manual assertion
+is_a: ECO:0006334 ! differential scanning fluorimetry evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006359
+name: differential scanning fluorimetry evidence used in automatic assertion
+def: "A type of differential scanning fluorimetry evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "DSF" EXACT []
+is_a: ECO:0006302 ! protein thermal shift assay evidence used in automatic assertion
+is_a: ECO:0006334 ! differential scanning fluorimetry evidence
+is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006360
+name: fluorescence correlation spectroscopy evidence used in manual assertion
+def: "A type of fluorescence correlation spectroscopy evidence that is used in a manual assertion." [ECO:SN]
+synonym: "FSC" EXACT []
+is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
+is_a: ECO:0006335 ! fluorescence correlation spectroscopy evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006361
+name: fluorescence correlation spectroscopy evidence used in automatic assertion
+def: "A type of fluorescence correlation spectroscopy evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "FSC" EXACT []
+is_a: ECO:0006335 ! fluorescence correlation spectroscopy evidence
+is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006362
+name: intrinsic fluorescence-based protein conformation evidence used in manual assertion
+def: "A type of intrinsic fluorescence-based protein conformation evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
+is_a: ECO:0006336 ! intrinsic fluorescence-based protein conformation evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006363
+name: intrinsic fluorescence-based protein conformation evidence used in automatic assertion
+def: "A type of intrinsic fluorescence-based protein conformation evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006336 ! intrinsic fluorescence-based protein conformation evidence
+is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006364
+name: stopped-flow fluorescence spectroscopy evidence used in manual assertion
+def: "A type of stopped-flow fluorescence spectroscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
+is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
+is_a: ECO:0006337 ! stopped-flow fluorescence spectroscopy evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006365
+name: stopped-flow fluorescence spectroscopy evidence used in automatic assertion
+def: "A type of stopped-flow fluorescence spectroscopy evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006337 ! stopped-flow fluorescence spectroscopy evidence
+is_a: ECO:0007332 ! physical interaction evidence used in automatic assertion
+is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006366
+name: temperature jump relaxation evidence used in manual assertion
+def: "A type of temperature jump relaxation evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001249 ! fluorescence evidence used in manual assertion
+is_a: ECO:0006338 ! temperature jump relaxation evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006367
+name: temperature jump relaxation evidence used in automatic assertion
+def: "A type of temperature jump relaxation evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006338 ! temperature jump relaxation evidence
+is_a: ECO:0007450 ! fluorescence evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006368
+name: computational structure modeling evidence used in manual assertion
+def: "A type of computational structure modeling evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0006341 ! computational structure modeling evidence
+is_a: ECO:0007668 ! computational evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006369
+name: computational structure modeling evidence used in automatic assertion
+def: "A type of computational structure modeling evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006341 ! computational structure modeling evidence
+is_a: ECO:0007669 ! computational evidence used in automatic assertion
+is_a: ECO:0007815 ! structure determination evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006370
+name: structural ensemble generation evidence used in manual assertion
+def: "A type of structural ensemble generation evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006339 ! structural ensemble generation evidence
+is_a: ECO:0006368 ! computational structure modeling evidence used in manual assertion
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006371
+name: structural ensemble generation evidence used in automatic assertion
+def: "A type of structural ensemble generation evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006339 ! structural ensemble generation evidence
+is_a: ECO:0006369 ! computational structure modeling evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006372
+name: molecular dynamics evidence used in manual assertion
+def: "A type of molecular dynamics evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006340 ! molecular dynamics evidence
+is_a: ECO:0007668 ! computational evidence used in manual assertion
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006373
+name: molecular dynamics evidence used in automatic assertion
+def: "A type of molecular dynamics evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006340 ! molecular dynamics evidence
+is_a: ECO:0007669 ! computational evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:EdoardoSalladini xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006374
+name: qualitative macroscopy evidence used in manual assertion
+def: "A type of qualitative macroscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001228 ! macroscopy evidence used in manual assertion
+is_a: ECO:0006342 ! qualitative macroscopy evidence
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006375
+name: qualitative macroscopy evidence used in automatic assertion
+def: "A type of qualitative macroscopy evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006342 ! qualitative macroscopy evidence
+is_a: ECO:0007430 ! macroscopy evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006376
+name: quantitative macroscopy evidence used in manual assertion
+def: "A type of quantitative macroscopy evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001228 ! macroscopy evidence used in manual assertion
+is_a: ECO:0006343 ! quantitative macroscopy evidence
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006377
+name: quantitative macroscopy evidence used in automatic assertion
+def: "A type of quantitative macroscopy evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006343 ! quantitative macroscopy evidence
+is_a: ECO:0007430 ! macroscopy evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006378
+name: sporulation assay evidence used in manual assertion
+def: "A type of sporulation assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+is_a: ECO:0006344 ! sporulation assay evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006379
+name: sporulation assay evidence used in automatic assertion
+def: "A type of sporulation assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006344 ! sporulation assay evidence
+is_a: ECO:0007307 ! direct assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006380
+name: asexual sporulation assay evidence used in manual assertion
+def: "A type of asexual sporulation assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006345 ! asexual sporulation assay evidence
+is_a: ECO:0006378 ! sporulation assay evidence used in manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006381
+name: asexual sporulation assay evidence used in automatic assertion
+def: "A type of asexual sporulation assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006345 ! asexual sporulation assay evidence
+is_a: ECO:0006379 ! sporulation assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006382
+name: sexual sporulation assay evidence used in manual assertion
+def: "A type of sexual sporulation assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006346 ! sexual sporulation assay evidence
+is_a: ECO:0006378 ! sporulation assay evidence used in manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006383
+name: sexual sporulation assay evidence used in automatic assertion
+def: "A type of sexual sporulation assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006346 ! sexual sporulation assay evidence
+is_a: ECO:0006379 ! sporulation assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006384
+name: host-surrogate penetration assay evidence used in manual assertion
+def: "A type of host-surrogate penetration assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0006347 ! host-surrogate penetration assay evidence
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006385
+name: host-surrogate penetration assay evidence used in automatic assertion
+def: "A type of host-surrogate penetration assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006347 ! host-surrogate penetration assay evidence
+is_a: ECO:0007297 ! experimental evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006386
+name: host penetration assay evidence used in manual assertion
+def: "A type of host penetration assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0001832 ! host colonization assay evidence used in manual assertion
+is_a: ECO:0006348 ! host penetration assay evidence
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006387
+name: host penetration assay evidence used in automatic assertion
+def: "A type of host penetration assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0001831 ! host colonization assay evidence used in automatic assertion
+is_a: ECO:0006348 ! host penetration assay evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 PHI-base:AlayneCuzick xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006388
+name: iodine-125-labeled ligand binding evidence used in manual assertion
+def: "A type of iodine-125-labeled ligand binding evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006349 ! iodine-125-labeled ligand binding evidence
+is_a: ECO:0007009 ! radioligand binding assay evidence used in manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006389
+name: iodine-125-labeled ligand binding evidence used in automatic assertion
+def: "A type of iodine-125-labeled ligand binding evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006349 ! iodine-125-labeled ligand binding evidence
+is_a: ECO:0007591 ! radioligand binding assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006390
+name: bio-layer interferometry evidence used in manual assertion
+def: "A type of bio-layer interferometry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000269 ! experimental evidence used in manual assertion
+is_a: ECO:0006350 ! bio-layer interferometry evidence
+property_value: ECO:9000002 "EXP" xsd:string
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006391
+name: bio-layer interferometry evidence used in automatic assertion
+def: "A type of bio-layer interferometry evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006350 ! bio-layer interferometry evidence
+is_a: ECO:0007816 ! molecule detection assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006392
+name: bait-prey interaction evidence used in manual assertion
+def: "A type of bait-prey interaction evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006076 ! protein binding evidence used in manual assertion
+is_a: ECO:0006351 ! bait-prey interaction evidence
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
+created_by: snadendla
+
+[Term]
+id: ECO:0006393
+name: bait-prey interaction evidence used in automatic assertion
+def: "A type of bait-prey interaction evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006351 ! bait-prey interaction evidence
+is_a: ECO:0007373 ! protein binding evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
 created_by: snadendla
 
 [Term]
@@ -15960,7 +16592,7 @@ name: bait-prey hybrid interaction evidence used in automatic assertion
 def: "A type of bait-prey hybrid interaction evidence that is used in an automatic assertion." [ECO:RCT]
 synonym: "bait-prey protein pull-down evidence" EXACT []
 is_a: ECO:0000025 ! bait-prey hybrid interaction evidence
-is_a: ECO:0007373 ! protein binding evidence used in automatic assertion
+is_a: ECO:0006393 ! bait-prey interaction evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -18997,7 +19629,7 @@ name: biological system reconstruction evidence used in manual assertion
 def: "A type of biological system reconstruction evidence that is used in a manual assertion." []
 is_a: ECO:0000088 ! biological system reconstruction evidence
 is_a: ECO:0000305 ! curator inference used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "NAS" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
 
@@ -19007,7 +19639,7 @@ name: biological system reconstruction evidence by experimental evidence used in
 def: "A type of biological system reconstruction evidence by experimental evidence that is used in a manual assertion." []
 is_a: ECO:0005551 ! biological system reconstruction evidence by experimental evidence
 is_a: ECO:0007746 ! biological system reconstruction evidence used in manual assertion
-property_value: ECO:9000002 "IC" xsd:string
+property_value: ECO:9000002 "EXP" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
 
