@@ -1,18 +1,18 @@
 ### Navigation
 
-* [Getting Started](https://github.com/evidenceontology/evidenceontology/tree/master/editors#getting-started)
-* [Editing](https://github.com/evidenceontology/evidenceontology/tree/master/editors#editing)
-    * [Adding classes](https://github.com/evidenceontology/evidenceontology/tree/master/editors#adding-classes)
-    * [Adding classes with ROBOT](https://github.com/evidenceontology/evidenceontology/tree/master/editors#adding-classes-with-robot)
-    * [Reasoning](https://github.com/evidenceontology/evidenceontology/tree/master/editors#run-the-reasoner)
-    * [Committing](https://github.com/evidenceontology/evidenceontology/tree/master/editors#commit)
-* [Releasing](https://github.com/evidenceontology/evidenceontology/tree/master/editors#make-release)
+* [Getting Started](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#getting-started)
+* [Editing](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#editing)
+    * [Adding classes](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#adding-classes)
+    * [Adding classes with ROBOT](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#adding-classes-with-robot)
+    * [Reasoning](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#run-the-reasoner)
+    * [Committing](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#commit)
+* [Releasing](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#make-release)
 
 
 # Getting Started
 -------
 ### Download Protégé
-Latest version is 5.2.0. [Download here](http://protege.stanford.edu/products.php#desktop-protege) and follow the documentation on their wiki.
+Latest version is 5.5.0. [Download here](http://protege.stanford.edu/products.php#desktop-protege) and follow the documentation on their wiki.
 
 If you have never used Protégé, we recommend giving the [user documentation](https://protegewiki.stanford.edu/wiki/Protege4UserDocs) a quick read before getting started.
 
@@ -32,7 +32,7 @@ git pull
 # Editing
 -------
 ### Minor Edits
-Open `eco-edit.owl` in Protégé, make changes as necessary. Save your work, then [commit](https://github.com/evidenceontology/evidenceontology/tree/master/editors#commit).
+Open `eco-edit.owl` in Protégé, make changes as necessary. Save your work, then [commit](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#commit).
 
 ### Adding Classes
 Each ECO editor has a specified ID range in `eco-idranges.owl`. After acquiring an ID range, you may begin adding classes. When creating new classes in Protégé, make sure your application is set up to create the appropriate IRIs. Follow these steps to configure:
@@ -64,7 +64,7 @@ Each ECO editor has a specified ID range in `eco-idranges.owl`. After acquiring 
 \* *This option will impact the IRI generation for other ontologies you are working on in Protégé. If you prefer, you can leave this unchecked, but you will have to update the settings each time you begin a new session.*
 
 #### To add a new class:
-1. Browse to the parent class (always in `eco-edit.owl`!) and select this class in the Class hierarchy view
+1. Browse to the parent class (always in `eco-edit.owl`) and select this class in the Class hierarchy view
 
 2. Click the **Add Subclass** button (left-most button under the Class hierarchy header)
     * OR: Edit -> Create Child, OR: Ctrl+E
@@ -98,8 +98,8 @@ Each ECO editor has a specified ID range in `eco-idranges.owl`. After acquiring 
 #### To add a "used in ... assertion" (manual or automatic) class:
 1. Follow above steps
     * Label should be "X evidence used in ... assertion"
-    * Definition should be "A type of [parent of X evidence] used in ... assertion where [definition of X]"
-        * i.e. "high throughput evidence used in manual assertion": A type of evidence that is used in an automatic assertion where data generation is automated with equipment to allow for assaying large numbers of samples or molecules in parallel.
+    * Definition should be "A type of X evidence that is used in ... assertion.
+        * i.e. "experimental evidence used in manual assertion": A type of experimental evidence that is used in a manual assertion.
         
 2. Add equivalence statement
     * Find **Description** view (usually below annotations)
@@ -115,14 +115,14 @@ Each ECO editor has a specified ID range in `eco-idranges.owl`. After acquiring 
         * Substitute with either 'manual' or 'automatic'
     * Click OK
     
-3. [Run reasoner](https://github.com/evidenceontology/evidenceontology/tree/master/editors#run-the-reasoner) to ensure no errors were made
+3. [Run reasoner](https://github.com/evidenceontology/evidenceontology/tree/master/src/ontology/README-editors.md#run-the-reasoner) to ensure no errors were made
 
 4. Proof-read and save changes
 
 ### Adding Classes with ROBOT
 For addition or update of multiple classes at once, we recommend the use of [ROBOT](https://github.com/ontodev/robot). Visit their GitHub (linked) for installation instructions.
 
-ROBOT includes a template tool to build OWL files from a CSV spreadsheet. The easiest way to edit these spreadsheets is in Excel, then save as CSV. Start off with our [ECO ROBOT Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/eco-robot-template.csv) and add your desired classes. The first row contains headers, which ROBOT ignores. The second row contains the template string for the OWL conversion. These two rows should not be changed. 
+ROBOT includes a template tool to build OWL files from a CSV spreadsheet. The easiest way to edit these spreadsheets is in Excel, then save as CSV. Start off with our ECO ROBOT template and add your desired classes. The first row contains headers, which ROBOT ignores. The second row contains the template string for the OWL conversion. These two rows should not be changed. 
 
 Our template includes the following (headers in bold are required):
 
@@ -134,7 +134,7 @@ Our template includes the following (headers in bold are required):
 | **Definition** | A obo:IAO_0000115 | Aristotelian definition ('A type of [parent evidence]...'). |
 | **Source** | A obo:IAO_0000119 | Reference to the source for definition (i.e. PMID, the person, etc.) |
 | **Namespace** | A oboInOwl:hasOBONamespace | Should always be 'eco'.
-| **Term Editor** | A obo:IAO_0000117 | Reference to the creator of class (i.e. jdoe). |
+| **created by** | A oboInOwl:created_by | Reference to the creator of class (i.e. jdoe). |
 | **Date** | A oboInOwl:creation_date | Formatted date (i.e. 2016-12-29T16:01:01Z). |
 | **Class Type** | CLASS_TYPE | Specifies if the class expression will be for a subclass or equivalent class*. |
 | **ParentIRI** | CI | ID of parent class (ECO:xxxxxxx). |
@@ -145,16 +145,20 @@ Our template includes the following (headers in bold are required):
 | Term Requester | A obo:IAO_0000234 | The person, group, or project that requested the term. |
 | Example of Use | A obo:IAO_0000112 | Clarification of how the term should be used for annotations. |
 | Comment | A rdfs:comment | Clarification of definition. See above for use cases. |
+| Equivalent | C % and (used_in some 'automatic/manual assertion') | This is used only for either automatic or manual assertion terms. The value for this will have the parent class of an assertion term. Keep only one, either automatic or manual in the previous cell (C % and (used_in some 'automatic/manual assertion') based on the assertion term to be made |
+| Used in | C used_in some % | It can have values either automatic or manual assertion based on the assertion term to be made |
+| has GO evidence code | A obo:ECO_9000002 | usually this is the GO code associated with the parent assertion term |
 
-\* *CLASS_TYPE should generally be 'subclass', unless a manual assertion class or OBI mapping is being created. In that case, 'equivalent' should be used. 'equivalent' classes do not need an entry in the ParentIRI column, rather they will have a different column with a ROBOT string that begins with a 'C'. See the other templates below for examples.*
+
+\* *CLASS_TYPE should generally be 'subclass', unless a manual/automatic assertion class or OBI mapping is being created. In that case, 'equivalent' should be used. 'equivalent' classes do not need an entry in the ParentIRI column, rather they will have a different column with a ROBOT string that begins with a 'C'. See the other templates below for examples.*
 
 This is not an exhaustive list of the annotation properties used in ECO, but it is what is recommended for a new class. Synonym and Comment are not necessary, but may add clarity. Any cell that is left blank will not be translated into OWL.
 
 In this sub-directory, there are various other template examples which cover different scenarios. The template described above works for general class additions. Please read the 'Comment' column for more information in these templates.
-* [Manual Assertion Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/manual-robot-template.csv) - new class + 'used in manual assertion' child 
-* [OBI Mapping Template](http://github.com/evidenceontology/evidenceontology/blob/master/editors/obi-mapping-template.csv) - addition of OBI mappings to existing classes
-* [New Class with Mapping Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/new-with-mapping-template.csv) - new class addition + OBI mappings
-* [Full New Class Template](https://github.com/evidenceontology/evidenceontology/blob/master/editors/full-robot-template.csv) - new class + 'used in manual assertion' child + OBI mappings
+* [Manual Assertion Template](https://github.com/evidenceontology/evidenceontology/blob/master/src/deprecated/editors/manual-robot-template.csv) - new class + 'used in manual assertion' child 
+* [OBI Mapping Template](http://github.com/evidenceontology/evidenceontology/blob/master/src/deprecated/editors/obi-mapping-template.csv) - addition of OBI mappings to existing classes
+* [New Class with Mapping Template](https://github.com/evidenceontology/evidenceontology/blob/master/src/deprecated/editors/new-with-mapping-template.csv) - new class addition + OBI mappings
+* [Full New Class Template](https://github.com/evidenceontology/evidenceontology/blob/master/src/deprecated/editors/full-robot-template.csv) - new class + 'used in manual assertion' child + OBI mappings
 
 Once you are done adding classes to the spreadsheet, save it as CSV and run the following command:
 ```
@@ -184,10 +188,10 @@ robot template --template [PATH_TO_CSV]
 ROBOT generates OWL files in RDF/XML syntax. `eco-edit.owl` is saved in OWL Functional Syntax. *Make sure* to open your final file (after merging) in Protege, SAVE AS and select 'OWL Function Syntax'. Simply replace your generated file with this new save to keep the format consistent.
 
 ### Run the Reasoner
+
 Before saving any changes, it is a good idea to run the reasoner. The ELK reasoner should be selected in Protégé (ELK 0.4.3 for Protege-OWL 5). Start the reasoner, and ignore the alerts that state reasoning may be incomplete and that axiom is ignored. For more information on ELK, [visit the wiki](http://protegewiki.stanford.edu/wiki/ELK).
 
 ### Commit
-
 From your local evidenceontology directory:
 ```
 git add eco-edit.owl
@@ -215,11 +219,10 @@ You can use the same command (replacing master with the branch name) to return t
 
 ### Post-editing steps
 
-* ~~[Check Jenkins](http://build.berkeleybop.org/job/build-eco/)~~
 * Resolve tracker item
 
 
-# Make Release
+### Make Release
 -----
 
 The eco-edit file is generally not visible to the public (of course, they can find it in GitHub if they try). The editors are free to make changes they are not yet comfortable releasing. Releases are typically done the first Friday of the month, unless there is an urgent need for an earlier release. Regardless, only **one** release should be done per day.
