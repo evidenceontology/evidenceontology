@@ -4,7 +4,7 @@
 
 If you use ECO in your work, **please consider citing ECO**. We appreciate the attribution. 
 
-**Please cite our most recent paper, PMID 30407590**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
+**Please cite our most recent paper, PMID 34986598**: [Nadendla S, Jackson R, Munro J, Quaglia F, Mészáros B, Olley D, Hobbs ET, Goralski SM, Chibucos M, Mungall CJ, Tosatto SCE, Erill I, Giglio MG. (2022) **ECO: the Evidence and Conclusion Ontology, an update for 2022.**. _Nucleic Acids Research_. **gkab1025**.](https://doi.org/10.1093/nar/gkab1025)
 
 Follow **[@ecoontology on Twitter](https://twitter.com/ecoontology)** and check out the **[ECO website evidenceontology.org](http://www.evidenceontology.org)**.
 
@@ -14,13 +14,13 @@ The **[Evidence & Conclusion Ontology (ECO)](http://www.evidenceontology.org/)**
 
 ECO is an ontology comprising two root (upper-level) classes, 'evidence' and 'assertion method', where **'evidence'** is defined as "a type of information that is used to support an assertion" and **'assertion method'** is defined as "a means by which a statement is made about an entity." Together 'evidence' and 'assertion method' can be combined to describe both the _supporting evidence_ for an assertion (such as a gene product annotation) and _the agent who made the assertion_, i.e. a human being or a computer. However, ECO can not be used to make an assertion itself; for that, one would use some other means, such as another ontology, controlled vocabulary, or <nowiki>[less desirably]</nowiki> a free text description.
 
-ECO was originally created around the year 2000 to support [Gene Ontology (GO)](http://geneontology.org/) gene product annotations. GO continues to use ECO, now in the [AmiGO2](http://amigo2.geneontology.org/amigo) browser, [Noctua](http://noctua.berkeleybop.org/) web-based tool, and other applications. Today, **[many projects use ECO](http://www.evidenceontology.org/about_us/#usergroups)** to document evidence information in scientific research, including protein & gene resources, model organism databases, software applications, phenotype projects, and more. ECO collaborates with the [Ontology for Biomedical Investigations](http://obi-ontology.org) Consortium in order to achieve [harmonious interactions](https://f1000research.com/posters/6-395). ECO is committed to the principles established by the [Open Biological and Biomedical Ontologies Foundry](http://obofoundry.org/) (OBO Foundry).
+ECO was originally created around the year 2000 to support [Gene Ontology (GO)](http://geneontology.org/) gene product annotations. GO continues to use ECO, now in the [AmiGO2](http://amigo.geneontology.org/amigo/landing) browser, [Noctua](http://noctua.berkeleybop.org/) web-based tool, and other applications. Today, **[many projects use ECO](http://www.evidenceontology.org/about_eco/#usergroups)** to document evidence information in scientific research, including protein & gene resources, model organism databases, software applications, phenotype projects, and more. ECO collaborates with the [Ontology for Biomedical Investigations](http://obi-ontology.org) Consortium in order to achieve [harmonious interactions](https://f1000research.com/posters/6-395). ECO is committed to the principles established by the [Open Biological and Biomedical Ontologies Foundry](http://obofoundry.org/) (OBO Foundry).
 
 ***
 
 **DEVELOPMENT INFORMATION**
 
-If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**. If you are new to ECO, please take a look at our **[Rules for New Term Requests](http://www.evidenceontology.org/userguide/#newtermrules)** on the ECO website or on the **[ECO GitHub wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**... and thanks! 
+If you want to **help grow ECO for your own project** please contact us via the **GitHub Issue tracker**. If you are new to ECO, please take a look at our **[Rules for New Term Requests](https://evidenceontology.org/submit_term_request/)** on the ECO website or on the **[ECO GitHub wiki](https://github.com/evidenceontology/evidenceontology/wiki/New-term-request-how-to)**... and thanks! 
 
 *****When you contribute your knowledge to ECO, everyone benefits.*****
 
@@ -40,11 +40,11 @@ ECO is released into the public domain under **CC0 1.0 Universal (CC0 1.0)**. An
 
 **PUBLICATIONS ABOUT ECO**
 
-**Please cite PMID 30407590**: [Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
+**Please cite PMID 34986598**: [Nadendla S, Jackson R, Munro J, Quaglia F, Mészáros B, Olley D, Hobbs ET, Goralski SM, Chibucos M, Mungall CJ, Tosatto SCE, Erill I, Giglio MG. (2022) **ECO: the Evidence and Conclusion Ontology, an update for 2022.**. _Nucleic Acids Research_. **gkab1025**.](https://doi.org/10.1093/nar/gkab1025)
 
 Selected bibliography:
 
-[Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2018) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
+[Giglio M, Tauber R, Nadendla S, Munro J, Olley D, Ball S, Mitraka E, Schriml LM, Gaudet P, Hobbs ET, Erill I, Siegele DA, Hu JC, Mungall C, and Chibucos MC. (2019) **ECO, the Evidence & Conclusion Ontology: community standard for evidence information**. _Nucleic Acids Research_. **gky1036**.](https://doi.org/10.1093/nar/gky1036)
 
 [Tauber R & Chibucos MC. (2017) **Logical axiomatization of the Evidence & Conclusion Ontology (ECO) by integrating external ontology classes**, in _Proceedings of the 8th International Conference on Biomedical Ontology (ICBO 2017)_, September 13-15, 2017, Newcastle-upon-Tyne, United Kingdom. Edited by: Matthew Horridge, Phillip Lord, Jennifer D. Warrender.](http://ceur-ws.org/Vol-2137/paper_25.pdf)
 
