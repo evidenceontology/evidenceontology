@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2022-08-05/eco-basic.owl
-date: 05:08:2022 15:34
+data-version: eco/releases/2022-10-10/eco-basic.owl
+date: 10:10:2022 16:25
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -2183,10 +2183,12 @@ creation_date: 2011-01-10T06:16:20Z
 id: ECO:0000295
 name: RNA-sequencing evidence
 alt_id: ECO:0000357
+alt_id: ECO:0001821
 def: "A type of transcript evidence based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
 comment: Total RNA is isolated from cells and mRNA is purified by targeting the 3' polyadenylated (poly(A)) tail with poly(T) oligos covalently attached to a substrate. Next, cDNA fragments are generated either by hydrolysis of RNA into 200-300 base oligonucleotides, preceded by reverse transcription, or by reverse transcription initiated by random primers. The cDNA second strand is synthesized, fragments are adapter ligated and high-throughput sequencing is performed by Roche 454, Illumina, ABI-SOLiD, or another HT sequencing technology. Resulting sort reads are aligned against a reference genome, and downstream analysis is performed.
 synonym: "differential gene expression evidence from RNA-seq experiment" NARROW []
 synonym: "RNA sequencing" RELATED []
+synonym: "RNA sequencing assay evidence" EXACT []
 synonym: "RNA-seq evidence" EXACT []
 synonym: "RNAseq evidence" EXACT []
 synonym: "whole transcriptome shotgun sequencing" EXACT [PMID:18611170]
@@ -6534,15 +6536,6 @@ created_by: swolfish
 creation_date: 2015-11-04T09:48:38Z
 
 [Term]
-id: ECO:0001821
-name: RNA sequencing assay evidence
-comment: Use ECO:0000295 (RNA-seq evidence) in place of this term.
-property_value: IAO:0000234 "CollecTF" xsd:string
-is_obsolete: true
-created_by: swolfish
-creation_date: 2015-11-04T10:15:57Z
-
-[Term]
 id: ECO:0001822
 name: survival rate analysis evidence
 def: "A type of knockout evidence based on the survival of an organism in a particular environment where a gene for an enzyme or regulator is knocked out and results are used as a natural reporter." [ECO:SW]
@@ -8502,22 +8495,6 @@ created_by: snadendla
 creation_date: 2016-05-09T16:15:03Z
 
 [Term]
-id: ECO:0005664
-name: RNA sequencing assay evidence used in manual assertion
-comment: Use ECO:0006068 (RNA-seq evidence used in manual assertion) in place of this term.
-is_obsolete: true
-created_by: snadendla
-creation_date: 2016-05-09T16:18:35Z
-
-[Term]
-id: ECO:0005665
-name: RNA sequencing assay evidence used in automatic assertion
-comment: Use ECO:0006069 (RNA-seq evidence used in automatic assertion) in place of this term.
-is_obsolete: true
-created_by: snadendla
-creation_date: 2016-05-09T16:19:38Z
-
-[Term]
 id: ECO:0005666
 name: S1 nuclease protection assay evidence used in manual assertion
 def: "A type of S1 nuclease protection assay evidence that is used in a manual assertion." [ECO:SN]
@@ -9378,7 +9355,9 @@ creation_date: 2017-05-16T10:55:40Z
 [Term]
 id: ECO:0006068
 name: RNA-sequencing evidence used in manual assertion
+alt_id: ECO:0005664
 def: "A type of high throughput nucleotide sequencing assay evidence used in a manual assertion based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
+synonym: "RNA sequencing assay evidence used in manual assertion" EXACT []
 synonym: "RNA sequencing|differential gene expression evidence from RNA-seq experiment" RELATED []
 synonym: "RNA-seq evidence used in manual assertion" EXACT []
 synonym: "RNAseq evidence used in manual assertion" EXACT []
@@ -9393,7 +9372,9 @@ creation_date: 2017-06-28T10:37:02Z
 [Term]
 id: ECO:0006069
 name: RNA-sequencing evidence used in automatic assertion
+alt_id: ECO:0005665
 def: "A type of high throughput nucleotide sequencing assay evidence used in an automatic assertion based on high-throughput (HT) sequencing of fragmented cDNA molecules." [ECO:MCC]
+synonym: "RNA sequencing assay evidence used in automatic assertion" EXACT []
 synonym: "RNA sequencing|differential gene expression evidence from RNA-seq experiment" RELATED []
 synonym: "RNA-seq evidence used in automatic assertion" EXACT []
 synonym: "RNAseq evidence used in automatic assertion" EXACT []
@@ -12298,6 +12279,36 @@ is_a: ECO:0007373 ! protein binding evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 MimicDB:KatalinParej xsd:string
 created_by: snadendla
+
+[Term]
+id: ECO:0006395
+name: self-reported ancestry evidence
+def: "A type of self-reported individual's statement evidence in which a person reports their ancestry and that information is taken at face value." [ECO:MG]
+is_a: ECO:0006153 ! self-reported individual's statement evidence
+property_value: IAO:0000234 "daniwelter" xsd:string
+created_by: snadendla
+creation_date: 2022-10-07T05:24:13Z
+
+[Term]
+id: ECO:0006396
+name: self-reported ancestry evidence used in manual assertion
+def: "A type of self-reported ancestry evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0006157 ! self-reported individual's statement evidence used in manual assertion
+is_a: ECO:0006395 ! self-reported ancestry evidence
+property_value: IAO:0000234 "daniwelter" xsd:string
+created_by: snadendla
+creation_date: 2022-10-07T05:24:13Z
+
+[Term]
+id: ECO:0006397
+name: self-reported ancestry evidence used in automatic assertion
+def: "A type of self-reported ancestry evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0006158 ! self-reported individual's statement evidence used in automatic assertion
+is_a: ECO:0006395 ! self-reported ancestry evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "daniwelter" xsd:string
+created_by: snadendla
+creation_date: 2022-10-07T05:24:13Z
 
 [Term]
 id: ECO:0007000
