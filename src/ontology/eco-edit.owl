@@ -2121,6 +2121,7 @@ Declaration(AnnotationProperty(owl:deprecated))
 
 # Annotation Property: obo:ECO_9000002 (has GO evidence code)
 
+AnnotationAssertion(obo:IAO_0000115 obo:ECO_9000002 "A mapping of an evidence term to a Gene Ontology evidence code."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:ECO_9000002 "has GO evidence code")
 
 # Annotation Property: obo:IAO_0000112 (example of usage)
@@ -2302,7 +2303,7 @@ AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
 
 # Object Property: obo:ECO_9000000 (used_in)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:cjm"^^xsd:string) obo:IAO_0000115 obo:ECO_9000000 "A relation connecting a piece of evidence to an assertion method, where that assertion method is supported by the evidence."^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_9000000 "A relation connecting an evidence type to an assertion method where the assertion method describes the type of process employed to evaluate the evidence."^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_9000000 "mchibucos"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_9000000 "2010-12-09T05:00:20Z"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasDbXref obo:ECO_9000000 "ECO:9000000"^^xsd:string)
@@ -2317,6 +2318,7 @@ ObjectPropertyRange(obo:ECO_9000000 obo:ECO_0000217)
 
 # Object Property: obo:ECO_9000001 (uses)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:SN"^^xsd:string) obo:IAO_0000115 obo:ECO_9000001 "A relation that is an inverse of \"used_in\" relation."^^xsd:string)
 AnnotationAssertion(oboInOwl:hasDbXref obo:ECO_9000001 "ECO:9000001"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_9000001 "eco"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:ECO_9000001 "uses"^^xsd:string)
@@ -14867,7 +14869,7 @@ SubClassOf(obo:ECO_0006185 obo:ECO_0000361)
 
 # Class: obo:ECO_0006186 (combinatorial experimental and author inference evidence contained in single publication)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MG"^^xsd:string) obo:IAO_0000115 obo:ECO_0006186 "A type of combinatorial experimental and author inference evidence where the experimental results and author inference are contained in a single publication. "^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MG"^^xsd:string) obo:IAO_0000115 obo:ECO_0006186 "A type of combinatorial experimental and author inference evidence where the experimental results and author inference are contained in a single publication."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006186 "DisProt:BalintMeszaros"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006186 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006186 "eco"^^xsd:string)
@@ -16816,7 +16818,7 @@ SubClassOf(obo:ECO_0006335 obo:ECO_0001115)
 
 # Class: obo:ECO_0006336 (intrinsic fluorescence-based protein conformation evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://en.wikipedia.org/wiki/Fluorescence_spectroscopy"^^xsd:string) obo:IAO_0000115 obo:ECO_0006336 "A type of fluorescence evidence used to study protein conformation by measuring the emissions of aromatic amino acids, specifically tryptophan, tyrosine and, to a minor extent, phenylalanine residues. "^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "url:https://en.wikipedia.org/wiki/Fluorescence_spectroscopy"^^xsd:string) obo:IAO_0000115 obo:ECO_0006336 "A type of fluorescence evidence used to study protein conformation by measuring the emissions of aromatic amino acids, specifically tryptophan, tyrosine and, to a minor extent, phenylalanine residues."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006336 "DisProt:FedericaQuaglia"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006336 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006336 "eco"^^xsd:string)
@@ -16971,7 +16973,7 @@ SubClassOf(obo:ECO_0006350 obo:ECO_0005516)
 
 # Class: obo:ECO_0006351 (bait-prey interaction evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MG"^^xsd:string) obo:IAO_0000115 obo:ECO_0006351 "A type of protein binding evidence in which the use of \"bait\" molecules or proteins allows the purification or identification of a binding partner, the \"prey\". "^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "ECO:MG"^^xsd:string) obo:IAO_0000115 obo:ECO_0006351 "A type of protein binding evidence in which the use of \"bait\" molecules or proteins allows the purification or identification of a binding partner, the \"prey\"."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0006351 "MimicDB:KatalinParej"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0006351 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:ECO_0006351 "eco"^^xsd:string)
@@ -18318,8 +18320,7 @@ SubClassOf(obo:ECO_0007058 ObjectSomeValuesFrom(obo:ECO_9000000 obo:ECO_0000218)
 
 # Class: obo:ECO_0007059 (confocal laser scanning microscopy evidence)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "URL:http://bitesizebio.com/19958/what-is-confocal-laser-scanning-microscopy/"^^xsd:string) obo:IAO_0000115 obo:ECO_0007059 "A type of confocal microscopy evidence that results in an image that is built up pixel-by-pixel by collecting the emitted photons from the fluorophores in the sample by passing a laser beam through a light source aperture which is then focused by an objective lens into a small area on the surface of the sample.
-"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "URL:http://bitesizebio.com/19958/what-is-confocal-laser-scanning-microscopy/"^^xsd:string) obo:IAO_0000115 obo:ECO_0007059 "A type of confocal microscopy evidence that results in an image that is built up pixel-by-pixel by collecting the emitted photons from the fluorophores in the sample by passing a laser beam through a light source aperture which is then focused by an objective lens into a small area on the surface of the sample."^^xsd:string)
 AnnotationAssertion(obo:IAO_0000234 obo:ECO_0007059 "OMP"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:ECO_0007059 "snadendla"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:ECO_0007059 "2018-03-14T12:44:11Z"^^xsd:string)
