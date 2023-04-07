@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2022-12-04/eco-basic.owl
-date: 04:12:2022 17:21
+data-version: eco/releases/2023-04-07/eco-basic.owl
+date: 07:04:2023 17:43
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -644,7 +644,7 @@ creation_date: 2009-03-20T11:55:18Z
 [Term]
 id: ECO:0000085
 name: immunoprecipitation evidence
-def: "A type of protein binding evidence that involves precipitation of a multivalent antigen by a bivalent antibody for protein isolation." [ECO:MCC, ECO:SW, TAIR:TED]
+def: "A type of protein binding evidence where an antibody specific for a target protein is used to precipitate the target protein along with any other molecules (e.g. protein, nucleic acid) that are bound to the target protein." [ECO:MCC, ECO:SW, TAIR:TED]
 comment: Transcription factors isolated in this way can be incubated with a radiolabeled probe to demonstrate binding.
 synonym: "immunoprecipitation" RELATED []
 is_a: ECO:0000024 ! protein binding evidence
@@ -3244,9 +3244,9 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001032
-name: constitutively active mutant evidence
-def: "A type of experimental phenotypic evidence resulting from a constitutively active mutant (CAM), resulting in mutant proteins that remain active in the absence of upstream signals." [PMID:12217490]
-is_a: ECO:0000059 ! experimental phenotypic evidence
+name: constitutively active mutant protein evidence
+def: "A type of mutant phenotypic evidence resulting from a mutation causing a change to a protein sequence that produces a constitutively active mutant protein (CAM), that remains active in the absence of upstream signals." [PMID:12217490]
+is_a: ECO:0000015 ! mutant phenotype evidence
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -4572,11 +4572,11 @@ creation_date: 2014-03-17T16:17:58Z
 
 [Term]
 id: ECO:0001169
-name: constitutively active mutant evidence used in manual assertion
-def: "A type of constitutively active mutant evidence that is used a in manual assertion." [ECO:MCC]
-is_a: ECO:0001032 ! constitutively active mutant evidence
-is_a: ECO:0007634 ! experimental phenotypic evidence used in manual assertion
-property_value: ECO:9000002 "EXP" xsd:string
+name: constitutively active mutant protein evidence used in manual assertion
+def: "A type of constitutively active mutant protein evidence that is used a in manual assertion." [ECO:MCC]
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0001032 ! constitutively active mutant protein evidence
+property_value: ECO:9000002 "IMP" xsd:string
 property_value: IAO:0000234 SIB:PG xsd:string
 created_by: mchibucos
 creation_date: 2014-03-17T16:20:23Z
@@ -8810,8 +8810,8 @@ creation_date: 2016-11-28T11:44:05Z
 
 [Term]
 id: ECO:0006016
-name: author statement from published clinical study
-def: "A type of traceable author statement that is based on a publication about a clinical study." []
+name: author statement supported from referenced clinical study
+def: "A type of author statement supported by traceable reference in which the traceable reference is a clinical study." []
 synonym: "published clinical study evidence" EXACT []
 synonym: "traceable author statement from published clinical study" RELATED []
 is_a: ECO:0000033 ! author statement supported by traceable reference
@@ -8820,13 +8820,13 @@ creation_date: 2016-11-30T09:44:47Z
 
 [Term]
 id: ECO:0006017
-name: author statement from published clinical study used in manual assertion
-def: "A type of author statement from published clinical study that is used in a manual assertion." []
+name: author statement supported from referenced clinical study used in manual assertion
+def: "A type of author statement supported from referenced clinical study that is used in a manual assertion." []
 comment: Created and used by the Human Phenotype Ontology (HPO) Annotations group. Here it is used when evidence for an HPO annotation is information extracted from articles in the medical literature.
 synonym: "PCS" EXACT [HPO:PCS]
 synonym: "published clinical study evidence" BROAD []
 is_a: ECO:0000304 ! author statement supported by traceable reference used in manual assertion
-is_a: ECO:0006016 ! author statement from published clinical study
+is_a: ECO:0006016 ! author statement supported from referenced clinical study
 property_value: ECO:9000002 "TAS" xsd:string
 property_value: seeAlso http://human-phenotype-ontology.github.io/documentation.html#annot xsd:string
 created_by: rctauber
@@ -15988,10 +15988,10 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007371
-name: constitutively active mutant evidence used in automatic assertion
-def: "A type of constitutively active mutant evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001032 ! constitutively active mutant evidence
-is_a: ECO:0007635 ! experimental phenotypic evidence used in automatic assertion
+name: constitutively active mutant protein evidence used in automatic assertion
+def: "A type of constitutively active mutant protein evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0001032 ! constitutively active mutant protein evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
@@ -17682,10 +17682,10 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007539
-name: author statement from published clinical study used in automatic assertion
-def: "A type of author statement from published clinical study that is used in an automatic assertion." [ECO:RCT]
+name: author statement supported from referenced clinical study used in automatic assertion
+def: "A type of author statement supported from referenced clinical study that is used in an automatic assertion." [ECO:RCT]
 synonym: "traceable author statement from published clinical study used in automatic assertion" RELATED []
-is_a: ECO:0006016 ! author statement from published clinical study
+is_a: ECO:0006016 ! author statement supported from referenced clinical study
 is_a: ECO:0007321 ! author statement supported by traceable reference used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
@@ -20654,6 +20654,123 @@ comment: This type of inference may be made by either a curator or an author.
 is_a: ECO:0000361 ! inferential evidence
 created_by: beckyjackson
 creation_date: 2019-11-22T06:51:00Z
+
+[Term]
+id: ECO:0008000
+name: machine learning method evidence
+def: "A type of computational evidence in which computational systems build models based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so. Such systems are trained on a combination of existing data about an entity, and are applied to the generation of new labels, such as numerical or textual or categorical." [url:https\://en.wikipedia.org/wiki/Machine_learning]
+is_a: ECO:0007672 ! computational evidence
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008001
+name: deep learning method evidence
+def: "A type of machine learning method evidence which leverages a broad suite of neural network models, which use a combination of data attributes of an entity called features as inputs, and map them to outputs through multiple layers of connected hidden units, whose parameters are learned from data." [url:https\://en.wikipedia.org/wiki/Deep_learning, url:https\://storage.googleapis.com/brain-genomics-public/research/proteins/protnlm/uniprot_2022_04/protnlm_preprint_draft.pdf, url:https\://www.uniprot.org/help/ProtNLM]
+is_a: ECO:0008000 ! machine learning method evidence
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008002
+name: rule-based machine learning method evidence
+def: "A type of machine learning method evidence which uses a combination of data attributes to derive knowledge used to create a set of rules. These rules collectively represent the prediction model and are in the form of \"IF:THEN\" statements. The knowledge applied can be traced back to the rules and the original data." [UniProt:Vishal Joshi, url:https\://borgelt.net/apriori.html, url:https\://www.uniprot.org/help/arba]
+is_a: ECO:0008000 ! machine learning method evidence
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008003
+name: machine learning method evidence used in manual assertion
+def: "A type of machine learning method evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0007668 ! computational evidence used in manual assertion
+is_a: ECO:0008000 ! machine learning method evidence
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008004
+name: machine learning method evidence used in automatic assertion
+def: "A type of machine learning method evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0007669 ! computational evidence used in automatic assertion
+is_a: ECO:0008000 ! machine learning method evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008005
+name: deep learning method evidence used in manual assertion
+def: "A type of deep learning method evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0008001 ! deep learning method evidence
+is_a: ECO:0008003 ! machine learning method evidence used in manual assertion
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008006
+name: deep learning method evidence used in automatic assertion
+def: "A type of deep learning method evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0008001 ! deep learning method evidence
+is_a: ECO:0008004 ! machine learning method evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008007
+name: rule-based machine learning method evidence used in manual assertion
+def: "A type of rule-based machine learning method evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0008002 ! rule-based machine learning method evidence
+is_a: ECO:0008003 ! machine learning method evidence used in manual assertion
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008008
+name: rule-based machine learning method evidence used in automatic assertion
+def: "A type of rule-based machine learning method evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0008002 ! rule-based machine learning method evidence
+is_a: ECO:0008004 ! machine learning method evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
+property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
+property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
+property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
+created_by: snadendla
+creation_date: 2023-04-07T05:36:49Z
 
 [Typedef]
 id: used_in
