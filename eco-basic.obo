@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2023-04-07/eco-basic.owl
-date: 07:04:2023 17:43
+data-version: eco/releases/2023-09-03/eco-basic.owl
+date: 03:09:2023 01:18
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -2932,7 +2932,6 @@ subset: valid_with_protein_complex
 synonym: "IEA" EXACT [GOECO:IEA]
 synonym: "inferred from electronic annotation" EXACT [GOECO:IEA]
 xref: GO_REF:0000003 "Gene Ontology annotation based on Enzyme Commission mapping."
-xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
 xref: GO_REF:0000020 "Electronic Gene Ontology annotations created by transferring manual GO annotations between orthologous microbial proteins."
 xref: GO_REF:0000041 "IEA (UniProt UniPathway)"
 xref: GO_REF:0000043 "Gene Ontology annotation based on UniProtKB/Swiss-Prot keyword mapping."
@@ -15497,6 +15496,8 @@ creation_date: 2018-05-14T09:47:55Z
 id: ECO:0007322
 name: curator inference used in automatic assertion
 def: "A type of curator inference that is used in an automatic assertion." [ECO:RCT]
+xref: GO_REF:0000004 "Gene Ontology annotation based on Swiss-Prot keyword mapping."
+xref: GO_REF:0000023 "Gene Ontology annotation based on UniProtKB Subcellular Location vocabulary mapping."
 is_a: ECO:0000205 ! curator inference
 is_a: ECO:0007832 ! inferential evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
@@ -20669,9 +20670,9 @@ creation_date: 2023-04-07T05:36:49Z
 
 [Term]
 id: ECO:0008001
-name: deep learning method evidence
-def: "A type of machine learning method evidence which leverages a broad suite of neural network models, which use a combination of data attributes of an entity called features as inputs, and map them to outputs through multiple layers of connected hidden units, whose parameters are learned from data." [url:https\://en.wikipedia.org/wiki/Deep_learning, url:https\://storage.googleapis.com/brain-genomics-public/research/proteins/protnlm/uniprot_2022_04/protnlm_preprint_draft.pdf, url:https\://www.uniprot.org/help/ProtNLM]
-is_a: ECO:0008000 ! machine learning method evidence
+name: deep learning neural network method evidence
+def: "A type of neural network method evidence which leverages a broad suite of neural network models, which use a combination of data attributes of an entity called features as inputs, and map them to outputs through multiple layers of connected hidden units, whose parameters are learned from data." [url:https\://en.wikipedia.org/wiki/Deep_learning, url:https\://storage.googleapis.com/brain-genomics-public/research/proteins/protnlm/uniprot_2022_04/protnlm_preprint_draft.pdf, url:https\://www.uniprot.org/help/ProtNLM]
+is_a: ECO:0008013 ! neural network method evidence
 property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
 property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
 property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
@@ -20720,10 +20721,10 @@ creation_date: 2023-04-07T05:36:49Z
 
 [Term]
 id: ECO:0008005
-name: deep learning method evidence used in manual assertion
-def: "A type of deep learning method evidence that is used in a manual assertion." [ECO:SN]
-is_a: ECO:0008001 ! deep learning method evidence
-is_a: ECO:0008003 ! machine learning method evidence used in manual assertion
+name: deep learning neural network method evidence used in manual assertion
+def: "A type of deep learning neural network method evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0008001 ! deep learning neural network method evidence
+is_a: ECO:0008024 ! neural network method evidence used in manual assertion
 property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
 property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
 property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
@@ -20733,10 +20734,10 @@ creation_date: 2023-04-07T05:36:49Z
 
 [Term]
 id: ECO:0008006
-name: deep learning method evidence used in automatic assertion
-def: "A type of deep learning method evidence that is used in an automatic assertion." [ECO:SN]
-is_a: ECO:0008001 ! deep learning method evidence
-is_a: ECO:0008004 ! machine learning method evidence used in automatic assertion
+name: deep learning neural network method evidence used in automatic assertion
+def: "A type of deep learning neural network method evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0008001 ! deep learning neural network method evidence
+is_a: ECO:0008025 ! neural network method evidence used in automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 UniProt:AlexIgnatchenk xsd:string
 property_value: IAO:0000234 UniProt:ElenaSperetta xsd:string
@@ -20771,6 +20772,238 @@ property_value: IAO:0000234 UniProt:PedroRaposo xsd:string
 property_value: IAO:0000234 UniProt:VishalJoshi xsd:string
 created_by: snadendla
 creation_date: 2023-04-07T05:36:49Z
+
+[Term]
+id: ECO:0008009
+name: single molecule fluorescence in situ hybridization evidence
+def: "A type of fluorescence in situ hybridization evidence resulting from the use of fluorescent probes to localize and quantify individual RNA molecules in single cells for studying gene expression." [PMID:29889208]
+synonym: "smFISH" EXACT []
+is_a: ECO:0001047 ! fluorescence in situ hybridization evidence
+is_a: ECO:0005518 ! RNA detection assay evidence
+property_value: IAO:0000234 POMBASE:ValWood xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008010
+name: support vector machine evidence
+def: "A type of machine learning method evidence that uses a supervised learning model with associated algorithms for classification. Support vector machines aim to determine a hyperplane that separates two classes while maximizing the distance from the hyperplane to any given data point in those classes." [url:https\://www.nature.com/articles/nbt1206-1565]
+synonym: "SVM evidence" EXACT []
+is_a: ECO:0008000 ! machine learning method evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008011
+name: string-matching method evidence
+def: "A type of computational evidence that employs a string algorithm to identify a string within a larger string or body of text, where a string is a particular series of characters consisting of letters, numbers, symbols, spaces, etc." [url:https\://en.wikipedia.org/wiki/String-searching_algorithm]
+synonym: "string-searching method evidence" EXACT []
+is_a: ECO:0007672 ! computational evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008012
+name: regular expression method evidence
+def: "A type of string-matching method evidence in which patterns consisting of characters and/or symbols in particular combinations and/or order are used to identify matches in a larger string or body of text." [url:https\://en.wikipedia.org/wiki/Regular_expression]
+synonym: "regex method evidence" EXACT []
+synonym: "regexp method evidence" EXACT []
+is_a: ECO:0008011 ! string-matching method evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008013
+name: neural network method evidence
+def: "A type of machine learning method evidence in which the machine learning model consists of nodes connected to each other with edges that are organized into layers, where the edges can transmit signals between nodes such that the system acts similarly to biological neurons." [url:https\://en.wikipedia.org/wiki/Artificial_neural_network]
+is_a: ECO:0008000 ! machine learning method evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008014
+name: coordinate mapping to geographic property shapefiles
+def: "A type of computational inference where a geographic property of an entity is determined by searching coordinates associated with the entity against polygons with associated geographic properties in the form of shapefiles." [ENA:Peter]
+is_a: ECO:0000362 ! computational inference
+property_value: IAO:0000234 ENA:Peter xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008015
+name: inference of intermediate molecular structure from structure of final molecule
+def: "A type of curator inference in which the structure of a possible intermediate molecule made during a biosynthetic process is inferred based on the structure of the final molecule in the process." [ECO:MG]
+is_a: ECO:0000205 ! curator inference
+property_value: IAO:0000234 "EgonWillighagen" xsd:string
+property_value: IAO:0000234 "MatthewConroy" xsd:string
+created_by: snadendla
+creation_date: 2023-09-02T05:36:49Z
+
+[Term]
+id: ECO:0008016
+name: single molecule fluorescence in situ hybridization evidence used in manual assertion
+def: "A type of single molecule fluorescence in situ hybridization evidence that is used in a manual assertion." [ECO:SN]
+synonym: "smFISH" EXACT []
+is_a: ECO:0001182 ! fluorescence in situ hybridization evidence used in manual assertion
+is_a: ECO:0008009 ! single molecule fluorescence in situ hybridization evidence
+property_value: ECO:9000002 "IEP" xsd:string
+property_value: IAO:0000234 POMBASE:ValWood xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008017
+name: single molecule fluorescence in situ hybridization evidence used in automatic assertion
+def: "A type of single molecule fluorescence in situ hybridization evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "smFISH" EXACT []
+is_a: ECO:0007386 ! fluorescence in situ hybridization evidence used in automatic assertion
+is_a: ECO:0007818 ! RNA detection assay evidence used in automatic assertion
+is_a: ECO:0008009 ! single molecule fluorescence in situ hybridization evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 POMBASE:ValWood xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008018
+name: support vector machine evidence used in manual assertion
+def: "A type of support vector machine evidence that is used in a manual assertion." [ECO:SN]
+synonym: "SVM evidence" EXACT []
+is_a: ECO:0008003 ! machine learning method evidence used in manual assertion
+is_a: ECO:0008010 ! support vector machine evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008019
+name: support vector machine evidence used in automatic assertion
+def: "A type of support vector machine evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "SVM evidence" EXACT []
+is_a: ECO:0008004 ! machine learning method evidence used in automatic assertion
+is_a: ECO:0008010 ! support vector machine evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008020
+name: string-matching method evidence used in manual assertion
+def: "A type of string-matching method evidence that is used in a manual assertion." [ECO:SN]
+synonym: "string-searching method evidence" EXACT []
+is_a: ECO:0007668 ! computational evidence used in manual assertion
+is_a: ECO:0008011 ! string-matching method evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008021
+name: string-matching method evidence used in automatic assertion
+def: "A type of string-matching method evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "string-searching method evidence" EXACT []
+is_a: ECO:0007669 ! computational evidence used in automatic assertion
+is_a: ECO:0008011 ! string-matching method evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008022
+name: regular expression method evidence used in manual assertion
+def: "A type of regular expression method evidence that is used in a manual assertion." [ECO:SN]
+synonym: "regex method evidence" EXACT []
+synonym: "regexp method evidence" EXACT []
+is_a: ECO:0008012 ! regular expression method evidence
+is_a: ECO:0008020 ! string-matching method evidence used in manual assertion
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008023
+name: regular expression method evidence used in automatic assertion
+def: "A type of regular expression method evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "regex method evidence" EXACT []
+synonym: "regexp method evidence" EXACT []
+is_a: ECO:0008012 ! regular expression method evidence
+is_a: ECO:0008021 ! string-matching method evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008024
+name: neural network method evidence used in manual assertion
+def: "A type of neural network method evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0008003 ! machine learning method evidence used in manual assertion
+is_a: ECO:0008013 ! neural network method evidence
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008025
+name: neural network method evidence used in automatic assertion
+def: "A type of neural network method evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0008004 ! machine learning method evidence used in automatic assertion
+is_a: ECO:0008013 ! neural network method evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 AGR:KimberlyVanAuken xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008026
+name: coordinate mapping to geographic property shapefiles used in manual assertion
+def: "A type of coordinate mapping to geographic property shapefiles that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0007631 ! computational inference used in manual assertion
+is_a: ECO:0008014 ! coordinate mapping to geographic property shapefiles
+property_value: IAO:0000234 ENA:Peter xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008027
+name: coordinate mapping to geographic property shapefiles used in automatic assertion
+def: "A type of coordinate mapping to geographic property shapefiles that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000363 ! computational inference used in automatic assertion
+is_a: ECO:0008014 ! coordinate mapping to geographic property shapefiles
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 ENA:Peter xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008028
+name: inference of intermediate molecular structure from structure of final molecule used in manual assertion
+def: "A type of inference of intermediate molecular structure from structure of final molecule that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000305 ! curator inference used in manual assertion
+is_a: ECO:0008015 ! inference of intermediate molecular structure from structure of final molecule
+property_value: ECO:9000002 "IC" xsd:string
+property_value: IAO:0000234 "EgonWillighagen" xsd:string
+property_value: IAO:0000234 "MatthewConroy" xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008029
+name: inference of intermediate molecular structure from structure of final molecule used in automatic assertion
+def: "A type of inference of intermediate molecular structure from structure of final molecule that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0007322 ! curator inference used in automatic assertion
+is_a: ECO:0008015 ! inference of intermediate molecular structure from structure of final molecule
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "EgonWillighagen" xsd:string
+property_value: IAO:0000234 "MatthewConroy" xsd:string
+created_by: snadendla
+creation_date: 2023-09-03T05:36:49Z
 
 [Typedef]
 id: used_in
