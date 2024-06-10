@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2024-03-25
-date: 03:09:2023 01:18
+data-version: releases/2024-06-09
+date: 09:06:2024 21:36
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -23626,6 +23626,1978 @@ property_value: IAO:0000234 "EgonWillighagen" xsd:string
 property_value: IAO:0000234 "MatthewConroy" xsd:string
 created_by: snadendla
 creation_date: 2023-09-03T05:36:49Z
+
+[Term]
+id: ECO:0008030
+name: intrinsic disorder prediction evidence
+def: "A type of computational evidence where one or more computational tools are used to predict regions of intrinsic disorder in a protein sequence." [PMID:35102880]
+is_a: ECO:0007672 ! computational evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008031
+name: author inference based on intrinsic disorder prediction
+def: "A type of author inference in which information from intrinsic disorder prediction tools has been employed." [PMID:35102880, PMID:38177243]
+is_a: ECO:0000212 {is_inferred="true"} ! combinatorial evidence
+is_a: ECO:0006185 ! author inference
+intersection_of: ECO:0006185 ! author inference
+intersection_of: BFO:0000051 ECO:0007672 ! computational evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008032
+name: curator inference based on intrinsic disorder prediction
+def: "A type of curator inference in which information from intrinsic disorder prediction tools has been employed." [PMID:35102880, url:https\://mobidb.org/]
+is_a: ECO:0000205 ! curator inference
+is_a: ECO:0000212 {is_inferred="true"} ! combinatorial evidence
+intersection_of: ECO:0000205 ! curator inference
+intersection_of: BFO:0000051 ECO:0007672 ! computational evidence
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008033
+name: intrinsic disorder prediction evidence used in manual assertion
+def: "A type of intrinsic disorder prediction evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0007668 {is_inferred="true"} ! computational evidence used in manual assertion
+is_a: ECO:0008030 ! intrinsic disorder prediction evidence
+intersection_of: ECO:0008030 ! intrinsic disorder prediction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008034
+name: intrinsic disorder prediction evidence used in automatic assertion
+def: "A type of intrinsic disorder prediction evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0007669 {is_inferred="true"} ! computational evidence used in automatic assertion
+is_a: ECO:0008030 ! intrinsic disorder prediction evidence
+intersection_of: ECO:0008030 ! intrinsic disorder prediction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008035
+name: author inference based on intrinsic disorder prediction used in manual assertion
+def: "A type of author inference based on intrinsic disorder prediction that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
+is_a: ECO:0006216 {is_inferred="true"} ! author inference used in manual assertion
+is_a: ECO:0008031 ! author inference based on intrinsic disorder prediction
+intersection_of: ECO:0008031 ! author inference based on intrinsic disorder prediction
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008036
+name: author inference based on intrinsic disorder prediction used in automatic assertion
+def: "A type of author inference based on intrinsic disorder prediction that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
+is_a: ECO:0006217 {is_inferred="true"} ! author inference used in automatic assertion
+is_a: ECO:0008031 ! author inference based on intrinsic disorder prediction
+intersection_of: ECO:0008031 ! author inference based on intrinsic disorder prediction
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008037
+name: curator inference based on intrinsic disorder prediction used in manual assertion
+def: "A type of curator inference based on intrinsic disorder prediction that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
+is_a: ECO:0000305 {is_inferred="true"} ! curator inference used in manual assertion
+is_a: ECO:0008032 ! curator inference based on intrinsic disorder prediction
+intersection_of: ECO:0008032 ! curator inference based on intrinsic disorder prediction
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IC" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008038
+name: curator inference based on intrinsic disorder prediction used in automatic assertion
+def: "A type of curator inference based on intrinsic disorder prediction that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
+is_a: ECO:0007322 {is_inferred="true"} ! curator inference used in automatic assertion
+is_a: ECO:0008032 ! curator inference based on intrinsic disorder prediction
+intersection_of: ECO:0008032 ! curator inference based on intrinsic disorder prediction
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 DisProt:FedericaQuaglia xsd:string
+created_by: snadendla
+creation_date: 2024-05-31T05:36:49Z
+
+[Term]
+id: ECO:0008039
+name: antibody-specificity based MHC presentation evidence
+def: "A type of protein binding evidence that employs specific antibodies to determine that a specific MHC protein complex or group of MHC protein complexes presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification" EXACT []
+is_a: ECO:0000024 ! protein binding evidence
+property_value: IAO:0000112 "Determining that P62 was presented by HLA-B*15:08 by using an MHC-specific antibody to isolate that MHC molecule prior to the elution assay [PMID: 10358176]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008040
+name: antibody 10.3.6-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 10.3.6 to determine that the H2-IA protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 10.3.6" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008041
+name: antibody 14.4.4-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 14.4.4 to determine that the H2-IAg7 protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 14.4.4" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008042
+name: antibody 28-14-8S-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 28-14-8S to determine that the H2-Ld protein complex, H2-Db protein complex, and/or H2-Dq protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 28-14-8S" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the MT-19-27 peptide was presented by H2-Dq by using antibody 28-14-8S to isolate that MHC prior to elution assay [PMID:32002300]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008043
+name: antibody 34-1-2S-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 34-1-2S to determine that the mouse MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 34-1-2S" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008044
+name: antibody 34-5-8S-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 34-5-8S to determine that the H2-Dd protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 34-5-8S" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008045
+name: antibody 34-7-23S-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 34-7-23S to determine that the H2-Dd protein complex and/or H2-Kd protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 34-7-23S" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the FPPQSVL peptide was presented by a H2 class I MHC molecules by using antibody 34-7-23S to isolate that class of MHC molecules prior to elution assay [PMID:36583994]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008046
+name: antibody 4B7/8-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody 4B7/8 to determine that the pig MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - 4B7/8" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008047
+name: antibody AG2.42.7-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody AG2.42.7 to determine that the H2-IAg7 protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - AG2.42.7" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008048
+name: antibody B123.2-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody B123.2 to determine that the human MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - B123.2" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008049
+name: antibody B22-249.R1-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody B22-249.R1 to determine that the H2-Db protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - B22-249.R1" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the DGFDTLHRV peptide was presented by HLA-B*51:01 by using antibody B22-249.R1 to isolate that MHC prior to elution assay [PMID:32161166]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008050
+name: antibody B7/21-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody B7/21 to determine that the HLA-DP protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - B7/21" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the METYVNKLHEGSTYTAAVQYNVLEKDDD peptide was presented by HLA-DP by using antibody B7/21 to isolate that MHC prior to elution assay [PMID:32244010]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008051
+name: antibody B8.11.2-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody B8.11.2 to determine that the HLA-DR protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - B8.11.2" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the Alpha-actin-2 peptide was presented by HLA-DR by using antibody B8.11.2 to isolate that MHC prior to elution assay [PMID:35459695]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008052
+name: antibody B8-24-3-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody B8-24-3 to determine that the mouse MHC class I protein complex with H2-b haplotype and/or mouse MHC protein complex with H2-p haplotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - B8-24-3" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008053
+name: antibody BB7.2-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody BB7.2 to determine that HLA protein complex with A2 serotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - BB7.2" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the AMLAVLHTV peptide was presented by HLA-A*02:01 by using antibody BB7.2 to isolate that MHC prior to elution assay [PMID:36010968]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008054
+name: antibody C7709A2-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody C7709A2 to determine that HLA protein complex with A24 serotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - C7709A2" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the YWSHPRKF peptide was presented by HLA-A24 by using antibody C7709A2 to isolate that MHC prior to elution assay [PMID:34185709]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008055
+name: antibody CR11-351-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody CR11-351 to determine that HLA protein complex with A2 serotype and/or HLA protein complex with A28 serotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - CR11-351" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008056
+name: antibody DK1G8-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody DK1G8 to determine that HLA protein complex with A29 serotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - DK1G8" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the EVLGLILRY peptide was presented by HLA-A29 by using antibody DK1G8 to isolate that MHC prior to elution assay [PMID:33717175]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008057
+name: antibody DT9-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody DT9 to determine that the HLA-C protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - DT9" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the PB2-609-616 peptide was presented by HLA-C*04:01 by using antibody DT9 to isolate that MHC prior to elution assay [PMID:34006841]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008058
+name: antibody HB145-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody HB145 to determine that the human MHC class II protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - HB145" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the FQKWAAVVVPSGEE peptide was presented by HLA class II MHC molecules by using antibody HB145 to isolate that class of MHC molecules prior to elution assay [PMID:34932366]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008059
+name: antibody HB-164-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody  HB-164 to determine that the human MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "antibody A11.1 M-specificity based MHC restriction evidence" EXACT []
+synonym: "Antibody purification - HB-164" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the AFP 2–11 peptide was presented by HLA-A*24:02 by using antibody HB-164 to isolate that MHC prior to elution assay [PMID:31849039]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008060
+name: antibody HB180-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody HB180 to determine that the human MHC class II protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - HB180" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008061
+name: antibody ILA-21-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody ILA-21 to determine that the cattle MHC class II protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - ILA-21" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008062
+name: antibody ILA-88-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody ILA-88 to determine that the cattle MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - ILA-88" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008063
+name: antibody IVD12-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody IVD12 to determine that HLA protein complex with DQ3 serotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - IVD12" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008064
+name: antibody L243-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody L243 to determine that the HLA-DR protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - L243" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the SQPRLTYKTVSGVN peptide was presented by HLA-DR by using antibody L243 to isolate that MHC prior to elution assay [PMID:33043033]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008065
+name: antibody LB3.1-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody LB3.13 to determine that the HLA-DR protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "antibody HB298-specificity based MHC restriction evidence" EXACT []
+synonym: "Antibody purification - LB3.1" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the TVTLIKYQELMEELRMLSFQQ peptide was presented by HLA-DR by using antibody LB3.1 to isolate that MHC prior to elution assay [PMID:34357683]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008066
+name: antibody M1/42-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody M1/42 to determine that the mouse MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - M1/42" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the CAIX peptide was presented by H2-d class I by using antibody M1/42 to isolate that class of MHC prior to elution assay [PMID:31213507]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008067
+name: antibody M5/114-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody M5/114 to determine that the mouse MHC class II protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - M5/114" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the ALDOA peptide was presented by H2-IAb by using antibody M5/114 to isolate that MHC prior to elution assay [PMID:35984892]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008068
+name: antibody ME1-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody ME1 to determine that the HLA protein complex with B27 serotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - ME1" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the APVsASASV peptide was presented by HLA-B*07:02 by using antibody ME1 to isolate that MHC prior to elution assay [PMID:28314751]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008069
+name: antibody MKD6-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody MKD6 to determine that the H2-IAd protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - MKD6" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008070
+name: antibody OX18-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody OX18 to determine that the rat MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - OX18" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008071
+name: antibody PT85-A-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody PT85-A to determine that the pig MHC class I protein complex, cattle MHC class I protein complex, and/or human MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - PT85-A" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008072
+name: antibody SF1-1.1.1-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody SF1-1.1.1 to determine that the H2-Kd protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - SF1-1.1.1" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the Smc3 neo peptide was presented by H2-Kd by using antibody SF1-1.1.1 to isolate that MHC prior to elution assay [PMID:30723585]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008073
+name: antibody SPVL3-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody SPVL3 to determine that the human MHC class II protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - SPVL3" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the GPPGTGKTLL peptide was presented by HLA-DQ by using antibody SPVL3 to isolate that MHC prior to elution assay [PMID:34078123]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008074
+name: antibody Tu39-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody Tu39 to determine that the human MHC class II protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - Tu39" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the GGPGTASRPSSS peptide was presented by HLA class II molecules by using antibody Tu39 to isolate that class of MHC molecules prior to elution assay [PMID:29789417]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008075
+name: antibody W6/32-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody W6/32 to determine that the MHC class I protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - W6/32" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the RGLVSSLGK peptide was presented by HLA class I molecules by using antibody W6/32 to isolate that class of MHC molecules prior to elution assay [PMID:29557506]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008076
+name: antibody Y-3-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody Y-3 to determine that theH2-Kb protein complex, H2-Ks protein complex, and/or H2-Kq protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - Y-3" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the AIYGFGVTF peptide was presented by H2-Kb by using antibody Y-3 to isolate that MHC prior to elution assay [PMID:32531997]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008077
+name: antibody Y3JP-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody Y3JP to determine that the mouse MHC class II protein complex and/or rat MHC class II protein complex with RT1-A haplotype presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - Y3JP" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008078
+name: protein expression-based MHC presentation evidence
+def: "A type of protein expression evidence that employs MHC molecule motif or alleles present to determine that a specific MHC molecule or class of MHC molecules presented a ligand." [IEDB:RandiVita]
+synonym: "Inferred by motif or alleles present" EXACT []
+is_a: ECO:0000010 ! protein expression evidence
+property_value: IAO:0000112 "Determining that the ETVRQNTKF peptide was presented by HLA-B*57:03 based on that MHC being expressed on the presenting cells [PMID:30410026]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008079
+name: specific MHC protein expression-based MHC presentation evidence
+def: "A type of protein expression-based MHC presentation evidence that employs knowledge of a single specific MHC molecule's presence to determine that a specific MHC molecule presented a ligand." [IEDB:RandiVita]
+synonym: "Single allele present" EXACT []
+is_a: ECO:0008078 ! protein expression-based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the TNFR (302-310) peptide was presented by H2-Db based on only that specific MHC being expressed on the presenting cells [PMID:30410026]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008080
+name: MHC:ligand binding based MHC restriction evidence
+def: "A type of protein binding evidence that employs an assay measuring binding of an MHC molecule to a ligand to determine that T cells can recognize the ligand when presented by that MHC molecule." [IEDB:RandiVita]
+synonym: "MHC binding assay" EXACT []
+is_a: ECO:0000024 ! protein binding evidence
+property_value: IAO:0000112 "Determining that the T cell response to peptide ASCKGLIY is HLA-B*35:01 restricted because an assay measuring binding of a MHC:ligand complex was performed [PMID:8617300]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008081
+name: MHC complex binding prediction based MHC restriction evidence
+def: "A type of computational evidence that employs a computational tool to predict MHC complex binding to a ligand to infer that T cells can recognize the ligand when presented by that MHC molecule." [IEDB:RandiVita]
+synonym: "MHC binding prediction" EXACT []
+is_a: ECO:0007672 ! computational evidence
+property_value: IAO:0000112 "Asserting that the T cell response to peptide LPM1 72-82 is HLA-B*27:02 restricted because an mhc binding prediction was performed [PMID:11948498]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008082
+name: inference of MHC restriction based on shared MHC expression
+def: "A type of inferential evidence that employs the association of specific MHC molecule expression by a subject population with a T cell response to infer that T cells can recognize the ligand when presented by that MHC molecule." [IEDB:RandiVita]
+synonym: "Statistically inferred by motif or alleles present" EXACT []
+is_a: ECO:0000361 ! inferential evidence
+property_value: IAO:0000112 "Responsive donors expressing the HLA-DQ6 allele showed an increased level of proliferation to the epitope as compared to peptide-responsive HLA-DQ6 negative donors [PMID:14735143]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008083
+name: T cell epitope assay type based MHC restriction evidence
+def: "A type of direct assay evidence that employs the type of T cell epitope assay to determine that a specific ligand is restricted by a MHC molecule or class of MHC molecules." [IEDB:RandiVita]
+synonym: "T cell assay -Biological process measured" EXACT []
+is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "Determining that the PBMC response to peptide HSV-1 gD 0-14 is HLA class II restricted because proliferation was the response type that was measured [PMID:8503783]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008084
+name: MHC-specific blocking based MHC restriction evidence
+def: "A type of protein binding evidence that employs the specific blocking of MHC molecules to determine that a ligand is restricted by that MHC molecule or class of MHC molecules." [IEDB:RandiVita]
+synonym: "T cell assay -MHC subset identification" EXACT []
+is_a: ECO:0000024 ! protein binding evidence
+property_value: IAO:0000112 "Cry j 2-stimulated T-cell proliferation was inhibited by anti-HLA-DR, but not by anti-HLA-DQ antibody, indicating that the responding T cells recognized the allergen peptides associated with HLA-DR molecules [PMID:8899114]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008085
+name: specific MHC molecule based MHC restriction evidence
+def: "A type of direct assay evidence that employs the use of a specific MHC molecule in a T cell response assay to determine that a specific ligand is restricted by that MHC molecule." [IEDB:RandiVita]
+synonym: "T cell assay -Single MHC type present" EXACT []
+is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "Determining that the T cell response to peptide MTB Ag85 232-240 is restricted by HLA-B*15:01 because T cells bound to tetramers containing only HLA-B*15:01 presenting that peptide [PMID: 17429413]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008086
+name: T cell type based MHC restriction evidence
+def: "A type of direct assay evidence that employs a specific T cell type (CD4+ or CD8+) to determine that a ligand is restricted by a class of MHC molecules." [IEDB:RandiVita]
+synonym: "T cell assay -T cell subset identification" EXACT []
+is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000112 "Determining that the peptide Parvovirus B19 NS1 (255-267) is HLA class I restricted because CD8+ T cells responded to it [PMID:18523634]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008087
+name: antibody-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification" EXACT []
+is_a: ECO:0006076 {is_inferred="true"} ! protein binding evidence used in manual assertion
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+intersection_of: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008088
+name: antibody-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification" EXACT []
+is_a: ECO:0007373 {is_inferred="true"} ! protein binding evidence used in automatic assertion
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+intersection_of: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008089
+name: antibody 10.3.6-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 10.3.6-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 10.3.6" EXACT []
+is_a: ECO:0008040 ! antibody 10.3.6-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008040 ! antibody 10.3.6-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008090
+name: antibody 10.3.6-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 10.3.6-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 10.3.6" EXACT []
+is_a: ECO:0008040 ! antibody 10.3.6-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008040 ! antibody 10.3.6-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008091
+name: antibody 14.4.4-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 14.4.4-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 14.4.4" EXACT []
+is_a: ECO:0008041 ! antibody 14.4.4-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008041 ! antibody 14.4.4-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008092
+name: antibody 14.4.4-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 14.4.4-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 14.4.4" EXACT []
+is_a: ECO:0008041 ! antibody 14.4.4-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008041 ! antibody 14.4.4-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008093
+name: antibody 28-14-8S-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 28-14-8S-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 28-14-8S" EXACT []
+is_a: ECO:0008042 ! antibody 28-14-8S-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008042 ! antibody 28-14-8S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008094
+name: antibody 28-14-8S-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 28-14-8S-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 28-14-8S" EXACT []
+is_a: ECO:0008042 ! antibody 28-14-8S-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008042 ! antibody 28-14-8S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008095
+name: antibody 34-1-2S-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 34-1-2S-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 34-1-2S" EXACT []
+is_a: ECO:0008043 ! antibody 34-1-2S-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008043 ! antibody 34-1-2S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008096
+name: antibody 34-1-2S-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 34-1-2S-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 34-1-2S" EXACT []
+is_a: ECO:0008043 ! antibody 34-1-2S-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008043 ! antibody 34-1-2S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008097
+name: antibody 34-5-8S-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 34-5-8S-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 34-5-8S" EXACT []
+is_a: ECO:0008044 ! antibody 34-5-8S-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008044 ! antibody 34-5-8S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008098
+name: antibody 34-5-8S-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 34-5-8S-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 34-5-8S" EXACT []
+is_a: ECO:0008044 ! antibody 34-5-8S-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008044 ! antibody 34-5-8S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008099
+name: antibody 34-7-23S-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 34-7-23S-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 34-7-23S" EXACT []
+is_a: ECO:0008045 ! antibody 34-7-23S-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008045 ! antibody 34-7-23S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008100
+name: antibody 34-7-23S-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 34-7-23S-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 34-7-23S" EXACT []
+is_a: ECO:0008045 ! antibody 34-7-23S-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008045 ! antibody 34-7-23S-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008101
+name: antibody 4B7/8-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody 4B7/8-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - 4B7/8" EXACT []
+is_a: ECO:0008046 ! antibody 4B7/8-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008046 ! antibody 4B7/8-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008102
+name: antibody 4B7/8-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody 4B7/8-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - 4B7/8" EXACT []
+is_a: ECO:0008046 ! antibody 4B7/8-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008046 ! antibody 4B7/8-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008103
+name: antibody AG2.42.7-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody AG2.42.7-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - AG2.42.7" EXACT []
+is_a: ECO:0008047 ! antibody AG2.42.7-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008047 ! antibody AG2.42.7-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008104
+name: antibody AG2.42.7-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody AG2.42.7-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - AG2.42.7" EXACT []
+is_a: ECO:0008047 ! antibody AG2.42.7-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008047 ! antibody AG2.42.7-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008105
+name: antibody B123.2-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody B123.2-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - B123.2" EXACT []
+is_a: ECO:0008048 ! antibody B123.2-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008048 ! antibody B123.2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008106
+name: antibody B123.2-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody B123.2-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - B123.2" EXACT []
+is_a: ECO:0008048 ! antibody B123.2-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008048 ! antibody B123.2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008107
+name: antibody B22-249.R1-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody B22-249.R1-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - B22-249.R1" EXACT []
+is_a: ECO:0008049 ! antibody B22-249.R1-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008049 ! antibody B22-249.R1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008108
+name: antibody B22-249.R1-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody B22-249.R1-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - B22-249.R1" EXACT []
+is_a: ECO:0008049 ! antibody B22-249.R1-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008049 ! antibody B22-249.R1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008109
+name: antibody B7/21-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody B7/21-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - B7/21" EXACT []
+is_a: ECO:0008050 ! antibody B7/21-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008050 ! antibody B7/21-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008110
+name: antibody B7/21-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody B7/21-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - B7/21" EXACT []
+is_a: ECO:0008050 ! antibody B7/21-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008050 ! antibody B7/21-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008111
+name: antibody B8.11.2-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody B8.11.2-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - B8.11.2" EXACT []
+is_a: ECO:0008051 ! antibody B8.11.2-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008051 ! antibody B8.11.2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008112
+name: antibody B8.11.2-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody B8.11.2-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - B8.11.2" EXACT []
+is_a: ECO:0008051 ! antibody B8.11.2-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008051 ! antibody B8.11.2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008113
+name: antibody B8-24-3-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody B8-24-3-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - B8-24-3" EXACT []
+is_a: ECO:0008052 ! antibody B8-24-3-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008052 ! antibody B8-24-3-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008114
+name: antibody B8-24-3-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody B8-24-3-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - B8-24-3" EXACT []
+is_a: ECO:0008052 ! antibody B8-24-3-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008052 ! antibody B8-24-3-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008115
+name: antibody BB7.2-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody BB7.2-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - BB7.2" EXACT []
+is_a: ECO:0008053 ! antibody BB7.2-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008053 ! antibody BB7.2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008116
+name: antibody BB7.2-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody BB7.2-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - BB7.2" EXACT []
+is_a: ECO:0008053 ! antibody BB7.2-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008053 ! antibody BB7.2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008117
+name: antibody C7709A2-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody C7709A2-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - C7709A2" EXACT []
+is_a: ECO:0008054 ! antibody C7709A2-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008054 ! antibody C7709A2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008118
+name: antibody C7709A2-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody C7709A2-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - C7709A2" EXACT []
+is_a: ECO:0008054 ! antibody C7709A2-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008054 ! antibody C7709A2-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008119
+name: antibody CR11-351-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody CR11-351-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - CR11-351" EXACT []
+is_a: ECO:0008055 ! antibody CR11-351-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008055 ! antibody CR11-351-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008120
+name: antibody CR11-351-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody CR11-351-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - CR11-351" EXACT []
+is_a: ECO:0008055 ! antibody CR11-351-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008055 ! antibody CR11-351-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008121
+name: antibody DK1G8-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody DK1G8-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - DK1G8" EXACT []
+is_a: ECO:0008056 ! antibody DK1G8-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008056 ! antibody DK1G8-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008122
+name: antibody DK1G8-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody DK1G8-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - DK1G8" EXACT []
+is_a: ECO:0008056 ! antibody DK1G8-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008056 ! antibody DK1G8-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008123
+name: antibody DT9-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody DT9-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - DT9" EXACT []
+is_a: ECO:0008057 ! antibody DT9-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008057 ! antibody DT9-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008124
+name: antibody DT9-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody DT9-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - DT9" EXACT []
+is_a: ECO:0008057 ! antibody DT9-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008057 ! antibody DT9-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008125
+name: antibody HB145-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody HB145-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - HB145" EXACT []
+is_a: ECO:0008058 ! antibody HB145-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008058 ! antibody HB145-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008126
+name: antibody HB145-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody HB145-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - HB145" EXACT []
+is_a: ECO:0008058 ! antibody HB145-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008058 ! antibody HB145-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008127
+name: antibody HB-164-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody HB-164-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "antibody A11.1 M-specificity based MHC restriction evidence" EXACT []
+synonym: "Antibody purification - HB-164" EXACT []
+is_a: ECO:0008059 ! antibody HB-164-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008059 ! antibody HB-164-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008128
+name: antibody HB-164-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody HB-164-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "antibody A11.1 M-specificity based MHC restriction evidence" EXACT []
+synonym: "Antibody purification - HB-164" EXACT []
+is_a: ECO:0008059 ! antibody HB-164-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008059 ! antibody HB-164-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008129
+name: antibody HB180-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody HB180-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - HB180" EXACT []
+is_a: ECO:0008060 ! antibody HB180-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008060 ! antibody HB180-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008130
+name: antibody HB180-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody HB180-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - HB180" EXACT []
+is_a: ECO:0008060 ! antibody HB180-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008060 ! antibody HB180-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008131
+name: antibody ILA-21-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody ILA-21-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - ILA-21" EXACT []
+is_a: ECO:0008061 ! antibody ILA-21-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008061 ! antibody ILA-21-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008132
+name: antibody ILA-21-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody ILA-21-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - ILA-21" EXACT []
+is_a: ECO:0008061 ! antibody ILA-21-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008061 ! antibody ILA-21-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008133
+name: antibody ILA-88-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody ILA-88-specificity based MHC presentation evidence that is used in a manual assertion" [ECO:SN]
+synonym: "Antibody purification - ILA-88" EXACT []
+is_a: ECO:0008062 ! antibody ILA-88-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008062 ! antibody ILA-88-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008134
+name: antibody ILA-88-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody ILA-88-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - ILA-88" EXACT []
+is_a: ECO:0008062 ! antibody ILA-88-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008062 ! antibody ILA-88-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008135
+name: antibody IVD12-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody IVD12-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - IVD12" EXACT []
+is_a: ECO:0008063 ! antibody IVD12-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008063 ! antibody IVD12-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008136
+name: antibody IVD12-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody IVD12-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - IVD12" EXACT []
+is_a: ECO:0008063 ! antibody IVD12-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008063 ! antibody IVD12-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008137
+name: antibody L243-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody L243-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - L243" EXACT []
+is_a: ECO:0008064 ! antibody L243-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008064 ! antibody L243-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008138
+name: antibody L243-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody L243-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - L243" EXACT []
+is_a: ECO:0008064 ! antibody L243-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008064 ! antibody L243-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008139
+name: antibody LB3.1-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody LB3.1-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "antibody HB298-specificity based MHC restriction evidence" EXACT []
+synonym: "Antibody purification - LB3.1" EXACT []
+is_a: ECO:0008065 ! antibody LB3.1-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008065 ! antibody LB3.1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008140
+name: antibody LB3.1-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody LB3.1-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "antibody HB298-specificity based MHC restriction evidence" EXACT []
+synonym: "Antibody purification - LB3.1" EXACT []
+is_a: ECO:0008065 ! antibody LB3.1-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008065 ! antibody LB3.1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008141
+name: antibody M1/42-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody M1/42-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - M1/42" EXACT []
+is_a: ECO:0008066 ! antibody M1/42-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008066 ! antibody M1/42-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008142
+name: antibody M1/42-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody M1/42-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - M1/42" EXACT []
+is_a: ECO:0008066 ! antibody M1/42-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008066 ! antibody M1/42-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008143
+name: antibody M5/114-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody M5/114-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - M5/114" EXACT []
+is_a: ECO:0008067 ! antibody M5/114-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008067 ! antibody M5/114-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008144
+name: antibody M5/114-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody M5/114-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - M5/114" EXACT []
+is_a: ECO:0008067 ! antibody M5/114-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008067 ! antibody M5/114-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008145
+name: antibody ME1-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody ME1-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - ME1" EXACT []
+is_a: ECO:0008068 ! antibody ME1-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008068 ! antibody ME1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008146
+name: antibody ME1-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody ME1-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - ME1" EXACT []
+is_a: ECO:0008068 ! antibody ME1-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008068 ! antibody ME1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008147
+name: antibody MKD6-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody MKD6-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - MKD6" EXACT []
+is_a: ECO:0008069 ! antibody MKD6-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008069 ! antibody MKD6-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008148
+name: antibody MKD6-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody MKD6-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - MKD6" EXACT []
+is_a: ECO:0008069 ! antibody MKD6-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008069 ! antibody MKD6-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008149
+name: antibody OX18-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody OX18-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - OX18" EXACT []
+is_a: ECO:0008070 ! antibody OX18-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008070 ! antibody OX18-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008150
+name: antibody OX18-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody OX18-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - OX18" EXACT []
+is_a: ECO:0008070 ! antibody OX18-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008070 ! antibody OX18-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008151
+name: antibody PT85-A-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody PT85-A-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - PT85-A" EXACT []
+is_a: ECO:0008071 ! antibody PT85-A-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008071 ! antibody PT85-A-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008152
+name: antibody PT85-A-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody PT85-A-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - PT85-A" EXACT []
+is_a: ECO:0008071 ! antibody PT85-A-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008071 ! antibody PT85-A-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008153
+name: antibody SF1-1.1.1-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody SF1-1.1.1-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - SF1-1.1.1" EXACT []
+is_a: ECO:0008072 ! antibody SF1-1.1.1-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008072 ! antibody SF1-1.1.1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008154
+name: antibody SF1-1.1.1-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody SF1-1.1.1-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - SF1-1.1.1" EXACT []
+is_a: ECO:0008072 ! antibody SF1-1.1.1-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008072 ! antibody SF1-1.1.1-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008155
+name: antibody SPVL3-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody SPVL3-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - SPVL3" EXACT []
+is_a: ECO:0008073 ! antibody SPVL3-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008073 ! antibody SPVL3-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008156
+name: antibody SPVL3-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody SPVL3-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - SPVL3" EXACT []
+is_a: ECO:0008073 ! antibody SPVL3-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008073 ! antibody SPVL3-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008157
+name: antibody Tu39-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody Tu39-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - Tu39" EXACT []
+is_a: ECO:0008074 ! antibody Tu39-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008074 ! antibody Tu39-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008158
+name: antibody Tu39-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody Tu39-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - Tu39" EXACT []
+is_a: ECO:0008074 ! antibody Tu39-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008074 ! antibody Tu39-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008159
+name: antibody W6/32-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody W6/32-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - W6/32" EXACT []
+is_a: ECO:0008075 ! antibody W6/32-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008075 ! antibody W6/32-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008160
+name: antibody W6/32-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody W6/32-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - W6/32" EXACT []
+is_a: ECO:0008075 ! antibody W6/32-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008075 ! antibody W6/32-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008161
+name: antibody Y-3-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody Y-3-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - Y-3" EXACT []
+is_a: ECO:0008076 ! antibody Y-3-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008076 ! antibody Y-3-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008162
+name: antibody Y-3-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody Y-3-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - Y-3" EXACT []
+is_a: ECO:0008076 ! antibody Y-3-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008076 ! antibody Y-3-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008163
+name: antibody Y3JP-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody Y3JP-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - Y3JP" EXACT []
+is_a: ECO:0008077 ! antibody Y3JP-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008077 ! antibody Y3JP-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008164
+name: antibody Y3JP-specificity based MHC presentation evidence used in automatic assertion
+def: "A type of antibody Y3JP-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - Y3JP" EXACT []
+is_a: ECO:0008077 ! antibody Y3JP-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008077 ! antibody Y3JP-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008165
+name: protein expression-based MHC presentation evidence used in manual assertion
+def: "A type of protein expression-based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Inferred by motif or alleles present" EXACT []
+is_a: ECO:0000284 {is_inferred="true"} ! protein expression evidence used in manual assertion
+is_a: ECO:0008078 ! protein expression-based MHC presentation evidence
+intersection_of: ECO:0008078 ! protein expression-based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IEP" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008166
+name: protein expression-based MHC presentation evidence used in automatic assertion
+def: "A type of protein expression-based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Inferred by motif or alleles present" EXACT []
+is_a: ECO:0007309 {is_inferred="true"} ! protein expression evidence used in automatic assertion
+is_a: ECO:0008078 ! protein expression-based MHC presentation evidence
+intersection_of: ECO:0008078 ! protein expression-based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008167
+name: specific MHC protein expression-based MHC presentation evidence used in manual assertion
+def: "A type of specific MHC protein expression-based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Single allele present" EXACT []
+is_a: ECO:0008079 ! specific MHC protein expression-based MHC presentation evidence
+is_a: ECO:0008165 {is_inferred="true"} ! protein expression-based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0008079 ! specific MHC protein expression-based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IEP" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008168
+name: specific MHC protein expression-based MHC presentation evidence used in automatic assertion
+def: "A type of specific MHC protein expression-based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Single allele present" EXACT []
+is_a: ECO:0008079 ! specific MHC protein expression-based MHC presentation evidence
+is_a: ECO:0008166 {is_inferred="true"} ! protein expression-based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0008079 ! specific MHC protein expression-based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008169
+name: MHC:ligand binding based MHC restriction evidence used in manual assertion
+def: "A type of MHC:ligand binding based MHC restriction evidence that is used in a manual assertion." [ECO:SN]
+synonym: "MHC binding assay" EXACT []
+is_a: ECO:0006076 {is_inferred="true"} ! protein binding evidence used in manual assertion
+is_a: ECO:0008080 ! MHC:ligand binding based MHC restriction evidence
+intersection_of: ECO:0008080 ! MHC:ligand binding based MHC restriction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008170
+name: MHC:ligand binding based MHC restriction evidence used in automatic assertion
+def: "A type of MHC:ligand binding based MHC restriction evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "MHC binding assay" EXACT []
+is_a: ECO:0007373 {is_inferred="true"} ! protein binding evidence used in automatic assertion
+is_a: ECO:0008080 ! MHC:ligand binding based MHC restriction evidence
+intersection_of: ECO:0008080 ! MHC:ligand binding based MHC restriction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008171
+name: MHC complex binding prediction based MHC restriction evidence used in manual assertion
+def: "A type of MHC complex binding prediction based MHC restriction evidence that is used in a manual assertion." [ECO:SN]
+synonym: "MHC binding prediction" EXACT []
+is_a: ECO:0007668 {is_inferred="true"} ! computational evidence used in manual assertion
+is_a: ECO:0008081 ! MHC complex binding prediction based MHC restriction evidence
+intersection_of: ECO:0008081 ! MHC complex binding prediction based MHC restriction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008172
+name: MHC complex binding prediction based MHC restriction evidence used in automatic assertion
+def: "A type of MHC complex binding prediction based MHC restriction evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "MHC binding prediction" EXACT []
+is_a: ECO:0007669 {is_inferred="true"} ! computational evidence used in automatic assertion
+is_a: ECO:0008081 ! MHC complex binding prediction based MHC restriction evidence
+intersection_of: ECO:0008081 ! MHC complex binding prediction based MHC restriction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008173
+name: inference of MHC restriction based on shared MHC expression used in manual assertion
+def: "A type of inference of MHC restriction based on shared MHC expression that is used in a manual assertion." [ECO:SN]
+synonym: "Statistically inferred by motif or alleles present" EXACT []
+is_a: ECO:0007751 {is_inferred="true"} ! inferential evidence used in manual assertion
+is_a: ECO:0008082 ! inference of MHC restriction based on shared MHC expression
+intersection_of: ECO:0008082 ! inference of MHC restriction based on shared MHC expression
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008174
+name: inference of MHC restriction based on shared MHC expression used in automatic assertion
+def: "A type of inference of MHC restriction based on shared MHC expression that is used in an automatic assertion." [ECO:SN]
+synonym: "Statistically inferred by motif or alleles present" EXACT []
+is_a: ECO:0007832 {is_inferred="true"} ! inferential evidence used in automatic assertion
+is_a: ECO:0008082 ! inference of MHC restriction based on shared MHC expression
+intersection_of: ECO:0008082 ! inference of MHC restriction based on shared MHC expression
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008175
+name: T cell epitope assay type based MHC restriction evidence used in manual assertion
+def: "A type of T cell epitope assay type based MHC restriction evidence that is used in a manual assertion." [ECO:SN]
+synonym: "T cell assay -Biological process measured" EXACT []
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0008083 ! T cell epitope assay type based MHC restriction evidence
+intersection_of: ECO:0008083 ! T cell epitope assay type based MHC restriction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008176
+name: T cell epitope assay type based MHC restriction evidence used in automatic assertion
+def: "A type of T cell epitope assay type based MHC restriction evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "T cell assay -Biological process measured" EXACT []
+is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
+is_a: ECO:0008083 ! T cell epitope assay type based MHC restriction evidence
+intersection_of: ECO:0008083 ! T cell epitope assay type based MHC restriction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008177
+name: MHC-specific blocking based MHC restriction evidence used in manual assertion
+def: "A type of MHC-specific blocking based MHC restriction evidence that is used in a manual assertion." [ECO:SN]
+synonym: "T cell assay -MHC subset identification" EXACT []
+is_a: ECO:0006076 {is_inferred="true"} ! protein binding evidence used in manual assertion
+is_a: ECO:0008084 ! MHC-specific blocking based MHC restriction evidence
+intersection_of: ECO:0008084 ! MHC-specific blocking based MHC restriction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008178
+name: MHC-specific blocking based MHC restriction evidence used in automatic assertion
+def: "A type of MHC-specific blocking based MHC restriction evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "T cell assay -MHC subset identification" EXACT []
+is_a: ECO:0007373 {is_inferred="true"} ! protein binding evidence used in automatic assertion
+is_a: ECO:0008084 ! MHC-specific blocking based MHC restriction evidence
+intersection_of: ECO:0008084 ! MHC-specific blocking based MHC restriction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008179
+name: specific MHC molecule based MHC restriction evidence used in manual assertion
+def: "A type of specific MHC molecule based MHC restriction evidence that is used in a manual assertion." [ECO:SN]
+synonym: "T cell assay -Single MHC type present" EXACT []
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0008085 ! specific MHC molecule based MHC restriction evidence
+intersection_of: ECO:0008085 ! specific MHC molecule based MHC restriction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008180
+name: specific MHC molecule based MHC restriction evidence used in automatic assertion
+def: "A type of specific MHC molecule based MHC restriction evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "T cell assay -Single MHC type present" EXACT []
+is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
+is_a: ECO:0008085 ! specific MHC molecule based MHC restriction evidence
+intersection_of: ECO:0008085 ! specific MHC molecule based MHC restriction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008181
+name: T cell type based MHC restriction evidence used in manual assertion
+def: "A type of T cell type based MHC restriction evidence that is used in a manual assertion." [ECO:SN]
+synonym: "T cell assay -T cell subset identification" EXACT []
+is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
+is_a: ECO:0008086 ! T cell type based MHC restriction evidence
+intersection_of: ECO:0008086 ! T cell type based MHC restriction evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008182
+name: T cell type based MHC restriction evidence used in automatic assertion
+def: "A type of T cell type based MHC restriction evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "T cell assay -T cell subset identification" EXACT []
+is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
+is_a: ECO:0008086 ! T cell type based MHC restriction evidence
+intersection_of: ECO:0008086 ! T cell type based MHC restriction evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-06-09T05:36:49Z
 
 [Typedef]
 id: used_in
