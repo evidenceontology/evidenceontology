@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2024-07-18/eco-basic.owl
-date: 18:07:2024 22:36
+data-version: eco/releases/2024-07-19/eco-basic.owl
+date: 19:07:2024 11:00
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -12327,6 +12327,7 @@ def: "A  type of antibody Tu36-specificity based MHC presentation evidence that 
 synonym: "Antibody purification - Tu36" EXACT []
 is_a: ECO:0006398 ! antibody Tu36-specificity based MHC presentation evidence
 is_a: ECO:0008088 ! antibody-specificity based MHC presentation evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 IEDB:RandiVita xsd:string
 created_by: snadendla
 creation_date: 2024-07-18T05:36:49Z
@@ -12338,6 +12339,7 @@ def: "A type of antibody Tu36-specificity based MHC presentation evidence that i
 synonym: "Antibody purification - Tu36" EXACT []
 is_a: ECO:0006398 ! antibody Tu36-specificity based MHC presentation evidence
 is_a: ECO:0008087 ! antibody-specificity based MHC presentation evidence used in manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 IEDB:RandiVita xsd:string
 created_by: snadendla
 creation_date: 2024-07-18T05:36:49Z
