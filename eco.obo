@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2024-06-09
-date: 09:06:2024 21:36
+data-version: releases/2024-07-18
+date: 18:07:2024 22:35
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -13475,6 +13475,43 @@ property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 "daniwelter" xsd:string
 created_by: snadendla
 creation_date: 2022-10-07T05:24:13Z
+
+[Term]
+id: ECO:0006398
+name: antibody Tu36-specificity based MHC presentation evidence
+def: "A type of antibody-specificity based MHC presentation evidence that employs antibody Tu36 to determine that the HLA-DR protein complex presented a ligand." [IEDB:RandiVita]
+synonym: "Antibody purification - Tu36" EXACT []
+is_a: ECO:0008039 ! antibody-specificity based MHC presentation evidence
+property_value: IAO:0000112 "Determining that the KIEGNLIFDPNNYLPKE peptide was presented by HLA-DR by using antibody Tu36 to isolate that MHC prior to elution assay [PMID:22299025]." xsd:string
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-07-18T05:36:49Z
+
+[Term]
+id: ECO:0006399
+name: antibody Tu36-specificity based MHC presentation evidence used in automatic assertion
+def: "A  type of antibody Tu36-specificity based MHC presentation evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "Antibody purification - Tu36" EXACT []
+is_a: ECO:0006398 ! antibody Tu36-specificity based MHC presentation evidence
+is_a: ECO:0008088 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in automatic assertion
+intersection_of: ECO:0006398 ! antibody Tu36-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-07-18T05:36:49Z
+
+[Term]
+id: ECO:0006400
+name: antibody Tu36-specificity based MHC presentation evidence used in manual assertion
+def: "A type of antibody Tu36-specificity based MHC presentation evidence that is used in a manual assertion." [ECO:SN]
+synonym: "Antibody purification - Tu36" EXACT []
+is_a: ECO:0006398 ! antibody Tu36-specificity based MHC presentation evidence
+is_a: ECO:0008087 {is_inferred="true"} ! antibody-specificity based MHC presentation evidence used in manual assertion
+intersection_of: ECO:0006398 ! antibody Tu36-specificity based MHC presentation evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 IEDB:RandiVita xsd:string
+created_by: snadendla
+creation_date: 2024-07-18T05:36:49Z
 
 [Term]
 id: ECO:0007000
