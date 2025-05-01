@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2024-07-19/eco-basic.owl
-date: 19:07:2024 11:00
+data-version: eco/releases/2025-04-30/eco-basic.owl
+date: 30:04:2025 23:49
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -12343,6 +12343,37 @@ property_value: ECO:9000002 "IPI" xsd:string
 property_value: IAO:0000234 IEDB:RandiVita xsd:string
 created_by: snadendla
 creation_date: 2024-07-18T05:36:49Z
+
+[Term]
+id: ECO:0006404
+name: experimentally evolved mutant phenotypic evidence
+def: "A type of mutant phenotype evidence where mutations arising in organisms/cells over multiple generations, with or without exposure to some kind of selective pressure, are monitored or assayed." [ECO:MG, url:https\://www.nature.com/articles/nrg1088]
+is_a: ECO:0000015 ! mutant phenotype evidence
+property_value: IAO:0000234 AMR:KatHolt xsd:string
+created_by: snadendla
+creation_date: 2025-04-30T07:58:28Z
+
+[Term]
+id: ECO:0006405
+name: experimentally evolved mutant phenotypic evidence used in automatic assertion
+def: "A type of experimentally evolved mutant phenotypic evidence that is used in an automatic assertion." [] {comment="ECO:SN"}
+is_a: ECO:0006404 ! experimentally evolved mutant phenotypic evidence
+is_a: ECO:0007325 ! mutant phenotype evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 AMR:KatHolt xsd:string
+created_by: snadendla
+creation_date: 2025-04-30T07:58:28Z
+
+[Term]
+id: ECO:0006406
+name: experimentally evolved mutant phenotypic evidence used in manual assertion
+def: "A type of experimentally evolved mutant phenotyic evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000315 ! mutant phenotype evidence used in manual assertion
+is_a: ECO:0006404 ! experimentally evolved mutant phenotypic evidence
+property_value: ECO:9000002 "IMP" xsd:string
+property_value: IAO:0000234 AMR:KatHolt xsd:string
+created_by: snadendla
+creation_date: 2025-04-30T07:58:28Z
 
 [Term]
 id: ECO:0007000
