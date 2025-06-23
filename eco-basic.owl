@@ -12,11 +12,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/eco-basic.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2025-04-30/eco-basic.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2025-06-23/eco-basic.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30:04:2025 23:49</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23:06:2025 16:29</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
     </owl:Ontology>
@@ -11952,8 +11952,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0001177 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001177">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of RNA dot blot assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
@@ -13386,8 +13386,8 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0001240 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001240">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001106"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nuclease protection assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
@@ -14521,22 +14521,6 @@ computationally derived.</owl:annotatedTarget>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECO_000156 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_000156">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001560"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006069"/>
-        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of single cell RNA-sequencing evidence that is used in automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-01-02T12:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single-cell RNA-sequencing evidence used in automatic assertion</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECO_0001560 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001560">
@@ -15450,7 +15434,7 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001808">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000109"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of reverse transcription polymerase chain reaction evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swolfish</oboInOwl:created_by>
@@ -28830,6 +28814,23 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECO_0006407 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006407">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001560"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006069"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of single cell RNA-sequencing evidence that is used in automatic assertion.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025-06-23T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006407</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single-cell RNA-sequencing evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECO_0007000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007000">
@@ -30931,6 +30932,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007090">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000027"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000252"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISS</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of structural similarity evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
@@ -46584,6 +46586,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001182"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008009"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of single molecule fluorescence in situ hybridization evidence that is used in a manual assertion.</obo:IAO_0000115>
@@ -50509,30 +50512,6 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of T cell type based MHC restriction evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:SN</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0003674 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0008150 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000070">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
     
 
 

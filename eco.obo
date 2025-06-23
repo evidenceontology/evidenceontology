@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2025-04-30
-date: 30:04:2025 23:49
+data-version: releases/2025-06-23
+date: 23:06:2025 16:29
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -69,8 +69,6 @@ alt_id: ECO:0005023
 def: "A type of evidence that is the output of a scientific procedure performed to make a discovery, test a hypothesis, or demonstrate a known fact." [OED:experiment]
 subset: go_groupings
 is_a: ECO:0000000 ! evidence
-relationship: OBI:0000295 OBI:0000338
-relationship: OBI:0000312 OBI:0000070
 
 [Term]
 id: ECO:0000007
@@ -4916,8 +4914,8 @@ id: ECO:0001177
 name: RNA dot blot assay evidence used in manual assertion
 def: "A type of RNA dot blot assay evidence that is used in a manual assertion." [ECO:MCC]
 synonym: "RNA dot blot evidence" BROAD []
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001040 ! RNA dot blot assay evidence
+is_a: ECO:0007739 {is_inferred="true"} ! RNA detection assay evidence used in manual assertion
 intersection_of: ECO:0001040 ! RNA dot blot assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "EXP" xsd:string
@@ -5726,8 +5724,8 @@ creation_date: 2014-03-17T19:19:55Z
 id: ECO:0001240
 name: nuclease protection assay evidence used in manual assertion
 def: "A type of nuclease protection assay evidence that is used in a manual assertion." [ECO:MCC]
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0001106 ! nuclease protection assay evidence
+is_a: ECO:0007739 {is_inferred="true"} ! RNA detection assay evidence used in manual assertion
 intersection_of: ECO:0001106 ! nuclease protection assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "EXP" xsd:string
@@ -6326,18 +6324,6 @@ created_by: jbmunro
 creation_date: 2017-11-30T14:00:00Z
 
 [Term]
-id: ECO:000156
-name: single-cell RNA-sequencing evidence used in automatic assertion
-def: "A type of single cell RNA-sequencing evidence that is used in automatic assertion." []
-is_a: ECO:0001560 ! single-cell RNA-sequencing evidence
-is_a: ECO:0006069 {is_inferred="true"} ! RNA-sequencing evidence used in automatic assertion
-intersection_of: ECO:0001560 ! single-cell RNA-sequencing evidence
-intersection_of: used_in ECO:0000203 ! automatic assertion
-property_value: ECO:9000002 "IEA" xsd:string
-created_by: jbmunro
-creation_date: 2019-01-02T12:00:00Z
-
-[Term]
 id: ECO:0001560
 name: single-cell RNA-sequencing evidence
 def: "A type of RNA-sequencing evidence that uses a single cell as the source of the RNA." []
@@ -6867,7 +6853,7 @@ id: ECO:0001808
 name: reverse transcription polymerase chain reaction evidence used in manual assertion
 def: "A type of reverse transcription polymerase chain reaction evidence that is used in a manual assertion." [ECO:SW]
 is_a: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
-is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
+is_a: ECO:0007739 {is_inferred="true"} ! RNA detection assay evidence used in manual assertion
 intersection_of: ECO:0000109 ! reverse transcription polymerase chain reaction evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "EXP" xsd:string
@@ -13551,6 +13537,19 @@ created_by: snadendla
 creation_date: 2025-04-30T07:58:28Z
 
 [Term]
+id: ECO:0006407
+name: single-cell RNA-sequencing evidence used in automatic assertion
+alt_id: ECO:000156
+def: "A type of single cell RNA-sequencing evidence that is used in automatic assertion." []
+is_a: ECO:0001560 ! single-cell RNA-sequencing evidence
+is_a: ECO:0006069 {is_inferred="true"} ! RNA-sequencing evidence used in automatic assertion
+intersection_of: ECO:0001560 ! single-cell RNA-sequencing evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+created_by: snadendla
+creation_date: 2025-06-23T12:00:00Z
+
+[Term]
 id: ECO:0007000
 name: high throughput mutant phenotypic evidence
 def: "A type of high throughput evidence derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
@@ -14642,6 +14641,7 @@ is_a: ECO:0000027 {is_inferred="true"} ! structural similarity evidence
 is_a: ECO:0000252 {is_inferred="true"} ! similarity evidence used in manual assertion
 intersection_of: ECO:0000027 ! structural similarity evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: ECO:9000002 "ISS" xsd:string
 created_by: rctauber
 creation_date: 2018-05-14T09:47:55Z
 
@@ -22049,6 +22049,8 @@ name: RNA detection assay evidence used in manual assertion
 def: "A type of RNA detection assay evidence that is used in a manual assertion." []
 is_a: ECO:0000269 {is_inferred="true"} ! experimental evidence used in manual assertion
 is_a: ECO:0005518 ! RNA detection assay evidence
+intersection_of: ECO:0005518 ! RNA detection assay evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "EXP" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -22942,7 +22944,7 @@ creation_date: 2019-03-20T13:02:00Z
 id: ECO:0007818
 name: RNA detection assay evidence used in automatic assertion
 def: "A type of RNA detection assay evidence that is used in an automatic assertion." []
-is_a: ECO:0005518 {is_inferred="true"} ! RNA detection assay evidence
+is_a: ECO:0005518 ! RNA detection assay evidence
 is_a: ECO:0007816 {is_inferred="true"} ! molecule detection assay evidence used in automatic assertion
 intersection_of: ECO:0005518 ! RNA detection assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
@@ -23517,6 +23519,7 @@ name: single molecule fluorescence in situ hybridization evidence used in manual
 def: "A type of single molecule fluorescence in situ hybridization evidence that is used in a manual assertion." [ECO:SN]
 synonym: "smFISH" EXACT []
 is_a: ECO:0001182 {is_inferred="true"} ! fluorescence in situ hybridization evidence used in manual assertion
+is_a: ECO:0007739 {is_inferred="true"} ! RNA detection assay evidence used in manual assertion
 is_a: ECO:0008009 ! single molecule fluorescence in situ hybridization evidence
 intersection_of: ECO:0008009 ! single molecule fluorescence in situ hybridization evidence
 intersection_of: used_in ECO:0000218 ! manual assertion

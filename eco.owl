@@ -12,11 +12,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2025-04-30/eco.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2025-06-23/eco.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence &amp; Conclusion Ontology (ECO)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30:04:2025 23:42</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23:06:2025 16:27</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:default-namespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
     </owl:Ontology>
@@ -1569,6 +1569,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -1602,6 +1603,12 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000002</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">direct assay evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -1726,33 +1733,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0003674"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000338"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of evidence that is the output of a scientific procedure performed to make a discovery, test a hypothesis, or demonstrate a known fact.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005023</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
@@ -1760,12 +1740,6 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#go_groupings"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">experimental evidence</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -1826,39 +1800,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000424"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
-                                <owl:someValuesFrom>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001430"/>
-                                    </owl:Restriction>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of expression pattern evidence where abundance of a transcript is analyzed.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000048</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transcript expression level evidence</oboInOwl:hasExactSynonym>
@@ -2835,6 +2776,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000008"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -2884,6 +2826,12 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000049</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reporter gene assay evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000049"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000049"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -3113,6 +3061,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
@@ -3151,6 +3106,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000058"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000058"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. lividans AdpA directly regulates at least the six AdpA-dependent genes listed above and identified by microarrays and qRT-PCR analysis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:24694298</oboInOwl:hasDbXref>
@@ -3175,6 +3136,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -3217,6 +3179,12 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observable characteristic traits can be morphology, development, behavior, biochemical or physiological properties, etc.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">experimental phenotypic evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000059"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000059"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -4529,10 +4497,38 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000106">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000860"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001430"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Northern blot analysis indicated that there was one major band of 1.5-kb (which was used for the stability determination) and two other minor bands of approximately 3.0- and 6.0-kb, which constituted less than 5% of the total signal (Fig. 1C), suggesting that other genes may be cotranscribed along with SMU.1882.</obo:IAO_0000112>
@@ -4545,6 +4541,12 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000106</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">northern blot evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000106"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
@@ -4753,6 +4755,19 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000116">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000424"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
@@ -4809,6 +4824,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000116"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000116"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nucleic acid hybridization evidence in which preferential or exclusive expression of genes in one cell type or tissue is compared to another cell type or tissue when mRNA from each sample is reverse transcribed, labeled, and hybridized to a cDNA library to compare hybridization patterns.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:14668817</oboInOwl:hasDbXref>
@@ -4820,6 +4841,19 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000118">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000424"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
@@ -4874,6 +4908,12 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtractive hybridization is used for isolation and identification of transcripts involving the removal of any sequences present in the control from the test probe to detect only transcripts present in the sample. The method is PCR-based for the comparison of two cDNA libraries.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subtractive hybridization evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000118"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000118"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -5794,6 +5834,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000179">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -5834,6 +5875,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000179"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000179"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of experimental evidence arising from the investigation of an animal model system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:MCC</oboInOwl:hasDbXref>
@@ -5844,6 +5891,7 @@
     <!-- http://purl.obolibrary.org/obo/ECO_0000180 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000180">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5871,6 +5919,12 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000180</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clinical study evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000180"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000180"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -6580,6 +6634,7 @@
     <!-- http://purl.obolibrary.org/obo/ECO_0000221 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000219"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6617,6 +6672,12 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typically thousands to millions of reads are produced in parallel.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high throughput nucleotide sequencing assay evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000221"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000221"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -7025,6 +7086,7 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
     <!-- http://purl.obolibrary.org/obo/ECO_0000232 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000232">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -7074,6 +7136,12 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chromosome conformation capture technologies are used to study the structural properties and spatial organization of chromosomes inside cells. All types of chromosome conformation capture technology involve five primary steps: cross-linking of DNA in vivo, restriction digestion, intramolecular ligation, reversing cross-linkages, and DNA enrichment and quantitation. The last step is different for each type of chromosome conformation capture technology, and may include PCR (3C), inverse PCR (4C), or ligation-mediated amplification (5C). Methods for product quantitation can include agarose gel detection or real-time quantitative PCR in the case of 3C, or high-throughput sequencing or microarray analysis for 4C and 5C.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosome conformation-based evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000232"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000232"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -9571,33 +9639,6 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000295">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001271"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
-                                <owl:someValuesFrom>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001239"/>
-                                    </owl:Restriction>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of transcript evidence based on high-throughput (HT) sequencing of fragmented cDNA molecules.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-01-11T12:54:50Z</oboInOwl:creation_date>
@@ -10140,10 +10181,38 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000309">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001674"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001430"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of transcript expression evidence based on high-throughput (HT) sequencing of the 5&apos; ends of cDNA molecules that are selected by a cap-trapper system.</obo:IAO_0000115>
@@ -10155,6 +10224,12 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complementary DNA (cDNA) is synthesized from microgram quantities of mRNA using first-strand cDNA primer (oligo dT12-18) and reverse transcriptase in the presence of trehalose and sorbitol, followed by selection of full-length cDNA with biotinylated cap-trapper. Linkers are attached to the 5&apos; ends of full-length enriched cDNAs to introduce a recognition site for the restriction endonuclease MmeI, which creates a two base overhang. After amplification, sequencing tags are concatenated for high-throughput sequencing. Resulting sort reads are aligned against a reference genome, and downstream analysis is performed.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cap analysis of gene expression evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000309"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000309"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -10174,10 +10249,38 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000310">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001673"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001430"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of transcript expression evidence based on high-throughput (HT) sequencing of the 5&apos; ends of cDNA molecules that are selected by reverse transcriptase template switching.</obo:IAO_0000115>
@@ -10189,6 +10292,12 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NanoCAGE captures the 5&apos; ends of molecules by template switching. When polymerizing the cDNA of a capped mRNA, the reverse transcriptase adds extra cytosines that are complementary to the cap. Each 5&apos; full length cDNAs is extended upon hybridization of the riboguanosine-tailed template switching oligonucleotides to these extra cytosines. In semisuppressive PCR, the short templates fold intramolecularly and prevent the binding of primers, which precludes amplification; longer molecules are less likely to fold and are thus amplified. Templates derived from reaction artifacts form stable homoduplexes, also precluding amplification. After template switching, semisuppressive PCR, and EcoP151 cleavage, 25-bp tags are ligated to bar code-containing oligonucleotide adaptors. After PCR amplification, the nanoCAGE tags are sequenced by synthesis. NanoCAGE requires as little as 10 nanograms of total RNA.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nano-cap analysis of gene expression evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000310"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000310"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -10950,6 +11059,7 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
     <!-- http://purl.obolibrary.org/obo/ECO_0000325 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000325">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -10981,6 +11091,12 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0000325</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromatography evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000325"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000325"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -11468,6 +11584,7 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000340">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -11526,6 +11643,12 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss per generation is determined by comparing colony numbers on selective and non-selective media.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plasmid maintenance assay evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000340"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000340"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -15398,6 +15521,7 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0001096 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005504"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -15430,6 +15554,12 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001096</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mass spectrometry evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001096"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001096"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
@@ -15755,6 +15885,7 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0001105 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006252"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -15770,6 +15901,12 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001105</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear magnetic resonance evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001105"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001105"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -16343,6 +16480,7 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0001126 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005504"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -16368,6 +16506,12 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0001126</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectrophotometry evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001126"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001126"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -18410,8 +18554,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of RNA dot blot assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
@@ -18425,7 +18569,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001177"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -20886,8 +21030,8 @@ computationally derived.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001106"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of nuclease protection assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIB:PG</obo:IAO_0000234>
@@ -20900,7 +21044,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001240"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -22571,39 +22715,6 @@ computationally derived.</owl:annotatedTarget>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECO_000156 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_000156">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0001560"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001560"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006069"/>
-        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of single cell RNA-sequencing evidence that is used in automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jbmunro</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-01-02T12:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single-cell RNA-sequencing evidence used in automatic assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_000156"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006069"/>
-        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECO_0001560 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001560">
@@ -24034,7 +24145,7 @@ computationally derived.</owl:annotatedTarget>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000109"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of reverse transcription polymerase chain reaction evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swolfish</oboInOwl:created_by>
@@ -24046,7 +24157,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001808"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
@@ -24533,6 +24644,7 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0001820 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001820">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000219"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -24618,6 +24730,12 @@ computationally derived.</owl:annotatedTarget>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RACE PCR is frequently used to verify transcription start sites relevant to the function of transcription factor binding sites such as repression.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rapid amplification of cDNA ends polymerase chain reaction evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001820"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001820"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
@@ -25921,6 +26039,7 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -25968,6 +26087,12 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005031</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">structure determination evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005031"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005031"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000112"/>
@@ -26465,6 +26590,7 @@ computationally derived.</owl:annotatedTarget>
     <!-- http://purl.obolibrary.org/obo/ECO_0005516 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005516">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -26479,6 +26605,12 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005516</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecule detection assay evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005516"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005516"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -26512,6 +26644,7 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005518">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005516"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -26559,6 +26692,12 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005518</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNA detection assay evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005518"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005518"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -29378,6 +29517,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0005606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -29444,6 +29584,12 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0005606</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell transfection experiment evidence</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005606"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0005606"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -44858,6 +45004,40 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECO_0006407 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006407">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0001560"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001560"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006069"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEA</obo:ECO_9000002>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of single cell RNA-sequencing evidence that is used in automatic assertion.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025-06-23T12:00:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:000156</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECO:0006407</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single-cell RNA-sequencing evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006407"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0006069"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECO_0007000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007000">
@@ -47927,6 +48107,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000027"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000252"/>
+        <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISS</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of structural similarity evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-14T09:47:55Z</oboInOwl:creation_date>
@@ -74672,6 +74853,17 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <!-- http://purl.obolibrary.org/obo/ECO_0007739 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007739">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0005518"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0005518"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP</obo:ECO_9000002>
@@ -77475,12 +77667,6 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007818"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0005518"/>
-        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007818"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007816"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
@@ -79099,6 +79285,7 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001182"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008009"/>
         <obo:ECO_9000002 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEP</obo:ECO_9000002>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of single molecule fluorescence in situ hybridization evidence that is used in a manual assertion.</obo:IAO_0000115>
@@ -79114,6 +79301,12 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008016"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0001182"/>
+        <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008016"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007739"/>
         <oboInOwl:is_inferred rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</oboInOwl:is_inferred>
     </owl:Axiom>
     <owl:Axiom>
