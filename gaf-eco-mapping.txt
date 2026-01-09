@@ -4,23 +4,18 @@
 # Always use this URL
 #
 # About:
-# This mapping translates evidence codes used in a GAF to a specific evidence type in ECO
+# This mapping translates GO root evidence codes used in a GAF to a specific evidence type in ECO
+# Previously, this file included mappings between GO root evidence codes, GO_REFs and ECO term identifiers. As of January 2026, all GO_REFs and their associated mappings have been removed. These mappings are now maintained by the Gene Ontology team and are available at: https://github.com/geneontology/go-site/blob/master/metadata/eco-usage-constraints.yaml. 
+# This file now contains the default ECO identifiers corresponding to GO root evidence codes.
 #
-# Each mapping is from a pair:
-#  1. GAF evidence code (e.g. IEA)
-#  2. A GO_REF (found in the GAF Reference column; see http://www.geneontology.org/cgi-bin/references.cgi)
-# to a class identifier in ECO (http://purl.obolibrary.org/obo/eco.owl)
+# Each mapping in this file constitues:
+#  1. GO root evidence code (e.g. IEA)
+#  2. The value 'Default' in column 2 is used for the mapping if no more specific mapping can be found
 #  3. ECO ID
 #
-# If the value 'Default' is in column 2 then this mapping is used if
-# no more specific mapping can be found
+# This document consists of these comments (after #s) followed by a set of mappings, each represented as the above 3 columns separated by tabs
 #
-# This document consists of these comments (after #s) followed by
-# a set of mappings, each represented as the above 3 columns separated by tabs
-#
-# For example an IEA supported by
-#  http://www.geneontology.org/cgi-bin/references.cgi#GO_REF:0000002
-# maps to ECO:0000256 'match to sequence model evidence used in automatic assertion'
+# For example an 'IEA' GO root evidence code by default maps to ECO:0000501 ('evidence used in automatic assertion')
 #
 # To request changes in the mappings, submit an item to
 #  https://github.com/evidenceontology/evidenceontology/issues
@@ -36,21 +31,8 @@ IBD	Default	ECO:0000319
 IC	Default	ECO:0000305
 IDA	Default	ECO:0000314
 IEA	Default	ECO:0000501
-IEA	GO_REF:0000002	ECO:0000256
-IEA	GO_REF:0000003	ECO:0000501
-IEA	GO_REF:0000004	ECO:0007322
-IEA	GO_REF:0000023	ECO:0007322
-IEA	GO_REF:0000020	ECO:0000501
-IEA	GO_REF:0000035	ECO:0000265
-IEA	GO_REF:0000041	ECO:0000501
-IEA	GO_REF:0000043	ECO:0000501
-IEA	GO_REF:0000116	ECO:0000501
-IEA	GO_REF:0000044	ECO:0000501
-IEA	GO_REF:0000107	ECO:0000249
-IEA	GO_REF:0000108	ECO:0000363
 IEP	Default	ECO:0000270
 IGC	Default	ECO:0000317
-IGC	GO_REF:0000025	ECO:0000354
 IGI	Default	ECO:0000316
 IKR	Default	ECO:0000320
 IMP	Default	ECO:0000315
@@ -60,9 +42,6 @@ ISA	Default	ECO:0000247
 ISM	Default	ECO:0000255
 ISO	Default	ECO:0000266
 ISS	Default	ECO:0000250
-ISS	GO_REF:0000011	ECO:0000255
-ISS	GO_REF:0000012	ECO:0000031
-ISS	GO_REF:0000027	ECO:0000031
 NAS	Default	ECO:0000303
 ND	Default	ECO:0000307
 RCA	Default	ECO:0000245
