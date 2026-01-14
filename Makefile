@@ -26,7 +26,7 @@ build:
 	mkdir -p $@
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.8.3/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar
 
 build/go.owl: | build
 	curl -Lk http://purl.obolibrary.org/obo/go.owl > $@
