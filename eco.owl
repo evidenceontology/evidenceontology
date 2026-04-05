@@ -12,11 +12,11 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2026-01-15/eco.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2026-04-05/eco.owl"/>
         <dc:description>The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <dc:title>Evidence &amp; Conclusion Ontology (ECO)</dc:title>
         <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <oboInOwl:date>15:01:2026 11:03</oboInOwl:date>
+        <oboInOwl:date>05:04:2026 19:51</oboInOwl:date>
         <oboInOwl:default-namespace>eco</oboInOwl:default-namespace>
         <rdfs:comment>ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
     </owl:Ontology>
@@ -7138,8 +7138,8 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <obo:IAO_0000115>A type of chromosome conformation-based evidence that is derived by 1) quantifying interactions between a single pair of genomic loci and not multiple interactions and 2) performing polymerase chain reaction (PCR) in the final product quantitation step.</obo:IAO_0000115>
         <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-17T12:46:15Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>chromosome conformation capture evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>3C</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>chromosome conformation capture evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>chromosome conformation capture-PCR evidence</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0000233</oboInOwl:id>
@@ -7193,9 +7193,9 @@ qPCR can be used to quantitatively determine levels of gene expression.</rdfs:co
         <obo:IAO_0000115>A type of chromosome conformation-based evidence that is derived by performing ligation-mediated amplification (LMA) prior to product quantitation.</obo:IAO_0000115>
         <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-19T01:22:20Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>carbon-copy chromosome conformation capture evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>5C</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>carbon-copy 3C</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>carbon-copy chromosome conformation capture evidence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0000235</oboInOwl:id>
         <rdfs:comment>5C is used to study the structural properties and spatial organization of chromosomes inside cells. Like other types of chromosome conformation capture technology, 5C differs only in the fifth step, which involves ligation-mediated amplification (LMA) followed by product quantitation.</rdfs:comment>
@@ -24636,9 +24636,9 @@ computationally derived.</owl:annotatedTarget>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001820"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of nucleotide sequencing assay evidence in which RT-PCR (cDNA synthesis) is first used to produce a cDNA copy of a region of the RNA transcript being investigated followed by PCR to capture either the unknown 5&apos; or 3&apos; end of the transcript for sequencing, depending on whether 5&apos; RACE-PCR or 3&apos; RACE-PCR are being undertaken.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PMID:7685466</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ECO:SW</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:17498297</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:7685466</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001820"/>
@@ -85104,6 +85104,520 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008182"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of T cell type based MHC restriction evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008183 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008183">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000002"/>
+        <obo:IAO_0000115>A type of direct assay evidence in which proteins of interest are fused to an enzyme that is able to label or modify other proteins that come into the proximity of the protein of interest. Labeled/modified proteins are then isolated and identified, often by mass spectrometry.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008183</oboInOwl:id>
+        <rdfs:label>protein proximity labeling assay evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008183"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of direct assay evidence in which proteins of interest are fused to an enzyme that is able to label or modify other proteins that come into the proximity of the protein of interest. Labeled/modified proteins are then isolated and identified, often by mass spectrometry.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:31161514</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008184">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008183"/>
+        <obo:IAO_0000115>A type of protein proximity labeling assay evidence in which a mutant of a biotin protein ligase is fused to a protein of interest such that when other proteins enter the proximity of the protein of interest they are biotinylated. Biotinylated proteins are then isolated and identified, often by mass spectrometry.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>BioID</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008184</oboInOwl:id>
+        <rdfs:label>proximity-dependent biotin identification evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008184"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of protein proximity labeling assay evidence in which a mutant of a biotin protein ligase is fused to a protein of interest such that when other proteins enter the proximity of the protein of interest they are biotinylated. Biotinylated proteins are then isolated and identified, often by mass spectrometry.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:31161514</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008185 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008185">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000021"/>
+        <obo:IAO_0000115>A type of physical interaction evidence that is the accumulated strength of multiple affinities of individual non-covalent binding interactions, such as between a protein receptor and its ligand. Avidity should not be thought of as the mere sum of its constituent affinities but as the combined effect of all affinities participating in the biomolecular interaction. It is commonly referred to as functional affinity.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008185</oboInOwl:id>
+        <rdfs:label>avidity evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008185"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of physical interaction evidence that is the accumulated strength of multiple affinities of individual non-covalent binding interactions, such as between a protein receptor and its ligand. Avidity should not be thought of as the mere sum of its constituent affinities but as the combined effect of all affinities participating in the biomolecular interaction. It is commonly referred to as functional affinity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>url:https://en.wikipedia.org/wiki/Avidity</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008186">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008185"/>
+        <obo:IAO_0000115>A type of avidity evidence in which immobilized &quot;bait&quot; proteins are probed with enzyme-tagged, multimerized &quot;prey&quot; proteins to amplify avidity, enabling sensitive detection of otherwise weak and transient extracellular protein-protein interactions.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>AVEXIS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008186</oboInOwl:id>
+        <rdfs:label>avidity-based extracellular interaction screening evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008186"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of avidity evidence in which immobilized &quot;bait&quot; proteins are probed with enzyme-tagged, multimerized &quot;prey&quot; proteins to amplify avidity, enabling sensitive detection of otherwise weak and transient extracellular protein-protein interactions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:22414956</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008187">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001048"/>
+        <obo:IAO_0000115>A type of fluorescence resonance energy transfer evidence resulting from the measurement of the distance-dependent energy transfer of two fluorophores attached to individual molecules, allowing for the detection of conformational states at both spatial and temporal resolution.</obo:IAO_0000115>
+        <obo:IAO_0000234>XimeAixa</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>smFRET evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008187</oboInOwl:id>
+        <rdfs:label>single-molecule fluorescence resonance energy transfer evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008187"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of fluorescence resonance energy transfer evidence resulting from the measurement of the distance-dependent energy transfer of two fluorophores attached to individual molecules, allowing for the detection of conformational states at both spatial and temporal resolution.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:36183447</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008188 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008188">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008183"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008183"/>
+        <obo:ECO_9000002>IDA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of protein proximity labeling assay evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008188</oboInOwl:id>
+        <rdfs:label>protein proximity labeling assay evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008188"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000314"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008188"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of protein proximity labeling assay evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008189 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008189">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008183"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007307"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008183"/>
+        <obo:ECO_9000002>IEA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of protein proximity labeling assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008189</oboInOwl:id>
+        <rdfs:label>protein proximity labeling assay evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008189"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007307"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008189"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of protein proximity labeling assay evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008190">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008184"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008184"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008188"/>
+        <obo:ECO_9000002>IDA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of proximity-dependent biotin identification evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>BioID</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008190</oboInOwl:id>
+        <rdfs:label>proximity-dependent biotin identification evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008190"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0008188"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008190"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of proximity-dependent biotin identification evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008191">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008184"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008184"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008189"/>
+        <obo:ECO_9000002>IEA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of proximity-dependent biotin identification evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>BioID</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008191</oboInOwl:id>
+        <rdfs:label>proximity-dependent biotin identification evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008191"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0008189"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008191"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of proximity-dependent biotin identification evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008192">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008185"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008185"/>
+        <obo:ECO_9000002>IPI</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of avidity evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008192</oboInOwl:id>
+        <rdfs:label>avidity evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008192"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008192"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of avidity evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008193">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008185"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007332"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008185"/>
+        <obo:ECO_9000002>IEA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of avidity evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008193</oboInOwl:id>
+        <rdfs:label>avidity evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008193"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007332"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008193"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of avidity evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008194 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008194">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008186"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008186"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008192"/>
+        <obo:ECO_9000002>IPI</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of avidity-based extracellular interaction screening evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>AVEXIS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008194</oboInOwl:id>
+        <rdfs:label>avidity-based extracellular interaction screening evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008194"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0008192"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008194"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of avidity-based extracellular interaction screening evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008195">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008186"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008186"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008193"/>
+        <obo:ECO_9000002>IEA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of avidity-based extracellular interaction screening evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>KAUST:RohitSatyam</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>AVEXIS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008195</oboInOwl:id>
+        <rdfs:label>avidity-based extracellular interaction screening evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008195"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0008193"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008195"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of avidity-based extracellular interaction screening evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008196 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008196">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008187"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001183"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008187"/>
+        <obo:ECO_9000002>IPI</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of single-molecule fluorescence resonance energy transfer evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>XimeAixa</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>smFRET evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008196</oboInOwl:id>
+        <rdfs:label>single-molecule fluorescence resonance energy transfer evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008196"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0001183"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008196"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of single-molecule fluorescence resonance energy transfer evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0008197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0008197">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0008187"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007387"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0008187"/>
+        <obo:ECO_9000002>IEA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of single-molecule fluorescence resonance energy transfer evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>XimeAixa</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-04-05T15:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>smFRET evidence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0008197</oboInOwl:id>
+        <rdfs:label>single-molecule fluorescence resonance energy transfer evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008197"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007387"/>
+        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0008197"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of single-molecule fluorescence resonance energy transfer evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
     </owl:Axiom>
     

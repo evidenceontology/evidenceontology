@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: eco/releases/2026-01-15/eco-basic.owl
-date: 15:01:2026 11:04
+data-version: eco/releases/2026-04-05/eco-basic.owl
+date: 05:04:2026 19:52
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -22823,6 +22823,170 @@ property_value: ECO:9000002 "IEA" xsd:string
 property_value: IAO:0000234 "IEDB:RandiVita" xsd:string
 created_by: snadendla
 creation_date: 2024-06-09T05:36:49Z
+
+[Term]
+id: ECO:0008183
+name: protein proximity labeling assay evidence
+def: "A type of direct assay evidence in which proteins of interest are fused to an enzyme that is able to label or modify other proteins that come into the proximity of the protein of interest. Labeled/modified proteins are then isolated and identified, often by mass spectrometry." [PMID:31161514]
+is_a: ECO:0000002 ! direct assay evidence
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008184
+name: proximity-dependent biotin identification evidence
+def: "A type of protein proximity labeling assay evidence in which a mutant of a biotin protein ligase is fused to a protein of interest such that when other proteins enter the proximity of the protein of interest they are biotinylated. Biotinylated proteins are then isolated and identified, often by mass spectrometry." [PMID:31161514]
+synonym: "BioID" EXACT []
+is_a: ECO:0008183 ! protein proximity labeling assay evidence
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008185
+name: avidity evidence
+def: "A type of physical interaction evidence that is the accumulated strength of multiple affinities of individual non-covalent binding interactions, such as between a protein receptor and its ligand. Avidity should not be thought of as the mere sum of its constituent affinities but as the combined effect of all affinities participating in the biomolecular interaction. It is commonly referred to as functional affinity." [url:https\://en.wikipedia.org/wiki/Avidity]
+is_a: ECO:0000021 ! physical interaction evidence
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008186
+name: avidity-based extracellular interaction screening evidence
+def: "A type of avidity evidence in which immobilized \"bait\" proteins are probed with enzyme-tagged, multimerized \"prey\" proteins to amplify avidity, enabling sensitive detection of otherwise weak and transient extracellular protein-protein interactions." [PMID:22414956]
+synonym: "AVEXIS" EXACT []
+is_a: ECO:0008185 ! avidity evidence
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008187
+name: single-molecule fluorescence resonance energy transfer evidence
+def: "A type of fluorescence resonance energy transfer evidence resulting from the measurement of the distance-dependent energy transfer of two fluorophores attached to individual molecules, allowing for the detection of conformational states at both spatial and temporal resolution." [PMID:36183447]
+synonym: "smFRET evidence" EXACT []
+is_a: ECO:0001048 ! fluorescence resonance energy transfer evidence
+property_value: IAO:0000234 "XimeAixa" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008188
+name: protein proximity labeling assay evidence used in manual assertion
+def: "A type of protein proximity labeling assay evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000314 ! direct assay evidence used in manual assertion
+is_a: ECO:0008183 ! protein proximity labeling assay evidence
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008189
+name: protein proximity labeling assay evidence used in automatic assertion
+def: "A type of protein proximity labeling assay evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0007307 ! direct assay evidence used in automatic assertion
+is_a: ECO:0008183 ! protein proximity labeling assay evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008190
+name: proximity-dependent biotin identification evidence used in manual assertion
+def: "A type of proximity-dependent biotin identification evidence that is used in a manual assertion." [ECO:SN]
+synonym: "BioID" EXACT []
+is_a: ECO:0008184 ! proximity-dependent biotin identification evidence
+is_a: ECO:0008188 ! protein proximity labeling assay evidence used in manual assertion
+property_value: ECO:9000002 "IDA" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008191
+name: proximity-dependent biotin identification evidence used in automatic assertion
+def: "A type of proximity-dependent biotin identification evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "BioID" EXACT []
+is_a: ECO:0008184 ! proximity-dependent biotin identification evidence
+is_a: ECO:0008189 ! protein proximity labeling assay evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008192
+name: avidity evidence used in manual assertion
+def: "A type of avidity evidence that is used in a manual assertion." [ECO:SN]
+is_a: ECO:0000353 ! physical interaction evidence used in manual assertion
+is_a: ECO:0008185 ! avidity evidence
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008193
+name: avidity evidence used in automatic assertion
+def: "A type of avidity evidence that is used in an automatic assertion." [ECO:SN]
+is_a: ECO:0007332 ! physical interaction evidence used in automatic assertion
+is_a: ECO:0008185 ! avidity evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008194
+name: avidity-based extracellular interaction screening evidence used in manual assertion
+def: "A type of avidity-based extracellular interaction screening evidence that is used in a manual assertion." [ECO:SN]
+synonym: "AVEXIS" EXACT []
+is_a: ECO:0008186 ! avidity-based extracellular interaction screening evidence
+is_a: ECO:0008192 ! avidity evidence used in manual assertion
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008195
+name: avidity-based extracellular interaction screening evidence used in automatic assertion
+def: "A type of avidity-based extracellular interaction screening evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "AVEXIS" EXACT []
+is_a: ECO:0008186 ! avidity-based extracellular interaction screening evidence
+is_a: ECO:0008193 ! avidity evidence used in automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "KAUST:RohitSatyam" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008196
+name: single-molecule fluorescence resonance energy transfer evidence used in manual assertion
+def: "A type of single-molecule fluorescence resonance energy transfer evidence that is used in a manual assertion." [ECO:SN]
+synonym: "smFRET evidence" EXACT []
+is_a: ECO:0001183 ! fluorescence resonance energy transfer evidence used in manual assertion
+is_a: ECO:0008187 ! single-molecule fluorescence resonance energy transfer evidence
+property_value: ECO:9000002 "IPI" xsd:string
+property_value: IAO:0000234 "XimeAixa" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
+
+[Term]
+id: ECO:0008197
+name: single-molecule fluorescence resonance energy transfer evidence used in automatic assertion
+def: "A type of single-molecule fluorescence resonance energy transfer evidence that is used in an automatic assertion." [ECO:SN]
+synonym: "smFRET evidence" EXACT []
+is_a: ECO:0007387 ! fluorescence resonance energy transfer evidence used in automatic assertion
+is_a: ECO:0008187 ! single-molecule fluorescence resonance energy transfer evidence
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "XimeAixa" xsd:string
+created_by: snadendla
+creation_date: 2026-04-05T15:56:13Z
 
 [Typedef]
 id: used_in
