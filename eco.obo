@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2026-04-05
-date: 05:04:2026 19:51
+data-version: releases/2026-05-15
+date: 15:05:2026 16:56
 subsetdef: go_groupings "Grouping classes used by GO"
 subsetdef: valid_with_biological_process "GO biological process terms should be used in the GO with/from field"
 subsetdef: valid_with_cellular_component "GO cellular component terms should be used in the GO with/from field"
@@ -3647,9 +3647,9 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001058
-name: in vitro cleavage assay evidence
-def: "A type of cleavage assay evidence used in an in vitro experiment." [PMID:21121091]
-is_a: ECO:0001547 ! cleavage assay evidence
+name: in vitro protein cleavage assay evidence
+def: "A type of protein cleavage assay evidence used in an in vitro experiment." [PMID:21121091]
+is_a: ECO:0001547 ! protein cleavage assay evidence
 property_value: IAO:0000234 "SIB:PG" xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -3800,9 +3800,9 @@ creation_date: 2014-03-16T11:30:54Z
 
 [Term]
 id: ECO:0001075
-name: in vivo cleavage assay evidence
-def: "A type of cleavage assay evidence used in an in vivo experiment." [ECO:SN, PMID:22154596]
-is_a: ECO:0001547 ! cleavage assay evidence
+name: in vivo protein cleavage assay evidence
+def: "A type of protein cleavage assay evidence used in an in vivo experiment." [ECO:SN, PMID:22154596]
+is_a: ECO:0001547 ! protein cleavage assay evidence
 property_value: IAO:0000234 "SIB:PG" xsd:string
 created_by: mchibucos
 creation_date: 2014-03-16T11:30:54Z
@@ -5072,11 +5072,11 @@ creation_date: 2014-03-17T17:19:24Z
 
 [Term]
 id: ECO:0001191
-name: in vitro cleavage assay evidence used in manual assertion
-def: "A type of in vitro cleavage assay evidence that is used in a manual assertion." [ECO:MCC]
+name: in vitro protein cleavage assay evidence used in manual assertion
+def: "A type of in vitro protein cleavage assay evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0001058 ! in vitro cleavage assay evidence
-intersection_of: ECO:0001058 ! in vitro cleavage assay evidence
+is_a: ECO:0001058 ! in vitro protein cleavage assay evidence
+intersection_of: ECO:0001058 ! in vitro protein cleavage assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 "SIB:PG" xsd:string
@@ -5293,11 +5293,11 @@ creation_date: 2014-03-17T17:48:56Z
 
 [Term]
 id: ECO:0001208
-name: in vivo cleavage assay evidence used in manual assertion
-def: "A type of in vivo cleavage assay evidence that is used in a manual assertion." [ECO:MCC]
+name: in vivo protein cleavage assay evidence used in manual assertion
+def: "A type of in vivo protein cleavage assay evidence that is used in a manual assertion." [ECO:MCC]
 is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0001075 ! in vivo cleavage assay evidence
-intersection_of: ECO:0001075 ! in vivo cleavage assay evidence
+is_a: ECO:0001075 ! in vivo protein cleavage assay evidence
+intersection_of: ECO:0001075 ! in vivo protein cleavage assay evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "IDA" xsd:string
 property_value: IAO:0000234 "SIB:PG" xsd:string
@@ -6195,7 +6195,7 @@ creation_date: 2017-11-30T14:00:00Z
 
 [Term]
 id: ECO:0001547
-name: cleavage assay evidence
+name: protein cleavage assay evidence
 def: "A type of direct assay evidence where the cleavage of a protein into protein fragments by a protease is detected." [PMID:21121091, PMID:22154596]
 is_a: ECO:0000002 ! direct assay evidence
 property_value: IAO:0000234 "ECO_AssayCleanup" xsd:string
@@ -13538,6 +13538,41 @@ created_by: snadendla
 creation_date: 2025-06-23T12:00:00Z
 
 [Term]
+id: ECO:0006408
+name: combinatorial intrinsic disorder prediction and experimental evidence
+def: "A type of combinatorial computational and experimental evidence in which intrinsic disorder prediction evidence and experimental evidence have been used in combination in order to establish the basis for an assertion." [DisProt:XimeAixa]
+is_a: ECO:0007661 ! combinatorial computational and experimental evidence
+property_value: IAO:0000112 "This evidence type is commonly used when experimental techniques (such as circular dichroism, NMR, limited proteolysis, or other biophysical methods) are combined with computational predictions of intrinsically disordered regions (IDRs) to support assertions about protein disorder or structure." xsd:string
+property_value: IAO:0000234 "DisProt:XimeAixa" xsd:string
+created_by: snadendla
+creation_date: 2026-05-15T05:36:49Z
+
+[Term]
+id: ECO:0006409
+name: combinatorial intrinsic disorder prediction and experimental evidence used in automatic assertion
+def: "A type of combinatorial intrinsic disorder prediction and experimental evidence that is used in an automatic assertion." []
+is_a: ECO:0006408 ! combinatorial intrinsic disorder prediction and experimental evidence
+is_a: ECO:0007829 {is_inferred="true"} ! combinatorial computational and experimental evidence used in automatic assertion
+intersection_of: ECO:0006408 ! combinatorial intrinsic disorder prediction and experimental evidence
+intersection_of: used_in ECO:0000203 ! automatic assertion
+property_value: ECO:9000002 "IEA" xsd:string
+property_value: IAO:0000234 "DisProt:XimeAixa" xsd:string
+created_by: snadendla
+creation_date: 2026-05-15T05:36:49Z
+
+[Term]
+id: ECO:0006410
+name: combinatorial intrinsic disorder prediction and experimental evidence used in manual assertion
+def: "A type of combinatorial intrinsic disorder prediction and experimental evidence that is used in a manual assertion." []
+is_a: ECO:0006408 ! combinatorial intrinsic disorder prediction and experimental evidence
+is_a: ECO:0007744 {is_inferred="true"} ! combinatorial computational and experimental evidence used in manual assertion
+intersection_of: ECO:0006408 ! combinatorial intrinsic disorder prediction and experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
+property_value: IAO:0000234 "DisProt:XimeAixa" xsd:string
+created_by: snadendla
+creation_date: 2026-05-15T05:36:49Z
+
+[Term]
 id: ECO:0007000
 name: high throughput mutant phenotypic evidence
 def: "A type of high throughput evidence derived from high throughput analysis of differences in alleles of a corresponding gene." [GO:IMP]
@@ -18111,11 +18146,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007394
-name: in vitro cleavage assay evidence used in automatic assertion
-def: "A type of in vitro cleavage assay evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001058 {is_inferred="true"} ! in vitro cleavage assay evidence
-is_a: ECO:0007782 {is_inferred="true"} ! cleavage assay evidence used in automatic assertion
-intersection_of: ECO:0001058 ! in vitro cleavage assay evidence
+name: in vitro protein cleavage assay evidence used in automatic assertion
+def: "A type of in vitro protein cleavage assay evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0001058 {is_inferred="true"} ! in vitro protein cleavage assay evidence
+is_a: ECO:0007782 {is_inferred="true"} ! protein cleavage assay evidence used in automatic assertion
+intersection_of: ECO:0001058 ! in vitro protein cleavage assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
@@ -18315,11 +18350,11 @@ creation_date: 2018-05-14T09:47:55Z
 
 [Term]
 id: ECO:0007411
-name: in vivo cleavage assay evidence used in automatic assertion
-def: "A type of in vivo cleavage assay evidence that is used in an automatic assertion." [ECO:RCT]
-is_a: ECO:0001075 {is_inferred="true"} ! in vivo cleavage assay evidence
-is_a: ECO:0007782 {is_inferred="true"} ! cleavage assay evidence used in automatic assertion
-intersection_of: ECO:0001075 ! in vivo cleavage assay evidence
+name: in vivo protein cleavage assay evidence used in automatic assertion
+def: "A type of in vivo protein cleavage assay evidence that is used in an automatic assertion." [ECO:RCT]
+is_a: ECO:0001075 {is_inferred="true"} ! in vivo protein cleavage assay evidence
+is_a: ECO:0007782 {is_inferred="true"} ! protein cleavage assay evidence used in automatic assertion
+intersection_of: ECO:0001075 ! in vivo protein cleavage assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
@@ -21283,6 +21318,7 @@ name: manually integrated combinatorial computational and experimental evidence 
 def: "A type of manually integrated combinatorial computational and experimental evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0007662 {is_inferred="true"} ! manually integrated combinatorial computational and experimental evidence
 is_a: ECO:0007675 {is_inferred="true"} ! manually integrated combinatorial evidence used in manual assertion
+is_a: ECO:0007744 {is_inferred="true"} ! combinatorial computational and experimental evidence used in manual assertion
 intersection_of: ECO:0007662 ! manually integrated combinatorial computational and experimental evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
@@ -21319,6 +21355,7 @@ name: automatically integrated combinatorial computational and experimental evid
 def: "A type of automatically integrated combinatorial computational and experimental evidence that is used in a manual assertion." [ECO:RCT]
 is_a: ECO:0000245 {is_inferred="true"} ! automatically integrated combinatorial evidence used in manual assertion
 is_a: ECO:0007665 {is_inferred="true"} ! automatically integrated combinatorial computational and experimental evidence
+is_a: ECO:0007744 {is_inferred="true"} ! combinatorial computational and experimental evidence used in manual assertion
 intersection_of: ECO:0007665 ! automatically integrated combinatorial computational and experimental evidence
 intersection_of: used_in ECO:0000218 ! manual assertion
 property_value: ECO:9000002 "RCA" xsd:string
@@ -21543,10 +21580,10 @@ creation_date: 2019-03-20T12:27:00Z
 
 [Term]
 id: ECO:0007691
-name: cleavage assay evidence used in manual assertion
-def: "A type of cleavage assay evidence that is used in a manual assertion." []
+name: protein cleavage assay evidence used in manual assertion
+def: "A type of protein cleavage assay evidence that is used in a manual assertion." []
 is_a: ECO:0000314 {is_inferred="true"} ! direct assay evidence used in manual assertion
-is_a: ECO:0001547 ! cleavage assay evidence
+is_a: ECO:0001547 ! protein cleavage assay evidence
 property_value: ECO:9000002 "IDA" xsd:string
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
@@ -22077,6 +22114,8 @@ name: combinatorial computational and experimental evidence used in manual asser
 def: "A type of combinatorial computational and experimental evidence that is used in a manual assertion." []
 is_a: ECO:0000244 {is_inferred="true"} ! combinatorial evidence used in manual assertion
 is_a: ECO:0007661 ! combinatorial computational and experimental evidence
+intersection_of: ECO:0007661 ! combinatorial computational and experimental evidence
+intersection_of: used_in ECO:0000218 ! manual assertion
 created_by: rctauber
 creation_date: 2019-03-20T12:27:00Z
 
@@ -22500,11 +22539,11 @@ creation_date: 2019-03-20T13:02:00Z
 
 [Term]
 id: ECO:0007782
-name: cleavage assay evidence used in automatic assertion
-def: "A type of cleavage assay evidence that is used in an automatic assertion." []
-is_a: ECO:0001547 {is_inferred="true"} ! cleavage assay evidence
+name: protein cleavage assay evidence used in automatic assertion
+def: "A type of protein cleavage assay evidence that is used in an automatic assertion." []
+is_a: ECO:0001547 {is_inferred="true"} ! protein cleavage assay evidence
 is_a: ECO:0007307 {is_inferred="true"} ! direct assay evidence used in automatic assertion
-intersection_of: ECO:0001547 ! cleavage assay evidence
+intersection_of: ECO:0001547 ! protein cleavage assay evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string
 created_by: rctauber
@@ -23063,7 +23102,7 @@ id: ECO:0007829
 name: combinatorial computational and experimental evidence used in automatic assertion
 def: "A type of combinatorial computational and experimental evidence that is used in an automatic assertion." []
 is_a: ECO:0000213 {is_inferred="true"} ! combinatorial evidence used in automatic assertion
-is_a: ECO:0007661 {is_inferred="true"} ! combinatorial computational and experimental evidence
+is_a: ECO:0007661 ! combinatorial computational and experimental evidence
 intersection_of: ECO:0007661 ! combinatorial computational and experimental evidence
 intersection_of: used_in ECO:0000203 ! automatic assertion
 property_value: ECO:9000002 "IEA" xsd:string

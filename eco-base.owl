@@ -12,11 +12,11 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/eco/eco-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2026-04-05/eco-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2026-05-15/eco-base.owl"/>
         <dc:description>The Evidence &amp; Conclusion Ontology (ECO) describes types of scientific evidence within the biological research domain that arise from laboratory experiments, computational methods, literature curation, or other means.</dc:description>
         <dc:title>Evidence &amp; Conclusion Ontology (ECO)</dc:title>
         <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-        <oboInOwl:date>05:04:2026 19:51</oboInOwl:date>
+        <oboInOwl:date>15:05:2026 16:56</oboInOwl:date>
         <oboInOwl:default-namespace>eco</oboInOwl:default-namespace>
         <rdfs:comment>ECO (https://github.com/evidenceontology/evidenceontology) is released into the public domain under CC0 1.0 Universal (CC0 1.0). Anyone is free to copy, modify, or distribute the work, even for commercial purposes, without asking permission. Please see the Public Domain Dedication (https://creativecommons.org/publicdomain/zero/1.0/) for an easy-to-read description of CC0 1.0 or the full legal code (https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more detailed information. To get a sense of why ECO is CC0 as opposed to licensed under CC-BY, please read this thoughtful discussion (https://github.com/OBOFoundry/OBOFoundry.github.io/issues/285) on the OBO Foundry GitHub site.</rdfs:comment>
     </owl:Ontology>
@@ -10905,18 +10905,18 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001547"/>
-        <obo:IAO_0000115>A type of cleavage assay evidence used in an in vitro experiment.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of protein cleavage assay evidence used in an in vitro experiment.</obo:IAO_0000115>
         <obo:IAO_0000234>SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-03-16T11:30:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0001058</oboInOwl:id>
-        <rdfs:label>in vitro cleavage assay evidence</rdfs:label>
+        <rdfs:label>in vitro protein cleavage assay evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001058"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of cleavage assay evidence used in an in vitro experiment.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of protein cleavage assay evidence used in an in vitro experiment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PMID:21121091</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11296,18 +11296,18 @@ computationally derived.</owl:annotatedTarget>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0001075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001547"/>
-        <obo:IAO_0000115>A type of cleavage assay evidence used in an in vivo experiment.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of protein cleavage assay evidence used in an in vivo experiment.</obo:IAO_0000115>
         <obo:IAO_0000234>SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-03-16T11:30:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0001075</oboInOwl:id>
-        <rdfs:label>in vivo cleavage assay evidence</rdfs:label>
+        <rdfs:label>in vivo protein cleavage assay evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001075"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of cleavage assay evidence used in an in vivo experiment.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of protein cleavage assay evidence used in an in vivo experiment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:22154596</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14970,13 +14970,13 @@ computationally derived.</owl:annotatedTarget>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001058"/>
         <rdfs:subClassOf rdf:nodeID="genid1441"/>
         <obo:ECO_9000002>IDA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of in vitro cleavage assay evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of in vitro protein cleavage assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234>SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-03-17T17:21:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0001191</oboInOwl:id>
-        <rdfs:label>in vitro cleavage assay evidence used in manual assertion</rdfs:label>
+        <rdfs:label>in vitro protein cleavage assay evidence used in manual assertion</rdfs:label>
     </owl:Class>
     <owl:Restriction rdf:nodeID="genid1441">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -14991,7 +14991,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001191"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of in vitro cleavage assay evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of in vitro protein cleavage assay evidence that is used in a manual assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -15718,13 +15718,13 @@ computationally derived.</owl:annotatedTarget>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0001075"/>
         <rdfs:subClassOf rdf:nodeID="genid1560"/>
         <obo:ECO_9000002>IDA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of in vivo cleavage assay evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of in vivo protein cleavage assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <obo:IAO_0000234>SIB:PG</obo:IAO_0000234>
         <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-03-17T17:49:43Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0001208</oboInOwl:id>
-        <rdfs:label>in vivo cleavage assay evidence used in manual assertion</rdfs:label>
+        <rdfs:label>in vivo protein cleavage assay evidence used in manual assertion</rdfs:label>
     </owl:Class>
     <owl:Restriction rdf:nodeID="genid1560">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
@@ -15739,7 +15739,7 @@ computationally derived.</owl:annotatedTarget>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001208"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of in vivo cleavage assay evidence that is used in a manual assertion.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of in vivo protein cleavage assay evidence that is used in a manual assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -18641,7 +18641,7 @@ computationally derived.</owl:annotatedTarget>
         <oboInOwl:creation_date>2017-11-30T14:00:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0001547</oboInOwl:id>
-        <rdfs:label>cleavage assay evidence</rdfs:label>
+        <rdfs:label>protein cleavage assay evidence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0001547"/>
@@ -39287,6 +39287,93 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECO_0006408 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006408">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007661"/>
+        <obo:IAO_0000112>This evidence type is commonly used when experimental techniques (such as circular dichroism, NMR, limited proteolysis, or other biophysical methods) are combined with computational predictions of intrinsically disordered regions (IDRs) to support assertions about protein disorder or structure.</obo:IAO_0000112>
+        <obo:IAO_0000115>A type of combinatorial computational and experimental evidence in which intrinsic disorder prediction evidence and experimental evidence have been used in combination in order to establish the basis for an assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>DisProt:XimeAixa</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-05-15T05:36:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0006408</oboInOwl:id>
+        <rdfs:label>combinatorial intrinsic disorder prediction and experimental evidence</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0006408"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A type of combinatorial computational and experimental evidence in which intrinsic disorder prediction evidence and experimental evidence have been used in combination in order to establish the basis for an assertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DisProt:XimeAixa</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006409">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0006408"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006408"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:ECO_9000002>IEA</obo:ECO_9000002>
+        <obo:IAO_0000115>A type of combinatorial intrinsic disorder prediction and experimental evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>DisProt:XimeAixa</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-05-15T05:36:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0006409</oboInOwl:id>
+        <rdfs:label>combinatorial intrinsic disorder prediction and experimental evidence used in automatic assertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECO_0006410 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0006410">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0006408"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0006408"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A type of combinatorial intrinsic disorder prediction and experimental evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000234>DisProt:XimeAixa</obo:IAO_0000234>
+        <oboInOwl:created_by>snadendla</oboInOwl:created_by>
+        <oboInOwl:creation_date>2026-05-15T05:36:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ECO:0006410</oboInOwl:id>
+        <rdfs:label>combinatorial intrinsic disorder prediction and experimental evidence used in manual assertion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECO_0007000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007000">
@@ -51144,17 +51231,17 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
             </owl:Class>
         </owl:equivalentClass>
         <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of in vitro cleavage assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of in vitro protein cleavage assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by>rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date>2018-05-14T09:47:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0007394</oboInOwl:id>
-        <rdfs:label>in vitro cleavage assay evidence used in automatic assertion</rdfs:label>
+        <rdfs:label>in vitro protein cleavage assay evidence used in automatic assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007394"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of in vitro cleavage assay evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of in vitro protein cleavage assay evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ECO:RCT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -51671,17 +51758,17 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
             </owl:Class>
         </owl:equivalentClass>
         <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of in vivo cleavage assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of in vivo protein cleavage assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by>rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date>2018-05-14T09:47:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0007411</oboInOwl:id>
-        <rdfs:label>in vivo cleavage assay evidence used in automatic assertion</rdfs:label>
+        <rdfs:label>in vivo protein cleavage assay evidence used in automatic assertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007411"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of in vivo cleavage assay evidence that is used in an automatic assertion.</owl:annotatedTarget>
+        <owl:annotatedTarget>A type of in vivo protein cleavage assay evidence that is used in an automatic assertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ECO:RCT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -60011,12 +60098,12 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:ECO_9000002>IDA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of cleavage assay evidence that is used in a manual assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of protein cleavage assay evidence that is used in a manual assertion.</obo:IAO_0000115>
         <oboInOwl:created_by>rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date>2019-03-20T12:27:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0007691</oboInOwl:id>
-        <rdfs:label>cleavage assay evidence used in manual assertion</rdfs:label>
+        <rdfs:label>protein cleavage assay evidence used in manual assertion</rdfs:label>
     </owl:Class>
     
 
@@ -61181,6 +61268,17 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
     <!-- http://purl.obolibrary.org/obo/ECO_0007744 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007744">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0007661"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007661"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -62117,12 +62215,12 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
             </owl:Class>
         </owl:equivalentClass>
         <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of cleavage assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
+        <obo:IAO_0000115>A type of protein cleavage assay evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by>rctauber</oboInOwl:created_by>
         <oboInOwl:creation_date>2019-03-20T13:02:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ECO:0007782</oboInOwl:id>
-        <rdfs:label>cleavage assay evidence used in automatic assertion</rdfs:label>
+        <rdfs:label>protein cleavage assay evidence used in automatic assertion</rdfs:label>
     </owl:Class>
     
 
@@ -63287,6 +63385,13 @@ For HTP mass-spec, the analysis of the small data sets allows to manually assign
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007661"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:ECO_9000002>IEA</obo:ECO_9000002>
         <obo:IAO_0000115>A type of combinatorial computational and experimental evidence that is used in an automatic assertion.</obo:IAO_0000115>
         <oboInOwl:created_by>rctauber</oboInOwl:created_by>
